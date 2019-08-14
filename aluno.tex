@@ -1,0 +1,546 @@
+
+\documentclass[extrafontsizes, twoside, 11pt, openright, final]{memoir}
+
+\RequirePackage[skins,breakable]{tcolorbox}
+
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amstext}
+\usepackage[brazil]{babel}
+\usepackage{times}
+%\usepackage[Sonny]{fncychap}% This inser
+\usepackage[dontkeepoldnames]{sphinx}%To recognize sphinxadmonition, sphinxincludegraphics, etc.
+
+\usepackage{geometry}
+\usepackage{sphinxcontribtikz}
+% Include hyperref last.
+\usepackage{hyperref}
+% Fix anchor placement for figures with captions.
+\usepackage{hypcap}% it must be loaded after hyperref.
+
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{livroabertopage}
+\usepackage{livroabertofonts}
+\usepackage{livroabertocolors}
+\usepackage{livroabertoheadings}
+\usepackage{livroabertoboxes}
+\usepackage{livroabertolists}
+\usepackage{livroaberto}
+\usepackage{tikzmacros}
+\RequirePackage{multicol}
+
+
+\begin{document}
+
+
+% \setcounter{chapter}{0}
+% \include{capa-funcoes}
+% \setcounter{chapter}{1}
+% \include{capa-afim}
+% \setcounter{chapter}{2}
+% \include{capa-quadraticas}
+% \include{vetores-novo1}         
+% \include{perspectiva1}
+% \include{funcoes}
+% \include{funcao-afim}
+% \include{funcao-quadratica}
+ \include{estatistica1}
+% \include{estatistica2}
+%\include{probabilidade1}
+% \include{tales}
+% \include{semelhanca}
+%\include{trigonometria}
+
+
+% \begin{sphinxthebibliography}{Saarinem-apud-Torres-2004}
+% \bibitem[Poynter-et-al-2005]{\detokenize{Poynter-et-al-2005}}{\phantomsection\label{\detokenize{GE101-1A:poynter-et-al-2005}} 
+% Poynter, A., Tall, D.: What do mathematics and physics teachers think that students will find difficult? A challenge to accepted practices of teaching. In Proceedings of the sixth British Congress of Mathematics Education, University of Warwick (pp. 128-135).
+% }
+% \bibitem[Anton-et-al-2007]{\detokenize{Anton-et-al-2007}}{\phantomsection\label{\detokenize{GE101-E:anton-et-al-2007}} 
+% Anton, H.; Busby, R. C.: \sphinxstyleemphasis{Álgebra Linear Contemporânea}. Bookman, 2007.
+% }
+% \bibitem[Barniol-et-al-2014]{\detokenize{Barniol-et-al-2014}}{\phantomsection\label{\detokenize{GE101-E:barniol-et-al-2014}} 
+% Barniol, P.; Zavala, G.: Test of Understanding of Vectors: A Reliable Multiple-Choice Vector Concept Test. \sphinxstyleemphasis{Physical Review Special Topics - Physics Education Research}, v. 10, 010121(14), 2014.
+% }
+% \bibitem[Bello-2013]{\detokenize{Bello-2013}}{\phantomsection\label{\detokenize{GE101-E:bello-2013}} 
+% Bello, A. L.: \sphinxstyleemphasis{Origins of Mathematical Words: A Comprehensive Dictionary of Latin, Greek, and Arabic Roots}. The John Hopkins University Press, 2013.
+% }
+% \bibitem[Gardner-1973]{\detokenize{Gardner-1973}}{\phantomsection\label{\detokenize{GE101-E:gardner-1973}} 
+% Gardner, M.: Mathematical Games - Sim, Chomp and Race Track: New Games for The Intellect (and not for Lady Luck). \sphinxstyleemphasis{Scientific American}, v. 228, n. 1, p. 108\textendash{}115, 1973.
+% }
+% \bibitem[Gomes-2010]{\detokenize{Gomes-2010}}{\phantomsection\label{\detokenize{GE101-E:gomes-2010}} 
+% Gomes, A. M. D.: \sphinxhref{http://www.uff.br/sintoniamatematica/matematicaenatureza/matematicaenatureza-html/audio-formigas-br.html}{Formigas do Deserto e Integração por Caminhos}. Conteúdo Digitais em Matemática e Estatística, Universidade Federal Fluminense, 2010.
+% }
+% \bibitem[Horn-1998]{\detokenize{Horn-1998}}{\phantomsection\label{\detokenize{GE101-E:horn-1998}} 
+% Horn, R. E.: \sphinxstyleemphasis{Visual Language: Global Communication for The 21st Century}. MacroVU, Inc., Bainbridge Island, Washington, USA, 1998.
+% }
+% \bibitem[Oliveira-2009]{\detokenize{Oliveira-2009}}{\phantomsection\label{\detokenize{GE101-E:oliveira-2009}} 
+% Oliveira, P. M. C.: Corrida de Vetores: Vacina Contra O Raciocínio Aristotélico. \sphinxstyleemphasis{Física na Escola}, v. 10, n. 1, p. 40, 2009.
+% }
+% \bibitem[Pinheiro-et-al-2016]{\detokenize{Pinheiro-et-al-2016}}{\phantomsection\label{\detokenize{GE101-E:pinheiro-et-al-2016}} 
+% Pinheiro, W. M.; Farias, A. C. S.: Composição Específica, Bioecologia e Ecomorfologia da Ictiofauna Marinha Oriunda da Pesca de Pequena Escala. \sphinxstyleemphasis{Boletim do Instituto de Pesca}, São Paulo, v. 42, n. 1, p. 181-194, mar. 2016.
+% }
+% \bibitem[Poynter-et-al-2005]{\detokenize{Poynter-et-al-2005}}{\phantomsection\label{\detokenize{GE101-E:poynter-et-al-2005}} 
+% Poynter, A.; Tall, D. \sphinxstyleemphasis{Relating Theories To Practice in The teaching of Mathematics}.  European Research in Mathematics Education IV. Working Group 11: Different Theoretical Perspectives and Approaches in Research in Mathematics Education, p. 1264-1273, 2005.
+% }
+% \bibitem[Roche-1997]{\detokenize{Roche-1997}}{\phantomsection\label{\detokenize{GE101-E:roche-1997}} 
+% Roche, J.: Introducing Vectors. \sphinxstyleemphasis{Physics Education}, v. 32, p. 339-345, 1997.
+% }
+% \bibitem[Sesamath-MATHS-2e-2014]{\detokenize{Sesamath-MATHS-2e-2014}}{\phantomsection\label{\detokenize{GE101-E:sesamath-maths-2e-2014}} 
+% Sésamath: MATHS-2de. 2014. Disponível em: \textless{}\sphinxurl{https://manuel.sesamath.net/index.php?page=telechargement\_2nde\_2014}\textgreater{}.
+% }
+% \bibitem[Valentin-2000]{\detokenize{Valentin-2000}}{\phantomsection\label{\detokenize{GE101-E:valentin-2000}} 
+% Valentin, J. L.: \sphinxstyleemphasis{Ecologia Numérica: Uma Introdução À Análise Multivariada de Dados Ecológicos}. Editora Interciência, 2000.
+% }
+% \bibitem[Wehner-et-al-1981]{\detokenize{Wehner-et-al-1981}}{\phantomsection\label{\detokenize{GE101-E:wehner-et-al-1981}} 
+% Wehner, R.; Srinivasan, M. V.: Searching Behaviour of Desert Ants, Genus Cataglyphis (Formicidae, Hymenoptera). \sphinxstyleemphasis{Journal of Comparative Physiology}, v. 142, p. 315\textendash{}338, 1981.
+% }
+% \bibitem[Wong-2011]{\detokenize{Wong-2011}}{\phantomsection\label{\detokenize{GE101-E:wong-2011}} 
+% Wong, B.: Arrows. \sphinxstyleemphasis{Nature Methods}, v. 8, n. 9, p. 701, 2011.
+% }
+% \bibitem[Cohn-2012]{\detokenize{Cohn-2012}}{\phantomsection\label{\detokenize{GE301-E:cohn-2012}} 
+% Cohn, N.: \sphinxstyleemphasis{Explaining ‘I Can’t Draw’: Parallels between The Structure and Development of Language and Drawing}. Human Development, v. 55, p. 167-192, 2012.
+% }
+% \bibitem[Cox-et-al-1998]{\detokenize{Cox-et-al-1998}}{\phantomsection\label{\detokenize{GE301-E:cox-et-al-1998}} 
+% Cox, M. V.; Perara, J.: \sphinxstyleemphasis{Children’s Observational Drawings: A Nine-Point Scale for Scoring Drawings of A Cube}. Educational Psychology: An International Journal of Experimental Educational Psychology, v. 18, n. 3, p. 309-317, 1998.
+% }
+% \bibitem[Duval-2011]{\detokenize{Duval-2011}}{\phantomsection\label{\detokenize{GE301-E:duval-2011}} 
+% Duval, R.: \sphinxstyleemphasis{Ler e Ensinar A Matemática de Outra Forma  - Entrar no Modo Matemático de Pensar: Os Registros de Representações Semióticas}. Editora Livraria da Física, 2011.
+% }
+% \bibitem[Ebersbach-et-al-2010]{\detokenize{Ebersbach-et-al-2010}}{\phantomsection\label{\detokenize{GE301-E:ebersbach-et-al-2010}} 
+% Ebersbach, M.; Stiehler, S.; Asmus, P.: \sphinxstyleemphasis{On The Relationship between Children’s Perspective Taking in Complex Scenes and Their Spatial Drawing Ability}. British Journal of Developmental Psychology, v. 29, p. 455-474, 2010.
+% }
+% \bibitem[Ebersbach-et-al-2011]{\detokenize{Ebersbach-et-al-2011}}{\phantomsection\label{\detokenize{GE301-E:ebersbach-et-al-2011}} 
+% Ebersbach, M.; Hagedom, H.: \sphinxstyleemphasis{The Role of Cognitive Flexibility in The Spatial Representation of Children’s Drawings}. Journal of Cognition and Development, v. 12, n. 1, p. 32-55, 2011.
+% }
+% \bibitem[Edwards-2005]{\detokenize{Edwards-2005}}{\phantomsection\label{\detokenize{GE301-E:edwards-2005}} 
+% Edwards, B.: \sphinxstyleemphasis{Desenhando Com o Lado Direito do Cérebro}. Oitava edição, Ediouro, 2005.
+% }
+% \bibitem[Fan-2015]{\detokenize{Fan-2015}}{\phantomsection\label{\detokenize{GE301-E:fan-2015}} 
+% Fan, J. E.: \sphinxstyleemphasis{Drawing to Learn: How Producing Graphical Representations Enhances Scientific Thinking}. Translational Issues in Psychological Science, American Psychological Association, v. 1, n. 2, p. 170\textendash{}181, 2015.
+% }
+% \bibitem[Gardner-2011]{\detokenize{Gardner-2011}}{\phantomsection\label{\detokenize{GE301-E:gardner-2011}} 
+% Gardner, H.: \sphinxstyleemphasis{Frames of Mind: The Theory of Multiple Intelligences}. Basic Books, 2011.
+% }
+% \bibitem[Gray-et-al-2004]{\detokenize{Gray-et-al-2004}}{\phantomsection\label{\detokenize{GE301-E:gray-et-al-2004}} 
+% Gray, J. R.; Thompson P. M.: \sphinxstyleemphasis{Neurobiology of Intelligence: Science and Ethics}. Nature Reviews Neuroscience, v. 5/6, p. 471-482, 2004.
+% }
+% \bibitem[Grunbaum-1985]{\detokenize{Grunbaum-1985}}{\phantomsection\label{\detokenize{GE301-E:grunbaum-1985}} 
+% Grünbaum, B.: \sphinxstyleemphasis{Geometry Strikes Again}. Mathematics Magazine, v. 58, n. 1, p. 12-17, 1985.
+% }
+% \bibitem[Gutierrez-1998]{\detokenize{Gutierrez-1998}}{\phantomsection\label{\detokenize{GE301-E:gutierrez-1998}} 
+% Gutiérrez, A.: \sphinxstyleemphasis{Las Representaciones Planas de Cuerpos 3-Dimensionales En La Enseñanza de La Geometría Espacial}. Revista EMA, v. 3, n. 3, p. 193-220, 1998.
+% }
+% \bibitem[Howard-et-al-1995]{\detokenize{Howard-et-al-1995}}{\phantomsection\label{\detokenize{GE301-E:howard-et-al-1995}} 
+% Howard, I. P.; Rogers, B. J.: \sphinxstyleemphasis{Binocular Vision and Stereopsis}. Oxford University Press, 1995.
+% }
+% \bibitem[Fujita-et-al-2017]{\detokenize{Fujita-et-al-2017}}{\phantomsection\label{\detokenize{GE301-E:fujita-et-al-2017}} 
+% Fujita, T. et al. (2017). Students’ Geometric Thinking with Cube Representations: Assessment Framework and Empirical Evidence. The Journal of Mathematical Behavior, v. 46, p. 96-111.
+% }
+% \bibitem[Khine-2017]{\detokenize{Khine-2017}}{\phantomsection\label{\detokenize{GE301-E:khine-2017}} 
+% Khine, M. S.: \sphinxstyleemphasis{Visual-Spatial Ability in STEM Educaton: Transforming Research into Practice}. Springer-Verlag, 2017.
+% }
+% \bibitem[Lellis-2009]{\detokenize{Lellis-2009}}{\phantomsection\label{\detokenize{GE301-E:lellis-2009}} 
+% Lellis, M. (2009). Desenho em Perspectiva no Ensino Fundamental \textendash{} Considerações Sobre Uma Experiência. Seminários de Ensino de Matemática (SEMA), Primeiro Semestre de 2009 (Ano II), Programa de Pós-Graduação da Faculdade de Educação da Universidade de S˜ao Paulo. Disponível em: \textless{}\sphinxurl{https://goo.gl/77Unkk}\textgreater{}.
+% }
+% \bibitem[Lindberg-1976]{\detokenize{Lindberg-1976}}{\phantomsection\label{\detokenize{GE301-E:lindberg-1976}} 
+% Lindberg, D. C.: \sphinxstyleemphasis{Theories of Vision from Al-Kindi To Kepler}. The University of Chicago Press, 1976.
+% }
+% \bibitem[Mitchelmore-1978]{\detokenize{Mitchelmore-1978}}{\phantomsection\label{\detokenize{GE301-E:mitchelmore-1978}} 
+% Mitchelmore, M. C.: \sphinxstyleemphasis{Developmental Stages in Children’s Representation of Regular Solid Figures}. The Journal of Genetic Psychology, v. 133, n. 2, p. 229-239, 1978.
+% }
+% \bibitem[Morra-2008]{\detokenize{Morra-2008}}{\phantomsection\label{\detokenize{GE301-E:morra-2008}} 
+% Morra, S.: \sphinxstyleemphasis{Spatial Structures in Children’s Drawings: How Do They Develop?} Em: Lange-Küttner, C.; \& Vinter, A. (Eds.), Drawing and The Non-Verbal Mind: A Life-Span Perspective,  Cambridge: Cambridge University Press, 2008.
+% }
+% \bibitem[Newcombe-2017]{\detokenize{Newcombe-2017}}{\phantomsection\label{\detokenize{GE301-E:newcombe-2017}} 
+% Newcombe, N. (2017). Harnessing Spatial Thinking to Support STEM Learning.  OECD Education Working Papers, n. 161, OECD Publishing, Paris. Disponível em: \textless{}\sphinxurl{https://goo.gl/kyiJ4z}\textgreater{}.
+% }
+% \bibitem[NRC-2006]{\detokenize{NRC-2006}}{\phantomsection\label{\detokenize{GE301-E:nrc-2006}} 
+% National Research Council. (2006). Learning To Think Spatially. The National Academies Press, Washington, D.C..
+% }
+% \bibitem[Pillar-2012]{\detokenize{Pillar-2012}}{\phantomsection\label{\detokenize{GE301-E:pillar-2012}} 
+% Pilar, A. D.: \sphinxstyleemphasis{Desenho e Escrita como Sistemas de Representação}. Segunda edição revista e ampliada. Editora Penso, 2012.
+% }
+% \bibitem[Pinilla-2007]{\detokenize{Pinilla-2007}}{\phantomsection\label{\detokenize{GE301-E:pinilla-2007}} 
+% Pinilla   M. I. F.: \sphinxstyleemphasis{Fractions: Conceptual and   Didactic Aspects}. Acta  Didactica Universitatis Comenianae, v. 7, p. 23-45, 2007.
+% }
+% \bibitem[Quillin-et-al-2015]{\detokenize{Quillin-et-al-2015}}{\phantomsection\label{\detokenize{GE301-E:quillin-et-al-2015}} 
+% Quillin, K.; Thomas, S.: \sphinxstyleemphasis{Drawing-to-Learn: A Framework for Using Drawings to Promote Model-Based Reasoning in Biology}. CBE\textendash{}Life Sciences Education, v. 14, p. 1-14, 2015.
+% }
+% \bibitem[Santaella-1998]{\detokenize{Santaella-1998}}{\phantomsection\label{\detokenize{GE301-E:santaella-1998}} 
+% Santaella, L.: \sphinxstyleemphasis{O Que É Semiótica}. Coleção Primeiros Passos, v. 103, Editora Brasiliense, 1998.
+% }
+% \bibitem[Sinha-2009]{\detokenize{Sinha-2009}}{\phantomsection\label{\detokenize{GE301-E:sinha-2009}} 
+% Sinha, P. Pawan Sinha em Como O Cérebro Aprender A Ver. Palestra TED, 2009. Disponível em: \textless{}\sphinxurl{https://goo.gl/eDZKYo}\textgreater{}.
+% }
+% \bibitem[Sinclair-et-al-2016]{\detokenize{Sinclair-et-al-2016}}{\phantomsection\label{\detokenize{GE301-E:sinclair-et-al-2016}} 
+% Sinclair, N. et al.: \sphinxstyleemphasis{Recent Research On Geometry Education: An ICME‑13 Survey Team Report}. ZDM Mathematics Education, v. 48, p. 691-719, 2016.
+% }
+% \bibitem[Uttal-et-al-2012]{\detokenize{Uttal-et-al-2012}}{\phantomsection\label{\detokenize{GE301-E:uttal-et-al-2012}} 
+% Uttal, D. H.; Cohen, C. A. (2012). Spatial Thinking and STEM Education: When, Why, and How? Em: Ross, B. H. The Psychology of Learning and Motivation, v. 57, Elsevier.
+% }
+% \bibitem[Van-Meter-et-al-2005]{\detokenize{Van-Meter-et-al-2005}}{\phantomsection\label{\detokenize{GE301-E:van-meter-et-al-2005}} 
+% Van Meter, P.; Garner, J.: \sphinxstyleemphasis{The Promise and Practice of Learner-Generated Drawing: Literature Review and Synthesis}. Educational Psychology Review, v. 17, n. 4, p. 285-325, 2005.
+% }
+% \bibitem[Volkert-2008]{\detokenize{Volkert-2008}}{\phantomsection\label{\detokenize{GE301-E:volkert-2008}} 
+% Volkert, K. (2008). The Problem of Solid Geometry. Symposium on the Occasion of the 100th Anniversary of ICMI, Rome. Disponível em: \textless{}\sphinxurl{https://goo.gl/Kt5g5C}\textgreater{}.
+% }
+% \bibitem[Willats-1977]{\detokenize{Willats-1977}}{\phantomsection\label{\detokenize{GE301-E:willats-1977}} 
+% Willats. J.: \sphinxstyleemphasis{How Children Learn To Draw Realistic Pictures}. Quaterly Journal of Experimental Psychology, v. 29, p. 367-382, 1977.
+% }
+% \bibitem[Eisenberg-1992]{\detokenize{Eisenberg-1992}}{\phantomsection\label{\detokenize{AF106-0:eisenberg-1992}} 
+% Eisenberg T.: On the development of a sense for functions. In Guershon Harel and Ed Dubinsky, editors, The Concept of Function: Aspects of Epistemology and Pedagogy. Mathematical Association of America, USA, p. 153\textendash{}174.
+% }
+% \bibitem[Jones-2006]{\detokenize{Jones-2006}}{\phantomsection\label{\detokenize{AF106-0:jones-2006}} 
+% Jones M.: Desmystifying Functions: The Historical and Pedagogical Difficulties of the Concept of Function. Rose-Hulman Undergraduate Math Journal, V. 7, p. 1-20.
+% }
+% \bibitem[Ponte-et-al-2008]{\detokenize{Ponte-et-al-2008}}{\phantomsection\label{\detokenize{AF106-0:ponte-et-al-2008}} 
+% PONTE J. P. \& Matos A.: O estudo de relações funcionais e o desenvolvimento do conceito de variável em alunos do 8.º ano. RELIME, V. 11(2), p. 195-231.
+% }
+% \bibitem[Ponte-1992]{\detokenize{Ponte-1992}}{\phantomsection\label{\detokenize{AF106-0:ponte-1992}} 
+% Ponte J. P.: The History of the concept of function and some educational implications The Mathematics Educator, v. 2, n. 3, p. 3-8.
+% }
+% \bibitem[Sierpinska-1992]{\detokenize{Sierpinska-1992}}{\phantomsection\label{\detokenize{AF106-0:sierpinska-1992}} 
+% Sierpinska A.: On understanding the notion of function. In Guershon Harel and Ed Du- binsky, editors, The Concept of Function: Aspects of Epistemology and Pedagogy. Mathematical Association of America, USA, p. 25-58.
+% }
+% \bibitem[Ursini-et-al-2001]{\detokenize{Ursini-et-al-2001}}{\phantomsection\label{\detokenize{AF106-0:ursini-et-al-2001}} 
+% Ursini S. \& Trigueros M.: A model for the uses of variable in elementary algebra. In M. van den Heuvel-Panhuizen (Ed.), Proceedings of the 25th Conference of the International Group for the Psychology of Mathematics Education, V. 4, p. 327-334. Utrecht: Utrecht University.
+% }
+% \bibitem[Dooren-et-al-2005]{\detokenize{Dooren-et-al-2005}}{\phantomsection\label{\detokenize{AF107-0:dooren-et-al-2005}} 
+% Dooren W., De Bock, D., Hessels, A., Janssens, D. \& Verschaffel, L.: Not everything is proportional: Effects of age and problem type on propensities for overgeneralization. Cognition and Instruction, V. 23, p. 57 \textendash{}86.
+% }
+% \bibitem[Lima-2006]{\detokenize{Lima-2006}}{\phantomsection\label{\detokenize{AF107-0:lima-2006}} 
+% Lima, E. A matemática do ensino médio \textendash{} Vol. 1,  9a ed. Coleção do Professor de Matemática. Sociedade Brasileira de Matemática, Rio de Janeiro.
+% }
+% \bibitem[Silva-et-al-2013]{\detokenize{Silva-et-al-2013}}{\phantomsection\label{\detokenize{AF107-0:silva-et-al-2013}} 
+% Silva, A. da F. G; Pietropaolo, R. C.; Campos, T. M. M. Atual currículo de matemática do estado de São Paulo: indicações para a introdução do ensino da ideia de irracionalidade. Boletim GEPEM, Rio de Janeiro, n. 62, p. 31-44.
+% }
+% \bibitem[Stump-1999]{\detokenize{Stump-1999}}{\phantomsection\label{\detokenize{AF107-0:stump-1999}} 
+% Stump, S. Secondary mathematics teachers’ knowledge of slope. Mathematics Education Research Journal, 11(2), 124\textendash{}144.
+% }
+% \bibitem[Alexandre-et-al-2009]{\detokenize{Alexandre-et-al-2009}}{\phantomsection\label{\detokenize{AF209-0:alexandre-et-al-2009}} 
+% Alexandre, Patrícia P; Santos,Márcia Hellen S Mendes. \sphinxstylestrong{Principais dificuldades de alunos do 2º ano do ensino médio quanto a interpretação gráfica da função quadrática}. I Simpósio Nacional de Ensino de Ciência e Tecnologia.
+% }
+% \bibitem[Assis-2015]{\detokenize{Assis-2015}}{\phantomsection\label{\detokenize{AF209-0:assis-2015}} 
+% Assis, Victor Hugo D. de. \sphinxstylestrong{Características da função quadrática e a metodologia da resolução de problemas} UNESP: São José do Rio Preto, SP.
+% }
+% \bibitem[Avila]{\detokenize{Avila}}{\phantomsection\label{\detokenize{AF209-0:avila}} 
+% Ávila, G. \sphinxstylestrong{Funções e gráficos num problema de frenagem}. Revista do professor de matemática, número \(12\). Disponível em \sphinxhref{http://rpm.org.br/cdrpm/12/5.htm}{RPM12} .
+% }
+% \bibitem[Batschelet-1978]{\detokenize{Batschelet-1978}}{\phantomsection\label{\detokenize{AF209-0:batschelet-1978}} 
+% Batschelet, Edward. \sphinxstylestrong{Introdução à Matemática para Biocientistas} /E.Batschelet; tradução de Vera Maria Abud Pacífico da Silva e Junia Maria Penteado de Araújo Quitete - Rio de Janeiro: Interciência.
+% }
+% \bibitem[Cance-2015]{\detokenize{Cance-2015}}{\phantomsection\label{\detokenize{AF209-0:cance-2015}} 
+% Cance, Cesar A. \sphinxstylestrong{Projeto canhão: o ensino de funções quadráticas com o auxílio do software Geogebra}. UFSCar, PROFMAT: São Carlos, SP.
+% }
+% \bibitem[Cerqueira-2015]{\detokenize{Cerqueira-2015}}{\phantomsection\label{\detokenize{AF209-0:cerqueira-2015}} 
+% Cerqueira, Adriano A. \sphinxstylestrong{Parábola e suas aplicações} UFBA, PROFMAT: Salvador.
+% }
+% \bibitem[Chung-2013]{\detokenize{Chung-2013}}{\phantomsection\label{\detokenize{AF209-0:chung-2013}} 
+% Chung, Kenji. \sphinxstylestrong{A Parábola, sua propriedade refletora e aplicações} UFRPE: Recife, PE.
+% }
+% \bibitem[Connally-et-al-2011]{\detokenize{Connally-et-al-2011}}{\phantomsection\label{\detokenize{AF209-0:connally-et-al-2011}} 
+% Connally, Hughes-Hallett, Gleason, et. al. \sphinxstylestrong{Functions Modeling Change: A Preparation for Calculus}, \(4^{th}\) edition. EUA, National Science Foundation under Grant.
+% }
+% \bibitem[Cooney-et-al-2011]{\detokenize{Cooney-et-al-2011}}{\phantomsection\label{\detokenize{AF209-0:cooney-et-al-2011}} 
+% Cooney, Thomas J., {[}et. al.{]}  \sphinxstylestrong{Developing an essential understanding of functions for teaching mathematics} in grades \(9-12\), \(2^{th}\) edition. EUA: The National Council of Teachers of Mathematics. (Essential understanding series)
+% }
+% \bibitem[DetranPR]{\detokenize{DetranPR}}{\phantomsection\label{\detokenize{AF209-0:detranpr}} 
+% \sphinxstylestrong{Comportamentos seguros no trânsito}, Departamento de trânsito do Paraná. Disponível em \sphinxhref{http://www.detran.pr.gov.br/modules/catasg/servicos-detalhes.php?tema=motorista\&id=345}{Motorista} .
+% }
+% \bibitem[Duarte-2014]{\detokenize{Duarte-2014}}{\phantomsection\label{\detokenize{AF209-0:duarte-2014}} 
+% Duarte, José L. \sphinxstylestrong{Problemas de máximos e mínimos no ensino médio}. UNESP: Ilha Solteira, SP.
+% }
+% \bibitem[Eves-2004]{\detokenize{Eves-2004}}{\phantomsection\label{\detokenize{AF209-0:eves-2004}} 
+% Eves, Howard. \sphinxstylestrong{Introdução à história da matemática} tradução: Hygino H. Domingues. - Campinas, SP: Editora da UNICAMP. Tradução de: \sphinxstylestrong{An introduction to the history of mathematics}.
+% }
+% \bibitem[Figueredo-2017]{\detokenize{Figueredo-2017}}{\phantomsection\label{\detokenize{AF209-0:figueredo-2017}} 
+% Figueredo, Eudes J.G. de. \sphinxstylestrong{Uma análise sobre a valorização do conceito de máximo e mínimo por estudantes do ensino médio} UFRPE, PROFMAT: Recife. 91 f.: il.
+% }
+% \bibitem[Hellmeister-2013]{\detokenize{Hellmeister-2013}}{\phantomsection\label{\detokenize{AF209-0:hellmeister-2013}} 
+% Hellmeister, Ana Catarina P., coordenadora. \sphinxstylestrong{Geometria em Sala de Aula}. Rio de Janeiro: SBM. \(552\) p. (Coleção do Professor de Matemática; \(32\))
+% }
+% \bibitem[JCNET-2013]{\detokenize{JCNET-2013}}{\phantomsection\label{\detokenize{AF209-0:jcnet-2013}} 
+% Jornal da Cidade - Bauru e garnde região, matérial online de \(05\) de fevereiro. \sphinxhref{https://www.jcnet.com.br/Geral/2013/02/direcao-defensiva-saiba-como-a-velocidade-influi-na-frenagem-do-veiculo.html\#prettyPhoto}{Distância de Frenagem} .
+% }
+% \bibitem[Junior-2017]{\detokenize{Junior-2017}}{\phantomsection\label{\detokenize{AF209-0:junior-2017}} 
+% Junior, Gilberto C. da S. \sphinxstylestrong{Método dos mínimos quadrados aplicado ao lançamento de foguetes propulsionados a ar comprimido} Universidade Estadual Paulista “Júlio de Mesquita Filho”: Rio Claro: {[}s.n.{]}. 107 f.: fig., tab
+% }
+% \bibitem[Kotsopoulos-2007]{\detokenize{Kotsopoulos-2007}}{\phantomsection\label{\detokenize{AF209-0:kotsopoulos-2007}} 
+% Kotsopoulos, D. \sphinxstylestrong{Unraveling student challenges with quadratics: A cognitive approach}. Australian Mathematics Teacher, \(63(2)\), \(19-24\).
+% }
+% \bibitem[Lima-2006]{\detokenize{Lima-2006}}{\phantomsection\label{\detokenize{AF209-0:lima-2006}} 
+% Lima, E. \sphinxstylestrong{A matemática do ensino médio \textendash{} Vol. 1},  \(9^a\) ed. Coleção do Professor de Matemática. Rio de Janeiro, Sociedade Brasileira de Matemática.
+% }
+% \bibitem[Louzada-2013]{\detokenize{Louzada-2013}}{\phantomsection\label{\detokenize{AF209-0:louzada-2013}} 
+% Louzada, Sílvia. \sphinxstylestrong{Relações entre Cônicas e Funções no Ensino Médio}. Espírito Santo, UFES, PROFMAT.
+% }
+% \bibitem[Maia-2007]{\detokenize{Maia-2007}}{\phantomsection\label{\detokenize{AF209-0:maia-2007}} 
+% Maia, Diana. \sphinxstylestrong{Principais dificuldades de alunos do 2º ano do ensino médio quanto a interpretação gráfica da função quadrática}. São Paulo, PUC, Dissertação de Mestrado.
+% }
+% \bibitem[Monteiro-2014]{\detokenize{Monteiro-2014}}{\phantomsection\label{\detokenize{AF209-0:monteiro-2014}} 
+% MONTEIRO, R. M. \sphinxstylestrong{Resgate do teorema de Dandelin no estudo de cônicas com o geogebra}. Espírito Santo: UFES, PROFMAT. Dinponível em \sphinxhref{http://portais4.ufes.br/posgrad/teses/tese\_7674\_Disserta\%E7\%E3o\%20-\%20final\%20-\%20Rubens\%20Monteiro.pdf}{Monteiro}.
+% }
+% \bibitem[Parent-2015]{\detokenize{Parent-2015}}{\phantomsection\label{\detokenize{AF209-0:parent-2015}} 
+% Parent, Jennifer Suzanne Stokes. \sphinxstylestrong{“Students’ Understanding Of Quadratic Functions: Learning From Students’ Voices”}.Vermont University - Graduate College Dissertations and Theses. Paper 376.
+% }
+% \bibitem[Pietrocola-et-al-2016]{\detokenize{Pietrocola-et-al-2016}}{\phantomsection\label{\detokenize{AF209-0:pietrocola-et-al-2016}} 
+% Pietrocola, M. {[}et. al.{]}. \sphinxstylestrong{Física em contexto, 1: ensino médio}, \(1^a\) ed. - São Paulo: Editora do Brasil.
+% }
+% \bibitem[Rocha-2013]{\detokenize{Rocha-2013}}{\phantomsection\label{\detokenize{AF209-0:rocha-2013}} 
+% Rocha, Alan M. \sphinxstylestrong{Problemas de Otimização Envolvendo a Matemática do Ensino Médio}. Goiás: UFG, PROFMAT. Disponível em \sphinxhref{https://repositorio.bc.ufg.br/tede/handle/tde/2955}{ROCHA}.
+% }
+% \bibitem[Saarinem-apud-Torres-2004]{\detokenize{Saarinem-apud-Torres-2004}}{\phantomsection\label{\detokenize{AF209-0:saarinem-apud-torres-2004}} 
+% Saarinem \sphinxstyleemphasis{apud} Torres, Raul I. \sphinxstylestrong{El vientre de un arquicteto}. Espanha, Islas Canarias, Universidad de Laguna. Curso Universitario Interdisciplinar Sociedad, Ciencia, Tecnología y Matemáticas, Módulo \(1\), \(02\) Abril. Disponível em \sphinxhref{http://imarrero.webs.ull.es/sctm04/modulo1/10/ribanez.pdf}{El vientre de un arquitecto} acessado em 03/02/2018.
+% }
+% \bibitem[Santos-2009]{\detokenize{Santos-2009}}{\phantomsection\label{\detokenize{AF209-0:santos-2009}} 
+% Santos, Angela R. \sphinxstylestrong{Construções Concretas e Geometria Dinâmica: Abordagens Interligadas para o estudo de Cônicas} - São Carlos, SP: SBMAC, \(82\) p., \(20.5\) cm - (Notas em Matemática Aplicada; v. \(44\) ).
+% }
+% \bibitem[Silva-2013]{\detokenize{Silva-2013}}{\phantomsection\label{\detokenize{AF209-0:silva-2013}} 
+% Silva, Ramon de Abreu. \sphinxstylestrong{Funções Quadráticas e suas Aplicações no Ensino Médio}. Rio de Janeiro, IMPA, PROFMAT.
+% }
+% \bibitem[Silva-2015]{\detokenize{Silva-2015}}{\phantomsection\label{\detokenize{AF209-0:silva-2015}} 
+% Silva, Tiago L. \sphinxstylestrong{O ensino de funções polinomiais do 2º grau: Uma aplicação com o software GeoGebra} UFERSA:  Mossoró. 61f: il.
+% }
+% \bibitem[Stump-1999]{\detokenize{Stump-1999}}{\phantomsection\label{\detokenize{AF209-0:stump-1999}} 
+% Stump, S. \sphinxstylestrong{Secondary mathematics teachers’ knowledge of slope}. Mathematics Education Research Journal, \(11(2)\), \(124–144\).
+% }
+% \bibitem[Talavera-2008]{\detokenize{Talavera-2008}}{\phantomsection\label{\detokenize{AF209-0:talavera-2008}} 
+% Talavera, Leda Maria Bastoni. \sphinxstylestrong{Parábola e catenária: história e aplicações}. São Paulo, USP, Faculdade de Educação, Dissertação de Mestrado. Disponível em \sphinxhref{http://www.teses.usp.br/teses/disponiveis/48/48134/tde-17062008-135338/en.php}{Teses USP Parabola e Catenária} .
+% }
+% \bibitem[Tassone-2015]{\detokenize{Tassone-2015}}{\phantomsection\label{\detokenize{AF209-0:tassone-2015}} 
+% Tassone, Márcia Z. T. \sphinxstylestrong{Construção da Parábola através de modelos lúdicos e computacionais}. UFSCar, PROFMAT: São Carlos, SP.
+% }
+% \bibitem[Torres-2004]{\detokenize{Torres-2004}}{\phantomsection\label{\detokenize{AF209-0:torres-2004}} 
+% TORRES, Raul I. \sphinxstylestrong{El vientre de un arquicteto}. Espanha, Islas Canarias, Universidad de Laguna. Curso Universitario Interdisciplinar Sociedad, Ciencia, Tecnología y Matemáticas, Módulo \(1\), \(02\) Abril. Disponível em \sphinxhref{http://imarrero.webs.ull.es/sctm04/modulo1/10/ribanez.pdf}{El vientre de un arquitecto} acessado em 03/02/2018.
+% }
+% \bibitem[Wang-2006]{\detokenize{Wang-2006}}{\phantomsection\label{\detokenize{AF209-0:wang-2006}} 
+% Wang, Wanderley S. \sphinxstylestrong{O aprendizado através de jogos para computador: por uma escola mais divertida e mais eficiente}, \(26\) de agosto. Dinponível em Portal da Família, \sphinxhref{http://www.portaldafamilia.org.br/artigos/artigo479.shtml}{Artigo 479} .
+% }
+% \bibitem[Sierpinska-1992]{\detokenize{Sierpinska-1992}}{\phantomsection\label{\detokenize{AF106-ROTEIRO:sierpinska-1992}} 
+% Sierpinska A.: On understanding the notion of function. In Guershon Harel and Ed Dubinsky, editors, The Concept of Function: Aspects of Epistemology and Pedagogy. Mathematical Association of America, USA, p. 25-58.
+% }
+% \bibitem[Eisenberg-1992]{\detokenize{Eisenberg-1992}}{\phantomsection\label{\detokenize{AF106-ROTEIRO:eisenberg-1992}} 
+% Eisenberg T.: On the development of a sense for functions. In Guershon Harel and Ed Dubinsky, editors, The Concept of Function: Aspects of Epistemology and Pedagogy. Mathematical Association of America, USA, p. 153\textendash{}174.
+% }
+% \bibitem[Dooren-et-al-2005]{\detokenize{Dooren-et-al-2005}}{\phantomsection\label{\detokenize{AF106-ROTEIRO:dooren-et-al-2005}} 
+% Dooren W., De Bock, D., Hessels, A., Janssens, D. \& Verschaffel, L.: Not everything is proportional: Effects of age and problem type on propensities for overgeneralization. Cognition and Instruction, V. 23, p. 57 \textendash{}86.
+% }
+% \bibitem[Greer-1993]{\detokenize{Greer-1993}}{\phantomsection\label{\detokenize{AF106-ROTEIRO:greer-1993}} 
+% Greer B.: The mathematical modelling perspective on world problems. Journal of Mathematical Behavior, V. 12, p. 239\textendash{}250.
+% }
+% \bibitem[Ayalon-et-al-2015]{\detokenize{Ayalon-et-al-2015}}{\phantomsection\label{\detokenize{AF106-ROTEIRO:ayalon-et-al-2015}} 
+% Ayalon M., Watson A. \& Lerman S.: Progression Towards Functions: Students’ Performance on Three Tasks About Variables from Grades 7 to 12.
+% }
+% \bibitem[Schroer-2013]{\detokenize{Schroer-2013}}{\phantomsection\label{\detokenize{AF106-ROTEIRO:schroer-2013}} 
+% Schroer R.: A retormada de relação entre grandezas no ensino médio e sua tradução  para a linguagem de funções, Dissertação do Programa de Pós-Graduação em ensino de Matemática da UFRGS, Porto Alegre, RGS.
+% }
+% \bibitem[Azevedo-2014]{\detokenize{Azevedo-2014}}{\phantomsection\label{\detokenize{AF107-ROTEIRO:azevedo-2014}} 
+% Azevedo, R. S. Resolução de problemas no ensino de função afim, TCC PROFMAT-IMPA.
+% }
+% \bibitem[Dooren-et-al-2005]{\detokenize{Dooren-et-al-2005}}{\phantomsection\label{\detokenize{AF107-ROTEIRO:dooren-et-al-2005}} 
+% Dooren W., De Bock, D., Hessels, A., Janssens, D. \& Verschaffel, L.: Not everything is proportional: Effects of age and problem type on propensities for overgeneralization. Cognition and Instruction, V. 23, p. 57 \textendash{}86.
+% }
+% \bibitem[Lima-2006]{\detokenize{Lima-2006}}{\phantomsection\label{\detokenize{AF107-ROTEIRO:lima-2006}} 
+% Lima, E. A matemática do ensino médio \textendash{} Vol. 1,  9a ed. Coleção do Professor de Matemática. Sociedade Brasileira de Matemática, Rio de Janeiro.
+% }
+% \bibitem[Onuchic-Allevato-2008]{\detokenize{Onuchic-Allevato-2008}}{\phantomsection\label{\detokenize{AF107-ROTEIRO:onuchic-allevato-2008}} 
+% Onuchic, L. de la R.; Allevato, N. S. G. As diferentes “personalidades” do número racional trabalhadas através da Resolução de Problemas. Bolema: Boletim de Educação Matemática, Rio Claro, ano 21, n. 31, p. 79-102.
+% }
+% \bibitem[Orton-et-al-1999]{\detokenize{Orton-et-al-1999}}{\phantomsection\label{\detokenize{AF107-ROTEIRO:orton-et-al-1999}} 
+% Orton, J., Orton, A. \& Roper, T. Pictorial and practical contexts and the perception of pattern. In A. Orton (Ed.), Patterns in the teaching and learning of mathematics. London, England: Cassell.
+% }
+% \bibitem[Silva-et-al-2013]{\detokenize{Silva-et-al-2013}}{\phantomsection\label{\detokenize{AF107-ROTEIRO:silva-et-al-2013}} 
+% Silva, A. da F. G; Pietropaolo, R. C.; Campos, T. M. M. Atual currículo de matemática do estado de São Paulo: indicações para a introdução do ensino da ideia de irracionalidade. Boletim GEPEM, Rio de Janeiro, n. 62, p. 31-44.
+% }
+% \bibitem[Stacey-1989]{\detokenize{Stacey-1989}}{\phantomsection\label{\detokenize{AF107-ROTEIRO:stacey-1989}} 
+% Stacey, K. Finding and using patterns in linear generalizing problems. Educational Studies in Mathematics, 20, 147\textendash{}164.
+% }
+% \bibitem[Stump-1999]{\detokenize{Stump-1999}}{\phantomsection\label{\detokenize{AF107-ROTEIRO:stump-1999}} 
+% Stump, S. Secondary mathematics teachers’ knowledge of slope. Mathematics Education Research Journal, 11(2), 124\textendash{}144.
+% }
+% \bibitem[Alexandre-et-al-2009]{\detokenize{Alexandre-et-al-2009}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:alexandre-et-al-2009}} 
+% Alexandre, Patrícia P; Santos,Márcia Hellen S Mendes. \sphinxstylestrong{Principais dificuldades de alunos do 2º ano do ensino médio quanto a interpretação gráfica da função quadrática}. I Simpósio Nacional de Ensino de Ciência e Tecnologia.
+% }
+% \bibitem[Assis-2015]{\detokenize{Assis-2015}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:assis-2015}} 
+% Assis, Victor Hugo D. de. \sphinxstylestrong{Características da função quadrática e a metodologia da resolução de problemas} UNESP: São José do Rio Preto, SP.
+% }
+% \bibitem[Avila]{\detokenize{Avila}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:avila}} 
+% Ávila, G. \sphinxstylestrong{Funções e gráficos num problema de frenagem}. Revista do professor de matemática, número \(12\). Disponível em \sphinxhref{http://rpm.org.br/cdrpm/12/5.htm}{RPM12} .
+% }
+% \bibitem[Batschelet-1978]{\detokenize{Batschelet-1978}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:batschelet-1978}} 
+% Batschelet, Edward. \sphinxstylestrong{Introdução à Matemática para Biocientistas} /E.Batschelet; tradução de Vera Maria Abud Pacífico da Silva e Junia Maria Penteado de Araújo Quitete - Rio de Janeiro: Interciência.
+% }
+% \bibitem[Cance-2015]{\detokenize{Cance-2015}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:cance-2015}} 
+% Cance, Cesar A. \sphinxstylestrong{Projeto canhão: o ensino de funções quadráticas com o auxílio do software Geogebra}. UFSCar, PROFMAT: São Carlos, SP.
+% }
+% \bibitem[Cerqueira-2015]{\detokenize{Cerqueira-2015}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:cerqueira-2015}} 
+% Cerqueira, Adriano A. \sphinxstylestrong{Parábola e suas aplicações} UFBA, PROFMAT: Salvador.
+% }
+% \bibitem[Chung-2013]{\detokenize{Chung-2013}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:chung-2013}} 
+% Chung, Kenji. \sphinxstylestrong{A Parábola, sua propriedade refletora e aplicações} UFRPE: Recife, PE.
+% }
+% \bibitem[Connally-et-al-2011]{\detokenize{Connally-et-al-2011}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:connally-et-al-2011}} 
+% Connally, Hughes-Hallett, Gleason, et. al. \sphinxstylestrong{Functions Modeling Change: A Preparation for Calculus}, \(4^{th}\) edition. EUA, National Science Foundation under Grant.
+% }
+% \bibitem[Cooney-et-al-2011]{\detokenize{Cooney-et-al-2011}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:cooney-et-al-2011}} 
+% Cooney, Thomas J., {[}et. al.{]}  \sphinxstylestrong{Developing an essential understanding of functions for teaching mathematics} in grades \(9-12\), \(2^{th}\) edition. EUA: The National Council of Teachers of Mathematics. (Essential understanding series)
+% }
+% \bibitem[DetranPR]{\detokenize{DetranPR}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:detranpr}} 
+% \sphinxstylestrong{Comportamentos seguros no trânsito}, Departamento de trânsito do Paraná. Disponível em \sphinxhref{http://www.detran.pr.gov.br/modules/catasg/servicos-detalhes.php?tema=motorista\&id=345}{Motorista} .
+% }
+% \bibitem[Duarte-2014]{\detokenize{Duarte-2014}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:duarte-2014}} 
+% Duarte, José L. \sphinxstylestrong{Problemas de máximos e mínimos no ensino médio}. UNESP: Ilha Solteira, SP.
+% }
+% \bibitem[Eves-2004]{\detokenize{Eves-2004}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:eves-2004}} 
+% Eves, Howard. \sphinxstylestrong{Introdução à história da matemática} tradução: Hygino H. Domingues. - Campinas, SP: Editora da UNICAMP. Tradução de: \sphinxstylestrong{An introduction to the history of mathematics}.
+% }
+% \bibitem[Figueredo-2017]{\detokenize{Figueredo-2017}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:figueredo-2017}} 
+% Figueredo, Eudes J.G. de. \sphinxstylestrong{Uma análise sobre a valorização do conceito de máximo e mínimo por estudantes do ensino médio} UFRPE, PROFMAT: Recife. 91 f.: il.
+% }
+% \bibitem[Hellmeister-2013]{\detokenize{Hellmeister-2013}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:hellmeister-2013}} 
+% Hellmeister, Ana Catarina P., coordenadora. \sphinxstylestrong{Geometria em Sala de Aula}. Rio de Janeiro: SBM. \(552\) p. (Coleção do Professor de Matemática; \(32\))
+% }
+% \bibitem[JCNET-2013]{\detokenize{JCNET-2013}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:jcnet-2013}} 
+% Jornal da Cidade - Bauru e garnde região, matérial online de \(05\) de fevereiro. \sphinxhref{https://www.jcnet.com.br/Geral/2013/02/direcao-defensiva-saiba-como-a-velocidade-influi-na-frenagem-do-veiculo.html\#prettyPhoto}{Distância de Frenagem} .
+% }
+% \bibitem[Junior-2017]{\detokenize{Junior-2017}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:junior-2017}} 
+% Junior, Gilberto C. da S. \sphinxstylestrong{Método dos mínimos quadrados aplicado ao lançamento de foguetes propulsionados a ar comprimido} Universidade Estadual Paulista “Júlio de Mesquita Filho”: Rio Claro: {[}s.n.{]}. 107 f.: fig., tab
+% }
+% \bibitem[Kotsopoulos-2007]{\detokenize{Kotsopoulos-2007}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:kotsopoulos-2007}} 
+% Kotsopoulos, D. \sphinxstylestrong{Unraveling student challenges with quadratics: A cognitive approach}. Australian Mathematics Teacher, \(63(2)\), \(19-24\).
+% }
+% \bibitem[Lima-2006]{\detokenize{Lima-2006}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:lima-2006}} 
+% Lima, E. \sphinxstylestrong{A matemática do ensino médio \textendash{} Vol. 1},  \(9^a\) ed. Coleção do Professor de Matemática. Rio de Janeiro, Sociedade Brasileira de Matemática.
+% }
+% \bibitem[Louzada-2013]{\detokenize{Louzada-2013}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:louzada-2013}} 
+% Louzada, Sílvia. \sphinxstylestrong{Relações entre Cônicas e Funções no Ensino Médio}. Espírito Santo, UFES, PROFMAT.
+% }
+% \bibitem[Maia-2007]{\detokenize{Maia-2007}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:maia-2007}} 
+% Maia, Diana. \sphinxstylestrong{Principais dificuldades de alunos do 2º ano do ensino médio quanto a interpretação gráfica da função quadrática}. São Paulo, PUC, Dissertação de Mestrado.
+% }
+% \bibitem[Monteiro-2014]{\detokenize{Monteiro-2014}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:monteiro-2014}} 
+% MONTEIRO, R. M. \sphinxstylestrong{Resgate do teorema de Dandelin no estudo de cônicas com o geogebra}. Espírito Santo: UFES, PROFMAT. Dinponível em \sphinxhref{http://portais4.ufes.br/posgrad/teses/tese\_7674\_Disserta\%E7\%E3o\%20-\%20final\%20-\%20Rubens\%20Monteiro.pdf}{Monteiro}.
+% }
+% \bibitem[Parent-2015]{\detokenize{Parent-2015}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:parent-2015}} 
+% Parent, Jennifer Suzanne Stokes. \sphinxstylestrong{“Students’ Understanding Of Quadratic Functions: Learning From Students’ Voices”}.Vermont University - Graduate College Dissertations and Theses. Paper 376.
+% }
+% \bibitem[Pietrocola-et-al-2016]{\detokenize{Pietrocola-et-al-2016}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:pietrocola-et-al-2016}} 
+% Pietrocola, M. {[}et. al.{]}. \sphinxstylestrong{Física em contexto, 1: ensino médio}, \(1^a\) ed. - São Paulo: Editora do Brasil.
+% }
+% \bibitem[Rocha-2013]{\detokenize{Rocha-2013}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:rocha-2013}} 
+% Rocha, Alan M. \sphinxstylestrong{Problemas de Otimização Envolvendo a Matemática do Ensino Médio}. Goiás: UFG, PROFMAT. Disponível em \sphinxhref{https://repositorio.bc.ufg.br/tede/handle/tde/2955}{ROCHA}.
+% }
+% \bibitem[Saarinem-apud-Torres-2004]{\detokenize{Saarinem-apud-Torres-2004}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:saarinem-apud-torres-2004}} 
+% Saarinem \sphinxstyleemphasis{apud} Torres, Raul I. \sphinxstylestrong{El vientre de un arquicteto}. Espanha, Islas Canarias, Universidad de Laguna. Curso Universitario Interdisciplinar Sociedad, Ciencia, Tecnología y Matemáticas, Módulo \(1\), \(02\) Abril. Disponível em \sphinxhref{http://imarrero.webs.ull.es/sctm04/modulo1/10/ribanez.pdf}{El vientre de un arquitecto} acessado em 03/02/2018.
+% }
+% \bibitem[Santos-2009]{\detokenize{Santos-2009}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:santos-2009}} 
+% Santos, Angela R. \sphinxstylestrong{Construções Concretas e Geometria Dinâmica: Abordagens Interligadas para o estudo de Cônicas} - São Carlos, SP: SBMAC, \(82\) p., \(20.5\) cm - (Notas em Matemática Aplicada; v. \(44\) ).
+% }
+% \bibitem[Silva-2013]{\detokenize{Silva-2013}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:silva-2013}} 
+% Silva, Ramon de Abreu. \sphinxstylestrong{Funções Quadráticas e suas Aplicações no Ensino Médio}. Rio de Janeiro, IMPA, PROFMAT.
+% }
+% \bibitem[Silva-2015]{\detokenize{Silva-2015}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:silva-2015}} 
+% Silva, Tiago L. \sphinxstylestrong{O ensino de funções polinomiais do 2º grau: Uma aplicação com o software GeoGebra} UFERSA:  Mossoró. 61f: il.
+% }
+% \bibitem[Stump-1999]{\detokenize{Stump-1999}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:stump-1999}} 
+% Stump, S. \sphinxstylestrong{Secondary mathematics teachers’ knowledge of slope}. Mathematics Education Research Journal, \(11(2)\), \(124–144\).
+% }
+% \bibitem[Talavera-2008]{\detokenize{Talavera-2008}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:talavera-2008}} 
+% Talavera, Leda Maria Bastoni. \sphinxstylestrong{Parábola e catenária: história e aplicações}. São Paulo, USP, Faculdade de Educação, Dissertação de Mestrado. Disponível em \sphinxhref{http://www.teses.usp.br/teses/disponiveis/48/48134/tde-17062008-135338/en.php}{Teses USP Parabola e Catenária} .
+% }
+% \bibitem[Tassone-2015]{\detokenize{Tassone-2015}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:tassone-2015}} 
+% Tassone, Márcia Z. T. \sphinxstylestrong{Construção da Parábola através de modelos lúdicos e computacionais}. UFSCar, PROFMAT: São Carlos, SP.
+% }
+% \bibitem[Torres-2004]{\detokenize{Torres-2004}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:torres-2004}} 
+% TORRES, Raul I. \sphinxstylestrong{El vientre de un arquicteto}. Espanha, Islas Canarias, Universidad de Laguna. Curso Universitario Interdisciplinar Sociedad, Ciencia, Tecnología y Matemáticas, Módulo \(1\), \(02\) Abril. Disponível em \sphinxhref{http://imarrero.webs.ull.es/sctm04/modulo1/10/ribanez.pdf}{El vientre de un arquitecto} acessado em 03/02/2018.
+% }
+% \bibitem[Wang-2006]{\detokenize{Wang-2006}}{\phantomsection\label{\detokenize{AF209-ROTEIRO:wang-2006}} 
+% Wang, Wanderley S. \sphinxstylestrong{O aprendizado através de jogos para computador: por uma escola mais divertida e mais eficiente}, \(26\) de agosto. Dinponível em Portal da Família, \sphinxhref{http://www.portaldafamilia.org.br/artigos/artigo479.shtml}{Artigo 479} .
+% }
+% \bibitem[Poynter-et-al-2005]{\detokenize{Poynter-et-al-2005}}{\phantomsection\label{\detokenize{GE101-ROTEIRO:poynter-et-al-2005}} 
+% Poynter, A., \& Tall, D. (2005). Relating theories to practice in the teaching of mathematics. In Fourth Congress of the European Society for Research in Mathematics Education, Sant Feliu de Guíxols, Spain.
+% }
+% \bibitem[Lima-2015]{\detokenize{Lima-2015}}{\phantomsection\label{\detokenize{GE101-ROTEIRO:lima-2015}} 
+% Lima, Elon Lages. (2015). Geometria Analítica e Álgebra Linear. Segunda Edição. Coleção Matemática Universitária, Rio de Janeiro: IMPA.
+% }
+% \bibitem[Ainsworth-et-al-2011]{\detokenize{Ainsworth-et-al-2011}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:ainsworth-et-al-2011}} 
+% Ainsworth, S. E.;Prain, V.;  Tytler, R. (2011). Drawing To Learn in Science. Science, n. 333 (6046), p. 1096-1097.
+% }
+% \bibitem[Cohn-2012]{\detokenize{Cohn-2012}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:cohn-2012}} 
+% Cohn, N. (2012). Explaining ‘I Can’t Draw’: Parallels between The Structure and Development of Language and Drawing. Human Development, v. 55, p. 167\textendash{}192.
+% }
+% \bibitem[Cox-et-al-1998]{\detokenize{Cox-et-al-1998}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:cox-et-al-1998}} 
+% Cox, M. V.; Perara, J. (1998). Children’s Observational Drawings: A Nine‐Point Scale for Scoring Drawings of A Cube. Educational Psychology: An International Journal of Experimental Educational Psychology, v. 18, n. 3, p. 309-317.
+% }
+% \bibitem[Donley-1987]{\detokenize{Donley-1987}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:donley-1987}} 
+% Donley, S. K. (1987). Perspectives Drawing Development in Children. Disponível em: \textless{}\sphinxurl{http://www.learningdesign.com/Portfolio/DrawDev/kiddrawing.html}\textgreater{}.
+% }
+% \bibitem[Dourado-2013]{\detokenize{Dourado-2013}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:dourado-2013}} 
+% Dourado, M. S. (2013). Geometria Espacial e Projeções em Perspectiva: Um Relato de Prática no Nono Ano do Ensino Fundamental. Dissertação de Mestrado, PROFMAT, Universidade Federal Fluminense.
+% }
+% \bibitem[Edwards-2005]{\detokenize{Edwards-2005}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:edwards-2005}} 
+% Edwards, B. (2005). Desenhando Com o Lado Direito do Cérebro. Oitava edição, Ediouro.
+% }
+% \bibitem[Fan-2015]{\detokenize{Fan-2015}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:fan-2015}} 
+% Fan, J. E. (2015). Drawing to Learn: How Producing Graphical Representations Enhances Scientific Thinking. Translational Issues in Psychological Science, American Psychological Association, v. 1, n. 2, p. 170\textendash{}181.
+% }
+% \bibitem[Fujita-et-al-2017]{\detokenize{Fujita-et-al-2017}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:fujita-et-al-2017}} 
+% Fujita, T. et al. (2017). Students’ Geometric Thinking with Cube Representations: Assessment Framework and Empirical Evidence. The Journal of Mathematical Behavior, v. 46, p. 96-111.
+% }
+% \bibitem[Gardner-2011]{\detokenize{Gardner-2011}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:gardner-2011}} 
+% Gardner, H. (2011). Frames of Mind: The Theory of Multiple Intelligences. Basic Books.
+% }
+% \bibitem[Gray-et-al-2004]{\detokenize{Gray-et-al-2004}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:gray-et-al-2004}} 
+% Gray, J.R.; Thompson P. M. (2004). “Neurobiology of Intelligence: Science and Ethics”. Nature Reviews Neuroscience, v. 5/6, p. 471-482.
+% }
+% \bibitem[Gutierrez-1998]{\detokenize{Gutierrez-1998}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:gutierrez-1998}} 
+% Gutiérrez, A. (1998). Las Representaciones Planas de Cuerpos 3-Dimensionales En La Enseñanza de La Geometría Espacial. Revista EMA, v. 3, n. 3, p. 193-220.
+% }
+% \bibitem[Khine-2017]{\detokenize{Khine-2017}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:khine-2017}} 
+% Khine, M. S. (2017). Visual-Spatial Ability in STEM Educaton: Transforming Research into Practice. Springer-Verlag.
+% }
+% \bibitem[Lellis-2009]{\detokenize{Lellis-2009}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:lellis-2009}} 
+% Lellis, M. (2009). Desenho em Perspectiva no Ensino Fundamental \textendash{} Considerações Sobre Uma Experiência. Seminários de Ensino de Matemática (SEMA), Primeiro Semestre de 2009 (Ano II), Programa de Pós-Graduação da Faculdade de Educação da Universidade de S˜ao Paulo. Disponível em: \textless{}\sphinxurl{https://goo.gl/77Unkk}\textgreater{}.
+% }
+% \bibitem[NRC-2006]{\detokenize{NRC-2006}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:nrc-2006}} 
+% National Research Council. (2006). Learning To Think Spatially. The National Academies Press, Washington, D.C..
+% }
+% \bibitem[Newcombe-2017]{\detokenize{Newcombe-2017}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:newcombe-2017}} 
+% Newcombe, N. (2017). Harnessing Spatial Thinking to Support STEM Learning.  OECD Education Working Papers, n. 161, OECD Publishing, Paris. Disponível em: \textless{}\sphinxurl{https://goo.gl/kyiJ4z}\textgreater{}.
+% }
+% \bibitem[Passos-2000]{\detokenize{Passos-2000}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:passos-2000}} 
+% Passo, C. L. B. (2000). Representações, Interpretações e Prática Pedagógica: A Geometria na Sala de Aula. Tese de doutorado, Faculdade de Educação, Universidade Estadual de Campinas.
+% }
+% \bibitem[Saraiva-2017]{\detokenize{Saraiva-2017}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:saraiva-2017}} 
+% Saraiva, E. M. S. C. (2017). Estudo do Papel da Representação Visual no Contexto da Mediação dos Professores de Ciências Físicas. Tese de doutorado, Universidade de Trás-os-Montes e Alto Douro, Portugal.
+% }
+% \bibitem[Sinclair-et-al-2016]{\detokenize{Sinclair-et-al-2016}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:sinclair-et-al-2016}} 
+% Sinclair, N. et al. (2016). Recent Research On Geometry Education: An ICME‑13 Survey Team Report. ZDM Mathematics Education, v. 48, p. 691-719.
+% }
+% \bibitem[Sinha-2009]{\detokenize{Sinha-2009}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:sinha-2009}} 
+% Sinha, P. (2009). Pawan Sinha em Como O Cérebro Aprender A Ver. Palestra TED. Disponível em: \textless{}\sphinxurl{https://goo.gl/eDZKYo}\textgreater{}.
+% }
+% \bibitem[Stoichita-1999]{\detokenize{Stoichita-1999}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:stoichita-1999}} 
+% Stoichita, V. I. (1999). A Short History of The Shadow. Reaktion Books.
+% }
+% \bibitem[Sugihara-2000]{\detokenize{Sugihara-2000}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:sugihara-2000}} 
+% Sugihara, K. (2000). “Impossible Objects” Are Not Necessarily Impossible: Mathematical Study on Optical Illusion. Em: Akiyama, J.; Kano, M.;  Urabe, M. (Eds.). JCDCG’98, LNCS 1763, p. 305−316, Springer-Verlag.
+% }
+% \bibitem[Uttal-et-al-2012]{\detokenize{Uttal-et-al-2012}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:uttal-et-al-2012}} 
+% Uttal, D. H.; Cohen, C. A. (2012). Spatial Thinking and STEM Education: When, Why, and How? Em: Ross, B. H. The Psychology of Learning and Motivation, v. 57, Elsevier.
+% }
+% \bibitem[Van-Meter-et-al-2005]{\detokenize{Van-Meter-et-al-2005}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:van-meter-et-al-2005}} 
+% Van Meter, P.; Garner, J. (2005). The Promise and Practice of Learner-Generated Drawing: Literature Review and Synthesis. Educational Psychology Review, v. 17, n. 4, p. 285-325.
+% }
+% \bibitem[Volkert-2008]{\detokenize{Volkert-2008}}{\phantomsection\label{\detokenize{GE301-ROTEIRO:volkert-2008}} 
+% Volkert, K. (2008). The Problem of Solid Geometry. Symposium on the Occasion of the 100th Anniversary of ICMI, Rome. Disponível em: \textless{}\sphinxurl{https://goo.gl/Kt5g5C}\textgreater{}.
+% }
+% \end{sphinxthebibliography}
+
+
+
+\renewcommand{\indexname}{Índice}
+\printindex
+\end{document}
