@@ -1,0 +1,451 @@
+%***************************************************************************************
+% This package creates the heading designs for the Livro Aberto textbook.
+%
+% This package was written and created by
+% David Latchman, TeXnical Designs
+% Contact: david.latchman@texnical-designs.com for problems
+%
+%
+
+\def\fileversion{v1.0}
+\def\filename{livroabertoheadings}
+\def\filetitle{Livro Aberto Headings package}
+\def\filedate{2018/02/13}
+\def\docdate {2018/02/13}
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{\filename}
+
+\typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
+\typeout{English documentation as of <\docdate>}
+
+%% ---------------------------------------------------------------------
+%%
+%% Loads the ifthen package
+%%
+\RequirePackage{ifthen}
+
+% Commands for chapter page
+\newcommand\chapterillustration{}
+\newcommand\chapterwhat{}
+\newcommand\chapterbecause{}
+
+
+% Create box shape
+\pgfdeclareshape{howbecausetextbox}{%
+    \inheritsavedanchors[from=rectangle]
+    \inheritanchorborder[from=rectangle]
+
+    \inheritanchor[from=rectangle]{center}
+    \inheritanchor[from=rectangle]{south}
+    \inheritanchor[from=rectangle]{west}
+    \inheritanchor[from=rectangle]{north}
+    \inheritanchor[from=rectangle]{east}
+    \inheritanchor[from=rectangle]{base}
+    \inheritanchor[from=rectangle]{north west}
+    \inheritanchor[from=rectangle]{north east}
+    \inheritanchor[from=rectangle]{south east}
+    \inheritanchor[from=rectangle]{south west}
+
+    \backgroundpath{%
+        \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+        \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+
+% Construct main path
+% Construct main path
+        \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya+5pt}}
+        \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya+5pt}}
+        \pgfpatharc{0}{-90}{5.0pt}
+        \pgfpathlineto{\pgfpoint{\pgf@xa+5pt}{\pgf@ya}}
+        \pgfpatharc{270}{180}{5.0pt}
+%        \pgfpathcurveto{\pgfpoint{\pgf@xc}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@yc}}
+        \pgfpathclose
+    }
+}
+
+\pgfdeclareshape{howbecauseheadingbox}{%
+    \inheritsavedanchors[from=rectangle]
+    \inheritanchorborder[from=rectangle]
+
+    \inheritanchor[from=rectangle]{center}
+    \inheritanchor[from=rectangle]{south}
+    \inheritanchor[from=rectangle]{west}
+    \inheritanchor[from=rectangle]{north}
+    \inheritanchor[from=rectangle]{east}
+    \inheritanchor[from=rectangle]{base}
+    \inheritanchor[from=rectangle]{north west}
+    \inheritanchor[from=rectangle]{north east}
+    \inheritanchor[from=rectangle]{south east}
+    \inheritanchor[from=rectangle]{south west}
+
+    \backgroundpath{%
+        \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+        \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+
+% Construct main path
+% Construct main path
+        \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+        \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+        \pgfpatharc{90}{0}{7.0pt}
+        \pgfpathlineto{\pgfpoint{\pgf@xb+7pt}{\pgf@ya+7.0pt}}
+        \pgfpatharc{0}{-90}{7.0pt}
+        \pgfpathclose
+    }
+}
+
+% box for O que? and Por que?, still not finished.
+%\newtcolorbox{openningbox}{enhanced, jigsaw, opacityframe=.3, opacityfill=.3, width=80mm, left=3mm, right=3mm, top=10mm, bottom=2mm, colback=white, colframe=white, arc=3mm, sharp corners=uphill, coltitle=cor2, lower separated=false, fonttitle=\bfseries\fontsize{13pt}{0}\selectfont\titlefont, title={O QU\^E?},
+%boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+%attach boxed title to top left={ yshift=-10 mm},
+%underlay boxed title={
+%\fill[cor1] ($(title.north west) + (0,-7mm)$) coordinate (x1) -- ++ (23 mm,0mm) arc [start angle=-90, end angle=90, x radius=3mm, y radius=3mm] coordinate (x2) -- ++ (-23 mm,0mm) -- cycle;
+%% The position below should be relative the the top of the lower part of the box and not absolute.
+%\fill[cor1] ($(frame.north west) + (0,-53mm)$) coordinate (c1) -- ++ (31 mm,0mm) arc [start angle=-90, end angle=90, x radius=3mm, y radius=3mm] coordinate (c2) -- ++ (-31 mm,0mm) -- cycle;
+%\node[right] at ($(c1)!0.5!(c2)+ (-14mm,0)$) {\bfseries\fontsize{13pt}{0}\selectfont\titlefont\textcolor{cor2}{POR QU\^E?}};}
+%}
+
+\newtcolorbox{whatbox}{enhanced, jigsaw, opacityframe=.3, opacityfill=.3, width=80mm, left=3mm, right=3mm, top=10mm, bottom=.5mm, colback=white, colframe=white, arc=3mm, sharp corners=uphill, coltitle=cor2, lower separated=false, fonttitle=\bfseries\fontsize{13pt}{0}\selectfont\titlefont, title={O QU\^E?},
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+attach boxed title to top left={ yshift=-10 mm},
+underlay boxed title={
+\fill[cor1] ($(title.north west) + (0,-7mm)$) coordinate (x1) -- ++ (23 mm,0mm) arc [start angle=-90, end angle=90, x radius=3mm, y radius=3mm] coordinate (x2) -- ++ (-23 mm,0mm) -- cycle;
+}
+}
+\newtcolorbox{whybox}{enhanced, jigsaw, opacityframe=.3, opacityfill=.3, width=80mm, left=3mm, right=3mm, top=10mm, bottom=.5mm, colback=white, colframe=white, arc=3mm, sharp corners=uphill, coltitle=cor2, lower separated=false, fonttitle=\bfseries\fontsize{13pt}{0}\selectfont\titlefont, title={POR QU\^E?},
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+attach boxed title to top left={ yshift=-10 mm},
+underlay boxed title={
+\fill[cor1] ($(title.north west) + (0,-7mm)$) coordinate (x1) -- ++ (31 mm,0mm) arc [start angle=-90, end angle=90, x radius=3mm, y radius=3mm] coordinate (x2) -- ++ (-31 mm,0mm) -- cycle;
+}
+}
+
+\newcommand{\ChapNumTitle}[1]{%
+    \thispagestyle{plain}
+    \begin{tikzpicture}[remember picture, overlay]
+        \coordinate (a) at ($(current page.north west) + (44.00mm,-44.00mm)$);
+        \coordinate (c) at ($(current page.north west) + (148.54mm,-64.82mm)$);
+        \coordinate (d) at ($(current page.north) + (0.00mm,-78.57mm)$);
+
+        \begin{pgfonlayer}{top}
+        \filldraw [fill=cor1, draw=cor1] ($(a) + (0.00mm,-25.00mm)$) -- ++(22.00mm,0.0mm) arc [start angle=270, end angle=360, x radius = 3.00mm, y
+        radius=3.00mm] coordinate (c1) -- ++(0.00mm,44.00mm) coordinate (c2) arc [start angle=0, end angle=90, x radius=3.00mm, y radius=3.00mm] --
+        ++(-44.00mm,0.00mm) arc [start angle=90, end angle=180, x radius=3.00mm, y radius=3.00mm] -- ++(0.00mm,-44.00mm) arc [start angle=180, end
+        angle=270, x radius=3.00mm, y radius=3.00mm] -- cycle;
+        \node[font=\chapnumfont, text=cor2] at (a) {\chapnamefont\thechapter};
+
+        \coordinate (b) at ($(c1)!0.5!(c2)$);
+        \node (title) at (b) [right, font=\chaptitlefont, text=white] {#1};
+        % partial solution to the box O QUE and POR QUE?
+         \node [right] at ($(d)+(-80mm,-50mm)$) {\begin{whatbox} 			
+				\newline 
+				\chapterwhat
+			    		\end{whatbox}	
+			    				    		
+			    		\begin{whybox}
+				\newline 
+				\chapterbecause  
+					\end{whybox}};
+
+%        \node [right, shape=howbecauseheadingbox, fill=cor1, text=cor2, font=\bfseries\fontsize{13pt}{0}\selectfont\titlefont] (whatbox) at (d) {O QUE?};
+%        \node [yshift=-10.00mm, text=black, text width=79.25mm, right] (whytext) at (whatbox.south west) {\indent \chapterwhat};
+%        \node [yshift=-8.00mm, right, shape=howbecauseheadingbox, fill=cor1, text=cor2, font=\bfseries\fontsize{13pt}{0}\selectfont\titlefont] (becausebox) at (whytext.south west) {POR QUE?};
+%        \node [yshift=-19.00mm, text=black, text width=79.25mm, right] (becausetext) at (becausebox.south west) {\indent \chapterbecause};
+        \end{pgfonlayer}
+
+        \begin{pgfonlayer}{background}
+            \node [shape=howbecausetextbox, fill=white, fit={(whatbox) (whytext) (becausebox) (becausetext)}] (howbecausetextbox) {};
+        \end{pgfonlayer}
+
+        \begin{pgfonlayer}{bottom}
+            \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{\chapterillustration}};
+        \end{pgfonlayer}
+
+%%%        \begin{pgfonlayer}{main}
+%%%            \filldraw [fill=cor2] plot [smooth] coordinates {($(current page.north west) + (0.00mm,-15.00mm)$) ($(current page.north east) + (-70.00mm,-74.64mm)$) ($(current page.north east) + (0.00mm,-66.79mm)$)} -- (current page.north east) -| cycle;
+%%%            \filldraw [fill=cor1] plot [smooth] coordinates {($(current page.north west) + (0.00mm,-12.00mm)$) ($(current page.north west) + (120.00mm,-30.00mm)$) ($(current page.north east) + (-25.00mm,0.00mm)$)} -| cycle;
+%%%%            \filldraw [fill=cor1] plot [smooth] coordinates {($(current page.north east) + (-15.00mm,0.00mm)$) ($(current page.north west) + (130.00mm,-35.00mm)$)} -- plot [smooth] coordinates {($(current page.north east) + (-15.00mm,17.00mm)$) ($(current page.north east) + (-20.83mm,0.00mm)$)} -- cycle;
+%%%        \end{pgfonlayer}
+
+
+        \begin{pgfonlayer}{top}
+%            \draw plot [smooth] (current page.north west) + (0.00mm,-11.78mm)$) coordinates {($(current page.north west) + (118.86mm,-19.64mm)$) ($(current page.north east) + (-23.72mm,-0.00mm)$)};
+%            \draw [black] ($(current page.north west) + (0.00mm,-11.78mm)$)  -- ++(118.86mm,-19.64mm) -- ($(current page.north east) + (-23.72mm,-0.00mm)$) -| cycle;
+%            \draw [black] ($(current page.north east) + (-13.86mm,0.00mm)$) -- ($(current page.north east) + (-73.28mm,-23.57mm)$) -- ($(current page.north east) + (-17.83mm,0.00mm)$) --cycle;
+%            \draw [black] ($(current page.north west) + (0.00mm,-11.78mm)$)-- ($(current page.north east) + (-59.42mm,-74.64mm)$) -- ($(current page.north east) + (0.00mm,-66.79mm)$) |- cycle;
+%            \draw [blue, thick] ($(current page.north west) + (0.00mm,-11.78mm)$) .. controls ($(current page.north west) + (25.75mm,-35.11mm)$) and ($(current page.north west) + (65.36mm,-48.76mm)$) .. controls ($(current page.north west) + (118.83mm,-97.52mm)$) and ($(current page.north west) + (198.06mm,-97.52mm)$);
+%            \draw [red] plot [smooth cycle] coordinates {($(current page.north west) + (0.00mm,-11.78mm)$) ($(current page.north west) + (45.55mm,-40.00mm)$) ($(current page.north west) + (156.46mm,-85.00mm)$) ($(current page.north east) + (0.00mm,-65.00mm)$)};
+
+        \end{pgfonlayer}
+    \end{tikzpicture}
+
+}
+
+\newcommand{\ChapNoNumTitle}[1]{%
+    \thispagestyle{plain}
+    \begin{tikzpicture}[remember picture, overlay]
+        \coordinate (a) at ($(current page.north west) + (44.00mm,-44.00mm)$);
+
+        \filldraw [fill=cor1] ($(a) + (0.00mm,-25.00mm)$) -- ++(22.00mm,0.0mm) arc [start angle=270, end angle=360, x radius = 3.00mm, y
+        radius=3.00mm] coordinate (c1) -- ++(0.00mm,44.00mm) coordinate (c2) arc [start angle=0, end angle=90, x radius=3.00mm, y radius=3.00mm] --
+        ++(-44.00mm,0.00mm) arc [start angle=90, end angle=180, x radius=3.00mm, y radius=3.00mm] -- ++(0.00mm,-44.00mm) arc [start angle=180, end
+        angle=270, x radius=3.00mm, y radius=3.00mm] -- cycle;
+%        \node[textbf, text=cor2] at (a) {\chapnamefont\thechapter};
+
+        \coordinate (b) at ($(c1)!0.5!(c2)$);
+        \node (title) at (b) [right, font=\chaptitlefont] {#1};
+    \end{tikzpicture}
+}
+\newif\ifnumberedchap
+\numberedchaptrue
+
+% Page number command
+\newcommand{\leftpagenumber}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \coordinate (bottom) at ($(current page.south west) + (13.50mm,6.80mm)$);
+            \begin{pgfonlayer}{main}
+                % Square for page number
+                \filldraw [fill=cor1, draw=cor1] (bottom) rectangle ++(-8.00mm,8.00mm) coordinate (corner);
+            \end{pgfonlayer}
+
+            \begin{pgfonlayer}{foreground}
+                \node (page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
+            \end{pgfonlayer}
+    \end{tikzpicture}
+}
+
+\newcommand{\rightpagenumber}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \coordinate (bottom) at ($(current page.south east) + (-13.50mm,6.80mm)$);
+            \begin{pgfonlayer}{main}
+                % Square for page number
+                \filldraw [fill=cor1, draw=cor1] (bottom) rectangle ++(8.00mm,8.00mm) coordinate (corner);
+            \end{pgfonlayer}
+
+            \begin{pgfonlayer}{foreground}
+                \node (page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
+            \end{pgfonlayer}
+
+    \end{tikzpicture}
+}
+
+\newcommand{\drawpage}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw [green, thick] (current page.north west) -- (current page.north east) -- (current page.south east) -- (current page.south west) -- cycle;
+    \end{tikzpicture}
+}
+
+
+% Draw headers. This places the tabs on the side of the page
+\newcommand{\leftpagetab}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        % \filldraw [fill=cor1, draw=cor1] (current page.north east) rectangle ($(current page.south east) + (-18.00mm,0.00mm)$) coordinate (bottom) {};
+        \coordinate (bottom) at ($(current page.south west) + (18.00mm,0.00mm)$);
+
+        % Draw color block
+        \filldraw [fill=cor2, draw=cor2] ($(current page.north east) + (-18.00mm,0.00mm)$) rectangle ++(8.00mm,-8.00mm) coordinate (taba) {};
+        % \filldraw [fill=cor1, draw=cor1] ($(current page.north east) + (-18.00mm,0.00mm)$) -- ++(0.00,-48.00mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- ++(5.00mm,0.00mm) arc [start angle=270, end angle=360, x radius=2.00mm, y radius=2.00mm] |- cycle;
+
+        % Square for chapter number
+        \coordinate (tabb) at ($(taba) + (-8.00mm,-8.00mm)$);
+        \coordinate (tabc) at ($(tabb) + (4.00mm,0.00mm)$);
+        \node [fill=cor1, text=white, minimum height=8.00mm, minimum width=8.00mm] (chapternumber) at ($(tabb)!0.5!(taba)$) {\Large\thirdtitlefont\thechapter};
+        % \filldraw [fill=cor2, draw=cor2] ($(current page.north east) + (-18.00mm,-26.00mm)$) -- ++(9.00mm,0.00mm) -- ++(0.00mm,-9.00mm) -| cycle;
+
+        % Add chapter name
+        \node [fill=cor2, text=white] (chaptertitle) at (tabb) [rotate=90, below left, minimum height = 8.00mm] {\tiny\titlefont \MakeUppercase{\chaptername}};
+
+        % Add end tab
+        \fill [fill=cor2] (chaptertitle.north west) -- ++(0.00mm,-4.00mm) coordinate (t1) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm]  -- ++(4.00mm,0.00mm) arc [start angle=270, end angle=360, x radius=2.00mm, y radius=2.00mm] coordinate (t2) -| cycle;
+
+        % Add chapter title 
+        \node (chaptertitle) at ($(t1)!0.5!(t2)$) [left, rotate=90, text=black] {\tiny \pagetitlefont \leftmark};
+
+    \end{tikzpicture}
+}
+
+\newcommand{\rightpagetab}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        % \filldraw [fill=cor1, draw=cor1] (current page.north west) rectangle ($(current page.south west) + (18.00mm,0.00mm)$) coordinate (bottom) {};
+        \coordinate (bottom) at ($(current page.south west) + (18.00mm,0.00mm)$);
+
+        % Draw color block
+        \filldraw [fill=cor2, draw=cor2] ($(current page.north west) + (18.00mm,0.00mm)$) rectangle ++(-8.00mm,-8.00mm) coordinate (taba) {};
+
+        % Square for chapter number
+        \coordinate (tabb) at ($(taba) + (8.00mm,-8.00mm)$);
+        %%% \coordinate (tabc) at ($(tabb) + (4.00mm,0.00mm)$);
+        \node [fill=cor1, text=white, minimum height=8.00mm, minimum width=8.00mm] (chapternumber) at ($(tabb)!0.5!(taba)$) {\Large\thirdtitlefont\thechapter};
+
+        % Add chapter name
+        \node [fill=cor2, text=white] (chaptertitle) at (tabb) [rotate=90, above left, minimum height = 8.00mm] {\tiny\titlefont \MakeUppercase{\chaptername}};
+
+        % Add end tab
+        \filldraw [fill=cor2, draw=cor2] (chaptertitle.south west) -- ++(0.00mm,-4.00mm) coordinate (t1) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- ++(-4.00mm,0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] coordinate (t2) -| cycle;
+
+        % Add chapter title
+        \node (chaptertitle) at ($(t1)!0.5!(t2)$) [left, rotate=90, text=black, xshift=-0.00mm] {\tiny\pagetitlefont\leftmark};
+
+        % Square for page number
+        % \filldraw [fill=cor1, draw=cor1] ($(bottom) + (0.00mm, 20.00mm)$) rectangle ++(8.00mm,8.00mm);
+    \end{tikzpicture}
+}
+
+
+% Draw Headings
+
+%%% Activity heading
+%\newcommand{\activity}[1]{
+%	\begin{tikzpicture}[remember picture, overlay]
+%	\draw [draw=cor2] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] coordinate (arc) -- ++(53.00mm,0.00mm) coordinate (line);
+%	\node (title) at (arc.north east) [above right, font=\bfseries\fontsize{13pt}{0}\selectfont] {#1};
+%	\filldraw [fill=cor2, draw=cor2] (line) -- ++(0.00mm,6.00mm) coordinate (line1) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -| ++(20.00mm,-6.00mm) coordinate (line2) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+%	\node (activity) at ($(line1)!0.5!(line2)$) [text=white, font=\titlefont] {Atividade};
+%	\end{tikzpicture}
+%}
+
+%% Exploring Headins
+\newcommand{\explore}[1]{%
+\vspace{8 mm}
+
+	\noindent \begin{tikzpicture}[remember picture, scale=1.3]% overlay removed from original, otherwise the stays behind the text, scale.
+        \filldraw [fill=session1, draw=session1] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+        \node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont  EXPLORANDO};
+        \draw [session1, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
+        \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session1}{\MakeUppercase{ #1}}};
+    \end{tikzpicture}
+    \vspace{3 mm}
+    
+    	\def\currentcolor{session1}
+	%setting depth 1 enumerate style
+        \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+	% choose secondary (depth 2) enumerate style..
+	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+
+    
+}
+
+\newcommand{\practice}[1]{%
+\vspace{8 mm}
+
+\noindent     \begin{tikzpicture}[remember picture, scale=1.3]
+        \filldraw [fill=session2, draw=session2] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+        \node (practice) at ($(a)!0.5!(b)$) [white] {\titlefont PRATICANDO};
+        \draw [session2, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
+        \node (title) at ($(a1)!0.5!(b1)$) [right] { \large\secondtitlefont\textcolor{session2}{\MakeUppercase{ #1}}};
+    \end{tikzpicture}
+\vspace{3 mm}
+
+	\def\currentcolor{session2}
+	%setting depth 1 enumerate style
+        \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+	% choose secondary (depth 2) enumerate style..
+	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+
+
+}
+
+\newcommand{\know}[1]{%
+\vspace{8 mm}
+
+\noindent     \begin{tikzpicture}[remember picture, scale=1.3]
+        \filldraw [fill=session3, draw=session3] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+        \node (know) at ($(a)!0.5!(b)$) [white] {\titlefont PARA SABER \Huge{+}};
+        \draw [session3, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
+        \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session3}{\MakeUppercase{ #1}}};
+    \end{tikzpicture}
+\vspace{3 mm}
+
+	\def\currentcolor{session3}
+	%setting depth 1 enumerate style
+       \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+	% choose secondary (depth 2) enumerate style..
+	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+}
+
+\newcommand{\arrange}[1]{%
+\vspace{8 mm}
+
+\noindent     \begin{tikzpicture}[remember picture, scale=1.3]
+        \filldraw [fill=session4, draw=session4] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+        \node (arrange) at ($(a)!0.5!(b)$) [white] {\titlefont ORGANIZANDO};
+        \draw [session4, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
+        \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session4}{\MakeUppercase{ #1}}\newline};
+    \end{tikzpicture}
+\vspace{3 mm}
+
+	\def\currentcolor{session4}
+	%setting depth 1 enumerate style
+        \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+	% choose secondary (depth 2) enumerate style..
+	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+
+}
+
+%% Exercise section
+\renewcommand{\exercise}{
+\vspace{8 mm}
+
+	\noindent \begin{tikzpicture}[remember picture]
+	\draw [draw=cor2, very thick] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) -- ++(\textwidth , 0.00mm) -- ++(0mm,-2mm);% line
+	\fill [draw=cor2, very thick , fill=cor1] ($(\textwidth/2 , 0mm) + (19mm,6mm)$) -- ++(0.00mm,-5.5 mm) coordinate (line1) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| ++(-38.00mm , 0.00mm)  -- ++ (0mm, 5.5 mm) coordinate (line2) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+	\node (exercise) at ($(line1)!0.5!(line2) + (0 mm, .8 mm)$) [text=white, font=\thirdtitlefont\Large] {EXERCÍCIOS};%\fontsize{13pt}{0}
+	\end{tikzpicture}
+	\vspace{8 mm}
+	
+	\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
+	\setlist[enumerate,2]{label=\emph{\alph*)},ref=\theenumi.\emph{\arabic*}}
+	}
+
+% Defining the section style for the diferent names that eventually appear.
+\setsecnumdepth{chapter} % just number the chapter, not lower levels.
+
+% Clear page after chapter title
+\renewcommand\memendofchapterhook{%
+    \clearpage\m@mindentafterchapter\@afterheading}
+
+% Setup page
+\makechapterstyle{livroaberto}{%
+    \renewcommand{\chapnamefont}{}
+    \renewcommand{\chapnumfont}{\titlefont\bfseries\fontsize{140pt}{0}\selectfont}
+    \renewcommand{\chaptitlefont}{\titlefont\bfseries\fontsize{25pt}{0}\selectfont}
+    \renewcommand{\chapternamenum}{}
+    \renewcommand{\afterchapternum}{}
+    \renewcommand{\printchaptername}{}
+    \renewcommand{\printchapternum}{}
+    \renewcommand{\printchapternonum}{\global\numberedchapfalse}
+    \renewcommand{\printchaptertitle}[1]{%
+    \thispagestyle{plain}
+        \ifnumberedchap
+            \ChapNumTitle{##1}
+        \else
+            \ChapNoNumTitle{##1}
+        \fi
+        \global\numberedchaptrue
+        }
+    \renewcommand{\afterchaptertitle}{\clearpage}
+%    \setlength{\beforechapskip}{}
+%    \setlength{\midchapskip}{}
+%    \setlength{\afterchapskip}{}
+
+}
+\renewcommand{\chaptermarksn}[1]{}
+
+
+\makepagestyle{plain}
+\makeevenfoot{plain}{}{\leftpagenumber}{}
+\makeoddfoot{plain}{}{\rightpagenumber}{}
+
+\makepagestyle{livroaberto}
+
+\makeevenfoot{livroaberto}{}{\leftpagenumber}{}
+\makeoddfoot{livroaberto}{}{\rightpagenumber}{}
+\makeevenhead{livroaberto}{}{\rightpagetab}{}
+\makeoddhead{livroaberto}{}{\leftpagetab}{}
+
+
+\chapterstyle{livroaberto}
+\pagestyle{livroaberto}

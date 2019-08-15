@@ -1,0 +1,63 @@
+%***************************************************************************************
+% This package sets up the macros for tikz in the Livro Aberto textbook.
+%
+% This package was written and created by
+% José Ezequiel Sóto Sanchez, Marcos Paulo Araújo, Fabio Simas e Augusto Teixeira.
+% Contact: livroaberto@impa.br for problems
+%
+%
+
+\def\fileversion{v1.0}
+\def\filename{tikzmacros}
+\def\filetitle{Macros for tikz pictures}
+\def\filedate{2018/05/14}
+\def\docdate {2018/05/14}
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{\filename}
+
+\typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
+\typeout{English documentation as of <\docdate>}
+
+\RequirePackage{etex}
+\RequirePackage{tikz}
+\usetikzlibrary{intersections, arrows, arrows.meta}
+\RequirePackage{tkz-euclide}
+\usetkzobj{all}
+
+
+\definecolor{primario}{RGB}{0,165,157} %esverdeado
+\definecolor{secundario}{RGB}{73,85,93} %acinzentado escuro
+\definecolor{terciario}{RGB}{184,202,213} % azul claro
+\definecolor{destacado}{RGB}{183,13,40} %avermelhado
+\definecolor{atento}{RGB}{0,94,176} %azul forte
+
+\usetikzlibrary{calc}
+\usetikzlibrary{datavisualization}
+
+\tikzstyle{vetor}=[->,line width=0.8pt,color=primario,>=latex]
+
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only, label={}]
+
+\tikzstyle{every node}=[shift only]
+
+\tikzstyle{eixos}=[->]
+
+\tikzstyle{curvafun}=[very thick, color=primario]
+
+\tikzstyle{grafica}+=[line cap=round,line join=round,color=terciario, very thick]
+
+\newcommand{\vetoresmapaantartida}{
+      \filldraw [white, fill opacity=100] (-4,-3) rectangle (4,3);
+      \node at (-4,-3) {\includegraphics[width=1cm]{/home/cheque/Dropbox/Tikz-LivroAberto/Vetores/rosa.png}};
+      \node [above, scale=0.5] at (-4,-2.5) {N};
+      \node [left, scale=0.5] at (-4.5,-3) {E};
+      \node [right, scale=0.5] at (-3.5,-3) {L};
+      \node [below, scale=0.5] at (-4,-3.5) {S};
+      \node [ponto] (A) at (0,0) {};
+      \node [below] at (A) {$A$};
+      \draw [|-|] (2,-3.5) -- (4,-3.5);
+      \node [above, scale=0.5] at (3,-3.5) {10 km};
+}
+
