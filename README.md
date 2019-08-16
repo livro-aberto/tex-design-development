@@ -23,7 +23,7 @@ Estratégia de atuação:
     
     Seções:
     \explore{título} %Explorando o assunto
-    \arrange{título} %
+    \arrange{título} % Organizando as ideias
     \practice{título} %Praticando
     \know{título} % Para saber mais
     \exercise %Exercícios
@@ -42,5 +42,20 @@ Estratégia de atuação:
 To compile this you need to first install latex. In Ubuntu or Debian:
 
     sudo apt-get install texlive texlive-extra-utils texlive-lang-portuguese
+
+# Download
+
+Download the full repository.
+
+# Compile
+
+You might compile your file using the command below with the terminal oppened in the downloaded folder. The command is supposed to generate a PDF file.
+
+    xelatex -interaction nonstopmode aluno.tex
+
+# To get the job done
+
+Compile the file without the option "-interaction nonstopmode" and see what does the compiler say when it stops because of an error and try to fix it.
+
 
 ...
