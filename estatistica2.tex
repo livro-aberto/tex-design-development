@@ -12,285 +12,6 @@ diferentes tipos de medidas resumo, tanto de posição como de dispersão, para 
 medidas apropriadas em cada caso.}\ 
 \chapter{Medidas de posição e dispersão}
 \label{\detokenize{PE104:medidas-de-posicao-e-dispersao}}\label{\detokenize{PE104::doc}}
-\begin{sphinxadmonition}{note}{Para o professor}
-
-Neste capítulo serão trabalhadas as seguintes habilidades da BNCC para o Ensino Médio:
-
-(EM11MT04) Utilizar a média, a mediana e a amplitude para descrever, comparar e interpretar dois conjuntos de dados numéricos obtidos nas pesquisas realizadas pelos estudantes, em termos de localização (centro) e dispersão (amplitude).
-
-(EM13MT05) Calcular e interpretar medidas de dispersão (amplitude, desvio médio, variância e desvio padrão) para um conjunto de dados numéricos, agrupados ou não, em pesquisas realizadas pelos estudantes ou usando dados de outras fontes com temas envolvendo os temas integradores.
-
-\sphinxstylestrong{Objetivo Geral do Capítulo}
-
-Compreender como algumas medidas, chamadas medidas resumo, podem revelar informações sobre a distribuição dos dados. Para alcançar este objetivo geral, este capítulo inclui:
-\begin{enumerate}
-\item {} 
-definições de medidas de posição (média, mediana, moda e quartis);
-
-\item {} 
-definições de medidas de dispersão (desvio médio, variância e desvio padrão, amplitude (amostral), distância entre quartis, coeficiente de variação);
-
-\item {} 
-sinalizações para a importância das medidas de dispersão para avaliar a representatividade da média na distribuição;
-
-\item {} 
-revisão dos conceitos apresentados no capítulo \sphinxstylestrong{A Natureza da Estatística}: parâmetro e estatística, definindo média populacional e média amostral, variância populacional e variância amostral.
-
-\item {} 
-apresentação de representação gráfica para variáveis quantitativas conhecida como \sphinxstyleemphasis{boxplot} (gráfico caixa).
-
-\end{enumerate}
-
-Observação: Embora muitos textos denominem as medidas de posição (média, mediana e moda) como medidas de tendência central, preferimos denominá-las medidas de posição, pois, por exemplo, na presença de forte assimetria, a média não será um valor central, pois será influenciada  pelos valores extremos da distribuição.
-
-\sphinxstylestrong{Por que estudar o assunto?}
-
-As medidas resumo (posição e dispersão) correspondem a uma síntese do conjunto de dados observados e ao passo preliminar para fazer uma inferência estatística, ou seja, a partir das informações obtidas na amostra, expandir nossas conclusões para a população. Como as distribuições podem apresentar formas variadas é importante conhecer diferentes tipos de medidas resumo, tanto de posição como de dispersão, para usar medidas apropriadas em cada caso.
-
-\sphinxstylestrong{Desafios do Capítulo}
-\begin{enumerate}
-\item {} 
-Entender as especificidades das variadas medidas resumo e reconhecer suas limitações em cada contexto.
-
-\item {} 
-A partir de algumas medidas resumo, ser capaz de ter uma noção quanto à forma da distribuição dos dados.
-
-\end{enumerate}
-
-\sphinxstylestrong{Conteúdos abordados}
-\begin{enumerate}
-\item {} 
-Medidas de posição: média, mediana, moda e quartis.
-
-\item {} 
-Medidas de dispersão: amplitude, distância entre quartis, desvio médio, variância, desvio padrão e coeficiente de variação.
-
-\item {} 
-Parâmetro versus Estimador (estimativa) (Média populacional versus média amostral, Variância populacional versus variância amostral, etc.).
-
-\item {} 
-Construção do \sphinxstyleemphasis{boxplot} (gráfico caixa).
-
-\end{enumerate}
-
-\sphinxstylestrong{Pré-requisitos}
-
-(EF07MA29) Compreender, em contextos significativos, o significado de média estatística como indicador da tendência de uma pesquisa, calcular seu valor e relacioná-lo, intuitivamente, com a amplitude do conjunto de dados.
-
-(EF08MA22) Obter os valores de medidas de tendência central de uma pesquisa estatística (média, moda e mediana) com a compreensão de seus significados e relacioná-los com a dispersão de dados, indicada pela amplitude.
-
-(EM11MT03) Realizar pesquisas, considerando: o planejamento, a discussão (se será censitária ou por amostra), a seleção de amostras, a elaboração e aplicação de instrumentos de coleta, a organização e representação dos dados (incluindo agrupamentos de dados em classe), a construção de gráficos apropriados (incluindo o histograma), a interpretação e a análise crítica apresentadas em relatórios descritivos.
-
-\sphinxstylestrong{Desdobramentos imediatos}
-
-(EM15MT06) Analisar criticamente os métodos de amostragem em relatórios de pesquisas divulgadas pela mídia e as afirmativas feitas para toda a população baseadas em uma amostra.
-
-\sphinxstylestrong{Abordagem do Capítulo}
-
-Pretende-se ao longo do capítulo, além de apresentar as definições das variadas medidas, enfatizar suas propriedades. Por exemplo, no caso da média, pretende-se explorar as seguintes propriedades:
-\begin{enumerate}
-\item {} 
-a média de um conjunto de números é um valor que pertence ao intervalo delimitado pelos valores extremos deste conjunto (mínimo e máximo);
-
-\item {} 
-a soma dos desvios da média é sempre zero para qualquer conjunto de números;
-
-\item {} 
-a média é influenciada por todos os valores no conjunto;
-
-\item {} 
-a média pode ser um valor que não pertence ao conjunto analisado;
-
-\item {} 
-a média é um valor representativo do conjunto analisado.
-
-\end{enumerate}
-
-Após definir a média e explorar algumas de suas propriedades, situações em que ela pode ser inadequada como valor representativo de uma distribuição (distribuições com forte assimetria) são apresentadas, motivando assim a definição da mediana, uma medida que é pouco afetada por valores extremos.
-
-Uma vez definidas média e mediana, uma situação em que ambas podem ser consideradas inadequadas como valores representativos de uma distribuição (distribuições bimodais simétricas) é apresentada, motivando assim a definição da moda.
-
-Em adição às medidas de posição, medidas de dispersão complementam a descrição de uma distribuição. A motivação para a necessidade de definir medidas de dispersão será realizada com base em uma atividade em que dois conjuntos de dados apresentam média, mediana e moda coincidentes, mas suas distribuições são diferentes.
-
-Após a definição das medidas de dispersão, uma atividade, na qual dois conjuntos de dados apresentam a mesma variância, é proposta. A finalidade dessa atividade será avaliar a magnitude da variância em relação ao conjunto e definir o coeficiente de variação amostral, usado para avaliar essa magnitude.
-
-Na seção seguinte, será proposta uma atividade para construir uma representação gráfica alternativa ao histograma conhecida como boxplot. O esquema dos cinco números, conjunto formado pelas medidas: mínimo, quartis e máximo é usado na construção do boxplot. Os \sphinxstyleemphasis{boxplots} são gráficos simples e muito usados na comparação de diferentes conjuntos de dados. Na construção do boxplot, é apresentado um critério de classificação de um valor do conjunto como valor atípico em relação aos demais valores do conjunto de dados. Na conclusão desta seção, apresenta-se uma regra empírica para a determinação de frequência de observações nos em intervalos centrados na média de comprimentos dados por dosi desvios padrões e quatro desvios padrões para uma situações nas quais não existem valores atípicos ou estes são raros e, a forma da distribuição não é muito assimétrica.
-
-Na seção \sphinxstylestrong{Para saber mais} são apresentadas fórmulas para o cálculo de algumas medidas trabalhadas no capítulo para dados agrupados e algumas demonstrações de resultados trabalhados no capítulo.
-
-\sphinxstylestrong{Diferencial do Capítulo}
-
-De acordo com Russel e Mokros (1991), citados em Batanero e Borovnik (2016), a compreensão da ideia de “valor representativo” implica em três competências diferentes:
-\begin{enumerate}
-\item {} 
-selecionar o melhor valor representativo para um dado conjunto de dados;
-
-\item {} 
-construir um conjunto de dados tendo um determinado valor representativo, por exemplo, a moda;
-
-\item {} 
-compreender o efeito que uma mudança em parte dos dados tem sobre os possíveis valores representativos.
-
-\end{enumerate}
-
-Pretende-se explorar estas três competências nas atividades e exercícios do capítulo.
-
-A fórmula de cálculo da variância é apresentada de forma detalhada  para que o aluno compreenda o significado desta medida. No entanto, dada a sua complexidade, evitaremos seu uso direto, propondo o uso da tecnologia para obtê-la.
-
-A definição de quartis e a construção do boxplot são propostas inovadoras em relação ao conteúdo usual de Estatística nos livros didáticos do Ensino Médio. Os conceitos relativamente simples de quartis aliados  à grande utilidade do \sphinxstyleemphasis{boxplot} na comparação de grupos diferentes, reforçam a pertinência em tratá-los no Ensino Médio.
-
-\sphinxstylestrong{Dificuldades típicas dos estudantes (distratores)}
-
-Com base no texto de Batanero e Borovnik (2016), apesar da maior parte dos métodos de análise exploratória de dados envolverem apenas cálculos e interpretações de medidas estatísticas simples, bem como, construções de gráficos e suas respectivas leituras, pesquisadores sugerem que os estudantes apresentam problemas na compreensão de conceitos, e em relacionar os mesmos ao contexto de forma significativa. Uma razão para isso é que, em geral, os professores focam sobre a aplicação de métodos em vez da interpretação de resultados em um dado contexto. Neste texto, um resumo de resultados de pesquisas realizadas neste tema é apresentado. A seguir, algumas destas dificuldades são destacadas.
-\begin{enumerate}
-\item {} 
-Cálculo de médias combinadas a partir das médias de diferentes grupos: desprezam-se os tamanhos dos diferentes grupos,  calculando uma média simples das médias dos grupos.
-
-\item {} 
-Cálculo de média para dados agrupados: ignoram-se as frequências, considerando apenas os pontos médios dos intervalos, somando-os e dividindo pelo número de intervalos, ou simplesmente, considerando apenas o valor da variável, quando a variável é quantitativa discreta.
-
-\item {} 
-Compreensão das medidas de posição: média, mediana e moda.
-
-\item {} 
-Compreensão das medidas de dispersão, em particular, da variância e do desvio padrão.
-
-\item {} 
-Interpretação dos valores obtidos no contexto considerado.
-
-\end{enumerate}
-
-Os dois primeiros itens estendem-se para o cálculo da variância e do desvio padrão.
-
-Os distratores serão explorados nas atividades e nos exercícios.
-
-\sphinxstylestrong{Exemplos}
-
-Princípios norteadores dos exemplos selecionados:
-\begin{enumerate}
-\item {} 
-propor problemas cuja solução requer dados a serem coletados pelos alunos ou que de alguma forma estão disponíveis para consulta.
-
-\item {} 
-contextualizar sempre os problemas propostos, pois o contexto é fundamental nas investigações e interpretações.
-
-\end{enumerate}
-
-\sphinxstylestrong{Estratégia pedagógica}
-
-Usar um processo reflexivo baseado no pensamento estatístico.
-\begin{enumerate}
-\item {} 
-Fórmulas e algoritmos para obter as medidas resumo, embora importantes neste capítulo, não serão valorizados.
-
-\item {} 
-Dar importância à compreensão dos conceitos e à interpretação dos resultados.
-
-\item {} 
-As atividades deverão estar sempre bem caraterizadas a um problema a ser resolvido em um contexto específico.
-
-\item {} 
-Neste capítulo, o uso de recursos tecnológicos para a realização dos cálculos de medidas resumo é fundamental. Recomenda-se o GeoGebra e planilhas de cálculo.
-
-\end{enumerate}
-
-O uso de calculadoras é fortemente recomendável. No entanto, cabe alertar o estudante quanto à notação adotada no Brasil para o separador decimal: a vírgula, e que é adotada neste livro. No entanto, a notação utilizada, em geral, nas calculadoras e na maioria dos programas e aplicativos é o ponto decimal. Por exemplo, o GeoGebra usa o ponto como separador de casas decimais e, em geral as planilhas eletrônicas estão formatadas para números, usando a vírgula como separador decimal. Assim, copiar e colar os dados de um aplicativo para outro pode acarretar em grandes variações. Cabe também realçar que é muito importante treinar o estudante a usar corretamente as calculadoras: não é raro, apesar de permitir o uso das mesmas, ocorrerem erros pelo manuseio incorreto da calculadora. O estudante deve ser alertado para a ordem de hierarquia das operações, muito trabalhada nos anos iniciais do segundo segmento do Ensino Fundamental, mas que é aparentemente esquecida quando vão utilizar calculadoras.
-
-Cabe reforçar também que apesar do capítulo poder à primeira vista parecer pesado pelo excesso de definições e fórmulas, é possível verificar que as atividades são relativamente simples e visam muito mais à interpretação das medidas do que o cálculo das mesmas. Sempre serão fornecidas informações para facilitar cálculos quando estes forem solicitados. Nas avaliações, a não ser que seja permitido o uso de calculadora, recomenda-se fortemente não pedir para calcular variâncias e desvios padrões, estes deverão ser, em geral  dados, e perguntas envolvendo o significado dos mesmos devem ser feitas.
-
-Enfim o que deve ser valorizado no capítulo é conhecer o significado das medidas aqui apresentadas. O cálculo das mesmas pode ser feito, usando-se aplicativos e, as fórmulas, se por acaso forem necessárias para resolver algum problema, deverão ser sempre fornecidas. Principalmente, em se tratando de medidas de dispersão.
-
-\sphinxstylestrong{Estrutura do Capítulo}
-
-\sphinxstylestrong{Explorando 1: Medidas de Posição} Nesta seção serão trabalhadas duas atividades. A primeira propõe duas transformações simples nos dados de um conjunto e procura avaliar o efeito destas transformações na distribuição dos dados. A segunda foca especificamente no cálculo de medidas de posição tais como média, mediana e moda, que já devem ser conhecidas do Ensino Fundamental. Também proporemos a divisão do conjunto de dados em quatro intervalos de classes de frequências iguais a 1/4 para definir os três quartis de uma distribuição.
-\begin{enumerate}
-\item {} 
-Atividade: Distribuição de notas para perceber o efeito de transformações simples (multiplicação e/ou adição de um valor) no dado na posição e escala(forma) da distribuição, comparando histogramas.
-
-\item {} 
-Atividade: Apresentação de diferentes conjuntos de dados sobre tempos para completar uma “maratona” que apresentam diferentes tipos de assimetria.
-
-\end{enumerate}
-
-\sphinxstylestrong{Organizando as ideias 1: Medidas de posição} Definições de média; mediana; moda e quartis.
-
-\sphinxstylestrong{Praticando o assunto 1:} Atividades explorando conceitos e propriedades apresentados no organizando as ideias 1.
-
-\sphinxstylestrong{Explorando 2: Medidas de dispersão} Proposição de uma atividade envolvendo dois conjuntos de dados reais, todos com medidas de posição iguais, mas apresentando diferenças em suas distribuições caracterizando a necessidade da medida de dispersão.
-
-\sphinxstylestrong{Organizando as ideias 2: Medidas de dispersão}  Definições de amplitude; distância entre quartis; desvio-médio; variância; desvio padrão e coeficiente de variação.
-
-Nesta seção também  serão retomados os conceitos de parâmetro e estimador, tratados no capítulo \sphinxstylestrong{A Natureza da Estatística} apresentando a definição de variância populacional e amostral, desvio-padrão populacional e amostral e, média populacional e amostral.
-
-Proposição de uma atividade apresentando dois conjuntos de dados com a mesma variância, mas com medidas de posição diferentes para motivar a definição de coeficiente de variação.
-
-\sphinxstylestrong{Praticando o assunto 2} Atividades que usam os conceitos e propriedades apresentados no organizando 2 e que buscam dar significado às medidas de dispersão definidas.
-
-\sphinxstylestrong{Explorando 3} Proposição de atividade de construção de representação de dados usando Mínimo, Q1, Mediana, Q3 e Máximo.
-
-\sphinxstylestrong{Organizando as ideias 3}
-\begin{enumerate}
-\item {} 
-Definição do \sphinxstyleemphasis{boxplot} (gráfico caixa) representação gráfica para variáveis quantitativas alternativa ao histograma.
-
-\item {} 
-Descrição do critério de classificação de um valor como valor atípico do conjunto de dados adotado na construção do boxplot.
-
-\item {} 
-Apresentação de regra empírica para avaliar a frequência de dados nos intervalos \(\bar{x}\pm s\) e \(\bar{x}\pm 2\cdot s\).
-
-\end{enumerate}
-
-\sphinxstylestrong{Praticando o assunto 3}  Proposição de atividades de comparação de grupos, usando o boxplot.
-
-\sphinxstylestrong{Para saber mais}
-
-Nesta seção serão apresentadas
-\begin{enumerate}
-\item {} 
-fórmulas para o cálculo de medidas apresentadas no capítulo para dados agrupados;
-
-\item {} 
-demonstrações de propriedades trabalhadas nas seções organizando as ideias;
-
-\end{enumerate}
-
-\sphinxstylestrong{Material Suplementar}
-
-Um applet do GeoGebra foi disponibilizado com manual de instruções nesta seção. Nele será possível gerar conjuntos de dados para os quais serão fornecidas as medidas resumo do conjunto bem como o histograma e o boxplot. Neste applet também será possível entrar com o seu próprio conjunto de dados para obter os gráficos e as medidas resumo.
-
-\sphinxstylestrong{Exercícios}
-
-Nesta seção são propostos exercícios do ENEM, Vestibulares entre outros, abordando os conteúdos desse capítulo. Nos exercícios serão tratados os distratores.
-
-\sphinxstylestrong{Referências Bibliográficas}
-\begin{enumerate}
-\item {} 
-ABE (2015) ABE: Reflexões a respeito dos conteúdos de probabilidade e estatística na escola no Brasil - uma proposta. Disponível em: \textless{}\sphinxurl{https://goo.gl/OBtwpv}\textgreater{}. Acesso em: 18 ago. 2017.
-
-\item {} 
-Batanero, C., Burrill, G., \& Reading, C. (Eds.). (2011). Teaching statistics in school mathematics-challenges for teaching and teacher education: A joint ICMI/IASE study: the 18th ICMI study (Vol. 14). Springer Science \& Business Media.
-
-\item {} 
-Batanero, C., \& Borovcnik, M. (2016). Statistics and probability in high school. Springer.
-
-\item {} 
-Bussab, W. O. \& Morettin, P. A. (2017). Estatística Básica.  Saraiva. Nona edição.
-
-\item {} 
-Levine, D. M., Bereneson, M. L. e Stephan, D. (2000). Estatística: Teoria e Aplicações. LTC.
-
-\item {} 
-Rossman, Allan J., and Beth L. Chance. Workshop Statistics:: Discovery With Data and Minitab. Springer Science \& Business Media, 1998.
-
-\item {} 
-Triola, M. F. (2005), Introdução à Estatística. LTC. Nona Edição.
-
-\end{enumerate}
-
-Observação: Os textos d), e), f) e g) são recomendados para cursos de estatística a nível de graduação, mas seus capítulos iniciais, que tratam da natureza da estatística, representações gráficas e medidas resumo podem ser úteis. Os mesmos foram consultados para o material deste capítulo.
-\end{sphinxadmonition}
-
 
 \explore{medidas de posição}
 \label{\detokenize{PE104-0:sec-explorando1}}\label{\detokenize{PE104-0:explorando-medidas-de-posicao}}\label{\detokenize{PE104-0::doc}}
@@ -565,14 +286,7 @@ Ao longo deste capítulo veremos como resumir a informação dos dados, usando a
 Como as distribuições podem apresentar formas variadas é importante conhecer diferentes tipos de medidas resumo, tanto de posição como de dispersão, para usar medidas apropriadas em cada caso.
 
 \phantomsection\label{\detokenize{PE104-0:ativ-notas-de-artes}}
-\begin{sphinxadmonition}{note}{Atividade}{ notas de Artes}
-
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos} Estudar o efeito de uma transformação simples numa distribuição de dados: adição (posição) ou multiplicação (escala).
-
-\sphinxstylestrong{Observações e sugestões}    Esta atividade tem como objetivo principal levar o aluno a perceber efeitos que certas transformações simples nos dados (adição e multiplicação) acarretam em uma distribuição de frequências e, consequentemente, levá-lo a avaliar possíveis mudanças nas medidas de posição e dispersão que serão tratadas neste capítulo. Como ela é uma atividade introdutória, essas propriedades não serão totalmente exploradas na atividade, mas ao longo da capítulo ela será retomada. Os dados desta atividade podem ser obtidos neste \sphinxhref{https://ggbm.at/TNh7dPCf}{link} , e sugere-se o uso do GeoGebra ou uma planilha para realizar as transformações indicadas, embora não seja necessário para a realização da atividade.  No item (e) não há uma resposta certa, mas ele deverá ser explorado futuramente com o objetivo de avaliar os efeitos em uma distribuição quando somamos um valor constante a todos os dados e quando multiplicamos um valor constante a todos os dados.
-\end{sphinxadmonition}
+\begin{task}{ notas de Artes}
 
 Ao final de um trimestre, um professor de Artes registrou as seguintes notas de seus 35 alunos, listadas no quadro a seguir, em ordem crescente.
 
@@ -816,50 +530,11 @@ Dada a informação inicial de que a média da turma foi 5,93, de quanto será a
 Se você fosse um aluno desta turma, que possibilidade de bonificação você escolheria? Para que notas é melhor cada uma das estratégias?
 
 \end{enumerate}
-\end{sphinxadmonition}
+\end{task}
 
-\begin{sphinxadmonition}{note}{Resposta}
-\begin{enumerate}
-\item {} 
-Analisando o primeiro histograma apresentado com o original, percebe-se que o primeiro apresenta uma pequena alteração com intervalos de classe mais largos, ou seja de comprimento 2,4 (os comprimentos originais dos intervalos são iguais a 2). Já, o segundo, mantém intervalos de classe com mesmo comprimento aos do original, apresentando um deslocamento dos intervalos em uma unidade para à direita.
 
-\item {} 
-Com o acréscimo de 1 ponto a cada nota, a nota maior que é 8,0 passa a ser 9,0; já com o aumento de $20\%$ sobre a nota de cada um, a nota maior passa a ser 9,6. Portanto, analisando os dois histogramas dados, conclui-se que o primeiro corresponde ao aumento de $20\%$ na nota de cada um e, o segundo, ao acréscimo de 1 ponto na nota de cada um.
-
-\end{enumerate}
-\begin{enumerate}
-\setcounter{enumi}{3}
-\item {} 
-Observe que se todos os alunos tiverem o acréscimo de 1 ponto, a soma total das notas será acrescida de 35 pontos (pois são 35 alunos). Ao dividir o total por 35, perceba que a nova média será alterada exatamente pelo acréscimo de 1 ponto, passando a ser 6,93. Ou seja, a nova média é dada por \(\frac{207,5+35}{35}\approx 5,93+1\). Já no caso do aumento de $20\%$ sobre a nota de cada aluno, teremos que a nova soma total de notas será dada pela soma original acrescida de $20\%$ tal que a média será dada por \(\frac{S+0,2\cdot S}{35}=\frac{1,2\cdot S}{35}=1,2\times \underbrace{\frac{S}{35}}_{\approx 5,9 \textsf{ média original}} = 1,2\times 5,93\approx 7,12\), em que \(S=207,5\).
-
-\item {} 
-Não há uma resposta certa para este item. Se cada aluno olhar o seu ponto de vista particular, para alguns será melhor ganhar um ponto e para outros será melhor ter um aumento de $20\%$ sobre a nota. Mais especificamente, para quem tiver obtido nota 5,0 será indiferente; para quem tiver obtido nota inferior a 5,0 será melhor ganhar um ponto e, para os restantes, será melhor o acréscimo de $20\%$ sobre a nota.
-
-\end{enumerate}
-\end{sphinxadmonition}
 \phantomsection\label{\detokenize{PE104-0:ativ-maratona-de-ny}}
-\begin{sphinxadmonition}{note}{Atividade}{ a maratona}
-
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos} Identificar a posição da média e dos quartis no gráfico da distribuição.
-
-\sphinxstylestrong{Observações e sugestões} Nesta atividade serão apresentados conjuntos diferentes de dados envolvendo tempos para completar maratonas. Os dados estão disponíveis neste \sphinxhref{https://ggbm.at/ZhqKD9Nz}{link}. Serão fornecidos os totais para que o cálculo das médias envolva apenas uma divisão e possa ser feito com uma calculadora simples. Pretende-se levar o aluno a perceber que na presença de forte assimetria (histograma alongado à direita ou à esquerda), a média pode não ser a medida mais adequada para representar o conjunto e, com isso, motivar a definição de mediana.
-
-É importante discutir as perguntas na caixa \sphinxstylestrong{Para refletir} em sala de aula com o intuito de que os estudantes percebam a necessidade de tratar previamente dados de determinada natureza antes de usá-los numericamente, como é o caso do tempo considerado em unidades distintas (hora:minuto:segundo).
-
-Na sequência se inclui a tabela com a respectiva conversão para horas em números decimais de modo a simplificar os cálculos na atividade, mas deve-se deduzir com os estudantes como calcular a conversão.
-
-Expressão utilizada para calcular o resultado em horas decimais (\(\textsf{horas}_{10}\)):
-\begin{equation*}
-\begin{split}\textsf{horas}_{10} = \textsf{Horas} + \frac{\textsf{Minutos}}{60} + \frac{\textsf{Segundos}}{60^2}\end{split}
-\end{equation*}
-A escolha da hora para a unidade de conversão nesta atividade não foi arbritária, pois as quatro categorias que serão tratadas apresentam tempos bastante variados entre os 100 primeiros a chegar e, para efeito da comparação a ser feita adiante, a unidade hora mostrou-se a mais conveniente na construção de gráficos.
-
-É importante comentar com os estudantes a diferença observada entre a média e a mediana e que esta se deve a uma forte assimetria na distribuição dos dados, representada pela forma de um histograma alongado para à esquerda com frequências pequenas, tornando a média inferior à mediana.
-
-Sugere-se como atividade interdisciplinar, a realização de corridas com os estudantes na Educação Física, medindo os tempos totais, calculando a velocidade média do percurso e comparando com a velocidade média do primeiro e centésimo lugares da maratona. Recomenda-se explicitar o vínculo com a Física para o cálculo e a interpretação da velocidade média, assim como a colocação de questões críticas que facilitem a interpretação dos resultados, por exemplo, é possível manter essa velocidade média durante quase 3 horas (tempo médio da maratona de mulheres)?
-\end{sphinxadmonition}
+\begin{task}{ a maratona}
 
 A maratona é uma prova de atletismo que consiste em correr uma distância de 42,195 km. Pelas suas características, este tipo de prova é realizada nas ruas de uma grande cidade ou na estrada. As principais cidades do mundo realizam um destes eventos anualmente, recebendo milhares de atletas profissionais e amadores que encaram o desafio e almejam finalizar a corrida ou melhorar o próprio tempo do passado.
 
@@ -1147,165 +822,12 @@ Observe no quadro a seguir, que os tempos já estão ordenados do menor para o m
 \end{tabulary}
 \par
 \sphinxattableend\end{savenotes}
-\end{sphinxadmonition}
-
-\begin{sphinxadmonition}{note}{Resposta}
-\begin{enumerate}
-\item {} 
-A tabela com as frequências por intervalo e o histograma ficam de seguinte forma:
+\end{task}
 
 
-\begin{savenotes}\sphinxattablestart
-\centering
-\sphinxcapstartof{table}
-\sphinxcaption{Guia para o cálculo de frequências do histograma}\label{\detokenize{PE104-0:id16}}
-\sphinxaftercaption
-\begin{tabulary}{\linewidth}[t]{|T|T|}
-\hline
-
-Intervalo
-&
-Frequência
-\\
-\hline
-{[}2,4480 ; 2,5118{[}
-&
-8
-\\
-\hline
-{[}2,5118 ; 2,5756{[}
-&
-7
-\\
-\hline
-{[}2,5756 ; 2,6394{[}
-&
-3
-\\
-\hline
-{[}2,6394 ; 2,7032{[}
-&
-2
-\\
-\hline
-{[}2,7032 ; 2,7670{[}
-&
-5
-\\
-\hline
-{[}2,7670 ; 2,8308{[}
-&
-6
-\\
-\hline
-{[}2,8308 ; 2,8946{[}
-&
-9
-\\
-\hline
-{[}2,8946 ; 2,9584{[}
-&
-13
-\\
-\hline
-{[}2,9584 ; 3,0222{[}
-&
-27
-\\
-\hline
-{[}3,0222 ; 3,0860{[}
-&
-20
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=200bp]{{Histograma_mulheres_resposta_1}.png}
-\caption{Histograma dos tempos da categoria de mulheres na Maratona de NY}\label{\detokenize{PE104-0:hist-maratona-mulheres-res}}\label{\detokenize{PE104-0:id17}}\end{figure}
-
-\item {} 
-Observando a forma do histograma podemos perceber uma grande concentração de valores mais à direita e que o histograma é alongado à esquerda. Distribuições com esta aparência são ditas ter uma forma assimétrica à esquerda.
-
-\item {} 
-O tempo médio das primeiras 100 corredoras é de 2,8698 horas, isto é 2:52:11. Uma corredora com esse tempo teria ficado na 36a.posição.
-
-\item {} 
-Para ficar entre os primeiros 25 lugares, uma corredora teria que terminar a corrida em até 2:45:52 (2,764 horas).
-
-Já para ficar nas primeiras 50, precisaria terminar o percurso em 2:56:57 (2,949 horas) ou menos.
-
-Finalmente, para ficar entre as primeiras 75, seu tempo teria que ser menor ou igual a 2:59:51 (2,998 horas).
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=200bp]{{Histograma_mulheres_resposta_lineas}.png}
-\caption{Histograma dos tempos da categoria de mulheres na Maratona de NY mostrando os quartis, a mediana e a média}\label{\detokenize{PE104-0:id18}}\end{figure}
-
-\item {} 
-Neste item deve-se observar que as marcações indicadas dividem o conjunto de dados em quatro intervalos de frequências absolutas iguais a 25, pois são 100 valores observados. Como o histograma é uma representação da distribuição de frequências, espera-se que as áreas correspondentes a cada um destes limites, sejam aproximadamente iguais a 1/4 da área total do histograma que é dada por 6,364 (para obter este valor soma-se os produtos dos comprimentos dos intervalos pela frequência dos intervalos=áreas dos retângulos). Se formos calcular diretamente da figura tais áreas, serão necessárias algumas aproximações, pois os tempos 25, 50 e 75 não são extremos dos intervalos considerados. Por esta razão é possível obter pequenas diferenças em relação ao valor esperado, a saber, \(6,364/4\approx 1,59\).
-
-\item {} 
-Os comprimentos dos intervalos são dados por:
-
-\end{enumerate}
 
 
-\begin{savenotes}\sphinxattablestart
-\centering
-\begin{tabulary}{\linewidth}[t]{|T|T|}
-\hline
-
-Intervalo
-&
-comprimento
-\\
-\hline
-t1 a t25
-&
-0,316
-\\
-\hline
-t25 a t50
-&
-0,185
-\\
-\hline
-t50 a t75
-&
-0,049
-\\
-\hline
-t75 a t100
-&
-0,087
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
-
-Lembre-se que se o histograma for construído considerando os intervalos acima, deve-se trabalhar com a escala de densidade de frequência (absoluta ou relativa: razão da frequência pelo comprimento do intervalo), pois os comprimentos dos intervalos são diferentes. No histograma construído nesta atividade, usou-se a escala da frequência absoluta, pois os intervalos considerados têm comprimentos iguais.
-\begin{enumerate}
-\setcounter{enumi}{6}
-\item {} 
-Não coincide.
-
-\item {} 
-Tem-se que o tempo médio foi 2,8698 e tempo da posição 50 foi 2,949 e, portanto, são diferentes. Adiante vamos trabalhar a razão desta diferença neste conjunto. Isto se deve à forma observada no histograma, comentada no segundo item. Observando o histograma, a média fica puxada para baixo, quase na primeira terceira parte. Neste caso, o tempo da 50a. posição representa melhor o conjunto como um todo.
-
-\end{enumerate}
-\end{sphinxadmonition}
-
-
-\begin{sphinxadmonition}{note}{Para refletir}
+\begin{reflection}
 \begin{itemize}
 \item {} 
 Como você calcularia a média de valores em horas, minutos e segundos,  como os da tabela?
@@ -1317,6 +839,7 @@ Como você construiria um histograma com estes dados? Como você definiria os li
 Qual o maior tempo em que uma corredora deveria completar a maratona para ficar entre as 25 primeiras? E entre as 50 primeiras?
 
 \end{itemize}
+\end{reflection}
 
 Para calcular a média destes dados é conveniente reduzi-los a uma única unidade de medida, pois, caso contrário, seria necessário calcular três médias e, ainda fazer conversões apropriadas para obter a resposta em hora:minuto:segundo. Convertendo todos os tempos para horas, obtemos o seguinte quadro de tempos.
 
@@ -1719,7 +1242,7 @@ O valor obtido para o tempo médio coincide com alguma das outras marcas feitas 
 Observe que o tempo médio dos 100 melhores tempos para mulheres e o tempo da  corredora que chegou em 50o. lugar são diferentes. Qual deles você escolheria como medida resumo destes dados? Por quê?
 
 \end{enumerate}
-\end{sphinxadmonition}
+
 
 
 
@@ -1743,6 +1266,8 @@ Definiremos a seguir as principais medidas que buscam de alguma forma resumir a 
 
 Para definir várias medidas a serem estudadas neste capítulo vamos adotar a seguinte notação.
 
+\begin{example}{Idade de pessoas que tomaram a vacina da febre amarela}
+
 Suponha que na primeira segunda-feira do mês de março de 2018, um Posto de Saúde tenha registrado as idades (em anos completos) das seis primeiras pessoas que chegaram para tomar a vacina da febre amarela e, os registros, obtidos foram \(\{55, 22, 30, 14, 25, 40\}\). Neste exemplo dizemos que o número de observações, denotado por \(n\), é \(6\) e que as observações são dadas por \(x_1=55\), \(x_2=22\), \(x_3=30\), \(x_4=14\), \(x_5=25\) e \(x_6=40\).
 
 De um modo geral, sejam \(x_1,x_2, \cdots, x_n\) , os \(n\) valores observados de uma variável quantitativa tal que
@@ -1765,6 +1290,8 @@ No exemplo das idades das seis primeiras pessoas que chegaram para tomar a vacin
 e
 
 \(x_{(1)}=14\), \(x_{(2)}=22\), \(x_{(3)}=25\), \(x_{(4)}=30\), \(x_{(5)}=40\) e \(x_{(6)}=55\).
+
+\end{example}
 
 A letra maiúscula sigma \(\left (\Sigma\right )\) é usada para denotar somatório, simplificando algumas fórmulas. Por exemplo,
 \begin{equation*}
@@ -1921,7 +1448,9 @@ Cuidado com esta interpretação: o ponto de equilíbrio corresponde à posiçã
 \noindent\sphinxincludegraphics[width=300bp]{{registros_de_tempo_simetria_1}.png}
 \caption{Histograma dos resgistros de tempo de atividade do Capítulo \sphinxstylestrong{A Natureza da Estatística}}\label{\detokenize{PE104-1:fig-simetria}}\label{\detokenize{PE104-1:id11}}\end{figure}
 
-Considere o exemplo a seguir. Numa tarde, 10 clientes interessados em obter um cartão de crédito oferecido por uma rede de supermercados informaram a uma atendente seus salários (em salários mínimos): \(\{1, 1, 2, 3, 4, 5, 5, 6, 9, 10\}\).
+
+\begin{example}{O cartão de crédito de supermercado}
+Numa tarde, 10 clientes interessados em obter um cartão de crédito oferecido por uma rede de supermercados informaram a uma atendente seus salários (em salários mínimos): \(\{1, 1, 2, 3, 4, 5, 5, 6, 9, 10\}\).
 
 A média destes dados é, então, \(\bar{x}=\frac{46}{10}=4,6\), que representa bem este conjunto, pois nele existem cinco valores acima da média e cinco valores abaixo da média e, estes valores não estão muito afastados do valor da média, conforme ilustrado no Diagrama de Pontos a seguir.
 
@@ -1944,6 +1473,8 @@ Com os dados do segundo conjunto, a média é dada por \(\frac{136}{10}=13,6\), 
 \caption{Diagrama de pontos do conjunto \(\{1, 1, 2, 3, 4, 5, 5, 6, 9, 100\}\) com destaque para a média do conjunto e quebra do eixo devido ao valor atípico}\label{\detokenize{PE104-1:fig-diagramadepontos-media-com-outlier}}\label{\detokenize{PE104-1:id13}}\end{figure}
 
 Este exemplo simples mostra que na presença de dados atipicamente altos, deve-se tomar cuidado em escolher a média como medida de posição das observações coletadas. Uma medida pouco afetada para valores atípicos, conhecida como \index{medida robusta}medida robusta,  deverá ser considerada em situações deste tipo. A mediana, que trataremos a seguir, é considerada uma medida robusta.
+
+\end{example}
 
 Desta discussão podemos concluir que deve-se ter cautela em resumir os dados com a média quando sua distribuição, representada pelo histograma, apresenta forma muito assimétrica, como mostram as figuras a seguir.
 
@@ -1969,13 +1500,18 @@ A \index{mediana}mediana de um conjundo de valores numéricos é definida como o
 
 Se o conjunto de dados tem uma quantidade ímpar de elementos então, considerando os dados ordenados, a mediana ocupará a posição central. Por exemplo, se o conjunto de dados tiver \(n=9\) elementos,  a posição central será a quinta. Nesse caso, haverá, ordenadamente, quatro elementos anteriores e quatro posteriores à mediana.
 
-Por exemplo considere o seguinte conjunto de idades de crianças atendidas (na ordem de atendimento) em um ambulatório pediátrico de um Posto de Saúde na primeira segunda-feira do mês de março no turno da manhã \(\{4,6,9,3,2,3,7,8,7\}\). Temos ao todo 9 observações cujos valores ordenados são
+
+\begin{example}{Idades de crianças atendidas em Posto de Saúde}
+Considere o seguinte conjunto de idades de crianças atendidas (na ordem de atendimento) em um ambulatório pediátrico de um Posto de Saúde na primeira segunda-feira do mês de março no turno da manhã \(\{4,6,9,3,2,3,7,8,7\}\). Temos ao todo 9 observações cujos valores ordenados são
 \begin{equation*}
 \begin{split}2 \leq 3 \leq 3 \leq 4 \leq \underbrace{\overbrace{6}^{\textsf{valor da quinta posição}}}_{\textsf{mediana}} \leq 7 \leq 7 \leq 8 \leq 9\end{split}
 \end{equation*}
+\end{example}
 Se o conjunto de dados tem uma quantidade par de elementos não será possível identificar “um” elemento central. Nesse caso, para a determinação da mediana serão considerados os dois elementos centrais da sequência ordenada. A mediana é dada pela média aritmética desses elementos. Por exemplo, se o conjunto de dados tiver 10 elementos, então as posições centrais são a 5a. e a 6a. A mediana será a média dos elementos que ocupam essas posições na sequência ordenada.
 
-Considere o exemplo dos salários de 10 clientes interessados em obter um cartão de crédito oferecido por uma rede de supermercados e que informaram à atendente seus salários (em salários mínimos):
+
+\begin{example}{cartão de crédito de supermercado (2)}
+Considere o conjunto de salários de 10 clientes interessados em obter um cartão de crédito oferecido por uma rede de supermercados e que informaram à atendente seus salários (em salários mínimos):
 \begin{equation*}
 \begin{split}\{1, 1, 2, 3, \overbrace{4}^{\textsf{5a. posição}}, \underbrace{5}_{\textsf{6a. posição}}, 5, 6, 9, 100\}\end{split}
 \end{equation*}
@@ -1984,6 +1520,7 @@ Observe que os valores já estão ordenados e que o salário da 5a. posição é
 \begin{split}\frac{4+5}{2}=4,5\end{split}
 \end{equation*}
 Lembre que a média destes dados resultou em 13,6. Este exemplo ilustra a propriedade de que a mediana é pouco afetada na presença de valores atipicamente grandes (ou pequenos). Já a média não possui esta propriedade, sendo muito afetada na presença de valores atípicos.
+\end{example}
 
 De maneira geral, se \(x_{(1)},x_{(2)},...,x_{(n)}\) são os valores ordenados do conjunto de dados, a mediana será dada por
 
@@ -1991,12 +1528,16 @@ De maneira geral, se \(x_{(1)},x_{(2)},...,x_{(n)}\) são os valores ordenados d
 x_{\left (\frac{n+1}{2}\right )}, &\textsf{ se }n \textsf{ for ímpar}\\
 \frac{1}{2} [ x_{\left (\frac{n}{2}\right )}+x_{\left (\frac{n}{2}+1\right )} ], &\textsf{ se }n \textsf{ for par.}\end{array}\right.\)
 
+\begin{example}{Determinação da mediana dos conjuntos de dados Notas de Artes e tempos de chegada para as mulheres na maratona de Nova Iorque (2017)}
+
 Considere a \DUrole{xref,std,std-ref}{ativ-notas-de-Artes} na qual tem-se \(n=35\) notas. Como 35 é ímpar, usando a definição anterior, podemos concluir que a mediana das notas será a nota na 18a. posição \(\left (\frac{35+1}{2}=18\right )\), a saber, \(\textsf{mediana}=x_{(18)}=6,5\) .
 
 Considere a \DUrole{xref,std,std-ref}{ativ-maratona-de-NY} na qual tem-se \(n=100\) melhores tempo de chegada entre as mulheres. Como 100 é par, usando a definição anterior, podemos concluir que a mediana dos 100 melhores tempos será dada pela média dos tempos na 50a e na 51a. chegada, a saber,
 \begin{equation*}
 \begin{split}\textsf{mediana}=\frac{x_{(50)}+x_{(51)}}{2}=\frac{2,949+2,949}{2}=2,949 \textsf{ horas}\end{split}
 \end{equation*}
+\end{example}
+
 \sphinxstylestrong{Mediana  para dados agrupados}
 
 Voltando à \DUrole{xref,std,std-ref}{ativ-Notas-de-Artes}, suponha novamente que o coordenador tenha tido acesso apenas ao
@@ -2190,23 +1731,18 @@ O segundo quartil (\(\textsf{Q}_2\)) é a mediana da distribuição ou, equivale
 Finalmente o terceiro quartil (\(\textsf{Q}_3\)) é o valor da distribuição
 para o qual a frequência relativa de valores abaixo dele é igual 75\% do número de observações do conjunto de dados e, consequentemente, acima dele, é 25\% do número de observações do conjunto de dados.
 
+\begin{example}{quartis da distribuição dos 100 melhores tempos para mulheres na maratona de Nova Iorque (2017)}
 Você já determinou os quartis para os dados da \DUrole{xref,std,std-ref}{ativ-maratona-de-NY} referentes aos 100 melhores tempos da maratona para a categoria mulheres.
 
 Como \(n=100\), podemos tomar como o primeiro quartil o tempo da 25a. posição \(\left (\frac{100}{4}=25\right )\), a saber, \(\textsf{Q}1=2,764\) h, já vimos que a mediana é 2,949 h e, para o terceiro quartil podemos tomar o  o valor da 75a. posição \(\left (3\cdot\frac{100}{4}=75\right )\), a saber, \(\textsf{Q}3=2,998\) h.
+\end{example}
 
 Já vimos como determinar mediana (ou segundo quartil) de um conjunto de \(n\) dados. Um método simples para obter os demais quartis, Q1 e Q3, é considerar dois novos conjuntos de dados, o primeiro, consistindo da primeira metade dos valores ordenados e, o segundo, consistindo da segunda metade. Depois, basta determinar a mediana de cada um destes dois conjuntos, obtendo Q1 e Q3, respectivamente.
 
 
 \practice{ }
 \label{\detokenize{PE104-2:sec-praticando1}}\label{\detokenize{PE104-2::doc}}\label{\detokenize{PE104-2:praticando}}\phantomsection\label{\detokenize{PE104-2:ativ-maratona-categoria-homens}}
-\begin{sphinxadmonition}{note}{Atividade}{ categoria homens na maratona}
-
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos} Usar medidas de posição para a comparação das distribuições de uma mesma variável em dois grupos diferentes.
-
-\sphinxstylestrong{Observações e sugestões} Nesta atividade serão comparados os dados dos 100 melhores tempos na maratona de Nova Iorque/2017 para as categorias homens e mulheres. A tabela com o s 100 melhores tempos em horas para a categoria homens é fornecida. A comparação será feita com base nas medidas de posição média, quartis, mínimo e máximo, que são fáceis de serem determinadas apesar da quantidade de dados ser 100. No caso da média, a soma dos 100 tempos é informada.
-\end{sphinxadmonition}
+\begin{task}{ categoria homens na maratona}
 
 Considere os dados da categoria Homens da Maratona da Cidade de Nova Iorque do ano 2017 apresentados na tabela a seguir, já convertidos para horas.
 
@@ -2538,76 +2074,9 @@ Mediana
 \end{tabulary}
 \par
 \sphinxattableend\end{savenotes}
-\end{sphinxadmonition}
+\end{task}
 
-\begin{sphinxadmonition}{note}{Resposta}
-
-\begin{savenotes}\sphinxattablestart
-\centering
-\sphinxcapstartof{table}
-\sphinxcaption{Legenda}\label{\detokenize{PE104-2:id5}}
-\sphinxaftercaption
-\begin{tabulary}{\linewidth}[t]{|T|T|T|}
-\hline
-&
-Mulheres
-&
-Homens
-\\
-\hline
-Mínimo
-&
-2,448
-&
-2,181
-\\
-\hline
-Máximo
-&
-3,086
-&
-2,639
-\\
-\hline
-Média
-&
-2,8698
-&
-2,5116
-\\
-\hline
-Mediana
-&
-2,949
-&
-2,550
-\\
-\hline
-\(Q1\)
-&
-2,772
-&
-2,473
-\\
-\hline
-\(Q3\)
-&
-2,998
-&
-2,611
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=200bp]{{Histograma_homens_resposta}.png}
-\caption{Histograma dos resultados da categoria de Homens da Maratona da Cidade de Nova York do ano 2017, com média, mediana, Q1 e Q3 indicados}\label{\detokenize{PE104-2:fig-coloque-aqui-o-nome}}\label{\detokenize{PE104-2:id6}}\end{figure}
-\end{sphinxadmonition}
+\
 
 
 \begin{sphinxadmonition}{note}{Para refletir}
@@ -2625,22 +2094,6 @@ Como poderiam ser utilizadas a mediana e os quartis para comparar duas distribui
 \phantomsection\label{\detokenize{PE104-2:ativ-comparacao-de-diferentes-grupos}}
 
 \begin{task}{cadeiras de rodas e triciclos de mão}
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos}
-
-Comparar distribuições de uma mesma variável para grupos distintos a partir dos histogramas.
-
-Perceber a necessidade de usar a mesma escala nos eixos do histograma, para tornar os mesmos comparáveis.
-
-\sphinxstylestrong{Observações e sugestões}
-
-Esta atividade introduz os elementos necessários para a comparação de dois histogramas, a saber: mesmas escalas nos eixos e colunas de frequências relativas.
-
-Os histogramas são apresentados com uma série de perguntas de discussão que podem motivar a formulação do conceito de dispersão de forma intuitiva, que será trabalhado na seguinte seção. Além de mostrar como apenas as medidas de posição não dizem suficiente sobre uma distribuição.
-
-As perguntas não têm respostas fechadas, têm o intuito de gerar uma discussão sobre os assuntos já colocados.
-\end{sphinxadmonition}
 
 Observe os histogramas a seguir referentes as categorias de cadeira de rodas e triciclo de mão da Maratona de Nova Iorque em 2017.
 
@@ -2698,28 +2151,7 @@ Comparando os dois histogramas, qual distribuição apresenta maior dispersão? 
 \end{enumerate}
 \end{task}
 
-\begin{sphinxadmonition}{note}{Resposta}
-\begin{enumerate}
-\item {} 
-As escalas horizontal e vertical são coincidentes em ambos os histogramas para permitir a comparação. Isto foi discutido no Capítulo \sphinxstylestrong{A Natureza da Estatística}.
 
-\item {} 
-Observando-se os histogramas o maior tempo está na categoria de Triciclo de mão.
-
-\item {} 
-A simples visualização pode remeter a estimativa de 4 horas para estas categorias, valor bem maior do que as médias para homens e mulheres (\DUrole{xref,std,std-ref}{ativ-maratona-categoria-homens}). No entanto, este valor excede muito as médias reais, apresentadas. Isto mostra que estimar o centro de equilíbrio de uma distribuição a partir do histograma não é trivial.
-
-\item {} 
-Ambos os histogramas apresentam assimetria à direita: grande concentração de dados à esquerda e forma alongada para a direita.
-
-\item {} 
-Não é possível, apenas um número é insuficiente para caracterizar a forma do histograma. Outras informações são necessárias para isto.
-
-\item {} 
-O triciclo de mão apresenta maior dispersão, considerando a amplitude.
-
-\end{enumerate}
-\end{sphinxadmonition}
 
 
 \explore{  medidas de dispersão}
@@ -2728,15 +2160,6 @@ O triciclo de mão apresenta maior dispersão, considerando a amplitude.
 \bigskip\hrule\bigskip
 
 \begin{quote}
-
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos} Definir medidas que caracterizam a dispersão de um conjunto de dados.
-
-\sphinxstylestrong{Observações e sugestões} Nessa atividade são apresentados dois conjuntos de dados temporais que apresentam mesma média, mesma mediana e mesma moda e, no entanto, seus gráficos de linha são distintos. O objetivo principal é mostrar que as medidas de posição podem ser insuficientes para caracterizar a distribuição dos dados, levando à necessidade de usar medidas de dispersão. Lembre que é esperado, do Ensino Fundamental, que os estudantes já tenham a noção de amplitude amostral, uma medida bruta de dispersão, pois só leva em conta o mínimo e o máximo observados.
-
-Esta atividade pode ser vinculada às disciplinas de História ou Geografia, por exemplo, no estudo do período da Crise Econômica de 1929 ou outros temas relacionados com o PIB e crescimento econômico.
-\end{sphinxadmonition}
 
 Para investir na bolsa de valores compramos ações de empresas por intermédio de uma corretora a um certo preço e depois de um período de tempo vendemos estas ações na expectativa de que seus preços tenham aumentado. No entanto, também podemos perder com o investimento, caso o preço da ação diminua no período de investimento. Uma ação é a menor parte do capital de uma empresa. Veja na figura a seguir um esquema simplificado do investimento na bolsa de valores.
 
@@ -2868,97 +2291,7 @@ Um investimento que apresenta grandes ganhos e perdas pode ser chamado de alto r
 \end{enumerate}
 \end{quote}
 
-\begin{sphinxadmonition}{note}{Resposta}
-\begin{enumerate}
-\item {} 
-Dado que são 10 observações em cada um dos conjuntos e que as somas das 10, resultam em 615, segue que a média das cotações na companhia \(A\) é R\$ 61,50, que também é a média das cotações na companhia \(B\).
 
-\item {} 
-Para obter as medianas é necessário antes ordenar os valores. Na tabela a seguir os valores das cotações foram ordenados para cada companhia.
-
-
-\begin{savenotes}\sphinxattablestart
-\centering
-\sphinxcapstartof{table}
-\sphinxcaption{Cotação das ações das empresas}\label{\detokenize{PE104-3:id3}}
-\sphinxaftercaption
-\begin{tabulary}{\linewidth}[t]{|T|T|}
-\hline
-
-\(A\)
-&
-\(B\)
-\\
-\hline
-56
-&
-33
-\\
-\hline
-56
-&
-42
-\\
-\hline
-57
-&
-48
-\\
-\hline
-58
-&
-52
-\\
-\hline
-61
-&
-57
-\\
-\hline
-63
-&
-67
-\\
-\hline
-63
-&
-67
-\\
-\hline
-67
-&
-77
-\\
-\hline
-67
-&
-82
-\\
-\hline
-67
-&
-90
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
-
-Como são 10 observações em cada conjunto e 10 é um número par, temos que a mediana será dada pela média das duas posições centrais, a saber, posições 5 e 6: \(\textsf{Mediana}=\frac{x_{(5)}+x_{(6)}}{2}\).
-
-Na companhia \(A\) teremos  \(\textsf{Mediana}=\frac{61+63}{2}=62\) reais e, na companhia \(B\), \(\textsf{Mediana}=\frac{57+67}{2}=62\)  reais.
-
-\item {} 
-Na companhia \(A\) o valor mais frequente foi 67, ocorrendo 3 vezes. Na companhia \(B\), o valor mais frequente foi 67, ocorrendo duas vezes. Logo, tanto em \(A\) como em \(B\) o valor da moda foi 67  reais.
-
-\item {} 
-Não, pois tais medidas são idênticas nas duas companhias.
-
-\item {} 
-Analisando os gráficos de linha da figura 57, percebe-se que as cotações da companhia \(B\) variam mais do que as da companhia \(A\) e, portanto, como menor risco envolve menos variação, escolheria a companhia \(A\). Observe que as amplitudes (diferença entre o maior e menor valores) observadas nas companhias \(A\) e \(B\) são \(67-56=11\) e \(90-33=57\), respectivamente, confirmando que na companhia \(A\) a variação das cotações é menor.
-
-\end{enumerate}
-\end{sphinxadmonition}
 
 
 \arrange{  medidas de dispersão}
@@ -2977,7 +2310,10 @@ Entre as medidas de dispersão mais simples, define-se a \index{amplitude amostr
 \begin{equation*}
 \begin{split}\textsf{Amplitude amostral}=\textsf{R}= \underbrace{x_{(n)}}_{\textsf{maior valor do conjunto}}-\underbrace{x_{(1)}}_{\textsf{menor valor do conjunto}}\end{split}
 \end{equation*}
-Uma desvantagem desta medida é que ela considera apenas os dois extremos do conjunto. Ainda é possível que dois conjuntos, tendo mesmas média, moda e mediana, apresentem a mesma amplitude e, no entanto, eles tenham comportamentos diferentes. Considere o exemplo a seguir, supondo os seguintes conjuntos de notas de Matemática de duas turmas de reforço, cada uma com 10 alunos.
+Uma desvantagem desta medida é que ela considera apenas os dois extremos do conjunto. Ainda é possível que dois conjuntos, tendo mesmas média, moda e mediana, apresentem a mesma amplitude e, no entanto, eles tenham comportamentos diferentes. 
+
+\begin{example}{Notas de Matemática}
+Supondo os seguintes conjuntos de notas de Matemática de duas turmas de reforço, cada uma com 10 alunos.
 
 \(\textsf{Notas da turma A}=\{ 1,1,1,5,5,5,5,9,9,9\}\) e \(\textsf{Notas da turma B}=\{1,3,3,5,5,5,5,7,7,9\}\)
 
@@ -2990,10 +2326,13 @@ Verifique que para esses dois conjuntos tem-se média, moda, mediana e amplitude
 \noindent\sphinxincludegraphics[width=200bp]{{diagrama_notas_1}.png}
 \caption{Diagramas de pontos das notas nas turmas A e B}\label{\detokenize{PE104-4:fig-diagrama-de-pontos-notas}}\label{\detokenize{PE104-4:id2}}\end{figure}
 
+
 Neste caso, uma medida um pouco mais refinada, mas ainda sem considerar todos os valores no conjunto, é a \index{distância entre quartis}distância entre quartis (DQ), definida como a diferença entre o terceiro e primeiro quartis da distribuição. Usando a notação apresentada anteriormente,
 \begin{equation*}
 \begin{split}\textsf{DQ}=\textsf{Q}3-\textsf{Q}1\end{split}
 \end{equation*}
+\end{example}
+
 No exemplo anterior, como cada conjunto tem 10 observações, podemos dividi-los em duas metades com cinco observações e tomar as medianas para identificar os primeiro e terceiros quartis.
 
 \(\textsf{Notas da turma A}= \{ \overbrace{1,1,1,5,5}^{\textsf{primeira metade}},\underbrace{5,5,9,9,9}_{\textsf{segunda metade}}\}\)
@@ -3440,17 +2779,6 @@ Observe que o GeoGebra usa como separador decimal o ponto e não a vírgula. Log
 
 \begin{task}{inflação de dois países}
 
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos}
-
-Comparar diferentes conjuntos de dados que apresentam a mesma variância, mas suas médias são diferentes.
-
-Perceber a necessidade de definir uma medida que avalie a magnitude da variância (desvio padrão) em relação à média.
-
-\sphinxstylestrong{Observações e sugestões} Nesta atividade são apresentados dois conjuntos de dados cujas variâncias são iguais, mas cujas médias são distintas. Pretende-se na discussão, levar à definição de coeficiente de variação, uma medida útil para avaliar a magnitude da variância. Como o dado observado é a inflação anual de um país, a atividade começa com um pequeno texto introdutório sobre inflação.
-\end{sphinxadmonition}
-
 A seguir são apresentados dados sobre as inflações anuais em dois países. Antes de trabalhar com os dados, vamos tentar explicar o que é \index{inflação}inflação. De uma maneira bem simples, pode-se dizer que a inflação é o aumento contínuo nos preços de produtos e serviços. Esse aumento costuma ser avaliado de forma mensal, gerando os índices de inflação, que refletem a variação nos preços.
 
 A inflação pode ser medida de várias formas. O índice oficial de inflação no Brasil é o IPCA (Índice de Preços ao Consumidor Amplo), que mede a variação mensal de preços de produtos considerando o consumo de famílias com renda mensal entre 1 e 40 salários mínimos. O IBGE (Instituto Brasileiro de Geografia e Estatística) é o orgão responsável pela medição e divulgação do IPCA. Veja neste
@@ -3528,19 +2856,6 @@ Qual dos países apresenta maior variação inflacionária quando comparada à m
 \end{enumerate}
 \end{task}
 
-\begin{sphinxadmonition}{note}{Resposta}
-\begin{enumerate}
-\item {} 
-No país A, a inflação média anual, considerando estes 5 anos, é    \(\bar{x}=\frac{10}{5}=2,00\) \%. No país B, a inflação média anual, considerando estes 5 anos, é \(\bar{x}=\frac{0,05}{5}=0,01\) \%. Logo, as inflações anuais médias dos dois países são bem diferentes.
-
-\item {} 
-Usando a fórmula simplificada para o cálculo da variância, temos, para o país A, \(\textsf{s}^2=\frac{1}{5-1}\left (20,1-5\cdot 2^2\right )= 0,025\) (\% \(^2\) ). Para o país B, temos \(\textsf{s}^2=\frac{1}{5-1}\left (0,1005-5\cdot 0,01^2\right )= 0,025\) (\% \(^2\) ). Logo, as variâncias destes dois conjuntos de inflações anuais são iguais e, consequentemente, os desvios padrões também são iguais.
-
-\item {} 
-Verifique que os cinco desvios da média produzidos pelos dados dos dois países são idênticos, levando à mesma variância (mesmo desvio padrão). No entanto, a média no país A (2\%) é bem maior do que no país B, indicando uma variação relativa à média menos forte do que no país B. A seguir, será definido o coeficiente de variação, que avalia essa propriedade de dispersão relativa à média. Observe que o desvio padrão para os dois países é  \(\sqrt{0,025}\approx 0,16\) \% de modo que no país A o desvio padrão corresponde a 8\% da média (\(\frac{0,16}{2}=0,08\) ), enquanto que no país B, corresponde a 1600\% da média (\(\frac{0,16}{0,01}=16\)), ou seja, a flutuação em torno da média é muito mais forte no país B.
-
-\end{enumerate}
-\end{sphinxadmonition}
 
 \sphinxstylestrong{Coeficiente de variação}
 
@@ -3572,28 +2887,7 @@ Observe que o coeficiente de variação só é definido para conjuntos cuja méd
 
 \practice{ }
 \label{\detokenize{PE104-5:sec-praticando2}}\label{\detokenize{PE104-5::doc}}\label{\detokenize{PE104-5:praticando}}\phantomsection\label{\detokenize{PE104-5:ativ-compara-categorias}}
-\begin{sphinxadmonition}{note}{Atividade}{ comparação de conjuntos de dados}
-
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos} Comparar diferentes distribuições de uma mesma variável quando separada por grupos.
-
-\sphinxstylestrong{Observações e sugestões}  Nesta atividade serão coletados dados de uma mesma variável que possa ser separada em grupos, com o intuito de comparar as suas medidas de posição e dispersão. Sugerem-se algumas opções, dependendo do tamanho da turma e do contexto escolar, podem até ser escolhidas variáveis distintas para grupos pequenos de alunos, por exemplo, um grupo trabalha com as médias de Matemática, outro grupo trabalha com alturas, etc.
-
-Uma vez coletados os dados, serão calculadas suas medidas de posição e dispersão e comparadas, tentando orientar os estudantes a comentar as observações e não apenas fazer os cálculos. Para a realização dos cálculos deve ser usado suporte tecnológico: calculadoras, aplicativos, etc.
-
-O intuito é dar uma perspectiva para os estudantes da forma em que a estatística é utilizada na ciência para responder perguntas como:
-\begin{itemize}
-\item {} 
-Uma determinada espécie vegetal cresce melhor perto de uma fonte de água ou longe da mesmo? Na sombra de uma árvore ou recebendo luz direta do sol?
-
-\item {} 
-As meninas são mais altas que os meninos numa certa idade? Acontece o mesmo em todas as idades?
-
-\end{itemize}
-
-De forma ideal, pode ser formulada primeiro a pergunta, e depois coletados os dados, apelando a informações encontradas num artigo científico ou numa publicação de jornal, com o intuito de tentar contrastar uma afirmação dada num texto com dados coletados diretamente.
-\end{sphinxadmonition}
+\begin{task}{ comparação de conjuntos de dados}
 
 Para realizar esta atividade será necessário coletar dois conjuntos de dados da mesma natureza, correspondentes a grupos distintos, os quais queremos comparar. Por exemplo:
 \begin{itemize}
@@ -3675,7 +2969,7 @@ Desvio padrão amostral (\(s\))
 \sphinxattableend\end{savenotes}
 
 Sugere-se a construção dos histogramas para comparar os dois grupos. Você pode usar o GeoGebra para esta construção.
-\end{sphinxadmonition}
+\end{task}
 \begin{enumerate}
 \setcounter{enumi}{1}
 \item {} 
@@ -3690,21 +2984,6 @@ Os resultados que você obteve parecem refletir a realidade? Existe algum result
 \bigskip\hrule\bigskip
 
 \begin{quote}
-
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos}
-
-Calcular uma aproximação grosseira do desvio padrão amostral em função da amplitude amostral.
-
-Comparar os resultados obtidos pela fórmula de aproximação com os valores exatos do desvio padrão amostral.
-
-Avaliar o valor obtido do desvio padrão, comparando-o com a aproximação.
-
-\sphinxstylestrong{Observações e sugestões}
-
-Nesta atividade pretende-se apresentar interpretações para o desvio padrão, evitando que ele torne-se apenas uma medida a mais sem muito sentido para o aluno. Além disso, esta atividade pode ser útil para o aluno avaliar se ele calculou corretamente um desvio padrão. É muito comum, mesmo informando-se somatórios e permitindo-se o uso de calculadoras, a produção de resultados incorretos para a variância e, consequentemente, para o desvio padrão. Uma ferramenta útil pode ser  comparar o valor obtido do desvio padrão com a razão \(\frac{R}{4}\). Se a diferença for grande (mais de 50\% do valor obtido de \(s\)) recomenda-se verificar novamente o cálculo de \(s\).
-\end{sphinxadmonition}
 
 Nos conjuntos de dados, quando não há valores atípicos (valores muito altos ou muito baixos em relação à maior parte dos valores no conjunto), a maior parte dos valores se situará no intervalo centrado na média distando 2 desvios padrões à esquerda e à direita da média. A partir desta suposição, pode-se obter uma fórmula para estimar o valor do desvio padrão amostral \(s\) .
 \begin{equation*}
@@ -3757,69 +3036,16 @@ Idem para estimar o valor de desvio padrão amostral dos dados da \DUrole{xref,s
 \caption{Estatísticas resumo das cotações das ação nas Companhias A e B.}\label{\detokenize{PE104-5:fig-estrategia}}\label{\detokenize{PE104-5:id4}}\end{figure}
 \end{quote}
 
-\begin{sphinxadmonition}{note}{Resposta}
-\begin{enumerate}
-\item {} 
-Da figura {\hyperref[\detokenize{PE104-5:fig-resumonartes}]{\sphinxcrossref{\DUrole{std,std-ref}{Estatísticas resumo das Notas de Artes}}}} vemos que \(s\approx 1,96\) e que \(R=8-0,8=7,2\). Pela fórmula apresentada temos \({s}\approx\frac{7,2}{4}=1,8\).
 
-\end{enumerate}
-
-Comparando o valor aproximado de \(s\) (1,8) com o valor calculado de \(s\) (1,96) vemos que a aproximação é um pouco menor do que o valor de \(s\). O erro percentual cometido por esta aproximação corresponde a 8\% do valor de \(s\), pois \(\frac{|1,8-1,96|}{1,96}\approx 0,08\).
-\begin{enumerate}
-\setcounter{enumi}{1}
-\item {} 
-Da figura {\hyperref[\detokenize{PE104-5:fig-summarymaratonamulheres}]{\sphinxcrossref{\DUrole{std,std-ref}{Estatísticas resumo dos 100 melhores tempos para mulheres - Maratona de Nova Iorque/2017}}}} vemos que \(s\approx 0,1866\) e que \(R=3,085-2,448=0,637\). Pela fórmula apresentada temos \({s}\approx\frac{0,637}{4}=0,15925\).
-
-\end{enumerate}
-
-Comparando o valor aproximado de \(s\) (0,15925) com o valor calculado de \(s\) (0,1866) vemos que a aproximação é um pouco menor do que o valor de \(s\). O erro percentual cometido por esta aproximação corresponde a 15\% do valor de \(s\), pois \(\frac{|0,15925-0,1866|}{0,1866}\approx 0,15\).
-\begin{enumerate}
-\setcounter{enumi}{2}
-\item {} 
-Da figura {\hyperref[\detokenize{PE104-5:fig-estrategia}]{\sphinxcrossref{\DUrole{std,std-ref}{Estatísticas resumo das cotações das ação nas Companhias A e B.}}}} vemos que, para a companhia A,  \(s\approx 4,5765\) e que \(R=67-56=11\). Pela fórmula apresentada temos \({s}\approx\frac{11}{4}=2,75\).
-
-\end{enumerate}
-
-Comparando o valor aproximado de \(s\) (2,75) com o valor calculado de \(s\) (4,5765) vemos que a aproximação é menor do que o valor de \(s\). O erro percentual cometido por esta aproximação corresponde a 40\% do valor de \(s\), pois \(\frac{|2,75-4,5765|}{4,5765}\approx 0,4\).
-
-Da figura {\hyperref[\detokenize{PE104-5:fig-estrategia}]{\sphinxcrossref{\DUrole{std,std-ref}{Estatísticas resumo das cotações das ação nas Companhias A e B.}}}} vemos que, para a companhia B,  \(s\approx 17,3738\) e que \(R=90-33=57\). Pela fórmula apresentada temos \({s}\approx\frac{57}{4}=14,25\).
-
-Comparando o valor aproximado de \(s\) (14,25) com o valor calculado de \(s\) (17,3738) vemos que a aproximação é menor do que o valor de \(s\). O erro percentual cometido por esta aproximação corresponde a 18\% do valor de \(s\), pois \(\frac{|14,25-17,3738|}{17,3738}\approx 0,18\).
-\end{sphinxadmonition}
 \phantomsection\label{\detokenize{PE104-5:ativ-mediamaisoumenosdoisdesvios}}
-\begin{sphinxadmonition}{note}{Atividade}{média mais ou menos 2 desvios padrões}
-
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos} Calcular a frequência relativa de dados que caem no intervalo centrado na média mais ou menos dois desvios padrões.
-
-\sphinxstylestrong{Observações e sugestões} Esta atividade será útil no final da próxima seção que trata da construção do boxplot e seus resultados serão retomados adiante. Além disso, será útil na verificação da afirmação feita na atividade anterior de que quando não há valores atípicos, a grande maioria dos dados situa-se entre a média mais ou menos dois desvios padrões.
-\end{sphinxadmonition}
+\begin{task}{média mais ou menos 2 desvios padrões}
 
 Para os conjuntos de dados considerados na \DUrole{xref,std,std-ref}{ativ-aproxima-dpa-usando-R}, calcule a frequência absoluta de dados que estão no intervalo \([\bar{x}-2\cdot s,\bar{x}+2\cdot s]\) e comente sobre os resultados obtidos.
-\end{sphinxadmonition}
+\end{task}
 
-\begin{sphinxadmonition}{note}{Resposta}
 
-No caso dos dados da \DUrole{xref,std,std-ref}{ativ-Notas-de-Artes} temos \(\bar{x}=5,93\) e \(s=1,96\) tal que os limites deste intervalo são, respectivamente, 2,01 e 9,85. Portanto, das 35 notas podemos ver que 32 observações caem dentro destes limites, ou equivalentemente,  cerca de 91\% das observações.
 
-No caso dos dados da \DUrole{xref,std,std-ref}{maratona-de-NY} temos \(\bar{x}=2,8697\) e \(s=0,1866\) tal que os limites deste intervalo são, respectivamente, 2,4969 e 3,2429. Portanto, dos 100 tempos podemos ver que 93 caem dentro destes limites, ou equivalentemente,  93\% dos tempos.
-
-No caso dos dados da \DUrole{xref,std,std-ref}{estrategia-de-investimento}, para a companhia A, temos \(\bar{x}=61,5\) e \(s=4,5765\) tal que os limites deste intervalo são, aproximadamente, 52,3 e 70,7. Portanto, das 10 cotações podemos ver que todas caem dentro destes limites, ou equivalentemente,  100\% das cotações.
-
-No caso dos dados da \DUrole{xref,std,std-ref}{estrategia-de-investimento}, para a companhia B, temos \(\bar{x}=61,5\) e \(s=18,3136\) tal que os limites deste intervalo são, aproximadamente,  24,9 e 98,1. Portanto, das 10 cotações podemos ver que todas caem dentro destes limites, ou equivalentemente,  100\% das cotações.
-
-Comentário acerca destes resultados: verifica-se que para os quatro conjuntos aqui considerados, de fato, a maior parte dos dados (mais de 90\%) situa-se entre os limites de uma média mais ou menos 2 desvios padrões.
-\phantomsection\label{\detokenize{PE104-5:ativ-comparacao-dois-tipos-de-bonificacao}}\end{sphinxadmonition}
-
-\begin{sphinxadmonition}{note}{Atividade}{comparação das bonificações nas Notas de Artes}
-
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos} Avaliar o efeito no coeficiente de variação de um conjunto de dados quando realizamos transformações de adição de uma constante e de multiplicação por uma constante.
-
-\sphinxstylestrong{Observações e sugestões} Nesta atividade pretende-se retornar ao item (e) da \DUrole{xref,std,std-ref}{ativ-Notas-de-Artes} quando foi perguntado ao estudante o que ele achava melhor: ganhar um ponto ou um acréscimo de 20\% em sua nota. A ideia será propor a mesma pergunta de um ponto de vista do professor, que prefere que a distribuição das notas apresente o menor coeficiente de variação.
-\end{sphinxadmonition}
+\begin{task}{comparação das bonificações nas Notas de Artes}
 
 Vamos retornar a \DUrole{xref,std,std-ref}{ativ-Notas-de-Artes} e às duas possibilidades de bonificação das notas: acrescentar um ponto a todos os alunos ou aumentar em 20\% a nota de cada aluno. Suponha, que o professor deseja que o resultado geral de sua turma apresente o menor coeficiente de variação. Partindo deste ponto de vista, qual das duas possibilidades é mais interessante para o professor adotar?
 
@@ -3864,17 +3090,9 @@ antes
 \end{tabulary}
 \par
 \sphinxattableend\end{savenotes}
-\end{sphinxadmonition}
+\end{task}
 
-\begin{sphinxadmonition}{note}{Resposta}
 
-O professor deverá escolher o aumento de um ponto para cada estudante, pois esta bonificação acarretará num coeficiente de variação menor, implicando em maior homogeneidade da turma em relação à média, conforme os cálculos a seguir.
-
-Considerando o acréscimo de um ponto a todos os alunos temos que a média passa a ser \(\bar{x}=\frac{242,5}{35}\approx 6,93\).
-A variância, calculada por \(s^2\) é dada por \(\frac{1811,39-35\cdot 6,93^2}{35-1}\approx 3,84\) e, o desvio padrão, \(s\approx 1,96\). Assim, o coeficiente de variação da turma, resultante desta bonificação será dado por \(\textsf{CV}=\frac{1,96}{6,93}\cdot 100\approx 28\) \%.
-
-Considerando um aumento de 20\% para cada nota temos que a média passa a ser \(\bar{x}=\frac{249,0}{35}\approx 7,11\). A variância, calculada por \(s^2\) é dada por \(\frac{1960,402-35\cdot 7,11^2}{35-1}\approx 5,56\) e, o desvio padrão, \(s\approx 2,36\). Assim, o coeficiente de variação da turma, resultante desta bonificação será dado por \(\textsf{CV}=\frac{2,36}{7,11}\cdot 100\approx 33\) \%.
-\end{sphinxadmonition}
 
 
 \explore{  Boxplot}
@@ -3882,12 +3100,6 @@ Considerando um aumento de 20\% para cada nota temos que a média passa a ser \(
 
 \begin{task}{homens e mulheres na maratona de Nova Iorque}
 \label{\detokenize{PE104-6:atividade-homens-e-mulheres-na-maratona-de-nova-iorque}}\label{\detokenize{PE104-6:ativ-construcao-do-boxplot}}
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos:} Usando as medidas mínimo, Q1, mediana, Q3 e máximo, construir um esquema visual simples que permita comparar dois grupos distintos.
-
-\sphinxstylestrong{Observações e sugestões:} Nesta atividade pretende-se apresentar o boxplot, gráfico alternativo para a representação de variáveis quantitativas, que além de bastante simples de construir é útil na comparação de grupos diferentes. Este gráfico é baseado nas cinco medidas citadas nos objetivos específicos e, as mesmas, já foram obtidas pelos alunos em atividades anteriores. De qualquer forma, serão novamente apresentadas no enunciado da atividade, para facilitar.
-\end{sphinxadmonition}
 
 No quadro a seguir, são apresentadas algumas informações sobre os 100 melhores tempos na maratona de Nova Iorque em 2017 para o grupo dos homens e para o grupo das mulheres.
 
@@ -3970,19 +3182,7 @@ Compare as duas figuras obtidas. Que diferenças você pode destacar entre as du
 \end{enumerate}
 \end{task}
 
-\begin{sphinxadmonition}{note}{Resposta}
 
-Veja na figura a seguir a construção sugerida pelos itens (a) a (f), considerando a orientação do eixo horizontal.
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=200bp]{{boxplotsHM}.png}
-\caption{Resumo dos 100 melhores templos para homenes e mulheres na maratona de Nova Iorque/2017}\label{\detokenize{PE104-6:fig-boxplothm}}\label{\detokenize{PE104-6:id2}}\end{figure}
-
-\(g)\) Comparando as duas figuras obtidas pode-se perceber que os 100 melhores tempos para os homens foram em geral menores que os 100 melhores tempos para mulheres. Observe que o maior tempo para homens é menor do que o primeiro quartil para as mulheres. Em ambas as figuras também pode-se perceber intervalos iniciais mais largos, isto é, a distância entre o mínimo e o primeiro quartil é bem maior do que a distância entre o máximo e o terceiro quartil, tanto na categoria homens como na categoria mulheres.
-\end{sphinxadmonition}
 
 
 \arrange{  Boxplot}
@@ -4151,12 +3351,6 @@ O boxplot é muito útil na comparação de diferentes grupos, como veremos na a
 
 \begin{task}{modalidades da maratona de Nova Iorque 2017}
 \label{\detokenize{PE104-7:ativ-comparacaodegruposusandoboxplot}}\label{\detokenize{PE104-7:atividade-modalidades-da-maratona-de-nova-iorque-2017}}
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos} Comparar diferentes conjuntos de dados, considerando a mesma variável.
-
-\sphinxstylestrong{Observações e sugestões} Nesta atividade retomaremos as quatro categorais da maratona de Nova Iorque para usar o boxplot como esquema gráfico para auxiliar na comparação dos resultados para as diferentes categorias, a saber, homens, mulheres, cadeira de rodas e triciclo de mão. Os dados estão disponíveis neste \sphinxhref{https://ggbm.at/ZhqKD9Nz}{link}.
-\end{sphinxadmonition}
 
 Nas figuras a seguir apresentam-se os boxplots dos 100 melhores tempos para na maratona de Nova Iorque no ano de 2017 para as categorias homens e mulheres e os melhores tempos para as categorias cadeira de rodas e triciclo de mão e as medidas resumo calculadas pelo GeoGebra para as quatro categorias.
 
@@ -4202,44 +3396,7 @@ Faça uma análise comparativa das distribuições das modalidades cadeira de ro
 \end{enumerate}
 \end{task}
 
-\begin{sphinxadmonition}{note}{Resposta}
-\begin{enumerate}
-\item {} 
-Considerando a amplitude amostral é fácil perceber que a maior dispersão ocorre na categoria triciclo de mão. O mesmo vale se considerarmos a distância entre quartis. Pela {\hyperref[\detokenize{PE104-7:fig-medidasresumo4categorias}]{\sphinxcrossref{\DUrole{std,std-ref}{Medidas resumo para as quatro categorias da maratona de Nova Iorque/2017}}}} podemos ver que esta resposta também valerá se considerarmos o desvio padrão.
 
-\item {} 
-Pela {\hyperref[\detokenize{PE104-7:fig-boxplotsmaratona}]{\sphinxcrossref{\DUrole{std,std-ref}{Boxplots para os 100 melhores tempos das categorias homens e mulheres e dos melhores tempos das categorias cadeira de rodas e triciclo de mão da maratona de Nova Iorque/2017}}}} podemos ver que a única categoria que não apresentou valores atípicos foi a categoria das mulheres, pois não há pontos destacados no boxplot correspondente às mulheres.
-
-\item {} 
-Considerando as categorias “cadeira de rodas” e “triciclo de mão”, vemos que
-
-\end{enumerate}
-
-\(\textsf{Q1-Min}<< \textsf{Max-Q}3\);
-
-\(\textsf{Mediana-Q}1< \textsf{Q3-Mediana}\) e
-
-\(\textsf{Mediana-Min} <<\textsf{Max-mediana}\), em que o símbolo \(<<\) é usado para indicar “bem menor do que”.
-Logo, conclui-se que nestas categorias tem-se assimetria à direita acentuada. Observe, que nestes dois casos tem-se que a mediana é menor do que a média. Reveja os histogramas construídos na \DUrole{xref,std,std-ref}{ativ-comparacao-de-diferentes-grupos}.
-
-Considerando as categorias “homens” e “mulheres”, vemos que
-
-\(\textsf{Q1-Min}>> \textsf{Max-Q}3\);
-
-\(\textsf{Mediana-Q}1 > \textsf{Q3-Mediana}\) e
-
-\(\textsf{Mediana-Min} >>\textsf{Max-mediana}\), em que o símbolo \(>>\) é usado para indicar “bem maior do que”.
-Logo, conclui-se que nestas categorias tem-se assimetria à esquerda acentuada. Observe, que nestes dois casos tem-se que a mediana é maior do que a média. Reveja os histogramas construídos na \DUrole{xref,std,std-ref}{ativ-comparacao-de-diferentes-grupos}.
-\begin{enumerate}
-\setcounter{enumi}{3}
-\item {} 
-Podemos perceber que ambas as categorias apresentam distribuições com assimetria à esquerda, mas na categoria mulheres não há valores atípicos. Também podemos perceber que a dispersão na categoria mulheres é maior do que na categoria homens, considerando a amplitude, a distância entre quartis e também o desvio padrão. Por esta razão, a categoria mulheres não apresentou valores atípicos. Já para a categoria homens, por ter apresentado menos dispersão, apresentou vários valores atípicos pequenos, que certamente, devem se referir aos tempos dos atletas profissionais. Reveja os histogramas construídos na \DUrole{xref,std,std-ref}{ativ-comparacao-de-diferentes-grupos}.
-
-\end{enumerate}
-
-5. Considerando as categorias “cadeira de rodas” e “triciclo de mão” vemos que na primeira, 51 completaram a maratona e, na segunda, 69 completaram a maratona. Quanto à amplitude, vemos que ela foi maior na cetegoria “triciclo de mão”, valendo o mesmo para a distância entre quartis e para o desvio padrão. Possivelmente, esta diferença nas dispersões das duas categorias esteja sendo acarretada pelo maior valor atípico da categoria “triciclo de mão”, a saber, 9,5206 h. Já foi observado que ambas as categorias apresentam distribuições com assimetria à direita de modo que a mediana é menor do que a média.
-Reveja os histogramas construídos na \DUrole{xref,std,std-ref}{ativ-comparacao-de-diferentes-grupos}.
-\end{sphinxadmonition}
 
 
 \know{Cálculos para dados agrupados}
@@ -4272,14 +3429,7 @@ em que \(\bar{x}\) é a média amostral. Se conhecemos apenas as frequências re
 
 O desvio padrão amostral é, então, calculado por \(s=\sqrt{s^2}\).
 \phantomsection\label{\detokenize{PE104-A:ativ-dadosagrupados}}
-\begin{sphinxadmonition}{note}{Atividade}{ medidas para dados agrupados}
-
-\begin{sphinxadmonition}{note}{Para o professor}
-
-\sphinxstylestrong{Objetivos específicos} Determinar a média, mediana e variância, a partir de um histograma.
-
-\sphinxstylestrong{Observações e sugestões} Esta atividade pretende mostrar a utilidade das fórmulas apresentadas nesta seção para obter medidas de posição e dispersão, quando não se conhecem os dados separadamente.
-\end{sphinxadmonition}
+\begin{task}{ medidas para dados agrupados}
 
 Os resultados obtidos na prova de seleção para vagas de estágio numa empresa estão representados no histograma a seguir.
 \phantomsection\label{\detokenize{PE104-A:fig-hist-vagas-estagio}}
@@ -4298,41 +3448,9 @@ Com base neste histograma, calcule a média, a variância, a mediana, a moda, o 
 Usando a informação do histograma, faça um esboço do boxplot destes dados.
 
 \end{enumerate}
-\end{sphinxadmonition}
+\end{task}
 
-\begin{sphinxadmonition}{note}{Resposta}
-\begin{enumerate}
-\item {} 
-A média pode ser calculada por \(\bar{x}\approx\)
 
-\(0,15\cdot 1+0,25\cdot 3+0,20\cdot 5+0,3 \cdot 7+0,1\cdot 9=\)
-
-\(0,15+0,75+1+2,1+0,9=4,9\).
-
-Para calcular a variância, primeiro obtemos uma aproximação para a soma de quadrados das notas, dada por
-
-\(0,15\cdot 1^2+0,25\cdot 3^2+0,20\cdot 5^2+0,3 \cdot 7^2+0,1\cdot 9^2=\)
-
-\(0,15+2,25+5+14,7+8,1=30,2\), assim, \(s^2\approx 30,2-4,9^2=6,19\).
-
-A classe modal corresponde ao intervalo delimitado por 6 e 8, uma aproximação para o valor modal é considerar o ponto médio da classe modal. Neste caso, temos que 7 é uma aproximação para o valor da moda nesta distribuição.
-
-Não podemos identificar quem é o valor central ou valores centrais, pois não foi dada a informação do número de candidatos que fizeram a prova. Mas isso não é problema, pois a mediana divide a distribuição em dois intervalos de frequências iguais a 50\%. Logo, precisamos identificar em que intervalo, cairá a mediana e, como apresentado na {\hyperref[\detokenize{PE104-1:sec-organizando1}]{\sphinxcrossref{\DUrole{std,std-ref}{Organizando as ideias: medidas de posição}}}} tomar o ponto médio desta classe como aproximação para o valor da mediana. Observe na figura que a frequência do primeiro intervalo é 0,15; a frequência acumulada, considerando os dois primeiros intervalos é 0,15+0,25=0,40 ainda é menod do que 0,5. Considerando os três primeiros intervalos, a frequência acumulada é 0,4+0,2=0,6. Logo, a mediana está no intervalo delimitado por 4 e 6, de modo que tomamos o ponto médio deste intervalo como uma aproxmação para o valor da mediana, a saber, 5.
-
-O mesmo raciocínio utilizado para obter a mediana, pode ser usado para obter aproximações do primeiro e terceiro quartis. Em vez de 50\% na frequência acumulada, deveremos encontrar $25\%$ e $75\%$, respectivamente. Como a frequência do primeiro intervalo é 0,15 e a frequência acumulada, considerando os dois primeiros intervalos é 0,15+0,25=0,40, seque que o primeiro quartil deve estar no segundo intervalo delimitado por 2 e 4. Logo, tomamos o ponto médio deste intervalo como uma aproximação para o primeiro quartil, a saber, 3. Até o terceiro intervalo a frequência acumumulada é 0,6, considerando o quarto intervalo, a frequência acumulada é 0,9. Logo, como o terceiro quartil está no quarto intervalo, tomamos o ponto médio  7 com aproximação para o terceiro quartil.
-
-\item {} 
-Com base no histograma temos o seguinte esquema dos cinco números Min=0, Q1=3, Mediana=5, Q3=7, Max=10. DQ=7-3=4. Cerca inferior=3-6=-3, cerca superior=7+6=13. Logo, não existem valores discrepantes. A figura a seguir ilustra um boxplot para este esquema dos cinco números.
-
-\end{enumerate}
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=200bp]{{boxplotexercicio9}.png}
-\caption{Boxplot dos resultados dos candidatos na prova de seleçãotexto}\label{\detokenize{PE104-A:fig-coloque-aqui-o-nome}}\label{\detokenize{PE104-A:id1}}\end{figure}
-\end{sphinxadmonition}
 
 \subsection{Um método para a determinação dos quartis}
 
@@ -5435,591 +4553,7 @@ Com base nas informações obtidas, que medicamento você escolheria? Por quê?
 \end{enumerate}
 
 
-\begin{sphinxadmonition}{note}{Resposta}
-\(1.\)
 
-
-\begin{savenotes}\sphinxattablestart
-\centering
-\sphinxcapstartof{table}
-\sphinxcaption{soma mínima e exemplo de notas possíveis}\label{\detokenize{PE104-E:id11}}
-\sphinxaftercaption
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|T|T|}
-\hline
-\sphinxmultirow{2}{1}{%
-\begin{varwidth}[t]{\sphinxcolwidth{1}{6}}
-Disciplina
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-}%
-&\sphinxmultirow{2}{2}{%
-\begin{varwidth}[t]{\sphinxcolwidth{1}{6}}
-1o.
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-}%
-&\sphinxmultirow{2}{3}{%
-\begin{varwidth}[t]{\sphinxcolwidth{1}{6}}
-2o.
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-}%
-&\sphinxmultirow{2}{4}{%
-\begin{varwidth}[t]{\sphinxcolwidth{1}{6}}
-Soma mínima das notas
-nos dois últimos bimestres
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-}%
-&\sphinxstartmulticolumn{2}%
-\begin{varwidth}[t]{\sphinxcolwidth{2}{6}}
-Exemplo de notas possíveis
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-\sphinxstopmulticolumn
-\\
-\cline{5-6}\sphinxtablestrut{1}&\sphinxtablestrut{2}&\sphinxtablestrut{3}&\sphinxtablestrut{4}&\sphinxstartmulticolumn{2}%
-\begin{varwidth}[t]{\sphinxcolwidth{2}{6}}
-3o.          \textbar{} 4o.
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-\sphinxstopmulticolumn
-\\
-\hline
-Língua portuguesa
-&
-7
-&
-4
-&
-17
-&
-8
-&
-9
-\\
-\hline
-Física
-&
-5
-&
-4
-&
-19
-&
-9
-&
-10
-\\
-\hline
-Matemática
-&
-8
-&
-8
-&
-12
-&
-6
-&
-6
-\\
-\hline
-História
-&
-3
-&
-4
-&
-21
-&\sphinxstartmulticolumn{2}%
-\begin{varwidth}[t]{\sphinxcolwidth{2}{6}}
-Exame Final
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-\sphinxstopmulticolumn
-\\
-\hline
-Geografia
-&
-5
-&
-5
-&
-18
-&
-9
-&
-9
-\\
-\hline
-Filosofia
-&
-7
-&
-9
-&
-12
-&
-6
-&
-6
-\\
-\hline
-Educação Física
-&
-9
-&
-8
-&
-11
-&
-5
-&
-6
-\\
-\hline
-Inglés
-&
-7
-&
-5
-&
-16
-&
-8
-&
-8
-\\
-\hline
-Química
-&
-3
-&
-7
-&
-18
-&
-8
-&
-10
-\\
-\hline
-Biologia
-&
-8
-&
-6
-&
-14
-&
-7
-&
-7
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
-
-\(2.\) O estudante deve obter as respostas dos seguintes quadros:
-\begin{quote}
-
-
-\begin{savenotes}\sphinxattablestart
-\centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|T|T|T|}
-\hline
-
-Disciplina
-&\sphinxstartmulticolumn{4}%
-\begin{varwidth}[t]{\sphinxcolwidth{4}{7}}
-Desvio da média
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-\sphinxstopmulticolumn
-&
-Soma
-&
-Desvio padrão (s)
-\\
-\hline
-Língua portuguesa
-&
-0
-&
--3
-&
-1
-&
-2
-&
-0
-&
-2,16
-\\
-\hline
-Física
-&
--2
-&
--3
-&
-2
-&
-3
-&
-0
-&
-2,94
-\\
-\hline
-Biologia
-&
-1
-&
--1
-&
-0
-&
-0
-&
-0
-&
-0,82
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
-
-
-\begin{savenotes}\sphinxattablestart
-\centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|T|T|}
-\hline
-\sphinxstartmulticolumn{4}%
-\begin{varwidth}[t]{\sphinxcolwidth{4}{6}}
-Notas
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-\sphinxstopmulticolumn
-&
-Média
-&
-Mediana
-\\
-\hline\sphinxstartmulticolumn{4}%
-\begin{varwidth}[t]{\sphinxcolwidth{4}{6}}
-1 \textbar{} 7 \textbar{} 7 \textbar{} 7
-\par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-\sphinxstopmulticolumn
-&
-5,5
-&
-7
-\\
-\hline
-5
-&
-6
-&
-8
-&
-9
-&
-7
-&
-7
-\\
-\hline
-7
-&
-7
-&
-7
-&
-10
-&
-7,75
-&
-7
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
-\end{quote}
-
-\(3.\) A primeira a firmação é verdadeira e, na segunda, os dados são insuficientes para uma conclusão.
-\begin{enumerate}
-\item {} 
-Como nem todos os recrutas têm a mesma altura, se nenhum deles medisse mais de 1,81 m, a média seria menor do que 1,81 m. Logo, pelo menos um recruta tem altura maior do que 1,81 m. Analogamente, se nenhum recruta medisse menos de 1,81 m, a média seria maior do que 1,81 m. Logo, ao menos um recruta mede menos de 1,81 m.
-
-\item {} 
-Por exemplo, pode-se ter no grupo 51 recrutas com 1,81 m, exatamente um com 1,80 m e exatamente um com 1,82 m, o que tornaria a sentença a falsa. No entanto, também pode-se ter 49 recrutas com 1,81 m, dois com 1,80 m e dois com 1,82 m, o que tornaria a sentença verdadeira. Portanto, os dados são insuficientes para uma conclusão.
-
-\end{enumerate}
-
-\(4.\) Com esta transformação
-
-1. a média do novo conjunto será dada pela média inicial acrescida da constante \(a\), pois \(\bar{y}=\frac{y_1+y_2+\cdots +y_n}{n}=\frac{x_1+a+x_2+a+\cdots+x_n+a} {n}=\)
-\(\frac{\displaystyle{\sum^n_{i=1}}x_i+n\cdot a}{n}=\frac{\displaystyle{\sum^n_{i=1}}x_i}{n}+\frac{n\cdot a}{n}=\bar{x}+a\).
-
-2. Podemos verificar que a soma dos desvios da média tomados ao quadrado é a mesma nos dois conjuntos, pois \(\displaystyle{\sum^n_{i=1}}(y_i-\bar{y})^2=\displaystyle{\sum^n_{i=1}}[\underbrace{x_i+a}_{=y_i}-(\overbrace{\bar{x}+a)}^{=\bar{y}}]^2=\displaystyle{\sum^n_{i=1}}(x_i-\bar{x})^2\).
-Portanto, a variância do novo conjunto, denotada por \(s^2_y\) será igual à variância do conjunto inicial, a saber, \(s^2_y=s^2\) e, assim, o desvio padrão do novo conjunto será igual ao desvio padrão do conjunto inicial, \(s_y=s\).
-\begin{enumerate}
-\setcounter{enumi}{2}
-\item {} 
-Com base nas respostas anteriores, o coeficiente de variação do novo conjunto será dado por \(\textsf{CV}_y=\frac{s_y}{\bar{y}}\cdot 100=\frac{s}{\bar{x}+a}\cdot 100\). Logo, se o \(a>0\), o coeficiente de variação do novo conjunto será menor do que o coeficiente de variação do conjunto inicial. Porém, se \(a<0\), o coeficiente de variação do novo conjunto será maior do que o coeficiente de variação do conjunto inicial.
-
-\end{enumerate}
-
-\(5.\) \(y_i=c\cdot x_i\), \(i=1,2,...,n\).
-\begin{enumerate}
-\item {} 
-A média do novo conjunto será dada pela média inicial multiplicada pela constante \(c\), pois \(\bar{y}=\frac{y_1+y_2+\cdots +y_n}{n}=\frac{c\cdot x_1+c\cdot x_2+\cdots+c\cdot x_n}{n}=\frac{c}{n}\cdot \displaystyle{\sum^n_{i=1}}x_i =c\cdot\bar{x}\).
-
-\item {} 
-Podemos verificar que a soma dos desvios da média tomados ao quadrado será dada pela soma original dos desvios da média elevados ao quadrado multiplicada por \(c^2\), pois \(\displaystyle{\sum^n_{i=1}}(y_i-\bar{y})^2=\displaystyle{\sum^n_{i=1}}(c\cdot x_i-c\cdot \bar{x})^2=c^2\cdot \displaystyle{\sum^n_{i=1}}(x_i-\bar{x})^2\).    Portanto, a variância do novo conjunto, denotada por \(s^2_y\) será igual à variância do conjunto inicial multiplicada por \(c^2\), a saber, \(s^2_y=c^2\cdot s^2\) e, assim, o desvio padrão do novo conjunto será igual ao desvio padrão do conjunto inicial multiplicado por \(c\), \(s_y=c\cdot s\). Lembre que estamos considerando \(c>0\).
-
-\item {} 
-Com base nas respostas anteriores, o coeficiente de variação do novo conjunto será dado por \(\textsf{CV}_y=\frac{c\cdot s_y}{c\cdot \bar{y}}\cdot 100=\frac{s}{\bar{x}}\cdot 100\). Logo, o coeficiente de variação do novo conjunto será igual ao coeficiente de variação do conjunto inicial.
-
-\end{enumerate}
-
-\(6.\) O primeiro passo é colocar os tempos do quadro apresentado em ordem crescente, a saber, \(20,50< 20,60< 20,60< 20,80< 20,90 \leq  20,90 \leq 20,90 < 20,96\). Como o número de observações é par (\(n=8\)), segue que a mediana é dada por \(\frac{x_{(4)}+x_{(5)}}{2}=\frac{20,80+20,90}{2}=20,85.\) A resposta correta encontra-se na opção d).
-
-\(7.\) A média do número de casos confirmados é dada por \(\frac{1.832}{8}= 229\). Logo, o número de regiões da cidade cujo número de casos confirmados é maior do que 229 é 5, e o número de regiões da cidade cujo número de casos confirmados é menor do que 229 é 3. Assim, o número de funcionários que devem ser contratados pela prefeitura é \(5\cdot 10 + 3\cdot 7= 71\) . A resposta correta encontra-se na opção d).
-
-\(8.\) \sphinxstylestrong{a)} Concordo, pois podemos perceber que os comprimentos dos intervalos à direita são maiores: \(\textsf{Q3-mediana}=13-6,5=6,5>\textsf{mediana-Q1}=6,5-6=0,5\), \(\textsf{Max-Q3}=13-9=4>\textsf{Q1-Min}=6-4=2\) e \(\textsf{Max-mediana}=13-6,5=6,5>\textsf{mediana-Min}=6,5=4=2,5\).  \sphinxstylestrong{b)} Concordo, pois há assimetria à direita.  \sphinxstylestrong{c)} Comcordo: este gráfico não nos revela a existência de um intervalo de maior frequência, pois os quatro intervalos nele considerados têm frequências relativas iguais a 0,25. \sphinxstylestrong{d)} Concordo, considerando a aproximação apresentada na \DUrole{xref,std,std-ref}{ativ-aproxima-dpa-usando-R}, dada por \(\frac{R}{4}=\frac{13-4}{4}=\frac{9}{4}=2,25.\) \sphinxstylestrong{e)} Concordo, pois DQ=Q3-Q1=9-6=3 gols. \sphinxstylestrong{f)} Concordo: o gráfico não apresenta pontos destacados. Também podemos verificar que a cerca inferior é dada por \(\textsf{Q}1-1,5\cdot\textsf{DQ}=6-1,5\cdot 3=1,5\) e a cerca superior é dada por \(\textsf{Q}3+1,5\cdot \textsf{DQ}=9+4,5=13,5\). Como o valor mínimo é 4 e, o máximo é 13, conclui-se que não existem valores atípicos. \sphinxstylestrong{g)} Concordo, pois o \sphinxstylestrong{boxplot} agrupou os dados em quatro intervalos de frequências relativas dadas por 0,25, a saber. {[}4 ; 6{[}, {[}6 ; 6,5{[}, {[}6,5 ; 9{[} e {[}9 ; 13{]}. Os valores dentro dos parênteses na expressão indicada correspondem aos pontos médios de cada um destes intervalos. Ou seja, esta média, foi calculada com base na fórmula \(\displaystyle{\sum^4_{i=1}}f_i\cdot\tilde{x}_i\).
-
-\(9.\) Respostas
-\begin{enumerate}
-\item {} 
-A média é dada por \(\bar{x}=\frac{132}{18}\approx 7,33\) e o desvio padrão amostral é dado por \(\sqrt{\frac{1}{18-1}\left (1060-18\cdot 7,33^2\right )}\approx 2,33\). Comparando a média aproximada de 7,5 com a média 7,33, conclui-se que o erro de aproximação é bem pequeno, representando apenas cerca de 2,3\% da média obtida com a soma exata (\(\frac{|7,5-7,33|}{7,33}\approx 0,023\). Comparando o desvio padrão aproximado de 2,25 com o desvio padrão 2,33, conclui-se que o erro de aproximação é bem pequeno, representando apenas cerca de 3,4\% o desvio padrão obtido com as somas exatas (\(\frac{|2,25-2,33|}{2,33}\approx 0,034\).
-
-\item {} 
-Nesse caso temos 20 dados, e \(\displaystyle{\sum^{20}_{i=1}}=132+5+6=143\) tal qua a média dos \sphinxstylestrong{recordes} nas 20 Copas do Mundo até 2014 é \(\bar{x}=\frac{143}{20}=7,15\). Para o cálculo do desvio padrão temos que considerar a soma de quadrados dos 20 \sphinxstylestrong{recordes}, a saber, considerando as 20 Copas temos \(\displaystyle{\sum^{20}_{i=1}}x^2_i=1060+5^2+6^2=1060+25+36=1121\). Assim, o desvio padrão amostral é dado por \(\sqrt{\frac{1}{20-1}\left (1121-20\cdot 7,15^2\right )}\approx 2,28\).
-
-\end{enumerate}
-
-\(10.\) É fácil ver que a moda é zero tal que Z=0. Somando o número de partidas jogadas vemos foram consideradas 20 partidas. Assim, o valor da mediana é o valor que ocupa as posições centrais 10 e 11. Da tabela, calculando as frequências acumuladas, vemos que até 1 gol acumularam-se 8 partidas e até 2 gols, acumularam-se 12 partidas. Assim podemos concluir que nas posições 10 e 11 o número de gols foi 2, tal que a mediana=Y=2. A média é dada por \(\bar{x}=X=\frac{5\cdot 0+3\cdot 1 +4\cdot 2+3\cdot 3+2\cdot 4+2\cdot 5+1\cdot 7}{20}=\frac{45}{20}=2,25\) . Logo, tem-se Z\textless{}Y\textless{}X e a resposta correta encontra-se na opção e).
-
-\(11.\) As figuras a seguir ilustram os respectivos histogramas (ambos na mesma escala e usando a frequência bsoluta no eixo vertical) e boxplots das notas para os alunos da manhã e da tarde.
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=200bp]{{histograma_turma_manha_1}.png}
-\caption{Histograma das notas dos alunos do turno da manhã}\label{\detokenize{PE104-E:fig-coloque-aqui-o-nome}}\label{\detokenize{PE104-E:id12}}\end{figure}
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=200bp]{{histograma_turma_tarde_1}.png}
-\caption{Histograma das notas dos alunos do turno da tarde}\label{\detokenize{PE104-E:id1}}\label{\detokenize{PE104-E:id13}}\end{figure}
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=300bp]{{notas_turmas_manha_tarde}.png}
-\caption{Boxplots das notas dos alunos do turno da manhã e do turno da tarde e quadro das medidas resumo gerados pelo GeoGebra}\label{\detokenize{PE104-E:id2}}\label{\detokenize{PE104-E:id14}}\end{figure}
-
-Comparando os dois turnos pode-se perceber que
-\begin{enumerate}
-\item {} 
-ambas as distribuições de notas são aproximadamente simétricas (observe que em ambas as distribuições os valores de média e mediana são próximos, a saber, 6,47  e 6,3 no turno da manhã e 5,11 e 5,05 no turno da tarde);
-
-\item {} 
-a dispersão das notas no turno da tarde é inferior à dispersão das notas do turno da manhã, mas o boxplot revela que o “centro” no turno da tarde, caracterizado pelo retângulo no boxplot está mais para à esquerda em relação ao retângulo do boxplot para os alunos do turno da manhã, indicando  inferioridade de notas (50\% das notas centrais no turno da tarde estão entre 4,6 e 5,6; enquanto que 50\% das notas centrais do turno da manhã estão entre 5,35 e 7,4);
-
-\item {} 
-a distribuição das notas no turno da manhã é mais homogênea em relação à média do que a distribuição das notas do turno da tarde, observação que pode ser comprovada pelo cálculo do coeficiente de variação amostral de ambos os turnos, a saber, \(\textsf{CVA}_{\textsf{manhã}}=\frac{1,503}{6,4686}\cdot 100=23,2\) \% e \(\textsf{CVA}_{\textsf{tarde}}=\frac{0,7437}{5,1075}\cdot 100=14,6\) \%;
-
-\item {} 
-a frequência de notas em torno da média mais ou menos um desvio padrão no turno da manhã é 62,2\% e, no turno da tarde, 70\% (estes valores estão perto do valor estipulado pela regra empírica de 67\%);
-
-\item {} 
-a frequência de notas em torno da média mais ou menos dois desvios padrões no turno da manhã é 93,3\% no turno da tarde, 92,5\% (estes valores estão perto do valor estipulado pela regra empírica de 95\%);
-
-\item {} 
-utilizando a aproximação grosseira para o cálculo do desvio padrão amostral, obtém-se \(\frac{10-3}{4}=1,75\) para o turno da manhã (um erro relativo de 16,4\%) em relação ao valor de \(s\) calculado para o turno da manhã e, \(\frac{6,8-3,6}{4}=0,8\) para o turno da tarde (um erro relativo de 7,6\%) em relação ao valor de \(s\) calculado para o turno da tarde;
-
-\item {} 
-não existem notas atípicas nas duas distribuições;
-
-\item {} 
-apesar do turno da manhã apresentar melhores notas, a menor nota foi observada neste turno.
-
-\end{enumerate}
-
-\(12.\) Respostas
-\begin{enumerate}
-\item {} 
-\(I=\frac{3\cdot (5,93-6,5)}{1,9645}\approx -0,87\), indicando alguma assimetria à esquerda.
-
-\item {} 
-Na categoria cadeira de rodas, temos \(I=\frac{3\cdot (2,5855-2,0978)}{1,4209}\approx 1,03\) , indicando forte assimetria à direita. Na categoria triciclo de mão temos \(I=\frac{3\cdot (2,7338-2,3797)}{1,3779}\approx 0,77\) , indicando alguma assimetria à direita. Na categoria mulheres temos \(I=\frac{3\cdot (2,8698-2,9493)}{0,1867}\approx -1,28\) , indicando forte assimetria à esquerda.  Na categoria homens temos \(I=\frac{3\cdot (2,5116-2,55)}{0,1283}\approx -0,9\) , indicando assimetria à esquerda.
-
-\item {} 
-No turno da manhã temos \(I=\frac{3\cdot (6,4689-6,3)}{1,503}\approx 0,3\) e, no turna da tarde,   \(I=\frac{3\cdot (5,1075-5,05)}{0,7437}\approx 0,2\). Pela análise dos boxplots destas duas distribuições avaliamos que ambas eram aproximadamente simétricas. Valores de \(I\) entre -0,3 e 0,3 podem indicar dados aproximadamente simétricos.
-
-\end{enumerate}
-
-\(13.\) Respostas
-\begin{enumerate}
-\item {} 
-Concordo, pois \(\bar{y}=\frac{1}{n}\displaystyle{\sum^n_{i=1}}y_i=\frac{1}{n}\displaystyle{\sum^n_{i=1}}[500+100\cdot (x_i-\bar{x})]=\frac{1}{n}[n\cdot 500+\frac{100}{s}\cdot \overbrace{\displaystyle{\sum^n_{i=1}}(x_i-\bar{x})}^{=0}]=500.\)
-
-\item {} 
-Concordo, pois \(s^2_y=\frac{1}{n-1}\displaystyle{\sum^n_{i=1}}(y_i-\bar{y})^2=\frac{1}{n-1}\displaystyle{\sum^n_{i=1}}(500+\frac{100}{s}\cdot (x_i-\bar{x})-500)^2=\frac{1}{n-1}\displaystyle{\sum^n_{i=1}}(\frac{100}{s}\cdot (x_i-\bar{x}))^2=\)
-
-\end{enumerate}
-
-\(\frac{100^2}{\underbrace{s^2}_{\textsf{variância das notas originais}}}\cdot \overbrace{\frac{1}{n-1}\cdot \displaystyle{\sum^n_{i=1}}(x_i-\bar{x})^2}^{=s^2}=100^2\)
-
-Logo, o desvio padrão das notas transformadas é \(s_y=\sqrt{100^2}=100.\)
-\begin{enumerate}
-\item {} 
-Concordo, está de acordo com a regra empírica apresentada na secção \DUrole{xref,std,std-ref}{sec-parasabermais}: o intervalo centrado na média mais ou menos um desvio padrão corresponde às notas entre 400 e 600.
-
-\item {} 
-Concordo, está de acorodo com a regra empírica apresentada na secção \DUrole{xref,std,std-ref}{sec-parasabermais}: o intervalo centrado na média mais ou menos dois desvios padrões corresponde às notas entre 300 e 700.
-
-\end{enumerate}
-
-\(14.\) Respostas
-\begin{enumerate}
-\item {} 
-quadro
-
-\end{enumerate}
-
-
-\begin{savenotes}\sphinxattablestart
-\centering
-\sphinxcapstartof{table}
-\sphinxcaption{Legenda}\label{\detokenize{PE104-E:id15}}
-\sphinxaftercaption
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|}
-\hline
-
-medida
-&
-X
-&
-Y
-&
-Z
-\\
-\hline
-média
-&
-10
-&
-12
-&
-12
-\\
-\hline
-s
-&
-1,487
-&
-2,81
-&
-0,725
-\\
-\hline
-Min
-&
-7
-&
-7
-&
-11
-\\
-\hline
-Q1
-&
-9
-&
-10
-&
-11,75
-\\
-\hline
-Mediana
-&
-10
-&
-12
-&
-12
-\\
-\hline
-Q3
-&
-11
-&
-14
-&
-12,25
-\\
-\hline
-Max
-&
-13
-&
-18
-&
-13
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
-\begin{enumerate}
-\setcounter{enumi}{1}
-\item {} 
-Boxplots
-
-\end{enumerate}
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=200bp]{{boxplotsmedicamentos}.png}
-\caption{Boxplots para os tempos de cura dos medicamentos X, Y e Z}\label{\detokenize{PE104-E:id3}}\label{\detokenize{PE104-E:id16}}\end{figure}
-\begin{enumerate}
-\setcounter{enumi}{2}
-\item {} 
-Observando-se nos boxplots os comprimentos dos seguintes pares de intervalos
-\begin{enumerate}
-\item {} 
-Q1 e mínimo e máximo e Q3;
-
-\item {} 
-Mediana e Q1 e Q3 e mediana;
-
-\item {} 
-Mediana e mínimo e Máximo e mediana.
-
-\end{enumerate}
-
-\end{enumerate}
-
-conclui-se que são aproximadamente iguais, concluindo-se que as distribuições, para os três medicamentos, são simétricas. Observe que os índicens de assimetria são iguais a zero em cada uma, pois tem-se média=mediana, nas três distribuições.
-
-d) Como todas as distribuições são simétricas, podemos usar a regra empírica de frequ\textasciitilde{}encia entre a média mais ou menos dois desvios padrões. Para o medicamento X, com cerca de 95\% de chance a dor de cabeça será curada entre 8,513 min e 11,487 min.  Para o medicamento Y, com cerca de 95\% de chance a dor de cabeça será curada entre 9,19 min e 14,81 min.
-Para o medicamento Z, com cerca de 95\% de chance a dor de cabeça será curada entre 11,275 min e 12,725 min. Observe que apesar do intervalo de 95\% de chance para o tempo de cura no medicamento em Z ser mais estreito do que o mesmo intervalo para o medicamento X, o intervalo para o medicamento X apresenta valores menores: de fato, cerca de 75\% dos valores em X são mennores do que o valor mínimo em Z. Por esta razão, neste exemplo, a melhor escolha parece ser o medicamento X.
-\end{sphinxadmonition}
 
 
 \section{Material Suplementar}
