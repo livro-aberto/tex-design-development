@@ -346,36 +346,36 @@ underlay boxed title={
     \clearpage
 }
 
-\NewEnviron{exercise}{%
-    \newpage
-	\begin{tikzpicture}[remember picture, overlay]
-		\coordinate (a) at ($(current page text area.north west) + (0.00mm,-5.00mm)$);
-		\coordinate (b) at ($(current page text area.north east) + (0.00mm,-5.00mm)$);
-		\coordinate (c) at ($(current page text area.north) + (-19.00mm,0.00mm)$);
-		\coordinate (d) at ($(current page text area.north) + (19.00mm,0.00mm)$);
-		\coordinate (title) at ($(current page text area.north) + (0.00mm,0.00mm)$);
-        \coordinate (text) at ($(current page text area.north) + (0.00mm,-8.50mm)$);
+% \NewEnviron{exercise}{%
+%     \newpage
+% 	\begin{tikzpicture}[remember picture, overlay]
+% 		\coordinate (a) at ($(current page text area.north west) + (0.00mm,-5.00mm)$);
+% 		\coordinate (b) at ($(current page text area.north east) + (0.00mm,-5.00mm)$);
+% 		\coordinate (c) at ($(current page text area.north) + (-19.00mm,0.00mm)$);
+% 		\coordinate (d) at ($(current page text area.north) + (19.00mm,0.00mm)$);
+% 		\coordinate (title) at ($(current page text area.north) + (0.00mm,0.00mm)$);
+%         \coordinate (text) at ($(current page text area.north) + (0.00mm,-8.50mm)$);
 		
-		\begin{pgfonlayer}{background}
-			\draw [black] (a) |- (c);
-			\draw [draw=black, fill=cor1] (c) -- ++(0.00mm,1.50mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -| (d) -- ++(0.00mm,-1.50mm) arc [start angle=360, end angle=270, x radius=2.00mm, y radius=2.00mm] -| cycle;
-			\draw [black] (d) -| (b);
-		\end{pgfonlayer}
+% 		\begin{pgfonlayer}{background}
+% 			\draw [black] (a) |- (c);
+% 			\draw [draw=black, fill=cor1] (c) -- ++(0.00mm,1.50mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -| (d) -- ++(0.00mm,-1.50mm) arc [start angle=360, end angle=270, x radius=2.00mm, y radius=2.00mm] -| cycle;
+% 			\draw [black] (d) -| (b);
+% 		\end{pgfonlayer}
 		
-		\begin{pgfonlayer}{foreground}
-			\node [white, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (heading) at (title) {EXERCICOS};
-           \node [box, below] (bodytext) at (text){%
-			\begin{minipage}{\textwidth}
-                \begin{multicols}{2}
-				    \BODY
-                \end{multicols}			
-			\end{minipage}	
-			};
-		\end{pgfonlayer}	
+% 		\begin{pgfonlayer}{foreground}
+% 			\node [white, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (heading) at (title) {EXERCICOS};
+%            \node [box, below] (bodytext) at (text){%
+% 			\begin{minipage}{\textwidth}
+%                 \begin{multicols}{2}
+% 				    \BODY
+%                 \end{multicols}			
+% 			\end{minipage}	
+% 			};
+% 		\end{pgfonlayer}	
 		
-	\end{tikzpicture}
-    \clearpage
-}
+% 	\end{tikzpicture}
+%     \clearpage
+% }
 
 
 
