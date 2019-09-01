@@ -112,7 +112,7 @@
 
 \newtcolorbox{openningbox}{
   enhanced,
-  jigsaw,
+%  jigsaw,
   opacityframe=.3,
   opacityfill=.3,
   width=80mm,
@@ -129,8 +129,8 @@
     lower separated = false,
     before upper = \tcbsubtitle{O QU\^E?},
     before lower = \tcbsubtitle{POR QU\^E?},
-    font upper = \sffamily,
-    font lower = \sffamily,
+    fontupper = \sffamily,
+    fontlower = \sffamily,
     sharp corners = north,
     subtitle style = {
       frame empty,
@@ -177,7 +177,7 @@
 
         \coordinate (b) at ($(c1)!0.5!(c2)$);
         \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {#1};
-        % partial solution to the box O QUE and POR QUE?
+        % solution to the box O QUE and POR QUE?
         \node [right] at ($(current page.north)+(-15mm,-150mm)$) %
         {\begin{openningbox}
             \chapterwhat
@@ -187,15 +187,6 @@
             \chapterbecause
 
             \end{openningbox}};
-        %{\begin{whatbox} 			
-				% \newline 
-				% \chapterwhat
-			    	% 	\end{whatbox}	
-			    				    		
-			    	% 	\begin{whybox}
-				% \newline 
-				% \chapterbecause  
-				% 	\end{whybox}};
 
 
                                       
@@ -205,9 +196,9 @@
 %        \node [yshift=-19.00mm, text=black, text width=79.25mm, right] (becausetext) at (becausebox.south west) {\indent \chapterbecause};
         \end{pgfonlayer}
 
-        \begin{pgfonlayer}{background}
-            \node [shape=howbecausetextbox, fill=white, fit={(whatbox) (whytext) (becausebox) (becausetext)}] (howbecausetextbox) {};
-        \end{pgfonlayer}
+        % \begin{pgfonlayer}{background}
+        %     \node [shape=howbecausetextbox, fill=white, fit={(whatbox) (whytext) (becausebox) (becausetext)}] (howbecausetextbox) {};
+        % \end{pgfonlayer}
 
         \begin{pgfonlayer}{bottom}
             \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{\chapterillustration}};
