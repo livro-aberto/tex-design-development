@@ -110,20 +110,55 @@
 %\node[right] at ($(c1)!0.5!(c2)+ (-14mm,0)$) {\bfseries\fontsize{13pt}{0}\selectfont\titlefont\textcolor{cor2}{POR QU\^E?}};}
 %}
 
-\newtcolorbox{whatbox}{enhanced, jigsaw, opacityframe=.3, opacityfill=.3, width=80mm, left=3mm, right=3mm, top=10mm, bottom=.5mm, colback=white, colframe=white, arc=3mm, sharp corners=uphill, coltitle=cor2, lower separated=false, fonttitle=\bfseries\fontsize{13pt}{0}\selectfont\titlefont, title={O QU\^E?},
-boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top left={ yshift=-10 mm},
-underlay boxed title={
-\fill[cor1] ($(title.north west) + (0,-7mm)$) coordinate (x1) -- ++ (23 mm,0mm) arc [start angle=-90, end angle=90, x radius=3mm, y radius=3mm] coordinate (x2) -- ++ (-23 mm,0mm) -- cycle;
-}
-}
-\newtcolorbox{whybox}{enhanced, jigsaw, opacityframe=.3, opacityfill=.3, width=80mm, left=3mm, right=3mm, top=10mm, bottom=.5mm, colback=white, colframe=white, arc=3mm, sharp corners=uphill, coltitle=cor2, lower separated=false, fonttitle=\bfseries\fontsize{13pt}{0}\selectfont\titlefont, title={POR QU\^E?},
-boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top left={ yshift=-10 mm},
-underlay boxed title={
-\fill[cor1] ($(title.north west) + (0,-7mm)$) coordinate (x1) -- ++ (31 mm,0mm) arc [start angle=-90, end angle=90, x radius=3mm, y radius=3mm] coordinate (x2) -- ++ (-31 mm,0mm) -- cycle;
-}
-}
+\newtcolorbox{openningbox}{
+  enhanced,
+  jigsaw,
+  opacityframe=.3,
+  opacityfill=.3,
+  width=80mm,
+  left=3mm,
+  right=3mm,
+  top=10mm,
+  bottom=.5mm,
+  colback=white,
+  colframe=white,
+  arc=3mm,
+  sharp corners=uphill,
+    % frame empty,
+    % arc = 8pt,
+    lower separated = false,
+    before upper = \tcbsubtitle{O QU\^E?},
+    before lower = \tcbsubtitle{POR QU\^E?},
+    font upper = \sffamily,
+    font lower = \sffamily,
+    sharp corners = north,
+    subtitle style = {
+      frame empty,
+      fontupper = \fontsize{13pt}{0}\selectfont\titlefont\bfseries,
+      colback = cor1,
+      coltext = black!70,
+      width = 3.5cm,
+      arc = 8pt,
+      rounded corners = east
+    }
+  }
+
+  %%%%%% This is the previous version of openning box, should check if all the stile settings are ok on openningbox, before delete.
+  
+% \newtcolorbox{whatbox}{enhanced, jigsaw, opacityframe=.3, opacityfill=.3, width=80mm, left=3mm, right=3mm, top=10mm, bottom=.5mm, colback=white, colframe=white, arc=3mm, sharp corners=uphill, coltitle=cor2, lower separated=false, fonttitle=\bfseries\fontsize{13pt}{0}\selectfont\titlefont, title={O QU\^E?},
+% boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+% attach boxed title to top left={ yshift=-10 mm},
+% underlay boxed title={
+% \fill[cor1] ($(title.north west) + (0,-7mm)$) coordinate (x1) -- ++ (23 mm,0mm) arc [start angle=-90, end angle=90, x radius=3mm, y radius=3mm] coordinate (x2) -- ++ (-23 mm,0mm) -- cycle;
+% }
+% }
+% \newtcolorbox{whybox}{enhanced, jigsaw, opacityframe=.3, opacityfill=.3, width=80mm, left=3mm, right=3mm, top=10mm, bottom=.5mm, colback=white, colframe=white, arc=3mm, sharp corners=uphill, coltitle=cor2, lower separated=false, fonttitle=\bfseries\fontsize{13pt}{0}\selectfont\titlefont, title={POR QU\^E?},
+% boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+% attach boxed title to top left={ yshift=-10 mm},
+% underlay boxed title={
+% \fill[cor1] ($(title.north west) + (0,-7mm)$) coordinate (x1) -- ++ (31 mm,0mm) arc [start angle=-90, end angle=90, x radius=3mm, y radius=3mm] coordinate (x2) -- ++ (-31 mm,0mm) -- cycle;
+% }
+% }
 
 \newcommand{\ChapNumTitle}[1]{%
   % \thispagestyle{plain}
@@ -143,16 +178,27 @@ underlay boxed title={
         \coordinate (b) at ($(c1)!0.5!(c2)$);
         \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {#1};
         % partial solution to the box O QUE and POR QUE?
-         \node [right] at ($(d)+(-80mm,-50mm)$) {\begin{whatbox} 			
-				\newline 
-				\chapterwhat
-			    		\end{whatbox}	
-			    				    		
-			    		\begin{whybox}
-				\newline 
-				\chapterbecause  
-					\end{whybox}};
+        \node [right] at ($(current page.north)+(-15mm,-150mm)$) %
+        {\begin{openningbox}
+            \chapterwhat
 
+            \tcblower
+
+            \chapterbecause
+
+            \end{openningbox}};
+        %{\begin{whatbox} 			
+				% \newline 
+				% \chapterwhat
+			    	% 	\end{whatbox}	
+			    				    		
+			    	% 	\begin{whybox}
+				% \newline 
+				% \chapterbecause  
+				% 	\end{whybox}};
+
+
+                                      
 %        \node [right, shape=howbecauseheadingbox, fill=cor1, text=cor2, font=\bfseries\fontsize{13pt}{0}\selectfont\titlefont] (whatbox) at (d) {O QUE?};
 %        \node [yshift=-10.00mm, text=black, text width=79.25mm, right] (whytext) at (whatbox.south west) {\indent \chapterwhat};
 %        \node [yshift=-8.00mm, right, shape=howbecauseheadingbox, fill=cor1, text=cor2, font=\bfseries\fontsize{13pt}{0}\selectfont\titlefont] (becausebox) at (whytext.south west) {POR QUE?};
