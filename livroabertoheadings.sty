@@ -25,6 +25,8 @@
 %% Loads the ifthen package
 %%
 \RequirePackage{ifthen}
+\RequirePackage{tikz}
+\RequirePackage{tcolorbox}
 
 % Commands for chapter page
 \newcommand\chapterillustration{}
@@ -124,7 +126,8 @@ underlay boxed title={
 }
 
 \newcommand{\ChapNumTitle}[1]{%
-    \thispagestyle{plain}
+  % \thispagestyle{plain}
+  \thispagestyle{empty}
     \begin{tikzpicture}[remember picture, overlay]
         \coordinate (a) at ($(current page.north west) + (44.00mm,-44.00mm)$);
         \coordinate (c) at ($(current page.north west) + (148.54mm,-64.82mm)$);
@@ -138,7 +141,7 @@ underlay boxed title={
         \node[font=\chapnumfont, text=cor2] at (a) {\chapnamefont\thechapter};
 
         \coordinate (b) at ($(c1)!0.5!(c2)$);
-        \node (title) at (b) [right, font=\chaptitlefont, text=white] {#1};
+        \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {#1};
         % partial solution to the box O QUE and POR QUE?
          \node [right] at ($(d)+(-80mm,-50mm)$) {\begin{whatbox} 			
 				\newline 

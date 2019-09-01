@@ -2,7 +2,9 @@
  "livroabertoheadings"
  (lambda ()
    (TeX-run-style-hooks
-    "ifthen")
+    "ifthen"
+    "tikz"
+    "tcolorbox")
    (TeX-add-symbols
     '("arrange" 1)
     '("know" 1)
