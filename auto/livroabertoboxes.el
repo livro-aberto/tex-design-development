@@ -3,7 +3,8 @@
  (lambda ()
    (TeX-run-style-hooks
     "ifthen"
-    "mfirstuc")
+    "mfirstuc"
+    "anyfontsize")
    (TeX-add-symbols
     "libroskip"
     "filename"

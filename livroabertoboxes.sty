@@ -24,6 +24,7 @@
 %%
 \RequirePackage{ifthen}
 \RequirePackage{mfirstuc} %To capitalize just the inicial letter of each word. There is a command to exclude specific words to captalize such like a, an, the, etc.
+\RequirePackage{anyfontsize} %To define fontsize precisely
 
 \tikzstyle{outlinebox} = [fill=box2]
 \tikzstyle{box} = [inner sep=3mm, inner ysep=3mm]
@@ -59,8 +60,16 @@ borderline={1pt}{-3pt}{green!50!blue},#1}
 
 \newtcolorbox{task}[1]{blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=0mm, right=0mm, top=5mm, bottom=3mm, colback=white, colframe=cor2!70, width=162mm, 
 %borderline west={3mm}{0pt}{white}, 
-toprule=0pt, bottomrule=0.5pt, rightrule=0pt, leftrule=0pt, outer arc = 3mm, arc = 3mm, sharp corners = northeast, sharp corners = southeast, sharp corners = southwest,
-font=\boxexample\tiny, % Should be 9 pt.
+  toprule=0pt,
+  bottomrule=0.5pt,
+  rightrule=0pt,
+  leftrule=0pt,
+  outer arc = 3mm,
+  arc = 3mm,
+  sharp corners = northeast,
+  sharp corners = southeast,
+  sharp corners = southwest,
+  fontupper=\fontsize{11}{15.5}\boxexample, % Should be 11 pt.
 fonttitle=\boxtitlefont\large,  % Should be 9 pt. Don't know how to set this. Tried \fontsize{9pt}{}, but didn't work.
 coltitle=\currentcolor,
 title=\MakeLowercase{#1\hfill}, 
