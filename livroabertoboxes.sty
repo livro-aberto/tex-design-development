@@ -58,7 +58,7 @@ borderline={1pt}{-3pt}{green!50!blue},#1}
 
 
 
-\newtcolorbox{task}[1]{blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=0.1mm, right=0.8mm, top=5mm, bottom=3mm, colback=white, colframe=cor2!70, width=162mm, 
+\newtcolorbox{task}[1]{blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=0.3mm, right=0.8mm, top=5mm, bottom=3mm, colback=white, colframe=cor2!70, width=162mm, 
 %borderline west={3mm}{0pt}{white}, 
   toprule=0pt,
   bottomrule=0.5pt,
@@ -90,7 +90,7 @@ underlay boxed title ={
 
 % Makes the "To think about" box.
 % It is missing to set title font and font size. After that should check if the title is centralized in the title box.
-\newtcolorbox{reflection}{blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=6mm, bottom=3mm, colback=white, colframe=box1, borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=0pt, outer arc = 3mm, arc = 3mm, 
+\newtcolorbox{reflection}{blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=6mm, bottom=3mm, colback=white, colframe=box1, borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm, 
 fonttitle=\bfseries\large\boxtitlefont,  % Should be 12 pt. Don't know how to set this.
 title=PARA REFLETIR, 
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
@@ -152,12 +152,28 @@ underlay boxed title={
 \newtcolorbox{example}[1]{blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
 title={{\boxfont EXEMPLO}\hspace{3.5mm} \textcolor{gray!80!black}{\Large\extitlefont\capitalisewords{#1}}}, 
 boxed title style={empty, sharp corners}, 
-attach boxed title to top left={xshift=-1.3 mm , yshift=-7.3mm},
+attach boxed title to top left={xshift=-1 mm , yshift=-9mm},
 underlay boxed title ={
 % Draw the title underlay rectangle
-\fill[cor1!30] ($(frame.north west) + (0,-.3mm)$) rectangle ($(title.north east)+(-.8mm,-6mm)$ coordinate (R));
+\fill[cor1!30] ($(frame.north west) + (0,-.3mm)$) rectangle ($(title.north east)+(-.8mm,-8.5mm)$) coordinate (R);
+%)
+%;
 % Filldraw the darker fancy in front of the rectangle and behind the Example. The coordinates should be better chosen.
 \fill[cor1] (frame.north west) -- ($(title.south west) + (1.3mm,0)$) -- ++ (18mm,0mm) arc [start angle=-90, end angle=0, x radius = 2mm, y radius = 2mm] -- ($(frame.north west) + (20mm,0)$) --  cycle;
+}
+}
+
+\newtcolorbox{research}{blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=6mm, bottom=3mm, colback=white, colframe=box3, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 3mm, arc = 3mm, sharp corners = northwest,
+fonttitle=\normalsize\boxtitlefont,  
+title= PARA PESQUISAR, 
+boxed title style={empty, colback = box3, colframe = box3, sharp corners}, 
+attach boxed title to top left={xshift=-2.5mm , yshift=-6.2mm},
+underlay boxed title={
+\filldraw [fill=box3, draw=box3] ($(frame.north west)$) rectangle +(36.00mm,-5.00mm);% the rectangle where the title fits.
+\coordinate (A) at ($(frame.north west) + (36.00mm,0.00mm)$);
+%\filldraw [cor1] ($(A) + (-4.7mm,0mm)$) rectangle ++(-7mm,-6.4mm);%green rectangle within ? inside.
+%\fill [box3] ($(A) + (-11.9mm,-3.5mm)$) -- ++(4.8 mm,2.6 mm) arc [start angle=20, end angle=-60, x radius=1.00mm, y radius=2.35mm] --++ (0,-2mm)-- ($(title.south east) + (-1.1mm,0.20mm)$) -- ($(title.south east) + (-2mm,0.20mm)$) -- cycle; % the fancy thing in the ?
+\node [white] at ($(A) + (-2.40mm,-1.6mm)$) {\includegraphics[height=7mm]{lupa}};% just the ?
 }
 }
 
@@ -237,19 +253,7 @@ underlay boxed title={
 %	\end{tikzpicture}
 %}
 
-\newtcolorbox{research}{blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=6mm, bottom=3mm, colback=white, colframe=box3, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 3mm, arc = 3mm, sharp corners = northwest,
-fonttitle=\normalsize\boxtitlefont,  
-title= PARA PESQUISAR, 
-boxed title style={empty, colback = box3, colframe = box3, sharp corners}, 
-attach boxed title to top left={xshift=-2.5mm , yshift=-6.2mm},
-underlay boxed title={
-\filldraw [fill=box3, draw=box3] ($(frame.north west)$) rectangle +(36.00mm,-5.00mm);% the rectangle where the title fits.
-\coordinate (A) at ($(frame.north west) + (36.00mm,0.00mm)$);
-%\filldraw [cor1] ($(A) + (-4.7mm,0mm)$) rectangle ++(-7mm,-6.4mm);%green rectangle within ? inside.
-%\fill [box3] ($(A) + (-11.9mm,-3.5mm)$) -- ++(4.8 mm,2.6 mm) arc [start angle=20, end angle=-60, x radius=1.00mm, y radius=2.35mm] --++ (0,-2mm)-- ($(title.south east) + (-1.1mm,0.20mm)$) -- ($(title.south east) + (-2mm,0.20mm)$) -- cycle; % the fancy thing in the ?
-\node [white] at ($(A) + (-2.40mm,-1.6mm)$) {\includegraphics[height=7mm]{lupa}};% just the ?
-}
-}
+
 
 
 %\NewEnviron{research}{%

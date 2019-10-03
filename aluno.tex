@@ -1,23 +1,29 @@
 \documentclass[extrafontsizes, twoside, 11pt, openright, final]{memoir}
 
 \RequirePackage[skins,breakable]{tcolorbox}
+\RequirePackage{etex}
+\RequirePackage{multicol}
+\RequirePackage{graphicx}
 
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, colorlinks=true, linkcolor=linkscolor, filecolor=linkscolor, urlcolor=linkscolor}
+\usepackage{float}
 \usepackage{cmap}
-\usepackage[T1]{fontenc}
+%\usepackage[utf8]{fontenc}
 \usepackage{amsmath,amssymb,amstext}
 \usepackage[brazil]{babel}
 \usepackage{times}
 %\usepackage[Sonny]{fncychap}% This inser
 \usepackage{sphinx}%To recognize sphinxadmonition, sphinxincludegraphics, etc.
-%\usepackage{tabulary}
+\usepackage{tabulary}
 \usepackage{geometry}
 \usepackage{sphinxcontribtikz}
 % Include hyperref last.
-\usepackage{hyperref}
 % Fix anchor placement for figures with captions.
 \usepackage{hypcap}% it must be loaded after hyperref.
 \usepackage{makeidx} %para criar indice remissivo.
 \makeindex
+\usepackage{xurl}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{tikzmacros}
 \usepackage{livroabertopage}
@@ -27,11 +33,34 @@
 \usepackage{livroabertoboxes}
 \usepackage{livroabertolists}
 \usepackage{livroaberto}
-\RequirePackage{multicol}
+\usepackage{tabu} 
+\usepackage{array}
+\usepackage{tabulary}
+\usepackage{pbox}
+\usepackage{ragged2e}
+\usepackage{microtype}
+
+\usetikzlibrary{
+    calc,trees,shadows,positioning,arrows,chains,shapes.geometric,
+    decorations.pathreplacing,decorations.pathmorphing,shapes,
+    matrix,fit}
+
+\tcbuselibrary{skins,breakable}
+
+
+%\pgfplotsset{compat=1.15}
+\newcommand{\thead}{\rowfont{\bfseries \color{white}} \rowcolor{cor2!70}}
+
+
+
+\hfuzz=2pt
+\definecolor{linkscolor}{RGB}{6,69,173}
+
 
 
 \begin{document}
-
+%\raggedbottom
+%\plainfancybreak% 
 
 % \setcounter{chapter}{0}
 % \include{capa-funcoes}
@@ -42,14 +71,17 @@
 % \include{vetores-novo1}         
 % \include{perspectiva1}
 % \include{funcoes}
-% \include{funcao-afim}
-% \include{funcao-quadratica}
- \include{estatistica1}
-% \include{estatistica2}
+\include{funcao-afim}
+%\include{funcao-quadratica}
+%\include{estatistica1}
+%\include{estatistica2}
 % \include{probabilidade1}
 % \include{tales}
 % \include{semelhanca}
 % \include{trigonometria}
+
+
+
 
 
 % \begin{sphinxthebibliography}{Saarinem-apud-Torres-2004}

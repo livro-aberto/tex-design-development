@@ -5,70 +5,69 @@
 \RequirePackage{tcolorbox} %Allow those nice environments
 \RequirePackage{titling} % needed to manage with the title
 \RequirePackage{eso-pic }% to the cover style
-\RequirePackage{fouriernc} % Use the New Century Schoolbook font to the cover
 \RequirePackage{tikz}
-  \usetikzlibrary{intersections, positioning, fit, backgrounds, shapes, fadings,
-  decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
+\usetikzlibrary{intersections, positioning, fit, backgrounds, shapes, fadings,
+decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{comment}
 
 \tcbuselibrary{skins,breakable}
 
 
 
-\RenewEnviron{sphinxadmonition}[3]
-{\ifthenelse{\equal{#2}{Resposta}}% if this, use the style below
-  {  }
-  {\ifthenelse{\equal{#2}{Para o professor}}% if this, use the style below
-  	{  }
-	{\ifthenelse{\equal{#2}{Atividade}} % if this, use the style below
-		{\begin{task}{#3}
-		  \BODY \\
-		  \end{task}
-		}
-	  	{\ifthenelse{\equal{#2}{Para refletir}}%  should close the environment in the right way
-			{ \begin{reflection}
-			  \BODY \\
-			  \end{reflection}
-			}
-			{\ifthenelse{\equal{#2}{Você sabia?}} % if this, use the style below
-				{\begin{knowledge}
-				  \BODY \\
-				  \end{knowledge}
-				}
-				{\ifthenelse{\equal{#2}{Para pesquisar}}% if Para pesquisar, use the style below
-		     			{\begin{research}
-		     			 \BODY \\
-		     			 \end{research}
-		     			}
-		     		     	{\ifthenelse{\equal{#2}{Auto-avaliação}}% if Para pesquisar, use the style below
-		     				{\begin{evaluation}
-		     				 \BODY \\
-		     				 \end{evaluation}
-		     				 }
-		     		     		{\ifthenelse{\equal{#2}{Exemplo}}% if Para pesquisar, use the style below
-		     					{\begin{example}{#3}
-		     					 \BODY \\
-		     					 \end{example}
-		     					}
-		     					 {\ifthenelse{\equal{#2}{Observação}}% if Para pesquisar, use the style below
-			     					{\begin{observation}{#3}
-			     					 \BODY \\
-			     					 \end{observation}
-			     					}
-			     					{
-			     					\begin{observation}{#3}
-			     					\BODY \\	     					     
-								\end{observation}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-}
+% \RenewEnviron{sphinxadmonition}[3]
+% {\ifthenelse{\equal{#2}{Resposta}}% if this, use the style below
+%   {  }
+%   {\ifthenelse{\equal{#2}{Para o professor}}% if this, use the style below
+%   	{  }
+% 	{\ifthenelse{\equal{#2}{Atividade}} % if this, use the style below
+% 		{\begin{task}{#3}
+% 		  \BODY \\
+% 		  \end{task}
+% 		}
+% 	  	{\ifthenelse{\equal{#2}{Para refletir}}%  should close the environment in the right way
+% 			{ \begin{reflection}
+% 			  \BODY \\
+% 			  \end{reflection}
+% 			}
+% 			{\ifthenelse{\equal{#2}{Você sabia?}} % if this, use the style below
+% 				{\begin{knowledge}
+% 				  \BODY \\
+% 				  \end{knowledge}
+% 				}
+% 				{\ifthenelse{\equal{#2}{Para pesquisar}}% if Para pesquisar, use the style below
+% 		     			{\begin{research}
+% 		     			 \BODY \\
+% 		     			 \end{research}
+% 		     			}
+% 		     		     	{\ifthenelse{\equal{#2}{Auto-avaliação}}% if Para pesquisar, use the style below
+% 		     				{\begin{evaluation}
+% 		     				 \BODY \\
+% 		     				 \end{evaluation}
+% 		     				 }
+% 		     		     		{\ifthenelse{\equal{#2}{Exemplo}}% if Para pesquisar, use the style below
+% 		     					{\begin{example}{#3}
+% 		     					 \BODY \\
+% 		     					 \end{example}
+% 		     					}
+% 		     					 {\ifthenelse{\equal{#2}{Observação}}% if Para pesquisar, use the style below
+% 			     					{\begin{observation}{#3}
+% 			     					 \BODY \\
+% 			     					 \end{observation}
+% 			     					}
+% 			     					{
+% 			     					\begin{observation}{#3}
+% 			     					\BODY \\	     					     
+% 								\end{observation}
+% 								}
+% 							}
+% 						}
+% 					}
+% 				}
+% 			}
+% 		}
+% 	}
+% }
+% }
 
 
 

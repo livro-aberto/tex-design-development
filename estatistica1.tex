@@ -1,3 +1,4 @@
+\plainfancybreak
 
 \def\chapterillustration{./abertura-estatistica1}%Photo by Hoach Le Dinh on Unsplash, https://unsplash.com/photos/c8TWWQ5ZnUw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText 
 \def\chapterwhat{Especificidade do pensamento estatístico a partir de problemas. Conceitos: população e amostra, parâmetro e estimador. Variáveis estatísticas e suas classificações. Organização dos dados em tabelas de frequências. Representações gráficas adequadas para os diferentes tipos de variáveis. Noções básicas de amostragem.}
@@ -9,30 +10,32 @@ nossas responsabilidades como cidadãos. Um conhecimento básico de Estatística
 fundamental na formação do cidadão para que este possa, de forma competente, apreciar
 e criticar argumentos baseados em dados.} 
 \chapter{A Natureza da Estatística}
-\label{\detokenize{PE103:a-natureza-da-estatistica}}\label{\detokenize{PE103::doc}}
+\label{est1-chap}
 
 
 \explore{a natureza da Estatística}
-\label{\detokenize{PE103-0:explorando-compreendendo-a-natureza-da-estatistica}}\label{\detokenize{PE103-0::doc}}\label{\detokenize{PE103-0:cap-a-natureza-da-estatistica}}
+\label{est1-exp-1}
 Vivemos cercados de incertezas. A todo momento somos bombardeados por informações sobre pequisas científicas comprovando (estatisticamente) que tal substância causa uma patologia, ou sobre pesquisas de opinião, índices de pobreza, características sobre o envelhecimento da população, e outros temas de natureza incerta. Num mundo assim, é importante ter espírito crítico para informações sujeitas à incerteza a fim de poder interpretá-las e, quando necessário, poder escolher, entre diferentes opções, aquela que parece melhor diante da incerteza.  Nesse sentido, a Estatística é uma disciplina fundamental para todos os estudantes e, certamente, com grande responsabilidade para a formação crítica do cidadão, pois ela é usada nas mais variadas áreas do conhecimento tais como: Medicina, Economia, Política, Direito, Psicologia, Engenharia, Educação, entre outras.
 
 Mas afinal o que é Estatística?
 \begin{description}
-\item[{Estatística\index{Estatística|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-0:term-estatistica}}
+\item[{Estatística\index{Estatística|textbf}}] \leavevmode\phantomsection\label{est1-def-1}
 Arte e ciência de coletar, analisar, apresentar e interpretar dados, para que se tomem decisões sob incerteza.
 \end{description}
 
 \begin{task}{Escolha do melhor fornecedor - Tomada de decisão}
-\phantomsection\label{\detokenize{PE103-0:ativ-1-escolha-do-melhor-fornecedor}}
+\phantomsection\label{est1-ativ-1}
 
 \emph{Controle de Qualidade na Produção de Parafusos (Inspirada em ROSSMAN and CHANCE, 1998).}
 
 
-Uma indústria precisa comprar parafusos de diâmetro 15 mm cuja variação aceitável é 15,0 mm ``mais ou menos'' 0,2 mm. Há quatro empresas, A, B, C e D, fornecedoras desses parafusos, que são vendidos em caixas com 60 unidades. Para decidir de qual fornecedor passará a comprar os parafusos, a empresa resolveu comprar e analisar uma caixa de cada um dos fornecedores. Os diâmetros das peças foram medidos com instrumento de alta precisão e os valores obtidos estão representados nos gráficos a seguir, em que cada círculo representa um parafuso posicionado sobre a abscissa correspondente à medida do seu diâmetro, medido em precisão de 0,02 mm.
-\phantomsection\label{\detokenize{PE103-0:fig-parafusos}}
+Uma indústria precisa comprar parafusos de diâmetro 15 mm cuja variação aceitável é 15,0 mm "mais ou menos" 0,2 mm. Há quatro empresas, A, B, C e D, fornecedoras desses parafusos, que são vendidos em caixas com 60 unidades. Para decidir de qual fornecedor passará a comprar os parafusos, a empresa resolveu comprar e analisar uma caixa de cada um dos fornecedores. Os diâmetros das peças foram medidos com instrumento de alta precisão e os valores obtidos estão representados nos gráficos a seguir, em que cada círculo representa um parafuso posicionado sobre a abscissa correspondente à medida do seu diâmetro, medido em precisão de 0,02 mm.
 
 
-\begin{center}
+
+\begin{figure}[H]
+
+\centering
 \begin{tikzpicture}[x = 200, y=5, scale=1.2]
 
    \draw [help lines, lightgray, xstep=0.02,   ystep=1,xshift=-0.6] (14.383,0) grid (15.625,15) ;
@@ -69,7 +72,10 @@ Uma indústria precisa comprar parafusos de diâmetro 15 mm cuja variação acei
    }
    \end{scope}
 \end{tikzpicture}
-   
+\end{figure} 
+
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}
 \begin{scope}[x = 200, y=5, scale=1.2]
 
@@ -110,7 +116,9 @@ Uma indústria precisa comprar parafusos de diâmetro 15 mm cuja variação acei
 \end{scope}
 \end{tikzpicture}
 
-\end{center}
+\caption{Diâmetro das peças dos fornecedores}
+\label{est1-fig-1}
+\end{figure}
 
 
 \begin{enumerate}
@@ -131,14 +139,14 @@ Com base na sua resposta anterior, identifique os fornecedores cujos diâmetros 
 
 
 \begin{description}
-\item[{Amplitude\index{Amplitude|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-0:term-amplitude}}
+\item[{Amplitude\index{Amplitude|textbf}}] \leavevmode\phantomsection\label{est1-def-2}
 Em Estatística, a amplitude é definida como a diferença entre o maior e o menor valores observados.
 
 \end{description}
 
 \item De qual fornecedor você classifica o comportamento dos diâmetros dos parafusos como o de maior    \index{dispersão}dispersão? E o de menor dispersão?
 \begin{description}
-\item[{Dispersão\index{Dispersão|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-0:term-dispersao}}
+\item[{Dispersão\index{Dispersão|textbf}}] \leavevmode\phantomsection\label{est1-def-3}
 Segundo o dicionário Aurélio, dispersão significa (1) ato ou efeito de dispersar; (2) separação (de pessoas ou coisas) para diferentes partes.  Em Estatística, existem diferentes medidas de dispersão, dentre as quais, a amplitude.
 
 \end{description}
@@ -165,167 +173,29 @@ Segundo o dicionário Aurélio, dispersão significa (1) ato ou efeito de disper
 \end{itemize}
 \end{reflection}
 
-\phantomsection\label{\detokenize{PE103-0:ativ-2-comparacao-de-medicamentos}}
+\phantomsection\label{est1-ativ-2}
 \begin{task}{ Comparação de medicamentos}
 
 Deseja-se comparar três medicamentos, X, Y e Z, no tratamento da dor de cabeça. Para isso 60 pacientes com perfis similares foram separados aleatoriamente em três grupos de 20 cada. Para cada grupo,  será ministrado um dos medicamentos e observado o tempo de cura da dor de cabeça (em minutos). No quadro a seguir estão dispostos os dados obtidos.
 \phantomsection\label{\detokenize{PE103-0:tabela-medicamentos}}
 
-% \begin{savenotes}\sphinxattablestart
-% \centering
-% \begin{tabulary}{\linewidth}[t]{|T|T|T|T|T|T|T|T|T|T|T|T|T|T|T|T|T|T|T|T|T|T|}
-% \hline
-% %\sphinxstylethead{\sphinxstyletheadfamily 
-% {medicamento
-% \unskip}\relax &\sphinxstartmulticolumn{20}%
-% \begin{varwidth}[t]{\sphinxcolwidth{20}{22}}
-%   % \sphinxstylethead{\sphinxstyletheadfamily
-%   {tempo em minutos
-% \unskip}\relax \par
-% \vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-% \sphinxstopmulticolumn
-% &%\sphinxstylethead{\sphinxstyletheadfamily{ 
-% soma
-% \unskip}\relax \\
-% \hline
-% X
-% &
-% 7
-% &
-% 8
-% &
-% 8
-% &
-% 9
-% &
-% 9
-% &
-% 9
-% &
-% 9
-% &
-% 10
-% &
-% 10
-% &
-% 10
-% &
-% 10
-% &
-% 10
-% &
-% 10
-% &
-% 11
-% &
-% 11
-% &
-% 11
-% &
-% 11
-% &
-% 12
-% &
-% 12
-% &
-% 13
-% &
-% 200
-% \\
-% \hline
-% Y
-% &
-% 7
-% &
-% 8
-% &
-% 9
-% &
-% 9
-% &
-% 10
-% &
-% 10
-% &
-% 11
-% &
-% 11
-% &
-% 11
-% &
-% 12
-% &
-% 12
-% &
-% 12
-% &
-% 13
-% &
-% 13
-% &
-% 14
-% &
-% 14
-% &
-% 15
-% &
-% 15
-% &
-% 16
-% &
-% 18
-% &
-% 240
-% \\
-% \hline
-% Z
-% &
-% 11
-% &
-% 11
-% &
-% 11
-% &
-% 11
-% &
-% 11
-% &
-% 12
-% &
-% 12
-% &
-% 12
-% &
-% 12
-% &
-% 12
-% &
-% 12
-% &
-% 12
-% &
-% 12
-% &
-% 12
-% &
-% 12
-% &
-% 13
-% &
-% 13
-% &
-% 13
-% &
-% 13
-% &
-% 13
-% &
-% 240
-% \\
-% \hline
-% \end{tabulary}
-% \par
-% \sphinxattableend\end{savenotes}
+
+    \begin{table}[H]
+        \setlength\tabcolsep{2.5pt}
+        \centering
+        \begin{tabu} to \linewidth {|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \thead
+            {{medicamentos}}  & \multicolumn{20}{c|}{{tempo em minutos}} & {soma} \\
+            \hline
+            X & 7 & 8 & 8 & 9 & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 & 11 & 11 & 11 & 11 & 12 & 12 & 13 & 200 \\
+            \hline
+            Y & 7 & 8 & 9 & 9 & 10 & 10 & 11 & 11 & 11 & 12 & 12 & 12 & 13 & 13 & 14 & 14 & 15 & 15 & 16 & 18 & 240 \\
+            \hline
+            Z & 11 & 11 & 11 & 11 & 11 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 13 & 13 & 13 & 13 & 13 & 240 \\
+            \hline
+        \end{tabu}
+    \end{table}
 \begin{enumerate}
 \item {} 
 Organize as informações apresentadas no quadro acima em diagramas de pontos. Utilize uma folha de papel quadriculada, usando a mesma escala.
@@ -354,7 +224,7 @@ Em casa, procure algum remédio e leia a sua bula. Em seguida, identifique infor
 \end{research}
 
 
-\phantomsection\label{\detokenize{PE103-0:ativ-3-pesquisa-ibge-pnad}}
+\phantomsection\label{est1-ativ-3}
 \begin{task}{ Pesquisa sobre a prática de esportes e atividade física}
 
 \emph{Fonte: IBGE, Suplemento da PNAD/2015}
@@ -402,7 +272,7 @@ Cada uma das unidades investigadas em um estudo estatístico é denominada um \i
 Cada característica observada de um elemento é uma \index{variável}variável estatística. Assim, a medida do diâmetro do parafuso é uma variável na atividade ``Escolha do fornecedor'', o tempo de cura da dor de cabeça é uma variável na atividade ``Comparação de medicamentos'' e, na atividade da PNAD, estão presentes várias variáveis estatísticas de interesse do domicílio e de seus residentes tais como local, número de cômodos, número de residentes; sexo, idade e rendimento dos residentes, etc.
 \end{task}
 
-\phantomsection\label{\detokenize{PE103-0:ativ4-analise-de-infograficos}}
+\phantomsection\label{est1-ativ-4}
 \begin{task}{ Análise de infográficos}
 
 A seguir apresentaremos quatro \index{infográficos}infográficos, produzidos pelo IBGE (\href{https://vamoscontar.ibge.gov.br/atividades/ensino-medio/9801-pesquisando-a-pratica-de-esportes-e-atividades-fisicas-no-brasil.html}{vamoscontar.ibge.gov.br}) usando os dados do Suplemento Prática de Esporte e Atividade Física da PNAD 2015.
@@ -414,7 +284,7 @@ Um \index{infográfico}infográfico é uma apresentação de informações integ
 \capstart
 
 \noindent\includegraphics[width=300bp]{PNAD_2015_Esportes_01quem2.png}
-\caption{PNAD - Infográfico 1}\label{\detokenize{PE103-0:fig-infografico-pnad-1}}\label{\detokenize{PE103-0:id1}}\end{figure}
+\caption{PNAD - Infográfico 1}\label{est1-fig-2}\end{figure}
 \begin{enumerate}
 \item {} 
 Segundo a pesquisa, qual a porcentagem de pessoas de 15 anos ou mais que praticaram algum esporte ou atividade física no período de um ano?
@@ -438,7 +308,7 @@ Considerando as faixas etárias discriminadas no infográfico, percebe-se alguma
 \capstart
 
 \noindent\includegraphics[width=300bp]{{PNAD_2015_Esportes_03instrrend2}.png}
-\caption{PNAD - Infográfico 2}\label{\detokenize{PE103-0:fig-infografico-pnad-2}}\label{\detokenize{PE103-0:id2}}\end{figure}
+\caption{PNAD - Infográfico 2}\label{est1-fig-3}\end{figure}
 \begin{enumerate}
 \item {} 
 Considerando os diferentes graus de instrução, percebe-se alguma diferença com relação à prática de atividades físicas? Em caso afirmativo, descreva a(s) diferença(s) observada(s).
@@ -453,7 +323,7 @@ Considerando as faixas de rendimento mensal per capita do domicílio, percebe-se
 \capstart
 
 \noindent\includegraphics[width=300bp]{{PNAD_2015_Esportes_04principais}.png}
-\caption{PNAD - Infográfico 3}\label{\detokenize{PE103-0:fig-infografico-pnad-3}}\label{\detokenize{PE103-0:id3}}\end{figure}
+\caption{PNAD - Infográfico 3}\label{est1-fig-4}\end{figure}
 \begin{enumerate}
 \item {} 
 Qual foi a variável estudada no gráfico acima?
@@ -474,7 +344,7 @@ O que você acha que representa a resposta ``Outros Esportes''?
 \capstart
 
 \noindent\includegraphics[width=300bp]{{PNAD_2015_Esportes_05investimento}.png}
-\caption{PNAD - Infográfico 4}\label{\detokenize{PE103-0:fig-infografico-pnad-4}}\label{\detokenize{PE103-0:id4}}\end{figure}
+\caption{PNAD - Infográfico 4}\label{est1-fig-5}\end{figure}
 \begin{enumerate}
 \item {} 
 Qual a porcentagem de pessoas de 15 anos ou mais que concorda com que o poder público deva investir em atividades físicas ou desportivas?
@@ -492,17 +362,20 @@ Podemos afirmar que 57,8\% das pessoas de 15 anos ou mais defendem que o poder p
 \end{task}
 
 
-\arrange{ }
-\label{\detokenize{PE103-1:organizando-as-ideias}}\label{\detokenize{PE103-1::doc}}
+
+\arrange{}
+\label{est1-org-1}
+
 Nas atividades anteriores foram trabalhados vários conceitos importantes da Estatística. Alguns desses conceitos serão apresentados a seguir.
-\phantomsection\label{\detokenize{PE103-1:sub-conceitos-basicos}}
+
+\phantomsection\label{est1-conceitos-1}
 \textbf{Conceitos Básicos}
 
 Em geral, a palavra população representa um conjunto de habitantes de um determinado lugar. No entanto, em Estatística, \index{população}população tem um sentido mais amplo e pode ser definida como o conjunto de todos os elementos com pelo menos uma característica em comum. Observe que é exatamente essa característica em comum que vai definir o universo (população) de uma pesquisa.
 
 Assim, em Estatística, a população não precisa ser um conjunto de pessoas, pode ser o conjunto de parafusos fabricados por uma indústria, o conjunto de animais de certa espécie que vivem em uma região, todos os estudantes universitários de um país, etc.
 \begin{description}
-\item[{Amostra\index{Amostra|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-1:term-amostra}}
+\item[{Amostra\index{Amostra|textbf}}] \leavevmode\phantomsection\label{est1-def-4}
 é um subconjunto não-vazio da população.
 
 \end{description}
@@ -513,12 +386,12 @@ Cada característica observada de um elemento é uma \index{variável}variável 
 
 Suponha que deseja-se investigar a opinião dos estudantes de um colégio quanto à modificação da lista de produtos vendidos na cantina para outros mais saudáveis, trocando refrigerantes por sucos naturais entre outros. Para isso, a direção da escola irá entrevistar cinco alunos sorteados de cada uma de suas 40 turmas. Nesse exemplo, a população corresponde a todos os estudantes deste colégio e, a amostra, aos 200 estudantes que foram entrevistados. Cada estudante entrevistado é um elemento e, a variável de interesse  é a opinião do estudante: ``a favor'' ou ``contra'' à mudança. Num estudo desse tipo, costuma-se registrar também outras variáveis como sexo, idade, ano de ensino, turno, etc.
 \begin{description}
-\item[{Parâmetro\index{Parâmetro|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-1:term-parametro}}
+\item[{Parâmetro\index{Parâmetro|textbf}}] \leavevmode\phantomsection\label{est1-def-5}
 característica numérica da população.
 
 \end{description}
 \begin{description}
-\item[{Estimador\index{Estimador|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-1:term-estimador}}
+\item[{Estimador\index{Estimador|textbf}}] \leavevmode\phantomsection\label{est1-def-6}
 função que produz estimativas de parâmetros usando os dados da amostra.
 
 \end{description}
@@ -559,18 +432,23 @@ Por outro lado, uma proposição estatística é uma afirmação sobre a qual nu
 
 Se lançarmos 100 vezes essa mesma moeda e obtivermos 8 caras, teremos mais evidências para aceitar a proposição de que não seja equilibrada, mas ainda assim não poderemos afirmar que a proposição seja verdadeira. Proposições desse tipo que envolvem um nível de confiança sobre sua veracidade são propsições de natureza estatística.
 \end{reflection}
-\phantomsection\label{\detokenize{PE103-1:sub-classificacao-de-variaveis}}
+\phantomsection\label{est1-class-1}
 \textbf{Classificação de variáveis}
 
 A classificação das variáveis estudadas é importante, pois as técnicas e procedimentos estatísticos de análise de dados dependem do tipo de variável investigado. Nesse sentido é importante reconhecer a natureza de cada variável investigada para posterior tratamento da informação obtida. Por exemplo, se estamos estudando a modalidade de atividades físicas praticadas pelos brasileiros de 15 anos ou mais, não faz sentido calcular média, pois  ela não assume valores numéricos.
 
-Existem dois tipos principais de variáveis (qualitativas e quantitativas), que se subdividem, por sua vez, em duas categorias, conforme a figura 2.2.
-\phantomsection\label{\detokenize{PE103-1:fig-classificacao-de-variaveis}}\begin{figure}[htp]\centering\begin{tikzpicture}
+Existem dois tipos principais de variáveis (qualitativas e quantitativas), que se subdividem, por sua vez, em duas categorias, conforme a \hyperref[est1-fig-6]{figura} \ref{est1-fig-6}.
+
+\begin{figure}[htp]
+\centering
+\begin{tikzpicture}
+
 \tikzstyle{vecArrow} = [thick, decoration={markings , mark=at position
 1 with {\arrow[semithick, fill=white]{triangle 60}}},
 double distance=1.4pt, shorten >= 5.5pt,
 preaction = {decorate,line width=1.4pt},
 postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+
 \begin{scope}[x=15, y=10]
 
    \draw[rounded corners = 5pt, fill=primario] (-9,0) rectangle (-5,2);
@@ -596,37 +474,42 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 
 
 \end{scope}
-\end{tikzpicture}\caption{Classificação dos tipos de variáveis}\end{figure}\begin{description}
-\item[{Variável qualitativa\index{Variável qualitativa|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-1:term-variavel-qualitativa}}
+\end{tikzpicture}
+\caption{Classificação dos tipos de variáveis}
+\label{est1-fig-6}
+\end{figure}
+
+\begin{description}
+\item[{Variável qualitativa\index{Variável qualitativa|textbf}}] \leavevmode\phantomsection\label{est1-def-7}
 Uma variável estatística é qualitativa se as possíveis respostas para ela são atributos não-numéricos. A maior parte das variáveis identificadas no ``Suplemento de Práticas de Esporte e Atividade Física'' da PNAD/2015, representa variáveis qualitativas.
 
 \end{description}
 
 Uma variável qualitativa é classificada em nominal ou ordinal.
 \begin{description}
-\item[{Variável qualitativa nominal\index{Variável qualitativa nominal|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-1:term-variavel-qualitativa-nominal}}
+\item[{Variável qualitativa nominal\index{Variável qualitativa nominal|textbf}}] \leavevmode\phantomsection\label{est1-def-8}
 Uma variável qualitativa é nominal quando não existe nenhuma ordenação natural das respostas associadas à variável. Exemplos de variáveis nominais: bairro de residência, tipo sanguíneo, modalidade de atividade física que pratica, etc.
 
 \end{description}
 \begin{description}
-\item[{Variável qualitativa ordinal\index{Variável qualitativa ordinal|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-1:term-variavel-qualitativa-ordinal}}
+\item[{Variável qualitativa ordinal\index{Variável qualitativa ordinal|textbf}}] \leavevmode\phantomsection\label{est1-def-9}
 A variável qualitativa é ordinal quando é possível estabelecer uma relação de ordem entre as respostas associadas a ela. Por exemplo, nível de instrução da mãe com as respostas possíveis: Ensino Fundamental completo, Ensino Médio completo, Ensino Superior incompleto e Ensino Superior completo. Podemos perceber que quem tem Ensino Médio completo tem maior nível de instrução de quem tem Ensino Fundamental completo.
 
 \end{description}
 \begin{description}
-\item[{Variável quantitativa\index{Variável quantitativa|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-1:term-variavel-quantitativa}}
+\item[{Variável quantitativa\index{Variável quantitativa|textbf}}] \leavevmode\phantomsection\label{est1-def-10}
 Uma variável é quantitativa se as respostas para ela são numéricas. Exemplos de variáveis quantitativas são idade, peso, altura, temperatura, número de irmãos, número de horas semanais dedicadas à prática de atividade física.
 
 \end{description}
 
 Uma variável quantitativa é classificada em discreta ou contínua.
 \begin{description}
-\item[{Variável quantitativa discreta\index{Variável quantitativa discreta|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-1:term-variavel-quantitativa-discreta}}
+\item[{Variável quantitativa discreta\index{Variável quantitativa discreta|textbf}}] \leavevmode\phantomsection\label{est1-def-11}
 As variáveis discretas resultam de uma contagem ou são variáveis cuja quantidade de valores possíveis é finita. Por exemplo, o número de atendimentos em um Pronto-Socorro nos finais de semana, o número de erros de impressão na página de um livro, número de irmãos, etc.
 
 \end{description}
 \begin{description}
-\item[{Variável quantitativa contínua\index{Variável quantitativa contínua|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-1:term-variavel-quantitativa-continua}}
+\item[{Variável quantitativa contínua\index{Variável quantitativa contínua|textbf}}] \leavevmode\phantomsection\label{est1-def-12}
 As variáveis quantitativas contínuas em geral resultam de uma medição. Por exemplo, altura, peso, temperatura, etc.
 \end{description}
 
@@ -637,7 +520,7 @@ Na análise dos infográficos vimos que uma variável quantitativa pode ser trat
 
 \textbf{Gráficos para Variáveis Qualitativas}
 
-Nas análises dos infográficos, trabalhamos com alguns tipos de gráficos para representar a distribuição de frequências de variáveis qualitativas. No {\hyperref[\detokenize{PE103-0:fig-infografico-pnad-3}]{\sphinxcrossref{\DUrole{std,std-ref}{infográfico 3}}}}, tem-se um \index{gráfico de barras} gráfico de barras. Nesse gráfico, cada barra, de mesma largura, representa uma resposta e seu comprimento corresponde à \index{frequência} frequência na qual a resposta ocorre. Observe também que, nesse gráfico, se estivermos trabalhando com as porcentagens de cada resposta, a soma das porcentagens deve ser 100\%.
+Nas análises dos infográficos, trabalhamos com alguns tipos de gráficos para representar a distribuição de frequências de variáveis qualitativas. No \hyperref[est1-fig-4]{infográfico 3}, tem-se um \index{gráfico de barras} gráfico de barras. Nesse gráfico, cada barra, de mesma largura, representa uma resposta e seu comprimento corresponde à \index{frequência} frequência na qual a resposta ocorre. Observe também que, nesse gráfico, se estivermos trabalhando com as porcentagens de cada resposta, a soma das porcentagens deve ser 100\%.
 
 Em geral, se a variável for ordinal dispomos as respostas em ordem crescente. Se a variável é nominal, podemos dispor as respostas em ordem decrescente de frequência.
 
@@ -647,104 +530,68 @@ Numa turma de um colégio foram observados os tipos sanguíneos de seus 40 aluno
 É comum resumir esse tipo de informação, usando uma tabela, informando as respostas da variável e suas frequências. Nesse exemplo a variável é tipo sanguíneo e sua classificação é qualitativa nominal, pois assume respostas não numéricas ``A'', ``B'', ``AB'' e ``O'', sem uma ordenação natural. Em geral dispomos os valores dessa variável em ordem decrescente de frequência.
 
 
-\begin{savenotes}\sphinxattablestart
+
+\centering \setlength\tabcolsep{2.5pt}
+\begin{table}[H]
 \centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|}
+\begin{tabu} to \linewidth{|c|c|c|c|}
 \hline
-\sphinxstylethead{\sphinxstyletheadfamily 
-tipo
-sanguíneo
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-frequência
-absoluta
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-frequência
-relativa
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-porcentagem
-(\%)
-\unskip}\relax \\
+\thead
+tipo sanguíneo  & frequência absoluta  & frequência relativa  &  porcentagem (\%) \\
 \hline
-O
-&
-18
-&
-0,45
-&
-45
-\\
+O & 18 & 0,45 & 45 \\
 \hline
-A
-&
-12
-&
-0,30
-&
-30
-\\
+A & 12 & 0,30 & 30 \\
 \hline
-AB
-&
-6
-&
-0,15
-&
-15
-\\
+AB & 6 & 0,15 & 15 \\
 \hline
-B
-&
-4
-&
-0,10
-&
-10
-\\
+B & 4 & 0,10 & 10 \\
 \hline
-total
-&
-40
-&
-1,00
-&
-100
-\\
+total & 40 & 1,00 & 100 \\
 \hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
+\end{tabu}
+\end{table}
+
+
 \end{example}
 
-Os gráficos apresentados nos {\hyperref[\detokenize{PE103-0:fig-infografico-pnad-1}]{\sphinxcrossref{\DUrole{std,std-ref}{infográfico 1}}}} e {\hyperref[\detokenize{PE103-0:fig-infografico-pnad-2}]{\sphinxcrossref{\DUrole{std,std-ref}{infográfico 2}}}} são gráficos de barras?
+Os gráficos apresentados nos \hyperref[est1-fig-2]{infográfico 1} e \hyperref[est1-fig-3]{infográfico 2} são gráficos de barras?
 
-Esses gráficos usam barras para representar as frequências em subgrupos diferentes do conjunto observado. Mas eles não se encaixam na apresentação anterior. Verifique que se somarmos as porcentagens elas não resultarão em 100\%. De fato, são \index{gráficos de barras múltiplas}gráficos de barras múltiplas, úteis para comparar diferentes distribuições de frequências. Observe que, em cada um desses gráficos, a variável sob investigação é se a pessoa pratica ou não atividade física. No entanto, em vez de apresentar as porcentagens das respostas \emph{Sim} e \emph{Não} no universo de homens e no universo de mulheres, como a variável é binária, só foram apresentadas as porcentagens de \emph{Sim} em cada subgrupo, pois nesse caso, as correspondentes porcentagens de \emph{Não} são dadas pelo complementar em cada subgrupo considerado.
+Esses gráficos usam barras para representar as frequências em subgrupos diferentes do conjunto observado. Mas eles não se encaixam na apresentação anterior. Verifique que se somarmos as porcentagens elas não resultarão em 100\%. De fato, são \index{gráficos de barras múltiplas}gráficos de barras múltiplas, úteis para c
+omparar diferentes distribuições de frequências. Observe que, em cada um desses gráficos, a variável sob investigação é se a pessoa pratica ou não atividade física. No entanto, em vez de apresentar as porcentagens das respostas \emph{Sim} e \emph{Não} no universo de homens e no universo de mulheres, como a variável é binária, só foram apresentadas as porcentagens de \emph{Sim} em cada subgrupo, pois nesse caso, as correspondentes porcentagens de \emph{Não} são dadas pelo complementar em cada subgrupo considerado.
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=400pt]{{barrasmultiplas_sexo}.png}
-\caption{Detalhe legendado do \DUrole{xref,std,std-ref}{infográfico 1}}\label{\detokenize{PE103-1:fig-infografico-1-detalhe}}\label{\detokenize{PE103-1:id2}}\end{figure}
+\noindent
+\includegraphics[width=400pt]{{barrasmultiplas_sexo}.png}
+\caption{Detalhe legendado do \hyperref[est1-fig-2]{infografico 2}}
+\label{est1-fig-7}
+
+\end{figure}
 
 O mesmo ocorre quando analisamos os gráficos para faixa etária, grau de instrução e rendimento. Todos são gráficos de barras múltiplas que nos apoiaram em nossas análises sobre a associação entre a prática de atividades físicas e a outra variável (sexo, faixa etária, grau de instrução, rendimento).
 
-No {\hyperref[\detokenize{PE103-0:fig-infografico-pnad-4}]{\sphinxcrossref{\DUrole{std,std-ref}{infográfico 4}}}}, temos um \index{gráfico de setores}gráfico de setores e dois \index{gráficos de retângulos}gráficos de retângulos. A ideia por trás desses gráficos é subdividir de maneira proporcional a figura maior em partes cujas áreas em relação à figura maior correspondam à frequência de cada resposta. Por exemplo, no gráfico de setores, subdividimos o círculo em setores de tal modo que a razão da área de cada setor em relação a área do círculo corresponde à frequência (ou porcentagem) da resposta que ele representa. Portanto a soma das frequências, quando apresentadas em porcentagens, tem que ser igual a 100$\%$.
+No {\hyperref[est1-fig-5]{infográfico 4}, temos um \index{gráfico de setores}gráfico de setores e dois \index{gráficos de retângulos}gráficos de retângulos. A ideia por trás desses gráficos é subdividir de maneira proporcional a figura maior em partes cujas áreas em relação à figura maior correspondam à frequência de cada resposta. Por exemplo, no gráfico de setores, subdividimos o círculo em setores de tal modo que a razão da área de cada setor em relação a área do círculo corresponde à frequência (ou porcentagem) da resposta que ele representa. Portanto a soma das frequências, quando apresentadas em porcentagens, tem que ser igual a 100$\%$.
 
 No gráficos de retângulos essa mesma ideia é usada: o retângulo maior é subdividido em retângulos cujas áreas relativas correspondem às porcentagens das respostas que eles representam. Esses gráficos foram construídos para representar as respostas à pergunta ``Em quais áreas em que deve ocorrer investimento público?'' para quem respondeu \emph{Não} à pergunta ``O poder público deve investir em atividades físcas ou desportivas?'' e também para representar as respostas à pergunta ``Qual deve ser a prioridade nos investimentos?'' para quem respondeu ``Sim'' à pergunta ``O poder público deve investir em atividades físicas ou desportivas?''.
 
-\begin{observation}
+\begin{observation}{}
 
 Quando estamos trabalhando com variáveis qualitativas usamos a escala da frequência (absoluta, relativa, porcentagem)  na construção de gráficos para representar a distribuição de frequências das respostas dadas à variável sob investigação. As representações gráficas mais comuns são gráficos de barras e gráficos de setores. Para comparações da mesma variável em grupos diferentes é comum usar o gráfico de barras múltiplas com frequências relativas ou porcentagens.
 \end{observation}
 
 \practice{ }
-\label{\detokenize{PE103-2::doc}}\label{\detokenize{PE103-2:praticando}}\phantomsection\label{\detokenize{PE103-2:ativ-1-pratica-atividade-fisica-na-turma}}
+\label{est1-prac-1}
+
+\phantomsection\label{est1-ativ-5}
 \begin{task}{ Prática de atividade física na turma}
 
 
 Deseja-se comparar os hábitos de atividade física em tempo livre dos alunos da turma com os dados obtidos da PNAD/2015. Para isso preencha o formulário de dados fornecido pelo professor. Construa tabelas e gráficos resumindo a informação obtida.
 \end{task}
-\phantomsection\label{\detokenize{PE103-2:ativ-classificacao-de-variaveis}}
+\phantomsection\label{est1-ativ-6}
 \begin{task}{ Classificação de variáveis}
 
 Suponha que cada uma das variáveis a seguir foi observada para todos os alunos de sua turma. Indique se cada uma delas é uma variável qualitativa ou quantitativa. Se for uma variável qualitativa, indique se ela é binária (apenas duas respostas possíveis) ou não.
@@ -787,13 +634,13 @@ modo de locomoção para a escola
 
 \end{enumerate}
 \end{task}
-\phantomsection\label{\detokenize{PE103-2:ativ-3-construcao-de-grafico-variavel-qualitativa}}
+\phantomsection\label{est1-ativ-7}
 \begin{task}{ Construção de gráficos para variáveis qualitativas}
 
-Considerando o {\hyperref[\detokenize{PE103-0:fig-infografico-pnad-4}]{\sphinxcrossref{\DUrole{std,std-ref}{infográfico 4}}}}, transforme o gráfico de setores em gráfico de retângulos e os gráficos de retângulos em gráficos de setores.
+Considerando o \hyperref[est1-fig-5]{infográfico 4}, transforme o gráfico de setores em gráfico de retângulos e os gráficos de retângulos em gráficos de setores.
 \end{task}
 
-\phantomsection\label{\detokenize{PE103-2:ativ-4-analise-de-grafico}}
+\phantomsection\label{est1-ativ-8}
 \begin{task}{ Análise de gráfico}
 
 Observe o gráfico a seguir publicado em um jornal.
@@ -811,7 +658,10 @@ Que tipo(s) de variável(is) ele está representando?
 Construa um gráfico diferente para representar a mesma informação, marcando num plano Cartesiano os pontos (x,y) em que x corresponde ao tempo e y corresponde à inflação acumulada no domicílio, unindo os pontos consecutivos por segmentos. É possível perceber a partir desse gráfico algum tipo de comportamento no período observado?
 
 \end{enumerate}
-\phantomsection\label{\detokenize{PE103-2:linhaversusbarra}}\begin{figure}[htp]\centering\begin{tikzpicture}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.7, every node/.style={scale=0.9}]
 \begin{scope}[x=20, y = 10]
 \draw (0,0) -- (28,0);
 \foreach \ye in {-5,5,10,15}{
@@ -821,190 +671,66 @@ Construa um gráfico diferente para representar a mesma informação, marcando n
    \draw [fill=primario] (2*\x-0.5,0) rectangle  (2*\x+0.5,\y);
    \node at (2*\x,-8) {\z};
 }
-\node at (2,-9) {2016};
-\node at (12,-9) {2017};
-\node [right] at (0,21.5) {INFLAÇÃO DA ALIMENTAÇÃOO NO   DOMICÍLIO};
-\node [right] at (0,20) {(acumulado em 12 meses, em   $\%$)};\\
+\node at (2,-10) {2016};
+\node at (12,-10) {2017};
+\node [right] at (0,21.5) {INFLAÇÃO DA ALIMENTAÇÃO NO   DOMICÍLIO};
+\node [right] at (0,20) {(acumulado em 12 meses, em   $\%$)};
 \end{scope}
-\end{tikzpicture}\caption{Inflação da alimentação acumulada nos últimos 12 meses (Fonte: IBGE)}\end{figure}\end{task}
+\end{tikzpicture}
+\caption{Inflação da alimentação acumulada nos últimos 12 meses (Fonte: IBGE)}
+\label{est1-fig-8}
+\end{figure}
 
-
+\end{task}
 
 \explore{estruturas de variáveis quantitativas}
-\label{\detokenize{PE103-3:explorando-visualizando-estruturas-de-variaveis-quantitativas}}\label{\detokenize{PE103-3::doc}}\phantomsection\label{\detokenize{PE103-3:ativ-construcao-histograma}}
-\begin{task}{ Construção do histograma}
+\label{est1-exp-2}
+
+\phantomsection\label{est1-ativ-9}
+\begin{task}{Construção do histograma}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{USA.NM.VeryLargeArray.03}.jpg}
-\caption{Arranjo de radiotelescópios - Very Large Array (VLA), New Mexico, EUA. \href{https://commons.wikimedia.org/wiki/File:USA.NM.VeryLargeArray.03.jpg}{Foto: Hajor CC-by-sa}}\label{\detokenize{PE103-3:fig-radiotelescopios}}\label{\detokenize{PE103-3:id1}}\end{figure}
+\noindent
+\includegraphics[width=300bp]{{USA.NM.VeryLargeArray.03}.jpg}
 
-Um arranjo de oito radiotelescópios (A, B, C, D, E, F, G e H) como  ilustrado na {\hyperref[\detokenize{PE103-3:fig-radiotelescopios}]{\sphinxcrossref{\DUrole{std,std-ref}{Figura}}}} detectou sinais cujos oito registros de tempo para cada radiotelescópio se encontram na tabela a seguir.
+\caption{Arranjo de radiotelescópios - Very Large Array (VLA), New Mexico, EUA. \href{https://commons.wikimedia.org/wiki/File:USA.NM.VeryLargeArray.03.jpg}{Foto: Hajor CC-by-sa}}
+
+\label{est1-fig-9}
+\end{figure}
+
+Um arranjo de oito radiotelescópios (A, B, C, D, E, F, G e H) como  ilustrado na \hyperref[est1-fig-9]{Figura \ref{est1-fig-9}} detectou sinais cujos oito registros de tempo para cada radiotelescópio se encontram na tabela a seguir.
 
 
-\begin{savenotes}\sphinxattablestart
+
+\begin{table}[H]
 \centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|T|T|T|T|}
+\begin{tabu} to \linewidth {|c|c|c|c|c|c|c|c|}
 \hline
-\sphinxstylethead{\sphinxstyletheadfamily 
-A
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-B
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-C
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-D
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-E
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-F
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-G
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-H
-\unskip}\relax \\
+\thead
+A & B &  C & D &  E & F &  G &  H \\
 \hline
-3,03
-&
-4,37
-&
-5,04
-&
-5,73
-&
-4,03
-&
-5,37
-&
-6,04
-&
-6,74
-\\
+3,03 & 4,37 & 5,04 & 5,73 & 4,03 & 5,37 & 6,04 & 6,74 \\
 \hline
-3,38
-&
-4,46
-&
-5,11
-&
-5,84
-&
-4,38
-&
-5,46
-&
-6,11
-&
-6,84
-\\
+3,38 & 4,46 & 5,11 & 5,84 & 4,38 & 5,46 & 6,11 & 6,84 \\
 \hline
-3,60
-&
-4,55
-&
-5,19
-&
-5,95
-&
-4,60
-&
-5,55
-&
-6,19
-&
-6,96
-\\
+3,60 & 4,55 & 5,19 & 5,95 & 4,60 & 5,55 & 6,19 & 6,96 \\
 \hline
-3,78
-&
-4,63
-&
-5,29
-&
-6,08
-&
-4,78
-&
-5,64
-&
-6,29
-&
-7,08
-\\
+3,78 & 4,63 & 5,29 & 6,08 & 4,78 & 5,64 & 6,29 & 7,08 \\
 \hline
-3,92
-&
-4,71
-&
-5,36
-&
-6,23
-&
-4,92
-&
-5,72
-&
-6,36
-&
-7,23
-\\
+3,92 & 4,71 & 5,36 & 6,23 & 4,92 & 5,72 & 6,36 & 7,23 \\
 \hline
-4,04
-&
-4,79
-&
-5,45
-&
-6,41
-&
-5,04
-&
-5,79
-&
-6,45
-&
-7,40
-\\
+4,04 & 4,79 & 5,45 & 6,41 & 5,04 & 5,79 & 6,45 & 7,40 \\
 \hline
-4,16
-&
-4,87
-&
-5,54
-&
-6,62
-&
-5,16
-&
-5,87
-&
-6,54
-&
-7,63
-\\
+4,16 & 4,87 & 5,54 & 6,62 & 5,16 & 5,87 & 6,54 & 7,63 \\
 \hline
-4,27
-&
-4,95
-&
-5,64
-&
-6,97
-&
-5,26
-&
-5,95
-&
-6,64
-&
-7,97
-\\
+4,27 & 4,95 & 5,64 & 6,97 & 5,26 & 5,95 & 6,64 & 7,97 \\
 \hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
+\end{tabu}
+\end{table}
+
 \end{task}
 
 \begin{reflection}
@@ -1023,53 +749,43 @@ A natureza quantitativa de uma variável contínua pode muitas vezes levar a res
 \(a)\) Complete a tabela a seguir que utiliza de intervalos de amplitude 0,5 começando em 3,0. Observe que cada intervalo na tabela é fechado à esquerda e aberto à direita, isto quer dizer que, o limite inferior está incluso e o limite superior não está incluso.
 
 
-\begin{savenotes}\sphinxattablestart
-\centering
-\begin{tabulary}{\linewidth}[t]{|T|T|}
-\hline
-\sphinxstylethead{\sphinxstyletheadfamily 
-Intervalo de classe
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-Número de observações
-\unskip}\relax \\
-\hline
-{[} 3,0 ; 3,5 {[}
-&\\
-\hline
-{[} 3,5 ; 4,0 {[}
-&\\
-\hline
-{[} 4,0 ; 4,5 {[}
-&\\
-\hline
-{[} 4,5 ; 5,0 {[}
-&\\
-\hline
-{[} 5,0 ; 5,5 {[}
-&\\
-\hline
-{[} 5,5 ; 6,0 {[}
-&\\
-\hline
-{[} 6,0 ; 6,5 {[}
-&\\
-\hline
-{[} 6,5 ; 7,0 {[}
-&\\
-\hline
-{[} 7,0 ; 7,5 {[}
-&\\
-\hline
-{[} 7,5 ; 8,0 {[}
-&\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
 
+\centering
+\begin{table}[H]
+\centering
+\begin{tabu} to \linewidth {|c|c|}
+\hline
+\thead 
+Intervalo de classe & Número de observações \\
+\hline
+{[} 3,0 ; 3,5 {[} & \\ 
+\hline
+{[} 3,5 ; 4,0 {[} & \\
+\hline
+{[} 4,0 ; 4,5 {[} & \\
+\hline
+{[} 4,5 ; 5,0 {[} & \\
+\hline
+{[} 5,0 ; 5,5 {[} & \\
+\hline
+{[} 5,5 ; 6,0 {[} & \\
+\hline
+{[} 6,0 ; 6,5 {[} & \\
+\hline
+{[} 6,5 ; 7,0 {[} & \\
+\hline
+{[} 7,0 ; 7,5 {[} & \\
+\hline
+{[} 7,5 ; 8,0 {[} & \\
+\hline
+\end{tabu}
+\end{table}
+\par
+
+\justify
 Para visualizar o comportamento desses dados, iremos construir um gráfico chamado \index{histograma}histograma, composto por retângulos adjacentes cujas alturas representam a frequência de observações que ocorrem no intervalo correspondente. A base de cada retângulo corresponde aos limites do intervalo definido no agrupamento dos dados.
 
-\(b)\) Complete a figura a seguir com os demais retângulos do {\hyperref[\detokenize{PE103-3:fig-histograma}]{\sphinxcrossref{\DUrole{std,std-ref}{histograma}}}}.
+\(b)\) Complete a figura a seguir com os demais retângulos do {\hyperref[est1-fig-10]{histograma}.
 \begin{quote}
 
 \begin{figure}[H]
@@ -1077,7 +793,10 @@ Para visualizar o comportamento desses dados, iremos construir um gráfico chama
 \capstart
 
 \noindent\includegraphics[width=300bp]{{Histograma}.png}
-\caption{Histograma dos dados coletados pela grade de radiotelescópios}\label{\detokenize{PE103-3:fig-histograma}}\label{\detokenize{PE103-3:id2}}\end{figure}
+\caption{Histograma dos dados coletados pela grade de radiotelescópios}
+\label{est1-fig-10}
+
+\end{figure}
 \end{quote}
 
 \(c)\) Calcule a média dos dados da tabela e localize-a no gráfico, sabendo que a soma dos 64 registros de tempo é 351,95. O que você pode observar quanto à localização da média no histograma construído?
@@ -1089,359 +808,70 @@ Para visualizar o comportamento desses dados, iremos construir um gráfico chama
 \capstart
 
 \noindent\includegraphics[width=300bp]{{Histograma-resposta_1}.png}
-\caption{Histograma dos registros de tempo}\label{\detokenize{PE103-3:fig-histograma-resposta}}\label{\detokenize{PE103-3:id3}}\end{figure}
-\phantomsection\label{\detokenize{PE103-3:ativ-medicao-temperatura-serie-temporal}}
-\begin{task}{ Medição da temperatura ao longo do tempo}
 
-\textbf{Objetivos específicos}
-\begin{itemize}
-\item {} 
-Definir série temporal a partir de um conjunto de observações sobre uma variável quantitativa contínua variando no tempo.
+\caption{Histograma dos registros de tempo}
 
-\item {} 
-Trabalhar com  gráficos de linha para ilustrar a evolução dos valores da variável ao longo do tempo.
+\label{est1-fig-11}
 
-\end{itemize}
+\end{figure}
 
-\textbf{Observações e sugestões}
-
-Para a construção do gráfico de linha será fornecida uma malha quadriculada para o preenchimento dos pontos, recomenda-se também uso de planilhas de cálculo para essa construção. Veja nesse \href{https://docs.google.com/spreadsheets/d/1B2bbuggIVjdfG6NivzDYmsmzovkt0FuFUUhSVFaAyDc/edit\#gid=1474980695}{link}, uma sugestão para realizar esta atividade.
-
-Respostas possíveis na reflexão proposta são: índices de inflação, preços de diversos bens,  índices da bolsa de valores, a população total em um território, a incidência de alguma enfermidade, a quantidade de vendas de um produto. É importante usar exemplos de dados que tenham aparecido recentemente na mídia ou que tenham relevância local.
-
-Na discussão sobre sazonalidade, pedir aos alunos para trazer notícias de jornais ou revistas que contenham séries temporais. Mostrar que existem várias medições que são comparadas com as do ano anterior, por exemplo, inflação, crescimento do PIB, taxas de desemprego por trimestre, entre outras.
+\phantomsection\label{est1-ativ-10}
+\begin{task}{Medição da temperatura ao longo do tempo}
 
 Você deve ter notado que a previsão do tempo é feita sempre a partir de dois números, isto ocorre porque a temperatura varia de forma contínua ao longo do dia e o que está sendo previsto são as temperaturas máxima e mínima. Por exemplo: 28° / 19°, significa que a previsão da temperatura máxima durante o dia será aproximadamente de 28°C e, a mínima, 19°C.
 
 Diversas variáveis meteorológicas (no sentido estatístico) são registradas nas estações meteorológicas: temperatura, precipitação (quantidade de chuva), umidade do ar, entre outras.
 
-No Brasil, as estações estão a cargo do {\color{red}\bfseries{}{}`Instituto Nacional de Meteorologia (INMET)\textless{}http://www.inmet.gov.br/\textgreater{}{}`\_} e as informações são armazenadas em bases de dados. Para poder tratar essas informações, frequentemente elas são resumidas por períodos de tempo de diferentes magnitudes: dias, semanas, meses ou anos.
+No Brasil, as estações estão a cargo do \textbf {Instituto Nacional de Meteorologia (INMET)} (\href{http://www.inmet.gov.br}{http://www.inmet.gov.br}) e as informações são armazenadas em bases de dados. Para poder tratar essas informações, frequentemente elas são resumidas por períodos de tempo de diferentes magnitudes: dias, semanas, meses ou anos.
 
 Dados coletados ao longo do tempo (como a informação meteorológica) são conhecidos como séries de dados temporais ou, apenas, \index{séries temporais}séries temporais, já que correspondem a variáveis que mudam continuamente ao longo do tempo e a informação só é útil se sabemos o momento em que foram realizadas as medições.
-\end{task}
 
 \begin{reflection}
 
 Forneça outros exemplos de séries temporais nas áreas de saúde, economia, finanças, educação, etc.
 \end{reflection}
 
+\justify
 A tabela a seguir fornece a média das temperaturas máximas para cada mês nos anos de 1991 a 2000 da cidade de Porto Alegre em graus centígrados (Fonte: \href{http://www.inmet.gov.br/portal/index.php?r=bdmep/bdmep}{Banco de Dados Meteorológicos para Ensino e Pesquisa, BDMEP - INMET})
 
 
-\begin{savenotes}\sphinxattablestart
+\begin{table}[H]
 \centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|T|T|T|T|T|T|T|}
+\begin{tabu} to \linewidth {|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\sphinxstartmulticolumn{11}%
-\begin{varwidth}[t]{\sphinxcolwidth{11}{11}}
-\sphinxstylethead{\sphinxstyletheadfamily Temperatura Máxima Média mensal nos anos 1991-2000 na cidade de Porto Alegre
-\unskip}\relax \par
-\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
-\sphinxstopmulticolumn
-\\
-\hline\sphinxstylethead{\sphinxstyletheadfamily 
-Mes
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-1991
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-1992
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-1993
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-1994
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-1995
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-1996
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-1997
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-1998
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-1999
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-2000
-\unskip}\relax \\
+\multicolumn{11}{|c|}{Temperatura Máxima Média mensal nos anos 1991-2000 na cidade de Porto Alegre} \\
 \hline
-1
-&
-30,23
-&
-30,43
-&
-31,34
-&
-30,33
-&
-30,74
-&
-29,89
-&
-32,09
-&
-29,13
-&
-30,65
-&
-30,63
-\\
+\thead
+Mês & 1991 & 1992 & 1993 & 1994  & 1995  & 1996 & 1997 & 1998 & 1999 & 2000 \\
 \hline
-2
-&
-31,03
-&
-31,48
-&
-29,28
-&
-28,85
-&
-29,46
-&
-29,78
-&
-29,62
-&
-28,26
-&
-29,56
-&
-29,93
-\\
+1 & 30,23 & 30,43 & 31,34 & 30,33 & 30,74 & 29,89 & 32,09 & 29,13 & 30,65 & 30,63 \\
 \hline
-3
-&
-30,55
-&
-30,05
-&
-28,22
-&
-28,05
-&
-29,12
-&
-28,67
-&
-28,63
-&
-27,20
-&
-31,64
-&
-27,85
-\\
+2 & 31,03 & 31,48 & 29,28 & 28,85 & 29,46 & 29,78 & 29,62 & 28,26 & 29,56 & 29,93 \\
 \hline
-4
-&
-26,15
-&
-25,52
-&
-27,66
-&
-25,51
-&
-26,22
-&
-27,03
-&
-26,56
-&
-24,03
-&
-24,00
-&
-26,32
-\\
+3 & 30,55 & 30,05 & 28,22 & 28,05 & 29,12 & 28,67 & 28,63 & 27,20 & 31,64 & 27,85 \\
 \hline
-5
-&
-25,31
-&
-21,44
-&
-23,29
-&
-24,33
-&
-21,95
-&
-22,94
-&
-22,95
-&
-22,00
-&
-21,51
-&
-21,78
-\\
+4 & 26,15 & 25,52 & 27,66 & 25,51 & 26,22 & 27,03 & 26,56 & 24,03 & 24,00 & 26,32 \\
 \hline
-6
-&
-20,32
-&
-22,68
-&
-19,13
-&
-20,09
-&
-20,45
-&
-17,76
-&
-19,42
-&
-19,60
-&
-18,87
-&
-21,50
-\\
+5 & 25,31 & 21,44 & 23,29 & 24,33 & 21,95 & 22,94 & 22,95 & 22,00 & 21,51 & 21,78 \\
 \hline
-7
-&
-19,75
-&
-16,91
-&
-17,97
-&
-20,41
-&
-21,60
-&
-16,99
-&
-20,67
-&
-20,47
-&
-18,78
-&
-17,59
-\\
+6 & 20,32 & 22,68 & 19,13 & 20,09 & 20,45 & 17,76 & 19,42 & 19,60 & 18,87 & 21,50 \\
 \hline
-8
-&
-21,81
-&
-20,50
-&
-21,90
-&
-21,28
-&
-21,55
-&
-22,59
-&
-23,06
-&
-19,77
-&
-21,94
-&
-20,85
-\\
+7 & 19,75 & 16,91 & 17,97 & 20,41 & 21,60 & 16,99 & 20,67 & 20,47 & 18,78 & 17,59 \\
 \hline
-9
-&
-23,99
-&
-22,14
-&
-20,83
-&
-25,21
-&
-22,62
-&
-21,40
-&
-22,32
-&
-21,22
-&
-22,65
-&
-22,25
-\\
+8 & 21,81 & 20,50 & 21,90 & 21,28 & 21,55 & 22,59 & 23,06 & 19,77 & 21,94 & 20,85 \\
 \hline
-10
-&
-26,17
-&
-26,16
-&
-26,40
-&
-24,60
-&
-24,17
-&
-25,34
-&
-23,27
-&
-25,19
-&
-23,07
-&
-24,02
-\\
+9 & 23,99 & 22,14 & 20,83 & 25,21 & 22,62 & 21,40 & 22,32 & 21,22 & 22,65 & 22,25 \\
 \hline
-11
-&
-26,93
-&
-27,16
-&
-28,07
-&
-26,53
-&
-28,93
-&
-28,40
-&
-26,51
-&
-28,24
-&
-26,36
-&
-26,87
-\\
+10 & 26,17 & 26,16 & 26,40 & 24,60 & 24,17 & 25,34 & 23,27 & 25,19 & 23,07 & 24,02 \\
 \hline
-12
-&
-30,60
-&
-29,95
-&
-29,73
-&
-32,05
-&
-30,44
-&
-29,87
-&
-30,28
-&
-28,91
-&
-29,08
-&
-29,51
-\\
+11 & 26,93 & 27,16 & 28,07 & 26,53 & 28,93 & 28,40 & 26,51 & 28,24 & 26,36 & 26,87 \\
 \hline
-\end{tabulary}
+12 & 30,60 & 29,95 & 29,73 & 32,05 & 30,44 & 29,87 & 30,28 & 28,91 & 29,08 & 29,51 \\
+\hline
+\end{tabu}
+\end{table}
 \par
-\sphinxattableend\end{savenotes}
+
 \begin{enumerate}
 \item {} 
 Escolha dois anos diferentes e localize os pontos da tabela na grade quadriculada usando o mês como abscissa (x) e a temperatura como ordenada (y). Utilize cores diferentes para a série de cada ano.
@@ -1454,13 +884,17 @@ Compare seu gráfico com o de colegas que escolheram outros anos (ou acrescente 
 
 \end{enumerate}
 
-\(a)\) e \(b)\) Percebe-se temperaturas mais altas nos meses iniciais e finais do ano e, mais baixas, no meio do ano.
-\begin{quote}
 
+
+\(a)\) e \(b)\) Percebe-se temperaturas mais altas nos meses iniciais e finais do ano e, mais baixas, no meio do ano.
+
+\begin{quote}
 \begin{figure}[H]
 \centering
 
 \noindent\includegraphics[width=300bp]{{linhas-temperatura}.png}
+\label{est1-fig-12}
+\caption{Linhas de Temperatura}
 \end{figure}
 \end{quote}
 
@@ -1468,12 +902,14 @@ Compare seu gráfico com o de colegas que escolheram outros anos (ou acrescente 
 
 Os gráficos que você acabou de construir são chamados \index{gráficos de linha}gráficos de linha. Esse tipo de gráfico é muito utilizado para variáveis quantitativas contínuas que dependem de uma outra variável quantitativa, neste caso o tempo. Quando a variável quantitativa é observada ao longo do tempo, o conjunto de dados resultante é chamado uma série temporal.
 
+\end{task}
+
 \begin{observation}{}
 
 Como você já deve ter observado, a temperatura em Porto Alegre é mais baixa nos meses correspondentes ao inverno e mais alta na primavera e no verão, o que se repete cada ano. Este fenômeno, que se observa nos ciclos do gráfico, é chamado de \index{sazonalidade}sazonalidade. A origem deste conceito é exatamente o da sazonalidade que observamos na natureza com as estações ao longo do ano.
 \end{observation}
 \begin{description}
-\item[{Sazonalidade\index{Sazonalidade|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-3:term-sazonalidade}}
+\item[{Sazonalidade\index{Sazonalidade|textbf}}] \leavevmode\phantomsection\label{est1-def-13}
 Variações periódicas que se observam em séries temporais e que devem sua presença a um fenômeno implícito que incide de forma direta nas medições da variável observada.
 
 \end{description}
@@ -1485,24 +921,27 @@ Considere novamente os dados de temperatura da atividade anterior. Se representa
 \capstart
 
 \noindent\includegraphics[width=400bp]{{linhas-sazonalidade}.png}
-\caption{Efeito da sazonalidade no gŕafico de linhas da temperatura máxima média}\label{\detokenize{PE103-3:fig-linhas-sazonalidade}}\label{\detokenize{PE103-3:id4}}\end{figure}
+\caption{Efeito da sazonalidade no gŕafico de linhas da temperatura máxima média}
+\label{est1-fig-13}
+
+\end{figure}
 
 
 \arrange{ }
-\label{\detokenize{PE103-4:cap-organizando-as-ideias2}}\label{\detokenize{PE103-4:organizando-as-ideias}}\label{\detokenize{PE103-4::doc}}
+\label{est1-org-2}
 Dois tipos de gráficos para representar variáveis quantitativas contínuas foram apresentados: o histograma e o gráfico de linha.
 \begin{description}
-\item[{Histograma\index{Histograma|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-4:term-histograma}}
-O histograma é uma representação gráfica da distribuição de frequências de uma variável quantitativa contínua agrupada em intervalos usando retângulos adjacentes. Cada retângulo no histograma corresponde a um intervalo considerado e a razão da área desse retângulo em relação à área total do histograma deve ser igual à frequência relativa de casos desse intervalo.
+\item[{Histograma\index{Histograma|textbf}}] \leavevmode\phantomsection\label{est1-def-14}
+O histograma é uma representação gráfica da distribuição de frequências de uma variável quantitativa contínua agrupada em intervalos usando retângulos adjacentes. Ca-da retângulo no histograma corresponde a um intervalo considerado e a razão da área desse retângulo em relação à área total do histograma deve ser igual à frequência relativa de casos desse intervalo.
 
 \end{description}
 \begin{description}
-\item[{Gráfico de linha\index{Gráfico de linha|textbf}}] \leavevmode\phantomsection\label{\detokenize{PE103-4:term-grafico-de-linha}}
+\item[{Gráfico de linha\index{Gráfico de linha|textbf}}] \leavevmode\phantomsection\label{est1-def-15}
 O gráfico de linha é uma representação útil quando os dados são uma série temporal, ou seja, os dados são coletados ao longo do tempo. Esse gráfico é construído marcando-se no plano Cartesiano os pontos \((x,y)\) em que abscissa \(x\) representa o tempo e, a ordenada \(y\), a variável quantitativa. Os pontos consecutivos são unidos por segmentos.
 
 \end{description}
 
-\begin{example}{Quantos intervalos de classe considerar no agrupamento dos dados?}
+\begin{example}{Intervalos de classe no agrupamento dos dados}
 
 Quando existe a necessidade de agrupar os dados em intervalos, uma questão que se coloca é: quantos intervalos usar para que se possa reconhecer estruturas de frequências nesse conjunto? Não existe uma única resposta para essa questão. No entanto, devemos evitar tanto usar um número reduzido de intervalos, quanto usar um número grande de intervalos. Por exemplo, se usarmos um único intervalo, o histograma seria representado por um único retângulo que nada informaria sobre o comportamento dos dados, conforme o gráfico a seguir.
 
@@ -1510,8 +949,11 @@ Quando existe a necessidade de agrupar os dados em intervalos, uma questão que 
 \centering
 \capstart
 
-\noindent\includegraphics[width=200bp]{{histograma_2intervalos}.png}
-\caption{Histograma dos resgistros de tempo considerando apenas dois intervalos}\label{\detokenize{PE103-4:id4}}\end{figure}
+\noindent
+\includegraphics[width=200bp]{{histograma_2intervalos}.png}
+\caption{Histograma dos resgistros de tempo considerando apenas dois intervalos}
+\label{est1-fig-14}
+\end{figure}
 
 Por outro lado, se o número de intervalos for igual ou superior ao número de observações, o histograma potencialmente teria apenas classes com uma única observação e o objetivo de visualizar estruturas dos dados em análise se perderia. A figura a seguir contruída a partir de 100 intervalos não revela a estrutura dos dados de registro de tempo, uma vez que cada classe contém no máximo duas observações.
 
@@ -1519,8 +961,27 @@ Por outro lado, se o número de intervalos for igual ou superior ao número de o
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{histograma_100intervalos}.png}
-\caption{Histograma dos resgistros de tempo considerando cem intervalos}\label{\detokenize{PE103-4:id5}}\end{figure}
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.75}] 
+
+\draw (0,0) -- (0,10) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+\draw (2,-0.2) -- (22,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};
+\draw (2,-0) -- (22,-0) ;
+
+\node [above,scale=1.7] at (12,11.5) {Histograma dos registros de tempo};
+\node [,scale=1.3] at (12,11.4) {(considerando 100 intervalos)};
+
+
+\foreach \y/\z in {0/0,5/1,10/2} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x,-0.2) -- (\x,-0.4) node [below, scale=1.2] {\z }; 
+
+
+\foreach \x/\y in {10/1,17/1,21/1,25/1,26/1,28/2,30/1,33/1,35/2,37/1,39/1,40/1,41/1,42/1,44/1,45/2,47/1,48/2,50/2,52/1,53/2,55/2,57/2,58/1,59/1,60/2,62/2,64/2,65/1,66/1,67/1,68/2,70/1,71/1,72/1,73/1,74/1,75/1,77/1,78/2,80/1,82/2,84/1,86/1,89/2,91/1,94/1,97/1,102/1,109/1} \draw [fill=primario] (\x/5,0) rectangle (\x/5+1/5,\y*5)
+;
+\end{tikzpicture}
+
+\caption{Histograma dos resgistros de tempo considerando cem intervalos}
+\label{est1-fig-15}
+\end{figure}
 
 Embora não exista uma resposta única sobre quantos intervalos considerar, alguns autores sugerem usar o número inteiro mais próximo da raiz quadrada do número de observações, outros sugerem usar de 5 a 15 intervalos de amplitudes iguais. No GeoGebra, por exemplo, a função que constrói histogramas permite trabalhar com 3 a 20 intervalos. A figura a seguir apresenta um histograma construído com \(\sqrt{64}=8\) intervalos.
 
@@ -1528,64 +989,55 @@ Embora não exista uma resposta única sobre quantos intervalos considerar, algu
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{histograma_8intervalos}.png}
-\caption{Histograma dos resgistros de tempo considerando oito intervalos}\label{\detokenize{PE103-4:id6}}\end{figure}
+\begin{tikzpicture}[scale=0.4, every node/.style={scale=0.75}]
+
+\draw (0,0) -- (0,14) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+\draw (2,-0.2) -- (22,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};
+\draw (2,-0) -- (22,-0) ;
+
+\node [above,scale=1.7] at (12,15.5) {Histograma dos registros de tempo};
+\node [,scale=1.3] at (12,15.4) {(considerando 8 intervalos)};
+
+
+\foreach \y/\z in {0/0,2/2,4/4,6/6,8/8,10/10,12/12,14/14} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x,-0.2) -- (\x,-0.4) node [below, scale=1.2] {\z }; 
+
+
+\foreach \x/\y in {0/3,2.5/5/,5/11,7.5/13,10/14,12.5/10,15/5,17.5/3} \draw [fill=primario] (\x+2,0) rectangle (\x+4.5,\y)
+;
+\end{tikzpicture}
+
+\caption{Histograma dos resgistros de tempo considerando oito intervalos}
+\label{est1-fig-16}
+\end{figure}
 \end{example}
 
 Até aqui, consideramos intervalos de mesma amplitude e usamos, como a altura dos retângulos, a frequência absoluta ou relativa das observações no intervalo. Suponha a seguinte distribuição de frequências de um conjunto de 50 observações.
 
-\begin{example}{Construção de um histograma cujos intervalos de classe têm comprimentos desiguais}
+\begin{example}{Histograma com intervalos de classe desiguais}
 
-\begin{savenotes}\sphinxattablestart
+
+\begin{table}[H]
 \centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\begin{tabu} to \linewidth{|c|c|c|}
 \hline
-\sphinxstylethead{\sphinxstyletheadfamily 
-Intervalo de classe
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-frequência absoluta
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-frequência relativa
-\unskip}\relax \\
+\thead
+Intervalo de classe & frequência absoluta & frequência relativa \\
 \hline
-{[} 1 ; 3 {[}
-&
-4
-&
-0,08
-\\
+{[} 1 ; 3 {[} & 4 & 0,08 \\
 \hline
-{[} 3 ; 5 {[}
-&
-12
-&
-0,24
-\\
+{[} 3 ; 5 {[} & 12 & 0,24 \\
 \hline
-{[} 5 ; 7 {[}
-&
-20
-&
-0,40
-\\
+{[} 5 ; 7 {[} & 20 & 0,40 \\
 \hline
-{[} 7 ; 9 {[}
-&
-8
-&
-0,16
-\\
+{[} 7 ; 9 {[} & 8 & 0,16 \\
 \hline
-{[} 9; 11 {[}
-&
-6
-&
-0,12
-\\
+{[} 9; 11 {[} & 6 & 0,12 \\
 \hline
-\end{tabulary}
+\end{tabu}
+\end{table}
 \par
-\sphinxattableend\end{savenotes}
+
 
 Observe que nessa tabela todos os intervalos têm amplitude 2. Veja o histograma construído para esses dados a seguir.
 
@@ -1593,8 +1045,12 @@ Observe que nessa tabela todos os intervalos têm amplitude 2. Veja o histograma
 \centering
 \capstart
 
-\noindent\includegraphics[width=400bp]{{exemplo_histograma_areas_1}.png}
-\caption{Histograma na escala da frequência absoluta}\label{\detokenize{PE103-4:id7}}\end{figure}
+\noindent
+\includegraphics[width=400bp]{{exemplo_histograma_areas_1}.png}
+
+\caption{Histograma na escala da frequência absoluta}
+\label{est1-fig-17}
+\end{figure}
 
 Verifique que a razão da área de cada retângulo em relação à área total é igual à frequência relativa do intervalo correspondente.
 
@@ -1603,68 +1059,29 @@ Porém, quando os intervalos apresentam amplitudes desiguais, usar a frequência
 Suponha agora a seguinte distribuição de frequências de um conjunto de 50 observações.
 
 
-\begin{savenotes}\sphinxattablestart
-\centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|}
+
+\begin{table}[H]
+\centering\setlength\tabcolsep{2.5pt}
+\begin{tabu} to \linewidth{|c|c|c|c|}
 \hline
-\sphinxstylethead{\sphinxstyletheadfamily 
-Intervalo de classe
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-frequência absoluta
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-frequência relativa
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-amplitude do intervalo
-\unskip}\relax \\
+\thead
+\parbox[c][1cm]{3.45cm}{\centering Intervalo de classe} & \parbox[c]{3.45cm}{\centering frequência absoluta} & \parbox[c]{3.45cm}{\centering frequência relativa} & \parbox[c]{3.45cm}{\centering amplitude do intervalo}\\
 \hline
-{[} 1 ; 3 {[}
-&
-4
-&
-0,08
-&
-2
-\\
+{[} 1 ; 3 {[} & 4 & 0,08 & 2 \\
 \hline
-{[} 3 ; 5 {[}
-&
-8
-&
-0,16
-&
-2
-\\
+{[} 3 ; 5 {[} & 8 & 0,16 & 2 \\
 \hline
-{[} 5 ; 8 {[}
-&
-18
-&
-0,36
-&
-3
-\\
+{[} 5 ; 8 {[} & 18 & 0,36 & 3 \\
 \hline
-{[} 8 ; 12 {[}
-&
-12
-&
-0,24
-&
-4
-\\
+{[} 8 ; 12 {[} & 12 & 0,24 & 4 \\
 \hline
-{[}12; 16 {[}
-&
-8
-&
-0,16
-&
-4
-\\
+{[}12; 16 {[} & 8 & 0,16 & 4 \\ 
 \hline
-\end{tabulary}
+\end{tabu}
+\end{table}
+
 \par
-\sphinxattableend\end{savenotes}
+
 
 Nesse caso devemos usar a densidade de frequência absoluta ou relativa obtida pela razão entre frequência e amplitude do intervalo.
 
@@ -1678,74 +1095,38 @@ Veja a seguir uma construção equivocada do histograma desses dados, usando a f
 \centering
 \capstart
 
-\noindent\includegraphics[width=400bp]{{histograma_incorreto_2}.png}
-\caption{Histograma incorreto}\label{\detokenize{PE103-4:fig-coloque-aqui-o-nome}}\label{\detokenize{PE103-4:id8}}\end{figure}
+\noindent
+\includegraphics[width=400bp]{{histograma_incorreto_2}.png}
+
+\caption{Histograma incorreto}\label{\detokenize{PE103-4:fig-coloque-aqui-o-nome}}
+\label{est1-fig-18}
+\end{figure}
 
 Observe que a razão da área do primeiro retângulo em relação à área total é dada por \(\displaystyle{\frac{8}{158}}\approx  0,051\), porém a frequência relativa do primeiro intervalo é 0,08! A razão da área do último retângulo é \(\displaystyle{\frac{4\cdot 8}{158}}\approx 0,20\), porém a frequência relativa desse intervalo é 0,16! Ou seja, esse histograma não representa corretamente a distribuição de frequências desses dados. Na tabela a seguir, foram calculadas as densidades de frequência absoluta.
 
 
-\begin{savenotes}\sphinxattablestart
-\centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|}
+
+\begin{table}[H]
+\centering\setlength\tabcolsep{2.5pt}
+\begin{tabu} to \linewidth {|c|c|c|c|}
 \hline
-\sphinxstylethead{\sphinxstyletheadfamily 
-Intervalo de classe
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-frequência absoluta
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-amplitude do intervalo
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-dens. freq. absoluta
-\unskip}\relax \\
+\thead
+\parbox[c][1cm]{3.5cm}{\centering Intervalo de classe} & \parbox[c][1cm]{3.5cm}{\centering frequência absoluta} & \parbox[c][1cm]{3.5cm}{\centering amplitude do intervalo} & \parbox[c][1cm]{3.5cm}{\centering dens. freq. absoluta} \\
 \hline
-{[} 1 ; 3 {[}
-&
-4
-&
-2
-&
-2
-\\
+{[} 1 ; 3 {[} & 4 & 2 & 2 \\
 \hline
-{[} 3 ; 5 {[}
-&
-8
-&
-2
-&
-4
-\\
+{[} 3 ; 5 {[} & 8 & 2 & 4 \\
 \hline
-{[} 5 ; 8 {[}
-&
-18
-&
-3
-&
-6
-\\
+{[} 5 ; 8 {[} & 18 & 3 & 6 \\ 
 \hline
-{[} 8 ; 12 {[}
-&
-12
-&
-4
-&
-3
-\\
+{[} 8 ; 12 {[} & 12 & 4 & 3 \\
 \hline
-{[}12; 16 {[}
-&
-8
-&
-4
-&
-2
-\\
+{[}12; 16 {[} & 8 & 4 & 2 \\ 
 \hline
-\end{tabulary}
+\end{tabu}
+\end{table}
 \par
-\sphinxattableend\end{savenotes}
+
 
 Veja a seguir a construção do histograma na escala da densidade de frequência absoluta e observe que agora ele representa corretamente a distribuição de frequências.
 \phantomsection\label{\detokenize{PE103-4:id1}}\begin{quote}
@@ -1754,11 +1135,14 @@ Veja a seguir a construção do histograma na escala da densidade de frequência
 \centering
 \capstart
 
-\noindent\includegraphics[width=400bp]{{histograma_correto}.png}
-\caption{Histograma correto}\label{\detokenize{PE103-4:id9}}\end{figure}
+\noindent
+\includegraphics[width=400bp]{{histograma_correto}.png}
+
+\caption{Histograma correto}
+\label{est1-fig-19}\end{figure}
 \end{quote}
 
-Comparando as figuras 6.9 e 6.10, podemos perceber que a primeira distorce a estrutura da distribuição de frequências, atribuindo pesos maiores aos intervalos de maior amplitude e, menores, aos intervalos de menor amplitude.
+Comparando as \hyperref[est1-fig-18]{figuras \ref{est1-fig-18}} e \ref{est1-fig-19}, podemos perceber que a primeira distorce a estrutura da distribuição de frequências, atribuindo pesos maiores aos intervalos de maior amplitude e, menores, aos intervalos de menor amplitude.
 
 Em que situações há a necessidade de considerarmos intervalos de amplitudes desiguais?
 
@@ -1766,7 +1150,7 @@ Normalmente, na primeira construção dos intervalos consideramos sempre interva
 
 \end{example}
 
-\begin{observation}{note}{Gráfico de Barras versus Histograma}
+\begin{observation}{Gráfico de Barras versus Histograma}
 
 O gráfico de barras não é um histograma, apesar de suas representações serem parecidas.  Os gráficos de barras são úteis para descrever a distribuição de frequências de uma variável qualitativa. Nesse gráfico só há um eixo com escala que corresponde aos valores das frequências das categorias (respostas) da variável. As barras podem ser tanto verticais como horizontais e são apresentadas de forma igualmente espaçada. Cada barra representa uma resposta da variável qualitativa e a altura da barra corresponde à frequência daquela resposta. Observe que o posicionamento das barras é livre, conforme as figuras a seguir.
 
@@ -1774,8 +1158,13 @@ O gráfico de barras não é um histograma, apesar de suas representações sere
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{g_barras_tipo_s_1}.png}
-\caption{Gráfico de barras: duas formas de apresentação}\label{\detokenize{PE103-4:id2}}\label{\detokenize{PE103-4:id10}}\end{figure}
+\noindent
+
+\includegraphics[width=300bp]{{g_barras_tipo_s_1}.png}
+
+\caption{Gráfico de barras: duas formas de apresentação}
+\label{est1-fig-20}
+\end{figure}
 
 O mais comum é dispor as respostas em ordem decrescente de frequência. Esse tipo de gráfico também pode ser usado para representar uma variável quantitativa discreta, sendo que nesse caso, as posições das barras correspondem aos valores assumidos pela variável. Pela natureza discreta da variável, as barras não são adjacentes e, pela natureza quantitativa da variável, o posicionamento das barras não é livre.
 
@@ -1785,77 +1174,57 @@ Os histogramas são úteis para representar a distribuição de frequências de 
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{histograma_5intervalos}.png}
-\caption{Histograma dos registros, considerando 5 intervalos}\label{\detokenize{PE103-4:id3}}\label{\detokenize{PE103-4:id11}}\end{figure}
+\noindent
 
-Não podemos variar livremente a posição dos intervalos nesse gráfico (figura 5.8). Ele revela uma estrutura importante desses dados, a saber, os registros de tempo ocorrem com maior frequência nos intervalos intermediários (de 4 a 6) e com frequência bem menor nos intervalos extremos (de 3 a 4 e de 7 a 8).
+\includegraphics[width=300bp]{{histograma_5intervalos}.png}
+
+\caption{Histograma dos registros, considerando 5 intervalos}
+\label{est1-fig-21}
+\end{figure}
+
+Não podemos variar livremente a posição dos intervalos nesse gráfico (\hyperref[est1-fig-21]{figura \ref{est1-fig-21}}). Ele revela uma estrutura importante desses dados, a saber, os registros de tempo ocorrem com maior frequência nos intervalos intermediários (de 4 a 6) e com frequência bem menor nos intervalos extremos (de 3 a 4 e de 7 a 8).
 \end{observation}
 
 
 \practice{ }
-\label{\detokenize{PE103-5::doc}}\label{\detokenize{PE103-5:praticando}}\label{\detokenize{PE103-5:cap-praticando2}}\phantomsection\label{\detokenize{PE103-5:ativ-variacoes-do-histograma}}
+\label{est1-prac-2}
+
+\phantomsection\label{est1-ativ-11}
 \begin{task}{ Construção de histogramas}
 
 Refaça o histograma dos dados de registros de tempo variando o número de intervalos de classe. Compare a forma dos histogramas obtidos com a forma do histograma construído na atividade 4.1.
 \end{task}
 
 
-\phantomsection\label{\detokenize{PE103-5:ativ-titulo-da-histogramas-intervalos-desiguais}}
+\phantomsection\label{est1-ativ-12}
 \begin{task}{histogramas com intervalos de amplitudes desiguais}
 
 Suponha a seguinte distribuição de frequências de salários medidos em salários mínimos para 200 funcionários de uma empresa.
 
 
-\begin{savenotes}\sphinxattablestart
+
+
+\begin{table}[H]
 \centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\begin{tabu} to \linewidth {|c|c|c|}
 \hline
-\sphinxstylethead{\sphinxstyletheadfamily 
-Intervalo de classe
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-frequência absoluta
-\unskip}\relax &\sphinxstylethead{\sphinxstyletheadfamily 
-frequência relativa
-\unskip}\relax \\
+\thead
+Intervalo de classe & frequência absoluta & frequência relativa \\
 \hline
-{[} 2,0 ; 3,0 {[}
-&
-12
-&
-0,06
-\\
+{[} 2,0 ; 3,0 {[} & 12 & 0,06 \\ 
 \hline
-{[} 3,0 ; 5,0 {[}
-&
-40
-&
-0,20
-\\
+{[} 3,0 ; 5,0 {[} & 40 & 0,20 \\
 \hline
-{[} 5,0 ; 7,0 {[}
-&
-80
-&
-0,40
-\\
+{[} 5,0 ; 7,0 {[} & 80 & 0,40 \\
 \hline
-{[} 7,0 ; 10,0 {[}
-&
-48
-&
-0,24
-\\
+{[} 7,0 ; 10,0 {[} & 48 & 0,24 \\
 \hline
-{[} 10,0 ; 15,0 {[}
-&
-20
-&
-0,10
-\\
+{[} 10,0 ; 15,0 {[} & 20 & 0,10 \\
 \hline
-\end{tabulary}
+\end{tabu}
+\end{table}
 \par
-\sphinxattableend\end{savenotes}
+
 \begin{enumerate}
 \item {} 
 Determine as amplitudes de cada intervalo considerado na tabela.
@@ -1868,26 +1237,9 @@ Construa um histograma adequado para esses dados.
 
 
 
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\includegraphics[width=300bp]{{histogramaerrado}.png}
-\caption{Histograma errado}\label{\detokenize{PE103-5:id5}}\label{\detokenize{PE103-5:id11}}\end{figure}
-
-\begin{figure}[H]
-\centering
-\capstart
-
-\noindent\includegraphics[width=300bp]{{histogramacorreto_1}.png}
-\caption{Histograma correto}\label{\detokenize{PE103-5:id6}}\label{\detokenize{PE103-5:id12}}\end{figure}
-
-
 \know{A seleção de amostras}
-\label{\detokenize{PE103-A::doc}}\label{\detokenize{PE103-A:para-saber-mais}}
+\label{est1-saber-1}
 
-
-\label{\detokenize{PE103-A:a-questao-da-selecao-de-amostras}}\label{\detokenize{PE103-A:sec-coloque-aqui-o-nome}}
 Quando queremos estender nossas observações provenientes de uma amostra para a população é importante ter cuidado na sua seleção, pois ela deve ser representativa da população. Embora não seja nosso objetivo aqui descrever métodos variados de seleção de amostras, cabe destacar que existem dois tipos principais de seleção: os probabilísticos e os não probabilísticos.
 
 O primeiro tipo é fundamental para que seja possível avaliar a incerteza das conclusões devido à amostragem tais como margem erro e nível de confiança.  Nesse tipo de seleção de amostra, conhecemos a probabilidade de seleção dos elementos da população na amostra. Entre os métodos probabilísticos mais comuns destacam-se
@@ -1929,7 +1281,7 @@ A direção de uma escola de Ensino Médio deseja realizar uma pesquisa para con
 
 
 \section{Projeto Aplicado}
-\label{\detokenize{PE103-A:projeto}}\label{\detokenize{PE103-A:id1}}
+\label{est1-projeto-1}
 
 Faça uma investigação sobre algum tema de interesse. Essa atividade deve ser realizada em grupos.  Após a aprovação do tema pelo professor, as seguintes etapas deverão ser realizadas:
 \begin{enumerate}
@@ -1964,7 +1316,8 @@ Elaborar um relatório de pesquisa, incluindo todas as etapas do projeto, result
 
 
 \section{Material suplementar}
-\label{\detokenize{PE103-A:material-suplementar}}\label{\detokenize{PE103-A:cap-materialsuplementar-referencias}}
+\label{est1-suplementar-1}
+
 Sugestão de vídeos sobre o que é a Estatística, para que serve a Estatística e exemplos de aplicação da Estatística.
 \begin{itemize}
 \item {} 
@@ -1981,43 +1334,45 @@ Ação, Reação, Correlação - \url{http://m3.ime.unicamp.br/recursos/1043}
 Sugestão de páginas para trabalhar com dados reais.
 \begin{itemize}
 \item {} 
-Página do Programa de Desenvolvimento das Nações Unidas \textendash{} hdr.undp.org/en/data
+Página do Programa de Desenvolvimento das Nações Unidas \textendash{} \url{hdr.undp.org/en/data}
 
 \item {} 
-Organização Mundial de Saúde \textendash{} www.who.int/
+Organização Mundial de Saúde \textendash{} \url{www.who.int/}
 
 \item {} 
 Instituto Brasileiro de Geografia e Estatística (IBGE) \textendash{} \url{https://www.ibge.gov.br/}
 \begin{itemize}
 \item {} 
-Estimativas de população dos municípios brasileiros - \url{https://www.ibge.gov.br/estatisticas-novoportal/sociais/populacao/}
+Estimativas de população dos municípios brasileiros \textendash{} \url{https://www.ibge.gov.br/estatisticas-novoportal/sociais/populacao/}
 
 \item {} 
-Atividades para o Ensino Médio - \url{https://vamoscontar.ibge.gov.br/atividades/ensino-medio.html}
+Atividades para o Ensino Médio \textendash{} \url{https://vamoscontar.ibge.gov.br/atividades/ensino-medio.html}
 
 \end{itemize}
 
 \item {} 
-Instituto Nacional de Estudos e Pesquisas educacionai Anísio Teixeira (INEP)-  \url{http://portal.inep.gov.br/inep-data}
+Instituto Nacional de Estudos e Pesquisas educacionai Anísio Teixeira (INEP) \textendash{} \url{http://portal.inep.gov.br/inep-data}
+
 \begin{itemize}
+
 \item {} 
-Censo Escolar INEP (último censo 2014) - \url{http://inepdata.inep.gov.br/analytics/saw.dll?Portal\&PortalPath=\%2Fshared\%2FGeral\%2F\_portal\%2FDissemina\%C3\%A7\%C3\%A3o\%20dos\%20Censos}
+Censo Escolar INEP (último censo 2014) \textendash{} \url{http://inepdata.inep.gov.br/analytics/saw.dll?Portal\&PortalPath=\%2Fshared\%2FGeral\%2F\_portal\%2FDissemina\%C3\%A7\%C3\%A3o\%20dos\%20Censos}
 
 \end{itemize}
 
 \item {} 
-Frota de veículos por município do RJ: \url{http://www.detran.rj.gov.br/\_estatisticas.veiculos/index.asp}
+Frota de veículos por município do RJ \textendash{} \url{http://www.detran.rj.gov.br/\_estatisticas.veiculos/index.asp}
 
 \item {} 
 Instituto de Pesquisa Econômica Aplicada (IPEA) \textendash{} \url{http://www.ipea.gov.br/portal/}
 \begin{itemize}
 \item {} 
-IPEA Data - \url{http://www.ipeadata.gov.br/Default.aspx}
+IPEA Data \textendash{} \url{http://www.ipeadata.gov.br/Default.aspx}
 
 \end{itemize}
 
 \item {} 
-Ministério da Saúde \textendash{} Datasus - \url{http://datasus.saude.gov.br/transferencia-download-de-arquivos/arquivos-de-dados}
+Ministério da Saúde - Datasus \textendash{} \url{http://datasus.saude.gov.br/transferencia-download-de-arquivos/arquivos-de-dados}
 
 \end{itemize}
 
@@ -2142,44 +1497,28 @@ Faça uma pesquisa para obter informações sobre as principais causas de óbito
 \item (UFPR 2017-adaptado)  O Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil (CERT.br) é responsável por tratar incidentes de segurança em computadores e redes conectadas à Internet no Brasil. A tabela abaixo apresenta o número de mensagens não solicitadas (spams) notificadas ao CERT.br no ano de 2015, por trimestre.
 
 
-\begin{savenotes}\sphinxattablestart
-\centering
-\begin{tabulary}{\linewidth}[t]{|T|T|}
-\hline
 
-Trimestre
-&
-Notificações
-\\
+\begin{table}[H]
+\centering
+\begin{tabu} to \linewidth{|X[c]|X[c]|}
 \hline
-4T
-&
-135.335
-\\
+\thead
+Trimestre & Notificações \\
 \hline
-3T
-&
-171.523
-\\
+4T & 135.335 \\
 \hline
-2T
-&
-154.866
-\\
+3T & 171.523 \\
 \hline
-1T
-&
-249.743
-\\
+2T & 154.866 \\
 \hline
-total
-&
-711.467
-\\
+1T & 249.743 \\
 \hline
-\end{tabulary}
+total & 711.467 \\
+\hline
+\end{tabu}
+\end{table}
 \par
-\sphinxattableend\end{savenotes}
+
 
 Construa um gráfico para representar a distribuição do número de notificações por trimestre.
 
