@@ -40,7 +40,7 @@
 % for \text macro and \iffirstchoice@ conditional even if amsmath not loaded
 \RequirePackage{amstext}
 \RequirePackage{textcomp}% "warn" option issued from template
-\RequirePackage{titlesec}
+\RequirePackage[nobottomtitles*]{titlesec}
 \@ifpackagelater{titlesec}{2016/03/15}%
  {\@ifpackagelater{titlesec}{2016/03/21}%
   {}%
@@ -195,7 +195,7 @@
       \unexpanded\expandafter{\@vwid@setup}}%
 }%
 % Homemade package to handle merged cells
-\RequirePackage{sphinxmulticell}
+%\RequirePackage{sphinxmulticell}
 \RequirePackage{makeidx}
 % For framing code-blocks and warning type notices, and shadowing topics
 \RequirePackage{framed}
@@ -213,7 +213,7 @@
 \sphinxresetverbatimhllines
 % For hyperlinked footnotes in tables; also for gathering footnotes from
 % topic and warning blocks. Also to allow code-blocks in footnotes.
-\RequirePackage{footnotehyper-sphinx}
+%\RequirePackage{footnotehyper-sphinx}
 % For the H specifier. Do not \restylefloat{figure}, it breaks Sphinx code
 % for allowing figures in tables.
 \RequirePackage{float}
@@ -268,7 +268,7 @@
  citecolor=InnerLinkColor}{hyperref}
 
 % stylesheet for highlighting with pygments
-\RequirePackage{sphinxhighlight}
+%\RequirePackage{sphinxhighlight}
 % fix baseline increase from Pygments latex formatter in case of error tokens
 % and keep \fboxsep's scope local via added braces
 \def\PYG@tok@err{%

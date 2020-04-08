@@ -31,7 +31,7 @@
 \usetikzlibrary{shapes, decorations}
 \usetikzlibrary{intersections,through,backgrounds,fit}
 \RequirePackage{tikzpagenodes}
-\RequirePackage{enumitem}
+\RequirePackage[inline]{enumitem}
 
 
 
@@ -90,7 +90,9 @@
 
 \newcommand*{\enumbox}[1]{%
     \tikz [baseline=(numbereditem.base)]{%
-        \node[shape=enumbox, font=\bfseries\fontsize{11pt}{0}\selectfont, draw=black, fill=cor1, minimum width=6.00mm, minimum height=6.00mm] (numbereditem) {#1};
+        \node[shape=enumbox,text=white, font=\bfseries\fontsize{11pt}{0}\selectfont, draw=black, 
+        fill=cor1, 
+        minimum width=6.00mm, minimum height=6.00mm] (numbereditem) {#1};
     }
 }
 

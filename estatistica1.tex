@@ -1,8 +1,6 @@
-\plainfancybreak
-
-\def\chapterillustration{./abertura-estatistica1}%Photo by Hoach Le Dinh on Unsplash, https://unsplash.com/photos/c8TWWQ5ZnUw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText 
-\def\chapterwhat{Especificidade do pensamento estatístico a partir de problemas. Conceitos: população e amostra, parâmetro e estimador. Variáveis estatísticas e suas classificações. Organização dos dados em tabelas de frequências. Representações gráficas adequadas para os diferentes tipos de variáveis. Noções básicas de amostragem.}
-\def\chapterbecause{A Estatística está presente no mundo contemporâneo e chega aos cidadãos em todos os
+\renewcommand\chapterillustration{abertura-estatistica1}%Photo by Hoach Le Dinh on Unsplash, https://unsplash.com/photos/c8TWWQ5ZnUw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText 
+\renewcommand\chapterwhat{Especificidade do pensamento estatístico a partir de problemas. Conceitos: população e amostra, parâmetro e estimador. Variáveis estatísticas e suas classificações. Organização dos dados em tabelas de frequências. Representações gráficas adequadas para os diferentes tipos de variáveis. Noções básicas de amostragem.}
+\renewcommand\chapterbecause{A Estatística está presente no mundo contemporâneo e chega aos cidadãos em todos os
 meios de comunicação. Diariamente somos confrontados com informações estatísticas
 sobre temas como Economia, Educação, Esportes, Saúde, Meio-Ambiente, entre outros.
 Tais informações orientam decisões em nossas vidas pessoais e permitem-nos exercer
@@ -11,6 +9,78 @@ fundamental na formação do cidadão para que este possa, de forma competente, 
 e criticar argumentos baseados em dados.} 
 \chapter{A Natureza da Estatística}
 \label{est1-chap}
+
+\mbox{}\thispagestyle{empty}\clearpage
+
+\thispagestyle{empty}
+
+\begin{center}
+Projeto: LIVRO ABERTO DE MATEMÁTICA
+
+\noindent \begin{tabular}{lcccr}
+\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
+\end{tabular}
+\end{center}
+
+\vspace*{.3cm}
+
+Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
+
+Versão digital do capítulo:
+
+\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/PE511.html}
+
+% \begin{center}
+%   \includegraphics[width=2cm]{canvas}
+% \end{center}
+
+\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+Título: & A Natureza da Estatística\\
+\\
+Ano/ Versão: & 2020 / versão 1.0 de 24 de março de 2020\\
+\\
+Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+\\
+Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+Produção:& Livro Aberto\\
+\\
+Coordenação: & Fabio Simas, \\
+             & Augusto Teixeira (livroaberto@impa.br)\\
+\\
+  Autores: & Flávia Landim (coordenadora da equipe - UFRJ),\\
+        & José Ezequiel Soto Sanches,\\
+        & Nei Rocha (UFRJ),\\
+             & Vanessa Matos (SEduc Angras dos Reis e Mesquita).\\
+             & Letícia Rangel (Colégio de Aplicação da UFRJ)\\
+\\
+Revisão: &  Cydara Ripoll  \\
+		 &  Letícia Rangel
+\\
+Design: & Andreza Moreira (Tangentes Design) \\
+\\
+  Ilustrações: & --- \\ 
+\\
+Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
+\\
+  Capa: & Foto de Chuttersnap no Unsplash \\
+        & https://unsplash.com/photos/8I423fRMwjM \\
+
+\end{tabular}
+\vspace{.5cm}
+
+
+\begin{minipage}[l]{5cm}
+  \includegraphics[width=3.5cm]{cc-by-sa}
+\end{minipage}\hfill
+\begin{minipage}[r]{5cm}
+{\Large  Patrocínio:}
+  
+  \includegraphics[width=3.5cm]{itau}
+\end{minipage}
+
+\mbox{}\thispagestyle{empty}\clearpage
+
+\thispagestyle{empty}
 
 
 \explore{a natureza da Estatística}
@@ -49,10 +119,13 @@ Uma indústria precisa comprar parafusos de diâmetro 15 mm cuja variação acei
    \node[left] at (15.6,16) {Fornecedor A};
    \foreach \x/\y in {14.42/1,14.44/8,14.46/9,14.48/10,14.50/13,14.52/7,14.54/8,14.56/3,14.58/1}{
       \foreach \i in {1,...,\y}{
-         \filldraw[color=primario] (\x,\i) circle (1.5pt);
+         \filldraw[color=\currentcolor!80] (\x,\i) circle (1.5pt);
       }}
 \end{tikzpicture}
-   
+\end{figure} 
+\begin{figure}[H]
+\centering
+
 \begin{tikzpicture}
 \begin{scope}[x = 200, y=5, scale=1.2]
 
@@ -67,7 +140,7 @@ Uma indústria precisa comprar parafusos de diâmetro 15 mm cuja variação acei
    \node[left] at (15.6,16) {Fornecedor B};
    \foreach \x/\y in {14.6/1,14.82/1,14.84/1,14.86/1,14.88/3,14.9/3,14.92/3,14.94/3,14.96/2,14.98/6,15/10,15.02/4,15.04/5,15.06/3,15.08/2,15.1/6,15.12/2,15.18/3,15.24/1}{
       \foreach \i in {1,...,\y}{
-         \filldraw[color=primario] (\x,\i) circle (1.5pt);
+         \filldraw[color=\currentcolor!80] (\x,\i) circle (1.5pt);
       }
    }
    \end{scope}
@@ -90,12 +163,14 @@ Uma indústria precisa comprar parafusos de diâmetro 15 mm cuja variação acei
    \node[left] at (15.6,16) {Fornecedor C};
    \foreach \x/\y in {14.48/1,14.52/1,14.54/1,14.62/2,14.66 /2,14.7/2,14.72/1,14.78/2,14.8/2,14.84/2,14.88/2,14.9 /2,14.92/4,14.98/3,15/5,15.02/4,15.04/1,15.08/3,15.12 /3,15.16/4,15.18/1,15.2/2,15.22/1,15.3/1,15.32/1,15.38 /1,15.44/2,15.46/1,15.48/2,15.6/1}{
       \foreach \i in {1,...,\y}{
-         \filldraw[color=primario] (\x,\i) circle (1.5pt);
+         \filldraw[color=\currentcolor!80] (\x,\i) circle (1.5pt);
       }
    }
    \end{scope}
 \end{tikzpicture}
-   
+   \end{figure} 
+   \begin{figure}[H]
+   \centering
 \begin{tikzpicture}
 \begin{scope}[x = 200, y=5, scale=1.2]
 
@@ -110,7 +185,7 @@ Uma indústria precisa comprar parafusos de diâmetro 15 mm cuja variação acei
    \node[left] at (15.6,16) {Fornecedor D};
    \foreach \x/\y in {14.46/1,14.48/2,14.54/1,14.58/1,14.62/3,14.64/5,14.68/6,14.7/4,14.72/2,14.74/9,14.76/1,14.78/3,14.8/2,14.82/2,14.88/3,14.9/2,14.92/2,14.94/4,14.96/2,15/1,15.02/1,15.08/1,15.12/1}{
       \foreach \i in {1,...,\y}{
-         \filldraw[color=primario] (\x,\i) circle (1.5pt);
+         \filldraw[color=\currentcolor!80] (\x,\i) circle (1.5pt);
       }
    }
 \end{scope}
@@ -451,26 +526,26 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 
 \begin{scope}[x=15, y=10]
 
-   \draw[rounded corners = 5pt, fill=primario] (-9,0) rectangle (-5,2);
-   \node[color=white] at (-7,1) {nominal};
-   \draw[rounded corners = 5pt, fill=primario] (-4.5,0) rectangle (-0.5,2);
-   \node[color=white] at (-2.5,1) {ordinal};
-   \draw[rounded corners = 5pt, fill=primario] (0.5,0) rectangle (4.5,2);
-   \node[color=white] at (2.5,1) {discreta};
-   \draw[rounded corners = 5pt, fill=primario] (5,0) rectangle (9,2);
-   \node[color=white] at (7,1) {contí­nua};
+   \draw[rounded corners = 5pt, fill=\currentcolor!80] (-9,0) rectangle (-5,2);
+   \node[font=\bfseries, color=white] at (-7,1) {nominal};
+   \draw[rounded corners = 5pt, fill=\currentcolor!80] (-4.5,0) rectangle (-0.5,2);
+   \node[font=\bfseries, color=white] at (-2.5,1) {ordinal};
+   \draw[rounded corners = 5pt, fill=\currentcolor!80] (0.5,0) rectangle (4.5,2);
+   \node[font=\bfseries, color=white] at (2.5,1) {discreta};
+   \draw[rounded corners = 5pt, fill=\currentcolor!80] (5,0) rectangle (9,2);
+   \node[font=\bfseries, color=white] at (7,1) {contí­nua};
    \draw[vecArrow] (-4.75,3.25) -- (-6,1.5);
    \draw[vecArrow] (-4.75,3.25) -- (-3.5,1.5);
    \draw[vecArrow] (4.75,3.25) -- (6,1.5);
    \draw[vecArrow] (4.75,3.25) -- (3.5,1.5);
-   \draw[rounded corners = 5pt, fill=primario] (-9,3) rectangle (-0.5,5);
-   \node[color=white] at (-4.75,4) {qualitativa};
-   \draw[rounded corners = 5pt, fill=primario] (0.5,3) rectangle (9,5);
-   \node[color=white] at (4.75,4) {quantitativa};
+   \draw[rounded corners = 5pt, fill=\currentcolor!80] (-9,3) rectangle (-0.5,5);
+   \node[font=\bfseries, color=white] at (-4.75,4) {qualitativa};
+   \draw[rounded corners = 5pt, fill=\currentcolor!80] (0.5,3) rectangle (9,5);
+   \node[font=\bfseries, color=white] at (4.75,4) {quantitativa};
    \draw[vecArrow] (0,6.25) -- (-1.5,4.5);
    \draw[vecArrow] (0,6.25) -- (1.5,4.5);
-   \draw[rounded corners = 5pt, fill=primario] (-9,6) rectangle (9,8);
-   \node[color=white] at (0,7) {Variável};
+   \draw[rounded corners = 5pt, fill=\currentcolor!80] (-9,6) rectangle (9,8);
+   \node[font=\bfseries, color=white] at (0,7) {Variável};
 
 
 \end{scope}
@@ -582,6 +657,7 @@ No gráficos de retângulos essa mesma ideia é usada: o retângulo maior é sub
 Quando estamos trabalhando com variáveis qualitativas usamos a escala da frequência (absoluta, relativa, porcentagem)  na construção de gráficos para representar a distribuição de frequências das respostas dadas à variável sob investigação. As representações gráficas mais comuns são gráficos de barras e gráficos de setores. Para comparações da mesma variável em grupos diferentes é comum usar o gráfico de barras múltiplas com frequências relativas ou porcentagens.
 \end{observation}
 
+
 \practice{ }
 \label{est1-prac-1}
 
@@ -668,7 +744,7 @@ Construa um gráfico diferente para representar a mesma informação, marcando n
 \draw [help lines, lightgray] (0,\ye) -- (28,\ye);
 }
 \foreach \x/ \y/\z in {1/16.79/AGO,2/16.11/SET,3/14.85/OUT,4 /11.57/NOV,5/9.36/DEZ,6/6.47/JAN,7/4.34/FEV,8/3/MAR,9 /2.54/ABR,10/1.08/MAI,11/-0.56/JUN,12/-3.07/JUL,13/-5.19 /AGO}{
-   \draw [fill=primario] (2*\x-0.5,0) rectangle  (2*\x+0.5,\y);
+   \draw [fill=\currentcolor!80] (2*\x-0.5,0) rectangle  (2*\x+0.5,\y);
    \node at (2*\x,-8) {\z};
 }
 \node at (2,-10) {2016};
@@ -682,7 +758,7 @@ Construa um gráfico diferente para representar a mesma informação, marcando n
 \end{figure}
 
 \end{task}
-
+\newpage
 \explore{estruturas de variáveis quantitativas}
 \label{est1-exp-2}
 
@@ -694,7 +770,7 @@ Construa um gráfico diferente para representar a mesma informação, marcando n
 \capstart
 
 \noindent
-\includegraphics[width=300bp]{{USA.NM.VeryLargeArray.03}.jpg}
+\includegraphics[width=300bp]{USA_NM_VeryLargeArray_03.jpg}
 
 \caption{Arranjo de radiotelescópios - Very Large Array (VLA), New Mexico, EUA. \href{https://commons.wikimedia.org/wiki/File:USA.NM.VeryLargeArray.03.jpg}{Foto: Hajor CC-by-sa}}
 
@@ -791,10 +867,27 @@ Para visualizar o comportamento desses dados, iremos construir um gráfico chama
 \begin{figure}[H]
 \centering
 \capstart
-
-\noindent\includegraphics[width=300bp]{{Histograma}.png}
-\caption{Histograma dos dados coletados pela grade de radiotelescópios}
 \label{est1-fig-10}
+
+\begin{tikzpicture} [yscale=0.5]
+
+\foreach \y in {0,...,12}{
+   \draw [help lines,color=secundario!50] (-0.1,\y) -- (12,\y);}
+
+\foreach \x in {0,12}{
+\draw [help lines, color=secundario!50] (\x,-0.2) -- (\x,12);}
+
+\foreach \x in {1,...,11}{
+\draw [help lines, color=secundario!50] (\x,0) -- (\x,-0.2);}
+
+\foreach \y in {0,...,12} \node [left, scale=0.7] at (-0.1,\y) {\y}; 
+
+\foreach \x/\y in {.5/$\leq$ 3.0,1.5/3.0 a 2.5,2.5/3.5 a 4.0,3.5/4.0 a 4.5,4.5/4.5 a 5.0,5.5/5.0 a 5.5, 6.5/ 5.5 a 6.0, 7.5/6.0 a 6.5, 8.5/6.5 a 7.0,9.5/7.0 a 7.5,10.5/7.5 a 8.0,11.5/$>$ 8.0} \node [right, rotate=-90, scale=0.6] at (\x, 0) {\y};
+
+\draw [fill=\currentcolor!80] (1,0) rectangle (2,2);
+\end{tikzpicture}
+\caption{Histograma dos dados coletados pela grade de radiotelescópios}
+
 
 \end{figure}
 \end{quote}
@@ -807,7 +900,25 @@ Para visualizar o comportamento desses dados, iremos construir um gráfico chama
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{Histograma-resposta_1}.png}
+\begin{tikzpicture} [yscale=0.5]
+
+\foreach \y in {0,...,12}{
+   \draw [help lines,color=secundario!50] (-0.1,\y) -- (12,\y);}
+
+\foreach \x in {0,12}{
+\draw [help lines, color=secundario!50] (\x,-0.2) -- (\x,12);}
+
+\foreach \x in {1,...,11}{
+\draw [help lines, color=secundario!50] (\x,0) -- (\x,-0.2);}
+
+\foreach \y in {0,...,12} \node [left, scale=0.7] at (-0.1,\y) {\y}; 
+
+\foreach \x/\y/\z in {.5/0/$\leq$ 3.0,1.5/2/3.0 a 2.5,2.5/3/3.5 a 4.0,3.5/7/4.0 a 4.5,4.5/9/4.5 a 5.0,5.5/11/5.0 a 5.5, 6.5/11/5.5 a 6.0, 7.5/9/6.0 a 6.5, 8.5/7/6.5 a 7.0,9.5/3/7.0 a 7.5,10.5/2/7.5 a 8.0,11.5/0/$>$ 8.0} {\node [right, rotate=-90, scale=0.6] at (\x, 0) {\z};
+
+\draw [fill=\currentcolor!80] (\x-0.5,0) rectangle (\x+0.5,\y);}
+
+\node [below, rotate=-0, scale=1, align=center] at (6,-.5) {$\bigg\uparrow$ \\ Media};
+\end{tikzpicture}
 
 \caption{Histograma dos registros de tempo}
 
@@ -839,7 +950,7 @@ A tabela a seguir fornece a média das temperaturas máximas para cada mês nos 
 \centering
 \begin{tabu} to \linewidth {|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{11}{|c|}{Temperatura Máxima Média mensal nos anos 1991-2000 na cidade de Porto Alegre} \\
+\multicolumn{11}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{Temperatura Máxima Média mensal nos anos 1991-2000 na cidade de Porto Alegre}}}} \\
 \hline
 \thead
 Mês & 1991 & 1992 & 1993 & 1994  & 1995  & 1996 & 1997 & 1998 & 1999 & 2000 \\
@@ -888,15 +999,61 @@ Compare seu gráfico com o de colegas que escolheram outros anos (ou acrescente 
 
 \(a)\) e \(b)\) Percebe-se temperaturas mais altas nos meses iniciais e finais do ano e, mais baixas, no meio do ano.
 
-\begin{quote}
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{{linhas-temperatura}.png}
+\begin{tikzpicture} [yscale=0.5, scale=1.1, every node/.style={scale=1.2}]
+
+\foreach \y in {0,...,10}{
+   \draw [help lines,color=secundario!30] (-0.1,\y) -- (11,\y);}
+
+\foreach \x in {0,11}{
+\draw [help lines, color=secundario!30] (\x,-0.2) -- (\x,10);}
+
+\foreach \x in {1,...,11}{
+\draw [help lines, color=secundario!30] (\x,0) -- (\x,-0.2);}
+
+\node [above, scale=0.8] at (5.5,10) {Temperatura Máxima Média};
+
+\foreach \y/\z in {0/15.0,1/17.0,2/19.0,3/21.0,4/23.0,5/25.0,6/27.0,7/29.0,8/31.0,9/33.0,10/35.0} \node [left, scale=0.6] at (-0.1,\y) {\z}; 
+
+\foreach \x in {1,...,12} \node [below, scale=0.6] at (\x-1,-0.2) {\x};
+
+\foreach \x/\y/\z in {1/1991/destacado,2/1992/green!50!black,3/1993/atento,4/1994/cyan,5/1995/magenta,6/1996/yellow!90!black, 7/1997/brown,8/1998/violet,9/1999/olive,10/2000/orange}  \draw [color=\z, thick] (11.5,8.5-\x/2) -- (12,8.5-\x/2) node [right, color=black, scale=0.5] {\y};
+
+%1991
+\draw [color=destacado] (0,7.615) -- (1,8.015) -- (2,7.775) -- (3,5.575) -- (4,5.155) -- (5,2.66) -- (6,2.375) -- (7,3.405) -- (8,4.495) -- (9,5.585) -- (10,5.965) -- (11,7.8);
+
+%1992
+\draw [color=green!50!black] (0,30.43/2-7.5) -- (1,31.48/2-7.5) -- (2,30.05/2-7.5) -- (3,25.52/2-7.5) -- (4,21.44/2-7.5) -- (5,22.68/2-7.5) -- (6,16.97/2-7.5) -- (7,20.5/2-7.5) -- (8,22.15/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
+
+%1993
+\draw [color=atento] (0,31.34/2-7.5) -- (1,29.28/2-7.5) -- (2,28.22/2-7.5) -- (3,27.66/2-7.5) -- (4,23.29/2-7.5) -- (5,19.13/2-7.5) -- (6,17.97/2-7.5) -- (7,21.9/2-7.5) -- (8,20.83/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
+
+%1994
+\draw [color=cyan] (0,30.33/2-7.5) -- (1,28.85/2-7.5) -- (2,28.05/2-7.5) -- (3,25.51/2-7.5) -- (4,24.33/2-7.5) -- (5,20.09/2-7.5) -- (6,20.41/2-7.5) -- (7,21.28/2-7.5) -- (8,25.21/2-7.5) -- (9,24.6/2-7.5) -- (10,26.53/2-7.5) -- (11,32.05/2-7.5);
+
+%1995
+\draw [color=magenta] (0,30.74/2-7.5) -- (1,29.46/2-7.5) -- (2,29.12/2-7.5) -- (3,26.22/2-7.5) -- (4,21.95/2-7.5) -- (5,20.45/2-7.5) -- (6,21.6/2-7.5) -- (7,21.55/2-7.5) -- (8,22.62/2-7.5) -- (9,24.17/2-7.5) -- (10,28.93/2-7.5) -- (11,30.44/2-7.5);
+
+%1996
+\draw [color=yellow!90!black] (0,29.89/2-7.5) -- (1,29.78/2-7.5) -- (2,28.67/2-7.5) -- (3,27.02/2-7.5) -- (4,22.94/2-7.5) -- (5,17.76/2-7.5) -- (6,16.99/2-7.5) -- (7,22.59/2-7.5) -- (8,21.4/2-7.5) -- (9,25.34/2-7.5) -- (10,28.4/2-7.5) -- (11,29.87/2-7.5);
+
+%1997
+\draw [color=brown] (0,32.09/2-7.5) -- (1,29.62/2-7.5) -- (2,28.63/2-7.5) -- (3,26.56/2-7.5) -- (4,22.95/2-7.5) -- (5,19.42/2-7.5) -- (6,20.67/2-7.5) -- (7,23.06/2-7.5) -- (8,22.32/2-7.5) -- (9,23.27/2-7.5) -- (10,26.51/2-7.5) -- (11,30.28/2-7.5);
+
+%1998
+\draw [color=violet] (0,29.13/2-7.5) -- (1,28.26/2-7.5) -- (2,27.2/2-7.5) -- (3,24.03/2-7.5) -- (4,22.00/2-7.5) -- (5,19.6/2-7.5) -- (6,20.47/2-7.5) -- (7,19.77/2-7.5) -- (8,21.22/2-7.5) -- (9,25.19/2-7.5) -- (10,28.24/2-7.5) -- (11,28.91/2-7.5);
+
+%1999
+\draw [color=olive] (0,30.65/2-7.5) -- (1,29.56/2-7.5) -- (2,31.64/2-7.5) -- (3,24/2-7.5) -- (4,21.51/2-7.5) -- (5,18.87/2-7.5) -- (6,18.78/2-7.5) -- (7,21.94/2-7.5) -- (8,22.65/2-7.5) -- (9,23.07/2-7.5) -- (10,26.36/2-7.5) -- (11,29.08/2-7.5);
+
+%2000
+\draw [color=orange](0,30.63/2-7.5) -- (1,29.93/2-7.5) -- (2,27.85/2-7.5) -- (3,26.32/2-7.5) -- (4,21.78/2-7.5) -- (5,21.5/2-7.5) -- (6,17.59/2-7.5) -- (7,20.85/2-7.5) -- (8,22.25/2-7.5) -- (9,24.02/2-7.5) -- (10,26.87/2-7.5) -- (11,29.51/2-7.5);
+\end{tikzpicture}
 \label{est1-fig-12}
 \caption{Linhas de Temperatura}
 \end{figure}
-\end{quote}
 
 \(c)\) Idem ao item b). Isso ocorre devido às estações do ano. No hemisfério sul temos temperaturas mais altas nos meses finais e iniciais do ano e temperaturas mais baixas no meio do ano.
 
@@ -920,12 +1077,33 @@ Considere novamente os dados de temperatura da atividade anterior. Se representa
 \centering
 \capstart
 
-\noindent\includegraphics[width=400bp]{{linhas-sazonalidade}.png}
+\begin{tikzpicture} [yscale=0.5, scale=1.1, every node/.style={scale=1.2}]
+
+\foreach \y in {0,...,10}{
+   \draw [help lines,color=secundario!30] (-0.1,\y) -- (10,\y);}
+
+\foreach \x in {0,...,10}{
+\draw [help lines, color=secundario!30] (\x,-0.2) -- (\x,10);}
+
+\foreach \x in {1,...,9}{
+\draw [help lines, color=secundario!30] (\x,0) -- (\x,-0.2);}
+
+
+\foreach \y/\z in {0/15.0,1/17.0,2/19.0,3/21.0,4/23.0,5/25.0,6/27.0,7/29.0,8/31.0,9/33.0,10/35.0} \node [left, scale=0.6] at (-0.1,\y) {\z}; 
+
+\foreach \x in {1,...,9} \node [below, scale=0.6] at (\x-1,-0.2) {01/9\x};
+
+\node [below, scale=0.6] at (9,-0.2) {01/00};
+
+\node [above, scale=0.8] at (5,10) {Temperatura Máxima Média};
+
+\draw [color=\currentcolor!80, thick] (0,7.615) -- (1/12,8.015) -- (2/12,7.775) -- (3/12,5.575) -- (4/12,5.155) -- (5/12,2.66) -- (6/12,2.375) -- (7/12,3.405) -- (8/12,4.495) -- (9/12,5.585) -- (10/12,5.965) -- (11/12-1/12,7.8) -- (12/12,30.43/2-7.5) -- (13/12,31.48/2-7.5) -- (14/12,30.05/2-7.5) -- (15/12,25.52/2-7.5) -- (16/12,21.44/2-7.5) -- (17/12,22.68/2-7.5) -- (18/12,16.97/2-7.5) -- (19/12,20.5/2-7.5) -- (20/12,22.15/2-7.5) -- (21/12,26.16/2-7.5) -- (22/12,27.16/2-7.5) -- (23/12,29.95/2-7.5) -- (24/12,31.34/2-7.5) -- (25/12,29.28/2-7.5) -- (26/12,28.22/2-7.5) -- (27/12,27.66/2-7.5) -- (28/12,23.29/2-7.5) -- (29/12,19.13/2-7.5) -- (30/12,17.97/2-7.5) -- (31/12,21.9/2-7.5) -- (32/12,20.83/2-7.5) -- (33/12,26.16/2-7.5) -- (34/12,27.16/2-7.5) -- (35/12,29.95/2-7.5) -- (36/12,30.33/2-7.5) -- (37/12,28.85/2-7.5) -- (38/12,28.05/2-7.5) -- (39/12,25.51/2-7.5) -- (40/12,24.33/2-7.5) -- (41/12,20.09/2-7.5) -- (42/12,20.41/2-7.5) -- (43/12,21.28/2-7.5) -- (44/12,25.21/2-7.5) -- (45/12,24.6/2-7.5) -- (46/12,26.53/2-7.5) -- (47/12,32.05/2-7.5) -- (48/12,30.74/2-7.5) -- (49/12,29.46/2-7.5) -- (50/12,29.12/2-7.5) -- (51/12,26.22/2-7.5) -- (52/12,21.95/2-7.5) -- (53/12,20.45/2-7.5) -- (54/12,21.6/2-7.5) -- (55/12,21.55/2-7.5) -- (56/12,22.62/2-7.5) -- (57/12,24.17/2-7.5) -- (58/12,28.93/2-7.5) -- (59/12,30.44/2-7.5) -- (60/12,29.89/2-7.5) -- (61/12,29.78/2-7.5) -- (62/12,28.67/2-7.5) -- (63/12,27.02/2-7.5) -- (64/12,22.94/2-7.5) -- (65/12,17.76/2-7.5) -- (66/12,16.99/2-7.5) -- (67/12,22.59/2-7.5) -- (68/12,21.4/2-7.5) -- (69/12,25.34/2-7.5) -- (70/12,28.4/2-7.5) -- (71/12,29.87/2-7.5) -- (72/12,32.09/2-7.5) -- (73/12,29.62/2-7.5) -- (74/12,28.63/2-7.5) -- (75/12,26.56/2-7.5) -- (76/12,22.95/2-7.5) -- (77/12,19.42/2-7.5) -- (78/12,20.67/2-7.5) -- (79/12,23.06/2-7.5) -- (80/12,22.32/2-7.5) -- (81/12,23.27/2-7.5) -- (82/12,26.51/2-7.5) -- (83/12,30.28/2-7.5) -- (84/12,29.13/2-7.5) -- (85/12,28.26/2-7.5) -- (86/12,27.2/2-7.5) -- (87/12,24.03/2-7.5) -- (88/12,22.00/2-7.5) -- (89/12,19.6/2-7.5) -- (90/12,20.47/2-7.5) -- (91/12,19.77/2-7.5) -- (92/12,21.22/2-7.5) -- (93/12,25.19/2-7.5) -- (94/12,28.24/2-7.5) -- (95/12,28.91/2-7.5) -- (96/12,30.65/2-7.5) -- (97/12,29.56/2-7.5) -- (98/12,31.64/2-7.5) -- (99/12,24/2-7.5) -- (100/12,21.51/2-7.5) -- (101/12,18.87/2-7.5) -- (102/12,18.78/2-7.5) -- (103/12,21.94/2-7.5) -- (104/12,22.65/2-7.5) -- (105/12,23.07/2-7.5) -- (106/12,26.36/2-7.5) -- (107/12,29.08/2-7.5) -- (108/12,30.63/2-7.5) -- (109/12,29.93/2-7.5) -- (110/12,27.85/2-7.5) -- (111/12,26.32/2-7.5) -- (112/12,21.78/2-7.5) -- (113/12,21.5/2-7.5) -- (114/12,17.59/2-7.5) -- (115/12,20.85/2-7.5) -- (116/12,22.25/2-7.5) -- (117/12,24.02/2-7.5) -- (118/12,26.87/2-7.5) -- (119/12,29.51/2-7.5);
+\end{tikzpicture}
 \caption{Efeito da sazonalidade no gŕafico de linhas da temperatura máxima média}
 \label{est1-fig-13}
 
 \end{figure}
-
+\newpage
 
 \arrange{ }
 \label{est1-org-2}
@@ -950,7 +1128,20 @@ Quando existe a necessidade de agrupar os dados em intervalos, uma questão que 
 \capstart
 
 \noindent
-\includegraphics[width=200bp]{{histograma_2intervalos}.png}
+\begin{tikzpicture} 
+
+\draw (0,0) -- (0,7);
+\draw (0.2,-0.2) -- (7.2,-0.2);
+\foreach \y/\z in {0/0,1/5,2/10,3/15,4/20,5/25,6/30,7/35} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90,scale=0.75] {\z}; 
+\foreach \x/\z in {0/2,1/3,2/4,3/5,4/6,5/7,6/8,7/9} \draw (\x+0.2,-0.2) -- (\x+0.2,-0.4) node [below, scale=0.75] {\z }; 
+\draw (1.2,0) rectangle (6.2,6.2);
+\draw (3.7,0) -- (3.7,6.2);
+\node [scale=.8] at (3.7,-1){registros de tempo};
+\node [scale=.8, rotate=90] at (-0.8,3.7) {frequência absoluta};
+\node [align=center, above, scale=1.1] at (3.7,7.2) {Histograma dos registros de tempo};
+\node [scale=.8] at (3.7,7.15) {(considerando apenas dois intervalos)};
+
+\end{tikzpicture}
 \caption{Histograma dos resgistros de tempo considerando apenas dois intervalos}
 \label{est1-fig-14}
 \end{figure}
@@ -963,7 +1154,7 @@ Por outro lado, se o número de intervalos for igual ou superior ao número de o
 
 \begin{tikzpicture}[scale=0.5, every node/.style={scale=0.75}] 
 
-\draw (0,0) -- (0,10) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+\draw (0,0) -- (0,10) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequência absoluta};
 \draw (2,-0.2) -- (22,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};
 \draw (2,-0) -- (22,-0) ;
 
@@ -975,7 +1166,7 @@ Por outro lado, se o número de intervalos for igual ou superior ao número de o
 \foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x,-0.2) -- (\x,-0.4) node [below, scale=1.2] {\z }; 
 
 
-\foreach \x/\y in {10/1,17/1,21/1,25/1,26/1,28/2,30/1,33/1,35/2,37/1,39/1,40/1,41/1,42/1,44/1,45/2,47/1,48/2,50/2,52/1,53/2,55/2,57/2,58/1,59/1,60/2,62/2,64/2,65/1,66/1,67/1,68/2,70/1,71/1,72/1,73/1,74/1,75/1,77/1,78/2,80/1,82/2,84/1,86/1,89/2,91/1,94/1,97/1,102/1,109/1} \draw [fill=primario] (\x/5,0) rectangle (\x/5+1/5,\y*5)
+\foreach \x/\y in {10/1,17/1,21/1,25/1,26/1,28/2,30/1,33/1,35/2,37/1,39/1,40/1,41/1,42/1,44/1,45/2,47/1,48/2,50/2,52/1,53/2,55/2,57/2,58/1,59/1,60/2,62/2,64/2,65/1,66/1,67/1,68/2,70/1,71/1,72/1,73/1,74/1,75/1,77/1,78/2,80/1,82/2,84/1,86/1,89/2,91/1,94/1,97/1,102/1,109/1} \draw [fill=\currentcolor!80] (\x/5,0) rectangle (\x/5+1/5,\y*5)
 ;
 \end{tikzpicture}
 
@@ -989,9 +1180,9 @@ Embora não exista uma resposta única sobre quantos intervalos considerar, algu
 \centering
 \capstart
 
-\begin{tikzpicture}[scale=0.4, every node/.style={scale=0.75}]
+\begin{tikzpicture}[scale=0.3, every node/.style={scale=0.75}]
 
-\draw (0,0) -- (0,14) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+\draw (0,0) -- (0,14) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequência absoluta};
 \draw (2,-0.2) -- (22,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};
 \draw (2,-0) -- (22,-0) ;
 
@@ -1003,7 +1194,7 @@ Embora não exista uma resposta única sobre quantos intervalos considerar, algu
 \foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x,-0.2) -- (\x,-0.4) node [below, scale=1.2] {\z }; 
 
 
-\foreach \x/\y in {0/3,2.5/5/,5/11,7.5/13,10/14,12.5/10,15/5,17.5/3} \draw [fill=primario] (\x+2,0) rectangle (\x+4.5,\y)
+\foreach \x/\y in {0/3,2.5/5/,5/11,7.5/13,10/14,12.5/10,15/5,17.5/3} \draw [fill=\currentcolor!80] (\x+2,0) rectangle (\x+4.5,\y)
 ;
 \end{tikzpicture}
 
@@ -1046,13 +1237,32 @@ Observe que nessa tabela todos os intervalos têm amplitude 2. Veja o histograma
 \capstart
 
 \noindent
-\includegraphics[width=400bp]{{exemplo_histograma_areas_1}.png}
+\begin{tikzpicture}[scale=0.4, every node/.style={scale=0.75}]
+
+\draw (0,0) -- (0,15) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+
+\draw (1,-0.2) -- (25,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};
+
+\node [above,scale=1.5] at (13,16.5) {Histograma na escala da frequencia absoluta};
+\node [,scale=1.3] at (13,16.4) {intervalos de amplitudes iguais};
+
+
+\foreach \y/\z in {0/0,3.75/5,7.5/10,11.25/15,15/20} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {1/0,5/2,9/4,13/6,17/8,21/10,25/12} \draw (\x,-0.2) -- (\x,-0.4) node [below, scale=1.2] {\z }; 
+
+
+\foreach \x/\y/\z in {2/4/4=8,6/12/12=24,10/20/20=40,14/8/8=16,18/6/6=12}
+\draw [fill=\currentcolor!80] (\x+1,0) rectangle (\x+5,\y*15/20)
+node [, scale=1] at (\x+3,1.5) {\textbf{ $2 \times \z$}}
+;
+
+\end{tikzpicture}
 
 \caption{Histograma na escala da frequência absoluta}
 \label{est1-fig-17}
 \end{figure}
 
-Verifique que a razão da área de cada retângulo em relação à área total é igual à frequência relativa do intervalo correspondente.
+Observe no histograma as áreas de cada retângulo. A área total desse histograma é $2\times(4+12+20+8+6)=2\times 50=100$. Verifique que a razão da área de cada retângulo em relação à área total é igual à frequência relativa do intervalo correspondente.
 
 Porém, quando os intervalos apresentam amplitudes desiguais, usar a frequência não será mais apropriado.
 
@@ -1065,7 +1275,7 @@ Suponha agora a seguinte distribuição de frequências de um conjunto de 50 obs
 \begin{tabu} to \linewidth{|c|c|c|c|}
 \hline
 \thead
-\parbox[c][1cm]{3.45cm}{\centering Intervalo de classe} & \parbox[c]{3.45cm}{\centering frequência absoluta} & \parbox[c]{3.45cm}{\centering frequência relativa} & \parbox[c]{3.45cm}{\centering amplitude do intervalo}\\
+ & \parbox[c][1cm]{3.45cm}{\centering frequência absoluta} & \parbox[c][1cm]{3.45cm}{\centering frequência relativa} & \parbox[c][1cm]{3.45cm}{\centering amplitude do intervalo}\\%[.15cm]
 \hline
 {[} 1 ; 3 {[} & 4 & 0,08 & 2 \\
 \hline
@@ -1096,13 +1306,33 @@ Veja a seguir uma construção equivocada do histograma desses dados, usando a f
 \capstart
 
 \noindent
-\includegraphics[width=400bp]{{histograma_incorreto_2}.png}
+\begin{tikzpicture}[scale=.4, every node/.style={scale=.75}]
 
+\draw (0,0) -- (0,15) node [rotate=90, above, yshift=20, midway, scale=1.2] {frequência absoluta};
+
+\draw (1,-0.2) -- (16,-0.2) node [below, midway, yshift=-20, scale=1.2] {registros de tempo};
+
+\node [above,scale=1.5] at (8.5,16.5) {Histograma incorreto na escala da frequência absoluta};
+\node [,scale=1.3] at (8.5,16.4) {intervalos de amplitudes desiguais};
+
+
+\foreach \y/\z in {0/0,3.75/5,7.5/10,11.25/15,15/20} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {1/0,4.75/5,8.5/10,12.25/15,16/20} \draw (\x,-0.2) -- (\x,-0.4) node [below, scale=1.2] {\z }; 
+
+
+\foreach \x/\y/\z in {1/4/2,3/8/2,5/18/3,8/12/4,12/8/4}
+\draw [fill=\currentcolor!80] (\x*15/20+15/20,0) rectangle (\x*15/20+15/20+\z*15/20,\y*15/20)
+;
+
+% \node [scale=1.5] at (12,12.25) {Nesse histograma a area total e};
+% \node [scale=1.5,below, align=left] at (11.1,11.5) {$2 \times 4 + 2 \times 8 + 3\times 18$ +\\ $  4 \times 12 + 4 \times 8 = 158$};
+
+\end{tikzpicture}
 \caption{Histograma incorreto}\label{\detokenize{PE103-4:fig-coloque-aqui-o-nome}}
 \label{est1-fig-18}
 \end{figure}
 
-Observe que a razão da área do primeiro retângulo em relação à área total é dada por \(\displaystyle{\frac{8}{158}}\approx  0,051\), porém a frequência relativa do primeiro intervalo é 0,08! A razão da área do último retângulo é \(\displaystyle{\frac{4\cdot 8}{158}}\approx 0,20\), porém a frequência relativa desse intervalo é 0,16! Ou seja, esse histograma não representa corretamente a distribuição de frequências desses dados. Na tabela a seguir, foram calculadas as densidades de frequência absoluta.
+Nesse histograma a area total é $2 \times 4 + 2 \times 8 + 3\times 18$ +\\ $  4 \times 12 + 4 \times 8 = 158$. Observe que a razão da área do primeiro retângulo em relação à área total é dada por \(\displaystyle{\frac{8}{158}}\approx  0,051\), porém a frequência relativa do primeiro intervalo é 0,08! A razão da área do último retângulo é \(\displaystyle{\frac{4\cdot 8}{158}}\approx 0,20\), porém a frequência relativa desse intervalo é 0,16! Ou seja, esse histograma não representa corretamente a distribuição de frequências desses dados. Na tabela a seguir, foram calculadas as densidades de frequência absoluta.
 
 
 
@@ -1129,20 +1359,39 @@ Observe que a razão da área do primeiro retângulo em relação à área total
 
 
 Veja a seguir a construção do histograma na escala da densidade de frequência absoluta e observe que agora ele representa corretamente a distribuição de frequências.
-\phantomsection\label{\detokenize{PE103-4:id1}}\begin{quote}
+\phantomsection\label{\detokenize{PE103-4:id1}}
 
 \begin{figure}[H]
 \centering
 \capstart
 
 \noindent
-\includegraphics[width=400bp]{{histograma_correto}.png}
+\begin{tikzpicture}[scale=.4, every node/.style={scale=.75}]
 
+\draw (0,0) -- (0,12) node [rotate=90, above, yshift=20, midway, scale=1.2] {frequência absoluta};
+
+\draw (1,-0.2) -- (16,-0.2) node [below, midway, yshift=-20, scale=1.2] {registros de tempo};
+
+\node [above,scale=1.5] at (8.5,13.5) {Histograma na escala da densidade de frequência absoluta};
+\node [,scale=1.3] at (8.5,13.4) {intervalos de amplitudes desiguais};
+
+
+\foreach \y/\z in {0/0,2/1,4/2,6/3,8/4,10/5,12/6} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {1/0,4.75/5,8.5/10,12.25/15,16/20} \draw (\x,-0.2) -- (\x,-0.4) node [below, scale=1.2] {\z }; 
+
+
+\foreach \x/\y/\z in {1/2/2,3/4/2,5/6/3,8/3/4,12/2/4}
+\draw [fill=\currentcolor!80] (\x*15/20+15/20,0) rectangle (\x*15/20+15/20+\z*15/20,\y*2)
+;
+
+% \node [scale=1.5] at (12,11.5) {Nesse histograma a area total e};
+% \node [scale=1.5,below, align=left] at (11.1,11.1) {$2 \times 2 + 2 \times 4 + 3\times 6$ +\\ $  4 \times 3 + 4 \times 2 = 50$};
+
+\end{tikzpicture}
 \caption{Histograma correto}
 \label{est1-fig-19}\end{figure}
-\end{quote}
-
-Comparando as \hyperref[est1-fig-18]{figuras \ref{est1-fig-18}} e \ref{est1-fig-19}, podemos perceber que a primeira distorce a estrutura da distribuição de frequências, atribuindo pesos maiores aos intervalos de maior amplitude e, menores, aos intervalos de menor amplitude.
+=
+Nesse histograma a area total é $2 \times 2 + 2 \times 4 + 3\times 6$ +\\ $  4 \times 3 + 4 \times 2 = 50$. Comparando as \hyperref[est1-fig-18]{figuras \ref{est1-fig-18}} e \ref{est1-fig-19}, podemos perceber que a primeira distorce a estrutura da distribuição de frequências, atribuindo pesos maiores aos intervalos de maior amplitude e, menores, aos intervalos de menor amplitude.
 
 Em que situações há a necessidade de considerarmos intervalos de amplitudes desiguais?
 
@@ -1160,7 +1409,58 @@ O gráfico de barras não é um histograma, apesar de suas representações sere
 
 \noindent
 
-\includegraphics[width=300bp]{{g_barras_tipo_s_1}.png}
+\begin{minipage}{0.4\textwidth}
+\begin{figure}[H]
+\capstart
+
+\noindent
+\begin{tikzpicture}[scale=.3, every node/.style={scale=.75}]
+
+\draw (0,0) -- (0,15) node [rotate=90, above, yshift=20, midway, scale=1.2] {frequência absoluta};
+
+
+\node [above,scale=1.5] at (4,15.5) {Distribuição de frequências};
+
+
+\foreach \y/\z in {0/0,3.75/5,7.5/10,11.25/15,15/20} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+
+\foreach \x/\y/\z in {12/A/1,6/AB/3,4/B/5,18/O/7}
+\draw [fill=\currentcolor!80] (\z-0.5,0)  rectangle (\z+1,\x*15/20) 
+node at (\z+0.25,-0.25) [below] {\y}
+;
+
+\node at (4,-1.2) [scale=1, align=center, below] {tipo sanguíneo \\ respostas em ordem \\ alfabética};
+
+
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{figure}[H]
+\capstart
+
+\noindent
+\begin{tikzpicture}[scale=.3, every node/.style={scale=.75}, remember picture]
+
+\draw (0,0) -- (0,15) node [rotate=90, above, yshift=20, midway, scale=1.2] {frequência absoluta};
+
+
+\node [above,scale=1.5] at (4,15.5) {Distribuicao de frequências};
+
+
+\foreach \y/\z in {0/0,3.75/5,7.5/10,11.25/15,15/20} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ,scale=1.2] {\z}; 
+
+\foreach \x/\y/\z in {18/O/1,12/A/3,6/AB/5,4/B/7}
+\draw [fill=\currentcolor!80] (\z-0.5,0)  rectangle (\z+1,\x*15/20) 
+node at (\z+0.25,-0.25) [below] {\y}
+;
+
+\node at (4,-1.2) [scale=1, align=center, below] {tipo sanguíneo \\ respostas em ordem \\ descrescente de frequência};
+
+
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
 
 \caption{Gráfico de barras: duas formas de apresentação}
 \label{est1-fig-20}
@@ -1176,8 +1476,20 @@ Os histogramas são úteis para representar a distribuição de frequências de 
 
 \noindent
 
-\includegraphics[width=300bp]{{histograma_5intervalos}.png}
+\begin{tikzpicture} [xscale=0.75, yscale=0.75, scale=0.3, every node/.style={scale=.75}]
 
+\draw (0,0) -- (0,18) node [rotate=90, above, yshift=20, midway, scale=1.2] {frequência absoluta};
+\draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20, scale=1.2] {registros de tempo};
+
+
+
+\foreach \y/\z in {0/0,1/2,2/4,3/6,4/8,5/10,6/12,7/14,8/16,9/18} \draw (0,\y*2) -- (-0.2,\y*2) node [above, rotate=90 ,scale=1.2] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x-1,-0.2) -- (\x-1,-0.4) node [below, scale=1] {\z }; 
+
+
+\foreach \x/\y in {0/4,1/11,2/17,3/17,4/11,5/4} \draw [fill=\currentcolor!80] (\x/6*5*4+1,0) rectangle (\x/6*5*4+5/6*4+1,\y)
+;
+\end{tikzpicture}
 \caption{Histograma dos registros, considerando 5 intervalos}
 \label{est1-fig-21}
 \end{figure}
@@ -1353,12 +1665,9 @@ Atividades para o Ensino Médio \textendash{} \url{https://vamoscontar.ibge.gov.
 \item {} 
 Instituto Nacional de Estudos e Pesquisas educacionai Anísio Teixeira (INEP) \textendash{} \url{http://portal.inep.gov.br/inep-data}
 
-\begin{itemize}
 
-\item {} 
-Censo Escolar INEP (último censo 2014) \textendash{} \url{http://inepdata.inep.gov.br/analytics/saw.dll?Portal\&PortalPath=\%2Fshared\%2FGeral\%2F\_portal\%2FDissemina\%C3\%A7\%C3\%A3o\%20dos\%20Censos}
-
-\end{itemize}
+% \item {} 
+% Censo Escolar INEP (último censo 2014) \textendash{} \url{http://inepdata.inep.gov.br/analytics/saw.dll?Portal\&PortalPath=\%2Fshared\%2FGeral\%2F\_portal\%2FDissemina\%C3\%A7\%C3\%A3o\%20dos\%20Censos}
 
 \item {} 
 Frota de veículos por município do RJ \textendash{} \url{http://www.detran.rj.gov.br/\_estatisticas.veiculos/index.asp}
@@ -1456,8 +1765,16 @@ O gráfico a seguir ilustra um dos resultados dessa pesquisa.
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{internet_TIC}.png}
-\caption{Gráfico do exercício 5}\label{\detokenize{PE103-E:fig-internet-tic}}\label{\detokenize{PE103-E:id16}}\end{figure}
+\begin{tikzpicture}
+
+\node [above, scale=1.3] at (4.5,7) {Principais equipamentos usados por alunos para acessar a internet};
+\node [below] at (4.5,7) {Porcentagem sobre o total de estudantes participantes da pesquisa}; 
+\foreach  \x in {0,...,9} \draw [gray!50] (\x,6) -- (\x,0) node [below, gray!80!black] {\x}; 
+\foreach \x in {0,...,6} \draw [gray!50]  (0,\x) -- (-.2,\x);
+
+\foreach \x/\y/\z/\w in {1/7.7/Celular/primario,2/.9/Computador de mesa/session2,3/.6/Computador portatil/session3,4/.5/Tablet/session4,5/.2/Videogame/session1,6/.1/Televisão/cor2} \draw [fill=\w] (0,\x-.75) rectangle (\y,\x-.25) node [left] at (0,\x-.5) {\z};
+\end{tikzpicture}
+\caption{Fonte: CGI.br/NIC.br/Cetic.br/TIC Educação 2016}\label{\detokenize{PE103-E:fig-internet-tic}}\label{\detokenize{PE103-E:id16}}\end{figure}
 \begin{enumerate}
 \item {} 
 Que variável foi analisada nesse gráfico e qual a sua classificação?
@@ -1478,7 +1795,7 @@ Você acha que o gráfico de setores seria adequado para representar essa distri
 \capstart
 
 \noindent\includegraphics[width=300bp]{{ar_carregado}.png}
-\caption{Gráfico do exercício 6}\label{\detokenize{PE103-E:fig-ar-carregado}}\label{\detokenize{PE103-E:id17}}\end{figure}
+\label{\detokenize{PE103-E:fig-ar-carregado}}\label{\detokenize{PE103-E:id17}}\end{figure}
 \begin{enumerate}
 \item {} 
 Que variável foi observada no primeiro gráfico? Que escala foi usada para o comprimento das barras nesse gráfico? Em que posição está o Brasil?
@@ -1500,7 +1817,7 @@ Faça uma pesquisa para obter informações sobre as principais causas de óbito
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth{|X[c]|X[c]|}
+\begin{tabu} to \linewidth{|c|c|}
 \hline
 \thead
 Trimestre & Notificações \\
@@ -1528,8 +1845,31 @@ Construa um gráfico para representar a distribuição do número de notificaç�
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{exercicio8_enunciado}.png}
-\caption{Gráfico do exercício 8}\label{\detokenize{PE103-E:fig-coloque-aqui-o-nome}}\label{\detokenize{PE103-E:id18}}\end{figure}
+\begin{tikzpicture}[]
+
+\node [above, scale=1.2] at (6.5,6.3) {População economicamente ativa (em milhões)};
+
+\foreach \x in {1,...,5} \draw [gray] (0,\x) -- (13,\x);
+\draw (0,0) rectangle (13,6);
+\foreach \x/\y in {0/\phantom{a},1/2003,2/2004,3/2005,4/2006,5/2007,6/2008,7/2009,8/2010,9/2011,10/2012,11/2013,12/2014,13/2015}{
+\node [below] at (\x-.5,0) {\y};
+\draw (\x,0) -- (\x,-.1);}
+\foreach \x/\y in {0/30,1/35,2/40,3/45,4/50,5/55,6/60}{
+\node [left] at (-.1,\x) {\y};
+\draw (0,\x) -- (-0.1,\x);};
+
+\foreach \x/\y in {1/4.25,2/4.5,3/4.7,4/4.8,5/4.95,6/5.1,7/5.2,8/5.3,9/5.4,10/5.5,11/5.6,12/5.7,13/5.8} \draw [fill=primario] (\x-.75,0) rectangle (\x-.5,\y);
+
+\foreach \x/\y in {1/1.5,2/1.8,3/2,4/2.15,5/2.4,6/2.6,7/2.75,8/2.9,9/3.05,10/3.15,11/3.25,12/3.35,13/3.55} \draw [fill=session3] (\x-.25,0) rectangle (\x-.5,\y);
+
+\draw [fill=primario] (5,-1) rectangle (5.3,-0.7);
+\node [right] at (5.3,-.9) {homens};
+
+\draw [shift={(2,0)}, fill=session3] (5,-1) rectangle (5.3,-0.7);
+\node [shift={(2,0)}, right] at (5.3,-.9) {mulheres};
+
+\end{tikzpicture}
+\caption{Fonte: Organização das Nações Unidas para Alimentação e agricultura}\label{\detokenize{PE103-E:fig-coloque-aqui-o-nome}}\label{\detokenize{PE103-E:id18}}\end{figure}
 
 Classifique cada uma das afirmações a seguir em verdadeira ou falsa.
 \begin{enumerate}
@@ -1556,8 +1896,43 @@ Em relação a 2007, a população economicamente ativa de homens em 2015 cresce
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{exercicio9_enunciado_1}.png}
-\caption{Gráfico do exercício 9}\label{\detokenize{PE103-E:id2}}\label{\detokenize{PE103-E:id19}}\end{figure}
+\begin{tikzpicture}[yscale=1.25, every node/.style={scale=1.3}, scale=1.5]
+
+\node [above, scale=1.2] at (3,3.5) {Nota média};
+
+\draw (0,0) -- (6,0);
+\draw [->] (0,0) -- (0,3.5);
+
+\foreach \x/\y in {0/\phantom{a}, 1/Forma,2/Textura,3/Cor,4/Tamanho, 5/Sabor, 6/ Odor} {\draw (\x,0) -- (\x,-.1);
+\node [below, scale=.7] at (\x-.5,-0.1) {\y};};
+
+\foreach \x/\y/\z in {0/6/0,.5/6/5/,1/7/0,1.5/7/5, 2/8/0, 2.5/8/5, 3/9/0} {
+\draw (0,\x) -- (-.1,\x);
+\node [left,scale=.7] at (-.1,\x) {\y,\z};};
+
+\foreach \x/\y in {1/2.25, 2/1.6, 3/2.5, 4/2.625, 5/1.4, 6/1.75} 
+{\draw [fill=primario] (\x-.875,0) rectangle (\x-.625,\y);};
+
+\foreach \x/\y in {1/2.1, 2/2, 3/2.5, 4/2.6, 5/1, 6/1.6} 
+{\draw [fill=session2] (\x-.625,0)  rectangle (\x-.375,\y);};
+
+\foreach \x/\y in {1/2.15, 2/1.5, 3/2, 4/2.6, 5/1, 6/1.55} 
+{\draw [fill=session3]  (\x-.375,0) rectangle (\x-.125,\y);};
+
+\draw [fill=primario] (1,-1) rectangle (1.2,-.85);
+\node [right, scale=.7] at (1.2,-.95) {Proposto};
+
+\begin{scope}[shift={(1.5,0)}]
+\draw [fill=session2] (1,-1) rectangle (1.2,-.85);
+\node [right, scale=.7] at (1.2,-0.95) {A};
+\end{scope}
+
+\begin{scope}[shift={(3,0)}]
+\draw [fill=session3] (1,-1) rectangle (1.2,-.85);
+\node [right, scale=.7, ] at (1.2,-.95) {B};
+\end{scope}
+\end{tikzpicture}
+\label{\detokenize{PE103-E:id2}}\label{\detokenize{PE103-E:id19}}\end{figure}
 
 A característica que dá a maior vantagem relativa ao produto proposto e que pode ser usada, pela diretoria, para incentivar a sua produção é a
 \begin{enumerate}
@@ -1577,6 +1952,7 @@ sabor.
 odor.
 
 \end{enumerate}
+\newpage
 
 \item (UFRGS 2016 - adaptado)  Observe o gráfico a seguir.
 
@@ -1585,7 +1961,7 @@ odor.
 \capstart
 
 \noindent\includegraphics[width=300bp]{{exercicio10_enunciado}.png}
-\caption{Gráfico do exercício 10}\label{\detokenize{PE103-E:id3}}\label{\detokenize{PE103-E:id20}}\end{figure}
+\label{\detokenize{PE103-E:id3}}\label{\detokenize{PE103-E:id20}}\end{figure}
 
 Nele está retratado o número de transplantes realizados no Rio Grande do Sul, até julho de 2015, e a quantidade de pessoas que aguardam na fila por um transplante no Estado, no mês de julho de 2015.
 
@@ -1608,14 +1984,15 @@ O transplante de córneas é o que tem a menor quantidade de pessoas aguardando 
 
 \end{enumerate}
 
-\item (UFPA 2016 - adaptado)  O gráfico abaixo, retirado do Boletim Epidemiológico 16 de 2016 do Ministério da Saúde, registra os casos de dengue por semana, no Brasil, nos anos de 2014, 2015 e início de 2016.
+\newpage
+\item (UFPA 2016 - adaptado)  O gráfico a seguir, retirado do Boletim Epidemiológico 16 de 2016 do Ministério da Saúde, registra os casos de dengue por semana, no Brasil, nos anos de 2014, 2015 e início de 2016.
 
 \begin{figure}[H]
 \centering
 \capstart
 
 \noindent\includegraphics[width=300bp]{{exercicio11_enunciado}.png}
-\caption{Gráfico do exercício 11}\label{\detokenize{PE103-E:id4}}\label{\detokenize{PE103-E:id21}}\end{figure}
+\label{\detokenize{PE103-E:id4}}\label{\detokenize{PE103-E:id21}}\end{figure}
 
 Com base no gráfico apresentado,
 \begin{enumerate}
@@ -1656,7 +2033,7 @@ Um floricultor, pretendendo investir no plantio dessa flor em sua região, fez u
 \capstart
 
 \noindent\includegraphics[width=300bp]{{exercicio12_enunciado}.png}
-\caption{Gráfico do exercício 12}\label{\detokenize{PE103-E:id5}}\label{\detokenize{PE103-E:id22}}\end{figure}
+\label{\detokenize{PE103-E:id5}}\label{\detokenize{PE103-E:id22}}\end{figure}
 
 Com base nas informações do gráfico, o floricultor verificou que poderia plantar essa flor rara.
 
@@ -1686,7 +2063,7 @@ dezembro.
 \capstart
 
 \noindent\includegraphics[width=300bp]{{exercicio13_enunciado}.png}
-\caption{Gráfico do exercício 13}\label{\detokenize{PE103-E:id6}}\label{\detokenize{PE103-E:id23}}\end{figure}
+\label{\detokenize{PE103-E:id6}}\label{\detokenize{PE103-E:id23}}\end{figure}
 
 De acordo com os gráficos, a quantidade de embalagens PET recicladas destinadas a produção de tecidos e malhas, em kton é mais aproximada de
 \begin{enumerate}
@@ -1714,7 +2091,7 @@ De acordo com os gráficos, a quantidade de embalagens PET recicladas destinadas
 \capstart
 
 \noindent\includegraphics[width=300bp]{{exercicio14_enunciado}.png}
-\caption{Gráfico do exercício 14}\label{\detokenize{PE103-E:id7}}\label{\detokenize{PE103-E:id24}}\end{figure}
+\label{\detokenize{PE103-E:id7}}\label{\detokenize{PE103-E:id24}}\end{figure}
 
 Com base no gráfico apresentado, classifique cada afirmação a seguir em verdadeira ou falsa.
 \begin{enumerate}
@@ -1734,7 +2111,7 @@ De 2000 a 2013, houve crescimento percentual de 11,7\%  na emissão de dióxido 
 Em relação a 2000, o ano de 2013 apresentou emissão de dióxido de carbono aproximadamente 50\%  maior.
 
 \end{enumerate}
-
+\newpage
 \item (ENEM 2013)  Uma falsa relação
 
 O cruzamento da quantidade de horas estudadas com o desempenho no Programa Internacional de Avaliação de Estudantes (Pisa) mostra que mais tempo na escola não é garantia de nota acima da média.
@@ -1744,7 +2121,7 @@ O cruzamento da quantidade de horas estudadas com o desempenho no Programa Inter
 \capstart
 
 \noindent\includegraphics[width=400bp]{{exercicio15_enunciado_1}.png}
-\caption{Gráfico do exercício 15}\label{\detokenize{PE103-E:id8}}\label{\detokenize{PE103-E:id25}}\end{figure}
+\label{\detokenize{PE103-E:id8}}\label{\detokenize{PE103-E:id25}}\end{figure}
 
 Dos países com notas abaixo da média nesse exame, aquele que apresenta maior quantidade de horas de estudo é
 \begin{enumerate}
@@ -1764,15 +2141,31 @@ México.
 Rússia.
 
 \end{enumerate}
-
+\newpage
 \item (UF-AM) O gráfico a seguir mostra quanto tempo um estudante gasta com suas atividades durante o dia.
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{exercicio16_enunciado_1}.png}
-\caption{Gráfico do exercíco 16}\label{\detokenize{PE103-E:id9}}\label{\detokenize{PE103-E:id26}}\end{figure}
+\begin{tikzpicture}[every node/.style={scale=.9}]
+
+\draw (0,0) -- (9,0);
+
+\foreach \x/\y/\z in {1.5/2.5/25\%,3/1/10\%,4.5/3/30\%,6/1.4/14\%,7.5/2.1/\phantom{a}} {
+\draw [fill=\currentcolor!80](\x-.25,0) rectangle (\x+.25,\y);
+
+\node [above] at (\x,\y) {\z};
+};
+
+\node [below, align=center] at (1.5,0) {ir à escola};
+\node [below, align=center] at (3,-0.09) {comer};
+\node [below, align=center] at (4.5,0) {dormir};
+\node [below, align=center] at (6,0) {dever de \\ casa};
+\node [below, align=center] at (7.5,0) {outras \\ atividades};
+
+\end{tikzpicture}
+\label{\detokenize{PE103-E:id9}}\label{\detokenize{PE103-E:id26}}\end{figure}
 
 A quantidade de horas gastas pelo estudante com otras atividades em um dia é de:
 \begin{enumerate}
@@ -1799,8 +2192,19 @@ A quantidade de horas gastas pelo estudante com otras atividades em um dia é de
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{exercicio17_enunciado_1}.png}
-\caption{Histograma referente ao exercício 17}\label{\detokenize{PE103-E:id10}}\label{\detokenize{PE103-E:id27}}\end{figure}
+\begin{tikzpicture}[scale=.75]
+
+\draw [->] (0,0) -- (11,0) node [below, xshift=.5cm] {altura (m)};
+\draw [->] (0,0) -- (0,9.5) node [above left, rotate=90, yshift=.5cm] {número de alunos};
+\foreach \x/\y/\z in {2/1/6, 4/1/7, 6/1/8, 8/1/9, 10/2/0} \node [below] at (\x,0) {\y,\z0};
+\foreach \x in {2,3,6,9} {
+\node [left] at (0,\x) {\x};
+\draw [gray!80, dashed] (0,\x) -- (11,\x);
+};
+
+\foreach \x/\y in {2/3, 4/9, 6/6, 8/2} \draw [fill=\currentcolor!80] (\x,0) rectangle (\x+2,\y);
+\end{tikzpicture}
+\label{\detokenize{PE103-E:id10}}\label{\detokenize{PE103-E:id27}}\end{figure}
 
 Em um histograma, se uma reta vertical de equação \(x=x_0\) divide o histograma em duas partes de mesma área, então o valor de \(x_0\) corresponde à \index{mediana}mediana da distribuição representada no histograma. Calcule a mediana das alturas dos alunos com base no histograma apresentado.
 
@@ -1810,7 +2214,26 @@ Em um histograma, se uma reta vertical de equação \(x=x_0\) divide o histogram
 \centering
 \capstart
 
-\noindent\includegraphics[width=250bp]{{exercicio19_enunciado_1}.png}
+\begin{tikzpicture}
+
+\draw (0,0) -- (6,0);
+\draw (0,0) -- (0,8);
+
+\foreach \x in {1,...,7}{
+\node [left] at (-.1,\x) {\x0};
+\draw (-0.1,\x) -- (.1,\x);};
+
+\node [left] at (-.1,7.5) {75};
+\draw (-.1,7.5) -- (.1,7.5);
+
+\foreach \x/\y/\z/\w/\t in {1/7.5/A/primario/74, 2/6.8/B/session4/68, 3/3.2/C/session2/32, 4/2.2/Outros/session3/22}{ 
+\draw [fill=\w] (\x,0) rectangle (\x+1,\y);
+\node [below] at (\x+.5,0) {\z};
+\node [above] at (\x+.5,\y) {(\t)};
+};
+
+
+\end{tikzpicture}
 \caption{O número entre parênteses corresponde ao número de respostas para cada tipo de suco entre os jovens selecionados na pesquisa}\label{\detokenize{PE103-E:id11}}\label{\detokenize{PE103-E:id28}}\end{figure}
 \begin{enumerate}
 \item {} 
@@ -1827,8 +2250,50 @@ Refaça o gráfico de barras.
 \centering
 \capstart
 
-\noindent\includegraphics[width=300bp]{{exercicio20_enunciado_1}.png}
-\caption{Gráficos do exercício 20}\label{\detokenize{PE103-E:id12}}\label{\detokenize{PE103-E:id29}}\end{figure}
+\begin{tikzpicture}
+
+\node [above] at (3.5,6.1) {Gráfico I};
+
+\draw [gray!70] (0,0) grid (7,6);
+
+\foreach \x/\y in {.5/jan, 2/abr, 4/ago, 6/dez} \node [below] at (\x,0) {\y};
+
+\foreach \x/\y in {0/1950, 1/2000, 2/2050, 3/2100, 4/2150, 5/2200, 6/2250} \node [left] at (0,\x) {\y};
+
+\coordinate (a) at (.5,1);
+\coordinate (b) at (2,2);
+\coordinate (c) at (4,4);
+\coordinate (d) at (6,5);
+
+\draw [very thick, \currentcolor!80] (a) -- (b) -- (c) -- (d);
+\foreach \x in {a,b,c,d} \fill [\currentcolor!80] (\x) circle (2pt); 
+
+\end{tikzpicture}
+
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[yscale=1.25]
+
+\node [above] at (3.5,6.1) {Gráfico II};
+
+\draw [gray!70] (0,0) grid (7,6);
+
+\foreach \x/\y in {.5/jan, 2/abr, 4/ago, 6/dez} \node [below] at (\x,0) {\y};
+
+\foreach \x/\y in {0/1950, 1/2000, 2/2050, 3/2100, 4/2150, 5/2200, 6/2250} \node [left] at (0,\x) {\y};
+
+\coordinate (a) at (.5,1);
+\coordinate (b) at (2,2);
+\coordinate (c) at (4,4);
+\coordinate (d) at (6,5);
+
+\draw [very thick, \currentcolor!80] (a) -- (b) -- (c) -- (d);
+\foreach \x in {a,b,c,d}  \fill [\currentcolor!80] (\x) circle (2pt); 
+
+\end{tikzpicture}
+\label{\detokenize{PE103-E:id12}}\label{\detokenize{PE103-E:id29}}\end{figure}
 
 Analisando os gráficos, pode-se concluir que:
 \begin{enumerate}

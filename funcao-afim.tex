@@ -1,27 +1,95 @@
-\renewcommand\chapterillustration{abertura-estatistica1}
+\renewcommand\chapterillustration{abertura-afim}
 \renewcommand\chapterwhat{Funções linear e afim e suas representações algébrica e gráfica, taxa de variação, proporcionalidade direta, funções afins de domínio discreto (Progressões Aritméticas), Aplicações.}
 \renewcommand\chapterbecause{O modelo de variação constante é um dos modelos mais presentes em observações científicas e até mesmo em nosso cotidiano. Ele pode ser identificado por exemplo, em relações que modelam a compra/consumo e venda, o esvaziamento de um recipiente por um ralo em função do tempo ou na relação entre distância e tempo do “movimento uniforme” estudado pela Cinemática, entre tantos outros. Um caso particularmente importante é aquele em que há proporcionalidade entre as grandezas envolvidas na modelagem. As ideias desenvolvidas nesse capítulo servem como base para aplicações em diversas áreas.}
 \chapter{Função afim}
 
 
-\explore{ função linear}
-\label{\detokenize{AF107-0::doc}}\label{\detokenize{AF107-0:explorando-funcao-linear}}
+
+\mbox{}\thispagestyle{empty}\clearpage
+
+\thispagestyle{empty}
+
+\begin{center}
+Projeto: LIVRO ABERTO DE MATEMÁTICA
+
+\noindent \begin{tabular}{lcccr}
+\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
+\end{tabular}
+\end{center}
+
+\vspace*{.3cm}
+
+Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
+
+Versão digital do capítulo:
+
+\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF107.html}
+
+
+\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+Título: & Função Afim\\
+\\
+Ano/ Versão: & 2020 / versão 1.0 de 24 de março de 2020\\
+\\
+Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+\\
+Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+\\
+Produção:& Livro Aberto\\
+\\
+Coordenação:& Fabio Simas, \\
+            & Augusto Teixeira (livroaberto@impa.br)\\
+\\
+  Autores: & Gladson Antunes (UNIRIO),\\
+        & Michel Cambrainha (UNIRIO),\\
+             & Bruno Vianna (Colégio Pedro II).\\
+\\
+Revisão: &  Cydara Ripoll  \\
+         &  Letícia Rangel \\
+\\
+Design: & Andreza Moreira (Tangentes Design) \\
+\\
+  Ilustrações: & Miller  Guglielmo \\ 
+\\
+Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
+\\
+  Capa: & Foto de Scott Webb, no Unplash \\
+        & https://unsplash.com/photos/fMUIVein7Ng \\
+
+\end{tabular}
+\vspace{.5cm}
+
+
+\begin{minipage}[l]{5cm}
+  \includegraphics[width=3.5cm]{cc-by-sa}
+\end{minipage}\hfill
+\begin{minipage}[r]{5cm}
+{\Large  Patrocínio:}
+  
+  \includegraphics[width=3.5cm]{itau}
+\end{minipage}
+
+\clearpage
+
+\explore{função linear}\label{funcaolinear}
 No capítulo de Funções, você foi apresentado ao conceito de função, uma relação entre duas grandezas que atende determinadas condições. Neste capítulo, pretendemos colocá-lo em contato com um dos modelos mais presentes em observações científicas e até mesmo em nosso cotidiano, o modelo de variação constante, aqui representado pelo conceito de função afim. Este modelo pode ser identificado por exemplo, em relações que modelam a compra/consumo e venda, o esvaziamento de um recipiente por um ralo em função do tempo ou na relação entre distância e tempo do “movimento uniforme” estudado pela Cinemática, entre tantos outros. Antes de estudarmos a função afim propriamente dita, vamos entender um de seus casos particulares, a função linear.
 
 Comecemos analisando os seguintes problemas:
 
-\textbf{(Problema A)} Um grupo de 5 músicos toca uma peça de música em 10 minutos. Outro grupo de 35 músicos toca a mesma peça. Em quanto tempo eles tocarão?
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=400bp]{naoprop.png}
+\end{figure}
 
-\textbf{(Problema B)} O melhor tempo de Antônio para correr os 100 metros rasos é 17 segundos. Em quanto tempo ele correrá 1 km?
-
-\textbf{(Problema C)} Uma loja vende no mês de dezembro 320 cartões de Natal. Quantos cartões desses venderá nos meses de janeiro, fevereiro e abril, juntos?
 
 Os três problemas acima fornecem três informações e propõem que, a partir delas, determinemos uma quarta informação. Esse é o enunciado típico de problemas cujo método de solução é conhecido como “regra de três”. Entretanto, nenhum dos problemas apresentados, como você deve ter percebido, pode ser resolvido aplicando a tal regra. Você consegue imaginar por quê?
 
 Isso se deve ao fato de que as grandezas relacionadas não são proporcionais entre si. Não é verdade que se \(5\) músicos tocam uma peça de música em \(10\) minutos, \(35\) músicos (que é \(7 \times 5\)) tocarão a peça em \(7 \times 10\) minutos, afinal trata-se da mesma música, logo \(35\), \(45\) ou \(179\) músicos tocarão a tal peça nos mesmos \(10\) minutos. Isto é, o tempo de execução não é diretamente proporcional ao número de músicos que executam a música.
+
 \begin{description}
-\item[{Grandezas diretamente proporcionais\index{Grandezas diretamente proporcionais|textbf}}] \leavevmode\phantomsection\label{\detokenize{AF107-0:term-grandezas-diretamente-proporcionais}}
-Diz-se que duas grandezas são diretamente proporcionais quando elas se correspondem de tal modo que, multiplicando-se uma quantidade de uma delas por um número real, a quantidade correspondente da outra fica multiplicada pelo mesmo número, sempre que os resultados dessas multiplicações fizerem sentido no contexto observado.
+\item[Teorema]
+\leavevmode\phantomsection\label{\detokenize{AF107-0:term-grandezas-diretamente-proporcionais}}
+Diz-se que \textbf{duas grandezas são diretamente proporcionais} quando elas se correspondem de tal modo que, multiplicando-se uma quantidade de uma delas por um número real, a quantidade correspondente da outra fica multiplicada pelo mesmo número, sempre que os resultados dessas multiplicações fizerem sentido no contexto observado.
 \[\begin{array}{ccc}
 X\quad &\overline{\quad \quad \quad}& \quad Y \\
 k\cdot X \quad &\overline{\quad \quad \quad}& \quad k\cdot Y
@@ -29,6 +97,7 @@ k\cdot X \quad &\overline{\quad \quad \quad}& \quad k\cdot Y
 \end{description}
 
 É muito comum encontrarmos situações no nosso dia a dia em que as grandezas envolvidas são diretamente proporcionais, e você certamente já resolveu muitos problemas, na escola e fora dela, usando a “regra de três”.
+
 \begin{task}{Na piscina}
 \label{ativ-na-piscina}
 
@@ -38,44 +107,36 @@ Duas piscinas de 1000 litros cada estão sendo enchidas simultaneamente. A pisci
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture} [scale=1.2]
-\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=primario, fill=primario, shift only]
+\begin{tikzpicture}[scale=1.5, every node/.style={scale=1}]
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=\currentcolor!80, fill=\currentcolor!80, shift only]
 \begin{scope}[yscale=.5]
 \draw[lightgray](0,0)grid[xstep=.25,ystep=.25](6,10);
 \draw[gray](0,0)grid(6,10);
-\draw[thick, ->](0,0)--(6,0);
+\draw[thick, ->](0,0)--(6,0)node [below, shift={(-0.55,-0.2)}]{tempo(horas)};
 \draw[thick, ->](-0,0)--(0,10);
-\begin{scope}[overlay]
-\node[above] at (0,10){\tiny capacidade(litros)};
-\node[right] at (6,0) {\tiny tempo(horas)};
+\node[right, rotate=90]at (-.9,6){capacidade(litros)};
 \foreach \x in{0,1, 2, 3, 4, 5}
 \node[ponto]at(\x,2*\x){};
 \foreach\x in{0,1, 2, 3, 4, 5, 6}
-\node[below] at(\x, 0){\tiny \x};
+\node[below] at(\x, 0){ \x};
 \foreach\y in{100, 200, 300, ..., 1000}
-\node[left]at(0,.01*\y){\tiny \y};
+\node[left]at(0,.01*\y){ \y};
 \end{scope}
-\end{scope}
-
 \end{tikzpicture}
-
 \caption{Piscina 1}
+\label{piscina1}
 \end{figure}
-
 \begin{figure}[H]
-
 \centering
-\begin{tikzpicture}
-\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=primario, fill=primario, shift only]
+
+\begin{tikzpicture}[scale=1.5, every node/.style={scale=1}]
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=\currentcolor!80, fill=\currentcolor!80, shift only]
 \begin{scope}[yscale=.5]
 \draw[lightgray](0,0)grid[xstep=.25,ystep=.25](8,10);
 \draw[gray](0,0)grid(8,10);
-\draw[thick, ->](0,0)--(8,0);
+\draw[thick, ->](0,0)--(8,0)node [below, shift={(-0.55,-0.3)}]{tempo(horas)};
 \draw[thick, ->](-0,0)--(0,10);
-
-\begin{scope}[overlay]
-\node[above] at (0,10){\tiny   capacidade(litros)};
-\node[right] at (8,0) {\tiny      tempo(horas)};
+\node[right, rotate=90]at (-.9,6){ capacidade(litros)};
 \node[ponto]at(0,0){};
 \node[ponto]at(1,1.5){};
 \node[ponto]at(2,2){};
@@ -86,12 +147,14 @@ Duas piscinas de 1000 litros cada estão sendo enchidas simultaneamente. A pisci
 \node[ponto]at(7,9.5){};
 \node[ponto]at(8,10){};
 \foreach\x in{0,1, 2, 3, 4, 5, 6, 7, 8}
-\node[below] at(\x, 0){\tiny \x};
+\node[below] at(\x, 0){\x};
 \foreach\y in{100, 200, 300, ..., 1000}
-\node[left]at(0,.01*\y){\tiny \y};
+\node[left]at(0,.01*\y){\y};
 \end{scope}
-\end{scope}
-\end{tikzpicture}\caption{Piscina 2}
+\end{tikzpicture}
+\caption{Piscina 2}
+\label{piscina2}
+
 \end{figure}
 
 \begin{enumerate}
@@ -107,8 +170,6 @@ As grandezas volume total de água e tempo de enchimento da piscina 2 são diret
 \end{enumerate}
 \end{task}
 
-
-
 \begin{reflection}
 
 Suponha que os dados numéricos fossem omitidos dos eixos nos dois gráficos. Ainda assim seria possível determinar a proporcionalidade ou não entre as grandezas? Como?
@@ -117,45 +178,36 @@ Suponha que os dados numéricos fossem omitidos dos eixos nos dois gráficos. Ai
 
 \arrange{ função linear}
 \label{\detokenize{AF107-1::doc}}\label{\detokenize{AF107-1:organizando-as-ideias-funcao-linear}}
-Considere duas grandezas diretamente proporcionais que podem assumir qualquer valor real e vamos representá-las pelas letras \(x\) e \(y\). Então, sempre que multiplicarmos \(x\) por qualquer número real \(k\), o valor correspondente da grandeza \(y\) também fica multiplicado pelo mesmo valor. Isto é
+Considere duas grandezas diretamente proporcionais que podem assumir quaisquer valores reais e vamos representá-las pelas letras \(x\) e \(y\). Então, sempre que multiplicarmos \(x\) por qualquer número real \(k\), o valor correspondente da grandeza \(y\) também fica multiplicado pelo mesmo valor. Isto é
 \[\begin{array}{ccc}
-x\quad &\overline{\quad \quad \quad}&  y \\
-k\cdot x \quad &\overline{\quad \quad \quad}&  k\cdot y
+x\quad &\overline{\quad \quad \quad}& \quad y \\
+k\cdot x \quad &\overline{\quad \quad \quad}& \quad k\cdot y
   \end{array}\]
-Vamos agora, usando a notação de função, expressar a propriedade acima. Se considerarmos que a grandeza \(y\) é expressa como função da grandeza \(x\), isto é, \(y=f(x)\) ,  a segunda linha do diagrama acima implica que \(f(k\cdot x)=k\cdot y\). Portanto, qualquer que seja o valor de \(k\in\mathbb{R}\), tem-se
-\[ f(k\cdot x)= k\cdot f(x) \]
-Observe que, a partir dessa última igualdade, podemos fazer o seguinte
+Vamos agora, traduzir a propriedade acima para a linguagem de função. Consideremos que a grandeza \(y\) é expressa como função da grandeza \(x\), isto é, \(y=f(x)\). Vamos supor que quando a variável $x$ vale 1, o valor correspondente de $y$ é $a$, ou seja, $f(1)=a$. Assim, teremos
 
-\[ f(x)=f(x\cdot 1)= x\cdot f(1) \Longrightarrow f(x)=a\cdot x\]
-
-em que \(x\) é qualquer valor real e \(a=f(1)\) é uma constante, ou seja, um número real fixo.
+\[\begin{array}{ccc}
+x\quad &\overline{\quad \quad \quad}& \quad f(x) \\
+1 \quad &\overline{\quad \quad \quad}& \quad a \\
+2 \quad &\overline{\quad \quad \quad}& \quad 2a \\
+3 \quad &\overline{\quad \quad \quad}& \quad 3a \\
+\vdots \quad &\overline{\quad \quad \quad}& \quad \vdots\\
+  \end{array}\]
 
 \begin{observation}{}
-Usando a "regra de três\" fica assim
+Usando a ``regra de três'' nas duas primeiras linhas fica assim
 \[\begin{array}{ccc}
-x\quad &\overline{\quad \quad \quad}&  f(x) \\
-1 \quad &\overline{\quad \quad \quad}&  a
-  \end{array}\]
+x \quad &\overline{\quad \quad \quad}& \quad f(x)\\
+1\quad &\overline{\quad \quad \quad}& \quad a \end{array}\]
 O que nos leva a
-\begin{equation*}
-\dfrac x1 = \dfrac {f(x)}a \Longrightarrow f(x) = a\cdot x
-\end{equation*}
+\[\dfrac x1 = \dfrac {f(x)}a \Longrightarrow f(x) = a\cdot x\]
 \end{observation}
 
-\begin{description}
+Toda função real que pode ser expressa na forma $f(x)=ax$ para algum número real $a$, é chamada de \textbf{função linear}. Neste caso, as grandezas representadas pelas variáveis $x$ e $y=f(x)$ são diretamente proporcionais. O número $a=f(1)$ é chamado de \textbf{constante de proporcionalidade} entre as grandezas.
 
-\item [Definição] 
 
-Seja \(D\subset \mathbb{R}\). Uma função real \(f:D\to\mathbb{R}\) é chamada de \textbf{função linear} quando existe uma constante \(a\in \mathbb{R}\) tal que para todo \(x\in D\),
-\begin{equation*}
-\begin{split}f(x) = a\cdot x\end{split}
-\end{equation*}\end{description}
-
-Na \DUrole{xref,std,std-ref}{ativ-na-piscina} você deve ter percebido que as grandezas relacionadas eram diretamente proporcionais apenas no caso da piscina 1. Naquele caso, a função que fornece o volume de água na piscina em função do tempo é dada por \(V:\{1,2,3,4,5\}\to \mathbb{R}\),   \(V(t)=V(1)\cdot t=200\cdot t\).
+Na \DUrole{xref,std,std-ref}{Atividade Na piscina} você deve ter percebido que as grandezas relacionadas eram diretamente proporcionais apenas no caso da piscina 1. Naquele caso, a função que fornece o volume de água na piscina em função do tempo é dada por \(V:\{1,2,3,4,5\}\to \mathbb{R}\),   \(V(t)=V(1)\cdot t=200\cdot t\).
 
 \begin{reflection}
-
-
 
 Suponha que duas grandezas \(x\) e \(y\) se relacionem de maneira que \(y\) seja uma função linear de \(x\).
 \begin{enumerate}
@@ -169,13 +221,15 @@ Podemos afirmar também que \(x\) é uma função linear de \(y\)?
 \end{reflection}
 
 
-\practice{ }
-\label{\detokenize{AF107-1:praticando}}\begin{task}{Taxa de câmbio}
+\practice{função linear}
+\label{\detokenize{AF107-1:praticando}}
+
+\begin{task}{Taxa de câmbio}
 \label{ativ-cambio}
 
 
 
-Segundo o \sphinxhref{http://www.bcb.gov.br/pre/bc\_atende/port/taxCam.asp}{site do Banco Central do Brasil}, a \emph{taxa de câmbio} é o preço de uma moeda estrangeira medido em unidades ou frações (centavos) da moeda nacional. Em um determinado dia as taxas de câmbio do dólar americano e do euro eram respectivamente \(R\$ 3,20\) e \(R\$ 4,00\).
+Segundo o \href{http://www.bcb.gov.br/pre/bc\_atende/port/taxCam.asp}{site do Banco Central do Brasil}, a \emph{taxa de câmbio} é o preço de uma moeda estrangeira medido em unidades ou frações (centavos) da moeda nacional. Em um determinado dia as taxas de câmbio do dólar americano e do euro eram respectivamente \(R\$ 3,20\) e \(R\$ 4,00\).
 \begin{enumerate}
 \item {} 
 Nesse mesmo dia você deseja comprar \(100\) dólares. Qual seria o valor em reais necessário para realizar essa compra?
@@ -193,31 +247,18 @@ Com a taxa de câmbio que está sendo praticada nesse dia, quantos dólares amer
 \end{task}
 
 
+
 \begin{task}{Proporcionalidade na construção de retângulos}
 \label{ativ-prop-retangulo}
 
+Considere o retângulo \(R\) abaixo, de lados \(3\) e \(1,5\), e responda as questões propostas.
 
+\begin{figure}[H]
+\centering
 
-Na seção {\hyperref[\detokenize{GE202-0:sec-semelhanca-organizando1}]{\sphinxcrossref{\DUrole{std,std-ref}{Organizando as ideias: figuras semelhantes}}}} do Capítulo de semelhança, encontramos a seguinte definição para \emph{figuras semelhantes}:
-\begin{description}
-\item[{Figuras semelhantes\index{Figuras semelhantes|textbf}}] \leavevmode\phantomsection\label{\detokenize{AF107-1:term-figuras-semelhantes}}
-Duas figuras \(F\) e \(F'\) são semelhantes quando existe uma correspondência biunívoca entre os pontos de uma e os pontos de outra, de forma que, para quaisquer pontos \(X\) e \(Y\) da figura \(F\) e seus correspondentes \(X'\) e \(Y'\) da figura \(F'\) tem-se que a razão \(\dfrac{XY}{X'Y'}\)   é constante.
-
-\end{description}
-
-Apesar da linguagem um pouco diferente da que estamos usando neste capítulo, se analisarmos com cuidado podemos percerber que a noção de proporcionalidade está presente na definição de figuras semelhantes. Vamos traduzir!
-
-Considere as seguintes grandezas: \(\ell\) representa os comprimentos de todos os possíveis segmentos na figura \(F\) e \(\ell'\) representa os comprimentos de todos os possíveis segmentos correspondentes na figura \(F'\).
-
-De acordo com a definição, se as figuras são semelhantes, então existe uma função \(f\) que relaciona as duas grandezas, isto é, \(\ell'=f(\ell)\) e existe um número real \(a\) tal que \(\dfrac{\ell'}\ell = \dfrac{f(\ell)}\ell = a\). Portanto podemos dizer que, nesse caso, \(f(\ell)=a\cdot\ell\), ou seja, que entre duas figuras semelhantes existe uma função linear que relaciona os comprimentos dos segmentos de reta contidos nas duas figuras.
-
-Considere um retângulo \(R\), de lados \(3\) e \(1,5\).
-
-\begin{center}
 \begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
-
-\draw[thick,black,fill=primario] (0.,0.) -- (3.,0.) -- (3.,1.5) -- (0.,1.5) -- cycle;
+\draw[thick,black,fill=\currentcolor!80] (0.,0.) -- (3.,0.) -- (3.,1.5) -- (0.,1.5) -- cycle;
 \draw (0.2,0.) -- (0.2,0.2) -- (0.,0.2) -- (0.,0.);
 \draw (0.,1.3) -- (0.2,1.3) -- (0.2,1.5) -- (0.,1.5);
 \draw (2.8,1.5) -- (2.8,1.3) -- (3.,1.3) -- (3.,1.5);
@@ -226,46 +267,54 @@ Considere um retângulo \(R\), de lados \(3\) e \(1,5\).
 \node[ponto]at(3,0){};
 \node[ponto]at(3,1.5){};
 \node[ponto]at(0,1.5){};
-\node[below ]at(0,0){$A$};
-\node[below ]at(3,0){$B$};
-\node[above ]at(3,1.5){$C$};
-\node[above ]at(0,1.5){$D$};
-\node[above]at(1.7,-.7){$ \overline{AB}=3$};
-\begin{scope}[overlay]
-\node[right]at(3,.75){$ \overline{BC}=1.5$};
-\end{scope}
+\node[below ]at(0,0){$$};
+\node[below ]at(3,0){$$};
+\node[above ]at(3,1.5){$$};
+\node[above ]at(0,1.5){$$};
+\node[above]at(1.7,-.7){$3$};
+\node[right]at(3,.75){$1.5$};
 \end{tikzpicture}
-\end{center}
 
-Utilizando as ideias do texto anterior, responda as questões propostas.
+\end{figure}
+
 \begin{enumerate}
 \item {} 
 Observe o retângulo da figura a seguir e determine se ele é semelhante ou não ao retângulo \(R\).
-\begin{center}\begin{tikzpicture}
-\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black,]
-\draw[thick,black,fill=primario] (0.,0.) -- (6.,0.) -- (6.,1) -- (0.,1.)-- cycle;
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
+\draw[thick,black,fill=\currentcolor!80] (0.,0.) -- (6.,0.) -- (6.,1) -- (0.,1.)-- cycle;
 \draw (0.2,0.) -- (0.2,0.2) -- (0.,0.2) -- (0.,0.);
 \draw (0.,.8) -- (0.2,.8) -- (0.2,1) -- (0.,1);
 \draw (5.8,1) -- (5.8,.8) -- (6.,.8) -- (6.,1);
 \draw(6.,0.2) -- (5.8,0.2) -- (5.8,0.) -- (6.,0.);
-\begin{scope}[overlay]
 \node[ponto]at(0,0){};
 \node[ponto]at(6,0){};
 \node[ponto]at(6,1){};
 \node[ponto]at(0,1){};
-\node[below ]at(0,0){$A$};
-\node[below ]at(6,0){$B$};
-\node[above ]at(6,1){$C$};
-\node[above ]at(0,1){$D$};
-\node[above]at(3,-.7){$\overline{AB}=6$};
-\node[right]at(6,.5){$\overline{BC}=1.5$};
-\end{scope}
-\end{tikzpicture}\end{center}
+\node[below ]at(0,0){$$};
+\node[below ]at(6,0){$$};
+\node[above ]at(6,1){$$};
+\node[above ]at(0,1){$$};
+\node[above]at(3,-.7){$6$};
+\node[right]at(6,.5){$1.5$};
+\end{tikzpicture}
+
+\end{figure}
+
 \item {} 
 Na figura a seguir temos a medida base de um retângulo em destaque, qual deve ser a medida de sua altura para que o retângulo gerado seja semelhante a \(R\)? Qual a função linear que relaciona esses dois retângulos?
-\begin{center}\begin{tikzpicture}
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
-\fill[bottom color=primario,top color =white] (0.,0.) -- (6.,0.) -- (6.,.5) -- (0.,.5) -- cycle;
+\fill[bottom color=\currentcolor!80,top color =white] (0.,0.) -- (6.,0.) -- (6.,.5) -- (0.,.5) -- cycle;
 \draw (0.2,0.) -- (0.2,0.2) -- (0.,0.2) -- (0.,0.);
 \draw(6.,0.2) -- (5.8,0.2) -- (5.8,0.) -- (6.,0.);
 \draw(0.,.5)--(0.,0.) -- (6.,0.) -- (6.,.5);
@@ -277,17 +326,24 @@ Na figura a seguir temos a medida base de um retângulo em destaque, qual deve s
 \draw[fill](6,.6)circle(.5pt);
 \draw[fill](6,.7)circle(.5pt);
 \draw[fill](6,.8)circle(.5pt);
-\node[below ]at(0,0){$A$};
-\node[below ]at(6,0){$B$};
-\node[above ]at(6,1.5){$C$};
-\node[above ]at(0,1.5){$D$};
-\node[above]at(3,-.7){$\overline{AB}=6$};
-\end{tikzpicture}\end{center}
+\node[below ]at(0,0){$$};
+\node[below ]at(6,0){$$};
+\node[above ]at(6,1.5){$$};
+\node[above ]at(0,1.5){$$};
+\node[above]at(3,-.7){$6$};
+\end{tikzpicture}
+
+\end{figure}
 \item {} 
 Seguindo a mesma ideia do item anterior, qual deve ser a medida da altura desse novo retângulo de base \(5\), para que ele seja semelhante a \(R\)? E neste caso, qual a função linear entre os retângulos?
-\begin{center}\begin{tikzpicture}
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0,   draw=black, fill=black, shift only]
-\fill[bottom color=primario,top color =white] (0.,0.) -- (5.,0.) -- (5.,.5) -- (0.,.5) -- cycle;
+\fill[bottom color=\currentcolor!80,top color =white] (0.,0.) -- (5.,0.) -- (5.,.5) -- (0.,.5) -- cycle;
 \draw (0.2,0.) -- (0.2,0.2) -- (0.,0.2) -- (0.,0.);
 \draw(5.,0.2) -- (4.8,0.2) -- (4.8,0.) -- (5.,0.);
 \draw(0.,.5)--(0.,0.) -- (5.,0.) -- (5.,.5);
@@ -299,18 +355,23 @@ Seguindo a mesma ideia do item anterior, qual deve ser a medida da altura desse 
 \draw[fill](5,.6)circle(.5pt);
 \draw[fill](5,.7)circle(.5pt);
 \draw[fill](5,.8)circle(.5pt);
-\node[below ]at(0,0){$A$};
-\node[below ]at(5,0){$B$};
-\node[above ]at(5,1.5){$C$};
-\node[above ]at(0,1.5){$D$};
-\node[above]at(2.5,-.7){$\overline{AB}=5$};
-\end{tikzpicture}\end{center}
+\node[below ]at(0,0){$$};
+\node[below ]at(5,0){$$};
+\node[above ]at(5,1.5){$$};
+\node[above ]at(0,1.5){$$};
+\node[above]at(2.5,-.7){$5$};
+\end{tikzpicture}
+
+\end{figure}
 \item {} 
 Já na figura a seguir, apresentamos um retângulo de altura \(4\), qual deve ser a medida da base desse novo retângulo, para que ele seja semelhante a \(R\)?
 
-\begin{center}\begin{tikzpicture}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
-\fill[left color = white, right color =primario,] (2.,0.) -- (3.,0.) -- (3.,2.5) -- (2.,2.5) -- cycle;
+\fill[left color = white, right color =\currentcolor!80,] (2.,0.) -- (3.,0.) -- (3.,2.5) -- (2.,2.5) -- cycle;
 \draw[thick] (2.,0.) -- (3.,0.) -- (3.,2.5) -- (2.,2.5) ;
 \draw (2.8,2.5) -- (2.8,2.3) -- (3.,2.3) -- (3.,2.5);
 \draw(3.,0.2) -- (2.8,0.2) -- (2.8,0.) -- (3.,0.);
@@ -318,38 +379,45 @@ Já na figura a seguir, apresentamos um retângulo de altura \(4\), qual deve se
 \node[ponto]at(3,0){};
 \node[ponto]at(3,2.5){};
 \node[ponto]at(0,2.5){};
-\node[below ]at(0,0){$A$};
-\node[below ]at(3,0){$B$};
-\node[above ]at(3,2.5){$C$};
-\node[above ]at(0,2.5){$D$};
-\begin{scope}[overlay]
-\node[right]at(3,1.25){$\overline{BC}=4$};
-\end{scope}
+\node[below ]at(0,0){$$};
+\node[below ]at(3,0){$$};
+\node[above ]at(3,2.5){$$};
+\node[above ]at(0,2.5){$$};
+\node[right]at(3,1.25){$4$};
 \draw[fill](1.7,0)circle(.5pt);
 \draw[fill](1.8,0)circle(.5pt);
 \draw[fill](1.9,0)circle(.5pt);
 \draw[fill](1.7,2.5)circle(.5pt);
 \draw[fill](1.8,2.5)circle(.5pt);
 \draw[fill](1.9,2.5)circle(.5pt);
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
+
+\end{figure}
 \item {} 
 Na figura a seguir, apresentamos um retângulo cuja base tem a mesma medida da base de \(R\) (igual a \(3\)), e cuja altura coincide com a de um triângulo equilátero de lado medindo \(3\). Esse retângulo é semelhante a \(R\)?
-\begin{center}\begin{tikzpicture}
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
-\draw[fill=primario,very thick](0,0)--(4,0)--(4,3.46)--(0,3.46)--cycle;
+\draw[fill=\currentcolor!80,very thick](0,0)--(4,0)--(4,3.46)--(0,3.46)--cycle;
 \draw[fill=terciario,very thick](0,0)--(4,0)--(2,3.46)--cycle;
 \node[ponto]at(0,0){};
 \node[ponto]at(4,0){};
 \node[ponto]at(4,3.46){};
 \node[ponto]at(0,3.46){};
 \node[ponto]at(2,3.46){};
-\node[below]at(0,0){$A$};
-\node[below]at(4,0){$B$};
-\node[above]at(4,3.46){$C$};
-\node[above]at(0,3.46){$D$};
-\node[above]at(2,3.46){$P$};
-\node[above]at(2,-1.2){$\overline{AB}=\overline{AP}=\overline{PB}=3$};
-\end{tikzpicture}\end{center}
+\node[below]at(0,0){$$};
+\node[below]at(4,0){$$};
+\node[above]at(4,3.46){$$};
+\node[above]at(0,3.46){$$};
+\node[above]at(2,3.46){$$};
+\node[above]at(2,-.8){$3$};
+\end{tikzpicture}
+
+\end{figure}
 \item {} 
 Se utlizarmos a altura do retângulo da figura anterior na construção de um novo retângulo, qual deve ser a medida de sua base para que seja semelhante a \(R\)?
 
@@ -357,118 +425,159 @@ Se utlizarmos a altura do retângulo da figura anterior na construção de um no
 \end{task}
 
 
-
 \begin{task}{Qual é a área?}
 \label{ativ-qual-area}
 
-\(1.\) Cada círculo representado a seguir tem área total \(20\). Um   dos setores circulares destacados em amarelo nesses círculos tem área \(14\). Qual é esse setor?
+Caso tenha disponibilidade, sugerimos o uso da construção GeoGebra disponível \href{https://www.geogebra.org/m/Xjjym4e7}{neste link}, que é a versão eletrônica dessa atividade.
 
- %\begin{figure}[h]\centering
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=100bp]{{codigo}.png}
+\end{figure}
+
+
+
+\begin{enumerate}
+\item {}
+Cada círculo representado a seguir tem área total \(20\). Um   dos setores circulares destacados em verde nesses círculos tem área \(14\). Qual é esse setor?
+
+\begin{figure}[H]
+\centering
+
+
   \begin{tikzpicture}
     \draw(0,0)circle(1);
-    \draw[fill=primario] (1,0)--(0,0) --(210:1) arc (210:0:1);
+    \draw[fill=\currentcolor!80] (1,0)--(0,0) --(210:1) arc (210:0:1);
     \node at(-1,1){(a)};
 \end{tikzpicture}\quad\quad\quad
  \begin{tikzpicture}
     \draw(0,0)circle(1);
-    \draw[fill=primario] (1,0)--(0,0) --(250:1) arc (250:0:1);
+    \draw[fill=\currentcolor!80] (1,0)--(0,0) --(250:1) arc (250:0:1);
     \node at(-1,1){(b)};
  \end{tikzpicture}\quad\quad\quad
       \begin{tikzpicture}
     \draw(0,0)circle(1);
-    \draw[fill=primario] (1,0)--(0,0) --(270:1) arc (270:0:1);
+    \draw[fill=\currentcolor!80] (1,0)--(0,0) --(270:1) arc (270:0:1);
     \node at(-1,1){(c)};
  \end{tikzpicture}
- %\label{fig-setor1}
-%\end{figure}
+\end{figure}
 
-\(2.\) Agora, um dos setores circulares em amarelo tem área \(18\). Qual é esse setor?
-% \begin{figure}[h]\centering
+\item{}
+Agora, um dos setores circulares em verde tem área \(18\). Qual é esse setor?
+
+\begin{figure}[H]
+\centering
+
 
 \begin{tikzpicture}
   \draw(0,0)circle(1);
-  \draw[fill=primario] (1,0)--(0,0) --(330:1) arc (330:0:1);
+  \draw[fill=\currentcolor!80] (1,0)--(0,0) --(330:1) arc (330:0:1);
   \node at(-1,1){(a)};
  \end{tikzpicture}\quad\quad\quad
       \begin{tikzpicture}
   \draw(0,0)circle(1);
-  \draw[fill=primario] (1,0)--(0,0) --(250:1) arc (250:0:1);
+  \draw[fill=\currentcolor!80] (1,0)--(0,0) --(250:1) arc (250:0:1);
   \node at(-1,1){(b)};
  \end{tikzpicture}\quad\quad\quad
       \begin{tikzpicture}
   \draw(0,0)circle(1);
-  \draw[fill=primario] (1,0)--(0,0) --(300:1) arc (300:0:1);
+  \draw[fill=\currentcolor!80] (1,0)--(0,0) --(300:1) arc (300:0:1);
   \node at(-1,1){(c)};
-\end{tikzpicture}%\label{fig-setor2}\end{figure}
+\end{tikzpicture}
 
- \(3.\) Explique a estratégia matemática que você utilizou para resolver os itens anteriores? Dentre os setores circulares apresentados a seguir, um deles tem área \(7\). Aplique sua estratégia para determinar qual é esse setor.
+\end{figure}
+
+ \item{}
+Explique a estratégia matemática que você utilizou para resolver os itens anteriores? Dentre os setores circulares apresentados a seguir, um deles tem área \(7\). Aplique sua estratégia para determinar qual é esse setor.
+
+\begin{figure}[H]
+\centering
+
 
  \begin{tikzpicture}
 
    \draw(0,0)circle(1);
-   \draw[fill=primario] (1,0)--(0,0) --(110:1) arc (110:0:1);
+   \draw[fill=\currentcolor!80] (1,0)--(0,0) --(110:1) arc (110:0:1);
    \node at(-1,1){(a)};
  \end{tikzpicture}\quad\quad\quad
       \begin{tikzpicture}
-        \draw(0,0)circle(1);\draw[fill=primario] (1,0)--(0,0) --(126:1) arc (126:0:1);\node at((-1,1){(b)};
+        \draw(0,0)circle(1);\draw[fill=\currentcolor!80] (1,0)--(0,0) --(126:1) arc (126:0:1);\node at((-1,1){(b)};
          \end{tikzpicture}\quad\quad\quad
       \begin{tikzpicture}
         \draw(0,0)circle(1);
-        \draw[fill=primario] (1,0)--(0,0) --(142:1) arc (142:0:1);
+        \draw[fill=\currentcolor!80] (1,0)--(0,0) --(142:1) arc (142:0:1);
         \node at(-1,1){(c)};
       \end{tikzpicture}
+ \end{figure}
       
-\(4.\) Possivelvemente você encontrou alguma dificuldade para determinar a resposta correta no item anterior. Que tal acrescentarmos uma informação a mais para ajudar na decisão?
+\item{}
+Possivelvemente você encontrou alguma dificuldade para determinar a resposta correta no item anterior. Que tal acrescentarmos uma informação a mais para ajudar na decisão?
+
+\begin{figure}[H]
+\centering
+
 
 \begin{tikzpicture}
   \draw(0,0)circle(1);
-  \draw[fill=primario] (1,0)--(0,0) --(110:1) arc (110:0:1);
+  \draw[fill=\currentcolor!80] (1,0)--(0,0) --(110:1) arc (110:0:1);
   \node at(-1,1){(a)};
   \draw[atento] (.2,0) arc (0:110:.2);
   \node at(.4,.3){\tiny $ 110^\circ$};
    \end{tikzpicture}\quad\quad\quad
       \begin{tikzpicture}
         \draw(0,0)circle(1);
-        \draw[fill=primario] (1,0)--(0,0) --(126:1) arc (126:0:1);
+        \draw[fill=\currentcolor!80] (1,0)--(0,0) --(126:1) arc (126:0:1);
         \node at(-1,1){(b)};\draw[atento] (.2,0) arc (0:126:.2);
         \node at(.4,.3){\tiny $126^\circ$};
  \end{tikzpicture}\quad\quad\quad
       \begin{tikzpicture}
         \draw(0,0)circle(1);
-        \draw[fill=primario] (1,0)--(0,0) --(142:1) arc (142:0:1);
+        \draw[fill=\currentcolor!80] (1,0)--(0,0) --(142:1) arc (142:0:1);
         \node at(-1,1){(c)};
         \draw[atento] (.2,0) arc (0:142:.2);
         \node at(.4,.3){\tiny $ 142^\circ$};
  \end{tikzpicture}
+ \end{figure}
 
- \(5.\) E agora? Como você usou a medida do ângulo que determina o setor circular para ajudar no cálculo da área? Vamos fazer mais uma vez! Um dos setores apresentados a seguir tem área \(4\). Determine esse setor.
+\item{}
+E agora? Como você usou a medida do ângulo que determina o setor circular para ajudar no cálculo da área? Vamos fazer mais uma vez! Um dos setores apresentados a seguir tem área \(4\). Determine esse setor.
 
- \(6.\) Determine a função que relaciona a área do setor circular com o seu ângulo central, especificando seu domínio.
+\begin{figure}[H]
+\centering
 
- 
+
  \begin{tikzpicture}
-\draw(0,0)circle(1);\draw[fill=primario] (1,0)--(0,0) --(72:1) arc (72:0:1);\node at(-1,1){(a)}; \draw[atento] (.2,0) arc (0:72:.2);\node at(.4,.2){\tiny $ 72^\circ$}; \end{tikzpicture}\quad\quad\quad
+\draw(0,0)circle(1);\draw[fill=\currentcolor!80] (1,0)--(0,0) --(72:1) arc (72:0:1);\node at(-1,1){(a)}; \draw[atento] (.2,0) arc (0:72:.2);\node at(.4,.2){\tiny $ 72^\circ$}; \end{tikzpicture}\quad\quad\quad
       \begin{tikzpicture}
-\draw(0,0)circle(1);\draw[fill=primario] (1,0)--(0,0) --(60:1) arc (60:0:1);\node at(-1,1){(b)};\draw[atento] (.2,0) arc (0:60:.2);\node at(.5,.2){\tiny $ 60^\circ$}; \end{tikzpicture}\quad\quad\quad
+\draw(0,0)circle(1);\draw[fill=\currentcolor!80] (1,0)--(0,0) --(60:1) arc (60:0:1);\node at(-1,1){(b)};\draw[atento] (.2,0) arc (0:60:.2);\node at(.5,.2){\tiny $ 60^\circ$}; \end{tikzpicture}\quad\quad\quad
       \begin{tikzpicture}
-\draw(0,0)circle(1);\draw[fill=primario] (1,0)--(0,0) --(45:1) arc (45:0:1);\node at(-1,1){(c)};\draw[atento] (.2,0) arc (0:45:.2);\node at(.5,.2){\tiny $ 45^\circ$};
+\draw(0,0)circle(1);\draw[fill=\currentcolor!80] (1,0)--(0,0) --(45:1) arc (45:0:1);\node at(-1,1){(c)};\draw[atento] (.2,0) arc (0:45:.2);\node at(.5,.2){\tiny $ 45^\circ$};
  \end{tikzpicture}%\label{fig-setor5}
-%\end{figure}
+\end{figure}
+
+\item{}
+Determine a função que relaciona a área do setor circular com o seu ângulo central, especificando seu domínio.
+
+\end{enumerate}
 \end{task}
-
-
 
 \begin{reflection}
 
-Em uma circunferência, podemos relacionar a área \(A\) e o raio \(r\) por meio da função \(A(r)=\pi r^2\). Aumentando o raio da circunferência, sua área também aumenta. Isso nos indica que a função \(A\) é crescente. Reflita um pouco e responda: Essa função é linear? Ou seja, a área de um círculo é proporcional ao seu raio?
+Em uma circunferência, podemos relacionar a área \(A\) e o raio \(r\) por meio da função\linebreak \(A(r)=\pi r^2\). Aumentando o raio da circunferência, sua área também aumenta. Isso nos indica que a função \(A\) é crescente. Reflita um pouco e responda: Essa função é linear? Ou seja, a área de um círculo é proporcional ao seu raio?
 
-Pense no seguinte caso: A área de um círculo de raio \(2r\) é igual ao dobro da área de um círculo de raio \(r\)? Ou ainda, é possível encontrar um número real (fixo) tal que \(A(r)=k\cdot r\)?
-\begin{center}\begin{tikzpicture}
-\fill[primario](-2,0)circle(2cm);
+\textbf{Pense no seguinte caso:} A área de um círculo de raio \(2r\) é igual ao dobro da área de um círculo de raio \(r\)? Ou ainda, é possível encontrar um número real (fixo) tal que \(A(r)=k\cdot r\)?
+
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
+\fill[\currentcolor!80](-2,0)circle(2cm);
 \node[right]at(0.2,0){\Huge =};
-\fill[primario](2,0)circle(1cm);
+\fill[\currentcolor!80](2,0)circle(1cm);
 \node[right]at(3.2,0){\Huge +};
-\fill[primario](5,0)circle(1cm);
+\fill[\currentcolor!80](5,0)circle(1cm);
 \node[right]at(6.2,0){\Huge ?};
 \draw(-2,0)--+(50:2);
 \node[left]at(-1.4,.8){$2r$};
@@ -476,21 +585,21 @@ Pense no seguinte caso: A área de um círculo de raio \(2r\) é igual ao dobro 
 \node[left]at(2.4,.5){$r$};
 \draw(5,0)--+(50:1);
 \node[left]at(5.4,.5){$r$};
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
+
+\end{figure}
 \end{reflection}
 
 
 \explore{ taxa de variação média}
-\label{\detokenize{AF107-2:explorando-taxa-de-variacao-media}}\label{\detokenize{AF107-2::doc}}\begin{task}{Teor de álcool sanguíneo}
+\label{\detokenize{AF107-2:explorando-taxa-de-variacao-media}}\label{\detokenize{AF107-2::doc}}
+\begin{task}{Teor de álcool sanguíneo}
+
 \label{ativ-alcool}
 
+De acordo com o site \href{https://pt.wikihow.com/Calcular-o-N\%C3\%ADvel-de-\%C3\%81lcool-no-Sangue}{wikiHow} o Teor Alcoólico Sanguíneo, ou TAS, é a medida da proporção de álcool no sangue de uma pessoa. Um TAS de \(0,08\) indica que há \(80mg\) de álcool por \(100ml\) de sangue. O álcool é absorvido de forma diferente pelos homens e pelas mulheres. O corpo masculino geralmente tem mais água (\(61\%\) \emph{versus} \(52\%\)) e, portanto, dilui melhor o álcool, gerando TAS mais baixos.
 
-
-De acordo com o site \sphinxhref{https://pt.wikihow.com/Calcular-o-N\%C3\%ADvel-de-\%C3\%81lcool-no-Sangue}{wikiHow} o Teor Alcoólico Sanguíneo, ou TAS, é a medida da proporção de álcool no sangue de uma pessoa. Um TAS de \(0,08\) indica que há \(80mg\) de álcool por \(100ml\) de sangue.
-
-Uma bebida padrão geralmente consiste de \(350 ml\) de cerveja, \(150 ml\) de vinho ou um \(45 ml\) de bebidas fortes. No geral, uma bebida padrão é a que contém \(14 ml\) de álcool puro. O álcool é absorvido de forma diferente pelos homens e pelas mulheres. O corpo masculino geralmente tem mais água (\(61\%\) \emph{versus} \(52\%\)) e, portanto, dilui melhor o álcool, gerando TAS mais baixos.
-
-O TAS é proporcional ao número de doses de bebida padrão consumidas, de maneira que para um homem de \(75kg\), a função linear \(h(x)\) que relaciona o TAS com o número de doses \(x\) de bebida padrão é dada pela expressão
+O TAS é proporcional ao número de doses de bebida consumidas, de maneira que para um homem de \(75kg\), a função linear \(h(x)\) que relaciona o TAS com o número de doses \(x\) de bebida é dada pela expressão
 \begin{equation*}
 \begin{split}h(x)=0,0205 \cdot x.\end{split}
 \end{equation*}
@@ -501,40 +610,27 @@ Para uma mulher que pesa \(60 kg\), a mesma relação é dada pela função line
 \item {} 
 Complete a tabela a seguir que relaciona os valores de \(h(x)\) e de \(m(x)\) correspondentes a valores inteiros de \(x\), de \(0\) a \(5\).
 
-
-\begin{savenotes}\sphinxattablestart
+\begin{table}[H]
 \centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\begin{tabu} to \textwidth{|l|c|c|}
 \hline
-
-\(x\)
-&
-\(h(x)\)
-&
-\(m(x)\)
-\\
+\thead
+\(x\) & \(h(x)\) & \(m(x)\) \\
 \hline
-0
-&&\\
+0 & & \\
 \hline
-1
-&&\\
+1 & & \\
 \hline
-2
-&&\\
+2 & & \\
 \hline
-3
-&&\\
+3 & & \\
 \hline
-4
-&&\\
+4 & & \\
 \hline
-5
-&&\\
+5 & & \\
 \hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
+\end{tabu}
+\end{table}
 
 \item {} 
 Calcule, para a função \(h(x)\), as taxas de variação médias nos seguintes intervalos de valores de \(x\):
@@ -560,18 +656,22 @@ A partir dos itens anteriores, faça uma conjectura sobre as taxas de variação
 \end{enumerate}
 \end{task}
 
-
 \begin{task}{Câmara frigorífica}
 \label{ativ-camara}
 
+
 Uma câmara frigorífica está programada para diminuir sua temperatura segundo uma taxa constante em \(^\circ C\) por hora. Na primeira observação constata-se que ela está a \(0^\circ C\). Após \(8\) horas, realiza-se uma nova observação e seu visor mostra a temperatura de \(-24^\circ C\) e também o seguinte gráfico para a evolução da temperatura em função do tempo.
-\begin{center}\begin{tikzpicture}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[yscale=.75, xscale=1.25]
 \tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=black, fill=black, shift only]
 \draw(-3,-.05) grid(5,.05);
 \draw(-.05,-12) grid(.05,2);
 \draw[->, thick](-3,0)--(5,0);
 \draw[->, thick](0,-12)--(0,2);
-\draw[primario, thick](0,0)--(4,-12);
+\draw[\currentcolor!80, thick](0,0)--(4,-12);
 \draw[dashed](0,-12)--(4,-12)--(4,0);
 \node[ponto]at (0,0){};
 \node[ponto]at (4,-12){};
@@ -583,7 +683,9 @@ Uma câmara frigorífica está programada para diminuir sua temperatura segundo 
 \node[left]at(0,.5*\y){\y};
 \node[left]at(0,1){2};
 \node[left]at(0,2){4};
-\end{tikzpicture}\end{center}\begin{enumerate}
+\end{tikzpicture}
+\end{figure}
+\begin{enumerate}
 \item {} 
 Qual a temperatura da câmara \(1\) hora após a primeira observação? E \(5\) horas após a primeira observação? E \(t\) horas após a primeira observação?
 
@@ -596,27 +698,20 @@ Determine a função que relaciona temperatura e tempo nesse contexto, considera
 \item {} 
 Como seria o gráfico se a temperatura, no mesmo intervalo de tempo, ao invés de diminuir, estivesse aumentando \(1,5^\circ C/h\)? Qual seria a expressão da função, nesse caso? Teríamos uma função crescente ou decrescente? Por que?
 
-\item {} 
-Complete as lacunas da sentença abaixo para formular uma conjectura que relacione a taxa de variação média da função linear com o crescimento ou decrescimento da função.
-
-“Quando a taxa de variação média de uma função linear é um número real \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_, a função é \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ e quando a taxa é um número real \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_, a função é \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_.”
-
 \end{enumerate}
 \end{task}
-
 
 \begin{task}{Hora de carregar o celular}
 \label{ativ-celular}
 
-
-
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=150bp]{{celular}.jpg}
+\noindent\includegraphics[width=100bp]{{celular}.jpg}
 \end{figure}
 
 O tempo total de recarga da bateria (de \(0\%\) a \(100\%\)) de um determinado modelo de telefone celular é  de \(2\) horas e \(5\) minutos. Supondo que o carregamento ocorre segundo uma taxa constante:
+
 \begin{enumerate}
 \item {} 
 Faça uma tabela que forneça o percentual de carga na bateria a cada \(25\) minutos, a partir de zero.
@@ -632,22 +727,18 @@ Determine a função que modela o carregamento desse modelo de telefone, especif
 
 \item {} 
 Qual é a taxa de carregamento desse modelo de telefone celular.
-
 \end{enumerate}
 \end{task}
 
-
-
-
-\arrange{ taxa de variação média}
+\arrange{taxa de variação média}
 \label{\detokenize{AF107-2:organizando-as-ideias-taxa-de-variacao-media}}
-No capítulo de Introdução às Funções, você aprendeu a calcular a taxa de variação média de uma função em um determinado intervalo. É um número expresso em forma de uma razão que fornece diversas informações sobre o comportamento da função no intervalo considerado.
+No capítulo de Taxa de variação, você aprendeu a calcular a taxa de variação média de uma função em um determinado intervalo. É um número expresso em forma de uma razão que fornece diversas informações sobre o comportamento da função no intervalo considerado.
 
 Relembrando, se um intervalo \([x_1,x_2]\) está contido no domínio de uma função \(f\), então a taxa de variação média dessa função nesse intervalo é a razão
 \begin{equation*}
-\begin{split}\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\end{split}
+\begin{split}\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\end{split}.
 \end{equation*}
-Como você deve ter percebido na \DUrole{xref,std,std-ref}{ativ-alcool}, o valor obtido para as taxas de variação médias nos diversos intervalos foi sempre o mesmo para cada função considerada. Essa é uma propriedade importante das funções lineares, que provaremos agora.
+Como você deve ter percebido na \DUrole{xref,std,std-ref}{Atividade Teor de álcool sanguíneo}, o valor obtido para as taxas de variação médias nos diversos intervalos foi sempre o mesmo para cada função considerada. Essa é uma propriedade importante das funções lineares, que provaremos agora.
 
 Considere uma função linear \(\ell:\mathbb{R}\to\mathbb{R}\), dada por \(\ell(x)=a\cdot x\), e também dois números reais distintos \(x_1<x_2\). A taxa de variação média de \(\ell\) no intervalo  \([x_1,x_2]\) pode ser calculada assim
 \begin{equation*}
@@ -663,16 +754,13 @@ o resultado coincide com o coeficiente de \(x\) na expressão da função, e tam
 
 \end{enumerate}
 
-\begin{observation}{}
-Toda função linear $f$ tem taxa de variação média constante igual a $f(1)$, e pode ser representada pela expressão $f(x)=f(1)\cdot x$.
-\end{observation}
+\begin{description}
+\item[Teorema]
+Toda função linear \(f\) tem taxa de variação média constante igual a \(f(1)\), e pode ser representada pela expressão \(f(x)=f(1)\cdot x\).
+\end{description}
 
-\begin{reflection}
 
-É verdade que se uma função tem taxa de variação média constante então ela é uma função linear? Pense em exemplos com taxas de variação médias constantes e verifique se há ou não proporcionalidade nesses casos.
-\end{reflection}
-
-Usando essas ideias no contexto da \DUrole{xref,std,std-ref}{ativ-camara}, podemos afirmar que a expressão da temperatura em função do tempo, mostrada pelo gráfico pode ser dada por \(f(t)=-3t\), uma vez que \(f(1)=-3\). A cada hora a temperatura decresce \(3^\circ C\), gerando portanto uma função decrescente.
+Usando essas ideias no contexto da \DUrole{xref,std,std-ref}{Atividade Câmara frigorífica}, podemos afirmar que a expressão da temperatura em função do tempo, mostrada pelo gráfico pode ser dada por \(f(t)=-3t\), uma vez que \(f(1)=-3\). A cada hora a temperatura decresce \(3^\circ C\), gerando portanto uma função decrescente.
 
 De uma maneira geral, se a taxa de variação média \(a\) de uma função linear é um número real \textbf{negativo}, então essa função é decrescente, pois, para \(a<0\)
 \begin{equation*}
@@ -684,8 +772,13 @@ Por outro lado, se a taxa de variação média \(a\) de uma função linear é u
 \end{equation*}
 Vamos agora entender como é a representação gráfica de uma função com taxa de variação média constante. Para isso, consideremos uma função \(f:\mathbb{R}\to\mathbb{R}\) que tenha essa propriedade, isto é, para qualquer intervalo a taxa de variação média de \(f\) neste intervalo é igual a \(a\).
 
-Na figura a seguir, os pontos \(A=(x_1,f(x_1))\) e \(B=(x_2,f(x_2))\) pertencem ao gráfico da função \(f\). O segmento \(BC\) mede \(f(x_2)-f(x_1)\) e o segmento \(AC\) mede \(x_2-x_1\). Dessa forma o quociente \(\dfrac{\overline{BC}}{\overline{AC}}\) é igual à taxa de variação média da função nesse intervalo, e portanto podemos concluir que \(\overline{BC}=a\cdot \overline{AC}\).
-\begin{center}\begin{tikzpicture}
+Na figura a seguir, os pontos \(A=(x_1,f(x_1))\) e \(B=(x_2,f(x_2))\) pertencem ao gráfico da função \(f\). O segmento \(BC\) mede \(f(x_2)-f(x_1)\) e o segmento \(AC\) mede \(x_2-x_1\). Dessa forma o quociente \(\dfrac{\overline{BC}}{\overline{AC}}\) é igual à taxa de variação média da função nesse intervalo, e portanto podemos conluir que \(\overline{BC}=a\cdot \overline{AC}\).
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
 \draw[->, thick](-.5,0)--(4,0);
 \draw[->, thick](0,-.5)--(0,3.5);
@@ -704,11 +797,18 @@ Na figura a seguir, os pontos \(A=(x_1,f(x_1))\) e \(B=(x_2,f(x_2))\) pertencem 
 \node[right]at(3,1){$C$};
 \node[ponto]at(3,2.5){};
 \node[right]at(3,2.5){$B$};
-\end{tikzpicture}\end{center}\begin{equation*}
+\end{tikzpicture}
+\end{figure}
+
+\begin{equation*}
 \begin{split}\dfrac{\overline{BC}}{\overline{AC}}= \dfrac{f(x_2)-f(x_1)}{x_2-x_1}=a \Longrightarrow \overline{BC}=a\cdot \overline{AC}.\end{split}
 \end{equation*}
 Por isso, quaisquer dois pontos do gráfico de \(f\), sempre serão extremidades da hipotenusa de um triângulo retângulo cujos catetos são paralelos aos eixos e suas medidas se relacionam conforme a seguinte figura.
-\begin{center}\begin{tikzpicture}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
 \draw[->, thick](-.5,0)--(4,0);
 \draw[->, thick](0,-.5)--(0,3.5);
@@ -719,9 +819,14 @@ Por isso, quaisquer dois pontos do gráfico de \(f\), sempre serão extremidades
 \node[ponto]at(1,1){};
 \node[ponto]at(3,1){};
 \node[ponto]at(3,2.5){};
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
+\end{figure}
+
 Consideremos agora três pontos do gráfico de \(f\) com os respectivos triângulos retângulos da construção anterior.
-\begin{center}\begin{tikzpicture}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
 \draw[->, thick](-.5,0)--(4,0);
 \draw[->, thick](0,-.5)--(0,3.5);
@@ -735,16 +840,22 @@ Consideremos agora três pontos do gráfico de \(f\) com os respectivos triângu
 \node[right]at(3,2.7){$a\cdot D$};
 \draw(1.5,1)rectangle++(-1mm, 1mm);
 \draw(3,2)rectangle++(-1mm, 1mm);
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
+\end{figure}
 Como os triângulos são semelhantes e têm um ponto em comum, podemos concluir que os três pontos pertencem a uma mesma reta. A conclusão é válida quaisquer que sejam os três pontos considerados, logo acabamos de justificar a seguinte propriedade.
 
-\begin{observation}{}
+\begin{description}
+\item[Teorema]
+
 Se uma função tem taxa de variação média constante então seu gráfico está contido em uma reta.
 
 Em particular, como a função linear tem taxa de variação média constante, seu gráfico está contido em uma reta.
-\end{observation}
-\begin{observation}{}
-{\textbf Algumas propriedades da função linear:}
+\end{description}
+
+
+\begin{observation}{Algumas propriedades da função linear}
+
+
 \begin{itemize}
 \item {} 
 Sempre que fizer sentido calcular a imagem de \(x=0\), teremos \(f(0)=a \cdot 0 = 0\), isto é, a origem \((0,0)\) do plano cartesiano pertencerá ao gráfico de \(f\). Em qualquer caso, o gráfico de uma função linear está contido em uma reta que passa pela origem (mesmo quando não fizer sentido calcular a imagem de \(x=0\)).
@@ -755,11 +866,16 @@ A taxa de variação da função linear \(f(x)=ax\) também pode ser calculada f
 \end{itemize}
 \begin{equation*}
 \begin{split}f(x+1)-f(x)=a(x+1)-ax=ax+a-ax=a\end{split}
-\end{equation*}\begin{center}\begin{tikzpicture}
+\end{equation*}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
 \draw[thick,->](-1,0)--(4,0);
 \draw[thick,->](0,-1)--(0,4);
-\draw[domain=-.5:2, thick, primario]plot(\x,2*\x);
+\draw[domain=-.5:2, thick, \currentcolor!80]plot(\x,2*\x);
 \draw[dashed, thick](.5,0)--(.5,1)--(0,1);
 \draw[dashed, thick](1.5,0)--(1.5,3)--(0,3);
 \draw[dashed, thick](.5,1)--(1.5,1);
@@ -771,19 +887,41 @@ A taxa de variação da função linear \(f(x)=ax\) também pode ser calculada f
 \node[below] at(.5,0){$x$};
 \node[left] at(0,3){$f(x+1)$};
 \node[left] at(0,1){$f(x)$};
-\end{tikzpicture}\end{center}\begin{itemize}
+\end{tikzpicture}
+\end{figure}
+
+\begin{itemize}
 \item {} 
-Para taxas de variação médias positivas, quanto maior for o valor de \(a\), mais inclinada será a reta que contém o gráfico da função linear associada.
+%Para taxas de variação médias positivas, quanto maior for o valor de \(a\), mais inclinada será a reta que contém o gráfico da função linear associada.
+A função linear $f(x)=x$ é chamada \textbf{função identidade}.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.7}]
+
+\draw [gray!50](-6.5,-6.5) grid (6.5,6.5);
+\draw [->] (-6.5,0) -- (6.5,0);
+\draw [->] (0,-6.5) -- (0,6.5);
+\foreach \x in {-6,...,-1,1,2,...,6}{
+\node [below] at (\x,0) {\x};
+\node [left] at (0,\x) {\x};
+}
+
+\draw [very thick, \currentcolor!80] (-6.5,-6.5) -- (6.5,6.5);
+\node [above left] at (0,0) {0};
+\end{tikzpicture}
+\end{figure}
 
 \end{itemize}
 
 % \begin{figure}[H]
 % \centering
 
-% \noindent\includegraphics[width=400bp]{aumenta_a.gif}
+% \noindent\includegraphics[width=400bp]{{aumenta_a}.png}
 % \end{figure}
 
-Para uma visualização do comportamento da representação gráfica com taxa de variação média também negativa, sugerimos o uso da construção GeoGebra disponível \sphinxhref{https://www.geogebra.org/m/FSnzt9vC}{neste link} .
+Para uma visualização do comportamento da representação gráfica com taxa de variação média também negativa, sugerimos o uso da construção GeoGebra disponível \href{https://www.geogebra.org/m/FSnzt9vC}{neste link} .
 
 \begin{figure}[H]
 \centering
@@ -791,11 +929,11 @@ Para uma visualização do comportamento da representação gráfica com taxa de
 \noindent\includegraphics[width=100bp]{{codigo2_2}.png}
 \end{figure}
 
-% \begin{figure}[H]
-% \centering
-
-% \noindent\includegraphics[width=400bp]{{taxa_linear}.png}
-% \end{figure}
+%\begin{figure}[H]
+%\centering
+%
+%\noindent\includegraphics[width=400bp]{{taxa_linear}.png}
+%\end{figure}
 \begin{itemize}
 \item {} 
 Se uma reta contém a origem do plano cartesiano e o ponto \((x_0,y_0)\) com \(x_0\neq 0\), então ela é o gráfico da função linear \(f:\mathbb{R}\to\mathbb{R}\), dada por \(f(x)=ax\), em que \(a=\dfrac{y_0}{x_0}\).
@@ -804,10 +942,11 @@ Se uma reta contém a origem do plano cartesiano e o ponto \((x_0,y_0)\) com \(x
 
 Para verificar isso, basta observarmos uma reta nas condições dadas e os dois  triângulos retângulos destacados da figura a seguir a partir da origem e dos pontos \((x_0,y_0)\) e \((x,y)\). Observe que, qualquer que seja o ponto \((x,y)\) escolhido diferente da origem, esses triângulos são semelhantes, portanto,
 \begin{equation*}
-\dfrac{f(x)}{x}=\dfrac{y_0}{x_0} \Longrightarrow f(x)=\dfrac{y_0}{x_0} \cdot x
+\begin{split}\dfrac{f(x)}{x}=\dfrac{y_0}{x_0} \Longrightarrow f(x)=\dfrac{y_0}{x_0} \cdot x\end{split}
 \end{equation*}
 
-\begin{center}
+\begin{figure}[H]
+\centering
 
 \begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
@@ -816,9 +955,9 @@ Para verificar isso, basta observarmos uma reta nas condições dadas e os dois 
 \fill[pattern color=secundario, pattern =north east lines](3,0)--(3,2.25)--(0,0)-- cycle;
 \draw[dashed](2,0)--(2,1.5)--(0,1.5);
 \draw[dashed](3,0)--(3,2.25)--(0,2.25);
-\draw[thick, ->](-1.5,0)--(4,0);
+\draw[thick, ->](-1.5,0)--(3.5,0);
 \draw[thick, ->] (0,-1.5)--(0,3.5);
-\draw[thick,primario,domain=-1.5:4]plot(\x,.75*\x);
+\draw[thick,\currentcolor!80,domain=-1.5:4]plot(\x,.75*\x);
 \node[ponto]at(2, 1.5){};
 \node[ponto]at(3, 2.25){};
 \node[below] at(2,0){$x$};
@@ -827,90 +966,148 @@ Para verificar isso, basta observarmos uma reta nas condições dadas e os dois 
 \node[left] at(0,2.25){$y_0$};
 \end{tikzpicture}
 
-\end{center}
-
+\end{figure}
 Assim, por exemplo, a reta que contém a origem e o ponto \((3,8)\) é o gráfico da função \(f(x)=\dfrac 83 x\). Se a reta contém a origem e o ponto \((-5,2)\) ela será o gráfico da função \(g(x)=\dfrac{2}{-5} x=-\dfrac{2}{5}x\).
-\begin{center}\begin{tikzpicture}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
-\draw[thick, ->](-2,0)--(5,0);
-\draw[thick, ->] (0,-1.5)--(0,5);
-\draw[thick,primario,samples=100,domain=-.5:1.5]plot(\x, 3*\x);
+\draw[thick, ->](-2,0)--(2.5,0);
+\draw[thick, ->] (0,-1.5)--(0,3.5);
+\draw[thick,\currentcolor!80,samples=100,domain=-.5:1.15]plot(\x, 3*\x);
 \draw[dashed](.5,0)--(.5,1.5)--(0,1.5);
 \node[ponto]at(.5,1.5){};
 \node[right]at(.5,1.5){$(3,8)$};
 \node[below]at(.5,0){$3$};
 \node[left]at(0,1.5){$8$};
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
+
+\end{figure}
 Gráfico da função \(f(x)=\dfrac 83 x\)
-\begin{center}\begin{tikzpicture}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=1.5]
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
 \draw[thick, ->](-3,0)--(3,0);
-\draw[thick, ->] (0,-1.5)--(0,3);
+\draw[thick, ->] (0,-1.5)--(0,2);
 \draw[dashed](-1.5,0)--(-1.5,.5)--(0,.5);
 \node[above] at(-1.5,.5){$(-5,2)$};
 \node[below] at(-1.5,0){$-5$};
 \node[right] at(0,.5){$2$};
-\draw[domain=-3:3,thick,primario,samples=100]plot(\x,{-\x/3});
+\draw[domain=-3:3,thick,\currentcolor!80,samples=100]plot(\x,{-\x/3});
 \node[ponto] at(-1.5,.5){};
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
+\end{figure}
 Gráfico da função \(g(x)=-\dfrac{2}{5}x\).
 
 Concluímos, assim, que toda reta não vertical que contém a origem é o gráfico de uma função linear.
 \end{observation}
 
 
-\practice{ }
+\practice{taxa de variação média}
 \label{\detokenize{AF107-3::doc}}\label{\detokenize{AF107-3:praticando}}
 
 \begin{task}{Quando trocar o filtro do purificador?}
-\label{\detokenize{AF107-3:ativ-purificador}}\label{\detokenize{AF107-3:atividade-quando-trocar-o-filtro-do-purificador}}
-
+\label{quando-trocar-o-filtro-do-purificador}
 
 Há \(1\) ano você adquiriu um purificador de água com capacidade de refrigeração, e deseja saber quanto tempo falta para realizar a troca do filtro interno. No manual do fabricante do seu purificador, você encontra o seguinte quadro:
 
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=450bp]{{purificador}.png}
-\end{figure}
+%\centering
+\setlength\tabulinesep{1mm}
+\begin{longtabu} to \textwidth{|c|c|c|c|c|c|}
+\hline\endfirsthead
+%\thead
+\cellcolor{\currentcolor!80}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{FIT}}}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{FLAT}}}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{PLUS}}}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{SLIM}}}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{STAR}}}\\
+\hline
+\makecell{Dimensões \\ Altura \\ Largura \\ Profundidade} &\makecell{ 27cm \\ 29cm \\ 36cm} & \makecell{29cm \\ 36cm \\36cm} & \makecell{40cm \\ 30cm \\ 45cm} & \makecell{36cm \\ 25cm \\ 41cm} & \makecell{40cm \\ 30cm \\ 36cm}\\
+\hline
+Peso bruto & 13kg & 12kg &14kg & 13kg & 13kg \\
+\hline
+\parbox{2cm}{\centering Capacidade de refrigeração com ambiente a $32^{\circ}$C e água a $27^{\circ}$C} & \parbox{2cm}{\centering 1,1 litros/hoora (atende até 15 pessoas)} & \parbox{2cm}{\centering 1,5 litros/hora (atende até 10 pessoas)} & \parbox{2cm}{\centering 4,4 litros/hora (atende até 30 pessoas)} & \parbox{2cm}{\centering 1,5 litros/hora (atende até 10 pessoas)} & \parbox{2cm}{\centering 2,2 litros/hora (atende até 15 pessoas)}\\ 
+\hline 
+\parbox{2cm}{\centering Capacidade de armazenamento de águal gelada} & 1,2 litros & 1.5 litros & 2 litros & 1.5 litros & 2 litros \\
+\hline
+\makecell{Gás \\ refrigerante} & R134a & R134a & R134a & R134a & R134a \\
+\hline
+Carga de gás & 36g & 32g & 32g & 32g & 36g \\
+\hline
+Tensão & \parbox{2cm}{\centering 127V ou 220V-60Hz} & \parbox{2cm}{\centering 127V ou 220V-60Hz} & \parbox{2cm}{\centering 127V ou 220V-60Hz} &  \parbox{2cm}{\centering 127V ou 220V-60Hz} &  \parbox{2cm}{\centering 127V ou 220V-60Hz} \\
+\hline 
+Potência & 100W & 100W & 100W & 100W & 100W \\
+\hline
+Pressão nominal & \multicolumn{5}{c|}{0,196MPa (30 metros de coluna de água)} \\
+\hline
+\parbox{3cm}{\centering Temperatura min/max de rede hidráulica} & \multicolumn{5}{c|}{0,29MPa a 0,392MPa (3 a 40 metros de coluna de água)}\\
+\hline
+\parbox{3cm}{\centering Temperatura min/max de trabalho}&\multicolumn{5}{c|}{$5^{\circ}$C a $42^{\circ}$C}\\
+\hline
+\parbox{2cm}{\centering Vazão elemento filtrante} & \multicolumn{5}{c|}{4.000 litros} \\
+\hline
+\parbox{2cm}{\centering Vazão máxima recomendada} & \multicolumn{5}{c|}{0,75 litros/minuto} \\
+\hline
+\parbox{2cm}{\centering Volume interno do aparelho} & 1,6 litros & 2 litros & 2,5 litros & 2 litros & 2,5 litros \\
+\hline
+\parbox{2cm}{\centering Volume de referência para ensio de particulado} &\multicolumn{5}{c|}{4.000 litros}\\
+\hline
+\end{longtabu}
 \begin{enumerate}
-\item {} 
-Quais informações do quadro são relevantes para responder à sua dúvida?
+\item Quais informações do quadro são relevantes para responder à sua dúvida?
 
-\item {} 
-Explique com suas palavras o significado da vazão 0,75 litros/minuto.
+\item Explique com suas palavras o significado da vazão 0,75 litros/minuto.
 
-\item {} 
-Para calcular a vida útil do seu filtro interno, é necessário estimar a quantidade de água consumida diariamente na sua casa. Suponha, então, que você observou que o purificador é acionado ao longo de um dia o equivalente ao tempo total de 12 minutos. Quantos litros de água são consumidos em um dia, nessas condições? (assuma que o purificador foi regulado para funcionar com a vazão máxima recomendada pelo fabricante)
+\item Para calcular a vida útil do seu filtro interno, é necessário estimar a quantidade de água consumida diariamente na sua casa. Suponha, então, que você observou que o purificador é acionado ao longo de um dia o equivalente ao tempo total de 12 minutos. Quantos litros de água são consumidos em um dia, nessas condições? (assuma que o purificador foi regulado para funcionar com a vazão máxima recomendada pelo fabricante)
 
-\item {} 
-Assumindo que o consumo estimado no item anterior seja o mesmo para todos os dias, qual foi o consumo de água do purificador ao final do primeiro dia de uso? E entre o 10º e o 11º dias de uso?
+\item Assumindo que o consumo estimado no item anterior seja o mesmo para todos os dias, qual foi o consumo de água do purificador ao final do primeiro dia de uso? E entre o 10º e o 11º dias de uso?
 
-\item {} 
-Qual o aumento do consumo de água observado para cada dia de uso do purificador?
+\item Qual o aumento do consumo de água observado para cada dia de uso do purificador?
 
-\item {} 
-Calcule a vida útil do filtro interno do seu aparelho e, supondo que você tenha utilizado o seu purificador todos os dias desde a instalação, determine em quanto tempo você deverá solicitar a troca do seu filtro interno.
+\item Calcule a vida útil do filtro interno do seu aparelho e, supondo que você tenha utilizado o seu purificador todos os dias desde a instalação, determine em quanto tempo você deverá solicitar a troca do seu filtro interno.
 
-\item {} 
-Com base nas informações que você possui, encontre uma expressão matemática que relacione o consumo de água do purificador em função do tempo de uso em dias e represente-a graficamente.
-
+\item Com base nas informações que você possui, encontre uma expressão matemática que relacione o consumo de água do purificador em função do tempo de uso em dias e represente-a graficamente.
 \end{enumerate}
+
 \end{task}
+
 
 \explore{ função afim}
 \label{\detokenize{AF107-4:sec-funcao-afim}}\label{\detokenize{AF107-4::doc}}\label{\detokenize{AF107-4:explorando-funcao-afim}}
 
-\subsection{Atividade: distância x tempo}
-\label{\detokenize{AF107-4:atividade-distancia-x-tempo}}\label{\detokenize{AF107-4:ativ-dist-tempo}}
-
+\begin{task}{distância x tempo}
+\label{ativ-dist-tempo}
 
 O gráfico a seguir mostra a variação da distância a um ponto de referência de uma pessoa que caminha em linha reta durante \(4\) segundos. Algumas informações sobre o movimento podem ser extraídas diretamente dessa representação gráfica.
 \phantomsection\label{\detokenize{AF107-4:fig-tempo-distancia}}
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{{tempo_distancia_1}.png}
+\begin{tikzpicture}[yscale=.75]
+
+\draw [dashed, help lines, thin] (0,0) grid (4.5,9.5);
+\draw [->] (-1,0) -- (4.5,0);
+\draw [->] (0,-1) -- (0,9.5);
+
+\draw [\currentcolor, very thick] (0,1) -- (4,9) node [above right] {$f$};
+\draw [thick, dashed] (0,1) -- (4.5,1);
+\draw [thick, dashed] (4,0) -- (4,9);
+\draw [thick, dashed] (0,9) -- (4,9);
+
+\foreach \x in {1,...,4}{
+\draw [ thick] (\x,-.1) -- (\x,.1);
+\node [below] at (\x,-.1) {\x};}
+
+\foreach \x in {2,4,...,8} \node [left] at (-.1,\x) {\x};
+\foreach \x in {1,...,9} \draw [thick] (-.1,\x) -- (.1,\x);
+
+\node [below] at (2,1) {tempo decorrido};
+\node [left] at (0,1) {início};
+\node [rotate=90, above] at (-.5,8) {distância ($m$)};
+\node [rotate=90, below] at (4.5,5) {distância percorrida};
+\node [right] at (4.5,0) {tempo ($s$)};
+\end{tikzpicture}
+
+
 \label{\detokenize{AF107-4:fig-tempo-distancia}}\end{figure}
 \begin{enumerate}
 \item {} 
@@ -935,88 +1132,115 @@ Qual a distância percorrida pela pessoa entre \(1\) e \(2\) segundos? E entre \
 O que se pode concluir, a partir das suas respostas nos itens (e) e (f), sobre a variação da distância percorrida a cada minuto de caminhada?
 
 \item {} 
-As grandezas relacionadas pelo gráfico são proporcionais? Por que?
+As grandezas relacionadas pelo gráfico são proporcionais? Porque?
 
 \end{enumerate}
 
-
+\end{task}
 
 
 \arrange{ função afim}
 \label{\detokenize{AF107-4:organizando-as-ideias-funcao-afim}}
-O gráfico da {\hyperref[\detokenize{AF107-4:ativ-dist-tempo}]{\sphinxcrossref{\DUrole{std,std-ref}{Atividade: distância x tempo}}}} apresenta a distância até o ponto de referência como uma função do tempo. Como a ação acontece no intervalo de tempo de \(0\) a \(4\) segundos, podemos modelar essa relação com uma função \(f\) cujo domínio é o intervalo \([0,4]\), isto é, \(f:[0,4] \to \mathbb{R}\). Vamos juntos determinar uma expressão para \(f\)?
+O gráfico da atividade \hyperref[ativ-dist-tempo]{distância x tempo} apresenta a distância até o ponto de referência como uma função do tempo. Como a ação acontece no intervalo de tempo de \(0\) a \(4\) segundos, podemos modelar essa relação com uma função \(f\) cujo domínio é o intervalo \([0,4]\), isto é, \(f:[0,4] \to \mathbb{R}\). Vamos juntos determinar uma expressão para \(f\)?
 
 Apesar do gráfico ser um segmento de reta, \(f\) não pode ser uma função linear, pois a reta não contém a origem do plano cartesiano. Como no início da contagem do tempo a pessoa estava na posição \(1\), devemos ter \(f(0)=1\). Em particular, as grandezas posição e tempo, nesse caso, não são proporcionais.
 
-Vamos definir uma outra função que vai nos auxiliar a determinar uma expressão para \(f\). Chamaremos de \(d(t)\) a distância percorrida no intervalo de tempo \([0,t]\). Por exemplo, como fazemos para calcular \(d(2)\) ? Basta saber em que posições a pessoa estava nos tempos \(t=0\) e \(t=2\) e fazer a diferença. Neste caso \(d(2)=f(2)-f(0)=5-1=4\). Isso nos dá a dica de como calcular \(d(t)\) para qualquer \(t\in[0,4]\).
-\begin{equation*}
-\begin{split}d(t)=f(t)-f(0) \Longrightarrow d(t)= f(t)-1\end{split}
-\end{equation*}
-Vamos preencher o seguinte quadro:
+Vamos considerar, como na atividade, a relação de outra grandeza com o tempo: a distância percorrida do início até o instante $ t $. Nesse caso temos proporcionalidade e vamos ver por quê.
 
-
-\begin{table}
+\begin{minipage}{0.6\textwidth}
+Para facilitar a discussão, chamemos essa função de $ d(t) $. Seu domínio coincide com o domínio de $ f $ e podemos dizer que \(d(t)\) é a distância percorrida no intervalo de tempo \([0,t]\). Por exemplo, como fazemos para calcular \(d(2)\) ? Basta saber em que posições a pessoa estava nos tempos \(t=0\) e \(t=2\) e fazer a diferença. Neste caso \(d(2)=f(2)-f(0)=5-1=4\). Isso nos dá a dica de como calcular \(d(t)\) para qualquer \(t\in[0,4]\).
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{table}[H]
 \centering
-\begin{tabu} to \linewidth{|c|c|c|}
+\begin{tabu} to \textwidth{|l|c|}
 \hline
 \thead
-\(t\) & \(f(t)\) & \(d(t)=f(t)-1\) \\
-\hline
-\(0\) & \(1\) &\\
-\hline
-\(0,5\) & & \\
-\hline
-\(1\) & \(3\) & \\
-\hline
-\(1,5\) & & \\
-\hline
-\(2\) & \(5\) & \(4\)
-\\
-\hline
-\(2,5\) & & \\
-\hline
-\(3\) & & \\
-\hline
-\(3,5\) & & \\
-\hline
-\(4\)& \(9\) & \(8\) \\
+$t$ & $d(t)$ \\ 
+\hline 
+$0$ & $ 1-1=0 $ \\ 
+\hline 
+$1$ & $ 3-1=2 $ \\ 
+\hline 
+$2$ & $ 5-1=4 $ \\ 
+\hline 
+$3$ & $ 7-1=6 $ \\ 
+\hline 
+$4$ & $ 9-1=8 $ \\ 
 \hline
 \end{tabu}
 \end{table}
+\end{minipage}
 
-Para representar o gráfico da função \(d\), devemos considerar os pontos \(D=(t,d(t))\), para cada \(t\) de \(0\) a \(4\) segundos. Já para representar o gráfico da função \(d\), devemos considerar os pontos \(F=(t,f(t))\) para \(t\) de \(0\) a \(4\) segundos. Observamos que para cada \(t\) de \(0\) a \(4\) segundos, os pontos do gráfico de \(f\) têm ordenada igual a ordenada do ponto correspondente ao gráfico de \(f\) mais uma unidade, como ilustra a tabela anterior. Portanto, tem-se que o gráfico da função \(d\) também é uma reta: uma reta paralela a reta que corresponde ao gráfico de \(f\) deslocada verticalmente uma unidade para baixo como ilustra a figura a seguir.
+\[
+d(t)=f(t)-f(0) \Longrightarrow d(t)= f(t)-1.
+\]
+
+Por causa dessa última relação, o gráfico de $ d $ será exatamente igual ao gráfico de $ f $, deslocado uma unidade para baixo. Ou seja, uma reta paralela a que é o gráfico de $ f $ e que passa pela origem. Conclusão, $d(t)$ é uma função linear, e, como $ d(1)=2 $, podemos afirmar que $ d(t)=2t $.
+\begin{figure}[H]
+	\centering
+\begin{tikzpicture}[yscale=.75]
+
+\draw [dashed, help lines, thin] (0,0) grid (4.5,9.5);
+\draw [->] (-1,0) -- (4.5,0);
+\draw [->] (0,-1) -- (0,9.5);
+
+\draw [dashed, very thick] (0,1) -- (4,9) node [above right] {$f$};
+\draw [\currentcolor, very thick] (0,0) -- (4,8) [above right] node {$d$};
+
+\fill (2.5,5) circle (2.pt);
+\fill (2.5,6) circle (2pt);
+\draw [dashed, thick] (2.5,5) -- (2.5,6);
+
+\foreach \x in {1,...,4}{
+\draw [ thick] (\x,-.1) -- (\x,.1);
+\node [below] at (\x,-.1) {\x};}
+
+\foreach \x in {2,4,...,8} \node [left] at (-.1,\x) {\x};
+\foreach \x in {1,...,9} \draw [thick] (-.1,\x) -- (.1,\x);
+
+\node [below] at (2,1) {tempo decorrido};
+\node [left] at (0,1) {início};
+\node [rotate=90, above] at (-.5,8) {distância ($m$)};
+\node [rotate=90, below] at (4.5,5) {distância percorrida};
+\node [right] at (4.5,0) {tempo ($s$)};
+\end{tikzpicture}
+\end{figure}
+
+Pelo que tínhamos visto, $ d(t)=f(t)-1 $, o que nos leva à expressão
+\[
+f(t)=2t+1
+\]
+
+\begin{observation}{}
+Chamamos qualquer função que pode ser escrita dessa forma de uma \textbf{função afim}, isto é, toda função real que pode ser escrita da forma
+\[
+f(x)=ax+b
+\]
+para quaisquer números reais $ a\neq 0 $ e $ b$. O gráfico de uma função afim é sempre uma reta, paralela à reta gráfico da função linear $ \ell(x)=ax $ deslocada $b$ unidades na vertical.
+
+O número $ a $ é a \textbf{taxa de variação média} da função afim $ f $ (e da função linear também) em qualquer intervalo.
+\[
+\dfrac{\Delta f}{\Delta x}= \dfrac{f(x_2)-f(x_1)}{x_2-x_1}= \dfrac{ax_2+b-(ax_1+b)}{x_2-x_1}= \dfrac{a(x_2-x_1)}{x_2-x_1}=a.
+\]
+
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=350bp]{{distancia_posicao1}.png}
+\begin{tikzpicture}
+
+\draw [->] (-2,0) -- (5,0);
+\draw [->,thick] (0,-1) -- (0,6);
+\draw [|-|, thick] (1,1) -- (1,3.5) node [midway, left] {$b$};
+\draw [domain=-1:5, very thick, dashed] plot (\x,{\x}) node [rotate=45, above, shift={(-1.5,0)}] {$\ell(x)=ax$};
+\draw [domain= -2:3.5, \currentcolor!80, very thick] plot (\x,{\x+2.5}) node [rotate=45, above, shift={(-1.5,0)}] {$f(x)=ax+b$} ;
+
+\end{tikzpicture}
+
 \end{figure}
 
-Sendo assim o gráfico de \(d\) é em uma reta que contém a origem do plano cartesiano, mostrando-nos que se trata de uma função linear. Como o ponto \((1,2)\) pertence ao gráfico de \(d\), podemos afirmar que sua taxa de variação é \(\frac 21\) e, portanto, para todo \(t\in[0,4]\) , \(d(t)= 2t\).
-
-Finalmente, como \(d(t)=f(t)-1\) para \(t\in[0,4]\), concluímos que uma expressão para \(f\) é
-\begin{equation*}
-\begin{split}f(t)=2t+1\end{split}
-\end{equation*}
-Concluimos assim que o gráfico da função \(f\) é obtido deslocando-se o gráfico da função linear \(d(t)=2t\) uma unidade na vertical para cima.
-
-Usando a expressão de \(f\), podemos calcular sua taxa de variação média em um intervalo qualquer não-vazio \([t_1,t_2]\)
-\begin{equation*}
-\begin{split}\dfrac{f(t_2)-f(t_1)}{t_2-t_1}=\dfrac{2t_2+1-(2t_1+1)}{t_2-t_1}=\dfrac{2(t_2-t_1)}{t_2-t_1}=2.\end{split}
-\end{equation*}
-Vemos que aqui também a taxa de variação média não depende do intervalo considerado e que o valor da taxa coincide com a taxa de variação média da função \(d\).
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=350bp]{{desloca_b}.png}
-\end{figure}
-\begin{description}
-\item[{Função Afim\index{Função Afim|textbf}}] \leavevmode\phantomsection\label{\detokenize{AF107-4:term-funcao-afim}}
-Toda função real de variável real que pode ser representada na forma \(f(x)=ax+b\) é chamada de função afim.
-
-\item[{O número \(a\) é a taxa de variação média de \(f\) e \(b\) é a medida do deslocamento vertical que se faz a partir da função linear \(\ell(x)=ax\) para se obter o gráfico de \(f\).\index{O número  é a taxa de variação média de  e  é a medida do deslocamento vertical que se faz a partir da função linear  para se obter o gráfico de .|textbf}}] \leavevmode\phantomsection\label{\detokenize{AF107-4:term-o-numero-e-a-taxa-de-variacao-media-de-e-e-a-medida-do-deslocamento-vertical-que-se-faz-a-partir-da-funcao-linear-para-se-obter-o-grafico-de}}
-\end{description}
+\end{observation}
 
 \begin{example}{}
 
@@ -1024,44 +1248,91 @@ Toda função real de variável real que pode ser representada na forma \(f(x)=a
 \centering
 \capstart
 
-\noindent\includegraphics[width=250bp]{{exemplo_afim1}.png}
-\caption{Exemplos: \(\ell(x)=2x\), \(f(x)=2x+5\) e \(f(x)=2x-3\)}\label{\detokenize{AF107-4:id1}}\end{figure}
+\begin{tikzpicture}[scale=.75]
+
+\draw [ thin, step=2, dashed, gray!50] (-4.5,-4.5) grid (8.5,7.5);
+\draw [->] (-4.5,0) -- (8.5,0);
+\draw [->] (0,-4.5) -- (0,7.5);
+\clip (-4.5,-4.5) rectangle (8.5,7.5);
+
+\foreach \x in {-3,...,-1,1,2,...,8} \node [below, scale=.75] at (\x,0) {\x};
+\foreach \x in {-4,...,-1,1,2,...,7} \node [left, scale=.75] at (0,\x) {\x};
+\node [above left, scale=.75] at (0,0) {0};
+
+\draw [destacado, very thick] plot (\x,{2*\x+5}) node [rotate =63.43494, pos=0.7, shift={(2,2.1)}] {$f(x)=2x +5$};;; 
+\draw [very thick, dashed] plot (\x,{2*\x}) node [rotate =63.43494, pos=0.7, shift={(5,0)}, above] {$\ell(x)=2x$};
+\draw [domain=-5: 12, \currentcolor, very thick] plot (\x,{2*\x-3}) node [rotate =63.43494, pos=0.7, shift={(5,-1.7)}, above] {$g(x)=2x -3$};;
+
+\end{tikzpicture}
+
+\caption{Exemplos: \(\ell(x)=2x\), \(f(x)=2x+5\) e \(g(x)=2x-3\)}\label{\detokenize{AF107-4:id1}}\end{figure}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=250bp]{{exemplo_afim2}.png}
-\caption{Exemplos: \(\ell(x)=-x\), \(f(x)=-x-2\) e \(f(x)=-x+6\)}\label{\detokenize{AF107-4:id2}}\end{figure}
+\begin{tikzpicture}[scale=.75]
+
+\draw [ thin, step=2, dashed, gray!50] (-4.5,-4.5) grid (8.5,7.5);
+\draw [->] (-4.5,0) -- (8.5,0);
+\draw [->] (0,-4.5) -- (0,7.5);
+\clip (-4.5,-4.5) rectangle (8.5,7.5);
+
+\foreach \x in {-3,...,-1,1,2,...,8} \node [below, scale=.75] at (\x,0) {\x};
+\foreach \x in {-4,...,-1,1,2,...,7} \node [left, scale=.75] at (0,\x) {\x};
+\node [above left,scale=.75] at (0,0) {0};
+
+\draw [destacado, very thick, domain=-2:8.5] plot (\x,{-\x+6}) node [rotate =-45, pos=0.7, shift={(1,3.3)}, above] {$g(x)=-x+6$};
+
+\draw [very thick, dashed] plot (\x,{-\x}) node [rotate =-45, pos=0.7, shift={(-3,0)}, above] {$\ell(x)=-x$};
+
+\draw [domain=-5: 12, \currentcolor, very thick] plot (\x,{-\x-2}) node [rotate =-45, pos=0.7, shift={(0,-2)}, above] {$f(x)=-x-2$};;
+
+\end{tikzpicture}
+
+\caption{Exemplos: \(\ell(x)=-x\), \(f(x)=-x-2\) e \(g(x)=-x+6\)}\label{\detokenize{AF107-4:id2}}\end{figure}
 \end{example}
 
-\explore{Taxa de variação média}
+\textbf{A inclinação de uma reta e a taxa de variação média}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=350bp]{{1024px-Planalto_Palace_ramp_and_parlatorium}.jpg}
-\caption{Flickr: \sphinxhref{https://commons.wikimedia.org/w/index.php?curid=18864847}{Planalto (Presidential) Palace, Brasília, Brazil (8)}, CC BY 2.0,}\label{\detokenize{AF107-4:id3}}\end{figure}
+\noindent\includegraphics[width=200bp]{{1024px-Planalto_Palace_ramp_and_parlatorium}.jpg}
+\caption{Flickr: \href{https://commons.wikimedia.org/w/index.php?curid=18864847}{Planalto (Presidential) Palace, Brasília, Brazil (8)}, CC BY 2.0,}\label{\detokenize{AF107-4:id3}}\end{figure}
 
 Em muitas construções, quando se deseja fazer o acesso entre dois espaços que estão em níveis diferentes, usa-se a rampa como recurso. A rampa é uma superfície, em geral plana, que liga dois níveis diferentes. Uma característica importante de uma rampa é a sua inclinação (ou declive). Rampas muito íngremes podem se tornar obstáculos intransponíveis para cadeirantes, por exemplo. Como medir, então, a inclinação de uma rampa?
 A inclinação de uma rampa é o número obtido quando dividimos a altura (diferença entre os níveis) pelo deslocamento horizontal
-
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=350bp]{{resized005}.png}
+\noindent\includegraphics[width=300bp]{rampa.png}
 \end{figure}
-
 Uma rampa que tem o deslocamento horizontal muito menor que a altura, terá pela fórmula uma inclinação grande, enquanto uma rampa em que o deslocamento horizontal é bem maior que a altura, terá uma inclinação pequena. Rampas de inclinação pequena são as mais desejáveis.
 
-A Associação Brasileira de Normas Técnicas (ABNT) tem normas para a construção de rampas (a NBR 9050:2015 que pode ser acessada \sphinxhref{http://www.ufpb.br/cia/contents/manuais/abnt-nbr9050-edicao-2015.pdf}{neste link}) que contém o seguinte artigo:
+A Associação Brasileira de Normas Técnicas (ABNT) tem normas para a construção de rampas (a NBR 9050:2015 que pode ser acessada \href{http://www.ufpb.br/cia/contents/manuais/abnt-nbr9050-edicao-2015.pdf}{neste link}) que contém o seguinte artigo:
 
-\begin{figure}[H]
+
+\begin{quote}
+6.6.2.1 As rampas devem ter inclinação de acordo com os limites estabelecidos na Tabela. Para inclinação entre 6,25\% e 8,33\% é recomendado criar áreas de descanso (6.5.) nos patamares, a cada 50 m de percurso. Excetuam-se deste requisito as rampas citadas em 10.4 (plateia e palcos), 10.12 (piscinas) e 10.14 (praias).
+\end{quote}
+
+\begin{table}[H]
 \centering
-
-\noindent\includegraphics[width=450bp]{{rampa_abnt}.png}
-\end{figure}
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+\parbox[1cm]{3.5cm}{\centering\vspace{.3em} Desníveis máximos de cada segmento de rampa\newline$h$} & \parbox[1cm]{3.5cm}{\centering\vspace{.3em} Inclinação admissível em cada segmento de rampa $i$} & \parbox{4cm}{\centering Número máximo de segmentos de rampa} \\[.25cm]
+\hline
+1,50 & $5,00 (1:20)$ & Sem limite \\
+\hline
+1,00 & $5,00 (1:20) < i \leq 6,25 (1:16)$ & Sem limite \\
+\hline
+0,80 & $6,25 (1:16) < i \leq 8,33 (1:12)$ & 15\\
+\hline
+\end{tabu}
+\end{table}
 
 Por exemplo, para uma rampa ter inclinação \(5\% (1:20)\) ela precisa de \(20\) metros de deslocamento horizontal para cada metro de subida, ou dito de outra forma, para cada metro de deslocamento horizontal, a rampa “sobe” \(0,05\) metros. Veja se as rampas ilustradas abaixo estão dentro das especificações da ABNT.
 
@@ -1073,7 +1344,32 @@ Da mesma forma, a inclinação de uma reta é a medida do quão íngreme ela é 
 \centering
 \capstart
 
-\noindent\includegraphics[width=350bp]{{inclinacao}.png}
+\begin{tikzpicture}[scale=.7, every node/.style={scale=1}]
+
+\draw [->] (-2,0) -- (7,0);
+\draw [->] (0,-1) -- (0,5);
+
+\draw [dashed] (0,2) -- (1.6,2) -- (1.6,0);
+\draw [dashed] (0,4) -- (5.6,4) -- (5.6,0);
+\draw [dashed] (1.6,2) -- (5.6,2);
+
+\draw [domain=-2:7, thick] plot (\x,{.5*\x+1.2});
+
+\fill (1.6,2) circle (2pt);
+\fill (5.6,4) circle (2pt);
+
+\node [left] at (0,2) {$y_1$};
+\node [left] at (0,4) {$y_2$};
+
+\node [below] at (1.6,0) {$x_1$};
+\node [below] at (5.6,0) {$x_2$};
+
+\node [above left, shift={(.5,.1)}] at (1.6,2) {$(x_1,y_1)$};
+\node [above left, shift={(.5,.1)}] at (5.6,4) {$(x_2,y_2)$};
+
+\node [right] at (5.6,3) {$y_2-y_1$};
+\node [below] at (3.6,2) {$x_2-x_1$};
+\end{tikzpicture}
 \caption{Inclinação de uma reta}\label{\detokenize{AF107-4:fig-inclina}}\label{\detokenize{AF107-4:id4}}\end{figure}
 
 Por exemplo, a reta que contém os pontos \((1,2)\) e \((5,7)\) tem inclinação \(\dfrac{7-2}{5-1}=\dfrac 54\), enquanto a reta que contém os pontos \((-1,3)\) e \((2,-6)\) tem inclinação \(\dfrac{-6-3}{2-(-1)}=\dfrac{-9}{3}=-3\).
@@ -1082,235 +1378,94 @@ Por exemplo, a reta que contém os pontos \((1,2)\) e \((5,7)\) tem inclinação
 \centering
 \capstart
 
-\noindent\includegraphics[width=350bp]{{inclinacao_ex1}.png}
+\begin{tikzpicture}[scale=.7, every node/.style={scale=1}]
+
+\draw [->] (-2,0) -- (7,0);
+\draw [->] (0,-1) -- (0,8);
+
+\draw [dashed] (0,2) -- (1,2) -- (1,0);
+\draw [dashed] (0,7) -- (5,7) -- (5,0);
+\draw [dashed] (1,2) -- (5,2);
+
+\draw [domain=-1:5.5, thick] plot (\x,{(5/4)*\x+0.75});
+
+\fill (1,2) circle (2pt);
+\fill (5,7) circle (2pt);
+
+\node [left] at (0,2) {$2$};
+\node [left] at (0,7) {$7$};
+
+\node [below] at (1,0) {$1$};
+\node [below] at (5,0) {$5$};
+
+\node [right, scale=1] at (5.5,4.5) {$\displaystyle \frac{7-2}{5-1}=\frac{5}{4}$};
+\end{tikzpicture}
+
 \caption{Inclinação da reta que contém os pontos \((1,2)\) e \((5,7)\)}\label{\detokenize{AF107-4:fig-inclina-1}}\label{\detokenize{AF107-4:id5}}\end{figure}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=350bp]{{inclinacao_ex2}.png}
+\begin{tikzpicture}[scale=.6,remember picture, shift={(1,0)}]
+
+\draw [->] (-2.5,0) -- (3.5,0);
+\draw [->] (0,-7.5) -- (0,4.5);
+
+\draw [dashed] (0,3) -- (-1,3) -- (-1,0);
+\draw [dashed] (0,-6) -- (2,-6) -- (2,0);
+\draw [dashed] (-1,3) -- (2,3) -- (2,0);
+
+\draw [domain=-1.5:2.5, thick] plot (\x,{-3*\x});
+
+\fill (-1,3) circle (2pt);
+\fill (2,-6) circle (2pt);
+
+\node [above left] at (0,3) {$3$};
+\node [left] at (0,-6) {$-6$};
+
+\node [below] at (-1,0) {$-1$};
+\node [below right] at (2,0) {$2$};
+
+\node [right, scale=1] at (2.5,1.5) {$\displaystyle \frac{-6-3}{2-(-1)}=-3$};
+\end{tikzpicture}
 \caption{Inclinação da reta que contém os pontos \((-1,3)\) e \((2,-6)\)}\label{\detokenize{AF107-4:fig-inclina-2}}\label{\detokenize{AF107-4:id6}}\end{figure}
 
 Se considerarmos uma reta no plano e a função afim \(f\) que a tem como gráfico, a inclinação da reta coincide com a taxa de variação da função \(f\).
 
-Por exemplo, a reta da {\hyperref[\detokenize{AF107-4:fig-inclina-2}]{\sphinxcrossref{\DUrole{std,std-ref}{Inclinação da reta que contém os pontos  e }}}} acima é o gráfico da função afim \(f(x)=\dfrac 54 x +b\). Para determinarmos o valor de \(b\), basta substituirmos um dos pontos que estão sobre a reta. Como \((1,2)\) pertence ao gráfico de \(f\), podemos afirmar que \(f(1)=2\), logo
+Por exemplo, a reta da \hyperref[AF107-4:fig-inclina-1]{Figura \ref{AF107-4:fig-inclina-1}} acima é o gráfico da função afim \(f(x)=\dfrac 54 x +b\). Para determinarmos o valor de \(b\), basta substituirmos um dos pontos que estão sobre a reta. Como \((1,2)\) pertence ao gráfico de \(f\), podemos afirmar que \(f(1)=2\), logo
 \begin{equation*}
 \begin{split}2=\dfrac 54 \cdot 1 + b \Longrightarrow b=2-\dfrac 54 = \dfrac 34\end{split}
 \end{equation*}
 Isto é, a função \(f\) é dada pela expressão \(f(x)=\dfrac 54 x + \dfrac 34\).
 
-Já a reta da {\hyperref[\detokenize{AF107-4:fig-inclina-2}]{\sphinxcrossref{\DUrole{std,std-ref}{Inclinação da reta que contém os pontos  e }}}} tem expressão \(f(x)=-3x\).
+Já a reta da \hyperref[AF107-4:fig-inclina-2]{Figura \ref{AF107-4:fig-inclina-2}} tem expressão \(f(x)=-3x\).
 
 Retas horizontais não possuem inclinação, de fato não há deslocamento vertical quando nos deslocamos horizontalmente sobre a reta, ou seja, sua inclinação será igual a zero.
 
 
-\begin{task}{plantas companheiras}
-No cultivo de produtos orgânicos, é comum o plantio de Plantas Companheiras.
-“Plantas Companheiras são plantas pertencentes a espécies ou famílias que se ajudam e complementam mutuamente, não apenas na ocupação do espaço e utilização de água, luz e nutrientes, mas também por meio de interações bioquímicas chamadas de Efeitos Alelopáticos. Estes podem ser tanto de natureza estimuladora quanto inibidora, não somente entre plantas, mas também em relação a insetos e outros animais.”
-Disponível \sphinxhref{https://permacoletivo.files.wordpress.com/2008/06/manual-horta-organica-domestica.pdf}{neste link} - \emph{Acesso em 25/11/2017}
 
-Uma empresa especializada em consultoria e plantio de produtos orgânicos apresenta alguns modelos de plantio de um determinado vegetal, representado na figura a seguir por \((\bullet)\) e sua respectiva planta companheira, representada por \((\diamondsuit)\), cada modelo é adequado para o tamanho do plantio e tem como objetivo criar uma barreira natural contra pragas, observe a figura a seguir que apresenta os modelos de plantio, identificados sequencialmente por Modelo 1, Modelo 2, Modelo 3, … , Modelo \(n\).
-\phantomsection\label{\detokenize{AF107-5:fig-coloque-aqui-o-nome}}
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=400bp]{{plantio}.jpeg}
-\label{\detokenize{AF107-5:fig-coloque-aqui-o-nome}}\end{figure}
-\begin{enumerate}
-\item {} 
-Preencha o quadro a seguir, que nos informa a quantidade de cada tipo de planta em cada um dos modelos.
-
-\item {} 
-Descreva textualmente qual a relação entre a quantidade de vegetais \((\bullet)\) e o número \(n\) que identifica o modelo na sequência.
-
-\item {} 
-Descreva textualmente qual a relação entre a quantidade de plantas companheiras \((\diamondsuit)\) e o número \(n\) que identifica o modelo na sequência.
-
-\item {} 
-Exiba uma expressão algébrica que relacione a quantidade \(V\) de vegetais \((\bullet)\) em função do número \(n\) que identifica do \(n\)-ésimo modelo na sequência.
-
-\item {} 
-Exiba uma expressão algébrica que relacione a quantidade \(C\) de plantas companheiras \((\diamondsuit)\) em função do número \(n\) do \(n\)-ésimo modelo na sequência.
-
-\item {} 
-A expressão algébrica descrita no item e) pode ser associada a uma função linear que relaciona a ordem \(n\) do modelo e a quantidade de plantas companheiras \((\diamondsuit)\)?
-
-\item {} 
-Se a resposta anterior for afirmativa, exiba o domínio dessa função.
-
-\item {} 
-No plano cartesiano a seguir estão representados os pares ordenados \((n,V(n))\) em que \(n\) é “número” \(n\) que representa o \(n\)-ésimo modelo e \(V(n)\) a quantidade \(V\) de vegetais \((\bullet)\). Represente nele os pontos que correspondem aos pares ordenados \((n,C(n))\) em que \(C(n)\) é a quantidade \(C\) de plantas companheiras \((\diamondsuit)\) em função de \(n\).
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=350bp]{{grafico_plantas}.jpeg}
-\end{figure}
-
-\item {} 
-Qual a quantidade \(C\) de plantas companheiras \((\diamondsuit)\) utilizadas no décimo modelo?
-
-\item {} 
-Qual o valor de \(n\), para um modelo que utilize \(144\) plantas companheiras \((\diamondsuit)\)?
-
-\item {} 
-Qual a quantidade a quantidade \(V\) de vegetais \((\bullet)\) no décimo modelo?
-
-\item {} 
-Qual o valor de \(n\), para um modelo que utilize \(144\) vegetais \((\bullet)\)?
-
-\item {} 
-A relação entre as grandezas: quantidade \(V\) de vegetais \((\bullet)\) e  o número \(n\) do \(n\)-ésimo modelo, é proporcional? Justifique sua resposta.
-
-\item {} 
-Exiba uma expressão algébrica que relacione a quantidade total \(T\) de plantas companheiras e vegetais em função, do número \(n\) do n-ésimo modelo. A expressão representada é uma função afim? Justifique sua resposta.
-
-\item {} 
-Explique textualmente, o motivo que impossibilita que o gráfico de cada uma das funções abordadas seja uma reta ou um segmento de reta, e sim um conjunto de pontos colineares que não chegam a compor uma reta nem um segmento de reta.
-
-\end{enumerate}
-\end{task}
-
-
-
-
-\arrange{ progressões aritméticas}
-\label{\detokenize{AF107-5:organizando-as-ideias-progressoes-aritmeticas}}
-Sequências de número reais (finitas ou infinitas), como da quantidade de plantas Companheiras nos modelos descritos na atividade anterior \((4, 8, 12, 16,...)\), em que a diferença entre termos consecutivos é constante são chamadas de progressões aritméticas, ou de forma abreviada, P.A.
-
-Se representarmos os pontos de uma progressão aritmética na reta real, eles ficarão todos igualmente distribuídos.
-
-No caso das plantas companheiras, a diferença entre dois termos consecutivos quaisquer é \(4\). Em geral, em uma P.A. a diferença entre os termos consecutivos se chama razão da progressão aritmética. Se a razão é um número positivo, a P.A. é crescente e se for negativo, a sequência é decrescente.
-
-Podemos representar os termos de uma progressão aritmética que começa com \(b\) e tem razão \(r\) da seguinte maneira:
-
-$$(b, b+r, b+2r, b+3r, … )$$
-
-Note que cada termo, com exceção do primeiro, é obtido a partir do anterior somando-se uma mesma quantidade, que é chamada razão da P.A. Assim, o segundo termo é o primeiro mais a razão. O vigésimo é o décimo nono mais a razão.
-
-Observe os exemplos de sequênias numéricas a seguir. Determine quais dessas sequências são progressões aritméticas e, nesses casos, identifique o prmeiro termo e a razão.
-\begin{enumerate}
-\item {} 
-\((-5, - 2, 1, 4, 7)\)
-
-\item {} 
-\(\left(\pi, \dfrac{\pi}2, 0, -\dfrac{\pi}2, -\pi, -\dfrac{3\pi}2\right)\)
-
-\item {} 
-\((3, 9, 27, 81, ...)\)
-
-\end{enumerate}
-
-Considere a função afim \(f(x)=2x+1\) e determine a sequência das imagens de todos os números inteiros positivos \((f(0), f(1), f(2), ... , f(n), ...)\). Essa sequência é uma progressão aritmética? Para verificar esse fato precisaremos fazer a diferença entre dois termos consecutivos quaisquer dessa sequência:
-\begin{equation*}
-\begin{split}f(n)-f(n-1)=2n+1-[2(n-1)+1]=2n+1-[2n-2+1]=2\end{split}
-\end{equation*}
-Como a resposta 2 que obtivemos acima não depende do número \(n\) podemos concluir que ele é a razão da sequência e que, portanto, trata-se de uma P.A.
-\phantomsection\label{\detokenize{AF107-5:fig-pa-afim}}
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=300bp]{{pa_afim}.png}
-\label{\detokenize{AF107-5:fig-pa-afim}}\end{figure}
-
-Vamos agora generalizar essa ideia:
-
-Consideremos uma função afim \(f(x)=ax+b\) e a sequência \((f(0), f(1), f(2), ... , f(n), ...)=(b, b+a,b+2a,... , b+na, ...)\). Pela expressão que obtivemos acima, podemos já conjecturar que a sequência é uma P.A. cujo primeiro termo é \(b\) e a razão é \(a\). De fato, fazendo a diferença entre \(f(n)\) e \(f(n-1)\) temos
-\begin{equation*}
-\begin{split}f(n)-f(n-1)=an+b-[a(n-1)+b]=an+b-[an-a+b]=a,\end{split}
-\end{equation*}
-e isto comprova a conjectura.
-
-Considere agora uma P.A. cujo primeiro termo é -7 e a razão é 4, isto é,  \((-7,-3,1,5,...)\). Podemos pensar nessa progressão como sendo
-\$\$(-7, - 7+4, - 7+4.2, - 7+4.3, … , - 7+4.n, …)\$\$
-
-Assim, a P.A. é a imagem dos inteiros positivos pela função afim \(f(x)=4x-7\).
-De maneira geral, dada uma progressão aritmética de primeiro termo \(b\) e razão \(r\), \((b, b+r, b+2r, ...)\) ela é a sequência das imagens dos inteiros positivos pela função afim \(f(x)=rx+b\).
-
-\begin{table}[H]
-\centering
-\begin{tabu} to \linewidth{|l|l|}
-\hline
-\thead 
-Progressão Aritmética & Função Afim\\
-\hline
-\((b, b+r, b+2r, b+3r,...)\) & \(f(n)=rn+b\)  com domínio \(\{0,1,2,3,...\}\) \\
-\hline
-\(b\) - primeiro termo & \(b=f(0)\) \\
-\hline
-\(r\) - razão & \(r\) - taxa de variação \\
-\hline
-\end{tabu}
-\end{table}
-\par
-
-Observe no quadro a seguir as progressões aritméticas e as funções afins correspondentes
-
-\begin{table}
-\centering
-\begin{tabu} to \linewidth{|c|l|l|}
-\hline
-\thead
-Progressão Aritmética & Função Afim & Domínio \\
-\hline 
-\((-5,-2,1,4,7)\) & \(f(n)=3n-5\) & \(\{0,1,2,3,4,5\}\) \\
-\hline
-\(\left(\pi,\dfrac{\pi}2,0,-\dfrac{\pi}2,-\pi,-\dfrac{3\pi}2\right)\) & \(f(n)=-\dfrac{\pi}{2} n+ pi\) & \(\{0,1,2,3,4,5\}\) \\
-\hline
-\((90,82,74,66,58,50)\) & \(f(n)=-8n+90\) & \(\{0,1,2,3,4,5\}\) \\
-\hline
-\(\left(\dfrac 32, \dfrac 74, 2, \dfrac 94\right)\) & \(f(n)=\dfrac n4+\dfrac 32\) & \(\{0,1,2,3\}\) \\
-\hline
-\end{tabu}
-\end{table}
-\par
-
-
-\practice{ }
+\practice{função afim}
 \label{\detokenize{AF107-6::doc}}\label{\detokenize{AF107-6:praticando}}
 
-\begin{task}{antecipando o pagamento de uma dívida}
+\begin{task}{Antecipando o pagamento de uma dívida}
 \label{\detokenize{AF107-6:atividade-antecipando-o-pagamento-de-uma-divida}}\label{\detokenize{AF107-6:ativ-titulo-da-atividade}}
 
 
 O cliente de um banco foi à sua agência de relacionamento para negociar a antecipação de uma dívida no valor de \(R\$ 5.000,00\), que venceria no prazo de 8 meses. Lá, foi informado pelo gerente que a modalidade praticada era a de desconto comercial, no qual o valor a ser descontado é calculado a partir do valor da dívida e é proporcional ao tempo de antecipação. Para o caso em questão, o gerente gerou a seguinte quadro:
 
-
-\begin{savenotes}\sphinxattablestart
+\begin{table}[H]
 \centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|T|T|}
+\begin{tabu} to \textwidth{|l|c|c|c|c|c|}
 \hline
+\thead
+Antecipação (meses) & 0 & 1 & 2 & 3 & 4 \\
+\hline
+Valor a pagar (R\$) & 5.000 & 4.750 & 4.500 & 4.250 & 4.000 \\
+\hline
+\end{tabu}
+\end{table}
 
-Antecipação (meses)
-&
-0
-&
-1
-&
-2
-&
-3
-&
-4
-\\
-\hline
-Valor a pagar (R\$)
-&
-5.000
-&
-4.750
-&
-4.500
-&
-4.250
-&
-4.000
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
 \begin{enumerate}
 \item {} 
 Observando o padrão de desconto, complete a tabela até o 8º mês de antecipação.
@@ -1327,31 +1482,12 @@ Qual é, então, a taxa mensal de desconto comercial praticada pelo banco?
 \item {} 
 No plano cartesiano a seguir estão representados os pares ordenados \((n,D(n))\) em que \(n\) é o tempo de antecipação e \(D(n)\) o valor do desconto correspondente. Represente nele os pontos que correspondem aos pares ordenados \((n,V(n))\) em que \(V(n)\) é o valor a pagar no tempo \(n\).
 
-\begin{center}
-\begin{tikzpicture}[xscale=3, scale=0.35, every node/.style={scale=0.8}]
-
-\draw [gray!60] (0,0) grid (10,21);
-\draw [->, thick] (0,0) -- (10,0);
-\draw [->, thick] (0,0) -- (0,21);
-\foreach \x/\y in {2/500,4/1000,6/1500, 8/2000, 10/2500, 12/3000, 14/3500, 16/4000, 18/4500, 20/5000} \node [left] at (0,\x) {\y};
-\foreach \x in {1,...,9} \node [below] at (\x,0) {\x};
-\end{tikzpicture}
-\end{center}
-
-\item {}
-Escreva uma expressão que forneça o valor do desconto D em função do tempo de antecipação n e outra que forneça o valor da dívida V em função do tempo de antecipação n.
-
-\item {}
-Qual seria o valor de uma outra dívida, no mesmo banco à mesma taxa, que 6 meses antes do vencimento pode ser paga com R\$ 7.000,00, tendo sido praticado o desconto comercial? 
-
 \end{enumerate}
-
 \end{task}
 
 
 \begin{task}{Abastecendo a caixa}
 \label{\detokenize{AF107-6:atividade-abastecendo-a-caixa}}\label{\detokenize{AF107-6:id1}}
-
 
 Uma caixa de água é abastecida por uma torneira cujo fluxo de água é constante e igual a \(10\) litros por minuto e, simultaneamente, seu conteúdo escoa, por um ralo, cujo fluxo de água é controlado à razão constante de \(15\) litros por minuto. Em certo instante, o volume de água dentro da caixa é de \(100\) litros, estando a torneira e o ralo ambos abertos.
 \begin{enumerate}
@@ -1361,39 +1497,17 @@ Sendo V(t) o volume de água na caixa após t minutos do instante citado. Exiba 
 \item {} 
 Complete a tabela abaixo com os valores correspondentes ao volume de água na caixa.
 
-
-\begin{savenotes}\sphinxattablestart
+\begin{table}[H]
 \centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|T|T|T|T|T|T|}
+\begin{tabu} to \textwidth{|l|c|c|c|c|c|c|c|c|}
 \hline
-
-Tempo (minutos)
-&
-0
-&
-1
-&
-2
-&
-3
-&
-4
-&
-5
-&
-10
-&
-20
-\\
+\thead
+Tempo (minutos) & 0 & 1 & 2 & 3 & 4 & 5 & 10 & 20 \\
 \hline
-Volume (litros)
-&&
-4
-&&&&&&\\
+Volume (litros) & & 4 & & & & & & \\
 \hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
+\end{tabu}
+\end{table}
 
 \item {} 
 À medida que os valores do tempo aumentam, o que ocorre com os valores correspondentes ao volume de água da caixa?
@@ -1405,19 +1519,12 @@ Quando os valores do tempo aumentam de \(t=1\) a \(t=2\), o quanto variam os val
 Quando os valores do tempo aumentam em uma unidade, a partir de um instante qualquer, o quanto variam os valores correspondentes ao volume de água da caixa?
 
 \end{enumerate}
-
 \end{task}
 
 
 \begin{task}{Temperatura Controlada}
 \label{\detokenize{AF107-6:atividade-temperatura-controlada}}\label{\detokenize{AF107-6:id2}}
 Num laboratório, um químico conseguiu controlar a variação de temperatura de dois compostos. A variação de ambos está associada às funções afins \(f\) e \(g\), de maneira que a taxa de variação das temperaturas de cada um dos compostos seja constante. Observe o gráfico, onde o eixo das ordenadas indica a temperatura (em graus Celsius) de cada composto em função do tempo \(t\), em minutos. O gráfico da figura a seguir modela a situação:
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=500bp]{{at_temp_1}.jpg}
-\end{figure}
 
 O gráfico da função \(f\) passa pelos pontos \(A=(0,-4)\) e \(B=(4,0)\), indicando que o composto associado à \(f\) está com uma temperatura de \(-4\,^{\circ}\mathrm{C}\) no início da medição e após \(4\) minutos a temperatura atinge \(0\,^{\circ}\mathrm{C}\).
 
@@ -1449,17 +1556,15 @@ Após quantos minutos os dois compostos terão a mesma temperatura? E que temper
 \end{task}
 
 
-
 \begin{task}{Frio nas alturas}
 \label{\detokenize{AF107-6:atividade-frio-nas-alturas}}\label{\detokenize{AF107-6:id3}}
-
 
 Mesmo em pleno verão um avião, precisa lidar com temperaturas muito baixas. Quando uma aeronave opera em baixas temperaturas, com umidade presente, há a possibilidade de formação de gelo que virá a se acumular na sua estrutura ou em seu grupo moto-propulsor. O gelo se forma quando um avião voa através de uma nuvem ou de um ambiente contendo gotículas de água super-resfriadas. O principal problema causado pela formação de gelo é a modificação do fluxo de ar sobre as superfícies das asas, prejudicando assim o desempenho da nave e acarretando, eventualmente, em mais gastos de combustível. Para evitar problemas como esses as aeronaves contam com um sistema anti-gelo que diminui a formação de camadas de gelo em sua fuselagem, produzindo os chamados “rastros de condensação” como na imagem.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{resized000}.png}
+\noindent\includegraphics[width=300bp]{frio-aviao.jpg}
 \end{figure}
 
 A temperatura na troposfera (primeira camada da atmosfera que tem aproximadamente \(40\ 000\) pés de altitude) diminui \(2^\circ C\) a cada aumento de \(1\ 000\) pés na altitude. Suponha que, em um determinado dia, a temperatura em um aeroporto seja de \(30^\circ C\), e que a água congela a \(0^\circ C\).
@@ -1488,8 +1593,6 @@ Estabeleça uma maneira de calcular a altitude de acionamento do sistema anti-ge
 \end{enumerate}
 \end{task}
 
-
-
 \begin{observation}{}
 
 Seja \(f:\mathbb{R}\to\mathbb{R}\) uma função afim, \(f(x)=ax+b\), cuja taxa de variação não é nula (isto é, o gráfico de \(f\) não é uma reta horizontal).
@@ -1513,7 +1616,23 @@ Pelo gráfico, usando semelhança de triângulos:
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{zero_geometrico}.png}
+\begin{tikzpicture}
+\filldraw [pattern color=\currentcolor!80, pattern=north west lines] (-1.5,0) -- (0,0) -- (0,3);
+\filldraw [pattern color=\currentcolor!80, pattern=north west lines] (0,3) -- (1,3) -- (1,5) -- cycle;
+\draw [->] (-3,0) -- (3,0);
+\draw [->] (0,-2) -- (0,6);
+
+\draw [domain=-2.5:1.3, thick] plot (\x,{2*\x+3});
+\fill (0,3) circle (2pt) node [above left] {$(0,b)$};
+\fill (-1.5,0) circle (2pt) node [above left] {$(k,0$)};
+
+\node [below] at (-0.75,0) {$-k$};
+\node [right] at (0,1.5) {$b$};
+\node [below] at (0.5,3) {1};
+\node [right] at (1,4) {$a$};
+
+\node [left] at (-.5,5) {$\displaystyle \frac{-k}{1}=\frac{b}{a}\Longrightarrow k=\frac{-b}{a}$};
+\end{tikzpicture}
 \end{figure}
 
 Por exemplo, o zero da função \(f(x)=5x-21\) é o valor \(k=\dfrac{-(-21)}5\).
@@ -1525,11 +1644,10 @@ Já o zero da função \(g(x)=7-\dfrac x2\) é \(k=\dfrac{-7}{-\frac 12}=14\) .
 \begin{task}{Qual a frequência?}
 \label{\detokenize{AF107-6:atividade-qual-a-frequencia}}\label{\detokenize{AF107-6:id4}}
 
-
 A Agência Nacional de Telecomunicações (ANATEL) determina que as emissoras de rádio FM utilizem as frequências de 87,9 a 107,9 MHz, e que haja uma diferença de 0,2 MHz entre emissoras com frequências vizinhas.
 \begin{enumerate}
 \item {} 
-Em uma determinada região as frequências entre 70 e 86 MHz são reservadas rádios comunitárias. Determine a frequência mínima e máxima para uma rádio comunitária.
+Em uma determinada região as frequências entre a 70ª e 86ª são reservadas rádios comunitárias. Determine a frequência mínima e máxima para uma rádio comunitária.
 
 \item {} 
 Determine quantas emissoras FM podem funcionar em uma mesma região.
@@ -1540,13 +1658,9 @@ Lembre-se da frequência da rádio que você costuma ouvir e determine a posiç�
 \end{enumerate}
 \end{task}
 
-
-
 \know{ função afim por partes}
 \label{\detokenize{AF107-A::doc}}\label{\detokenize{AF107-A:para-saber-mais-funcao-afim-por-partes}}
 \begin{task}{Afim de um passeio}
-
-
 
 Você caminha por \(12\) minutos a uma taxa de \(1\) km por hora,  ao encontrar um amigo permanece parado conversando por \(3\) minutos, voltando logo em seguida  a caminhar por mais \(6\) minutos a uma taxa de \(2\) km por hora.
 \begin{enumerate}
@@ -1562,11 +1676,7 @@ Obtenha expressões para as funções afins cujos gráficos são os segmentos de
 \end{enumerate}
 \end{task}
 
-
-
 \begin{task}{Comprando vinho}
-
-
 
 Em uma vinícola podemos comprar vinho por litro. Neste caso, o vinho é colocado em garrafões com capacidade de \(5\) litros. O vinho é vendido a R\$ \(10,00\) por litro e cada garrafão é vendido a R\$ \(5,00\).
 \begin{enumerate}
@@ -1582,13 +1692,14 @@ Trace a curva que representa a função \(p\) no plano cartesiano. Utilize a esc
 \end{enumerate}
 \end{task}
 
-
-
-
 \exercise
 \label{\detokenize{AF107-E:exercicios}}\label{\detokenize{AF107-E::doc}}
-\(1.\) \textbf{(Uerj-1998)} A promoção de uma mercadoria em um supermercado está representada, no gráfico abaixo, por \(6\) pontos de uma mesma reta.
-\begin{center}\begin{tikzpicture}[scale=.5]
+\begin{enumerate}
+\item \textbf{(Uerj-1998)} A promoção de uma mercadoria em um supermercado está representada, no gráfico abaixo, por \(6\) pontos de uma mesma reta.
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5]
 Questão 1
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [thick, <->] (17,0) -- (0,0) -- (0,17);
@@ -1599,21 +1710,26 @@ Questão 1
      \node [below] at (2.5,0) {5};
        \node [below] at (10,0) {20};
      \node [below] at (15,0) {30};
-     \node [ponto,color=primario] at (2.5,15) {};
-       \node [ponto,color=primario] at (15,5) {};
-     \node [ponto,color=primario] at (10,9) {};
-       \node [ponto,color=primario] at (12.5,7) {};
-       \node [ponto,color=primario] at (7.5,11) {};
-       \node [ponto,color=primario] at (5,13) {};
+     \node [ponto,color=\currentcolor!80] at (2.5,15) {};
+       \node [ponto,color=\currentcolor!80] at (15,5) {};
+     \node [ponto,color=\currentcolor!80] at (10,9) {};
+       \node [ponto,color=\currentcolor!80] at (12.5,7) {};
+       \node [ponto,color=\currentcolor!80] at (7.5,11) {};
+       \node [ponto,color=\currentcolor!80] at (5,13) {};
        \draw [dashed,color=secundario] (0,15) -- (2.5,15) -- (2.5,0);
      \draw [dashed,color=secundario] (0,9) -- (10,9) -- (10,0);
      \draw [dashed,color=secundario] (0,5) -- (15,5) -- (15,0);
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
+\end{figure}
 Quem comprar \(20\) unidades dessa mercadoria, na promoção, pagará por unidade, em reais, qual valor?
 
-\(2.\) De cada usuário de energia elétrica é cobrada uma taxa mensal de acordo com o seu consumo no período, desde que esse consumo ultrapasse determinado nível. Caso contrário, o consumidor deve pagar uma taxa mínima referente ao custo de manutenção. Em certo mês, o gráfico consumo (em kWh) x preço em (R\$) foi o apresentado abaixo:
+\item De cada usuário de energia elétrica é cobrada uma taxa mensal de acordo com o seu consumo no período, desde que esse consumo ultrapasse determinado nível. Caso contrário, o consumidor deve pagar uma taxa mínima referente ao custo de manutenção. Em certo mês, o gráfico consumo (em kWh) x preço em (R\$) foi o apresentado abaixo:
 
-\begin{tikzpicture}[scale=.7]
+\begin{figure}[H]
+\centering
+
+
+	\begin{tikzpicture}[scale=.7]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [thick,<->] (0,13.25) -- (0,0) -- (12,0);
        \node [above] at (-0.5,13.25) {R\$};
@@ -1625,11 +1741,12 @@ Quem comprar \(20\) unidades dessa mercadoria, na promoção, pagará por unidad
        \node [below] at (2.5,0) {50};
        \node [below] at (5,0) {100};
        \node [below] at (10,0) {200};
-       \draw [thick,color=primario] (0,1.25) -- (2.5,1.25) -- (5,3.75) -- (10,11.25);
+       \draw [very thick,color=\currentcolor!80] (0,1.25) -- (2.5,1.25) -- (5,3.75) -- (10,11.25);
        \draw [dashed,color=secundario] (2.5,1.25) -- (2.5,0);
        \draw [dashed,color=secundario] (0,3.75) -- (5,3.75) -- (5,0);
        \draw [dashed,color=secundario] (0,11.25) -- (10,11.25) -- (10,0);
      \end{tikzpicture}
+\end{figure}
      \begin{enumerate}
 \item {} 
 Determine entre que valores de consumo em kWh é cobrada taxa mínima.
@@ -1639,8 +1756,12 @@ Determine o consumo correspondente à taxa de R\$ \(1.950,00\).
 
 \end{enumerate}
 
-\(3.\) \textbf{(UFRJ-98-PNE)} - O gráfico a seguir descreve o crescimento populacional de certo vilarejo desde \(1910\) até \(1990\). No eixo das ordenadas, a população é dada em milhares de habitantes.
-\begin{center}\begin{tikzpicture}[scale=.5]
+\item \textbf{(UFRJ-98-PNE)} - O gráfico a seguir descreve o crescimento populacional de certo vilarejo desde \(1910\) até \(1990\). No eixo das ordenadas, a população é dada em milhares de habitantes.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5]
 \draw [thick, <->] (22,0) -- (0,0) -- (0, 13);
        \node [below] at (21,0) {ano};
        \node [left] at (0,12) { popula\c{c}\~{a}o};
@@ -1687,16 +1808,19 @@ Determine o consumo correspondente à taxa de R\$ \(1.950,00\).
        \draw [thick] (14,0.1) -- (14,-0.1);
      \draw [thick] (16,0.1) -- (16,-0.1);
        \draw [thick] (18,0.1) -- (18,-0.1);
-       \node [ponto, color=primario] at (4,2) {};
-       \node [ponto, color=primario] at (6,3) {};
-       \node [ponto, color=primario] at (8,4.2) {};
-       \node [ponto, color=primario] at (10,6) {};
-       \node [ponto, color=primario] at (12,7) {};
-       \node [ponto, color=primario] at (14,8.5) {};
-       \node [ponto, color=primario] at (16,10) {};
-       \node [ponto, color=primario] at (18,11.5) {};
-\draw[very thick, color=primario] (2,0.8) -- (4,2) -- (6,3) -- (8,4.2) -- (10,6) -- (12,7) -- (14, 8.5) -- (16,10) -- (18, 11.5);
-\end{tikzpicture}\end{center}\begin{enumerate}
+       \node [ponto, color=\currentcolor!80] at (4,2) {};
+       \node [ponto, color=\currentcolor!80] at (6,3) {};
+       \node [ponto, color=\currentcolor!80] at (8,4.2) {};
+       \node [ponto, color=\currentcolor!80] at (10,6) {};
+       \node [ponto, color=\currentcolor!80] at (12,7) {};
+       \node [ponto, color=\currentcolor!80] at (14,8.5) {};
+       \node [ponto, color=\currentcolor!80] at (16,10) {};
+       \node [ponto, color=\currentcolor!80] at (18,11.5) {};
+\draw[very thick, color=\currentcolor!80] (2,0.8) -- (4,2) -- (6,3) -- (8,4.2) -- (10,6) -- (12,7) -- (14, 8.5) -- (16,10) -- (18, 11.5);
+\end{tikzpicture}
+
+\end{figure}
+\begin{enumerate}
 \item {} 
 Determine em que década a população atingiu a marca de \(5 000\) habitantes.
 
@@ -1705,18 +1829,23 @@ Observe que a partir de \(1960\) o crescimento da população em cada década te
 
 \end{enumerate}
 
-\(4.\) Suponha que um determinado veículo de transporte de passageiro tem seu valor comercial depreciado linearmente, isto é, seu valor comercial sofre desvalorização constante por ano. Veja a figura seguinte.
-\begin{center}\begin{tikzpicture}[scale=.5]
+\item Suponha que um determinado veículo de transporte de passageiro tem seu valor comercial depreciado linearmente, isto é, seu valor comercial sofre desvalorização constante por ano. Veja a figura seguinte.
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5]
 Questão 4.png
 \draw [thick,<->] (0,12) -- (0,0) -- (17,0);
      \node [below left] at (0,12) {Valor (R\$)};
      \node [below] at (17,0) {Tempo (anos)};
        \node [left] at (0,-0.5) {0};
        \node [below] at (7.5,0) {20};
-       \draw [very thick,color=primario] (0,10) -- (7.5,2) -- (15,2);
+       \draw [very thick,color=\currentcolor!80] (0,10) -- (7.5,2) -- (15,2);
        \draw [dashed,color=secundario] (7.5,2) -- (7.5,0);
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
+\end{figure}
+
 Esse veículo foi vendido pelo seu primeiro dono, após \(5\) anos de uso, por R\$ \(24.000,00\). Sabendo-se que o valor comercial do veículo atinge seu valor mínimo após \(20\) anos de uso, e que esse valor mínimo corresponde a \(20\%\) do valor que tinha quando era novo. Responda:
 \begin{enumerate}
 \item {} 
@@ -1730,12 +1859,15 @@ Qual o valor comercial do carro quando atinge \(2\) anos de uso?
 
 \end{enumerate}
 
-\(5.\) \textbf{(UERJ 2016)} O resultado de um estudo para combater o desperdício de água, em certo município, propôs que as companhias de abastecimento pagassem uma taxa à agência reguladora sobre as perdas por vazamento nos seus sistemas de distribuição. No gráfico, mostra-se o valor a ser pago por uma companhia em função da perda por habitante.
-\begin{center}\begin{tikzpicture}[scale=.3]
+\item \textbf{(UERJ 2016)} O resultado de um estudo para combater o desperdício de água, em certo município, propôs que as companhias de abastecimento pagassem uma taxa à agência reguladora sobre as perdas por vazamento nos seus sistemas de distribuição. No gráfico, mostra-se o valor a ser pago por uma companhia em função da perda por habitante.
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.3]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [thick, -] (22,0) -- (0,0) -- (0, 26);
-     \node [below] at (18,-0,2) {perda por habitante (litros)};
-       \node [above right, rotate=90] at (-1,17) { valor por habitante (reais)};
+     \node [below] at (15,-0.9) {perda por habitante (litros)};
+       \node [above right, rotate=90] at (-1.2,10) { valor por habitante (reais)};
        \node [left] at (0,0) {0};
        \node [left] at (0,2.5) {5};
        \draw [thick] (0,2.5) -- (-0.1,2.5);
@@ -1752,19 +1884,23 @@ Qual o valor comercial do carro quando atinge \(2\) anos de uso?
        \draw [thick, dashed, color=secundario] (4,0) -- (4,2.5);
        \draw [thick, dashed, color=secundario] (9,0) -- (9,9.5) -- (0,9.5);
        \draw [thick, dashed, color=secundario] (20,0) -- (20,25) -- (0,25);
-     \draw [very thick, color=primario] (0,2.5) -- (4,2.5) -- (20,25);
-     \node [ponto, color=primario] at (4,2.5) {};
-       \node [ponto, color=primario] at (9,9.5) {};
-       \node [ponto, color=primario] at (20,25) {};
-\end{tikzpicture}\end{center}
+     \draw [very thick, color=\currentcolor!80] (0,2.5) -- (4,2.5) -- (20,25);
+     \node [ponto, color=\currentcolor!80] at (4,2.5) {};
+       \node [ponto, color=\currentcolor!80] at (9,9.5) {};
+       \node [ponto, color=\currentcolor!80] at (20,25) {};
+\end{tikzpicture}
+\end{figure}
 Calcule o valor V, em reais, representado no gráfico, quando a perda for igual a \(500\) litros por habitante.
 
-\(6.\) \textbf{(ENEM-2012)} Certo vendedor tem seu salário mensal calculado da seguinte maneira: ele ganha um valor fixo de R\$ \(750,00\), mais uma comissão de R\$ 3,00 para cada produto vendido. Caso ele venda mais de \(100\) produtos, sua comissão passa a ser de R\$ \(9,00\) para cada produto vendido, a partir do \(101º\) produto vendido. Com essas informações, o gráfico que melhor representa a relação entre salário e o número de produtos vendidos é:
-\begin{center}\begin{tikzpicture}[scale=.5]
+\item \textbf{(ENEM-2012)} Certo vendedor tem seu salário mensal calculado da seguinte maneira: ele ganha um valor fixo de R\$ \(750,00\), mais uma comissão de R\$ 3,00 para cada produto vendido. Caso ele venda mais de \(100\) produtos, sua comissão passa a ser de R\$ \(9,00\) para cada produto vendido, a partir do \(101º\) produto vendido. Com essas informações, o gráfico que melhor representa a relação entre salário e o número de produtos vendidos é:
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
   \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-  \node [below, ] at (9.5,-0.5) {Produtos vendidos};
-  \node [above, rotate=90,] at (-1, 9.5) {Sal\'ario em R\$};
+  \node [below, ] at (19,-1) {Produtos vendidos};
+  \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
   \node [below,] at (0,0) {0};
   \node [below,] at (2,0) {25};
   \node [below] at (4,0) {50};
@@ -1787,13 +1923,19 @@ Calcule o valor V, em reais, representado no gráfico, quando a perda for igual 
   \node [left] at (0,8) {2000};
   \node [left] at (0,9) {2250};
 \node [left] at (0,10) {2500};
-  \draw [ultra thick, color=primario] (0,3) -- (16,6);
-\end{tikzpicture}\end{center}\begin{center}\begin{tikzpicture}[scale=.5]
+  \draw [ultra thick, color=\currentcolor!80] (0,3) -- (16,6);
+\end{tikzpicture}
+
+\end{figure}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
        \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-       \node [below, ] at (19,-0.5) {Produtos vendidos};
-     \node [above, rotate=90,] at (-2, 9.5) {Sal\'ario em R\$};
+  \node [below, ] at (19,-1) {Produtos vendidos};
+  \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
      \node [below,] at (0,0) {0};
        \node [below,] at (2,0) {25};
        \node [below] at (4,0) {50};
@@ -1816,13 +1958,20 @@ Calcule o valor V, em reais, representado no gráfico, quando a perda for igual 
        \node [left] at (0,8) {2000};
        \node [left] at (0,9) {2250};
        \node [left] at (0,10) {2500};
-       \draw [ultra thick, color=primario] (0,3) -- (6,6.5) -- (16,8);
-\end{tikzpicture}\end{center}\begin{center}\begin{tikzpicture}[scale=.5]
+       \draw [ultra thick, color=\currentcolor!80] (0,3) -- (6,6.5) -- (16,8);
+\end{tikzpicture}
+
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
        \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-       \node [below, ] at (19,-0.5) {Produtos vendidos};
-       \node [above, rotate=90,] at (-2, 9.5) {Sal\'ario em R\$};
+  \node [below, ] at (19,-1) {Produtos vendidos};
+  \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
        \node [below,] at (0,0) {0};
        \node [below,] at (2,0) {25};
        \node [below] at (4,0) {50};
@@ -1845,14 +1994,20 @@ Calcule o valor V, em reais, representado no gráfico, quando a perda for igual 
        \node [left] at (0,8) {2000};
        \node [left] at (0,9) {2250};
        \node [left] at (0,10) {2500};
-       \draw [ultra thick, color=primario] (0,3) -- (8,3) -- (16,7);
-\end{tikzpicture}\end{center}\begin{center}\begin{tikzpicture}[scale=.5]
+       \draw [ultra thick, color=\currentcolor!80] (0,3) -- (8,3) -- (16,7);
+\end{tikzpicture}
+
+\end{figure}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5]
 Questão 6 item d
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
        \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-       \node [below, ] at (19,-0.5) {Produtos vendidos};
-     \node [above, rotate=90,] at (-2, 9.5) {Sal\'ario em R\$};
+  \node [below, ] at (19,-1) {Produtos vendidos};
+  \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
      \node [below,] at (0,0) {0};
        \node [below,] at (2,0) {25};
        \node [below] at (4,0) {50};
@@ -1875,13 +2030,18 @@ Questão 6 item d
        \node [left] at (0,8) {2000};
        \node [left] at (0,9) {2250};
        \node [left] at (0,10) {2500};
-       \draw [ultra thick, color=primario] (0,3) -- (16,3);
-\end{tikzpicture}\end{center}\begin{center}\begin{tikzpicture}[scale=.5]
+       \draw [ultra thick, color=\currentcolor!80] (0,3) -- (16,3);
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
        \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-       \node [below, ] at (19,-0.5) {Produtos vendidos};
-       \node [above, rotate=90,] at (-2, 9.5) {Sal\'ario em R\$};
+       \node [below, ] at (19,-1) {Produtos vendidos};
+       \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
        \node [below,] at (0,0) {0};
        \node [below,] at (2,0) {25};
        \node [below] at (4,0) {50};
@@ -1904,10 +2064,14 @@ Questão 6 item d
      \node [left] at (0,8) {2000};
      \node [left] at (0,9) {2250};
      \node [left] at (0,10) {2500};
-     \draw [ultra thick, color=primario] (0,3) -- (8,4.25) -- (16,8);
-\end{tikzpicture}\end{center}
-\(7.\) \textbf{(UERJ-2014 - 2ª F)} O reservatório A perde água a uma taxa constante de 10 litros por hora, enquanto o reservatório B ganha água a uma taxa constante de 12 litros por hora. No gráfico, estão representados, no eixo y, os volumes, em litros, da água contida em cada um dos reservatórios, em função do tempo, em horas, representado no eixo x.
-\begin{center}\begin{tikzpicture}[scale=.5]
+     \draw [ultra thick, color=\currentcolor!80] (0,3) -- (8,4.25) -- (16,8);
+\end{tikzpicture}
+\end{figure}
+\item \textbf{(UERJ-2014 - 2ª F)} O reservatório A perde água a uma taxa constante de 10 litros por hora, enquanto o reservatório B ganha água a uma taxa constante de 12 litros por hora. No gráfico, estão representados, no eixo y, os volumes, em litros, da água contida em cada um dos reservatórios, em função do tempo, em horas, representado no eixo x.
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.5]
 \draw [thick, <->] (14,0) -- (0,0) -- (0, 14);
      \node [below] at (13.5,0) {$x$};
      \node [left] at (0,13.5) {$y$};
@@ -1919,15 +2083,16 @@ Questão 6 item d
        \draw [thick] (5,0) -- (5,-0.1);
      \node [left] at (10,11.5) {$B$};
        \node [right] at (9,2.5) {$A$};
-     \draw[very thick, color= primario]  (0,12) -- (11,0);
-     \draw[very thick, color= primario]  (0,2) -- (11,12);
+     \draw[very thick, color= \currentcolor!80]  (0,12) -- (11,0);
+     \draw[very thick, color= \currentcolor!80]  (0,2) -- (11,12);
      \draw[thick, dashed, color= secundario]  (5,0) -- (5,6.5);
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
+\end{figure}
 Determine o tempo \(x_{0}\), em horas, indicado no gráfico.
 
-\(8.\) Numa estrada existem dois telefones instalados no acostamento: um no quilometro 3 e outro no quilometro 88. Entre eles serão colocados mais 16 telefones, mantendo-se entre dois telefones consecutivos sempre a mesma distância. Determine em quais marcos quilométricos deverão ficar esses novos telefones.
+\item Numa estrada existem dois telefones instalados no acostamento: um no quilometro 3 e outro no quilometro 88. Entre eles serão colocados mais 16 telefones, mantendo-se entre dois telefones consecutivos sempre a mesma distância. Determine em quais marcos quilométricos deverão ficar esses novos telefones.
 
-\(9.\) (UNIRIO) O fichário da clínica médica de um hospital possui 10.000 clientes cadastrados, em fichas numeradas de 1 a 10.000. Um médico pesquisador, desejoso de saber a incidência de hipertensão arterial entre pessoas que procuravam o setor, fez um levantamento, analisando as fichas que tinham números múltiplos de 15. Quantas fichas NÃO foram analisadas ?
+\item (UNIRIO) O fichário da clínica médica de um hospital possui 10.000 clientes cadastrados, em fichas numeradas de 1 a 10.000. Um médico pesquisador, desejoso de saber a incidência de hipertensão arterial entre pessoas que procuravam o setor, fez um levantamento, analisando as fichas que tinham números múltiplos de 15. Quantas fichas NÃO foram analisadas ?
 \begin{enumerate}
 \item {} 
 666
@@ -1946,7 +2111,7 @@ Determine o tempo \(x_{0}\), em horas, indicado no gráfico.
 
 \end{enumerate}
 
-\(10.\) (UERJ-2003-1ª fase) Uma seqüência de cinco átomos está organizada por ordem crescente de seus números atômicos, cujos valores são regidos por uma progressão aritmética de razão 4. Já o número de nêutrons desses mesmos átomos é regido por uma progressão aritmética de razão 5.
+\item (UERJ-2003-1ª fase) Uma seqüência de cinco átomos está organizada por ordem crescente de seus números atômicos, cujos valores são regidos por uma progressão aritmética de razão 4. Já o número de nêutrons desses mesmos átomos é regido por uma progressão aritmética de razão 5.
 Se o átomo mais pesado pertence ao elemento ferro e o mais leve possui o número de prótons igual ao número de nêutrons, o número de massa do terceiro átomo da série é:
 \begin{enumerate}
 \item {} 
@@ -1963,15 +2128,13 @@ Se o átomo mais pesado pertence ao elemento ferro e o mais leve possui o númer
 
 \end{enumerate}
 
-\(11.\) (UERJ 2015-1º ex qualif)
+\item (UERJ 2015-1º ex qualif)
 \phantomsection\label{\detokenize{AF107-E:fig-charge}}
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{charge}.png}
+\noindent\includegraphics[width=300bp]{{charge}.png}
 \label{\detokenize{AF107-E:fig-charge}}\end{figure}
-
-tikzstyle\{ponto\}={[}circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label=\{\}{]}
 
 Na situação apresentada nos quadrinhos, as distâncias, em quilômetros, \(d(A,B)\), \(d(B,C)\) e \(d(C,D)\) formam, nesta ordem, uma progressão aritmética.
 O vigésimo termo dessa progressão corresponde a:
@@ -1990,7 +2153,7 @@ O vigésimo termo dessa progressão corresponde a:
 
 \end{enumerate}
 
-\(12.\) (ENEM-2011) O número mensal de passagens de uma determinada empresa aérea aumentou no ano passado nas seguintes condições: em janeiro foram vendidas \(33 000\) passagens; em fevereiro, \(34 500\); em março, \(36 000\). Esse padrão de crescimento se mantém para os meses subsequentes. Quantas passagens foram vendidas por essa empresa em julho do ano passado?
+\item (ENEM-2011) O número mensal de passagens de uma determinada empresa aérea aumentou no ano passado nas seguintes condições: em janeiro foram vendidas \(33 000\) passagens; em fevereiro, \(34 500\); em março, \(36 000\). Esse padrão de crescimento se mantém para os meses subsequentes. Quantas passagens foram vendidas por essa empresa em julho do ano passado?
 \begin{enumerate}
 \item {} 
 \(38 000\)
@@ -2009,7 +2172,7 @@ O vigésimo termo dessa progressão corresponde a:
 
 \end{enumerate}
 
-\(13.\) (UNICAMP) A ANATEL determina que as emissoras de rádio FM utilizem as frequências de \(87,9\) a \(107,9\) MHz, e que haja uma diferença de \(0,2\) MHz entre emissoras com frequências vizinhas. A cada emissora, identificada por sua freqüência, é associado um canal, que é um número natural que começa em \(200\). Desta forma, à emissora cuja frequência é de \(87,9\) MHz corresponde o canal \(200\); à seguinte, cuja frequência é de \(88,1\) MHz, corresponde o
+\item (UNICAMP) A ANATEL determina que as emissoras de rádio FM utilizem as frequências de \(87,9\) a \(107,9\) MHz, e que haja uma diferença de \(0,2\) MHz entre emissoras com frequências vizinhas. A cada emissora, identificada por sua freqüência, é associado um canal, que é um número natural que começa em \(200\). Desta forma, à emissora cuja frequência é de \(87,9\) MHz corresponde o canal \(200\); à seguinte, cuja frequência é de \(88,1\) MHz, corresponde o
 canal \(201\), e assim por diante. Pergunta-se:
 \begin{enumerate}
 \item {} 
@@ -2020,40 +2183,8 @@ Os canais \(200\) e \(285\) são reservados para uso exclusivo das rádios comun
 
 \end{enumerate}
 
-\(14.\) (UFRJ-2000) Mister MM, o Mágico da Matemática, apresentou-se diante de uma platéia com \(50\) fichas, cada uma contendo um número. Ele pediu a uma espectadora que ordenasse as fichas de forma que o número de cada uma, excetuando-se a primeira e a última, fosse a média aritmética do número da anterior com o da posterior. Mister MM solicitou a seguir à espectadora que lhe informasse o valor da décima sexta e da trigésima primeira ficha, obtendo como resposta \(103\) e \(58\) respectivamente. Para delírio da platéia, Mister MM adivinhou então o valor da última ficha.
+\item (UFRJ-2000) Mister MM, o Mágico da Matemática, apresentou-se diante de uma platéia com \(50\) fichas, cada uma contendo um número. Ele pediu a uma espectadora que ordenasse as fichas de forma que o número de cada uma, excetuando-se a primeira e a última, fosse a média aritmética do número da anterior com o da posterior. Mister MM solicitou a seguir à espectadora que lhe informasse o valor da décima sexta e da trigésima primeira ficha, obtendo como resposta \(103\) e \(58\) respectivamente. Para delírio da platéia, Mister MM adivinhou então o valor da última ficha.
 
 Determine você também este valor.
 
-\
-
-Questão Extra:
-
-Trace o gráfico das funções afins \(f\), informando os pontos de intersecção com os eixos coordenados descritas por:
-\begin{enumerate}
-\item {} 
-\(f(x)=2x-4\)
-
-\item {} 
-\(f(x)=x+3\)
-
-\item {} 
-\(f(x)=-x+2\)
-
-\item {} 
-\(f(x)=2x\)
-
-\item {} 
-\(f(x)=-x\)
-
-\item {} 
-\(f(x)=6\)
-
-\item {} 
-\(f(x)=-4\)
-
-\item {} 
-\(f(x)=5x-1\)
-
 \end{enumerate}
-
-

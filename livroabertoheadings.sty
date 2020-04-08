@@ -116,7 +116,7 @@
   width=80mm,
   left=3mm,
   right=3mm,
-  top=10mm,
+  top=3mm,
   bottom=.5mm,
   colback=white,
   colframe=white,
@@ -157,7 +157,7 @@
         \node[font=\chapnumfont, text=cor2] at (a) {\chapnamefont\thechapter};
 
         \coordinate (b) at ($(c1)!0.5!(c2)$);
-        \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {#1};
+        \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {\begin{varwidth}{12cm}\baselineskip=1cm #1\end{varwidth}};
         % solution to the box O QUE and POR QUE?
         \node [right] at ($(current page.north)+(-15mm,-150mm)$) %
         {\begin{openningbox}
@@ -233,7 +233,7 @@
             \end{pgfonlayer}
 
             \begin{pgfonlayer}{foreground}
-                \node (page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
+                \node [text=white, font=\bfseries](page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
             \end{pgfonlayer}
     \end{tikzpicture}
 }
@@ -247,7 +247,7 @@
             \end{pgfonlayer}
 
             \begin{pgfonlayer}{foreground}
-                \node (page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
+                \node [text=white, font=\bfseries](page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
             \end{pgfonlayer}
 
     \end{tikzpicture}
@@ -315,24 +315,32 @@
     \end{tikzpicture}
 }
 
+\let\oldnewline\newline
+% redefinition: \newline is \relax
+\newcommand\AnnCL{%
+  \def\newline{\relax}}
+% recovering the original meaning of \newline
+\newcommand\RecCL{%
+  \def\newline{\oldnewline}}
 
 % Draw Headings
 
 %%% Activity heading
 %\newcommand{\activity}[1]{
-%	\begin{tikzpicture}[remember picture, overlay]
-%	\draw [draw=cor2] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] coordinate (arc) -- ++(53.00mm,0.00mm) coordinate (line);
-%	\node (title) at (arc.north east) [above right, font=\bfseries\fontsize{13pt}{0}\selectfont] {#1};
-%	\filldraw [fill=cor2, draw=cor2] (line) -- ++(0.00mm,6.00mm) coordinate (line1) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -| ++(20.00mm,-6.00mm) coordinate (line2) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-%	\node (activity) at ($(line1)!0.5!(line2)$) [text=white, font=\titlefont] {Atividade};
-%	\end{tikzpicture}
+%   \begin{tikzpicture}[remember picture, overlay]
+%   \draw [draw=cor2] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] coordinate (arc) -- ++(53.00mm,0.00mm) coordinate (line);
+%   \node (title) at (arc.north east) [above right, font=\bfseries\fontsize{13pt}{0}\selectfont] {#1};
+%   \filldraw [fill=cor2, draw=cor2] (line) -- ++(0.00mm,6.00mm) coordinate (line1) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -| ++(20.00mm,-6.00mm) coordinate (line2) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+%   \node (activity) at ($(line1)!0.5!(line2)$) [text=white, font=\titlefont] {Atividade};
+%   \end{tikzpicture}
 %}
 
 %% Exploring Headins
 \newcommand{\explore}[1]{%
 \vspace{8 mm}
+\needspace{.15\textheight}
 
-	\noindent \begin{tikzpicture}[remember picture, scale=1.3]% overlay removed from original, otherwise the stays behind the text, scale.
+    \noindent \begin{tikzpicture}[remember picture, scale=1.3]% overlay removed from original, otherwise the stays behind the text, scale.
         \filldraw [fill=session1, draw=session1] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
         \node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont  EXPLORANDO};
         \draw [session1, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
@@ -340,17 +348,18 @@
     \end{tikzpicture}
     \vspace{3 mm}
     
-    	\def\currentcolor{session1}
-	%setting depth 1 enumerate style
+        \def\currentcolor{session1}
+    %setting depth 1 enumerate style
         \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-	% choose secondary (depth 2) enumerate style..
-	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+    % choose secondary (depth 2) enumerate style..
+    \setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
 
     
 }
 
 \newcommand{\practice}[1]{%
 \vspace{8 mm}
+\needspace{.15\textheight}
 
 \noindent     \begin{tikzpicture}[remember picture, scale=1.3]
         \filldraw [fill=session2, draw=session2] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
@@ -360,17 +369,18 @@
     \end{tikzpicture}
 \vspace{3 mm}
 
-	\def\currentcolor{session2}
-	%setting depth 1 enumerate style
+    \def\currentcolor{session2}
+    %setting depth 1 enumerate style
         \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-	% choose secondary (depth 2) enumerate style..
-	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+    % choose secondary (depth 2) enumerate style..
+    \setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
 
 
 }
 
 \newcommand{\know}[1]{%
 \vspace{8 mm}
+\needspace{.15\textheight}
 
 \noindent     \begin{tikzpicture}[remember picture, scale=1.3]
         \filldraw [fill=session3, draw=session3] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
@@ -380,15 +390,16 @@
     \end{tikzpicture}
 \vspace{3 mm}
 
-	\def\currentcolor{session3}
-	%setting depth 1 enumerate style
+    \def\currentcolor{session3}
+    %setting depth 1 enumerate style
        \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-	% choose secondary (depth 2) enumerate style..
-	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+    % choose secondary (depth 2) enumerate style..
+    \setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
 }
 
 \newcommand{\arrange}[1]{%
 \vspace{8 mm}
+\needspace{.15\textheight}
 
 \noindent     \begin{tikzpicture}[remember picture, scale=1.3]
         \filldraw [fill=session4, draw=session4] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
@@ -398,28 +409,30 @@
     \end{tikzpicture}
 \vspace{3 mm}
 
-	\def\currentcolor{session4}
-	%setting depth 1 enumerate style
+    \def\currentcolor{session4}
+    %setting depth 1 enumerate style
         \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-	% choose secondary (depth 2) enumerate style..
-	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+    % choose secondary (depth 2) enumerate style..
+    \setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
 
 }
 
 %% Exercise section
 \newcommand{\exercise}{
 \vspace{8 mm}
+\needspace{.15\textheight}
 
-	\noindent \begin{tikzpicture}[remember picture]
-	\draw [draw=cor2, very thick] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) -- ++(\textwidth , 0.00mm) -- ++(0mm,-2mm);% line
-	\fill [draw=cor2, very thick , fill=cor1] ($(\textwidth/2 , 0mm) + (19mm,6mm)$) -- ++(0.00mm,-5.5 mm) coordinate (line1) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| ++(-38.00mm , 0.00mm)  -- ++ (0mm, 5.5 mm) coordinate (line2) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-	\node (exercise) at ($(line1)!0.5!(line2) + (0 mm, .8 mm)$) [text=white, font=\thirdtitlefont\Large] {EXERCÍCIOS};%\fontsize{13pt}{0}
-	\end{tikzpicture}
-	\vspace{8 mm}
-	
-	\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
-	\setlist[enumerate,2]{label=\emph{\alph*)},ref=\theenumi.\emph{\arabic*}}
-	}
+    \noindent \begin{tikzpicture}[remember picture]
+    \draw [draw=cor2, very thick] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) -- ++(\textwidth , 0.00mm) -- ++(0mm,-2mm);% line
+    \fill [draw=cor2, very thick , fill=cor1] ($(\textwidth/2 , 0mm) + (19mm,6mm)$) -- ++(0.00mm,-5.5 mm) coordinate (line1) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| ++(-38.00mm , 0.00mm)  -- ++ (0mm, 5.5 mm) coordinate (line2) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+    \node (exercise) at ($(line1)!0.5!(line2) + (0 mm, .8 mm)$) [text=white, font=\thirdtitlefont\Large] {EXERCÍCIOS};%\fontsize{13pt}{0}
+    \end{tikzpicture}
+    \vspace{8 mm}
+    \def\currentcolor{cor1}
+    
+    \setlist[enumerate]{label=\protect\enumbox{\arabic*}}
+    \setlist[enumerate,2]{label=\emph{\alph*)},ref=\theenumi.\emph{\arabic*}}
+    }
 
 % Defining the section style for the diferent names that eventually appear.
 \setsecnumdepth{chapter} % just number the chapter, not lower levels.
