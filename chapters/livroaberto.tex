@@ -1,0 +1,420 @@
+\renewcommand\chapterillustration{./abertura-documentacao}
+\renewcommand\chapterwhat{O Livro Aberto de Matemática é um projeto de construção de um material didático de matemática de distribuição livre e \textit{Open Source}, isto é, o código é aberto e pode receber submissões de qualquer um que deseje colaborar}
+
+\renewcommand\chapterbecause{O Esforço para produzir livros didáticos de Matemática com licença aberta começou em 2016, com a elaboração do material de Frações para o ensino fundamental I. Desde então, novos elaboradores acreditaram e juntaram-se ao projeto para alcançarmos novos níveis e novos livros. Hoje, possuímos diversos capítulos escritos e outros 6 livros em produção. Tudo isso a partir de um trabalho colaborativo envolvendo matemáticos, professores universitários e professores da Educação Básica.
+
+Um princípio fundamental desta iniciativa é que sua produção configure uma proposta pedagógica ancorada e acompanhada por pesquisa científica em Ensino de Matemática. O projeto tem também compromisso com a formação e o desenvolvimento profissional de professores. Em particular, pela composição característica da equipe, destaca-se o entendimento do potencial do projeto para enfrentar um reconhecido desafio: estreitar o diálogo entre a realidade e as demandas próprias da prática docente e a formação acadêmica do professor. Leia mais a respeito. Você também pode sugerir alterações no texto do projeto pelo Github.}
+\chapter{Documentação do Livro Aberto do Ensino Médio}
+
+\mbox{}\thispagestyle{empty}\clearpage
+
+\thispagestyle{empty}
+
+\begin{center}
+Projeto: LIVRO ABERTO DE MATEMÁTICA
+
+\noindent \begin{tabular}{lcccr}
+\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
+\end{tabular}
+\end{center}
+
+\vspace*{.3cm}
+
+Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+
+
+\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+Título: & Documentação do Livro Aberto do Ensino médio\\
+\\
+Ano/ Versão: & 2020 / versão 0.1 de 09 de setembro de 2020\\
+\\
+Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+\\
+Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+\\
+Produção:& Associação Livro Aberto\\
+\\
+Coordenação:& Fabio Simas, \\
+			& Augusto Teixeira (livroaberto@impa.br)\\
+\\
+  Autor: & Tarso Boudet Caldas\\
+        
+           
+\\
+Revisor: &  --- \\
+            
+\\
+Design: & Andreza Moreira (Tangentes Design) \\
+\\
+  Ilustrações: & --- \\ 
+\\
+Gráficos: & Tarso Caldas (Licenciandos da UNIRIO)\\
+\\
+  Capa: & Foto de Bernd Klutsch, no Unplash \\
+  		& https://unsplash.com/photos/nE2HV5AUXFo
+\end{tabular}
+\vspace{.5cm}
+
+
+\begin{figure}[b]
+\begin{minipage}[l]{5cm}
+\centering
+
+{\large Licença:}
+
+  \includegraphics[width=3.5cm]{cc-by-nc-sa.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{5cm}
+\centering
+{\large Desenvolvido por}
+
+\includegraphics[width=2.5cm]{logo-associacao.jpg}
+\end{minipage}
+\begin{minipage}[r]{5cm}
+\centering
+
+{\large Patrocínio:}
+  \vspace{1em}
+  \includegraphics[width=3.5cm]{itau}
+\end{minipage}
+\end{figure}
+
+\mainmatter
+
+\explore{O que é necessário?}
+
+Para a utilização deste pacote é necessário alguns arquivos auxiliares que estão incluídos na pasta \verb|tex-design-development| no \href{https://github.com/livro-aberto/tex-design-development/}{GitHub} do projeto. Os arquivos são:
+\begin{itemize}
+\item O diretório \verb|/chapters|, onde devem ser colocados os capítulos em produção (nele estão exemplos de outros capítulos já produzidos, mas estes arquivos não são necessários).
+\item O diretório \verb|/Figuras|, onde devem ser colocadas as figuras dos capítulos (estão incluídas no GitHub uma pasta com as figuras de todos os capítulos produzidos até o momento e também uma pasta apenas com as figuras necessárias para a geração de um capítulo novo).
+\item O diretório \verb|/Fontes| que possui todas as fontes usadas no livro (elas devem ser instaladas na sua máquina).
+\item Os pacotes \verb|sphinx.sty| e \verb|livroaberto.sty|.
+\item O diretório \verb|/Professor| caso queira trabalhar com o material do professor (este diretório possui a mesma estrutura da pasta mãe, mas explicaremos mais sobre esse material adiante).
+\item O arquivo \verb|aluno.tex|.
+\end{itemize}
+
+Além disso, é necessário ter instalado \href{https://www.tug.org/texlive/}{\TeX{} Live} ou \href{https://miktex.org/}{Mik\TeX}{} e um editor de \LaTeX{} à sua escolha. Não pretendemos a ensinar o uso de \LaTeX, mas mostrar a estrutura e padronização utilizada nos capítulos já existentes do projeto. Para aqueles que possuem interesse em aprender indicamos \href{http://www.uft.edu.br/engambiental/prof/catalunha/arquivos/latex/latex_GilbertoSouto.pdf}{Curso de \LaTeX{}} de Gilberto Souto %provisório
+
+
+
+\section{Início do capítulo}
+
+Para começar o seu capítulo e poder compilá-lo, é necessário editar no arquivo aluno, após o início do documento, incluindo o nome do seu arquivo pelo compando \verb|\include{chapters/seucapitulo}|(lembrando que o arquivo deve estar na pasta \verb|/chapters|). É necessário usar \verb|xelatex| para compilar propriamente.
+
+No início do arquivo de seu capítulo é preciso colocar o que seria o "preâmbulo"{} do capítulo, isto é, antes do primeiro explorando é preciso colocar a abertura e os créditos (isto pode ser feito copiando de outro capítulo já pronto). A partir disso, é necessário:
+
+\begin{itemize}
+\item A ilustração da capa, que pode ser feito alterando o comando \spverb|\renewcommand\chapterillustration{./imagemdacapa}|. A capa deve estar na pasta \verb|/Figuras| e deve ter o nome no formato \spverb|abertura-nomedocapitulo|. A figura deve ter licença gratuita, e deve ser preferencialmente no formado de retrato. Figuras gratuitas podem ser encontradas no site \href{https://unsplash.com/}{Unsplash}.
+
+\item O "O Quê?"{} pode ser colocado dentro comando \spverb|\renewcommand\chapterwhat{o que}|; o "Por Quê"{} em \spverb|\renewcommand\chapterbecause{por que}| e o nome do capítulo em \spverb|\chapter{capitulo}|
+
+\item Alterar na página de créditos o nome do capítulo; o(s) autor(es); a versão; os créditos da imagem da capa.
+\end{itemize}
+
+Após isso, basta começar o Explorando, após \verb|\mainmatter| usando \verb|\explore{nome da seção}|.
+
+\begin{task}{Caixa de atividade}
+
+A primeira parte de uma seção é o Explorando. Nela são colocadas atividades que introduzem o assunto que será discutido. Para criar uma caixa de atividade usamos
+\begin{verbatim}
+\begin{task}{Título da atividade}
+
+Texto da atividade
+
+\end{task}
+\end{verbatim} 
+\end{task}
+
+
+\begin{task}{Figuras}
+Na sua atividade, você pode querer incluir figuras e tabelas. Temos um padrão que para essa inclusão.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=250bp]{5_1.jpg}
+\caption{Exemplo de figura}
+\end{figure}
+
+As figuras são em geral centralizadas e podem ou não possuir legenda. Por isso usamos o ambiente de figura dessa forma:
+
+\begin{verbatim}
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=250bp]{suafigura.png}
+\caption{Legenda}
+\label{marcação para referência}
+\end{figure}
+\end{verbatim}
+
+O ambiente de figura possui uma diferença crucial que é o uso da opção \verb|[H]|. Essa opção é fornecida pelo pacote \verb|float| (incluído no pacote \verb|livroaberto|) e é usada pois a figura não pode estar naturalmente dentro de \href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{ambiente flutuante}, que é o caso da caixa de atividade, criada por uma \verb|tcolorbox|. Deixamos também a figura, em geral, centralizada.
+
+\end{task}
+
+\begin{task}{Tabelas}
+
+Tabelas requerem um pouco mais de atenção, pois possuem diversas opções e tipos de construções avançadas. Por isso, recomendamos a leitura do artigo sobre tabelas no \href{https://en.wikibooks.org/wiki/LaTeX/Tables}{Wikibooks}. 
+
+Assim como nas figuras, deve-se usar o parâmetro \verb|H| para que ela funcione normalmente dentro da caixa de atividade. Na nossa padronização de tabela, buscamos um \textit{heading} que possua a mesma cor da parte da seção. Para conseguir isto temos três comandos:
+
+\begin{itemize}
+\item \verb|\tcolor{texto}|: Coloca a cor da célula na cor da seção atual e o texto branco em negrito.
+\item \verb|\tmcol{#colunas}{alinhamento}{texto}|: Substitui o comando \verb|multicolumn| para ter as características que buscamos na célula.
+\item \verb|\thead| coloca as cores e o texto na forma padrão que usamos para toda uma linha. Funciona apenas para tabelas do pacote \verb|tabu| (explicação a seguir).
+\end{itemize}
+
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|c|}
+\hline
+\thead
+Atividade Física & Manhã & Tarde & Total \\
+\hline
+\tcolor{Não pratica} & 140 & 130 & 270 \\
+\hline
+\tmcol{2}{|c|}{Futebol} & 80 & 240 \\
+\hline
+\end{tabu}
+\caption{Exemplo de tabela usando os três comandos}
+\label{tabela}
+\end{table}
+
+% \clearpage
+\begin{verbatim}
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|c|}
+\hline
+\thead
+Atividade Física & Manhã & Tarde & Total \\
+\hline
+\tcolor{Não pratica} & 140 & 130 & 270 \\
+\hline
+\tmcol{2}{|c|}{Futebol} & 80 & 240 \\
+\hline
+\end{tabu}
+\caption{exemplo de tabela usando os três comandos}
+\label{tabela}
+\end{table}
+\end{verbatim}
+
+\end{task}
+
+\begin{observation}{Pacote tabu}
+Na maioria das tabelas encontradas nos capítulos já prontos, é utilizado o estilo de tabela \verb|tabu|. Este pacote introduz diversas funcionalidades úteis para a construção de tabelas, entretanto, o criador do pacote não o atualizou por muito tempo, gerando incompatibilidades com outros pacotes (não criou conflitos com nenhum usado no livro aberto), e por isso alguns usuários fizeram mudanças para resolver esses problemas. Porém, essa atualização tirou a principal funcionalidade que usamos que é o comando \verb|\rowcolor|, que é usado na macro \verb|\thead|. Por isso, não é recomendado o uso desse ambiente, podendo ser substituído por \verb|tabular| ou outros tipos de tabelas, desde que se use \verb|\tcolor| nas célular necessárias. 
+
+Para aqueles que se interessarem em usar o pacote \verb|tabu| em sua versão mais antiga, basta entrar na pasta \verb|\texlive\2020\texmf-dist\tex\latex\tabu| no local de instalação de seu \TeX{} Live (na versão de 2020) e trocar o nome do arquivo \verb|tabu-2018| para \verb|tabu|.
+\end{observation}
+
+Na caixa anterior temos o "Observação", que pode ser introduzido no texto no ambiente \verb|observation|:
+\begin{verbatim}
+\begin{observation}{titulo}
+Sua observação não precisa necessariamente de um título
+Para omiti-lo basta deixar as chaves de título vazias.
+\end{observation}
+\end{verbatim}
+
+Além da caixa de atividade e observação temos mais quatro caixas:
+
+\begin{research}
+O "Para pesquisar", feito usando
+
+\begin{verbatim}
+
+\begin{research}
+Seu o pesquisar não usa título.
+\end{research}
+\end{verbatim}
+\end{research}
+
+\begin{knowledge}
+O "Você Sabia?", que usa o ambiente
+
+\begin{verbatim}
+
+\begin{knowledge}
+Esta caixa também não possui título
+\end{knowledge}
+\end{verbatim}
+\end{knowledge}
+
+\begin{reflection}
+O Para refletir
+
+\begin{verbatim}
+
+\begin{reflection}
+Mais uma caixa que não tem título
+\end{reflection}
+\end{verbatim}
+\end{reflection}
+
+\begin{example}{Exemplo de uma caixa de exemplo}
+Por fim, a última caixa é a de exemplo. Caso possua alguma atividade já com a resposta é recomendável usar essa caixa, que pode ser feita com
+\begin{verbatim}
+
+\begin{example}{Título}
+Esta caixa pede um título, que pode possivelmente ser vazio.
+\end{example}
+\end{verbatim}
+\end{example}
+
+\begin{observation}{}
+As caixas são feitas usando o pacote \verb|tcolorbox|, e é importante ressaltas que este pacote não permite sobrepor caixas, isto é, não se pode colocar uma caixa dentre de outra, logo, não é possível colcoar uma observação no meio de uma atividade ou semelhantes.
+\end{observation}
+
+\arrange{Headers}
+
+Além de boxes, também usamos headers (cabeçalho) para o início de seções. Assim como o explorando é feito com \verb|\explore{nome}|, temos:
+
+\begin{itemize}
+\item Organizando: \verb|\arrange{nome}|
+\item Praticando: \verb|\practice{nome}|
+\item Para saber+: \verb|\know{nome}|
+\item Exercícios: \verb|\exercise|
+\end{itemize}
+
+Os headers não são ambientes, ou seja, não é necessário um \verb|\begin| e \verb|\end|, pois funcionam como seções novas. 
+
+Uma característica interessante é a mudança de cores do texto em relação ao header, que faz justamente a mudança das cores de células das tabelas que vimos anteriormente
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|c|}
+\hline
+\thead
+Atividade Física & Manhã & Tarde & Total \\
+\hline
+\tcolor{Não pratica} & 140 & 130 & 270 \\
+\hline
+\tmcol{2}{|c|}{Futebol} & 80 & 240 \\
+\hline
+\end{tabu}
+\caption{Exemplo da mudança de cor}
+\label{frequenciaatividade}
+\end{table}
+\clearpage
+\practice{Outros tipos de padrões}
+
+\begin{task}{Padrões no texto}
+Colocamos sempre letras representando variáveis e conjuntos no modo de matemática. Números quando se referem a equações e unidades de medida também ficam em texto matemático.
+
+O \LaTeX{} usa o sistema americano para casa decimais, e sempre coloca um espaço após a vírgula. Como aqui números decimais ficam após uma vírgula, é necessário usar \verb|{,}| para que não haja esse espaço (o espaço deve existir em outros casos, como pares ordenados e afins). Usamos também o padrão de pontos separando milhares, isto é, escrevemos $1.000.00$ para representar um milhão.
+\end{task}
+
+
+\exercise
+
+\begin{enumerate}
+\item A seção de exercícios não possui título, e é feita usando o ambiente \verb|enumerate|.
+\begin{enumerate}
+\item É possível colocar enumerações
+\begin{enumerate}
+\item Em cima de numerações
+\begin{enumerate}
+\item Mas no momento apenas três níveis possuem \textit{labels}.
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\item E então pode continuar até onde for desejado.
+\end{enumerate}
+
+O ambiente a seguir é o de projeto aplicado
+\begin{verbatim}
+\begin{project}
+o projeto aplicado não possui título
+\end{project}
+\end{verbatim}
+
+\begin{project}
+Este é ambiente para criação de um projeto aplicado. Ele cria uma nova página exclusiva para ele
+
+\end{project}
+
+\know{Sintaxe do Livro Aberto}
+
+Aqui vamos falar um pouco da estrutura dos capítulos do Livro Aberto do Ensino Médio.
+
+Todo capítulo começa em sua capa com 
+
+\begin{itemize}
+\item uma breve descrição do assunto do capítulo (\textbf{O quê?})
+\item uma justificativa para o estudo no capítulo (\textbf{Por quê?}).
+\end{itemize} 
+
+\section{Para o professor (do capítulo)}
+Após a página com os créditos, o capítulo começa com um "Para o professor" que versará sobre o capítulo inteiro, isto é, uma apresentação para os docentes sobre o que trata o capítulo e como deve ser trabalhado. O "Para o professor" do capítulo deve conter:
+
+\begin{itemize}
+\item Habilidades da BNCC ou extras que estão sendo contempladas.
+\item Listar os conceitos e fatos matemáticos contidos no capítulo.
+\item Destacar e justividar os conceitos e fatos que tradicionalmente são ensinados e que decidiu-se não ensinar no capítulo.
+\item Destacar o percurso pedagógico a partir da estrutura de seções do capítulo.
+\item Apresentar os pré requisitos para o capítulo.
+\item O que há de inovador no capítulo em relação aos materiais didáticos correntes.
+\item Citar a bibliografia utilizada e que serviu de base para as decisões na construção do material ao longo deste texto e as referências no final do mesmo.
+\end{itemize}
+
+\section{Seção}
+
+Cada seção possui a seguinte estrutura:
+
+\subsection{Para o professor (da seção)}
+Este "Para o professor"{} deve conter:
+\begin{itemize}
+\item Lista de Objetivos Específicos de Aprendizagem da seção.
+\item Conhecimento Pedagógico do assunto: Matemática subjacente, que eventualmente não seja explicitada aos estudantes, mas que seja utilizada como base da seção (opcional).
+\item Apresentação do percurso pedagógico da seção, explicando a linguagem, o que espera-se ensinar nesta seção e o que espera-se que não seja ainda discutido.
+\end{itemize}
+
+\def\currentcolor{session1}
+\subsection{Explorando: Título da seção}
+
+Aqui são colocadas as atividades de exploração do assunto, ou seja, atividades que consigam refletir o que será tratado na seção. É opcional possuir um texto introdutório (mas desejado).
+
+As atividade também devem possuir um "Para o professor", este que deve conter:
+\begin{itemize}
+\item Objetivos Específicos de Aprendizagem.
+\item Sugestões e discussões, como: organização da turma; tempo estimado; conceitos abordados; linguagem; dificuldades previstas; sugestões gerais; enriquecimento da discussão; conexões; material necessário (os itens são opcionais e variam de acordo com a necessidade da atividade).
+\item Solução completa.
+\end{itemize}
+
+\def\currentcolor{session4}
+\subsection{Organizando: Título da seção}
+
+No Organizando colocamos a sistematização do conteúdo da seção, formalizando os conceitos que foram investigado pelos alunos anteriormente. É recomendado colocar exemplos para a melhor compreensão do aluno.
+
+\def\currentcolor{session2}
+\subsection{Praticando: Título da Seção}
+
+Aqui são colocadas mais atividades que complementem a seção. O praticando é opcional.
+
+\def\currentcolor{primario}
+\subsection{Exercícios}
+
+Os exercícios no final da seção são também opcionais. Deve também conter um para o professor do exercício, que deve onter os Objetivos Específicos de Aprendizagem e a resposta ou solução (curta).
+
+
+Ao fim de todas as seções do capítulo, é necessário que haja exercícios que reflitam o conteúdo do capítulo. Além dos exercícios, é opcional haver o \textcolor{session3}{\textbf{Para Saber+}} e o \textcolor{cor2}{\textbf{Projeto Aplicado}}.
+
+\def\currentcolor{session3}
+\section{Boxes}
+
+Os boxes podem ser posicionados nas seções Explorando, Organizando as Ideias ou Praticando, mas é importante que respeitem as seguintes orientações:
+
+\begin{observation}{Observação}
+Esta caixa é essencial. Serve para destacar comentários fundamentais para o desenvolvimento do estudante ou para o aprendizado do conteúdo. Sua leitura é obrigatória.
+\end{observation}
+\clearpage
+\begin{reflection}
+A caixa "Para refletir"{} é importante, mas não essencial. Convida o estudante a uma reflexão adicional ou de aprofundamento. Pergunta, afirmação ou curiosidade. A leitura é recomendada.
+\end{reflection}
+
+\begin{knowledge}
+Esta caixa é para aprofundamento. Não traz grande prejuízo para o cumprimento da habilidade proposta se o estudante pular estas caixas. É uma espécie de "Para saber mais"{ curto que pode ser usado nas demais seções}.
+
+Curiosidades sobre conceitos, propriedades ou termos utilizados, usos dos conceitos em outros contextos, conexão com outras áres do conhecimento ou da própria matemática, etc.
+\end{knowledge}

@@ -1,0 +1,1498 @@
+\renewcommand\chapterillustration{abertura-taxa}
+\renewcommand\chapterwhat{Taxas de variação média e instantânea de uma função real. Tipos de crescimento e decrescimento.}
+\renewcommand\chapterbecause{É bastante comum nos depararmos com taxas em nosso cotidiano, informações que tratam de taxas de natalidade e mortalidade, taxa de variação cambial, velocidade, frequência, potência, inflação, aceleração, ritmo etc. Em algum sentido a taxa de variação é a generalização da ideia de razão. Enquanto razão é a comparação entre duas medidas a taxa de variação surge quando há covariação entre duas grandezas, ou seja, quando uma pode ser expressa como função da outra. A taxa de variação, então, é uma razão que traz consigo informações sobre duas grandezas que covariam sendo uma ferramenta poderosa para a interpretação de gráficos e a consequente compreensão de diferentes fenômenos e situações que nos cercam.}
+
+\chapter{Taxa de Variação}
+
+\mbox{}\thispagestyle{empty}\clearpage
+
+\thispagestyle{empty}
+
+\begin{center}
+Projeto: LIVRO ABERTO DE MATEMÁTICA
+
+\noindent \begin{tabular}{lcccr}
+\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
+\end{tabular}
+\end{center}
+
+\vspace*{.3cm}
+
+Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+
+\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+Título: & Taxa de Variação\\
+\\
+Ano/ Versão: & 2020 / versão 1.0 de 24 de março de 2020\\
+\\
+Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+\\
+Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+\\
+Produção:& Associação Livro Aberto\\
+\\
+Coordenação:& Fabio Simas, \\ 
+			& Augusto Teixeira (livroaberto@impa.br)\\
+\\
+Autores: & Gladson Antunes (UNIRIO) e\\
+         & Michel Cambrainha (UNIRIO) \\
+\\
+Revisão &  Wanderley Rezende\\
+                
+\\
+Design: & Andreza Moreira (Tangentes Design) \\
+\\
+  Ilustrações: & --- \\ 
+\\
+Gráficos: & Tarso Caldas (Licenciando da UNIRIO)\\
+\\
+  Capa: & Foto do site Freepik \\
+  		& shorturl.at/owJQ2 \\
+
+\end{tabular}
+
+\begin{figure}[b]
+\begin{minipage}[l]{5cm}
+\centering
+
+{\large Licença:}
+
+  \includegraphics[width=3.5cm]{cc-by-sa1}
+\end{minipage}\hfill
+\begin{minipage}[c]{5cm}
+\centering
+{\large Desenvolvido por}
+
+\includegraphics[width=2.5cm]{logo-associacao.jpg}
+\end{minipage}
+\begin{minipage}[r]{5cm}
+\centering
+
+{\large Patrocínio:}
+  \vspace{1em}
+  \includegraphics[width=3.5cm]{itau}
+\end{minipage}
+\end{figure}
+
+\mainmatter
+
+\explore{}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=250bp]{taxa-explore-1-1}
+
+\caption{Por \href{http://data.giss.nasa.gov/gistemp/graphs/}{NASA Goddard Institute for Space Studies}}
+\label{}
+\end{figure}
+
+A comparação está nas bases da matemática. Ela é fundamental para estabelecer os processos de contagem, de medida, para definir o conceito de número, também está presente nas ideias de razão e de proporção bem como em diversos outros contextos. No estudo das funções, quando estamos interessados em grandezas que variam conjuntamente, podemos usar a comparação para quantificar essas variações. Por exemplo, ao afirmarem que a temperatura média global está aumentando mais rapidamente agora que nos últimos anos, os cientistas fazem uso de uma ferramenta matemática que serve para medir esse crescimento: a taxa de variação. Ela serve especialmente para indicar de que maneira, ou a que velocidade, uma grandeza varia em relação a outra. 
+
+Um investidor da bolsa de valores precisa estar bem atento às taxas de variação do preço das ações para tomar as melhores decisões sobre compra e venda. Quando os preços das ações que ele possui mostram uma tendência a crescer mais rapidamente, é hora de começar a pensar em negociá-las. Para um biólogo que estuda populações é interessante conhecer a taxa de variação do número de indivíduos por unidade de tempo. Para um biomédico, conhecer a taxa de variação da quantidade de determinado medicamento na corrente sanguínea pode indicar a efetividade de um medicamento. Para um cientista social, a taxa de variação do número de encarcerados no país pode indicar se uma determinada política pública na área de segurança pública precisa ou não ser discutida. Neste capítulo, vamos introduzir e explorar esse conceito em diversos contextos. 
+
+Contudo a discussão não se restringirá somente a este capítulo, a taxa de variação voltará a aparecer diversas outras vezes neste livro.
+
+\begin{task}{A água está subindo}
+
+\textbf{Parte I} Um reservatório cilíndrico de altura $h$ (em cm), com capacidade máxima de $100 \ell$, encontra-se vazio. Para enchê-lo, abriu-se uma torneira que despeja $2\ell$ de água por minuto.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=100bp]{taxa-ativ-1-1}
+
+%\caption{}
+\label{}
+\end{figure}
+
+Qual dos gráficos seguintes expressa corretamente a variação da altura $x$ da coluna de água em função do tempo $t$? Explique.
+
+\setlength{\columnsep}{0pt}
+\begin{multicols}{3}
+\begin{enumerate}[label=(\Roman*)]
+\item
+\adjustbox{valign=t}{\begin{tikzpicture}[scale=.5,baseline=(current bounding box.north)]
+
+\draw [->] (-.5,0) -- (6,0) node [below ] {$t(min)$};
+\draw [->] (0,-.5) -- (0,3.5) node [right] {$x(cm)$};
+\draw [dashed] (0,3) -- (4,3) -- (4,0);
+\node [left] at (0,3) {$h$};
+\node [below left] at (0,0) {$0$};
+\node [below] at (4,0) {$50$};
+
+\draw [thick] (0,0) parabola (4,3);
+\end{tikzpicture}}
+
+\item
+\adjustbox{valign=t}{\begin{tikzpicture}[scale=.5,baseline=(current bounding box.north)]
+
+\draw [->] (-.5,0) -- (6,0) node [below ] {$t(min)$};
+\draw [->] (0,-.5) -- (0,3.5) node [right] {$x(cm)$};
+\draw [dashed] (0,3) -- (4,3) -- (4,0);
+\node [left] at (0,3) {$h$};
+\node [below left] at (0,0) {$0$};
+\node [below] at (4,0) {$50$};
+
+\draw [thick] (0,0) -- (4,3);
+\end{tikzpicture}}
+
+
+\item
+\adjustbox{valign=t}{\begin{tikzpicture}[scale=.5,baseline=(current bounding box.north)]
+
+\draw [->] (-.5,0) -- (6,0) node [below ] {$t(min)$};
+\draw [->] (0,-.5) -- (0,3.5) node [right] {$x(cm)$};
+\draw [dashed] (0,3) -- (4,3) -- (4,0);
+\node [left] at (0,3) {$h$};
+\node [below left] at (0,0) {$0$};
+\node [below] at (4,0) {$50$};
+
+\draw [thick] (0,3) -- (4,0);
+\end{tikzpicture}}
+\end{enumerate}
+\end{multicols}
+
+\textbf{Parte II} Um reservatório cônico de altura $h$ (em cm), com capacidade máxima de $100\ell$, encontra-se vazio e posicionado com o vértice para baixo, conforme mostra a figura. Para enchê-lo, abriu-se uma torneira que despeja $2\ell$ de água por minuto.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=100bp]{taxa-ativ-1-3}
+
+%\caption{}
+\label{}
+\end{figure}
+
+Qual dos gráficos seguintes expressa corretamente a variação da altura $x$ da coluna de água em função do tempo $t$? Explique.
+
+\setlength{\columnsep}{0pt}
+\begin{multicols}{3}
+\begin{enumerate}[label=(\Roman*)]
+\item \adjustbox{valign=t}{
+\begin{tikzpicture}[scale=.5,baseline=(current bounding box.north)]
+
+\draw [->] (-.5,0) -- (6,0) node [below ] {$t(min)$};
+\draw [->] (0,-.5) -- (0,3.5) node [right] {$x(cm)$};
+\draw [dashed] (0,3) -- (4,3) -- (4,0);
+\node [left] at (0,3) {$h$};
+\node [below left] at (0,0) {$0$};
+\node [below] at (4,0) {$50$};
+
+\draw [thick] (0,0) parabola (4,3);
+\end{tikzpicture}}
+
+\item
+\adjustbox{valign=t}{\begin{tikzpicture}[scale=.5,baseline=(current bounding box.north)]
+
+\draw [->] (-.5,0) -- (6,0) node [below ] {$t(min)$};
+\draw [->] (0,-.5) -- (0,3.5) node [right] {$x(cm)$};
+\draw [dashed] (0,3) -- (4,3) -- (4,0);
+\node [left] at (0,3) {$h$};
+\node [below left] at (0,0) {$0$};
+\node [below] at (4,0) {$50$};
+
+\draw [thick] (4,3) parabola (0,0);
+\end{tikzpicture}}
+
+
+\item
+\adjustbox{valign=t}{\begin{tikzpicture}[scale=.5,baseline=(current bounding box.north)]
+
+\draw [->] (-.5,0) -- (6,0) node [below ] {$t(min)$};
+\draw [->] (0,-.5) -- (0,3.5) node [right] {$x(cm)$};
+\draw [dashed] (0,3) -- (4,3) -- (4,0);
+\node [left] at (0,3) {$h$};
+\node [below left] at (0,0) {$0$};
+\node [below] at (4,0) {$50$};
+
+\draw [thick] (0,0) -- (4,3);
+\end{tikzpicture}}
+\end{enumerate}
+\end{multicols}
+
+\textbf{PARTE III} Os recipientes cilíndricos $A,B, \text{ e } C$, que têm altura $h$ raios da base respectivamente iguais a $r,2r$ e $3r$, estão vazios. As torneiras que os abastecem estão igualmente reguladas para despejar o mesmo número de litros de água por minuto.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=150bp]{taxa-ativ-1-5}
+
+%\caption{}
+\label{}
+\end{figure}
+
+Os gráficos mostram a varação da altura $x$ da coluna de água em função to tempo $t$. Associe cada recipiente ao gráfico correspondente a ele e justifique suas escolhas.
+
+\begin{table}[H]
+\centering\setlength\tabcolsep{0pt}
+\begin{tabu} to \textwidth{m{4cm} m{6cm} m{5.5cm}}
+
+
+
+\begin{enumerate}[label=(\Roman*)]\setcounter{enumi}{0}
+\item\adjustbox{valign=t}{\begin{tikzpicture}[scale=.25,baseline=(current bounding box.north)]
+
+\draw [->] (-.5,0) -- (3,0) node [below right] {$t(min)$};
+\draw [->] (0,-.5) -- (0,5) node [right] {$x(cm)$};
+\draw [dashed] (0,4) -- (2,4) -- (2,0);
+\node [left] at (0,4) {$h$};
+\node [below left] at (0,0) {$0$};
+\node [below] at (2,0) {$b$};
+
+\draw [thick] (0,0) -- (2,4);
+\end{tikzpicture}}
+
+\end{enumerate}
+
+&
+\hspace{0cm}
+\begin{enumerate}[label=(\Roman*)]\setcounter{enumi}{1}
+\item\adjustbox{valign=t}{\begin{tikzpicture}[scale=.25,baseline=(current bounding box.north), xscale=.6]
+
+\draw [->] (-.5,0) -- (19,0) node [below right] {$t(min)$};
+\draw [->] (0,-.5) -- (0,5) node [right] {$x(cm)$};
+\draw [dashed] (0,4) -- (18,4) -- (18,0);
+\node [left] at (0,4) {$h$};
+\node [below left] at (0,0) {$0$};
+\node [below] at (18,0) {$9b$};
+
+\draw [thick] (0,0) -- (18,4);
+\end{tikzpicture}}
+\end{enumerate}
+
+&
+\begin{enumerate}[label=(\Roman*)]\setcounter{enumi}{2}
+\item\adjustbox{valign=t}{\begin{tikzpicture}[scale=.25,baseline=(current bounding box.north), ]
+
+\draw [->] (-.5,0) -- (9,0) node [below right] {$t(min)$};
+\draw [->] (0,-.5) -- (0,5) node [right] {$x(cm)$};
+\draw [dashed] (0,4) -- (8,4) -- (8,0);
+\node [left] at (0,4) {$h$};
+\node [below left] at (0,0) {$0$};
+\node [below] at (8,0) {$4b$};
+
+\draw [thick] (0,0) -- (8,4);
+\end{tikzpicture}}
+\end{enumerate}
+
+
+\end{tabu}
+\end{table}
+\end{task}
+
+\begin{task}{A água continua subindo}
+
+\textbf{Parte I} Suponha que os diversos reservatórios abaixo têm a mesma capacidade, a mesma altura e que em cada um deles a água entra a uma vazão constante. Analisando a forma de cada um dos reservatórios, descreva de que maneira a altura varia em função do tempo no início, meio e fim do processo. Use, quando necessário, as palavras \textbf{lentamente}, \textbf{rapidamente} e \textbf{uniformemente}. (Gravina, 1992)\footnote{GRAVINA, M. Um estudo de funções. Revista do Professor de Matemática, n° 20, SBM, pp. 33 –38, 1992}.
+
+\setlength\abovetabulinesep{2mm}
+\begin{longtabu} to \textwidth{|c|@{\hspace{0.8\textwidth}}|}
+\endfirsthead
+\hline
+\begin{tikzpicture}[scale=.3]
+
+\draw (-3,0) -- (0,-6);
+\draw (3,0) -- (0,-6);
+\draw [fill=white] (0,0) ellipse [x radius=3,y radius=1];
+
+\end{tikzpicture}\\
+\hline
+\begin{tikzpicture}[scale=.3]
+
+\draw (-3,0) -- (0,6);
+\draw (3,0) -- (0,6);
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=3,y radius=1];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=3,y radius=1];
+
+\end{tikzpicture}\\
+\hline
+\begin{tikzpicture}[scale=.3]
+
+\draw (-2,0) -- (-2,5+2/3);
+\draw (2,0) -- (2,5+2/3);
+
+\draw [fill=white] (0,5+2/3) ellipse [x radius=2,y radius=2/3];
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=2,y radius=2/3];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=2,y radius=2/3];
+
+
+\end{tikzpicture}\\
+\hline
+\begin{tikzpicture}[scale=.3]
+
+\draw (-1.5,0) .. controls (-3,1.5) and (-3,3.5) .. (-1.5,5+2/3);
+\draw (1.5,0) .. controls (3,1.5) and (3,3.5) .. (1.5,5+2/3);
+
+\draw [fill=white] (0,5+2/3) ellipse [x radius=1.5,y radius=2/3*3/4];
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=1.5,y radius=2/3*3/4];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=1.5,y radius=2/3*3/4];
+
+
+\end{tikzpicture}\\
+\hline
+\begin{tikzpicture}[scale=.3]
+
+\draw (-2,0) -- (2,5+2/3);
+\draw (2,0) -- (-2,5+2/3);
+
+\draw [fill=white] (0,5+2/3) ellipse [x radius=2,y radius=2/3];
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=2,y radius=2/3];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=2,y radius=2/3];
+
+
+\end{tikzpicture}\\
+\hline
+\begin{tikzpicture}[scale=.3]
+
+\draw (-2,0) .. controls (-1,1.5) and (-1,3.5) .. (-2,5+2/3);
+\draw (2,0) .. controls (1,1.5) and (1,3.5) .. (2,5+2/3);
+
+\draw [fill=white] (0,5+2/3) ellipse [x radius=2,y radius=2/3];
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=2,y radius=2/3];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=2,y radius=2/3];
+
+
+\end{tikzpicture}\\
+\hline
+\end{longtabu}
+\textbf{Parte II} Relacione a forma do pote com o gráfico da variação da altura em função do tempo de cada um deles.
+
+\setlength{\columnsep}{0pt}
+
+\begin{multicols}{3}
+
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+
+\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+
+\draw (-3,0) -- (0,-6);
+\draw (3,0) -- (0,-6);
+\draw [fill=white] (0,0) ellipse [x radius=3,y radius=1];
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+
+\draw (-3,0) -- (0,6);
+\draw (3,0) -- (0,6);
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=3,y radius=1];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=3,y radius=1];
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+
+\draw (-2,0) -- (-2,5+2/3);
+\draw (2,0) -- (2,5+2/3);
+
+\draw [fill=white] (0,5+2/3) ellipse [x radius=2,y radius=2/3];
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=2,y radius=2/3];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=2,y radius=2/3];
+
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+
+\draw (-1.5,0) .. controls (-3,1.5) and (-3,3.5) .. (-1.5,5+2/3);
+\draw (1.5,0) .. controls (3,1.5) and (3,3.5) .. (1.5,5+2/3);
+
+\draw [fill=white] (0,5+2/3) ellipse [x radius=1.5,y radius=2/3*3/4];
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=1.5,y radius=2/3*3/4];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=1.5,y radius=2/3*3/4];
+
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+
+\draw (-2,0) -- (2,5+2/3);
+\draw (2,0) -- (-2,5+2/3);
+
+\draw [fill=white] (0,5+2/3) ellipse [x radius=2,y radius=2/3];
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=2,y radius=2/3];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=2,y radius=2/3];
+
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+
+\draw (-2,0) .. controls (-1,1.5) and (-1,3.5) .. (-2,5+2/3);
+\draw (2,0) .. controls (1,1.5) and (1,3.5) .. (2,5+2/3);
+
+\draw [fill=white] (0,5+2/3) ellipse [x radius=2,y radius=2/3];
+
+\draw [fill=white, dashed] (0,0) ellipse [x radius=2,y radius=2/3];
+\clip (-3,0) rectangle (3,-1);
+\draw [fill=white] (0,0) ellipse [x radius=2,y radius=2/3];
+
+
+\end{tikzpicture}
+\end{enumerate}
+\end{multicols}
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=350bp]{taxa-ativ-2-7}
+
+% \end{figure}
+
+\begin{multicols}{3}
+\begin{enumerate}[label=(\Roman*)]
+\item \begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+
+
+\draw [->] (0,0) -- (5,0) node [below] {T};
+\draw [->] (0,0) -- (0,5) node [left] {A};
+
+\clip (0,0) rectangle (4,4);
+\draw [dashed] (4,0) -- (4,4) -- (0,4);
+
+\draw [thick] (0,0) .. controls (3,2) and (2,3) ..  (4,4);
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+
+
+\draw [->] (0,0) -- (5,0) node [below] {T};
+\draw [->] (0,0) -- (0,5) node [left] {A};
+
+\clip (0,0) rectangle (4,4);
+\draw [dashed] (4,0) -- (4,4) -- (0,4);
+
+\draw [thick] (4,0) circle (4);
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+
+
+\draw [->] (0,0) -- (5,0) node [below] {T};
+\draw [->] (0,0) -- (0,5) node [left] {A};
+
+\clip (0,0) rectangle (4,4);
+\draw [dashed] (4,0) -- (4,4) -- (0,4);
+
+\draw [thick] (0,0) .. controls (1,3) and (3,1) ..  (4,4);
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+
+
+\draw [->] (0,0) -- (5,0) node [below] {T};
+\draw [->] (0,0) -- (0,5) node [left] {A};
+
+\clip (0,0) rectangle (4,4);
+\draw [dashed] (4,0) -- (4,4) -- (0,4);
+
+\draw [thick] (0,0) .. controls (3,1) and (1,3) ..  (4,4);
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+
+
+\draw [->] (0,0) -- (5,0) node [below] {T};
+\draw [->] (0,0) -- (0,5) node [left] {A};
+
+\clip (0,0) rectangle (4,4);
+\draw [dashed] (4,0) -- (4,4) -- (0,4);
+
+\draw [thick] (0,4) circle (4);
+
+\end{tikzpicture}
+
+\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+
+
+\draw [->] (0,0) -- (5,0) node [below] {T};
+\draw [->] (0,0) -- (0,5) node [left] {A};
+
+\draw [dashed] (4,0) -- (4,4) -- (0,4);
+
+\draw [thick] (0,0) -- (4,4);
+
+\end{tikzpicture}
+
+\end{enumerate}
+\end{multicols}
+
+
+
+\end{task}
+
+\begin{task}{Uma viagem de carro}
+
+Você está viajando de carro para uma cidade que está a 410 km de distância da sua casa. Você sai ao meio dia e depois de 2h de viagem faz a primeira parada em um posto de combustível na estrada. Olhando no GPS, calcula que já percorreu 140 km desde a sua partida. Depois de 30 minutos parte para a estrada novamente. Faz uma nova parada das 16h às 16h30 em outro posto 120 km adiante do anterior. E finalmente às 18h chega ao seu destino.
+
+\begin{enumerate}
+\item Preencha a tabela abaixo com as distâncias percorridas e marque no sistema de coordenadas os pares ordenados correspondentes. (o eixo horizontal representa o tempo decorrido em horas desde a partida e o eixo vertical a distância percorrida em quilômetros).
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|r|c|c|}
+\hline
+\thead
+Horário & \parbox{3.5cm}{\centering\vspace{.5em} Tempo decorrido desde a partida (h)\vspace{.5em}} & \parbox{3.5cm}{\centering\vspace{.5em} Distância percorrida (km)\vspace{.5em}} \\
+\hline
+& $t$ & $d(t)$ \\
+\hline
+12h & 0 & \\
+\hline
+14h & 2 & \\
+\hline
+14h30 & 2.5 & \\
+\hline
+16h & & \\
+\hline
+16h30 & & \\
+\hline
+18h & & \\
+\hline
+\end{tabu}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.2]
+
+\draw [gray!30, step=.25] (0,0) grid (7.25,5);
+\draw [gray!70] (0,0) grid (7.25,5);
+\draw [->] (0,0) -- (7.25,0) node [below, shift={(0,-.5)}, pos=.82] {tempo desde a partida (h)};
+\draw [->] (0,0) -- (0,5) node [pos=.75,above, rotate=90, shift={(-.5,.6)}] {distância percorrida (km)};
+\foreach \x in {1,...,7} \node [below] at (\x,0) {\x};
+\foreach \x in {1,...,4} \node [left] at (0,\x) {\x00};
+\node [below left] at (0,0) {0};
+
+\end{tikzpicture}
+\end{figure}
+\item A distância total percorrida na viagem foi de 410 km, e durou 6h. Podemos obter a \textbf{velocidade média} da viagem dividindo esses dois valores, obtendo
+\begin{equation*}
+\frac{\Delta d}{\Delta t}=\frac{410}{6}=51,5 \cdot \frac{km}{h}
+\end{equation*}
+O que representa esse número no contexto do problema?
+\item Calcule a velocidade média para o trecho da partida até chegar à primeira parada
+\begin{equation*}
+\frac{\Delta d}{\Delta t}=\cdot=\frac{km}{h}
+\end{equation*}
+Ele é o mesmo que o anterior? Explique
+\item Sem fazer a conta, você imagina que o valor da velocidade média no trecho da partida até a hora de sída a primeira parada (14h30) será maior ou menor que o valor do item anterior? Por que?
+\item preencha a tabela com as velocidade médias nostrechos indicados.
+
+\begin{table}[H]
+\centering
+\setlength\tabulinesep{1mm}
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Intervalo de tempo $a,b$ & \makecell{Velocidade média \vspace{.3em}\\  $\bm{\displaystyle \frac{\Delta d}{\Delta t} = \frac{d(b)-(d(a)}{b-a}}$} \\
+\hline
+$0,2$ & \\
+\hline
+$2,2.5$ & \\
+\hline
+$2.5,4$ & \\
+\hline
+$4,4.5$ & \\
+\hline
+$4.5,6$ & \\
+\hline
+\end{tabu}
+\end{table}
+\end{enumerate}
+
+\end{task}
+
+\arrange{}
+
+A taxa de variação de uma grandeza em relação a outra é a medida do ritmo de crescimento ou decrescimento entre tais grandezas. É quanto uma grandeza varia por unidade da outra. 
+
+Quando se diz que um recipiente está sendo enchido com um líquido à uma taxa de variação constante de $1\ell/min$ (um litro por minuto) significa que a cada minuto transcorrido, 1 litro de líquido é acrescido ao recipiente. A velocidade é a taxa de variação do espaço percorrido por unidade de tempo. Dizer que um carro tem uma velocidade uniforme de $50km/h$ significa que se mantiver essa velocidade por uma hora, percorrerá uma distância de 50 quilômetros.
+
+Nem sempre estamos diante de situações em que as taxas de variação entre as grandezas são constantes (uniformes). Nestes casos, precisamos considerar a variação média dos valores de uma grandeza em um dado intervalo de valores da outra. Mais precisamente, considere uma $y$ grandeza  que pode ser expressa como função da grandeza $x$, isto é, $y=f(x)$. A \textbf{taxa de variação média} de $y$ em relação a $x$ no intervalo $[a,b]$ é definida por
+\begin{equation*}
+\frac{\Delta y}{\Delta x}=\frac{f(b)-f(a)}{a-b}
+\end{equation*}
+Ou seja, é a razão entre a variação total de $y=f(x)$ e o comprimento do intervalo. POr exemplo, se a temperatura ($T$) de um corpo aumenta de $36^{\circ}C$ para $39^{\circ}C$ no intervalo de tempo ($t$) entre 10h00min e 10h15min podemos dizer que a taxa de variação média da temperatura nesse intervalo de tempo é de
+\begin{equation*}
+\frac{\Delta T}{\Delta t}=\frac{39^{\circ}C-36^{\circ}}{10h15min-10h00min}=\frac{3^{\circ}C}{15 min}=0,2^{\circ}C/min
+\end{equation*}
+
+Isso não significa que às 10h01min a temperatura era de $36,2^{\circ}C$ às $36,4^{\circ}C$ e assim sucessivamente. Apenas pode-se dizer que \textbf{em médica}, a cada minuto, houve um aumento dessa magnitude. A taxa de variação média trata de informação apenas no início e no fim do intervalo.
+
+O gráfico e a tabela a seguir mostram a variação do número de visualizações (\textit{views}) de um determinado vídeo no YouTube ao longo de uma semana.
+
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Dia ($d$) & Visualizações ($V$) \\
+\hline
+0&0 \\
+\hline
+1&12 \\
+\hline
+2&40 \\
+\hline
+3&102 \\
+\hline
+4&160 \\
+\hline
+5&250 \\
+\hline
+6&200 \\
+\hline
+7&132 \\
+\hline
+\end{tabu}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+\centering
+\begin{tikzpicture}[every node/.style={scale=.8}, xscale=1.5, scale=.75]
+
+\draw [gray!30, step=.25] (0,0) grid (7.25,6);
+\draw [gray!60] (0,0) grid (7.25,6);
+\draw [->] (0,0) -- (7.25,0);
+\draw [->] (0,0) -- (0,6);
+\foreach \x in {1,...,7} \node [below] at (\x,0) {\x};
+\foreach \x/\y in {1/50,2/100,3/150,4/200,5/250} \node [left] at (0,\x) {\y};
+\node [below left] at (0,0) {0};
+
+\coordinate (a) at (0,0);
+\coordinate (b) at (1,.12*2);
+\coordinate (c) at (2,.4*2);
+\coordinate (d) at (3,1.02*2);
+\coordinate (e) at (4,1.60*2);
+\coordinate (f) at (5,2.50*2);
+\coordinate (g) at (6,2*2);
+\coordinate (h) at (7,1.32*2);
+
+\draw [very thick, \currentcolor!80] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- (g) -- (h);
+\foreach \x in {a,...,h} \node [fill, circle, inner sep=2pt, \currentcolor!80] at (\x) {};
+\end{tikzpicture}
+\end{minipage}
+
+Perceba que a taxa de variação média entre os dias 1 e 7 é a mesma observada entre os dias 4 e 6, ao mesmo tempo que os valores intermediários são bem distintos.
+\begin{align*}
+\frac{\Delta V}{\Delta d}=&\frac{132-12}{7-1}=\frac{120}{6}=20\:views/dia \\
+\frac{\Delta V}{\Delta d}=&\frac{200-160}{6-1}=\frac{120}{6}=20\:views/dia
+\end{align*}
+
+Agora, vamos destacar um outro aspecto importante da taxa de variação. Vamos calcular, nesse último exemplo a taxa de variação média entre os dias 5 e 7:
+
+\begin{equation*}
+\frac{\Delta V}{\Delta d}=\frac{132-250}{7-5}=\frac{-118}{2}=-59\:views/dia
+\end{equation*}
+
+Por que esse resultado foi negativo? O que isso pode significar? Qual a relação dele com o aspecto do gráfico?
+
+O resultado foi negativo pois a quantidade de visualizações no dia 7 foi menor do que a quantidade no dia 5, fazendo com que o resultado da subtração no numerador fosse negativo e indicando que houve, no período analisado, uma queda no número de visualizações. Dá para conjecturar que sempre que houver essa redução, teremos uma taxa de variação média negativa o que tem relação com algum tipo de decrescimento global da função nesse intervalo.
+
+\begin{minipage}{0.33\textwidth}
+\begin{tikzpicture} 
+
+\draw [gray!30, step=.2] (0,0) grid (5,4);
+\draw [gray!60] (0,0) grid (5,4);
+\draw [thick] (0,4) -- (0,0) -- (5,0);
+
+\draw [fill] (1,2) circle (1.5pt);
+\draw [fill] (4,1) circle (1.5pt);
+\draw [dashed] (1,2) -- (4,1);
+
+\draw [thick] (1,2) .. controls (1,4) and (3,2.5) .. (4,1);
+
+
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.33\textwidth}
+\begin{tikzpicture} 
+
+\draw [gray!30, step=.2] (0,0) grid (5,4);
+\draw [gray!60] (0,0) grid (5,4);
+\draw [thick] (0,4) -- (0,0) -- (5,0);
+
+\draw [fill] (1,2) circle (1.5pt);
+\draw [fill] (4,1) circle (1.5pt);
+\draw [dashed] (1,2) -- (4,1);
+
+\draw [thick] (1,2) .. controls (2,0) and (2,4) .. (4,1);
+
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.33\textwidth}
+\begin{tikzpicture} 
+
+\draw [gray!30, step=.2] (0,0) grid (5,4);
+\draw [gray!60] (0,0) grid (5,4);
+\draw [thick] (0,4) -- (0,0) -- (5,0);
+
+\draw [fill] (1,2) circle (1.5pt);
+\draw [fill] (4,1) circle (1.5pt);
+\draw [dashed] (1,2) -- (4,1);
+
+\draw [thick] (1,2) .. controls (2,4) and (3,0) .. (4,1);
+
+\end{tikzpicture}
+\end{minipage}
+
+O numerador da taxa de variação média é a diferença entre os valores final e inicial. Assim, sempre que o valor final for menor que o inicial, o numerador $\Delta y$ será negativo. Como o denominador $\Delta x$ é sempre positivo, o resultado da razão entre eles será um número negativo. 
+
+Como mencionado antes, a taxa de variação média diz respeito apenas às imagens dos extremos do intervalo. Portanto, ao observarmos que em um determinado intervalo a taxa média foi negativa, não podemos afirmar que a função é decrescente em todo intervalo, mas apenas que houve mais decrescimento do que crescimento, em média. Os três gráficos acima têm taxa média negativa no intervalo destacado.
+
+Com um raciocínio similar, podemos dizer que uma taxa de variação média positiva indica um crescimento entre os valores inicial e final da variável dependente no intervalo considerado, mas não que a função é crescente em todo o intervalo.
+
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}
+
+\draw [gray!30, step=.2] (-3,-2) grid (5,3);
+\draw [gray!60] (-3,-2) grid (5,3);
+\draw [thick] (0,3) -- (0,-2);
+\draw [thick] (-3,0) -- (5,0);
+
+\draw [fill] (-2,-1) circle (1.5pt);
+\draw [fill] (4,1) circle (1.5pt);
+\draw [dashed] (-2,-1) -- (4,1);
+
+\draw [thick] (-2,-1) .. controls (-2,3) and (3,-2) .. (4,1);
+
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture} 
+
+\draw [gray!30, step=.2] (-3,-2) grid (5,3);
+\draw [gray!60] (-3,-2) grid (5,3);
+\draw [thick] (0,3) -- (0,-2);
+\draw [thick] (-3,0) -- (5,0);
+
+\draw [fill] (-2,-1) circle (1.5pt);
+\draw [fill] (4,1) circle (1.5pt);
+\draw [dashed] (-2,-1) -- (4,1);
+
+\draw [thick] (-2,-1) .. controls (0,-2) and (2,2) .. (4,1);
+
+\end{tikzpicture}
+\end{minipage}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} 
+
+\draw [gray!30, step=.2] (-3,-2) grid (5,3);
+\draw [gray!60] (-3,-2) grid (5,3);
+\draw [thick] (0,3) -- (0,-2);
+\draw [thick] (-3,0) -- (5,0);
+
+\draw [fill] (-2,-1) circle (1.5pt);
+\draw [fill] (4,1) circle (1.5pt);
+\draw [dashed] (-2,-1) -- (4,1);
+
+\draw [thick] (-2,-1) .. controls (1,-0) and (3.5,-2) .. (4,1);
+
+\end{tikzpicture}
+\end{figure}
+
+\textbf{Lentamente, uniformemente ou rapidamente?}
+
+\begin{wrapfigure}[13]{r}{0.5\textwidth}
+\centering
+\vspace{-1em}
+\begin{tikzpicture}[scale=1]
+\draw [gray!30, step=.2] (-1,-1) grid (7,5);
+\draw [gray!60] (-1,-1) grid (7,5);
+\draw [thick] (0,-1) -- (0,5);
+\draw [thick] (-1,0) -- (7,0);
+\draw [fill] (0,1) circle (1.5pt);
+\draw [fill] (2,2) circle (1.5pt);
+\draw [fill] (4,3) circle (1.5pt);
+\draw [fill] (6,4) circle (1.5pt);
+\draw [dashed, thick] (0,1) -- (2,1)node [below, pos=.5] {$\Delta x$} -- (2,2) node [right, midway] {$\Delta y$};
+\draw [dashed, thick] (4,3) -- (6,3) node [below, pos=.5] {$\Delta x$} -- (6,4) node [right, midway] {$\Delta y$};
+\draw [thick, domain=-1:7] plot (\x,1/2*\x+1);
+\foreach \x/\y in {.95/1,1.05/1,4.95/3,5.05/3} \draw [thick] (\x,\y+.1) -- (\x,\y-.1);
+\foreach \x/\y in {1.45/2,1.5/2,1.55/2,3.45/6,3.5/6,3.55/6} \draw [thick] (\y+.1,\x) -- (\y-.1,\x);
+\end{tikzpicture}
+\end{wrapfigure}
+Os adjetivos acima somente fazem sentido quando estamos comparando o crescimento de duas ou mais funções ou a mesma função em dois ou mais intervalos diferentes. 
+
+Por exemplo, dizer que uma determinada função \textbf{cresce uniformemente} significa que para intervalos $\Delta x$ iguais a variável $y$ apresentou a mesma variação, isto é, se dois intervalos do domínio têm o mesmo $\Delta x$, correspondendo a eles teremos o mesmo $\Delta y$. Em termos da taxa de variação podemos dizer que ambos os intervalos apresentam a mesma taxa média. Na verdade, só poderemos afirmar que há algum tipo de uniformidade se isso acontecer para quaisquer dois intervalos! Veja a figura ao lado. Esse caso será tratado com maiores detalhes no capítulo sobre as funções afins.\par
+
+Nos casos em que a taxa média não é sempre a mesma, podemos comparar dois intervalos com taxas médias positivas distintas e dizer que onde a taxa for menor a função cresceu em média mais lentamente do que no outro intervalo onde a taxa média foi maior. Para o caso da taxa média negativa, acontece o oposto: quanto menor for o valor, mais decrescimento houve no intervalo.
+
+Nos gráficos a seguir, os comprimentos dos intervalos $\Delta x$ são iguais, mas os comprimentos dos respectivos $\Delta y$ variam.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300bp]{taxa-arrange-8}
+\end{figure}
+
+\practice{}
+
+\begin{task}{hora de encher a piscina}
+Uma piscina retangular está sendo cheia com uma mangueira que fornece água a uma taxa constante. Uma seção transversal da piscina é mostrada na imagem a seguir.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300bp]{taxa-ativ-3-1}
+\end{figure}
+
+\begin{enumerate}
+\item Descreva em palavras como a profundidade $d$ da água até o fundo da piscina varia com o tempo, a partir do momento em que a piscina vazia começa a encher.
+\item Uma piscina retangular está sendo cheia de maneira semelhante.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300bp]{taxa-ativ-3-2}
+
+\end{figure}
+
+Supondo que a piscina leva 30 minutos para encher até a borda. Esboce um gráfico para mostrar como a profundidade $d$ da água até o fundo da piscina varia com o tempo a partir do momento em que a piscina está vazia.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=1.5]
+\draw [gray!60] (0,0) grid (3.3,3.3);
+\draw [->] (0,0) -- (3.3,0) node [below left, shift={(0,-.5)}] {Tempo (minutos)};
+\draw [->] (0,0) -- (0,3.3) node [above left, shift={(-.5,0)}, rotate=90] {Profundidade da água (metros)};
+\foreach \x in {1,2,3}{
+	\node [below] at (\x,0) {\x0};
+	\node [left] at (0,\x) {\x};
+};
+\node [below left] at (0,0) {0};
+\end{tikzpicture}
+\end{figure}
+\end{enumerate}
+\end{task}
+
+\begin{task}{Aumento da população}
+A população brasileira alcançou os 210,1 milhões de habitantes em 2019. Segundo dados do IBGE houve um aumento de 0,79\% em relação a 2018 quando o instituto estimou a população do país em 208,5 milhões de habitantes. A tabela abaixo mostra a população aproximada de brasileiros nos anos de 2007, 2012 e 2019.
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+População aproximada & Ano \\
+\hline
+190 milhões & 2007 \\
+\hline
+200 milhões & 2012 \\
+\hline
+210 milhões & 2019 \\
+\hline
+\end{tabu}
+\end{table}
+\begin{enumerate}
+\item Qual foi a variação da população entre 2007 e 2012? E entre 2012 e 2019?
+\item Quando a população aumentou mais rápido? Explique.
+\item De quanto foi o aumento médio anual entre 2007 e 2012? E entre 2012 e 2019? E entre 2007 e 2019?
+\end{enumerate}
+\end{task}
+
+\begin{task}{Gráficos, tabelas e fórmulas}
+Para cada uma das situações a seguir:
+\begin{enumerate}
+\item Responda à pergunta fazendo o esboço de um gráfico
+\item Descreva com palavras a forma do seu gráfico
+\item Verifique seu gráfico construindo uma tabela de valores. Caso seja necessário, refaça seu esboço
+\item Tente encontrar uma expressão algébrica que descreva a situação
+\end{enumerate}
+
+\begin{description}\item[TV por assinatura]
+Uma empresa de TV por assinatura cobra R\$ 80,00 por mês por um determinado pacote de canais. Uma oferta para novos assinantes oferece o primeiro mês gratuitamente. Como irá variar o custo da assinatura conforme o período de tempo aumenta?
+\item[Valor de mercado de um carro]
+Comprei um carro por R\$ 65.000,00 e seu valor está depreciando a uma taxa de 20\% ao ano. Isso significa que depois de um ano seu valor era de $60.000\times 0,8=52.000$, depois de dois anos, $52.000\times 0,8=41.600$ e assim por diante. Como o valor de mercado desse carro continuará a mudar?
+\item[Subindo uma escada]
+Uma passada normal tem em média 60cm de compreimento. Ela deve diminuir 2cm para cada 1cm que o pé é levantado quando estamos subindo os degraus de uma escada. Seguindo esse princípio, como deve varia o comprimento da passada com a altura de um degrau?
+\item[Polígonos Regulares]
+Como a medida de um dos ângulos internos depende do número de lados de um polígono regular?
+\end{description}
+
+\setlength{\columnsep}{0pt}
+\begin{multicols}{8}
+
+\begin{tikzpicture}[scale=.7*1.333]
+
+% \draw circle (1.333*0.5cm);
+\foreach \x/\y in {a/90:1,b/210:1,c/330:1}
+ \coordinate (\x) at (\y);
+
+\clip[draw] (a) -- (b) -- (c) -- cycle;
+\draw (b) circle (6pt);
+\end{tikzpicture} 
+
+\begin{tikzpicture}[scale=.7*sqrt(2)]
+% \draw circle (1.414213562*0.5cm);
+\foreach \x/\y in {a/45:1,b/135:1,c/225:1,d/315:1} \coordinate (\x) at (\y);
+
+
+\clip[draw] (a) -- (b) -- (c) -- (d) -- cycle;
+\draw (225:1) circle (6pt);
+
+\end{tikzpicture} 
+
+\begin{tikzpicture}[scale=.7*1.1056]
+% \draw circle (1cm);
+\foreach \x/\y in {a/90:1,b/90+72:1,c/90+72*2:1,d/90+72*3:1,e/90+72*4:1} \coordinate (\x) at (\y);
+
+
+\clip[draw] (a) -- (b) -- (c) -- (d) -- (e) -- cycle;
+\draw (90+72*2:1) circle (6pt);
+
+
+\end{tikzpicture} 
+
+\begin{tikzpicture}[scale=.7*1.155]
+% \draw circle (1cm);
+\foreach \x/\y in {a/0:1,b/60:1,c/60*2:1,d/60*3:1,e/60*4:1,f/60*5:1} \coordinate (\x) at (\y);
+
+
+\clip[draw] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- cycle;
+\draw (60*4:1) circle (6pt);
+
+
+\end{tikzpicture} 
+
+\begin{tikzpicture}[scale=.7*1.052]
+% \draw circle (1cm);
+\foreach \x/\y in {a/90:1,b/90+51.428571429:1,c/90+51.428571429*2:1,d/90+51.428571429*3:1,e/90+51.428571429*4:1,f/90+51.428571429*5:1, g/90+51.428571429*6:1} \coordinate (\x) at (\y);
+
+
+\clip[draw] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- (g) -- cycle;
+\draw (90+51.428571429*3:1) circle (6pt);
+
+
+\end{tikzpicture} 
+
+\begin{tikzpicture}[scale=.7*1.082]
+% \draw circle (1cm);
+\foreach \x/\y in {a/22.5:1,b/22.5+45*1:1,c/22.5+45*2:1,d/22.5+45*3:1,e/22.5+45*4:1,f/22.5+45*5:1, g/22.5+45*6:1,h/22.5+45*7:1} \coordinate (\x) at (\y);
+
+
+\clip[draw] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- (g) -- (h) -- cycle;
+\draw (22.5+45*5:1) circle (6pt);
+
+
+\end{tikzpicture} 
+
+\begin{tikzpicture}[scale=.7*1.031]
+% \draw circle (1cm);
+\foreach \x/\y in {a/90:1,b/90+40*1:1,c/90+40*2:1,d/90+40*3:1,e/90+40*4:1,f/90+40*5:1, g/90+40*6:1,h/90+40*7:1,i/90+40*8:1} \coordinate (\x) at (\y);
+
+
+\clip[draw] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- (g) -- (h) -- (i) -- cycle;
+\draw (e) circle (6pt);
+
+
+
+\end{tikzpicture} 
+
+\begin{tikzpicture}[scale=.7*1.051]
+% \draw circle (1cm);
+\foreach \x/\y in {a/0:1,b/36*1:1,c/36*2:1,d/36*3:1,e/36*4:1,f/36*5:1, g/36*6:1,h/36*7:1,i/36*8:1,j/36*9:1} \coordinate (\x) at (\y);
+
+
+\clip[draw] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- (g) -- (h) -- (i) -- (j) -- cycle;
+\draw (h) circle (6pt);
+
+
+\end{tikzpicture} 
+
+\end{multicols}
+
+
+\textbf{Sugestão:} Você pode calcular a soma de todos os ângulos internos de cada um dos polígonos subdividindo-os em triângulos, por exemplo: 
+
+% \begin{center}
+% 
+% \end{center}
+
+\begin{minipage}{0.5\textwidth}
+\centering
+\begin{tikzpicture}[scale=1.5]
+\foreach \x/\y in {a/0:1,b/60:1,c/60*2:1,d/60*3:1,e/60*4:1,f/60*5:1} \coordinate (\x) at (\y);
+
+
+\clip[draw] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- cycle;
+
+\draw (e) -- (a);
+\draw (e) -- (b);
+\draw (e) -- (c);
+
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+Soma dos ângulos internos: $4\times180^{\circ}=720^{\circ}$
+\end{minipage}
+
+\end{task}
+
+\begin{task}{As imagens}
+Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os intervalos correspondentes. Complete-as com os valores da função e em seguida represente os pontos no sistema de coordenadas
+\begin{equation*}
+\frac{\Delta y}{\Delta x}=\frac{f(b)-f(a)}{b-a}
+\end{equation*}
+
+\begin{enumerate}
+\item \phantom{coisa}
+
+  \begin{minipage}{.4\textwidth}
+ \begin{table}[H]
+    \setlength\tabcolsep{2.5pt}
+\begin{tabu} to .4\textwidth{|c|c|c|}
+  \hline
+  \thead
+  $\bm{[a,b]}$ & $\bm{f(0) = 1}$ & $\bm{\Delta y/\Delta x}$ \\
+  \hline
+  $[0,1]$ & $f(1) = \phantom{1000} $ & 2 \\
+  \hline
+  $[1,2]$ & $f(2) = \phantom{1000} $ & 2 \\
+  \hline
+  $[2,3]$ & $f(3) = \phantom{1000} $ & 2 \\
+  \hline
+  $[3,4]$ & $f(4) = \phantom{1000} $ & 2 \\  
+  \hline
+\end{tabu}
+\end{table}
+\end{minipage}\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{tikzpicture}[yscale=.5,xscale=1.2]
+    \draw [->, thick] (0,-.5) -- (0,11) node[left] {$y$};
+    \draw [->, thick] (-.5,0) -- (4.2,0) node[below] {$x$};
+    \draw[help lines, gray] (0,0) grid (4.01,10.01);
+    \foreach \x in {1,...,4} \draw (\x,.1)  -- (\x,-.1)  node[below] {\x};
+    \foreach \y in {1,...,10} \draw (.1,\y) -- (-.1,\y) node[left] {\y};        
+\node[below left] at (0,0) {0};
+  \end{tikzpicture}
+  \end{minipage}
+\item  \phantom{coisa}
+
+  \begin{minipage}{.4\textwidth}
+   \begin{table}[H]
+   \setlength\tabulinesep{1mm}
+   \setlength\tabcolsep{2.5pt}
+\begin{tabu} to .4\textwidth{|m{.3\textwidth}|m{.35\textwidth}|c|}
+  \hline
+  \thead
+  $\bm{[a,b]}$ & $\bm{f(0) = 10}$ & $\bm{\Delta y/\Delta x}$ \\
+  \hline
+  $[0,\frac{1}{2}]$ & $f(1/2) = $ & -2 \\
+  \hline
+  $[\frac{1}{2},1]$ & $f(1) = $  & -2 \\
+  \hline
+  $[1,\frac{3}{2}]$ & $f(3/2) =$  &-2 \\
+  \hline
+  $[\frac{3}{2},2]$ & $f(2) = $  &-2 \\
+  \hline
+  $[2,\frac{5}{2}]$ & $f(5/2) =$  &-2 \\
+  \hline
+  $[\frac{5}{2},3]$ & $f(3) = $  &-2 \\
+  \hline
+  $[3,\frac{7}{2}]$ & $f(7/2) =$   &-2 \\
+  \hline
+  $[\frac{7}{2},4]$ & $f(4) =$   &-2 \\
+  \hline
+\end{tabu}
+\end{table}
+\end{minipage}\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{tikzpicture}[yscale=.5,xscale=1.2]
+    \draw [->, thick] (0,-.5) -- (0,11) node[left] {$y$};
+    \draw [->, thick] (-.5,0) -- (4.2,0) node[below] {$x$};
+    \draw[help lines, gray] (0,0) grid (4.01,10.01);
+    \foreach \x in {1,...,4} \draw (\x,.1)  -- (\x,-.1)  node[below] {\x};
+    \foreach \y in {1,...,10} \draw (.1,\y) -- (-.1,\y) node[left] {\y};        
+\node[below left] at (0,0) {0};
+  \end{tikzpicture}
+\end{minipage}
+
+\item  \phantom{coisa}
+
+  \begin{minipage}{.4\textwidth}
+ \begin{table}[H]
+    \setlength\tabcolsep{2.5pt}
+\begin{tabu} to .4\textwidth{|c|c|c|}
+  \hline
+  \thead
+  $\bm{[a,b]}$ & $\bm{f(0) = 0}$ & $\bm{\Delta y/\Delta x}$ \\
+  \hline
+  $[0,2]$ & $f(2) = \phantom{1000} $ & 1 \\
+  \hline
+  $[2,4]$ & $f(4) = \phantom{1000} $ & 2 \\
+  \hline
+  $[4,6]$ & $f(6) = \phantom{1000} $ & 3 \\
+  \hline
+  $[6,8]$ & $f(8) = \phantom{1000} $ & 4 \\  
+  \hline
+\end{tabu}
+\end{table}
+\end{minipage}\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{tikzpicture}[yscale=.25,xscale=.6]
+    \draw [->, thick] (0,-.5) -- (0,27) node[left] {$y$};
+    \draw [->, thick] (-.5,0) -- (8.7,0) node[below] {$x$};
+    \draw[help lines, gray] (0,0) grid (8.01,25.01);
+    \foreach \x in {1,...,8} \draw (\x,.1)  -- (\x,-.1)  node[below] {\x};
+    \foreach \y in {5,10,...,25} \draw (.1,\y) -- (-.1,\y) node[left] {\y};        
+\node[below left] at (0,0) {0};
+  \end{tikzpicture}
+\end{minipage}
+
+\item  \phantom{coisa}
+
+  \begin{minipage}{.4\textwidth}
+ \begin{table}[H]
+    \setlength\tabcolsep{2.5pt}
+\begin{tabu} to .4\textwidth{|c|c|c|}
+  \hline
+  \thead
+  $\bm{[a,b]}$ & $\bm{f(0) = 0}$ & $\bm{\Delta y/\Delta x}$ \\
+  \hline
+  $[0,1]$ & $f(1) = \phantom{1000} $ & 10 \\
+  \hline
+  $[1,2]$ & $f(2) = \phantom{1000} $ & -8 \\
+  \hline
+  $[2,3]$ & $f(3) = \phantom{1000} $ & 6 \\
+  \hline
+  $[3,4]$ & $f(4) = \phantom{1000} $ & 0 \\  
+  \hline
+\end{tabu}
+\end{table}
+\end{minipage}\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{tikzpicture}[yscale=.5,xscale=1.2]
+    \draw [->, thick] (0,-.5) -- (0,11) node[left] {$y$};
+    \draw [->, thick] (-.5,0) -- (4.2,0) node[below] {$x$};
+    \draw[help lines, gray] (0,0) grid (4.01,10.01);
+    \foreach \x in {1,...,4} \draw (\x,.1)  -- (\x,-.1)  node[below] {\x};
+    \foreach \y in {1,...,10} \draw (.1,\y) -- (-.1,\y) node[left] {\y};        
+\node[below left] at (0,0) {0};
+  \end{tikzpicture}
+  \end{minipage}
+
+  
+\item  \phantom{coisa}
+
+  \begin{minipage}{.4\textwidth}
+ \begin{table}[H]
+    \setlength\tabcolsep{2.5pt}
+\begin{tabu} to .4\textwidth{|c|c|c|}
+  \hline
+  \thead
+  $\bm{[a,b]}$ & $\bm{f(0) = 0}$ & $\bm{\Delta y/\Delta x}$ \\
+  \hline
+  $[0,1]$ & $f(1) = \phantom{1000} $ & 1 \\
+  \hline
+  $[1,2]$ & $f(2) = \phantom{1000} $ & 3 \\
+  \hline
+  $[2,3]$ & $f(3) = \phantom{1000} $ & 5 \\
+  \hline
+  $[3,4]$ & $f(4) =  $\phantom{1000} & 7 \\  
+  \hline
+  $[4,5]$ & $f(5) =  $ \phantom{1000} & 5 \\  
+  \hline
+  $[5,6]$ & $f(6) =  $ \phantom{1000}& 3 \\  
+  \hline
+  $[6,7]$ & $f(7) =  $\phantom{1000} & 1 \\  
+  \hline
+  $[7,8]$ & $f(8) =  $\phantom{1000} & 0 \\  
+  \hline  
+\end{tabu}
+\end{table}
+\end{minipage}\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{tikzpicture}[yscale=.25,xscale=.6]
+    \draw [->, thick] (0,-.5) -- (0,27) node[left] {$y$};
+    \draw [->, thick] (-.5,0) -- (8.7,0) node[below] {$x$};
+    \draw[help lines, gray] (0,0) grid (8.01,25.01);
+    \foreach \x in {1,...,8} \draw (\x,.1)  -- (\x,-.1)  node[below] {\x};
+    \foreach \y in {5,10,...,25} \draw (.1,\y) -- (-.1,\y) node[left] {\y};        
+\node[below left] at (0,0) {0};
+  \end{tikzpicture}
+\end{minipage}
+  
+\end{enumerate}
+\end{task}
+
+\know{}
+
+\begin{task}{Arremeço}
+Um jogador de basquete ao lançar a bola em direção à cesta a vê descrever uma curva no ar chamada \textit{parábola}. Essa curva é resultado da combinação de dois movimentos: um na direção horizontal, responsável por fazer a bola ``ir para frente'' e outro na direção vertical que faz a bola ``subir e descer''.
+
+\begin{center}
+\includegraphics[width=\textwidth]{basquete}  
+\end{center}
+
+Admitindo que o jogador lançou a bola de uma altura de 2,10$m$ com velocidade inicial de $v_0 m/s$ (na direção vertical), a função que fornece a variação da altura da bola em função do tempo é dada pela expressão
+\[h(t) = 2,10 + v_0 t - 5t^2\]
+cujo gráfico também é uma parábola (representado a seguir apenas para $t\geq 0$):
+
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}[xscale=2.8]
+    \draw[help lines, thin, gray!30, step=.2] (0,0) grid (2.2,4.2);
+    \draw[help lines, thin, gray!70] (0,0) grid (2.2,4.2);
+    \draw [->, thick] (0,0) -- (0,4.4);
+    \node[left, rotate=90] at (-.25,4) {altura (h)};
+    \draw [->, thick] (0,0) -- (2.4,0);
+    \node[] at (2,-.7) {tempo (t)};
+    \foreach \x in {0.5,1,1.5,2} \draw (\x,.1)  -- (\x,-.1)  node[below] {\x};
+    \foreach \y in {1,...,4} \draw (.03571,\y) -- (-.03571,\y) node[left] {\y};        
+    \node[below left] at (0,0) {0};
+    \draw [ domain=0:1.5, color=\currentcolor, smooth, very thick] plot (\x,-5*\x^2 +6*\x + 2.1);
+  \end{tikzpicture}
+
+\caption{Gráfico de $h(t)$ para $v_0 = 6m/s$.}
+\end{figure}
+
+Com a ajuda de uma calculadora, calcule as taxas de variação médias da altura nos seguintes intervalos de tempo para $v_0 = 6 m/s$ e $v_0 = 7 m/s$:
+
+\begin{table}[H]
+  \centering
+\begin{tabu} to .7\textwidth{|l|c|c|}
+  \hline
+  \thead
+          & $\bm{v_0 = 6 m/s}$ & $\bm{v_0 = 7 m/s}$ \\
+\hline
+Entre $t=0$ e $t=1$ & & \\
+\hline
+Entre $t=0$ e $t=0,1$ & & \\
+\hline
+Entre $t=0$ e $t=0,01$ & & \\
+\hline
+Entre $t=0$ e $t=0,001$ & & \\
+\hline
+Entre $t=0$ e $t=0,0001$ & & \\
+\hline
+\end{tabu}
+\end{table}
+
+\begin{enumerate}
+\item Olhando para as sequências de valores obtidos acima, o que se pode conjecturar sobre a tendência que eles apresentam?
+
+  Considerando a velocidade inicial igual a $6m/s$, a bola atinge sua altura máxima de $3,9m$ depois de $0,6s$ do lançamento. Ou seja, o ponto mais alto do gráfico é o par ordenado $(0{,}6;3{,}9)$. Neste ponto a velocidade na direção vertical é igual a zero (uma vez que aí a bola deixa de subir e passa a descer). Observe, agora, as taxas de variação médias da altura nos seguintes intervalos de tempo:
+
+
+  \begin{multicols}{2}
+    \begin{table}[H]
+    \begin{tabu}[l]{|l|c|}
+      \hline
+      \thead
+      & $\bm{v_0 = 6m/s}$ \\
+      \hline
+      Entre $t=0{,}5$ e $t=0{,}6$  & 0,5 \\
+      \hline
+      Entre $t=0{,}59$ e $t=0{,}6$  & 0,05 \\
+      \hline
+      Entre $t=0{,}599$ e $t=0{,}6$  & 0,005 \\
+      \hline
+      Entre $t=0{,}5999$ e $t=0{,}6$  & 0,0005 \\
+      \hline
+    \end{tabu}
+\end{table}
+\begin{table}[H]
+    \begin{tabu}[r]{|l|c|}
+      \hline
+      \thead
+      & $\bm{v_0 = 6m/s}$ \\
+      \hline
+      Entre $t=0{,}6$ e $t=0{,}7$  & -0,5 \\
+      \hline
+      Entre $t=0{,}6$ e $t=0{,}65$  & -0,25 \\
+      \hline
+      Entre $t=0{,}6$ e $t=0{,}605$  & -0,025 \\
+      \hline
+      Entre $t=0{,}6$ e $t=0{,}6005$  & -0,0025 \\
+      \hline
+    \end{tabu}
+  \end{table}
+\end{multicols}
+
+  
+\item A tendência observada nos valores obtidos acima corrobora a sua conjectura do item anterior? Explique.
+\item Calcule a taxa de variação média da função $h(t) = 2,1 + 6t -5t^2$ entre os tempos $t=1$ e $t=1 + \alpha$, onde a variável $\alpha$ representa um número real próximo de zero. (A resposta ficará em função de $\alpha$).
+  \item À medida que o valor de $\alpha$ se aproxima de zero, o que se observa com o valor da taxa de variação média calculada no item anterior? O que esse valor significa no contexto do problema?
+  \end{enumerate}
+\end{task}
+
+  \exercise
+
+  \begin{enumerate}
+  \item Considere a função cujo gráfico está representado abaixo. Complete a tabela abaixo com as variações e as taxas de variação.
+
+\begin{center}
+\begin{tikzpicture}[domain=0:4, scale=1.3]
+\draw[very thin,color=gray!50] (-2,-2) grid (3,5);
+\draw[semithick](-2,0) -- (3,0);
+\draw[semithick](0,-2) -- (0,5);
+
+\node [below left] at (0,0) {0};
+
+\draw[color=\currentcolor!80, domain=-1.10162:2.14327, samples=1000, smooth, very thick] plot (\x,{1.333333*(\x)^3-2.5*(\x)^2+0.166666*(\x)+3});
+
+\foreach \x/\y in {-1/-1,0/3,1/2,2/4} \fill (\x,\y) circle (1.5pt);
+
+\foreach \x in {-1,1,2} \node [below] at (\x,0) {\x};
+\foreach \x in {-1,1,2,3,4} \node [left] at (0,\x) {\x};
+
+\end{tikzpicture}
+\end{center}
+
+    
+\begin{table}[H]
+\centering
+\setlength\tabulinesep{2.5pt}
+\begin{tabu}[l]{|c|c|c|}
+\hline
+\thead
+\makecell{Intervalo $\bm{[a,b]}$} & \makecell{Variação da função \\  $\bm{\Delta f = f(b) - f(a)}$} & \makecell{Variação média da função \\ $\bm{\dfrac{\Delta f}{\Delta x} = \dfrac{f(b) - f(a)}{b-a}}$} \\
+\hline
+$[-1,0]$ & & \\
+\hline
+$[0,1]$ & & \\
+\hline
+$[1,2]$ & & \\
+\hline
+$[-1,1]$ & & \\
+\hline
+$[0,2]$ & & \\
+\hline
+$[-1,2]$ & & \\
+\hline
+        \end{tabu}
+      \end{table}
+
+    \item (Velocidade Média) Se um objeto é arremessado para o alto a $20m/s$ a partir de uma altura de $6m$, sua altura $S$ após $t$ segundos é dada por
+  \[S(t) = 6 + 20t - 5t^2.\]
+  Qual é a velocidade média do objeto entre:
+  \begin{enumerate}
+  \item 0 e 2 segundos.
+    \item 2 e 4 segundos.
+    \end{enumerate}
+
+    \item (Receita) A função que fornece a receita total em reais obtida com a venda de um determinado eletrodoméstico é
+\[ R(x) = 36x - 0,01x^2,\]
+em que $x$ é o número de unidades vendidas. Qual é a taxa da variação média da receita $R(x)$ à medida que $x$ aumenta de 10 para 20 unidades?
+
+\item (Demanda) Se a demanda por um produto $p$ é dada pela função 
+\[D(p) = \dfrac{1000}{\sqrt{p}} - 1, \]
+  qual é a taxa de variação média da demanda quando p aumenta de
+
+  \begin{enumerate}
+  \item 1 para 25?
+  \item 25 para 100?
+  \end{enumerate}
+
+\item (Custo total) Suponha que o custo total em dólares para a produção de $x$ impressoras seja dado pela função
+  \[C(x) = 0,0001x^3 w + 0,005x^2 + 28x + 3000.\]
+  Encontre a taxa de variação média do custo total quando a produção varia:
+  \begin{enumerate}
+  \item De 100 para 300 impressoras;
+  \item De 300 para 600 impressoras.
+  \end{enumerate}
+
+\item A figura a seguir mostra o gráfico do custo total (em milhares de reais) em função da quantidade (em milhares de unidades) de um produto manufaturado por uma determinada companhia. Ordene, da menor para a maior, as taxas de variação médias do custo total de $A$ para $B$, $B$ para $C$ e $A$ para $C$.
+
+  \begin{center}
+%  \begin{tikzpicture}
+%     \draw [->, thick] (0,-.5) -- (0,4.8) node[left] {$C(x)$};
+%     \draw [->, thick] (-2.2,0) -- (3.2,0) node[below] {$x$};
+%     \foreach \x in {2,4,...,10} \node[below] at (\x,0) {$10*\x$};
+%     \foreach \y in {1,2,3,4,5} \node[left] at (0,\y) {$10*\y$};        
+%     \draw [domain=-1.1:2.1, smooth, color=\currentcolor, thick] plot (\x, sin\x^3 -2x^2+ 3);
+% \foreach \x / \y in {2.1/0.9, 4/1.8, 6/3.7}  \fill (\x,\y) circle (3pt);
+%     \end{tikzpicture}
+\includegraphics[width=.3\textwidth]{taxa-exerc-6}
+  \end{center}
+
+\item (ENEM 2019) Os exercícios físicos são recomendados para o bom funcionamento do organismo, pois aceleram o metabolismo e, em consequência, elevam o consumo de calorias. No gráfico, estão registrados os valores calóricos, em kcal, gastos em cinco diferentes atividades físicas, em função do tempo dedicado às atividades, contado em minuto.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[yscale=.25, scale=1, every node/.style={scale=.9}]
+
+\draw [thick] (0,0) -- (6,0) node [below, pos=1.1] {Tempo (min)};
+\draw [thick] (0,0) -- (0,14);
+
+\foreach \x/\y in {0/5,1/10,2/15,3/20,4/25,5/30,6/\phantom{a}} 
+{\draw [gray!70] (\x,0) -- (\x,14);
+\node [below] at (\x,0) {\y};};
+
+\node [rotate=90, above] at (-.75,7) {(kcal)};
+
+\foreach \y in {2,4,...,14} 
+{\draw [gray!70] (0,\y) -- (6,\y);
+\node [left] at (0,\y) {\y0};};
+
+\foreach \x/\y/\z in {1/2/I,2/10/II,3/12/III,4/10/IV,5/8/V}
+{\node [circle, fill, inner sep=2pt, label=above right:\z] at (\x,\y) {};};
+
+\end{tikzpicture}
+\end{figure}
+
+  Qual dessas atividades físicas proporciona o maior consumo de quilocalorias por minuto?
+
+  \begin{enumerate}
+  \item I
+  \item II
+  \item III
+  \item IV
+  \item V
+  \end{enumerate}
+
+\item (ENEM 2019) O gráfico a seguir mostra a evolução mensal das vendas de certo produto de julho a novembro de 2011.
+
+  \begin{center}
+\begin{tikzpicture}[scale=.75, every node/.style={scale=1}, xscale=1.5]
+
+\draw [->] (0,0) -- (0,6.5) node [above left, align=center] {Unidades \\ vendidas};
+\draw [->] (0,0) -- (6,0);
+
+\foreach \x/\y in {.7*2/700,2.3*2/2.500,2.7*2/2.700,3*2/2.800} \node [left] at (0,\x) {\y};
+
+\foreach \x/\y in {1/Jul,2/Ago,3/Set,4/Out,5/Nov,6/Mês} \node [below] at (\x,0) {\y};
+
+\foreach \x/\y in {(1,.7*2)/a,(2,2.3*2)/b,(3,2.3*2)/c,(4,3*2)/d,(5,2.7*2)/e} \node (\y) [coordinate] at \x {};
+
+\draw [dashed] (0,.7*2) -- (a) -- (1,0);
+\draw [dashed] (0,2.3*2) -- (b) -- (2,0);
+\draw [dashed] (0,2.3*2) -- (c) -- (3,0);
+\draw [dashed] (0,3*2) -- (d) -- (4,0);
+\draw [dashed] (0,2.7*2) -- (e) -- (5,0);
+
+\draw [very thick, \currentcolor!80] (a) -- (b) -- (c) -- (d) -- (e);
+\end{tikzpicture}   
+  \end{center}
+
+  
+  Sabe-se que o mês de julho foi o pior momento da empresa em 2011 e que o número de unidades vendidas desse produto em dezembro de 2011 foi igual à média aritmética do número de unidades vendidas nos meses de julho a novembro do mesmo ano. O gerente de vendas disse, em uma reunião da diretoria, que, se essa redução no número de unidades vendidas de novembro para dezembro de 2011 se mantivesse constante nos meses subsequentes, as vendas só voltariam a ficar piores que julho de 2011 apenas no final de 2012. O diretor financeiro rebateu imediatamente esse argumento mostrando que, mantida a tendência, isso aconteceria já em
+
+  \begin{enumerate}
+  \item Janeiro
+  \item Fevereiro
+  \item Março
+  \item Abril
+  \item Maio
+  \end{enumerate}
+\end{enumerate}
