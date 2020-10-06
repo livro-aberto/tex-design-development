@@ -3,7 +3,7 @@
 
 \renewcommand\chapterbecause{O Esforço para produzir livros didáticos de Matemática com licença aberta começou em 2016, com a elaboração do material de Frações para o ensino fundamental I. Desde então, novos elaboradores acreditaram e juntaram-se ao projeto para alcançarmos novos níveis e novos livros. Hoje, possuímos diversos capítulos escritos e outros 6 livros em produção. Tudo isso a partir de um trabalho colaborativo envolvendo matemáticos, professores universitários e professores da Educação Básica.
 
-Um princípio fundamental desta iniciativa é que sua produção configure uma proposta pedagógica ancorada e acompanhada por pesquisa científica em Ensino de Matemática. O projeto tem também compromisso com a formação e o desenvolvimento profissional de professores. Em particular, pela composição característica da equipe, destaca-se o entendimento do potencial do projeto para enfrentar um reconhecido desafio: estreitar o diálogo entre a realidade e as demandas próprias da prática docente e a formação acadêmica do professor. Leia mais a respeito. Você também pode sugerir alterações no texto do projeto pelo Github.}
+Um princípio fundamental desta iniciativa é que sua produção configure uma proposta pedagógica ancorada e acompanhada por pesquisa científica em Ensino de Matemática. O projeto tem também compromisso com a formação e o desenvolvimento profissional de professores. Em particular, pela composição característica da equipe, destaca-se o entendimento do potencial do projeto para enfrentar um reconhecido desafio: estreitar o diálogo entre a realidade e as demandas próprias da prática docente e a formação acadêmica do professor. Leia mais a respeito. Você também pode sugerir alterações no texto do projeto pelo \href{https://github.com/livro-aberto/tex-design-development}{Github}.}
 \chapter{Documentação do Livro Aberto do Ensino Médio}
 
 \mbox{}\thispagestyle{empty}\clearpage
@@ -123,6 +123,8 @@ Texto da atividade
 
 \end{task}
 \end{verbatim} 
+
+O comando \verb|\label| também pode ser usado na caixa de atividade.
 \end{task}
 
 
@@ -150,6 +152,9 @@ As figuras são em geral centralizadas e podem ou não possuir legenda. Por isso
 
 O ambiente de figura possui uma diferença crucial que é o uso da opção \verb|[H]|. Essa opção é fornecida pelo pacote \verb|float| (incluído no pacote \verb|livroaberto|) e é usada pois a figura não pode estar naturalmente dentro de \href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{ambiente flutuante}, que é o caso da caixa de atividade, criada por uma \verb|tcolorbox|. Deixamos também a figura, em geral, centralizada.
 
+Pedimos que ao se referir a uma atividade, figura ou tabela utilize \verb|\hyperref[label]{float \ref{label}}|, onde float é substituído por figura, atividade ou tabela, de acordo com a referência. 
+
+\textbf{Atenção}: Os \textit{labels} devem sempre ficar após as \textit{captions} no código, senão o \LaTeX não as reconhece propriamente.
 \end{task}
 
 \begin{task}{Tabelas}
@@ -299,9 +304,9 @@ Atividade Física & Manhã & Tarde & Total \\
 \practice{Outros tipos de padrões}
 
 \begin{task}{Padrões no texto}
-Colocamos sempre letras representando variáveis e conjuntos no modo de matemática. Números quando se referem a equações e unidades de medida também ficam em texto matemático.
+Colocamos sempre letras representando variáveis e conjuntos no modo de matemática. Números quando se referem a equações e unidades de medida, porcentagem e valores monetário também ficam em texto matemático. Porcentagens são escritas por \verb|$70\%$|, unidades de medida são coladas no modo romano \verb|$70\rm{mm}| e valores monetários \verb|R\$ $70$|, por exemplo.
 
-O \LaTeX{} usa o sistema americano para casa decimais, e sempre coloca um espaço após a vírgula. Como aqui números decimais ficam após uma vírgula, é necessário usar \verb|{,}| para que não haja esse espaço (o espaço deve existir em outros casos, como pares ordenados e afins). Usamos também o padrão de pontos separando milhares, isto é, escrevemos $1.000.00$ para representar um milhão.
+O \LaTeX{} usa o sistema americano para casa decimais, e sempre coloca um espaço após a vírgula. Como aqui números decimais ficam após uma vírgula, é necessário usar \verb|{,}| para que não haja esse espaço (o espaço deve existir em outros casos, como pares ordenados e afins). Usamos também o padrão de pontos separando milhares, isto é, escrevemos 1.000.00 para representar um milhão.
 \end{task}
 
 

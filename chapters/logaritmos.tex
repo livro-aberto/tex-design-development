@@ -538,7 +538,7 @@ Observamos nas atividades anteriores, que se conhecemos os logaritmos de dois n�
 
 \begin{description}
 \item[Teorema]\label{teo_log_prod}
-[do logaritmo do produto] Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos que
+[do logaritmo do produto] Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos
 $$
 \log_a(bc) = \log_a b + \log_a c.
 $$
@@ -569,7 +569,7 @@ $$
 
 \begin{description}
 \item[Teorema]\label{teo_log_div}
-[do logaritmo do quociente] Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos que
+[do logaritmo do quociente] Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos
 $$
 \log_a(b/c) = \log_a b - \log_a c.
 $$
@@ -659,11 +659,7 @@ A \textbf{ordem de grandeza} de um determinado valor é o expoente de dez na not
 $$
 6{,}02214076 \times 10^{23},
 $$
-assim a ordem de grandeza do Mol é $23$, que é a parte inteira de 
-
-$$\log 602214076000000000000000 \approx 23{,}7798$$,
-
-com $4$ casas decimais de precisão.
+assim a ordem de grandeza do Mol é $23$, que é a parte inteira de $\log 602214076000000000000000 \approx 23{,}7798$, com $4$ casas decimais de precisão.
 \end{knowledge}
 
 Na atividade \textit{"Ordens de grandeza"}, utilizamos a propriedade do logaritmo de uma potência inteira, mas é possível observarmos que essa propriedade vale para expoentes reais quaisquer, e isso será fundamental nas aplicações:
@@ -672,7 +668,7 @@ Na atividade \textit{"Ordens de grandeza"}, utilizamos a propriedade do logaritm
 
 \begin{description}
 \item[Teorema]\label{teo_log_pot}
-[do logaritmo da potência] Dados números reais positivos $a,b$, com $a \neq 1$, e um número real qualquer $t$, temos que
+[do logaritmo da potência] Dados números reais positivos $a,b$, com $a \neq 1$, e um número real qualquer $t$, temos
 $$
 \log_a b^t = t\log_a b.
 $$
@@ -751,11 +747,13 @@ Dados $\log 2 = 0{,}301$ e $\log 3 = 0{,}477$, use as propriedades operatórias 
 
 (IMED/2015) Em um experimento no laboratório de pesquisa, observou-se que o número de bactérias de uma determinada cultura, sob certas condições, evolui conforme a função $B(t)= 10\times 3^{t-1}$, em que $B(t)$ expressa a quantidade de bactérias e $t$ representa o tempo em horas\footnote{A expressão faz sentido apenas para os valores naturais $10\times 3^{t-1}$ e deve ser entendida como uma aproximação para o número de indivíduos.}. Para atingir uma cultura de 810 bactérias, após o início do experimento, o tempo decorrido, em horas, corresponde a:
 \begin{enumerate}
-\item 1.
-\item 2.	
-\item 3.	
-\item 4.
-\item 5.
+\begin{multicols}{2}
+\item 1
+\item 2
+\item 3
+\item 4
+\item 5
+\end{multicols}
 \end{enumerate}
 
 \item {}\label{UFSM2013}
@@ -864,7 +862,7 @@ Os cálculos realizados nas atividades acima indicam uma propriedade que é vali
 
 \begin{description}
 \item[Teorema]\label{teo_mud_base}
-[da mudança de base] Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos que
+[da mudança de base] Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos
 $$
 \log_c b = \frac{\log_a b}{\log_a c}.
 $$
@@ -1037,14 +1035,11 @@ Utilize as aproximações abaixo, com dois dígitos de precisão, dos logaritmos
 & \log_{2} 9  = 3{,}16; \,\, \log_{2} 10  = 3{,}32.
 \end{align*}
 Após esboçar esse gráfico, converse com seus colegas e com o professor como utilizar esses valores para esboçar o gráfico $g(x) = \log_{1/2} x$ e tente traçá-lo.
-\end{task}
-
 
 \begin{figure}[H]
 \centering
 
-\resizebox{\linewidth}{!}{
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=1.25]
 \foreach \i in {0,...,100}{% 10 (instead of 9) is used here to make sure the last line is drawn.
             \draw[lightgray] (0.1*\i,0) -- (0.1*\i,10);
             \draw[lightgray] (0,0.1*\i) -- (10,0.1*\i);}
@@ -1052,13 +1047,15 @@ Após esboçar esse gráfico, converse com seus colegas e com o professor como u
             \draw[gray] (\n,0) -- (\n,10);
             \draw[gray] (0,\n) -- (10,\n);
             \node at (\n-0.2, 3.7) {\n};}
-\foreach \n in {-4,...,6}{\node at (-0.2, \n+3.7) {\n};}
+
+	\foreach \n in {-4,...,-1,1,2,...,6}{\node[left] at (0, \n+4) {\n};}
 \draw[black,->] (0,-0.3) -- (0,10.3);
-\node[black] at (-0.2,10.3) {y};
+\node[black, above] at (-0.2,10.3) {$y$};
 \draw[black,->] (-0.3,4.0) -- (10.3,4.0);
-\node[black] at (10.3,3.7) {x};
-\end{tikzpicture}}
+\node[black] at (10.3,3.7) {$x$};
+\end{tikzpicture}
 \end{figure}
+\end{task}
 
 \begin{observation}{Invertendo a base}
 A atividade \textit{Gráficos dos logaritmos} pode ser realizada se percebermos que $\log_{1/2} x = -\log_{2} x$. Essa propriedade é uma consequência do teorema da mudança de base:
@@ -1084,7 +1081,7 @@ As curvas na figura representam as funções $f(x) = 2x-3$, $g(x)=2x^2-1$, $h(x)
 
 \end{task}
 
-
+\clearpage
 \begin{example}{Crescimento logarítmico e exponencial}
 A figura abaixo mostra o total de mortes confirmadas causadas pela Covid-19 na França a cada dia, entre 15 de fevereiro e 13 de junho. Observamos no gráfico uma mudança no padrão da curva por volta da data de 7 de abril. No período inicial a curva é melhor aproximada por uma exponencial e depois é melhor aproximada por uma função logarítmica.
 
@@ -1100,8 +1097,6 @@ Buscar uma função que melhor aproxime os dados de um determinado experimento o
 
 A curva exponencial sugere que haveria um crescimento muito rápido no número de mortes. Contudo a redução posterior mostra um número muito menor, que pode ter sido causada pelas medidas adotadas pelo governo Francês (entre outras possibilidades).
 \end{example}
-
-
 
 \begin{task}{Brasil e Reino Unido na Pandemia}
 Observando o gráfico abaixo, em que data (aproximadamente) o crescimento mudou de exponencial para logarítmico no Reino Unido? E no Brasil? Apesar do número ser parecido na data final do gráfico, você acredita que o número total de mortos manteve-se próximo? Que fatores sociais, econômicos e demográficos podem ter influenciado o desenvolvimento da pandemia nesses países? 
@@ -1129,7 +1124,7 @@ O gráfico abaixo ilustra as funções $f(x)=2^x$ (verde), $g(x)=\log_2 x$ (azul
 
 \end{figure}
 
-Para qualquer base $a>0$, $a \neq 1$, temos que $f(x)=a^x$ e $g(x)=\log_a x$ são simétricas em relação à função $h(x)=x$. Podemos utilizar um computador ou celular para acessar a atividade do GeoGebra abaixo e verificar, utilizando o controle deslizante, que essa simetria verifica-se para as mais diversas bases.
+Para qualquer base $a>0$, $a \neq 1$, temos $f(x)=a^x$ e $g(x)=\log_a x$ são simétricas em relação à função $h(x)=x$. Podemos utilizar um computador ou celular para acessar a atividade do GeoGebra abaixo e verificar, utilizando o controle deslizante, que essa simetria verifica-se para as mais diversas bases.
 
 \begin{figure}[H]
 \centering
@@ -1311,11 +1306,13 @@ intensidade correspondente ao nível sonoro de 80 decibéis de um cruzamento de 
 intensidade correspondente ao nível sonoro de 60 decibéis do interior de um automóvel com ar-condicionado. A razão 
 $I_1/I_2$ é igual a:
  \begin{enumerate}
+\begin{multicols}{2}
      \item 1/10
      \item 1
      \item 10 
      \item 100
-     \item 1 000
+     \item 1.000
+\end{multicols}
  \end{enumerate}
 
 
@@ -1326,11 +1323,13 @@ $I_1/I_2$ é igual a:
 níveis sonoros, $N_1$ e $N_2$, de dois ruídos com Intensidades $I_1$ e $I_2$, respectivamente. Sendo $N_1 - N_2 = 20 dB$, 
 a razão $I_1/I_2$ é:
 \begin{enumerate}
+\begin{multicols}{2}
     \item $10^{-2}$
     \item $10^{-1}$
      \item $10$
      \item $10^{2}$
      \item $10^{3}$
+\end{multicols}
 \end{enumerate}
 
 
@@ -1342,11 +1341,13 @@ bel). Por exemplo, o ruído dos motores de um avião a jato é de 160 decibéis,
 movimentada de uma grande cidade é de 80 decibéis, sendo este o limite a partir do qual o ruído passa a ser nocivo ao 
 ouvido humano. Com base nessas informações, julgue os itens que se seguem.
 
-(1) A intensidade sonora de um ruído de zero decibel é de $10^{-12} w/m^2$. 
+\begin{enumerate}
+\item A intensidade sonora de um ruído de zero decibel é de $10^{-12} w/m^2$. 
 
-(2) A intensidade sonora dos motores de um avião a jato é o dobro da intensidade sonora do tráfego em uma esquina movimentada de uma grande cidade.
+\item A intensidade sonora dos motores de um avião a jato é o dobro da intensidade sonora do tráfego em uma esquina movimentada de uma grande cidade.
 
-(3) Uma intensidade sonora maior que $10^{-4} w/m^2$ produz um ruído que é nocivo ao ouvido humano. 
+\item Uma intensidade sonora maior que $10^{-4} w/m^2$ produz um ruído que é nocivo ao ouvido humano. 
+\end{enumerate}
 
 
 
@@ -1357,11 +1358,13 @@ ouvido humano. Com base nessas informações, julgue os itens que se seguem.
 (I/I_0)$, em que $I_0 = 10^{-12}$. Se a intensidade I for multiplicada por 100, em quantos decibel aumenta $\beta$?
 
 \begin{enumerate}
+\begin{multicols}{2}
     \item 2
     \item 20
     \item 100
     \item 120
     \item 140
+\end{multicols}
 \end{enumerate}
 \end{enumerate}
 
@@ -1836,13 +1839,13 @@ combustíveis fósseis. O pH da água da chuva considerado normal é de 5,5 (dev
 Um químico monitorando uma região altamente industrializada observou que o pH da
 água da chuva era igual a 4,5. Considerando que a acidez está relacionada com a
 concentração de $H_3O^+$, é correto afirmar que a água com pH 4,5 era:
-\begin{itemize}
-\item[(A)] duas vezes mais básica que o normal.
-\item[(B)] duas vezes mais ácida que o normal.
-\item[(C)] dez vezes mais básica que o normal.
-\item[(D)] dez vezes mais ácida que o normal.
-\item[(E)] cem vezes mais ácida que o normal.
-\end{itemize}
+\begin{enumerate}
+\item duas vezes mais básica que o normal.
+\item duas vezes mais ácida que o normal.
+\item dez vezes mais básica que o normal.
+\item dez vezes mais ácida que o normal.
+\item cem vezes mais ácida que o normal.
+\end{enumerate}
 \end{task}
 
 
@@ -1928,9 +1931,9 @@ $A_0$ = uma amplitude de referência.
 
 Com base nas informações, analise as proposições: 
 
-I. Para um terremoto de magnitude 7, temos que $A_0 = 7A$. 
+I. Para um terremoto de magnitude 7, temos $A_0 = 7A$. 
 
-II. Para um terremoto de magnitude 4 temos que $\frac{A}{A_0}=10^{-4}$ .
+II. Para um terremoto de magnitude 4 temos $\frac{A}{A_0}=10^{-4}$ .
  
 III. Um terremoto de magnitude 7 produz efeitos 10 vezes maior do que um terremoto de magnitude 6. 
 
@@ -2108,7 +2111,7 @@ Para aplicarmos o método da bissecção, tomamos uma aproximação superior e o
 \end{observation}
 
 
-O $\log_2 3$ é o expoente em que precisamos elevar $2$ para obter $3$, ou seja $2^{\log_2 3} = 3$, assim precisamos encontrar expoentes tais que 2 elevado a esses expoentes se aproxima cada vez mais de 3.  Podemos iniciar nossas tentativas com os expoentes $1$ e $2$. De fato $2^1=2<3$ e $2^2 = 4>3$, junto ao fato que as potências de 2 crescem quando crescem os expoentes, temos que $1<\log_2 3 < 2$. Para aplicar o método, escolhemos então, inicialmente, as aproximações inferior $i=1$ e superior $s=2$.
+O $\log_2 3$ é o expoente em que precisamos elevar $2$ para obter $3$, ou seja $2^{\log_2 3} = 3$, assim precisamos encontrar expoentes tais que 2 elevado a esses expoentes se aproxima cada vez mais de 3.  Podemos iniciar nossas tentativas com os expoentes $1$ e $2$. De fato $2^1=2<3$ e $2^2 = 4>3$, junto ao fato que as potências de 2 crescem quando crescem os expoentes, temos $1<\log_2 3 < 2$. Para aplicar o método, escolhemos então, inicialmente, as aproximações inferior $i=1$ e superior $s=2$.
 
 Tomamos, então a metade do intervalo $(1,2)$ como uma primeira aproximação $x=(1+2)/2 = 3/2$.
 
@@ -2129,7 +2132,7 @@ Tomamos, então a metade do intervalo $(1,2)$ como uma primeira aproximação $x
 \end{figure}
 
 
-Agora precisamos verificar se $x = 3/2$ é uma aproximação superior ou inferior e fazemos isso verificando se $2^{3/2}$ é maior ou menor do que $3$, que é o mesmo que comparar $2^3=8$ com $3^2=9$, pois a raiz quadrada é uma função crescente. Como $2^3 < 3^2$, temos que $2^{3/2}<3$ e $3/2<\log_2 3$, novamente pelo fato das potências de 2 crescerem quando crescem os expoentes. Assim a nova aproximação inferior passa a ser $i=3/2$ e aproximação superior continua sendo $s=2$.
+Agora precisamos verificar se $x = 3/2$ é uma aproximação superior ou inferior e fazemos isso verificando se $2^{3/2}$ é maior ou menor do que $3$, que é o mesmo que comparar $2^3=8$ com $3^2=9$, pois a raiz quadrada é uma função crescente. Como $2^3 < 3^2$, temos $2^{3/2}<3$ e $3/2<\log_2 3$, novamente pelo fato das potências de 2 crescerem quando crescem os expoentes. Assim a nova aproximação inferior passa a ser $i=3/2$ e aproximação superior continua sendo $s=2$.
 
 Tomamos, então a metade do intervalo $(3/2, 2)$ como uma segunda aproximação $x=(3/2+2)/2 = 7/4$. 
 
@@ -2149,7 +2152,7 @@ Tomamos, então a metade do intervalo $(3/2, 2)$ como uma segunda aproximação 
 \end{tikzpicture}
 \end{figure}
 
-Agora precisamos verificar se $2^{7/4}$ é maior ou menor do que $3$, que é o mesmo que comparar $2^7=128$ com $3^4=81$, pois a raiz quarta é uma função crescente. Como $2^7 > 3^4$, temos que $2^{7/4}>\log_2 3$ e $7/4$ é uma aproximação superior. 
+Agora precisamos verificar se $2^{7/4}$ é maior ou menor do que $3$, que é o mesmo que comparar $2^7=128$ com $3^4=81$, pois a raiz quarta é uma função crescente. Como $2^7 > 3^4$, temos $2^{7/4}>\log_2 3$ e $7/4$ é uma aproximação superior. 
 
 Tomamos, então a metade do intervalo $(3/2, 7/4)$ como uma terceira aproximação $x=(3/2+7/4)/2 = 13/8$.
 
@@ -2170,7 +2173,7 @@ Tomamos, então a metade do intervalo $(3/2, 7/4)$ como uma terceira aproximaç�
 \end{figure}
 
 
-Agora precisamos verificar se $2^{13/8}$ é maior ou menor do que $3$. Para fazer isso comparamos $2^{13/8}$ com $3$, que é o mesmo que comparar $2^{13}=8192$ com $3^8=6561$. Como $2^{13} > 3^8$, temos que $2^{13/8}>\log_2 3$ e $13/8$ é uma aproximação superior. 
+Agora precisamos verificar se $2^{13/8}$ é maior ou menor do que $3$. Para fazer isso comparamos $2^{13/8}$ com $3$, que é o mesmo que comparar $2^{13}=8192$ com $3^8=6561$. Como $2^{13} > 3^8$, temos $2^{13/8}>\log_2 3$ e $13/8$ é uma aproximação superior. 
 
 Podemos continuar esse processo quantas vezes desejarmos, mas vamos parar com o intervalo $(3/2,13/8)$ e tomar o ponto médio dele $x=(3/2+13/8)/2=25/16$ como aproximação.
 

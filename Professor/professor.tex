@@ -28,19 +28,24 @@
 % \include{chapters/taxa}
 % \include{chapters/ladrilhos}
 \include{chapters/cartografia}
-\include{chapters/cartografia_bibliografia}
+
 % \include{chapters/investigacao}
 % \include{chapters/exponencial}
 % \include{chapters/superficie}
 % \include{chapters/logaritmos}
-% \include{chapters/logaritmos_bibliografia}
 
+\newgeometry{textwidth=840pt,outer=50pt, top=2cm}
+\pagestyle{plain}
+\def\currentcolor{cor1}
 \section{Notas}
-\newgeometry{textwidth=840pt,outer=50pt}\pagestyle{plain} \begin{multicols}{2}
-\theendnotes\clearpage
+\setlength{\columnsep}{1cm}
+\begin{multicols}{2}
+\theendnotes
+\clearpage
 \end{multicols}
 
-% \include{logaritmosMD_bibliografia}
+\include{bibliografia/cartografia_bibliografia}
+% \include{bibliografia/logaritmosMD_bibliografia}
 
 \renewcommand{\indexname}{Índice}
 \printindex

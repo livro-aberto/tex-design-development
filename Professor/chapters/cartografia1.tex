@@ -1,0 +1,2411 @@
+\ifnum\aluno=1
+\renewcommand\chapterillustration{./abertura-cartografia}
+\else
+\renewcommand\chapterillustration{./abertura-cartografia-professor}
+\fi
+
+\renewcommand\chapterwhat{Projeções cartográficas. Classificação das projeções cartográficas quanto à superfície de projeção (planas, cônicas e cilíndricas) e quanto as propriedades (equivalentes, equidistantes, conformes e afiláticas).}
+\renewcommand\chapterbecause{Projeções cartográficas são projeções da superfície terrestre no plano que possibilitam a visualização de uma área muito grande em um único local ( folha de papel, tela de computador ou dispositivo móvel). Essas projeções tornam possível, por exemplo, o planejamento de rotas ou organizações territoriais de um país inteiro em cima de uma mesa. Existem diferentes tipos de projeções e cada uma possui algum tipo de distorção (em relação a área, ângulo ou distância). As projeções cartográficas mais conhecidas são as cônicas, planas e cilíndricas, portanto serão a essas que daremos ênfase no capítulo.}
+\chapter{Projeções Cartográficas}
+
+
+
+\mbox{}\thispagestyle{empty}\clearpage
+
+\thispagestyle{empty}
+
+\begin{center}
+Projeto: LIVRO ABERTO DE MATEMÁTICA
+
+\noindent \begin{tabular}{lcccr}
+\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
+\end{tabular}
+\end{center}
+
+\vspace*{.3cm}
+
+Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
+
+Versão digital do capítulo:
+
+\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF107.html}
+
+
+\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+Título: & Projeções Cartográficas\\
+\\
+Ano/ Versão: & 2020 / versão 0.2 de 15 de agosto de 2020\\
+\\
+Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+\\
+Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+\\
+Produção:& Livro Aberto\\
+\\
+Coordenação:& Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
+\\
+  Autores: & Carmen Vieira Mathias (UFSM)\\
+             & Lucas Schimith Zanon (SEDUC - RS)\\
+\\
+Revisoras: &  Lhaylla Crissaf (UFF) \\
+\\
+Design: & Andreza Moreira (Tangentes Design) \\
+\\
+  Ilustrações: & --- \\ 
+\\
+Gráficos: & Tarso Caldas (Licenciando da UNIRIO)\\
+\\
+  Capa: & Foto de Clay Banks, no Unsplash \\
+  & \url{https://unsplash.com/photos/b5S4FrJb7yQ} \\
+\end{tabular}
+\vspace{.5cm}
+
+
+\begin{figure}[b]
+\begin{minipage}[l]{5cm}
+\centering
+
+{\large Licença:}
+
+  \includegraphics[width=3.5cm]{cc-by-nc-sa}
+\end{minipage}\hfill
+\begin{minipage}[c]{5cm}
+\centering
+{\large Desenvolvido por}
+\includegraphics[width=2.5cm]{logo-associacao.jpg}
+\end{minipage}
+\begin{minipage}[r]{5cm}
+\centering
+
+{\large Patrocínio:}
+  \vspace{1em}
+  \includegraphics[width=3.5cm]{itau}
+\end{minipage}
+\end{figure}
+
+
+\mainmatter
+
+\begin{apresentacao}
+{
+\section*{Habilidades e pré-requisitos}
+
+Neste capítulo contempla-se a seguinte habilidade da versão homologada da Base Nacional Comum Curricular (BNCC) (\cite{BNCC2018}) para o Ensino Médio:
+
+\begin{habilities}{EM13MAT509}
+Investigar a deformação de ângulos e áreas provocada pelas diferentes projeções usadas em cartografia (como a cilíndrica e a cônica), com ou sem suporte de tecnologia digital.
+\end{habilities}
+
+ 
+As habilidades (conforme a versão homologada da BNCC para o Ensino Fundamental) consideradas como pré-requisitos para o entendimento dessa unidade são:
+
+\begin{habilities}{EF03MA16}
+Reconhecer figuras congruentes, usando sobreposição e desenhos em malhas quadriculadas ou triangulares, incluindo o uso de tecnologias digitais.
+\tcbsubtitle{EF05MA14} Utilizar e compreender diferentes representações para a localização de objetos no plano, como mapas, células em planilhas eletrônicas e coordenadas geográficas, a fim de desenvolver as primeiras noções de coordenadas cartesianas.
+\tcbsubtitle{EF09MA13} Demonstrar relações métricas do triângulo retângulo, entre elas o teorema de Pitágoras, utilizando, inclusive, a semelhança de triângulos.
+\tcbsubtitle{EF03GE06}Identificar e interpretar imagens bidimensionais e tridimensionais em diferentes tipos de representação cartográfica.
+\tcbsubtitle{EF09GE15}Comparar e classificar diferentes regiões do mundo com base em informações populacionais, econômicas e socioambientais representadas em mapas temáticos e com diferentes projeções cartográficas.
+\end{habilities}
+
+
+Considera-se também como pré-requisitos para o entendimento desse capítulo unidade, as seguintes habilidades do ensino médio, conforme \cite{BNCC2018}:
+\begin{habilities}{EM13MAT403}
+Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+\tcbsubtitle{EM13MAT308}  Aplicar as relações métricas, incluindo as leis do seno e do cosseno ou as noções de congruência e semelhança, para resolver e elaborar problemas que envolvem triângulos, em variados 
+\end{habilities}
+
+\section*{Tópicos abordados na unidade}
+Nessa unidade serão abordados os seguintes assuntos:
+\begin{itemize}
+\item Coordenadas geográficas: conceito, elementos e exemplos de utilização.
+\item Projeções cartográficas: classificação da projeção cartográfica dependendo da superfície de projeção, da deformação e do ponto de vista.
+\end{itemize}
+  
+
+Considerando a habilidade EM13MAT509 citada anteriormente, nesse capítulo tem-se os seguintes
+\begin{habilities}{Objetivos}
+\begin{itemize}
+\item reconhecer as projeções cartográficas de acordo com a superfície de projeção;
+\item compreender que ocorrem distorções de área, formas ou distâncias ao realizar uma projeção cartográfica. 
+\end{itemize}
+\end{habilities}
+
+\section*{Abordagem adotada no capítulo}
+
+Conforme listado nos pré-requisitos, observa-se que a BNCC  apresenta as projeções cartográficas como parte de uma das habilidades para a disciplina de Geografia.
+
+\textit{"(EF09GE15) Comparar e classificar diferentes regiões do mundo com base em informações populacionais, econômicas e socioambientais representadas em mapas temáticos e com diferentes projeções cartográficas." \cite[p. 395]{BNCC2018}}
+
+O mesmo documento aborda o tema Cartografia, para o ensino fundamental, na unidade temática formas de representação e pensamento espacial, na disciplina de Geografia. Nesse contexto, 
+\textit{[...] espera-se que, no decorrer do ensino fundamental, os alunos tenham domínio da leitura e elaboração de mapas e gráficos, iniciando-se na alfabetização cartográfica. Fotografias, mapas, esquemas, desenhos, imagens de satélites, audiovisuais, gráficos, entre outras alternativas, são frequentemente utilizados no componente curricular (p.363). }
+
+Observa-se que a BNCC para o ensino fundamental não trata do tema projeções cartográficas na disciplina de Matemática, porém o faz para o ensino médio, como uma habilidade a ser atingida (EM13MAT509 citada anteriormente).  Ao examinar os Parâmetros Curriculares Nacionais (PCN) (\cite{PCN}) não foram encontradas menções ao termo projeções cartográficas, apenas aos termos "cartografia" e "cartográfica" nos documentos de orientação para a disciplina de Geografia. 
+
+Há inúmeros trabalhos dedicados aos desafios do ensino de projeções cartográficas. Ao considerar os métodos que usamos para educar os alunos sobre as projeções cartográficas \cite{Downs}  examinaram os desafios cognitivos por trás do conceito de projeções e superfícies desenvolvíveis( são aquelas obtidas pela deformação de um plano sem que esse seja esticado, por exemplo o cone, o cilindro o próprio plano). Eles descobriram que muitos indivíduos em idade universitária não têm habilidades cognitivas e espaciais suficientes para compreender as projeções geométricas em perspectiva. Portanto, esses alunos não seriam capazes de compreender efetivamente as projeções cartográficas ensinadas usando projeções geométricas em perspectiva. Nesse sentido é muito importante que o aluno tenha conhecimento sobre projeções e perspectivas, que é tema do capítulo de mesmo nome do Livro Aberto de Matemática.
+
+ Sobre as dificuldades em compreender projeções cartográficas, \cite{Olson} sugere que os alunos  precisam  tornar-se “detetives visuais” e aprender a ler mais de perto as pistas na gratícula (rede de linhas de latitude e longitude sobre as quais o mapa é desenhado) do mapa.
+
+Enquanto \cite{Downs} e \cite{Olson} focaram em como os alunos aprendem sobre projeções cartográficas, \cite{Battersby} examinaram como os alunos aplicam o conhecimento de projeções cartográficas na avaliação de distorções. Uma descoberta deste estudo é uma dependência substancial nas distorções que aparecem na Projeção Cartográfica Mercator (por exemplo, as distorções que ocorrem na Groenlândia, Antártica e nas regiões polares) para explicar a distorção que ocorre nas outras projeções cartográficas incluídas no estudo. \cite{Battersby} afirma que mesmo quando uma projeção cartográfica é familiar, a maioria das pessoas tem dificuldade em perceber as distorções existentes.
+
+Ao pesquisar sobre dificuldades para ensinar projeções cartográficas em artigos de língua portuguesa, existem muitos relatos sobre os obstáculos que os estudantes apresentam no processo de aprendizagem dos conceitos relativos a alfabetização cartográfica, como por exemplo \cite{Almeida}, \cite{Lunkes} e \cite{Ludwig}. Nesses relatos as projeções cartográficas são mencionadas como algo abstrato e difícil de ser ensinado. Segundo \cite{Lunkes} os alunos trazem muitas deficiências sobre o tema Cartografia e possuem dificuldades na leitura e na interpretação de um mapa, portanto possuem dificuldades para uma leitura de mundo. Conforme \cite{Ludwig} a Cartografia ensinada na escola,  muitas vezes, é entendida como sendo apenas uma técnica ou um conjunto de conteúdos, como escala, fusos horários, coordenadas geográficas, projeções cartográficas, entre outros, que são trabalhados sem muita relação dentro com outros tópicos da disciplina de Geografia e de outras disciplinas. \cite{Lunkes} apresenta uma lista de dificuldades encontradas pelos professores de Geografia, no ensino de Cartografia. Como projeções cartográficas é um dos conteúdos incluso nesse tema, acreditamos que você professor, ao trabalhar esse capítulo, possa perceber as mesmas dificuldades, a saber:
+
+\begin{itemize}
+\item a dificuldade dos alunos que chegam ao ensino médio para dominarem alguns conceitos básicos ;
+\item  diferença de conhecimentos básicos sobre escala, coordenadas, legenda, etc. entre alunos da mesma série, uma vez que eles chegam ao ensino médio, vindo de diversas escolas;
+\item  falta de material e ou um espaço que possua um acervo de mapas, maquetes e globos;
+
+\item a carga horária disponível e pouca possibilidade de construção de um material concreto com os alunos; 
+
+\item a própria deficiência na formação do professor quanto ao conteúdo projeções cartográficas no ensino de Matemática.
+\end{itemize}
+
+
+
+Procurando realizar uma conexão entre diferentes contextos e disciplinas, a abordagem desse capítulo está fundamentada na metodologia de investigação matemática. Justifica-se essa escolha, pois conforme \cite[p.2]{Ponte} \textit{"em contextos de ensino, aprendizagem ou formação, investigar não significa necessariamente lidar com problemas na fronteira do conhecimento nem com problemas de grande dificuldade. Significa, apenas, trabalhar a partir de questões que nos interessam e que se apresentam inicialmente confusas, mas que conseguimos clarificar e estudar de modo organizado." }
+
+\cite[p.23]{Ponte1} \textit{sustentam o uso dessa metodologia como atividades de ensino-aprendizagem, que permitam o espírito da atividade matemática genuína}. Nesse sentido, conforme os autores, o aluno será capaz de formular conjecturas, prová-las ou refutá-las, além de apresentar os resultados obtidos durante o processo e a discuti-los junto aos demais colegas e ao professor.
+
+Ainda sobre realizar investigações, \cite[p.5]{Braumann} afirma que 
+
+\textit{Aprender matemática não é simplesmente compreender a matemática já feita, mas ser capaz de fazer investigação de natureza matemática (ao nível adequado a cada grau de ensino). Só assim se pode perceber o que é a matemática e a sua utilidade na compreensão do mundo e na intervenção sobre o mundo. Só assim se pode realmente dominar os conhecimentos adquiridos. Só assim se pode ser inundado pela paixão ‘detetivesca’ indispensável à verdadeira fruição da matemática. Aprender matemática sem forte intervenção da sua faceta investigativa é como tentar aprender a andar de bicicleta vendo os outros andar e recebendo informação sobre como o conseguem. Isso não chega. Para verdadeiramente aprender é preciso montar a bicicleta e andar, fazendo erros e aprendendo com eles.} 
+
+Ou seja, o fazer matemática está intrinsecamente conectado com a sua investigação. Acredita-se que não é possível fazer matemática sem praticá-la, mas essa prática não é necessariamente a prática mecanizada, comumente realizada no cotidiano escolar. Nesse sentido é que esse capítulo foi pensado pois os alunos ao realizarem uma atividade de investigação matemática, a compreensão dos conteúdos poderá ocorrer de uma forma natural. 
+
+\section*{Orientações sobre o uso do material}
+
+Esse material é dividido em seções do tipo Explorando, Organizando, Praticando, Exercícios e Para Saber Mais. As seções Explorando, Organizando e Praticando foram pensadas para o desenvolvimento em sala. As seções denominadas Para Saber Mais são de caráter opcional, ao omiti-las não irá prejudicar o desenvolvimento das demais atividades. Apenas observamos que em geral elas exploram aspectos interessantes do conteúdo. A seção denominada Exercícios contém atividades que devem ser desenvolvidas pelos estudantes fora do horário de aula. 
+
+O material foi planejado para ser desenvolvido em 3 semanas ou 4 semanas com três horas aula por semana e, para isso, seria necessário o desenvolvimento das atividades de modo eficiente pelos estudantes. Você  professor pode suprimir  algumas das atividades (ou até mesmo as duas primeiras seções) se julgar que a turma já possui nível de maturidade adequado nos respectivos assuntos.
+
+O capítulo se inicia com atividades que procuram levar o aluno a perceber que as projeções cartográficas são formas de representar a superfície terrestre e que esse assunto tem relação direta com a disciplina de Matemática. Para isto, a primeira atividade inspirada na investigação realizada em \cite{Nussbaum} tem por objetivo que o aluno reconheça sua posição na superfície terrestre. Isso é importante, pois conforme os autores da pesquisa, não possuir tal percepção pode ser um obstáculo epistemológico na compreensão de outros conteúdos, como por exemplo, a projeção dessa superfície em um plano. 
+
+Acredita-se que a atividade pode oportunizar uma discussão sobre a relação existente entre diferentes disciplinas, visto que, conforme comentado anteriormente o tema projeção cartográfica deve ter sido abordado no ensino fundamental na disciplina de Geografia. Nesse mesmo sentido, são propostas outras atividades que tem por objetivo fazer com que o aluno  reconheça que existem diferentes formas de representar o mesmo objeto e com isso perceba a necessidade das projeções cartográficas. 
+
+A segunda seção, aborda aspectos relativos as coordenadas geográficas e explora a necessidade de conhecê-las para compreender as distorções que ocorrem, por exemplo, nos paralelos e meridianos ao realizar uma  projeção cartográfica.
+
+A terceira seção trata da impossibilidade de planificar a superfície terrestre. O objetivo dessas atividades é fazer com que o aluno entenda que ocorrem deformações no processo de “transformar” uma superfície esférica em um plano. Nessa seção, que é composta por dois blocos do tipo Explorando e Organizando o aluno tem contato com algumas projeções cartográficas mais comuns, onde são explorados alguns aspectos em termos de deformações ocorridas no processo. Essa seção apresenta os conceitos mais  importantes do capítulo (projeção cartográfica e a classificação destas quanto as distorções) e apresenta no Para Saber Mais um exemplo que poderá auxiliar os estudantes a compreender o conceito de projeção cartográfica em termos matemáticos. 
+
+Observamos que a discussão quanto as deformação provocadas pelas diferentes projeções usadas em Cartografia não se esgotam nessa seção, elas serão retomadas a partir de exemplos na próxima seção do capítulo.
+
+Os principais tipos de projeções cartográficas, são explorados na quinta seção, que é composta por três blocos do tipo Explorando e Organizando. É nessa seção que o aluno irá compreender, a partir de atividades práticas, quais os tipos de projeções são as mais comuns e por que as deformações ocorrem.
+
+Optamos por escrever um capítulo de reconhecimento, não de cálculos. Pois, para compreender os processos matemáticos envolvidos na maioria das projeções cartográficas são necessários conceitos de cálculo diferencial e integral, que não fazem parte do escopo do nível de ensino que os alunos se encontram.
+
+}
+\end{apresentacao}
+\def\currentcolor{session1}
+\begin{objectives}{Reconhecer que a superfície terrestre pode ser representada como uma esfera.}
+{
+	Para cumprir tal objetivo são propostas 3 atividades:
+	\begin{itemize}
+  \item A primeira atividade inspirada nas investigações realizadas em \cite{Nussbaum} e \cite{Nardi}  tem por \textbf{objetivo} que o \textbf{aluno reconheça sua posição na superfície terrestre}. Isso é importante, pois conforme os autores da pesquisa, não possuir tal percepção pode ser um obstáculo epistemológico na compreensão de outros conteúdos, como por exemplo, a projeção dessa superfície em um plano. Acredita-se que a atividade pode oportunizar uma discussão sobre a relação existente entre diferentes disciplinas, visto que, conforme comentado anteriormente, o tema projeção cartográfica deve ter sido abordado no ensino fundamental na disciplina de Geografia.
+  \item A segunda atividade tem por \textbf{objetivo} fazer com que o aluno \textbf{reconheça que a superfície do planeta Terra pode ser aproximada por uma esfera}. A ideia aqui é proporcionar ao aluno uma experiência que o faça pensar na diferença de uma representação plana e uma representação espacial. Além disso, acredita-se ser uma oportunidade para que, você professor, possa verificar as principais ideias dos alunos sobre a forma da Terra. A pesquisa realizada em \cite{Nussbaum1} deixa claro que a ideia de a Terra ser uma superfície do tipo esférico não é óbvia por si mesma. Segundo os autores, é um conceito construído e que interfere na constituição de outras noções. Observa-se que essa pode ser uma oportunidade para discutir o capítulo como um todo, questionando os alunos sobre a ideia de a Terra ser "plana". Faça-os perceber que, se a Terra fosse plana, não seria necessário pensar em projeções cartográficas, bastaria representá-la em uma escala reduzida.
+  \item Já a terceira atividade tem \textbf{por objetivo} fazer com que o aluno \textbf{reconheça que existem diferentes formas de comunicar a mesma ideia}. Nessa atividade é muito importante que os alunos reconheçam o terceiro homem como alguém que está fazendo um mapa (geógrafo, cartógrafo ou topógrafo).
+	\end{itemize}
+}
+{1}{1}
+\end{objectives}
+
+\explore{O problema do cartógrafo}\label{cart_1}
+
+Alguns autores afirmam que a Cartografia (do grego \textit{chartis} = mapa e \textit{graphein} = escrita) é, ao mesmo tempo, ciência e arte.  A arte é evidente, pois está associada à estética, clareza, harmonia e simplicidade. Especialmente em velhos mapas históricos (\hyperref[mapa_ant]{figura \ref{mapa_ant}}), nos quais quem o fazia, preenchia os oceanos com figuras de velhos barcos a vela, e outros tipos de desenhos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=66mm]{{mapa_ant}.png}
+\caption{Mapa antigo. \\ Figura de \href{https://stock.adobe.com/br/images/old-vintage-world-map/178102789}{pingebat, no Adobe Stock}}
+\label{mapa_ant}
+\end{figure}
+
+
+Já a Cartografia como ciência vem do conhecimento de como comunicar, ou seja, quais instrumentos e técnicas devem ser utilizados para que a realidade seja representada com maior exatidão, utilizando conceitos da Astronomia e da Matemática. 
+Assim, o cartógrafo (profissional dedicado à Cartografia e à produção de mapas) precisa conhecer aspectos artísticos e técnicos para realizar seu trabalho.
+
+Nas atividades a seguir, vamos pensar um pouco sobre o que esse profissional precisa conhecer para fazer uma representação plana da superfície do planeta Terra.
+
+\clearpage
+
+{\vspace{2em}
+\begin{objectives}{O astronauta}
+{
+\begin{itemize}
+\item Reconhecer sua posição na superfície terrestre.
+
+\end{itemize}
+}
+{1}{0}
+\end{objectives}
+\begin{sugestions}{O astronauta}
+{
+  \begin{itemize}
+  \item \textbf{Conceitos abordados}: Posição de um corpo e o  lugar do corpo no espaço.
+  
+  \item \textbf{Organização em sala de aula}: Nesta atividade, que sugere-se ser feita de forma individual, o aluno deve ilustrar o que é solicitado. Após primeiro momento, sugere-se que os alunos organizem-se em duplas ou trios e comparem as ilustrações. A discussão em grupos contribuirá para a percepção de cada aluno sobre o seu lugar no espaço e os pontos de referência utilizados (astronautas, nuvens, lua, etc.).
+  \item \textbf{Dificuldades previstas}: Acredita-se que os alunos não terão dificuldades em realizar o desenho, visto que é algo simples e pode ser feito como um esquema. O que pode ocorrer é o aluno desenhar o planeta Terra como algo plano ou não desenhar a Terra.
+  \item \textbf{Sugestões gerais}: Para o desenvolvimento da tarefa recomenda-se que sejam entregues folhas de papel aos alunos, pois é interessante que os mesmos guardem seus desenhos para posterior discussão (ver o  \hyperref[organizando-carto]{Organizando - O problema do cartógrafo \ref{organizando-carto}}).
+  \item \textbf{Material necessário}: Folhas de papel sulfite.
+  \item \textbf{Enriquecimento da discussão}: Acredita-se que a atividade pode oportunizar uma discussão sobre a relação existente entre diferentes disciplinas, visto que, conforme comentado anteriormente, o tema projeção cartográfica deve ter sido abordado no ensino fundamental na disciplina de geografia. Além disso, o professor pode questionar "como é o formato do nosso planeta?" ou "o que faz você pensar que a Terra é assim?". Caso o aluno tenha feito um desenho diferente do esperado (conforme consta na resposta) solicite que ele desenhe pessoas em diferentes locais da sua representação da Terra. Caso tenha desenhado a Terra como algo plano, questione "o que aconteceria se saísse de casa e andasse na mesma direção?" Questione o aluno "por onde ele vai passar e onde ele vai chegar".
+  \end{itemize}
+}{1}{0}
+\end{sugestions}}
+\begin{answer}{O astronauta}
+{Apesar da resposta ser pessoal, \cite{Nardi} apontam que  os alunos poderão esboçar  uma das seguintes possibilidades: 
+  
+ \begin{figure}[H]
+  \centering
+    \includegraphics[width=.6\linewidth]{resp_astro}
+  \end{figure}
+  
+Em ilustrações do tipo 1 , a Terra é um plano e os astros estão no "céu" que, por sua vez, é paralelo ao "chão". 
+No tipo 2, o aluno admite a natureza esférica e espacial da Terra, porém, os objetos soltos próximo à sua superfície caem  para um chão imaginário, no espaço, localizado abaixo do planeta. Nas ilustrações do tipo 3, o aluno concebe o planeta Terra como esférico, porém, o entende como um corpo oco, com os indivíduos vivendo na sua parte interna inferior e as nuvens na parte interna superior. Ilustrações do tipo 4 são as esperadas para o nível de ensino que os alunos estão. }{0}
+\end{answer}
+
+\clearmargin
+\begin{objectives}{Qual o verdadeiro formato da Terra?}
+{
+	\begin{itemize}
+	\item Reconhecer que o formato do planeta terra é uma figura tridimensional.
+	\item Reconhecer que as figuras (mapas) apresentados são representações no plano de parte da superfície terrestre.
+
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Qual o verdadeiro formato da Terra?}
+{
+	\begin{itemize}
+	\item \textbf{Conceitos abordados}: Rotas, formas planas e formas espaciais.
+	\item  \textbf{Organização em sala de aula}: Pode ser feito individual ou em dupla.
+	\item \textbf{Material necessário}: Lápis e papel.
+	\item \textbf{Enriquecimento da discussão}: Pretende-se que com essa atividade por proporcionar ao aluno pensar sobre o formato da superfície terrestre. Na \textbf{Parte 1} enfatize que as distâncias das rotas estão corretas, e permita que a turma debata sobre qual seria o trajeto ideal para a segunda rota, de forma que ela seja tão curta quanto à primeira.	Esta atividade exibe uma pequena falha no aplicativo utilizado. Assim, queremos mostrar ao aluno que os extremos laterais do mapa na realidade estão conectados. Na \textbf{parte 2} é importante que seja realizado um debate em torno das respostas dos alunos, pois  ter uma ideia clara do formato do planeta, irá auxiliar no entendimento das projeções cartográficas.
+	
+	\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Qual o verdadeiro formato da terra?}
+{
+	Parte 1: Visto que na primeira rota é obrigatório passar pela Europa, o trajeto se torna muito maior do que ele se ele apenas atravessasse o pacífico e chegasse ao destino (Nogliki) pelo caminho mais curto. Porém, alguma falha na programação do aplicativo impede de fazer a representação correta, que seria aproximadamente esta:
+	\begin{figure}[H]
+	\centering
+	
+	\includegraphics[width=.6\linewidth]{cartografia-professor1}
+	\end{figure}
+
+	Parte 2: Resposta pessoal
+}{1}
+\end{answer}
+\begin{objectives}{Observando a paisagem}
+{
+	\begin{itemize}
+	\item Reconhecer que existem diferentes formas de comunicar a mesma ideia.
+	\item Entender o conceito de cartografia.
+	\end{itemize}
+}{1}{0}
+\end{objectives}
+\vspace{-.5em}
+\begin{sugestions}{Observando a paisagem}
+{
+	Sugerimos que você solicite aos alunos que manifestem suas respostas e justificativas quanto a atividade observando a paisagem. Caso as justificativas não apareçam de forma natural, apresente algum dos argumentos do "Organizando" a seguir.
+	\begin{itemize}
+	\item \textbf{Organização em sala de aula}: Os alunos podem se organizar em trios, para que a discussão se torne mais rica
+	\item \textbf{Enriquecimento da discussão}: Caso o professor já tenha utilizado o capítulo de projeções e perspectivas, pode lembrar os alunos que é possível ter diferentes representações para o mesmo objeto. No referido capítulo, já foi trazido como exemplo a ideia de representar no plano o globo terrestre modelado como uma esfera, onde os autores concluem que tais representações nada mais são do que mapas cartográficos da Geografia, e que a escolha do mapa depende do que se quer comunicar.
+	\end{itemize}
+}{0}{0}
+\end{sugestions}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Observando a paisagem}
+{
+	Apesar da resposta ser pessoal, pois o aluno pode concordar ou não, podemos frisar como o pintor, além de artista, usa técnicas de pintura que são uma forma de ciência. O escritor possui conhecimentos sobre aspectos da linguagem, contudo, a arte está presente na forma da escrita e sua descrição do que enxerga. Por fim, o cartógrafo utiliza diversas ferramentas, mostrando que existe uma precisão necessária (ciência), além de uma arte em suas representações.
+
+	Nessa atividade é muito importante que os alunos reconhecam o terceiro homem como alguém que está fazendo um mapa (geógrafo, cartógrafo ou topógrafo).
+}{1}
+\end{answer}
+
+\begin{task}{O astronauta}\label{astronauta}
+Descreva a cena ilustrada na \hyperref[carto1]{figura \ref{carto1}} a seguir
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300bp]{{carto1}.jpg}
+\caption{O astronauta. \\ Foto de \href{https://unsplash.com/photos/yEauzeZU6xo}{Monica Garniga, no Unsplash}}
+\label{carto1}
+\end{figure}
+
+\begin{enumerate}
+\item Faça um esboço que ilustre o que você descreveu.
+\item Desenhe onde você está nesse esboço.
+\item Sinalize onde estão as nuvens no seu esboço.
+\end{enumerate}
+\end{task}
+
+
+\begin{task}{Qual o verdadeiro formato do planeta Terra?}
+\label{forma_terra}
+
+\textbf{Parte 1:} Será que o aplicativo que traça rotas entre dois pontos do planeta Terra pode estar errado? Observe os  mapas ilustrados nas \hyperref[rota1]{figuras \ref{rota1} e \ref{rota2}}  e responda as questões abaixo para auxiliar a desvendar este mistério!
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto_2}.png}
+\caption{Rota 1}
+\label{rota1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto_3}.png}
+\caption{Rota 2}
+\label{rota2}
+\end{figure}
+
+A primeira  rota traçada no aplicativo, possui comprimento aproximado de 18.883 km (dezoito mil, oitocentos e oitenta e três quilômetros), já a segunda rota tem um  comprimento aproximado de 6.192 km (seis mil, cento e noventa e dois quilômetros).
+
+\begin{enumerate}
+\item Apenas observando as imagens é possível perceber que que a origem e o destino final dos dois mapas são iguais ou, pelo menos, muito semelhantes. Justifique  por que distância  entre estes dois pontos é tão distinta?
+\item Seria possível chegar no destino final por outra rota (justificando a diferença de medidas)? Qual seria essa rota alternativa?
+\item Mesmo sendo origem e destinos diferentes, você acha que a primeira é cerca de três vezes maior? Justifique sua resposta!
+\item A representação está equivocada? Se sim, como seria a correta?
+\end{enumerate}
+
+
+\textbf{Parte 2:}
+Na sua opinião, qual das imagens ilustradas na \hyperref[planeta]{figura \ref{planeta}} melhor representa o formato do planeta Terra? Por quê?
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto4a}.jpg}
+\caption{Representações da forma do planeta Terra}
+\label{planeta}
+\end{figure}
+
+\end{task}
+
+\begin{task}{Observando a paisagem}
+Na \hyperref[paisag]{figura \ref{paisag}}  três homens estão observando a mesma paisagem. Observe que cada um deles está fazendo suas próprias combinações da arte e da ciência? Você concorda com essa afirmação? Justifique!
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto10}.png}
+\caption{Observando a paisagem \\ Fonte: \textbf{Anderson (1982)} }
+\label{paisag}
+\end{figure}
+
+
+\end{task}
+
+
+
+\arrange{O problema do cartógrafo}
+\label{organizando-carto}
+Ao observar a \hyperref[paisag]{figura \ref{paisag}}  é possível pensar que o escritor (pessoa situada no centro da figura) precisa conhecer as normas (a ciência) da construção gramatical e redação. Ou seja, o que ele faz é ciência? Alguns podem dizer que é arte, pois como escritor, é necessário realizar uma seleção das palavras, para a expressar verbalmente aquilo que ele percebe visualmente.
+
+O pintor é um artista, por natureza. Porém, provavelmente ele aprendeu nas escolas de arte que estudou, os aspectos científicos das tintas, sobre os corantes, a respeito da combinação das cores, como perceber o ambiente, etc. 	
+	
+A terceira pessoa, pode ser um geógrafo, cartógrafo ou topógrafo. Nesse caso, como cientista, as medições que está realizando são muito importantes. Contudo, está aproveitando seu senso de estética para produzir um mapa, que é uma representação plana reduzida de uma dada área do espaço geográfico, que nesse caso, será ao mesmo tempo um resultado artístico e científico.
+
+Observa-se que na cartografia, a arte inclui o esquema ou o \textit{layout} do desenho, que influi na aparência estética do mapa como um todo. Já a ciência inclui o conhecimento de quais símbolos colocar em um mapa e quais itens omitir e a noção da projeção a ser utilizada em cada situação. Ou seja, os mapas são uma expressão da necessidade humana de conhecer e representar o seu espaço e como produtos da cartografia, possuem algumas características importantes. Os mapas são imagens gráficas bidimensionais, resultado da aplicação de símbolos gráficos, como cores, ícones, pontos, linhas e outros. 
+
+Alguns desses símbolos gráficos apresentam padronizações, como por exemplo, utilizar a cor azul para representar o mar, utilizar linhas tracejadas para representar ferrovias, aviões para representar aeroportos, etc.  O mar, as ferrovias, os aeroportos são aspectos retratados no mapa em uma determinada escala. 
+
+Por isso, pensamos na atividade “\hyperref[astronauta]{O astronauta}”. Como você descreveu a imagem? Precisou pensar no planeta terra para descrevê-la? E ao fazer o esboço, o planeta terra precisou aparecer? Em que momento? Por quê?
+Algumas pesquisas mostram que existem diferentes concepções das como representar o espaço que vivemos e essas noções podem depender da idade da pessoa ( \textbf{Nussbaum e Novick, 1979; Scheeren et al, 2016}).
+
+Assim como existem diferentes representações da nossa percepção quanto ao lugar que ocupamos no espaço, isso pode influenciar na maneira que percebemos qual a forma que o planeta que vivemos possui. 
+Essa preocupação em descrever a verdadeira forma da Terra, apesar de atualmente ser um assunto recorrente, remonta a Grécia antiga. O principal motivo, naquela época, para esta inquietação estava relacionado com a necessidade de compreender o mundo. 
+
+Por volta do ano 200 antes da era Cristã, um matemático e astrônomo grego chamado Erastóstenes determinou a circunferência terrestre, comprovando, de certa forma que a Terra realmente possuía o formato de uma superfície esférica (\hyperref[esf]{figura \ref{esf}}), como é explicado na introdução do Capítulo de Trigonometria. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{{carto12}.jpg}
+\caption{Modelo esférico da Terra. \\ Foto de \href{https://unsplash.com/photos/yEauzeZU6xo}{The New York Public Library, no Unsplash}}
+\label{esf}
+\end{figure}
+
+No século XVII o físico inglês Isaac Newton e o matemático holandês Christiaan Huygens alegaram que a superfície terrestre não era esférica pois, possuía um sutil achatamento nos polos. Em função dessa descoberta, passou-se a considerar que a superfície da Terra não é uma esfera perfeita, mas que a figura geométrica mais semelhante a superfície do nosso planeta era o elipsoide de revolução. Um elipsoide de revolução é um sólido geométrico gerado por uma curva (chamada elipse) que gira  em  torno  do  seu  eixo  menor (\hyperref[elipse]{figura \ref{elipse}}).  
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{{carto11}.png}
+\caption{Elipsoide de revolução. \\ Fonte: \href{Geogebra}{https://www.geogebra.org/m/dbu5h92x}} 
+\label{elipse}
+\end{figure}
+
+Porém, pesquisas realizadas no final do séc. XIX e início do séc. XX eliminam a hipótese da superfície terreste ser um elipsoide de revolução, pelo contrário, chegou-se à conclusão de que a superfície da Terra possui muitas irregularidades e desta forma, seu formato não tem uma representação matemática muito simples. Buscando contornar esta falta de representação matemática explícita para a superfície da Terra, Johann Carl Friedrich Gauss, matemático alemão, caracterizou o geoide (\hyperref[geoide]{figura \ref{geoide}}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.35\textwidth]{{carto5}.jpg}
+\caption{Geoide. \\ Fonte: \href{https://apod.nasa.gov/apod/ap141215.html}{Astronomy Picture of The Day, Nasa}} 
+\label{geoide}
+\end{figure}
+
+
+O geoide é um sólido muito parecido com a esfera com suaves ondulações e achatado nos polos.
+
+
+Para fins didáticos, utiliza-se o o globo terrestre (\hyperref[globo]{figura \ref{globo}}), que é a representação da superfície da Terra  em uma esfera de tamanho reduzido. No site do Norman B. Leventhal Map \& Education Center \url{https://www.leventhalmap.org/digital-exhibitions/bending-lines/interactives/shaded-globe/} encontra-se uma versão digital do globo terrestre.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{carto13}.png}
+\caption{Globo terrestre. \\ Foto de \href{https://unsplash.com/photos/9tmrYLRL7Ww}{Subhash Nusetti, no Unsplash}} 
+\label{globo}
+\end{figure}
+
+Em termos cartográficos, em geral, assume-se uma escala média de 1 para 5.000.000, ao representar a Terra como uma esfera. Para produzir um mapa, necessitamos de alguns elementos já estudados na disciplina de Geografia, e é sobre isso que trata a próxima seção.
+
+\begin{reflection}
+Por que os corpos celestes (sol, lua e planetas, por exemplo) parecem ser todos aproximadamente esféricos? 
+\end{reflection}
+
+
+\begin{reflection}
+Na atividade "\hyperref[forma_terra]{Qual o verdadeiro formato do planeta Terra?}" apresentamos sete imagens, discutimos sobre três. E as outras imagens, também podem ser representações da superfície da Terra?
+\end{reflection}
+
+
+
+
+
+
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{objectives}{Que números são esses?}
+{
+  \begin{itemize}
+  \item Reconhecer as coordenadas geográficas e os demais elementos utilizados nas projeções cartográficas.
+  
+  \end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Que números são esses?}
+{
+Acreditamos que os conceitos abordados nessa seção já são de conhecimento dos alunos. Porém, é interessante retomá-los a partir de uma perspectiva diferente, utilizando termos usuais da matemática. A ideia de localização de um determinado ponto no \textit{Google Maps} é muito intuitiva e simples, porém, caso tenha curiosidade ou alguma dificuldade para realizar a atividade, recomendamos o vídeo \url{https://www.youtube.com/watch?v=zy2cVPdYVRw}, que explica como localizar um ponto no aplicativo. Caso não tenha acesso à internet, é possível adaptar a atividade utilizando um mapa-múndi e um globo.
+
+\begin{itemize}
+\item \textbf{Conceitos abordados}: latitude e longitude
+\item \textbf{Organização em sala de aula}: Essa atividade pode ser realizada em duplas ou pequenos grupos para que ocorram discussões e comparação de respostas.
+\item \textbf{Enriquecimento da discussão}: Discuta com os alunos o que eles já sabem sobre mapas. Questione o quão fácil ou difícil seria apontar uma localização em um globo sem usar um sistema de coordenadas? Solicite aos alunos que encontrem pontos de referência com a mesma latitude e longitude de sua localização.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Que números são esses?}
+{Exemplo de resposta:
+
+  \textbf{Parte 1}
+  \begin{enumerate}
+  \item Por exemplo: Ivorá, RS.
+  \item ---
+  \item --29{,}522321; --53,585332.
+  \item Significam a latitude e longitude deste ponto.
+  \end{enumerate}
+\vspace{\baselineskip}
+  \textbf{Parte 2}
+  \begin{enumerate}
+  \item Fica bem próximo da  cidade do aluno.
+  \item Foi parar no meio do oceano Atlântico no final da América do Sul.
+  \item Foi para a Ásia Ocidental.
+  \item Eles indicam um ponto preciso na superfície da Terra. Na parte 1 seriam as coordenadas da  cidade do aluno.
+  \end{enumerate}
+}{0}
+\end{answer}
+
+\explore{Coordenadas Geográficas}\label{coord_geo}
+
+
+
+\begin{task}{Que números são esses?}
+
+\textbf{Parte 1}: Para realizar essa atividade é necessário o uso do aplicativo Google Maps (\url{https://www.google.com/maps})
+\begin{enumerate}
+\item Pesquise no aplicativo a sua cidade.
+\item Clique ou toque em um ponto qualquer da cidade (insira um “alfinete”). Ao fazer isso, aparecerão alguns números na tela.
+\item Copie esses números no seu caderno.
+\item O que esses números significam?
+\end{enumerate}
+
+\textbf{Parte 2}: Para realizar essa atividade é necessário o uso do aplicativo Geogebra (\url{https://www.geogebra.org/m/fzcrw7nm}).
+\begin{enumerate}
+\item Movimente os controles deslizantes latitude e longitude, até obter os números obtidos na Parte 1, (despreze os números após o ponto).
+\item Se a ordem dos números for trocada, o que ocorre?
+\item Se o sinal for desprezado, o que ocorre?
+\item Qual a relação dos valores “latitude” e “longitude” para os números obtidos na Parte 1?
+\end{enumerate}
+
+\end{task}
+
+
+\arrange{Coordenadas Geográficas}
+\label{organizando-coord_geo}
+
+Para se determinar uma distância, ou um local qualquer sobre a superfície da Terra, é necessário sempre conhecer alguns elementos básicos. Um sistema de localização, por exemplo, composto pelo nome do Estado, da cidade, do bairro, da rua, número do prédio e do apartamento é suficiente para localizar uma pessoa que habita algum espaço urbano. 
+
+Mas, se essa pessoa habita um espaço plano sem referências, surgirão obstáculos que impedem a materialização matemática de um sistema assim descrito, ou seja, dificultando sua representação em forma matemática. Para que isso aconteça, é preciso definir um sistema de coordenadas conveniente para registrar uma posição no espaço, qualquer que seja a dimensão que se esteja referenciando.  
+
+Na  atividade “que números são esses?” Percebemos que existem números associados a diferentes locais da superfície terrestre. Mas de onde eles surgem?
+Para representar a posição de um ponto sobre uma superfície (elipsoide, esfera ou plano) usar um sistema de coordenadas é indispensável. Para o plano, um sistema de coordenadas cartesianas $x$ e $y$ é usualmente aplicável, enquanto que para o elipsoide ou a esfera, usualmente empregamos um sistema de coordenadas cartesiano e curvilíneo.
+
+Assim, para que cada ponto da superfície da Terra pudesse ser localizado no mapa, foi criado um sistema de linhas imaginárias chamado Sistema de Coordenadas Geográficas. Existem dois tipos de linhas imaginárias nos mapas e no globo terrestre, os paralelos e os meridianos (\hyperref[parmer]{figura \ref{parmer}}), que foram criados para facilitar/determinar a localização precisa de qualquer ponto na superfície da Terra. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{{carto21}.png}
+\caption{Paralelos e meridianos}
+\label{parmer}
+\end{figure}
+
+Os paralelos são linhas imaginárias que dão uma volta completa em torno da terra no sentido leste- oeste (\hyperref[paralelos]{figura \ref{paralelos}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{{carto22}.png}
+\caption{Paralelos e meridianos}
+\label{paralelos}
+\end{figure}
+
+O principal paralelo, chama-se equador. A linha do Equador é o paralelo de referência, correspondendo ao círculo máximo perpendicular ao eixo da Terra e dividindo-a em dois hemisférios, Norte e Sul. Os restantes dos paralelos são círculos menores paralelos ao Equador. Além do Equador, outros paralelos conhecidos são o trópico de câncer, o trópico de capricórnio, o círculo polar ártico e o círculo polar antártico (\hyperref[ppar]{figura \ref{ppar}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{carto23}.png}
+\caption{Principais paralelos}
+\label{ppar}
+\end{figure}
+
+\begin{knowledge}
+A cidade de Macapá  é a única capital do Brasil cortada pela linha do Equador? Lá existe um estádio de futebol chamado Zerão cuja linha central do meio de campo é a linha imaginária do Equador, assim um time joga no hemisfério Norte e outro no hemisfério Sul. Interessante, né?  
+\end{knowledge}
+ 
+Os meridianos são linhas imaginárias que cortam a Terra do polo norte ao polo sul. Eles são círculos máximos que passam pelos polos e são perpendiculares ao Equador. A metade de um meridiano que vai de polo a polo chama-se  semi meridiano. O meridiano de referência, que divide a Terra em oeste e leste,  adotado desde 1884 é o semimeridiano de Greenwich (\hyperref[mer]{figura \ref{mer}}) , que passa pelo observatório astronômico de mesmo nome na Grã Bretanha.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.35\textwidth]{{carto24}.png}
+\caption{Meridianos}
+\label{mer}
+\end{figure}
+
+ 
+A coordenada geográfica de um determinado ponto da superfície da Terra é obtida pela interseção de um meridiano e um paralelo. Assim, em um sistema de coordenadas geográficas, cada ponto na superfície da Terra é identificado por dois ângulos (expressos habitualmente em graus, minutos e segundos): longitude ($\phi$) e a a latitude ($\lambda$ ) (\hyperref[latlon]{figura \ref{latlon}}).
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{carto25}.png}
+\caption{Latitude e longitude}
+\label{latlon}
+\end{figure}
+
+
+A latitude de um lugar é a amplitude do ângulo entre o plano do Equador e o raio que passa por esse lugar ou o arco do meridiano entre o Equador e o lugar. a latitude varia de $0^{\circ}$, no Equador a $90^{\circ}$ nos polos Norte (N) ou Sul (S).   A latitude quando medida no sentido do polo Norte é chamada Latitude Norte ou Positiva, quando medida no sentido Sul é chamada Latitude Sul ou Negativa. 
+
+E a longitude de um lugar é a amplitude do ângulo entre o plano do meridiano desse lugar e o semimeridiano de Greenwich ou o arco do Equador entre esses meridianos. Ela varia entre $0^{\circ}$ e $180^{\circ}$ Este (E) ou Oeste (W). A longitude pode ser medida no sentido oeste, quando é chamada Longitude Oeste de Greenwich  ou Negativa. Se medida no sentido este, é denominada Longitude Este de Greenwich ou Positiva.
+
+Os valores de latitude e longitude de um local determinam as coordenadas geográficas do mesmo 
+
+Por exemplo, a cidade do Rio de Janeiro está localizada a uma latitude de aproximadamente $22^{\circ}$ S  e uma longitude aproximada de $43^{\circ}$ W (\hyperref[rio]{figura \ref{rio}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{{carto26}.png}
+\caption{Rio de Janeiro}
+\label{rio}
+\end{figure}
+ 
+
+E a cidade de Nova Iorque situa-se a uma latitude de aproximadamente $41^{\circ}$ N  e uma longitude aproximada de $74^{\circ}$ O (\hyperref[nova]{figura \ref{nova}})
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{{carto27}.png}
+\caption{Nova Iorque}
+\label{nova}
+\end{figure}
+
+ 
+O vídeo \url{https://youtu.be/ibE2S8OkNJ8} apresenta mais detalhes sobre essas coordenadas.
+
+Na próxima seção vamos observar algumas deformações que ocorrem quando "passamos" da superfície esférica ( globo terrestre, por exemplo) para o mapa.
+
+\begin{knowledge}
+\begin{itemize}
+\item Para localizar com maior precisão um ponto na superfície terrestre, além das coordenadas geográficas, podemos utilizar uma outra informação, o nível do mar. O nível do mar fornece a altitude. Observamos que altitude é diferente de altura. A altitude é a elevação vertical de um ponto qualquer da superfície terrestre em relação ao nível do mar. 
+
+\item O GPS (sigla em inglês para sistema de posicionamento global) é atualmente o recuso mais utilizado para localizar um ponto na superfície da Terra. No mostrador do aparelho aparecem as coordenadas geográficas e a altitude do local, obtidas através de sinais enviados por um conjunto de 24 satélites.  No Brasil, tal sistema é utilizado pelo IBGE (Instituto Brasileiro de Geografia e Estatística) para orientação aérea, terrestre e marítima, passando também a equipar veículos para navegação terrestre.
+\end{itemize}
+\end{knowledge}
+
+\cleardoublepage
+
+\def\currentcolor{session1}
+\begin{texto}{
+\section{Explorando: Mapas e Rotas}
+
+Essa seção e a próxima são essenciais para que o aluno consiga perceber que existem distorções em projeções cartográficas.
+
+\subsection{Objetivos Gerais}
+
+\begin{itemize}
+\item Entender que ocorrem deformações no processo de "transformar" uma superfície esférica em um plano.
+
+\item Compreender que as rotas traçadas na superfície plana se comportam de forma diferente do que as traçadas na superfície esférica.
+\end{itemize}
+
+Para cumprir esses objetivos, pensamos em atividades que poderão despertar a curiosidade do aluno sobre esses temas. Assim, na primeira atividade, o aluno vai simular a projeção da superfície esférica com o auxílio de um balão. Essa atividade também poderia ser realizada com cascas de frutas (laranja ou bergamota/mexerica/tangerina), mas optamos pelo balão, pois acreditamos que seria mais prático.
+
+As demais atividades devem ser realizadas com o auxílio de um dispositivo móvel ou laboratório. Caso isso não seja possível, o professor pode projetar os \textit{applets} e realizar uma discussão com os alunos sobre as rotas. Elas têm como objetivo auxiliar nessa percepção de distorção no processo de distorção ao realizar uma projeção. Observe que ainda não falamos para os alunos o que é uma projeção ou como elas acontecem.
+}
+\end{texto}
+
+\begin{objectives}{Planificando o globo}
+{
+  Entender que não é possível transformar uma superfície plana sem que haja distorções ou muitos recortes.
+}{1}{1}
+\end{objectives}
+\clearmargin
+% \marginpar{\vspace{-.5em}}
+\begin{sugestions}{Planificando o globo}
+{
+  \begin{itemize}
+  \item Antes de começar, explique aos alunos que a atividade mostra o porquê da existência de projeções cartográficas, pois se fosse possível planificar perfeitamente (sem distorções) elas não seriam necessárias.
+  \item Sugira aos alunos que façam em alguma parte do balão uma série de segmentos de retas paralelas de mesmo tamanho (alinhados na vertical). Pois esse será uma ótima maneira de observar as distorções.
+  \item Leve alguns balões extras, durante a atividade alguns podem estourar ou não ficar no formato desejado.
+  \item O ideal é que  os alunos tirem foto dos desenhos feitos nos balões, caso não seja possível, separe um tempo para que os alunos memorizem seus desenhos;
+  \item Caso não tenha material para todos, realize a atividade em dupla ou em grupo.
+  \item Caso não consiga meios para realizar o experimento, um vídeo interessante que pode ser apresentado para os alunos é \url{https://www.youtube.com/watch?v=kIID5FDi2JQ}, que simula a mesma experiência. É um vídeo em língua inglesa, mas as legendas em português estão em boa qualidade.
+  \item \textbf{Organização em sala de aula}: Ela pode ser feita individualmente ou em grupos, porém quanto mais individual, melhor a experiência.
+  \item \textbf{Material necessário}: Balão; tesoura sem ponta; fita auto colante; caneta esferográfica.
+  \item\textbf{Enriquecimento da discussão}: Questione os alunos: "Teve algum ponto em que os desenhos não  distorceram? Quais?"; "Onde estão localizadas as maiores distorções?"; "Tem como não haver distorções?"; "Talvez cortando mais vezes?" (sugira que os alunos coloquem essas ideias em prática).
+  \end{itemize}
+}{1}{0}
+\end{sugestions}
+% \marginpar{\vspace{-\baselineskip}}
+\begin{answer}{Planificando o globo}
+{
+  Exemplo de resposta:
+  \begin{enumerate}
+  \item Não, tive muita dificuldade, precisamos de duas pessoas para manter esticado, e não sabíamos bem por onde começar.
+  \item Sim, cortamos 4 vezes e ainda tivemos dificuldade de esticá-lo.
+  \item Várias distorções, principalmente na ponta que pareciam mais esticada.
+  \end{enumerate}
+}{1}
+\end{answer}
+
+\explore{Mapas e rotas}\label{mapamundo}
+Um mapa do mundo (ou mapa-múndi) é uma maneira de retratar a Terra como superfície esférica em um pedaço plano de papel. Para pequenas áreas, a superfície da Terra é muito semelhante a uma folha plana e, portanto, é mais simples desenhar com precisão as características geográficas dessa área, mantendo as distâncias precisas.
+
+Se estivermos interessados em mapear uma área muito maior, ou talvez até o próprio mundo inteiro, como podemos fazer?
+
+\begin{task}{Planificando o globo} \label{balao}
+
+Vamos simular a planificação da superfície do planeta Terra utilizando um balão. Para isso você vai precisar de uma tesoura (sem ponta), um balão e uma caneta esferográfica. Também é recomendado que você tenha um pedaço de papelão (com tamanho igual a metade de uma folha A4) e fita adesiva.
+Para realizar essa atividade, precisamos que você encha um pouco o balão, deixando-o mais próximo possível de uma esfera. Talvez necessite molda-lo com as mãos. Quando atingir o formato desejado de um nó na “boca” do balão. Ao finalizar essa etapa da atividade deve ter em mãos um balão como o ilustrado na \hyperref[balao1]{figura \ref{balao1}}.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{bala1}.png}
+\caption{Balão}
+\label{balao1}
+\end{figure}
+
+
+Com a caneta esferográfica solte sua criatividade e desenhe sobre o balão, procure deixar imagens bem definidas para melhor observação, como ilustra a \hyperref[balao2]{figura \ref{balao2}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{bala2}.png}
+\caption{Balão com desenhos}
+\label{balao2}
+\end{figure}
+
+Agora é necessário furar o balão. Mas, tenha muita atenção e cuidado para não o estourar. Para isso, você deve pegar o mais próximo da ponta do balão, e fazer um pequeno furo para que o ar saia do interior do balão, sem que ele estoure. Precisamos também desprezar o nó (\hyperref[balao3]{figura \ref{balao3}}), por isso corte-o, será mais fácil trabalhar sem ele.
+ 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{bala3}.png}
+\caption{Cortando o nó}
+\label{balao3}
+\end{figure}
+
+Tente deixar o balão esticado sobre uma superfície plana (o papelão), com todos desenhos para cima. Você pode cortar e esticar ou fazer outra ação que você julgar necessário. Use a  fita durex, ela será  útil nesse processo.
+Agora, responda as questões:
+\begin{enumerate}
+\item Foi simples esticar o balão?
+\item Para que ele ficasse plano, foi necessário realizar algum corte ou esticá-lo?
+\item Perceba como ficaram as figuras desenhadas anteriormente, anote em seu caderno suas conclusões para compartilhar com os colegas.
+\end{enumerate}
+
+\end{task}
+
+\clearpage
+
+\begin{objectives}{Mapa e globo}
+{
+Compreender que as rotas traçadas na superfície plana se comportam de forma diferente do que as traçadas na superfície esférica.
+}{1}{1}
+\end{objectives}
+
+\begin{sugestions}{Mapa e globo}
+{
+  Esta é primeira atividade que vai fazer o aluno comparar um mapa com um globo. Esperamos que, ao movimentar os pontos no globo, o aluno perceba que ocorrem distorções nas rotas e que essas se tornam mais evidentes quando temos dois pontos em hemisférios distintos, como no exemplo que sugerimos.
+
+  \begin{itemize}
+  \item \textbf{Organização em sala de aula}: Essa atividade pode ser realizada no laboratório de informática ou com o uso de dispositivos móveis. Os alunos podem realizá-la de forma individual e depois socializar suas descobertas com a turma.
+  \item \textbf{Enriquecimento da discussão}: Solicite que os alunos tracem outras rotas além da sugerida na atividade, e que comparem a rota projetada no cilindro com a rota na esfera. Faça-os perceber que existem diferenças.
+  \end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Mapa e globo}
+{
+  \begin{enumerate}
+  \item ---
+  \item Que em alguns lugares a linha verde parece totalmente torta comparado com o pama.
+  \item Sim e não. Sim, pois tem a mesma origem e destino. Não, porque no globo parece uma reta e no mapa parece um "S".
+  \end{enumerate}
+}{1}
+\end{answer}
+
+\begin{task}{Mapa e Globo} \label{mapa_globo}
+
+Já sabemos o que são mapas e globos. A \hyperref[mapaglobo]{figura \ref{mapaglobo}} ilustra um globo (a direita) e um mapa ( à esquerda) 
+Se traçarmos algumas rotas entre duas cidades no  globo, como será que ela irá se comportar no mapa? Ou seja, quais são as diferenças no traçado das rotas no mapa e no globo?
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto15}.png}
+\caption{Mapa e globo}
+\label{mapaglobo}
+\end{figure}
+
+Para realizar a atividade recomendamos o uso do Geogebra (\url{https://www.geogebra.org/m/qvzrwuma})
+
+\begin{enumerate}
+\item Movimente os pontos vermelhos sobre o globo e observe a rota que foi traçada.
+\item O que você percebe?
+\item Habilite a caixa cilindro, localize um dos pontos no sul do continente Americano e o outro ponto no norte do continente Europeu. A rota que aparece no globo é a mesma do mapa? Justifique!
+\end{enumerate}
+
+\end{task}
+\clearpage
+
+\begin{objectives}{O caminho mais curto}
+{
+  Compreender que a menor rota sempre passará por um círculo máximo.
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{O caminho mais curto}
+{
+  Nessa atividade, a ênfase está na localização dos pontos de maneira a determinar a menor rota.
+
+  A ideia é que os alunos percebam que a rota traçada em rosa, mesmo que esteja sob um dos paralelos, nunca será menor que a rota traçada em verde.
+  \begin{itemize}
+  \item \textbf{Organização em sala de aula}: Essa atividade pode ser realizada no laboratório de informática ou com o uso de dispositivos móveis. Os alunos podem realizá-la de forma individual e depois socializar suas descobertas com a turma.
+  \item \textbf{Enriquecimento da discussão}: Solicite que os alunos movimentem os pontos A e B e percebam o que ocorre com os círculos rosa e verde. Questione o porquê de existirem diferenças; se existe algum movimento que as distâncias (mostradas no aplicativo serão iguais) e que momento é esse.
+  \end{itemize}
+}{1}{0}
+\end{sugestions}
+\begin{task} {O caminho mais curto} \label{caminho}
+
+Para realizar essa atividade é necessário o uso do aplicativo Geogebra (\url{https://www.geogebra.org/material/edit/id/30387421}) (\hyperref[rota3]{figura \ref{rota3}})
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{carto_28}.png}
+\caption{A menor rota.}
+\label{rota3}
+\end{figure}
+
+
+Aparentemente a rota traçada em cor de rosa parece mais curta que a rota traçada em verde. 
+Com o ponto amarelo, é possível alterar a rota traçada em rosa sobre o globo, mas observe que ela nunca será ser mais curta que a rota traçada em verde. Por que isso acontece?
+
+\end{task}
+
+
+\arrange{Mapas e Rotas}
+\label{organizando-mapa}
+
+ 
+Os cartógrafos, navegadores e outros que precisam de mapas planos para usos práticos, há muito tempo têm sido desafiados a mostrar a Terra, uma esfera tridimensional, em um plano e bidimensional, como foi simulado na atividade \hyperref[balao]{Planificando o globo}.
+
+Outra forma de perceber o quanto é complexo realizar essa transformação, seria descascar uma laranja, tentando da melhor maneira possível manter a casca com apenas uma corte. Depois “planificar a casca”, ou seja, tentar  coincidir a casca da laranja com a superfície plana da mesa (\hyperref[laranja]{figura \ref{laranja}}). Para alcançar um contato total entre as duas superfícies, a casca de laranja teria que ser distorcida (quebraria   assim como ocorreu com o balão.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{laranja}.png}
+\caption{Laranja planificada.  \\ Fonte: \href{https://www.pngkey.com/maxpic/u2r5u2a9u2o0a9r5/}{pngkey}}
+\label{laranja}
+\end{figure}
+
+O fato que qualquer representação plana que se faça da superfície terrestre  sempre possuir algum tipo de distorção, é uma consequência do Teorema Egregium (do Latim “notável”)  provado  pelo matemático alemão Johann Carl Friedrich Gauss (1777-1855).
+Em particular, a superfície de uma esfera não pode ser representada  em um plano sem nenhuma distorção. Esse fato foi  provado matematicamente, pelo físico  matemático Leonhard Paul Euler no século XVIII (veja \hyperref[Euler1]{\textit{Para Saber Mais: Euler e a Superfície Terrestre}}).
+
+ Mas, desde os anos 1500, matemáticos têm tentado criar algoritmos que poderiam transformar o globo em algo plano. Pra fazer isso, eles usam um processo chamado projeção cartográfica. 
+
+As projeções cartográficas são técnicas essenciais para a cartografia e compõem o sistema que serve de base para criação dos mapas. Essas técnicas consistem na representação do globo (ou parte dele) em uma superfície plana.
+
+Na atividade \hyperref[mapa_globo]{Mapa e o Globo}, podemos observar que as rotas são diferentes no globo e no mapa. Por exemplo, se escolhermos como ponto de partida a ilha de Madagascar no continente Africano e como ponto de chegada o norte  Russia é possível perceber uma distorção muito grande da rota no globo para a rota no mapa.  Mas, ao habilitar o cilindro, é possível visualizar a curva do globo projetada no cilindro (curva pontilhada) que é exatamente a mesma curva no mapa(\hyperref[globomapa1]{figura \ref{globomapa1}}).
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto16}.png}
+\caption{Rotas}
+\label{globomapa1}
+\end{figure}
+
+Já na atividade \hyperref[caminho]{O caminho mais curto} se colocarmos os pontos $A$ e $B$ no mesmo paralelo, é possível conjecturar que uma rota ao longo deste círculo, unindo esses dois pontos seria a mais curta possível (\hyperref[rota4]{figura \ref{rota4}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{carto31}.png}
+\caption{Rotas.}
+\label{rota4}
+\end{figure}
+ 
+Porém essa rota não é a mais curta. A rota mais curta entre dois pontos da superfície esférica está sempre sobre um círculo máximo, que é aquele cujo centro coincide com o centro da esfera. Essa rota é em geral designada por ortodromica ou por rota de grande círculo. Tem uma utilidade prática, pois é aquela que, de forma aproximada, é percorrida pelas aeronaves e navios em viagens de longo curso.
+
+Assim, podemos dizer que um círculo máximo  é um círculo de maior diâmetro que pode ser traçado sobre a superfície de uma esfera. Esse círculo tem a propriedade de dividir a terra em dois hemisférios iguais. O equador é um exemplo de círculo máximo. 
+
+Agora que já conhecemos as coordenadas geográficas, sabemos que é impossível planificar uma esfera em um plano se realizar distorções e que as rotas traçadas na superfície plana se comportam de forma diferente na superfície esférica, podemos pensar como são as distorções que ocorrem nas projeções cartográficas e como os paralelos e meridianos se comportam, e como são as rotas mais curtas em cada projeção, por exemplo.
+
+\know{Euler e a superfície terrestre}{\label{Euler1}
+
+No século XVII Euler demonstrou o seguinte fato: A superfície de uma esfera não pode ser representada  em um plano sem nenhuma distorção. A demonstração realizada foi a seguinte:
+Considerando uma pequena região ao redor de um ponto $P$ da esfera de raio $r$. Seja também um ponto $Q$ sobre a esfera, com $ \widehat{PQ} = l$ . Uma circunferência de raio $s$ pode ser formada por todos os pontos que distam $l$ de $P$ na esfera conforme a \hyperref[euler]{figura \ref{euler}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{euler}.png}
+\caption{Região da esfera ao redor do ponto $P$}
+\label{euler}
+\end{figure}
+
+Supondo que os pontos da esfera possam ser representados em um plano por um fator de escala $m$ e assim sendo, o arco de comprimento $l$ ao longo de um grande círculo da esfera seria transformado num segmento retilíneo de comprimento $l$ vezes um fator de escala $m$ no mapa plano. Assim, todos os pontos que equidistam $l$ de $P$ na esfera deveriam ser mapeados por pontos que distam de $ml$ de $P$ no plano. 
+
+A nova circunferência obtida no plano teria comprimento $2\pi 𝑚l$. Por outro lado, os pontos $Q$ na esfera com $ \widehat{PQ} = l$, formariam uma circunferência de raio $s$ com $s < l$, pois da Geometria Elementar, temos que o comprimento do arco $l$ é igual ao produto do raio da circunferência pelo ângulo, ou seja, $l = \alpha r$ e conforme a \hyperref[euler]{figura \ref{euler}} temos que $s =r \sin (\alpha)$. Como $\alpha > \sin(\alpha)$ resulta que $s < l$.
+
+Desta forma, o comprimento da circunferência de raio $s$ representado no plano a um fator de escala $m$ seria $2\pi 𝑚𝑠$ que é menor que $2\pi 𝑚l$. Não podemos ter uma imagem com circunferência de comprimento igual a $2\pi 𝑚l$ e menor que $2\pi 𝑚l$ ao mesmo tempo, o que nos conduz a uma contradição e conclui a demonstração.
+
+Fonte: \textbf{Ávila (2008)}
+
+\cleardoublepage
+
+\def\currentcolor{session1}
+\begin{texto}
+{
+\section{Explorando: Um mapa para o mundo}
+
+\subsection{Objetivos Gerais}
+
+Essa seção é a central do capítulo, pois tem como objetivo \textbf{entender que ocorrem deformações no processo de projeção cartográfica}. A seção possui uma única atividade, que pensamos ser suficiente para introduzir o assunto. 
+
+Decidimos apresentar os tipos de distorções antes de apresentar os tipos de  projeções cartográfica. Justificamos a escolha, pois é mais efetivo ao abordar os tipos de projeções, que o aluno já esteja ciente que as deformações existem e quais são elas. Observamos que no organizando apresentamos as indicatrizes de Tissot, que é um método de visualizar as distorções. Elas serão utilizadas nos próximos capítulos e na seção praticando.
+
+Outro aspecto muito importante dessa seção é o fato de definirmos matematicamente o que são projeções cartográficas. Realizada essa definição, apresentamos um exemplo no "Para saber mais". Como comentado na introdução do capítulo, seções do tipo "Para saber mais"{} são opcionais, mas recomendamos que essa seja trabalhada com os alunos, visto que é a única dedução matemática que será realizada. Conforme comentado, não foram apresentadas as expressões matemáticas associadas as projeções cartográficas, pois em geral, são necessários conceitos avançados para esse nível de ensino, como, por exemplo, noções de Cálculo Diferencial e Integral. Isso justifica, de certa forma, o caráter mais informativo e ilustrativo do que matemático desse capítulo.
+}
+\end{texto}
+
+\begin{objectives}{Observando mapas}
+{
+  \begin{itemize}
+  \item Compreender que ocorrem distorções de área, formas ou distâncias ao realizar uma projeção cartográfica.
+ 
+  \end{itemize}
+}{1}{1}
+\end{objectives}
+\clearmargin
+\begin{sugestions}{Observando mapas}
+{
+  \begin{itemize}
+  \item  \textbf{Conceitos abordados}: distorções em projeções cartográficas
+  \item \textbf{Organização em sala de aula}: Essa atividade pode ser realizada em pequeno grupos, para que ocorra discussões e comparação das respostas. Caso os alunos não tenham como acessar o computador ou dispositivo móvel para realizar a segunda parte da atividade, recomendamos que o professor o faça, utilizando um projetor multimídia.
+  \item \textbf{Enriquecimento da discussão}:    Observe com os alunos que é possível notar, por exemplo, que a Groelândia, no mapa, está basicamente do mesmo tamanho do Brasil, sendo que, na verdade, sua área é 4 vezes menor. A Europa, por sua vez, também possui um tamanho exagerado, enquanto a África torna-se bastante reduzida. Para que os alunos consigam perceber as distorções de área de uma forma mais convincente, recomendamos o uso do aplicativo (parte 2). Observamos que a Groelândia possui uma área de aproximadamente $2.000.000$ km$^{2}$, Brasil, uma área de $8.516.000$ km$^2$. A América do Sul possui $17.819.100$ km$^2$ de área, já a Europa tem uma extensão de $10.180.000$ km$^2$ e a África aproximadamente 30 milhões de quilômetros quadrados. Esses dados podem ser obtidos pelos alunos utilizando algum mecanismo de busca na internet. Com esses dados, os alunos poderão comparar, de forma mais precisa, as representações dadas e o verdadeiro tamanho dos continentes. Salientamos que na parte 2, o aplicativo mostra o tamanho exato dos países. Observe com os alunos que o mapa apresentado na parte 1 possui distorções de área (por esse motivo, o uso só é recomendado em cartas náuticas). O mapa apresentado na parte 3 conserva áreas, mas distorce de maneira significativas as formas dos continentes.
+
+  \end{itemize}
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Observando mapas}
+{ Exemplos de respostas
+  \vspace{.3em}
+
+  \textbf{Parte 1}:
+  Acredito que não, basta ver o tamanho da antártica, parece maior que todos os outros países juntos. 
+
+  Parece que toda América do Sul tem o tamanho da Groelândia. Mas acho que não é isso, porque assim como a antártica, a Groelândia deve estar muito maior do que é.
+  \vspace{.3em}
+
+  \textbf{Parte 2}:
+  O Brasil é muito maior que a Groelândia. No mapa altera muito as áreas dos países.
+
+  De novo, a Alemanha é na verdade quase um terço da Bolívia.  Acredito que seja pela priorização pelos países do norte, que eram o centro econômico na época.
+
+  \vspace{.3em}
+  \textbf{Parte 3}:
+  Pelo exercício anterior, aparenta estar mais próxima da realidade.
+}{0}
+\end{answer}
+\explore{Um mapa para o mundo}\label{mapamundo1}
+
+\begin{task}{Observando mapas}\label{obs_mapas}
+
+\textbf{Parte 1: } Observe o mapa ilustrado na \hyperref[meca]{figura \ref{meca}} e  responda as questões abaixo:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{{meca}.png}
+\caption{Projeção Cartográfica Mercartor. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{meca}
+\end{figure}
+
+\begin{enumerate}
+\item Você acredita que a área correspondente aos continentes está correta?
+\item Compare a área da Groelândia e da América do Sul no mapa. Isso corresponde à realidade? Justifique!
+\item Compare a área do continente europeu ao do continente africano. Isso corresponde à realidade?
+\item Preste atenção nas linhas de latitudes (horizontais) elas têm 10º de diferença, ou seja, na superfície de uma esfera, tem a mesma distância. Utilize disso para argumentar o porquê das suas respostas anteriores.
+\end{enumerate}
+
+\textbf{Parte 2:}  O mapa ilustrado na  \hyperref[meca]{figura \ref{meca}} é o utilizado pelo aplicativo \textit{The True Size}. Utilize o site   \url{https://thetruesize.com} para comparar o tamanho dos países indicados abaixo. Caso selecione algum pais de forma equivocada, clique com o botão direito do mouse para limpar a seleção ou clique em \textit{Clear map}. Para comparar os países, basta colocar o nome de cada um deles no espaço anterior a lupa, como ilustra a \hyperref[true]{figura \ref{true}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{{true}.png}
+\caption{Fonte: \href{https://thetruesize.com}{The True Size}}
+\label{true}
+\end{figure}
+ 
+ \begin{enumerate}
+\item Selecione no mapa o Brasil (Brazil) e a Groelandia (Greenland). Arraste a Groelandia para o lugar do Brasil. Observe o que acontece! Por que isso ocorre? 
+\item Faça o mesmo para a Bolívia e a Alemanha (Germany)
+\item Você percebe que a África, o sul da Ásia e América do Sul parecem muito menores em relação aos países mais distantes do equador? Por que isso ocorre?
+
+\end{enumerate}
+
+
+\textbf{Parte 3:} Observe o mapa ilustrado na \hyperref[peters]{figura \ref{peters}} e responda as questões abaixo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{{peter}.png}
+\caption{Projeção Cartográfica Gall-Peters.  \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{peters}
+\end{figure}
+
+\begin{enumerate}
+\item	Você acredita que a área correspondente aos continentes está correta?
+\item Compare a área da Groelândia e da América do Sul no mapa. Isso corresponde à realidade? Justifique!
+\item Compare a área da América do Norte a do continente africano. Isso corresponde à realidade?
+\item Quais dos dois mapas você escolheria para representar a superfície do planeta Terra? Por quê?
+\end{enumerate}
+\end{task}
+
+
+\arrange{Um mapa do mundo}
+\label{organizando-mapa1}
+
+Os mapas apresentados nas \hyperref[meca]{figuras \ref{meca} e \ref{peters}}, em particular, são representações cartográficas planas, em escala reduzida, de toda a superfície do planeta Terra . Mapas com essa característica são denominados mapa-múndi ou planisfério. 
+Existem diferentes maneiras de projetar a superfície da Terra em um mapa plano (a partir de um cilindro, por exemplo); no entanto, um problema permanece: não é possível mostrar a Terra com precisão. Mas mesmo para  mostrá-la aproximadamente, somos forçados a esticar algumas partes da superfície, comprimir outras, talvez curvá-las um pouco. Isso leva a distorções. É importante observar que todo e qualquer mapa do mundo terá algum tipo de distorção!
+
+A atividade \hyperref[obs_mapas]{Observando os mapas} explora um pouco dessas distorções. Observe que ambos os mapas-múndi apresentados tem formato retangular, isso ocorre porque ambos foram feitos utilizando uma projeção cartográfica do tipo cilíndrica. Mas como isso é feito? Imagine colocar um cilindro reto sobre o globo e projetar cada ponto da esfera, na superfície do cilindro, depois desenrolar o cilindro. Fazendo isso, obtemos um mapa plano e retangular. Nas próximas seções iremos abordar mais detalhes sobre esse assunto.  
+Apesar de termos dois mapas retangulares e que representam a superfície da Terra, ao compará-los percebemos que existem algumas diferenças ( \hyperref[proje]{figura \ref{proje}}). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto17}.png}
+\caption{Diferentes projeções. \\ Fonte: Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{proje}
+\end{figure}
+
+O mapa da esquerda na \hyperref[proje]{figura \ref{proje}} denomina-se Projeção Mercator,  é um dos mapa-múndi mais famosos do mundo. Ele foi inventado no século XVI pelo cartógrafo flamengo Gerardus Mercator e  preserva a forma dos países. Por exemplo, o Brasil, no globo, tem a mesma forma do Brasil nesse mapa (\hyperref[brasil]{figura \ref{brasil}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto18}.png}
+\caption{O Brasil na Projeção Mercator. \\ Fonte: \url{https://youtu.be/kIID5FDi2JQ}}
+\label{brasil}
+\end{figure}
+
+Mas o verdadeiro propósito do mapa inventado por Mercator era a navegação. Esse mapa preserva a direção, o que é muito importante, por exemplo,  ao navegarmos no oceano com apenas uma bússola. 
+
+O mapa da direita na \hyperref[proje]{figura \ref{proje}}, denominado  Projeção Cartogáfica Gall-Peters, possui esse nome pois foi construída originalmente por James Gall, um um clérigo (padre) escocês  em 1885, mas foi vastamente ignorada. Porém, foi resgatado em 1973 pelo historiador alemão Arno Peters. Esse mapa é um pouco controverso, pois preserva a área, mas as formas dos países estão totalmente distorcidas. Além disso, apresenta um cunho político, pois amplia de forma significativa  as áreas dos países do sul, que em sua maioria é subdesenvolvida, e diminui as áreas dos países do norte, de maioria desenvolvida. Nesse planisfério, a África é colocada no centro do mapa, ao contrário do mapa feito por Mercator, em que a Europa encontrava-se no centro.
+
+
+\begin{knowledge}
+Qualquer pessoa que goste muito de viajar, é capaz de perder horas e horas vasculhando o Google Maps. Mas até meados de 2018, quando o usuário reduzia o zoom para ver o planeta inteiro, o mundo era apresentado na Projeção Cartográfica Mercator. Atualmente, o Google Maps apresenta a superfície terrestre de forma tridimensional e esférica.
+\end{knowledge}
+
+
+Além os mapas citados, existem outros provenientes de projeções cilíndricas.  Por exemplo a projeção cilíndrica equidistante (\hyperref[cil_equi]{figura \ref{cil_equi}}), que foi projetada por Marinus de Tyre (por volta do ano 100 da era Cristã).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto19}.png}
+\caption{Projeção Cilíndrica Equidistante. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{cil_equi}
+\end{figure}
+
+Outro exemplo é  o mapa  elaborado pelo cartógrafo e geógrafo norte-americano Arthur Robinson  na década de 1960 (\hyperref[rob]{figura \ref{rob}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto20}.png}
+\caption{Projeção Cilíndrica de Robinson. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{rob}
+\end{figure}
+
+A grande vantagem dessa projeção em relação as demais, é que ela se encontra em um meio termo. Ela não preserva nem a forma e nem a correta área dos continentes. No entanto, ela consegue minimizar as distorções que ocorrem nesses dois aspectos.
+
+Observando os exemplos citados acima,  percebemos um problema, cada uma dessas  projeções cartográficas,  têm sua própria configuração de forma, distância, direção e área. Portanto, é importante reconhecer que as projeções cartográficas sempre possuem algum tipo de distorção. Além disso, como não é possível se desenvolver uma superfície esférica sobre um plano sem deformações, na prática, os cartógrafos buscam projeções onde seja possível diminuir ou eliminar parte das deformações, dependendo de onde e para qual fim essa projeção cartográfica será utilizada. 
+As projeções cartográficas, de acordo com o tipo de distorção são classificadas da seguinte forma: 
+
+
+
+\begin{itemize}
+\item Equidistantes: Não apresentam deformações lineares, ou seja, os comprimentos são representados em escala uniforme.
+\item Conformes: Representam sem deformação todos os ângulos em torno de quaisquer pontos, e dessa maneira, não deformam pequenas regiões.
+\item Equivalentes: Conservam as áreas. Seja qual for a porção representada num mapa, ela conserva a mesma relação com a área de todo o mapa.
+\item Equivalentes: Não possui nenhuma das propriedades dos outros tipos, isto é, equivalência, conformidade e equidistância, ou seja, as projeções em que as áreas, os ângulos e os comprimentos não são conservados.
+
+\end{itemize}
+
+As propriedades acima descritas são mutuamente exclusivas. Isso reforça o fato de  que não existe uma projeção cartográfica ideal, mas apenas a melhor representação para um determinado propósito.
+
+Um método muito utilizado  para visualizar as distorções de uma projeção cartográfica é a Indicatriz da Tissot ( que já foi apresentada no livro de Projeções e Perspectivas). Foi introduzido em 1859 pelo matemático francês Nicolas Auguste Tissot.
+Esse método consiste no seguinte:  Imagine desenhar diversos círculos  de mesmo  tamanho, em intervalos regulares  na superfície da Terra. Feito isso, a Terra vista do espaço será como a ilustrada na \hyperref[tiss1]{figura \ref{tiss1}}.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{tiss 1}.png}
+\caption{Círculos desenhados na superfície terrestre. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{tiss1}
+\end{figure}
+
+
+Ao projetar essa superfície em um plano, os círculos ficaram distorcidos. Essa distorção irá depender da projeção cartográfica escolhida. Por exemplo, na Projeção Mercator a indicatriz de Tissot está ilustrada na \hyperref[tiss2]{figura \ref{tiss2}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{tiss2}.jpg}
+\caption{Indicatriz de Tissot – Projeção Mercator. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{tiss2}
+\end{figure}
+Podemos observar que os círculos mantiveram sua forma circular, mas ficam cada vez maiores conforme nos aproximamos dos polos.
+E é exatamente isso que a projeção de Mercator faz: mantém as formas (localmente), mas faz com que diferentes regiões no mapa tenham tamanhos desproporcionais entre si.
+O vídeo \url{https://www.youtube.com/watch?v=E43g5EMxaTg} apresenta como essas distorções surgem. 
+ Em contraponto, podemos observar a indicatriz de Tissot na Projeção Robinson, que conforme dissemos,  minimiza as distorções .
+ 
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{tiss3}.png}
+\caption{Indicatriz de Tissot – Projeção Robinson. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{tiss2}
+\end{figure} 
+  
+
+Algo que precisamos entender é como as projeções cartográficas são concebidas. É possível projetar o globo em  objetos como cilindros, cones e planos (figura xx), denominados superfícies de projeção. As características desses objetos, juntamente com a matemática que a pessoa que está pensando,  vai afetar na aparência da projeção cartográfica resultante. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto30}.png}
+\caption{Possiblidades de projetar a esfera. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{tiss2}
+\end{figure} 
+
+
+Embora algumas projeções usem um processo geométrico, na realidade, a maioria das projeções usa processos analíticos (equações matemáticas) para transformar as coordenadas de um globo em uma superfície plana. Conforme visto anteriormente, historicamente os cartógrafos tiveram o desafio de representar a superfície curva da Terra em um plano e para esse fim, foram criadas as projeções cartográficas. 
+
+Podemos dizer que uma projeção cartográfica é uma transformação da superfície da Terra (superfície de referência - SR) em uma superfície de projeção (SP),  por meio de expressões matemáticas. Durante essa transformação, os pontos que possuem coordenadas geográficas angulares (latitude, longitude) na superfície da Terra são convertidas em coordenadas cartesianas $(x, y)$ representando a posição dos pontos em um mapa plano. 
+No nosso caso, trabalharemos com SP desenvolvíveis(cone, cilindro e plano) e para estabelecer as conexões entre as coordenadas da SR ( esfera) e as coordenadas cartesianas $(x,y)$ do plano de projeção precisamos encontrar as relações funcionais 
+$x=f_1(\phi, \lambda)$ e $y=f_2(\phi, \lambda)$.
+
+\begin{reflection}
+Uma projeção cartográfica  pode ser interpretada como uma função  $f$ de domínio  $S^3$ (esfera, no nosso caso) e contradomínio $\pi$ (plano) que, a cada ponto $P \in S^3$  associa o ponto $P' \in \pi$. A expressão matemática associada, irá depender do tipo de projeção realizada.
+\end{reflection}
+
+\know{Para saber mais}
+Uma projeção cartográfica  que possui uma dedução matemática simples é a a Projeção Cilíndrica Estereográfica de Braun. Essa projeção foi concebida por C.Braun e pode ser visualizada geometricamente da seguinte forma: a superfície de projeção é uma folha cilíndrica firmemente enrolada contra o Equador. Todo meridiano é atraído para este tubo por raios de luz que emanam de um ponto equatorial no meridiano diretamente oposto. O tubo tangente é então cortado ao longo de um meridiano arbitrário e desenrolado (\hyperref[cilindro]{figura \ref{cilindro}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{carto32}.png}
+\caption{Projeção Cilíndrica. \\ Fonte: \url{https://progonos.com/}}
+\label{cilindro}
+\end{figure}
+
+
+As equações para o mapeamento são simples. Consideremos projetar o ponto $P$ na Terra no ponto $P'$ no mapa.
+
+Observemos que os meridianos nesse caso são projetados como linhas verticais retas com espaçamento diretamente proporcional à longitude $\phi$, portanto $x = R \phi$. 
+
+O paralelo  é projetado como uma linha horizontal reta, cuja coordenada $y$  pode ser determinada observando os dois triângulos formados na \hyperref[triang]{figura \ref{triang}}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{{carto33}.png}
+\caption{Triâgulos}
+\label{triang}
+\end{figure}
+
+Dai, temos
+$$ \frac{h}{w+R} \frac{y}{2R}$$
+
+E portanto, 
+
+$$y=\frac{2Rh}{w+R}$$
+
+Mas,
+
+$$h=R \sin(\lambda)$$
+$$w=R \cos(\lambda)$$
+
+Portanto,
+
+$$y=\frac{2R^2 \sin(\lambda)}{R \cos(\lambda)+R}=\frac{2R\sin(\lambda)}{\cos(\lambda) +1}$$
+
+Fazendo $\theta=\frac{\lambda}{2}$ e usando as identidades trigonométricas $\sin(2\theta)=2\sin(\theta)\cos(\theta)$ e $\cos^2(\theta)=1-2\sin^2 (\theta)$, para  $\frac{-\pi}{2}\leq \lambda \leq \frac{\pi}{2}$, vem:
+
+$$y=\frac{4R\sin(\theta)\cos(\theta)}{2(1-\sin^2(\theta)}= \frac{2R\sin(\theta)}{\cos(\theta)}=2Rtg(\theta).$$
+
+Ou seja, para essa projeção, $$x = R\phi$$  $$y=2R \tan(\frac{\lambda}{2}).$$
+
+A Projeção Cilíndrica Estereográfica de Braun possui o seguinte aspecto (\hyperref[braun]{figura \ref{braun}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{carto34}.png}
+\caption{Projeção Cilíndrica Estereográfica de Braun. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{braun}
+\end{figure}
+
+\clearpage
+
+\def\currentcolor{session1}
+\begin{texto}
+{
+\section*{Projeções cilíndricas}
+
+\subsection*{Objetivos Gerais}
+
+\begin{itemize}
+\item Reconhecer os diferentes tipos de projeções cartográficas.
+\end{itemize}
+
+Ela está organizada em três blocos do tipo Explorando e Organizando. Cada bloco possui o objetivo de explorar um tipo de projeção (cilíndrica, plana e cônica).
+
+\subsection*{Recomendações:}
+
+Sugerimos ao professor, dependendo da turma, que realize um experimento por vez, conforme apresentado, e faça as discussões correspondentes que estão em cada organizando. Acreditamos que cada atividade tomará o tempo de uma hora de aula, o que torna inviável realizar as atividades e realizar a discussão posteriormente.
+
+Caso tenha turno disponível, poderá ser mais produtivo realizar todas as atividades e depois sistematizar as ideias utilizando o material disponível no organizando.
+}
+\end{texto}
+\begin{objectives}{Projetando a esfera no cilindro}
+{
+  \begin{itemize}
+  \item Compreender uma projeção cilíndrica e visualizar as distorções decorrentes desse tipo de projeção.
+
+  \item \textbf{Conceitos abordados}: projeção cilíndrico
+  \end{itemize}    
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Projetando a esfera no cilindro}
+{
+  Recomendamos explicar para os alunos, antes do início da atividade, que se trata de uma atividade prática que pretende simular um tipo de projeção cartográfica (projeção cilíndrica). Além disso, alguns materiais confeccionados nessa atividade serão aproveitados nas atividades futuras. Dessa forma, caso a escola possua um lugar para os alunos guardarem esses materiais, seria interessante que o fizesse.
+  
+   Antes do início da atividade, solicite que o aluno leia todas as instruções, para que fique claro quais os procedimentos serão realizados. Caso seja necessário, esclareça que a \textbf{parte A} da garrafa representa parte da superfície esférica. A \textbf{parte B }será um instrumento de apoio a projeção e o papel ao ser enrolado como um cilindro, representa a superfície de projeção.
+
+  \textbf{Organização em sala de aula}: Sugerimos que a atividade seja realizada em duplas, pois um aluno pode auxiliar o outro no momento de posicionar a lanterna e fazer os desenhos. Também pode ser realizada em grupo, porém quanto menor o grupo, melhor será a experiência.
+
+  \textbf{Enriquecimento da discussão}:
+\begin{itemize}
+\item  Para cortar a garrafa, oriente os alunos a fazerem pequenos furos com a ponta da tesoura e depois seguirem recortando Talvez seja necessária uma faca ou estilete para furar (esteja atento para não ocorrer acidentes).
+
+\item Sugira aos alunos fazer em algum lugar da parte A uma série de segmentos de retas paralelas de mesmo tamanho (alinhado na vertical). Será um ótimo jeito de observar as distorções.
+
+\item Discuta com os alunos como a distorção vai aumentando quanto mais próxima da borda da\textbf{ parte A}.
+
+ \item Sugira também fazer desenhos espalhados, perto das bordas e centrais. Assim, poderão visualizar melhor onde ocorrem as maiores distorções.
+
+\item Sugira fortemente o uso de cola bastão, pois facilitará a retirada do papel da \textbf{parte B}.
+\end{itemize}
+ 
+}{1}{0}
+\end{sugestions}
+\clearmargin
+\begin{sugestions}{Projetando a esfera no cilindro}
+{
+  Para concluir, converse com seus alunos de quais foram as distorções percebidas, utilize de algumas perguntas que podem chamar a atenção dos alunos para alguns detalhes, como por exemplo:
+  \begin{itemize}
+  \item onde se localizavam as maiores distorções?
+  \item algum desenho não aparentou estar distorcido?
+  \item teve algum desenho dividido pelo limite da folha?
+  \end{itemize}
+
+  \begin{figure}[H]
+  \centering
+  
+  \includegraphics[width=.5\linewidth]{cartografia-professor17}
+  \end{figure}
+
+  Solicite aos alunos que guardem o material utilizado e as projeções obtida,s para compará-las com atividades futuras.
+
+  Acredita-se que esse é um momento interessante para abordar o tema de reciclagem com seus alunos, podendo ser até parte de um projeto da escola.
+
+\textbf{  Um resumo sobre esse tipo de projeção:}
+
+  As projeções cartográficas cilíndricas possuem as seguintes características gerais:
+  \begin{itemize}
+  \item Os paralelos são linhas paralelas e meridianos também são linhas paralelas. Essas linhas ( paralelos e meridianos) sempre se cruzam a $90^{\circ}$.
+  \item Os meridianos são equidistantes.
+  \item Os pólos são representados como linhas retas ou curvas 
+  \item Em geral forma um mapa retangular.
+  \item Pode ter as propriedades de equidistância, conformalidade ou equivalência.
+  \end{itemize}
+  }{1}{1}
+\end{sugestions}
+
+\explore{Projeções Cilíndricas}\label{Pcilindricas}
+
+\begin{task}{Projetando a esfera em uma superfície cilíndrica}\label{proj_cil}
+Nessa atividade vamos simular uma projeção cartográfica do tipo cilíndrica. Para isso, serão necessários os seguintes materiais:
+\begin{itemize}
+\item Tesoura (com ponta)
+\item Lanterna (pode ser do celular)
+\item Garrafa PET transparente 
+\item Fita auto adesiva
+\item Caneta esferográfica
+\item Papel vegetal (ou papel manteiga)
+\item Cola bastão
+\end{itemize}
+
+Na garrafa pet, faça 3 cortes como ilustra a \hyperref[garrafa]{figura \ref{garrafa}} (o corte do bico é opcional)
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{garrafa}.png}
+\caption{Cortes na garrafa}
+\label{garrafa}
+\end{figure}
+
+Com a caneta esferográfica desenhe (preferencialmente na parte interna) da parte A (\hyperref[garrafa1]{figura \ref{garrafa1}}), procure deixar figuras bem definidas para futuras observações.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{cilindro1}.png}
+\caption{Desenhos na superfície da parte A da garrafa.}
+\label{garrafa1}
+\end{figure}
+  
+
+Forre a parte externa do cilindro (parte B da garrafa) com  o papel vegetal (ou manteiga ). Sugerimos que utilize um pouco de cola bastão e faça duas linhas verticais na parte B (de preferência em locais opostos) apenas o suficiente para que segurar o papel (\hyperref[cilindro2]{figura \ref{cilindro2}} – A). Lembre que posteriormente o papel deverá ser retirado. É possível também colar as extremidades do papel com fita adesiva (\ref{cilindro2} – B), mas esse processo pode danificar o papel.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{cilindro2}.png}
+\caption{Formas de enrolar o cilindro.}
+\label{cilindro2}
+\end{figure}
+
+
+Pegue a semiesfera (parte A) e o cilindro (parte B)  e coloque  semiesfera com os desenhos  “representação do mapa” como uma tampa do cilindro,  conforme ilustra a \hyperref[cilindro3]{figura \ref{cilindro3}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{cilindro3}.png}
+\caption{Posicionamento das superfícies.}
+\label{cilindro3}
+\end{figure}
+
+Se for necessário, prenda ambas partes com ajuda de uma fita. 
+Com a lanterna um dos alunos do grupo ilumina a parte A, observando para a luz esteja no centro da semiesfera ( \hyperref[cilindro4]{figura \ref{cilindro4}}). Enquanto isso, os outros integrantes do grupo, deverão destacar utilizando a caneta esferográfica, a sombra projetada dos desenhos da parte A sobre o papel.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{cilindro4}.png}
+\caption{Iluminando a superfície de projeção.}
+\label{cilindro4}
+\end{figure}
+
+Agora, responda as questões:
+\begin{enumerate}
+\item Após destacar todas as sombras, observe o que ocorrerá com elas se a parte A (superfície esférica) mudar de posição. E se o cilindro mudar de posição o que ocorre??
+\item Modifique a localização da lanterna. Aproxime-a da borda do cilindro, coloque-a mais afastada possível, ilumine parte da superfície esférica. O que ocorre?
+\item Conclua a atividade retirando o papel da parte B. Analise uma imagem de cada vez, e discuta com o grupo se houve alguma distorção ao realiza a projeção? Se sim, quais foram e onde ocorreram com maior intensidade. 
+\end{enumerate}
+
+\end{task}
+
+
+
+\arrange{Mapas e Rotas}
+\label{organizando-cilindro}
+
+As projeções cartográficas  podem ser classificadas pelo tipo de superfície de projeção ( u superfície desenvolvível) no  qual os pontos da superfície esférica é projetada. Uma superfície desenvolvível é uma forma geométrica que pode ser colocada em uma superfície plana sem esticar ou rasgar. O cilindro, o cone e o próprio plano possuem tal característica, e suas projeções correspondentes são chamadas cilíndricas, cônicas e planas (\hyperref[tipos]{figura \ref{tipos}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{{tipos}.png}
+\caption{Tipos de projeção.\\ Fonte: \href{https://tomroth.com.au/projections/}{Tom Roth}}
+\label{tipos}
+\end{figure}
+ 
+
+Na atividade \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica}, a superfície esférica (parte A da garrafa) foi envolvida por uma superfície cilíndrica (tubo de papel manteiga) tangente ao “equador”. Enquanto a esfera e o cilindro giravam em torno do seu eixo, uma fonte fixa (lanterna) disparava raios de luz ao longo de um único meridiano, projetando "sombras"  no cilindro. Após uma revolução completa, o cilindro foi cortado ao longo de uma linha paralela ao seu eixo e desenrolado (\hyperref[cilindro1]{figura \ref{cilindro1}}). Observe que se  mudarmos a posição da fonte de luz, a posição do cilindro ou o seu diâmetro, teremos projeções diferentes. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{carto36}.png}
+\caption{Desenrolando o cilindro.\\ Fonte: \href{http://www.progonos.com}{Progonos}}
+\label{cilindro1}
+\end{figure}
+ 
+
+Podemos dizer, que em geral, as projeções classificadas como cilíndricas são aquelas que em geral, possuem uma aparência de retângulo, que pode ser visto como uma superfície cilíndrica “desenrolada”.
+Na atividade \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica} foi solicitado que a superfície de projeção (cilindro) fosse modificada de lugar. Nesse caso, foi possível observar que dependendo da maneira como ocorre o contato entre a superfície esférica e a superfície de projeção, as projeções resultantes são diferentes. 
+Isso ocorre pois as projeções também podem ser descritas em termos da direção/orientação da superfície de projeção  em relação a superfície esférica. Isso é chamado de aspecto da projeção cartográfica. 
+Os três aspectos possíveis são normais, transversais e oblíquos. Em uma projeção normal, a orientação principal da superfície de projeção é paralela ao eixo da Terra. Uma projeção transversa tem sua orientação principal perpendicular ao eixo da Terra. As projeções oblíquas são todos os outros casos não paralelos e não perpendiculares.
+
+A \hyperref[asp]{figura \ref{asp}} ilustra tais aspectos no caso das projeções cartográficas cilíndricas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{{carto35}.png}
+\captionsetup{justification=Centering}
+\caption{Aspectos da projeção cartográfica cilíndrica. \newline Fonte: \href{https://eipd.dcs.wisc.edu/for-credit/GIS-cert/summer2017/geog370_m1/lesson_4.html}{University of Wisconsin System}}
+\label{asp}
+\end{figure}
+ 
+Conforme vimos na seção anterior, a Projeção Cilíndrica Conforme  Mercator (\hyperref[meca1]{figura \ref{meca1}}) é um dos exemplos mais famosos de projeção cilíndrica. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{meca}.png}
+\caption{Projeção Cilíndrica Conforme de Mercator \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{meca1}
+\end{figure}
+
+Como comentamos anteriormente, essa projeção foi um “presente” para os navegadores do século XVI, apesar de sofrer distorção extrema da área perto dos polos. A fim de  manter as formas não distorcidas, a Antártica é enormemente esticada e a Groelândia é representada por nove vezes maior que o tamanho real (conforme visto na atividade \hyperref[obs_mapas]{Observando os mapas}). 
+
+A projeção de Mercator é uma projeção cilíndrica normal e é classificada como conforme de acordo com o tipo de distorção, ou seja, as direções, ângulos e formas são mantidos.  Nessa projeção, os meridianos são linhas verticais, paralelas entre si, e igualmente espaçadas, e se estendem ao infinito ao se aproximarem dos polos. Os paralelos são linhas retas horizontais, perpendiculares aos meridianos e do mesmo comprimento que o equador, mas se tornam mais distantes em direção aos polos. Os polos projetam-se ao infinito e não podem ser mostrados no mapa. A gratícula (rede de linhas de latitude e longitude sobre as quais o mapa é desenhado) é simétrica ao longo do equador e do meridiano central.
+
+Essa projeção foi originalmente pensada para exibir orientações precisas da bússola para viagens marítimas. Qualquer linha reta desenhada nesta projeção representa um rumo constante da bússola ou uma linha de direção verdadeira (loxódromo ou linha loxodrômica). Velejar a distância mais curta ao longo de um “círculo máximo” significa que a direção muda a cada momento. Os loxódromos em vermelho são linhas retas. Os círculos máximos (também chamados de ortódromos) estão ilustrados em verde (\hyperref[lox]{figura \ref{lox}}).
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{carto37}.png}
+\caption{Loxódromos e ortódromos}
+\label{lox}
+\end{figure}
+
+A Projeção Cilíndrica Conforme de Mercartor às vezes é utilizada inadequadamente para representar mapas-múndi e para mapas de parede em escolas. É de forma inadequada pois, as distorções de área são significativas para as regiões polares.  Observamos que para realizar a dedução matemática dessa projeção são necessários conceitos de Cálculo Diferencial e Integral.
+
+
+\begin{knowledge}
+Existem variações da projeção de Mercator. A projeção Transversa  Mercator é uma projeção do tipo transversa cilíndrica e conforme , também é conhecida como Projeção Gauss-Krüger  Projeção Conforme de Gauss. Nesse caso, os ângulos e formas (de pequenas áreas) são mostrados corretamente, como resultado da conformidade. A \hyperref[tmeca]{figura \ref{tmeca}} ilustra  uma parte do mundo mapeada na projeção Transversa Mercator.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{carto38}.png}
+\caption{Projeção Transversa Mercator \\ Fonte \href{htthttps://kartoweb.itc.nl/geometrics/Map\%20projections/mappro.html}{Geometric Aspects of Mapping}}
+\label{tmeca}
+\end{figure}
+
+\end{knowledge}
+
+Outro exemplo, já mencionado anteriormente, desse tipo de projeção é a  Projeção Cilíndrica Equidistante, também chamada de projeção Plate Carrée ou cilíndrica simples (\hyperref[cil_equi1]{figura \ref{cil_equi1} }.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{equid}.png}
+\caption{Projeção Projeção Cilindrica Equidistante \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{cil_equi1}
+\end{figure}
+
+Nessa projeção, um fator que chama muito a atenção é que os meridianos são espaçados nas mesmas distâncias que os paralelos, formando uma grade de retângulos congruentes, o que não ocorre em outras projeções. As regiões polares são menos distorcidas em escala e área do que na projeção de Mercator. 
+
+A Projeção Cilindrica Equidistante, como o próprio nome já diz, é classificada como equidistante de acordo com o tipo de distorção, ou seja, sua preocupação está em manter a distância igual entre dois pontos.  
+
+A indicatriz de Tissot para essa projeção tem o seguinte aspecto (\hyperref[tissequi]{figura \ref{tissequi}})
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{tissequi}.png}
+\captionsetup{justification=Centering}
+\caption{Indicatriz de Tissot - Projeção Cilindrica Equidistante \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{tissequi}
+\end{figure} 
+
+
+
+\begin{knowledge}
+Para alocar artificialmente todos os paralelos em distribuição igual ao longo dos meridianos, há uma distorção de escalas, fazendo com que cada parte do mapa possua uma escala diferente. Essas alterações na escala produzem um mapa com muitas distorções na forma e no tamanho dos continentes, tornando-se uma projeção usada basicamente para mapas de toda a Terra, já que em mapas locais ficam demasiadamente “estranhos” nesta projeção. Porém, é um excelente mapa para outros usos ilustrativos e/ou temáticos, considerando a sua simplicidade e facilidade de compreensão com a longitude sendo o eixo $x$ e a latitude o eixo $y$.
+Fonte: \url{https://www.infoescola.com/cartografia/projecao-cilindrica-equidistante/}
+
+\end{knowledge}
+
+A versão transversal dessa projeção  é conhecida como projeção Cassini (\hyperref[cass]{figura \ref{cass}}) e foi  proposta por César-François Cassini de Thury, um astrônomo e cartógrafo francês. Nessa projeção, a superfície esférica é girada  de forma que um determinado  meridiano (denominado meridiano central) se torne o equador. E a escala ao longo desse meridiano e imediatamente à direita é mantida. Porém, em outros pontos do mapa, à medida que nos afastamos do meridiano central, as áreas ficam cada vez mais distorcidas. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{cassini}.png}
+\caption{ Projeção Cassini \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{cass}
+\end{figure}
+
+
+Apesar dessa projeção parecer muito distorcida e imprecisa, foi usada com frequência até a década de 1940, quando foi  substituído por projeções como a de Mercator. O propósito original da Projeção Cassini era fornecer resultados precisos de países menores, como a França, Grã-Bretanha e Bélgica.
+A Projeção Cassini é única e diferente, pois a forma como foi retratada, faz  pensar de forma diferente das direções convencionais. As projeções cartográficas foram definidas de certa forma durante séculos, seguindo a orientação Norte / Sudeste / Oeste. Observa-se que nessa projeção, a Antártica está quase no centro, a América do Norte está ao sul e a África é rotacionada em noventa graus. Ainda continua sendo uma projeção do tipo equidistante, uma diferença importante para a  Projeção Cilíndrica Equidistante é que o cilindro foi colocado em uma posição diferente em relação a esfera.
+ 
+Outro exemplo de projeção cilíndrica é Projeção Cilíndrica Equivalente de Lambert, criada em 1772 pelo matemático suíço  Johann Heinrich Lambert. Essa projeção representa as áreas dos continentes de forma correta, mas  possui distorções de forma bastante perceptíveis em direção aos polos. (\hyperref[lamb-cil]{figura \ref{lamb-cil}}). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{cil_equiv_lamb}.png}
+\caption{ Projeção Cilíndrica Equivalente de Lambert \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{lamb-cil}
+\end{figure}
+
+Nessa projeção o equador é mapeado para si mesmo e,  os meridianos são mapeados como linhas verticais espaçadas uniformemente. Além disso, os paralelos são projetados em círculos do mesmo perímetro que a “circunferência” do cilindro, de forma que  as regiões não equatoriais apareçam alongadas de leste a oeste. As  imagens dos paralelos se aproximam na projeção à medida que avançamos em direção aos polos. Isso ocorre porque as imagens dos paralelos sucessivos são separadas apenas pela distância vertical entre os paralelos na superfície esférica. À medida que avançamos em direção aos polos, essa separação vertical diminui, de modo que as dimensões norte-sul são comprimidas no mapa. 
+Assim, nesse cenário, as regiões  polares parecerão mais curtas e amplas do que realmente são (\hyperref[tisslambcil]{figura \ref{tisslambcil}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{tisslambcil}.png}
+\captionsetup{justification=Centering}
+\caption{Indicatriz de Tissot Projeção - Cilíndrica Equivalente de Lambert \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{tisslambcil}
+\end{figure}
+
+Como as formas são significativamente distorcidas por esse processo, esse mapa não foi muito utilizado.
+
+
+Na atividade \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica}  solicitamos que o feixe de luz fosse posicionado em diferentes locais. Isso foi solicitado para que pudesse compreender projeções como a Cilíndrica Equivalente de Lambert, que resulta ao dispensarmos uma fonte de luz e os pontos do mapa na esfera horizontalmente até o ponto mais próximo do cilindro, isto significa que essa  é uma projeção do tipo ortográfica (\hyperref[orto]{figura \ref{orto}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{{orto}.png}
+\caption{ Projeção ortográfica \\ Fonte \url{www.aeroclubedebrasilia.org.br }}
+\label{orto}
+\end{figure}
+
+
+Uma projeção cilíndrica não precisa ser equivalente, conforme ou equidistante. A Projeção Cilíndrica Central (\hyperref[central]{figura \ref{central}}), é uma projeção afilática, ou seja, não há conservação das propriedades (forma, ângulo, distância ou área).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{cil_centro-side}.png}
+\caption{ Projeção Cilíndrica Central\\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{central}
+\end{figure}
+
+A origem desta projeção é desconhecida,  sua utilização limita-se a aspectos educacionais,  como uma comparação com a projeção de Mercator, visto que a posição do feixe de luz é diferente.   Esta é uma projeção gnomonica (\hyperref[gnom]{figura \ref{gnom}}, pois  o feixe de luz parte  do centro da superfície esférica  em direção a uma reta tangente ao Equador, localizada no cilindro. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{{gnom}.png}
+\caption{ Projeção gnomonica \\ Fonte \url{www.aeroclubedebrasilia.org.br }}
+\label{gnom}
+\end{figure}
+
+ 
+Nessa projeção, os meridianos são linhas retas paralelas igualmente espaçadas. Os paralelos são linhas retas paralelas com espaçamento desigual, perpendiculares aos meridianos.
+
+Observa-se que esses são apenas alguns exemplos de projeções do tipo cilíndricas. No site \url{https://map-projections.net/} é possível visualizar outras projeções que possuem o cilindro como  superfície de projeção. 
+
+\know{Projeções pseudo-cilíndricas}
+
+Além das projeções cilíndricas, existem também as denominadas projeções pseudo-cilíndricas, que são projeções nas quais os paralelos são representados por linhas retas paralelas e os meridianos por curvas. O meridiano central é o único meridiano reto. Alguns exemplos desse tipo são as Projeções  Mollweid, Robinson e Goode. Elas normalmente são usadas para representar o mundo em sua totalidade. A maioria das projeções pseudo-cilíndricas são equivalentes (não são conformes pois os paralelos e meridianos nem sempre se cruzam em ângulos retos).
+A Projeção Mollweide (\hyperref[mold]{figura \ref{mold}}) concebida por Karl Brandan Mollweide em 1805 é uma projeção equivalente, mantendo os paralelos como linhas retas enquanto preserva áreas. Todos os meridianos, exceto o central, são arcos elípticos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{Mollweide}.png}
+\caption{Projeção Mollweide\\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{mold}
+\end{figure}
+  
+ 
+A Projeção Pseudo-cilíndrica de Robinson (\hyperref[rob]{figura \ref{rob}}) inventada por Arthur H. Robinson em 1963. É uma projeção não  conforme ou equivalente, mas  nenhum ponto está livre de distorção (ou seja, é afilática). A projeção fornece uma visão mais realista do mundo, visto que as formas e áreas são razoavelmente bem preservadas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{rob}.png}
+\caption{Projeção Pseudo-cilíndrica de Robinson\\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{rob}
+\end{figure}
+
+
+A Projeção de Goode,  criada em 1923 por J. Paul Goode é uma projeção pseudo-cilíndrica equivalente, ou seja, conserva as áreas e é uma projeção do tipo  interrompida como a \hyperref[goode]{figura \ref{goode}} ilustra.  
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{goode}.png}
+\caption{Projeção de Goode\\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{goode}
+\end{figure}
+
+A Projeção de Goode é frequentemente chamada de "mapa da casca de laranja" por causa de sua semelhança com a casca de uma laranja  achatada sobre uma superfície.
+\clearpage
+\def\currentcolor{session1}
+\begin{objectives}{Projetando a esfera no plano}
+{
+  \begin{itemize}
+  \item Compreender uma projeção plana e visualizar as distorções decorrentes desse tipo de projeção.
+  \item \textbf{Conceitos abordados}: projeção plana.
+  \end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Projetando a esfera no plano}
+{
+  Recomendamos que os alunos usem a \textbf{parte A} da atividade \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica} para que façam um tipo diferente de projeção do mesmo "planeta". Explicar para os alunos, antes do início da atividade, que se trata de uma atividade prática, que pretende simular outro tipo de projeção cartográfica (projeção plana). Da mesma forma que na atividade anterior, alguns dos materiais confeccionados nessa atividade serão aproveitados nas atividades futuras. Dessa forma, caso a escola possua um lugar para os alunos guardarem esses materiais, seria interessante que o fizesse.
+
+  \textbf{Organização em sala de aula}: Sugerimos que a a atividade seja realizada em duplas, pois um aluno pode auxiliar o outro no momento de posicionar a lanterna e fazer os desenhos. Também pode ser realizada em grupo, porém quanto menor o grupo, melhor será a experiência.
+}{1}{1}
+\end{sugestions}
+\clearmargin
+
+\begin{sugestions}{Projetando a esfera no plano}
+{
+  \textbf{Enriquecimento da discussão}:
+\begin{itemize}
+\item  Para cortar a garrafa, oriente os alunos a fazerem pequenos furos com a ponta da tesoura e depois seguirem recortando Talvez seja necessária uma faca ou estilete para furar (esteja atento para não ocorrer acidentes).
+
+\item Sugira aos alunos fazer em algum lugar da parte A uma série de segmentos de retas paralelas de mesmo tamanho (alinhado na vertical). Será um ótimo jeito de observar as distorções.
+
+\item Discuta com os alunos como a distorção vai aumentando quanto mais próximo do centro da projeção.
+
+ \item Sugira também fazer desenhos espalhados, perto das bordas e centrais. Assim, poderão visualizar melhor onde ocorrem as maiores distorções.
+
+\end{itemize}
+ 
+
+
+  Para concluir, converse com seus alunos de quais foram as distorções, utilize de algumas perguntas que chamem a atenção dos alunos ao detalhes e enriqueça o debate. Algumas questões que podem ser feitas:
+  \begin{itemize}
+  \item onde se localizavam as maiores distorções?
+  \item algum desenho não aparentou estar distorcido?
+  \item por que nenhuma projeção possui imagem no centro ?
+  \end{itemize}
+
+  \begin{figure}[H]
+  \centering
+  
+  \includegraphics[width=.35\linewidth]{cartografia-professor18}
+  \end{figure}
+
+ Solicite aos alunos que guardem o material utilizado e as projeções obtidas para comparar com atividades futuras.
+
+  }{1}{0}
+\end{sugestions}
+\explore{Projeção Plana}\label{Pplanas}
+
+\begin{task}{Projetando a esfera no plano} \label{proj-planas}
+
+Os materiais  necessários para essa atividade são os mesmos da atividade \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica}.
+
+\begin{itemize}
+\item Tesoura (com ponta)
+\item Lanterna (pode ser do celular)
+\item Garrafa PET transparente 
+\item Fita auto adesiva
+\item Caneta esferográfica
+\item Papel vegetal (ou papel manteiga)
+\item Cola bastão
+\end{itemize}
+
+Como realizado na atividade anterior, faça 3 cortes como ilustra a \hyperref[garrafa]{figura \ref{garrafa}} e com  a caneta esferográfica desenhe na parte A da garrafa (\hyperref[garrafa1]{figura \ref{garrafa1}}), procure deixar figuras bem definidas para futuras observações. Caso já tenha feito essas duas etapas na atividade \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica}, recomendamos que aproveite a mesma garrafa e os mesmos desenhos.
+
+Estenda o papel vegetal (ou manteiga) sobre a mesa, ou sobre uma superfície de apoio. Coloque a parte A da garrafa no centro da folha,  com o bico voltado para  baixo, como ilustra a \hyperref[plana1]{figura \ref{plana1}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{plana1}.png}
+\caption{Posicionamento da parte A da garrafa}
+\label{plana1}
+\end{figure}
+
+Com a lanterna um dos alunos do grupo pode iluminar a parte A, observando para que a fonte da luz esteja esteja no centro da "esfera" (\hyperref[plana2]{figura \ref{plana2}}. Enquanto isso, os outros integrantes do grupo deverão destacar, utilizando a caneta esferográfica, a sombra  dos desenhos da parte A sobre o papel.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{plana2}.png}
+\caption{Posicionamento da fonte luminosa.}
+\label{plana2}
+\end{figure}
+
+
+Agora responda:
+
+\begin{enumerate}
+
+\item Após destacar todas as sombras, observe o que ocorrerá com elas se a \textbf{parte A} (semiesfera) mudar de posição.
+\item Modifique a localização da lanterna. Aproxime-a da borda do cilindro, coloque-a mais afastada possível, ilumine parte da superfície esférica. O que ocorre?
+\item Conclua a atividade analisando cada uma das imagens e discuta com o grupo se houve alguma distorção ao realizar a projeção.  Se sim, quais foram e onde ocorreram com maior intensidade. 
+
+\end{enumerate}
+\end{task}
+
+
+\arrange{Projeção plana}
+
+A atividade \hyperref[proj-planas]{Projetando a esfera no plano}  ilustra um segundo tipo de projeção, a denominada  projeção plana. Para essa projeção devemos imaginar que a Terra está sobre um plano paralelo ao Equador (por exemplo). Os raios de luz que emanam de um ponto infinitamente distante no eixo polar norte-sul perfuram um hemisfério norte  e "pintam" suas características no plano ( considerando o hemisfério sul completamente transparente) como ilustra a \hyperref[plana3]{figura \ref{plana3}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{carto39}.png}
+\caption{Projeção Plana \\ Fonte: \href{http://www.progonos.com}{Progonos}}
+\label{plana3}
+\end{figure}
+
+Solicitamos na atividade \hyperref[proj-planas]{Projetando a esfera no plano} que algumas imagens fossem desenhadas em parte de uma garrafa pet e, usando  uma lanterna  a uma distância conveniente, projetassem as sombras do que foi desenhado em uma superfície plana, criando assim uma variedade de projeções planas. Como é possível perceber,  apenas alterando a posição da fonte de luz outras projeções planas podem ser criadas.  Isso ocorre, pois, as projeções cartográficas (cilíndricas e planas) podem ser classificadas de acordo com a situação do centro de projeção (ponto de vista).
+
+O experimento realizado nas atividades \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica} e \hyperref[proj-planas]{Projetando a esfera no plano} é o que denomina-se uma projeção geométrica em perspectiva, visto que a projeção foi  obtida pela interseção, sobre determinada superfície (cilindro), dos feixes de retas (feixes de luz)  que passam pelos pontos correspondentes da superfície da Terra (garrafa) e por um ponto (origem da luz), denominado Ponto de vista, ou centro de projeção. O centro de projeção, por comodidade, pode estar disposto a qualquer distância do centro da Terra, desde o infinito até ser coincidente com este ponto (centro da Terra). Porém, de todas essas alternativas, existem posições (pontos de vista) importantes que deram origem a uma classificação das projeções perspectivas(\hyperref[projp]{figura \ref{projp}}), que são: 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{carto44}.png}
+\captionsetup{justification=centering}
+\caption{Projeções gnomônica, estereográfica e  ortográfica \\ Fonte: \href{http://www.aeroclubedebrasilia.org.br}{Aeroclube de Brasilia}}
+\label{projp}
+\end{figure}
+
+A projeção gnomônica tem o centro de projeção no centro da superfície terrestre, a projeção estereográfica tem o centro de projeção na superfície da Terra  e  a projeção ortográfica o ponto de vista se encontra no infinito. Se o centro da projeção estiver em qualquer outro ponto, a projeção denomina-se  cenográfica . Salienta-se que esses tipos de projeção são combinados com as projeções planas  e com as projeções do tipo cilíndricas. 
+
+
+As projeções planas,  geralmente são tangentes ao globo em um ponto. O ponto de contato pode ser o Polo Norte, o Polo Sul, um ponto no equador ou qualquer ponto intermediário. Este ponto especifica o aspecto e  o foco da projeção.  As  projeções planas clássicas são denominadas a partir do ponto de vista como ortográficas, estereográficas e gnomônicas. Existem outras projeções do tipo plana que não se enquadram nessa classificação, como por exemplo a Projeção Plana Equivalente de Lambert.
+
+A Projeção Plana Estereográfica ou Projeção Plana Conforme é uma projeção que preserva a forma dos continentes. Por essa razão, paralelos e meridianos se cruzam em ângulos retos. Nessa projeção os meridianos são linhas retas igualmente espaçadas, os paralelos são círculos espaçados de forma desigual e centrados no ponto de tangencia (\hyperref[planacon]{figura \ref{planacon}}). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{estereo_pl}.png}
+\caption{Projeção Estereográfica Plana \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{planacon}
+\end{figure}
+
+Um ponto central para compreender a projeção estereográfica é entender onde está a fonte de luz (a lanterna da atividade \hyperref[proj-planas]{Projetando a esfera no plano}). Nesse tipo de projeção, a fonte de luz encontra-se na extremidade oposta onde o plano tangente toca a superfície esférica (\hyperref[estereo]{figura \ref{estereo}}).
+ 
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{estereo}.png}
+\caption{Projeção Estereográfica  \\ Fonte: \href{http://www.aeroclubedebrasilia.org.br}{Aeroclube de Brasilia}}
+\label{estereo}
+\end{figure}
+ 
+Conforme já comentado, as projeções ortográficas são projeções em perspectiva que vêm a superfície terrestre de uma distância infinita.
+No caso da Projeção Plana Ortográfica, a distorção no tamanho e na área perto do limite de projeção parece mais real do que quase qualquer outra projeção. Em geral, os meridianos são linhas retas que irradiam do centro, e os paralelos são projetadas como círculos concêntricos que se aproximam da borda do globo ( \hyperref[p_orto]{figura \ref{p_orto}})
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{orto_pl}.png}
+\caption{Projeção Plana Ortográfica \\ Fonte: \href{http://https://gisgeography.com/azimuthal-projection-orthographic-stereographic-gnomonic/}{GIS Geography}}
+\label{p_orto}
+\end{figure}
+ 
+ 
+A Projeção Plana Gnomonica (também conhecida como Projeção Plana Central) é do tipo afilática, onde os círculos máximos (distâncias mais curtas entre dois lugares na superfície esférica) são representados como linhas retas (\hyperref[p_gno]{figura \ref{p_gno}}).
+ 
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{plana_gnomo}.png}
+\caption{Projeção Plana Gnomonica \\ Fonte: \href{http://ttps://gisgeography.com/azimuthal-projection-orthographic-stereographic-gnomonic/}{GIS Geography}}
+\label{p_gno}
+\end{figure} 
+
+Essa projeção é útil para definir rotas de navegação para viagens marítimas e aéreas, porque a rota mais curta entre quaisquer dois locais é sempre uma linha reta, como ilustra a \hyperref[p_gno1]{figura \ref{p_gno1}}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{{plana_gnomo1}.png}
+\caption{Rotas na Projeção Plana Gnomonica }
+\label{p_gno1}
+\end{figure} 
+
+
+A Projeção Plana Equivalente de Lambert (\hyperref[plana_lamb]{figura \ref{plana_lamb}}) preserva áreas. É utilizada para mapear continentes ou regiões que se estendem igualmente em todas as direções a partir do centro, como a Ásia e o oceano Pacífico. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{{plana_lamb}.png}
+\caption{Projeção Plana Equivalente de Lambert \\ Fonte: \href{https://kartoweb.itc.nl/geometrics}{Geometric Aspects of Mapping}}
+\label{plana_lamb}
+\end{figure} 
+
+ 
+\know{Projeções Azimutais}
+A projeção plana também é conhecida como projeção azimutal, pois são aquelas que preservam azimutes.
+Mas o que são azimutes? 
+Considerando-se três pontos N, A e B sob a suferfície esférica, onde N é o Polo Norte, e NA e NB são arcos de circulo máximo (\hyperref[azi]{figura \ref{azi}})
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{carto40}.png}
+\caption{Três arcos de círculos máximos. \\ Fonte: \href{https://kartoweb.itc.nl/geometrics}{Geometric Aspects of Mapping}}
+\label{azi}
+\end{figure} 
+
+É possível mostrar que a linha $AB$ representa a menor distância entre $A$ e $B$, portanto um arco de circulo máximo. Assim, da interseção dos três arcos de círculos máximos ($NA$, $NB$ e $AB$) define-se um triângulo esférico.
+0 azimute de um ponto a outro, é genericamente definido como o ângulo formado entre a direção norte e a direção a outro ponto, contado no sentido horário. Em termos da superfície terrestre, pode ser visto como o ângulo esférico formado entre qualquer circulo máximo e um meridiano, tendo como origem a orientação para o norte. Contado no sentido horário $NAB$ representa o azimute de $A$ para $B$ e $NBA$ o azimute de $B$ para $A$.
+
+Todas as projeções azimutais preservam o azimute a partir de um ponto de referência (o centro conceitual da projeção), apresentando assim a direção verdadeira (mas não necessariamente a menor distância) para quaisquer outros pontos. 
+
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{objectives}{Projetando a esfera em uma superfície cônica}
+{ \begin{itemize}
+  \item Compreender uma projeção cônica e visualizar as distorçôes decorrentes desse tipo de projeção.
+  \item \textbf{Conceitos abordados:} projeção cônica
+  \end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Projetando a esfera em uma superfície cônica}
+{
+  Recomendamos que use a \textbf{parte A} da atividade \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica}   e/ou da atividade  \hyperref[proj-planas]{Projetando a esfera no plano} para que façam diferentes projeções do mesmo "planeta" . Novamente solicitamos que  explique para os alunos, antes do início da atividade, que se trata de uma atividade prática que pretende simular outro tipo de projeção cartográfica (projeção cônica).  Antes do início da atividade, solicite que o aluno leia todas as instruções, para que fique claro quais procedimentos serão utilizados. Caso seja necessário, esclareça que a \textbf{parte A} da garrafa representa parte da superfície esférica e o papel ao ser enrolado como um cone, representa a superfície de projeção.
+
+  \textbf{Organização em sala de aula}: Sugerimos que a atividade seja realizada em duplas. Também pode ser realizada em grupo, porém quanto menos or grupo, melhor será a experiência.
+
+  \textbf{Enriquecimento da discussão}:
+  
+ Além dos mesmos itens sugeridos nas atividades \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica}   e \hyperref[proj-planas]{Projetando a esfera no plano}, insista fortemente o uso de cola bastão, pois facilitará ao desfazer o cone.
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{sugestions}{Projetando a esfera em uma superfície cônica}
+{
+
+
+  Solicite aos alunos para prestarem atenção no que é distorção pela projeção, e as distorções devidas ao papel amassado. Esse experimento é o que exige mais cuidado na manipulação dos elementos.
+
+  Para concluir, converse com seus alunos de quais foram as distorções, utilize de algumas que poderão chamar a atenção dos alunos e enriquecer o debate, como por exemplo:
+
+  \begin{itemize}
+  \item onde se localizavam as maiores distorções?
+  \item todos os desenhos apareceram?
+  \item algum desenho não aparentou estar distorcido?
+  \item algum desenho ficou dividido pelos limites da projeção?
+  \end{itemize}
+
+  \begin{figure}[H]
+  \centering
+  
+  \includegraphics[width=.35\linewidth]{cartografia-professor19}
+  \end{figure}
+
+
+  Algumas características gerais das projeções cônicas  que  podem ser úteis em uma sistematização:
+  \begin{itemize}
+  \item Os paralelos e meridianos se cruzam a $90^{\circ}$;
+  \item Os Meridianos são linhas retas;
+  \item Paralelos são arcos circulares concêntricos;
+  \item Pode ter as propriedades de equidistância, conformalidade ou equivalência;
+  \item O polo é representado como um arco ou um ponto.
+  \end{itemize}
+}{1}{0}
+\end{sugestions}
+
+
+\explore{Projeção Cônica}\label{Pconica}
+
+\begin{task}{Projetando a esfera em uma superfície cônica} \label{proj-conicas}
+
+Assim como fizemos para o cilindro e o planos, essa atividade tem como objetivo simular uma projeção cartográfica do tipo cônica. Os materiais necessários são os mesmos das atividades anteriores. E as duas primeiras etapas também são as mesmas. Inclusive recomendamos que utilize a \textbf{parte A} da garrafa com os desenhos feitos nas atividades \hyperref[proj_cil]{Projetando a esfera em uma superfície cilíndrica} e \hyperref[proj-planas]{Projetando a esfera no plano}. 
+O que muda nessa atividade é o formato da superfície que fará contato com a \textbf{parte A} da garrafa, que está representando a superfície de referencia (esfera). Assim, solicitamos que enrole  o papel vegetal (ou manteiga) transformando-o em uma superfície cônica. Utilize de cola ou fita auto adesiva para fixar no formato de cone. Depois, utilizando a cola bastão, faça 3 ou 4 riscos (perpendiculares a parte inferior) espalhadas pela semiesfera (\textbf{parte A} da garrafa). Lembre-se que posteriormente o papel vegetal deverá ser retirado (\hyperref[cone1]{figura \ref{cone1}}). 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{cone1}.png}
+\caption{Superfície cônica de papel vegetal}
+\label{cone1}
+\end{figure} 
+
+Pegue a semiesfera (parte A) e o cone e coloque semiesfera com os desenhos “representação do mapa” como uma tampa do cone, conforme ilustra a \hyperref[cone2]{figura \ref{cone2}}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{cone2}.png}
+\caption{Cone enrolado na parte A.}
+\label{cone2}
+\end{figure}
+
+ 
+Posicione a lanterna de forma que ilumine o cone e a parte A,  de baixo para cima,  e de modo que a luz esteja direcionada para o centro da semiesfera. Então, com extrema cautela (para não amaçar o cone), desenhe utilizando a caneta esferográfica a projeção dos desenhos da parte A sobre o papel (\hyperref[cone3]{figura \ref{cone3}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{cone3}.png}
+\caption{Iluminação.}
+\label{cone3}
+\end{figure}
+
+Agora, responda as questões:
+\begin{enumerate}
+\item Após desenhar todas as projeções das sombras, levante lentamente o cone, observando como as sombras mudam a medida que a superfície cônica se afasta da luz. Movimente o cone para os lados. O que ocorre?
+\item Conclua a atividade marcando sobre o papel, com a caneta esferográfica, os limites das projeções e a parte sobreposta da folha. Desfaça o cone e recorte os limites traçados.  Analise uma imagem de cada vez, e discuta com o grupo se ocorreu alguma distorção em relação ao desenho original. Se sim, quais foram e onde ocorreram com maior intensidade? 
+
+\end{enumerate}
+
+\end{task}
+
+\arrange{Projeção cônica}
+Na atividade  \hyperref[proj-conicas]{Projetando a esfera em uma superfície cônica}, podemos perceber que as projeções cônicas são criadas colocando-se uma superfície cônica sobre a superfície esférica e projetando luz do centro dessa para a superfície cônica.
+
+Alguns mapas muito antigos, como os feitos pelo cientista grego  Ptolomeu (\hyperref[pito]{figura \ref{pito}}) usaram  características de projeções cônicas. No caso do mapa de Ptolomeu  há pouca evidência de que ele realmente aplicou o cone, ou mesmo se referiu a um cone como uma superfície de projeção de mapa desenvolvível. 
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{{carto41}.png}
+\caption{Mapa de Ptolomeu. \\ Fonte: \href{https://pt.wikipedia.org/wiki/Ptolemeu}{Wikipedia}}
+\label{pito}
+\end{figure}
+
+O cosmógrafo Johannes Ruysch, em 1507,  foi provavelmente a primeira pessoa a aplicar o que reconheceríamos como uma projeção cônica (\hyperref[cone4]{figura \ref{cone4}}).
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{{carto42}.png}
+\caption{Mapa de Johannes Ruysch. \\ Fonte: \href{https://pt.wikipedia.org/wiki/Johann_Ruysch}{Wikipedia}}
+\label{cone4}
+\end{figure}
+
+A projeção cônica mais simples contata a superfície esférica ao longo de  um único paralelo (tangente a superfície do cone), denominada de paralelo padrão. As linhas de longitude são projetadas na superfície cônica, encontrando-se no ápice, enquanto os paralelos são projetadas no cone como anéis. O cone é cortado ao longo de qualquer linha de longitude para produzir a projeção final (\hyperref[cone5]{figura \ref{cone5}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{{carto43}.png}
+\captionsetup{justification=centering}
+\caption{Projeção do tipo cônica. \\ Fonte: \href{https://geologyscience.com/general-geology/types-of-maps/}{Geology Science}}
+\label{cone5}
+\end{figure}
+
+
+Esse tipo de projeção é muito utilizada para mapas regionais ou hemisféricos, mas raramente para um mapa-múndi completo. A distorção em uma representação desse tipo, o torna inadequada para visualizar toda a superfície terrestre, mas é favorável para visualizar regiões temperadas e mapas do tipo climáticos, por exemplo.
+
+Em geral, a distorção aumenta ao norte e ao sul do paralelo padrão. A distorção nos polos é tão extrema que muitos mapas que usam projeções cônicas removem as regiões polares. Observamos que  qualquer mapa cônico pode ser envolvido em uma superfície cônica, embora todas as projeções cônicas importantes não sejam baseadas em um modelo simples, ou seja, a superfície cônica é sempre o resultado da projeção, mas raramente participa diretamente de sua construção geométrica.
+
+As três projeções cônicas mais conhecidas são a Projeção Cônica Conforme de Lambert, a Projeção Cônica Simples e a Projeção Equivalente de Albers. Elas fornecem mapas úteis para países que não têm grande extensão em latitudes.
+
+A Projeção Cônica Conforme de Lambert (\hyperref[tisslambcon]{figura \ref{tisslambcon}}), quanto a distorção é classificada como conforme, visto que as área e a forma são distorcidas.Foi desenvolvida por J.H. Lambert em 1772. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{{tisslambcon}.png}
+\captionsetup{justification=centering}
+\caption{Indicatriz de Tissot- Projeção Cônica Conforme de Lambert. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{tisslambcon}
+\end{figure}
+
+ Na Primeira Guerra Mundial essa projeção foi a projeção usada como  padrão para mapas intermediários e em grande escala de regiões em latitudes médias (para as quais a projeção de Mercator não é usada). 
+
+Atualmente  é usada de forma frequente para mapas de navegação aérea. Na Projeção Cônica Conforme de Lambert (figura \hyperref[conlam]{figura \ref{conlam}}) os paralelos e os meridianos se cruzam em ângulos retos (como em qualquer projeção conforme).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{{conica_lam}.png}
+\caption{Projeção Cônica Conforme de Lambert. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{conlam}
+\end{figure}
+
+
+A Projeção Cônica Simples ou Cônica Equidistante (\hyperref[conesim]{figura \ref{conesim}}) é uma projeção cônica normal. Todos os paralelos são representados por arcos circulares e são espaçados uniformemente ao longo dos meri-dianos, o que torna a projeção equidistante( que preserva distâncias) ao longo dos meridianos. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{{cone_simples}.png}
+\caption{Projeção Cônica Simples. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{conesim}
+\end{figure}
+
+ 
+A Projeção Equivalente de Albers ou Projeção Albers (\hyperref[albers]{figura \ref{albers}}) foi criada por Heinrich C. Albers  em meados de 1805 e usa dois paralelos padrão. Ela preserva as áreas (equivalente) e tem distorções de forma. Esta projeção é mais adequada para regiões localizadas nas latitudes médias. É uma projeção usada para peque-nas regiões ou países, mas não para continentes. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{{albers}.png}
+\caption{Projeção Albers. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{albers}
+\end{figure}
+
+
+\clearpage
+\def\currentcolor{session2}
+
+\begin{texto}
+{ 
+  \section{Praticando: Projeções Cartográficas}
+  Esse praticando diz respeito a todo o capítulo, ao contrário de outros capítulos do Livro Aberto, optamos por fazer apenas uma seção praticando, visto o caráter mais informativo que esse capítulo possui.
+}
+\end{texto}
+\begin{objectives}{Sobre mapas e localizações}
+{ Perceber outra aplicação para as projeções cartográficas.
+  
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Sobre mapas e localizações}
+{
+  Notamos que é muito popular em jogos (como War) o deslocamento lateral sabendo, por exemplo, que Estados Unidos e Rússia estão próximos, apesar de serem os extremos do mapa. Porém, os limites superiores e inferiores não são muito explorados, acreditamos que uma opção viável para melhor conclusão desse exercício seja um globo terrestre (ou, se possível, o aplicativo Google Earth).
+  Primeiramente, dê um tempo para que os alunos resolvam individualmente. Caso tenham muita dificuldade, dê sugestões como:
+  \begin{itemize}
+  \item Relembrar os alunos do formato da Terra e explicando que se tivermos um globo, basta seguir a direção indicada, porém, um mapa não é tão simples de ler.
+  \item Sugira aos seus alunos que tentem visualizar mentalmente o globo terrestre, e com os indicadores do mapa, simular o que está acontecendo.
+  \item Sabemos que as extremidades laterais estão unidas pelo oceano Pacífico, contudo, nos limites limites inferior e superior temos o Polo Norte e o Polo Sul, que não são próximos um do outro.
+  \end{itemize}
+
+  \textbf{Organização em sala de aula}: Esses exercícios visam um desafio individual para os alunos.
+}{1}{0}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Sobre mapas e localizações}
+{
+\textbf{Parte 1}
+\begin{enumerate}
+\item Letra a
+\item Letra c
+\end{enumerate}
+
+\textbf{Parte 2}
+
+Caso os alunos não tenham ideia de onde vão "sair"{} no mapa, você professor pode instigar os alunos, dando outras sugestões de resposta, como por exemplo:
+\begin{enumerate}
+\item Pouco acima da Sibéria (localizada no topo do continente amarelo)
+\item Pouco abaixo da América do Sul (continente verde)
+\item Na borda superior do mapa, pois ali é o limite do planeta.
+\item Pouco abaixo da Oceania (continente vermelho)
+\item Cairíamos num abismo/espaço
+\end{enumerate}
+}{1}
+\end{answer}
+
+\begin{knowledge}
+Nem todas as projeções cônicas possuem a mesma aparência. Por exemplo, a Projeção Bottomley (\hyperref[bot]{figura \ref{bot}}) é uma projeção equivalente (que preserva área) e foi desenvolvida pelo estatístico inglês Henry George Bottomley em 2003. É uma projeção moderna cujos os paralelos são arcos de elipses centrados no polo norte. Apenas o meridiano central tem forma não distorcidas. Esta projeção tem por objetivo reduzir a extensão da distorção extrema nas bordas e representar a forma do planeta Terra de forma mais geral.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{{bottomley}.png}
+\caption{Projeção Bottomley.\\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
+\label{bot}
+\end{figure}
+\end{knowledge}
+
+
+Observa-se que esses são apenas alguns exemplos de projeções do tipo cilindricas. No site \url{https://map-projections.net/} é possível visualizar outras projeções que possuem o cone como  superfície de projeção. 
+
+
+\practice{Projeções Cartográficas}
+
+\begin{task}{Sobre mapas e localizações}
+
+\textbf{Parte 1:} Durante uma viagem de avião, por medidas de segurança estamos sendo rastreados e o mapa que indica nossa localização tem um formato onde o  nosso avião é um ponto branco que aparece no mapa. Supondo que o avião mantenha a direção indicada pela seta. Em cada figura, determine qual o local (a, b, c ou d)  que o rastreador deverá indicar?
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{{pratica 3}.png}
+\caption{Figura 1.}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{{pratica4}.png}
+\caption{Figura 2.}
+\end{figure}
+
+
+\textbf{Parte 2:} O jogo War é um jogo de tabuleiro onde você é dono de um exército e necessita ser bom em estratégia para conquistar novos territórios e cumprir seu objetivo.
+A \hyperref[war]{figura \ref{war}} ilustra o  mapa utilizado no jogo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{war}.png}
+\caption{Tabuleiro do jogo War}
+\label{war}
+\end{figure}
+
+As linhas que parecem sob o oceano representam as imigrações que pode fazer com seu exército . Note que podemos ir do Alaska (EUA) para Vladvostok (RUS). 
+Agora supondo que você está em um barco acima da Groelândia (EUA) e continue subindo até acabar o mapa. Qual seria o lugar mais provável que você vai “sair”?
+
+\end{task}
+\clearpage
+\begin{objectives}{Sobre coordenadas cartográficas}
+{
+  Essa atividade tem por objetivo aplicar os conceitos de projeções cartográficas e distorções.
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Sobre coordenadas cartográficas}
+{
+  Recomendamos ao professor instalar o aplicativo Projeções Cartográficas. As instruções para fazê-lo podem ser acessadas no site \url{http://www.im-uff.mat.br/mp/desktop/}. O vídeo mostrando o seu funcionamente está disponível em \url{https://youtu.be/hqehS3hd5j4}
+
+  \textbf{Organização em sala de aula}: Recomenda-se que os estudantes trabalhem em duplas, de preferência em um laboratório de informática, onde o aplicativo Projeções Cartográficas seja previamente instalado.
+
+  Observamos que essa atividade foi adaptada de \textbf{Bortolossi e de Almeida Junior (2016)}.
+
+  
+}{1}{0}
+\end{sugestions}
+\begin{objectives}{Comparando projeções cartográficas}
+{
+  \begin{itemize}
+  \item Aplicar os conceitos de projeções cartográficas e distorções.
+  \item Analisar os tipos de distorções realizadas em cada projeção.
+  \end{itemize}
+}{1}{0}
+\end{objectives}
+\clearmargin
+\begin{sugestions}{Comparando projeções cartográficas}
+{
+  Estas atividades foram pensadas para serem realizadas com o uso de ferramentas computacionais. Pretende-se com o uso dessas ferramentas chamar a atenção para os diferentes tipos de projeções, realizar comparações entre, e reconhecer qual o tipo de distorção que está sendo realizada em cada projeção. Ainda é possível explorar algumas projeções que não foram mencionadas.
+
+  A atividade 1 é uma atividade de exploração. Observamos que estamos retomando alguns conceitos vistos anteriormente.
+
+  As respostas são pessoais, mas é importante que ocorra uma discussão com toda a turma sobre o que os alunos estão pensando.
+}{1}{1}
+\end{sugestions}
+\begin{objectives}{Projeções cartográficas dinâmicas}
+{
+  Essa atividade tem como objetivo aplicar os conhecimentos adquiridos na última seção do capítulo na última seção do capítulo.
+
+  Nela, os alunos poderão enxergar de forma dinâmica o processo de projeção cartográfica.
+
+  As perguntas que foram realizadas são apenas para que os alunos percebam o que ocorre ao modificar a posição (o tipo de superfície de projeção é modificada), a luminosidade (acontece algo semelhante ao que ocorreu na simulação com as garrafas), e ao clicar em flat, o aluno visualiza a projeção cartográfica resultante.
+
+  Essa é uma atividade onde o aluno poderá perceber que existe uma quantidade muito grande de projeções cartográficas
+}{1}{1}
+\end{objectives}
+
+\begin{task}{Sobre coordenadas geográficas} 
+
+Para realizar essa atividade vamos utilizar o aplicativo Projeções cartográficas, instalado no labora-tório da sua escola.
+
+Observe que no aplicativo é apresentado o sistema de coordenadas geográficas e com ele podemos  visualizar, de forma interativa, os ângulos que definem a latitude e longitude de um ponto sobre o globo terrestre. Movimente os pontos e responda
+\begin{enumerate}
+\item Existe alguma localidade do Brasil que tenha longitude $90^{\circ} O$? 
+\item Qual é a latitude sobre os pontos do Equador? 
+\item Qual é a longitude do Pólo Norte? 
+\item O Trópico de Capricórnio cruza o Brasil? E o Trópico de Câncer? 
+\item Cite alguns países por onde passa o Meridiano de Greenwich ?
+\end{enumerate}
+\end{task}
+
+\begin{task}{Comparando projeções cartográficas} 
+Para realizar essa atividade recomendamos utilizar o aplicativo disponível no site \url{http://projections.mgis.psu.edu/}.
+
+\textbf{Parte 1:} Para começar essa atividade precisamos que selecione duas projeções cartográficas, sugerimos a Projeção Cilíndrica Mercator (Mercator)  e a Projeção Robinson.
+Para selecionar as projeções cartográficas, clique na caixa \textit{Projection} no canto inferior esquerdo do site (\hyperref[prat1]{figura \ref{prat1}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{{pratica 1}.png}
+\caption{Aplicativo Projections}
+\label{prat1}
+\end{figure}
+
+Observe as diferenças e responda as questões abaixo
+\begin{enumerate}
+\item O que você notou sobre o tamanho dos continentes?
+\item Qual dessas projeções cartográficas você acredita ser a mais precisa para ensinar alguém sobre o tamanho e a forma dos continentes?
+\end{enumerate}
+	
+\textbf{Parte 2:} Compare as projeções Cônicas Simples ( \textit{Equidistant Conic }) e a Lambert ( \textit{Lambert Conformal Conic}).
+\begin{enumerate}
+\item O que você notou sobre o tamanho dos continentes? E as formas?
+\item Você acredita que essas projeções podem representar toda a superfície terrestre? Por que?
+\end{enumerate}
+	
+\textbf{Parte 3:} Perceba que no site existem muitas projeções cartográficas que não foram abordadas no texto. Vamos imaginar para o que você pode querer usar essas projeções.
+\begin{enumerate}
+\item Qual deles você escolheria se estivesse tentando mostrar a alguém como eles podem navegar ao redor do mundo em um navio?
+\item Qual deles você escolheria para mostrar como os aviões podem voar ao redor do mundo?
+\item Qual você acha que é o mais preciso para ensinar alguém sobre o tamanho e a forma dos continentes?
+\end{enumerate}
+\end{task}
+
+
+\begin{task}{ Projeções Cartográficas Dinâmicas}
+
+No site \url{https://gevian.github.io/GITTA-MP/basic.html} é possível visualizar as projeções ( cilíndricas, cônicas e planas), modificando alguns parâmetros como ilustra a \hyperref[gitta]{figura \ref{gitta}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{{pratica5}.png}
+\caption{Aplicativo Gitta Map Projection}
+\label{gitta}
+\end{figure}
+
+Modifique os parâmetros posição, luminosidade. O que ocorre? E ao clicar em em flat, o que podemos  observar?
+
+\end{task}
+
+
+\clearpage
+
+\begin{objectives}{Comparando as projeções cartográficas com o globo}
+{
+ \begin{itemize}
+  \item Revisar características de mapas mais conhecidos e compará-los com um globo terrestre.
+  \item \textbf{Conceitos abordados}: Retas e análise de mapas.
+  \end{itemize} 
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Comparando as projeções cartográficas com o globo}
+{
+  \textbf{Material necessário}: globo terrestre; mapa de Mercator; mapa de Mollweide; mapa de Robinson.
+
+  Caso não consiga um globo, tente acessar com os alunos o Google Earth. Os mapas não facilmente encontrados online, porém, se preferir fazer, o capítulo contém a representação destas projeções.
+
+  \textbf{Organização em sala de aula}: Pode ser feita em sala de aula ou na sala de informática. Devida a dificuldade para ter mais de um globo, sugerimos que você o manipule na frente dos alunos, para que eles tentem completar sozinhos, fazendo uma pergunta de cada vez. 
+}
+{1}{0}
+\end{sugestions}
+\begin{answer}{Comparando as projeções cartográficas com o globo}
+{
+\begin{table}[H]
+\centering
+\setlength\tabulinesep{5pt}
+\begin{tabu} to \textwidth{|l|m{.2\linewidth}|m{.25\linewidth}|m{.3\linewidth}|}
+\hline
+\thead
+& Descreva os meridianos & \vspace{5pt}Quais distorções você vê?\vspace{5pt} & Por que usar essa projeção? \\
+\hline
+Globo & Os meridianos são linhas verticais se encontram nos polos & Tamanho e formatos não foram distorcidas
+& É a melhor representação do planeta, em relação ao tamanho dos continentes, países e oceanos, se você não precisar de um mapa plano. \\[5.1em]
+\hline
+Mercator & Os meridianos são paralelas entre si e perpendiculares aos paralelos,  formando uma grade. & Perto dos polos existe um aumento de tamanho, podemos ver isso observando Canadá, Alaska e Antártica. Fazendo a América do Sul e África aparentarem pequenos. & Como as distâncias oceânicas e a linhas de latitude/longitude não foram distorcidas, é uma ótima opção para navegação. \\[5.1em]
+\hline
+Mollweide & Não são paralelas entre si e se encontram nos polos. & Os continentes aparentam ter formato distorcido. América do Norte, Austrália e Ásia parecem achatadas na diagonal 
+& O tamanho dos continentes é mais fidedigno, logo é bom para representar todos continentes. Já os oceanos ficaram distorcidos. \\[5.1em]
+\hline
+Robinson & Não são paralelas entre si nem se encontram nos polos & Antártica aparente muito grande. E Groelândia achatada no sentido norte sul & Suas distorções aparentam um meio termo entre Molweide e Mercartor, então seria bom tanto para terra quanto mar. \\[5.1em]
+\hline
+\end{tabu}
+\end{table}
+}
+{0}
+\end{answer}
+
+\begin{task}{Comparando as projeções cartográficas com o globo}
+Analise as projeções cartográficas e o globo para completar a tabela. 
+
+\begin{table}[H]
+\centering
+\setlength\tabulinesep{5pt}
+\begin{tabu} to \textwidth{|l|m{.2\textwidth}|m{.25\textwidth}|l|}
+\hline
+\thead
+& Descreva os meridianos & \vspace{5pt}Quais distorções você vê?\vspace{5pt} & Por que usar essa projeção? \\
+\hline
+Globo & & & \\[5.1em]
+\hline
+Mercator & & & \\[5.1em]
+\hline
+Mollweide & & & \\[5.1em]
+\hline
+Robinson & & & \\[5.1em]
+\hline
+\end{tabu}
+\end{table}
+\end{task}
+
+\exercise
+
+\begin{enumerate}
+
+\item O site \url{https://www.leventhalmap.org/digital-exhibitions/bending-lines/interactives/projection-face/} possui uma ferramenta que permite que você veja o que acontece se projetamos uma cabeça humana de diferentes maneiras.  Para usar essa ferramenta, vamos escolher a projeção Mercator. Use o menu suspenso para encontrá-la e responda as questões:
+\begin{enumerate}
+\item Qual parte da cabeça parece mais precisa? Qual parte parece mais incorreta (tem mais distorção?)
+\item Escolha duas outras projeções para explorar:
+\begin{enumerate}
+\item Como eles diferem do Mercator?
+\item Onde a cabeça parece mais precisa?
+\item  Onde tem mais distorção?
+\end{enumerate}
+\end{enumerate}
+
+
+
+\item Observe a figura a seguir: 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{cartografia38}
+\end{figure}
+
+Sabendo que as figuras abaixo são projeções cartográficas da figura anterior, aponte as deformações ocorridas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.675\textwidth]{cartografia390}
+\end{figure}
+
+
+\item Sobre as importâncias das projeções cartográficas, marque verdadeiro (V) ou (F) nas afirmações seguintes:
+
+({ }{ }{ }) --- Colocar o mundo em uma face, alocando, em uma viagem, a origem e o destino no mesmo campo de visão.
+
+({ }{ }{ }) --- Uma representação perfeita do globo, agora num plano.
+
+({ }{ }{ }) --- Organização dos territórios, por ser um material portátil.
+
+({ }{ }{ }) --- Auxílio no deslocamento, principalmente no tempo das navegações.
+
+({ }{ }{ }) --- Utiliza o mesmo sistema de medida que o plano cartesiano tridimensional
+
+({ }{ }{ }) --- Tem apenas três tipos de projeções: a cônica, a cilíndrica e a plana.
+
+({ }{ }{ }) --- Pode ter distorção de área, mas nunca de formato.
+
+\item "Se assumimos que a terra é uma esfera, basta planificar a sua superfície". Utilize seus conhecimentos e experiências da última atividade para agumentar contra esta frase.
+
+\item Marque no mapa os seguintes pontos e suas coordenadas:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=350bp]{cartografia44}
+
+\end{figure}
+
+\begin{enumerate}
+\item ($60^{\circ}$S; $30^{\circ}$L)
+\item ($30^{\circ}$N; $30^{\circ}$O)
+\item ($60^{\circ}$S; $120^{\circ}$L)
+\item ($90^{\circ}$N; $30^{\circ}$L)
+\end{enumerate}
+
+\item Marque a alternativa correta sobre a projeção cilíndrica:
+\begin{enumerate}
+\item O globo terrestre é projetado na superfície lateral do cilindro.
+\item O globo terrestre é projetado nas bases do cilindro.
+\item O globo terrestre é projetado em toda superfície do cilindro (lateral e suas bases).
+\item O globo terrestre é projetado num retângulo qualquer, cilindro é sá uma analogia.
+\end{enumerate}
+
+\item Ao realizar uma projeção cilíndrica obtemos:
+\begin{enumerate}
+\item Um quadrado, pois assim como a esfera tem seus lados iguais.
+\item Um círculo, porque a a base do cilindro é redonda.
+\item Um retângulo, pois o diâmetro é menor que o perímetro.
+\item Um retângulo, pois não é possível a superfície lateral do cilindro ser um quadrado.
+\end{enumerate}
+
+\item Marque a alternativa \textbf{incorreta} sobre as vantagens da projeção cilíndrica:
+\begin{enumerate}
+\item Torna possível uma visão ampla do globo terrestre em uma só face.
+\item Pode ser utilizada para comparação de áres dependendo do mapa utilizado.
+\item É a projeção mais utilizada, pois não tem distorções notáveis a olho nu.
+\item É utilizado em diversos jogos, auxiliando o conhecimento popular.
+\end{enumerate}
+
+\item Se formos escrever uma mensagem no globo para ser lida numa projeção cilíndrica, qual o melhor local e por que?
+
+\item Marque a alternativa correta sobre a projeção cônica:
+\begin{enumerate}
+\item O globo terrestre é projetado na superfície lateral do cone.
+\item O globo terrestre é projetado na base do cone.
+\item O globo terrestre é projetado em toda superfície do cone (lateral e sua base).
+\item O globo terrestre é projetado num formate de leque, que poderia formar um cone.
+\end{enumerate}
+
+\item Marque no mapa os seguintes pontos, dadas suas coordenadas:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=250bp]{cartografia45}
+
+\end{figure}
+
+\begin{enumerate}
+\item ($30^{\circ}$S; $30^{\circ}$L)
+\item ($0^{\circ}$N; $0^{\circ}$O)
+\item ($60^{\circ}$N; $150^{\circ}$O)
+\item ($90^{\circ}$N; $120^{\circ}$L)
+\end{enumerate}
+
+\item Marque a alternativa \textbf{incorreta} sobre a projeção cônica:
+\begin{enumerate}
+\item Diferente da projeção dilíndrica, esta não contém distorção de forma.
+\item Seu uso tem vantagens em planejamentos com pouca diferença de latitude.
+\item Tem um foco maior, por não representar tocdo globo.
+\item Normalmente apresenta o fogo no hemisfério norte.
+\end{enumerate}
+
+\item Se formos escrever uma mensagem no globo para ser lida numa projeção cônica, qual o melhor local e por que?
+
+\item Marque a alternativa correta sobre a projeção plana:
+\begin{enumerate}
+\item O globo terrestre é projetado num retângulo, pois é um plano.
+\item Em qualquer formato, toda projeção é plana.
+\item Um círculo, pois é a perspectiva de um plano tangente ao globo.
+\item Um círculo, pois é sendo a terra uma esfera é a única projeção possível.
+\end{enumerate}
+
+\item Marque a alternativa \textbf{incorreta} sobre a projeção azimutal:
+\begin{enumerate}
+\item Representa todo o globo terrestre.
+\item Tem um fogo muito específico se comparada com outras projeções.
+\item É utilizada para mapeamento de polos, poir sua baixa deformação no ponto tangente.
+\item Tem forte deformação, principalmente no hemisfério oposto.
+\end{enumerate}
+
+\item Se formo escrever uma mensagem no globo para ser lida numa projeção plana, qual o melhor local e por que?
+
+\item Marque no mapa os seguintes pontos, dadas suas coordenadas:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=350bp]{cartografia46}
+
+\end{figure}
+
+\begin{enumerate}
+\item ($40^{\circ}$S; $30^{\circ}$E)
+\item ($40^{\circ}$N; $30^{\circ}$W)
+\item ($60^{\circ}$S; $150^{\circ}$E)
+\item ($20^{\circ}$N; $30^{\circ}$W)
+\end{enumerate}
+
+\item Relacione as colunas de acordo com a melhor projeção para cada situação:
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item Projeção plana
+\item Projeção cilíndrica
+\item Projeção cônica
+
+\columnbreak
+
+\parskip=1em
+({ }{ }{ }) --- Mapeamento dos polos.
+
+({ }{ }) --- Representar ambos hemisférios com a mesma nitidez
+
+({ }{ }{ }) --- Foco maior em algum dos trópicos.
+
+({ }{ }{ }) --- Visão geral do globo terrestre.
+
+({ }{ }{ }) --- Simbolizar o globo, mesmo que não projete todo.
+\end{enumerate}
+
+\end{multicols}
+
+\end{enumerate}
+
+
+
+
+
+
+

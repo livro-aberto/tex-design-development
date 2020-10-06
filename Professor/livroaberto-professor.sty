@@ -30,7 +30,7 @@
 \RequirePackage{array}
 \RequirePackage{colortbl}
 \RequirePackage{hyperref}
-\hypersetup{colorlinks=true, colorlinks=true, linkcolor=linkscolor, filecolor=linkscolor, urlcolor=linkscolor}
+\hypersetup{colorlinks=true, colorlinks=true, linkcolor=linkscolor, filecolor=linkscolor, urlcolor=linkscolor,citecolor=linkscolor}
 \RequirePackage{float}
 \RequirePackage{tkz-euclide}
 \RequirePackage{amsmath,amssymb}
@@ -102,9 +102,12 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{changepage}
 \RequirePackage{graphicx}
 \RequirePackage{adjustbox}
-\RequirePackage{scrlayer-notecolumn}
+% \RequirePackage{scrlayer-notecolumn}
 \RequirePackage{marginfix}
 \RequirePackage{pdfpages}
+\RequirePackage{stmaryrd}
+% \RequirePackage{natbib}
+
 
 
 \tcbuselibrary{skins,breakable}
@@ -124,6 +127,33 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 % \DeclareMathOperator{\si}{Si}
 \DeclareMathOperator{\dirac}{\delta}
 \DeclareMathOperator{\mmu}{\mu}
+
+%Commands
+\renewcommand{\bottomtitlespace}{0.25\textheight}
+%\pgfplotsset{compat=1.15}
+\renewcommand{\thead}{\rowfont{\bfseries \color{white}} \rowcolor{\currentcolor!80}}
+\newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
+\newcommand{\tmcol}[3]{\multicolumn{#1}{#2}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#3}}}}
+\newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
+\newcommand{\tikzcolor}{\currentcolor!80}
+\newcommand{\sub}{\textsubscript}
+\newcommand{\super}{\textsuperscript}
+
+\newcommand{\newparallel}{\mathrel{\mkern-5mu\clipbox{0 0.75ex 0 0}{${\sslash}$}\!}}
+
+\newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
+
+
+%Coloca listas de enumerate no padrão da seção de exercícios
+\newcommand\exerciselist
+{	
+	\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
+	\setlist[enumerate,2]{label=\emph{\alph*)}}
+	\setlist[enumerate,3]{label=\emph{\roman*)}}
+}
+
+
+
 
 %Seção 1 - Livro Aberto Boxes
 %***************************************************************************************
@@ -168,17 +198,6 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 
 \def\envskip{\vskip\libroskip}
 
-\newtcolorbox{teacher}[2][]{parbox=false, breakable,%
-enhanced,width=\linewidth-6pt,
-enlarge top by=3pt,enlarge bottom by=3pt,
-enlarge left by=3pt,enlarge right by=3pt,
-title={Para o professor: {#2}},frame hidden,boxrule=0pt,top=1mm,bottom=1mm,
-colframe=\currentcolor!60, colbacktitle=\currentcolor!60,
-%coltitle=black
-, fonttitle=\large\boxtitlefont,
-borderline={0.5pt}{-0.5pt}{\currentcolor},
-borderline={1pt}{-3pt}{\currentcolor!80},#1}
-
 
 
 \newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{task}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=0.3mm, right=0.8mm, top=5mm, bottom=3mm, colback=white, colframe=cor2!70, width=162mm, 
@@ -209,26 +228,6 @@ underlay boxed title ={
 }
 }
 
-\newtcolorbox{answer}[1]{
-  breakable,
-  left=-.1cm,
-  right=.1cm,
-  top=0cm,
-  bottom=0cm,
-  toprule=-1pt,
-  bottomrule=0.5pt,
-  rightrule=-1pt,
-  leftrule=-1pt,
-  boxed title style={empty},
-  colframe=cor2!70,
-  colback=white,
-  colbacktitle=white,
-  fonttitle=\titlefont\color{\currentcolor}\large,
-  title=Resposta: \makefirstuc{#1},
-  before skip = 5mm,
-  after skip = 5mm,  
-  bottom=3mm
-}
 
 % Makes the "To think about" box.
 % It is missing to set title font and font size. After that should check if the title is centralized in the title box.
@@ -249,20 +248,30 @@ underlay boxed title={
 
 
 
-\newtcolorbox{example}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
-title={{\boxfont EXEMPLO}\hspace{3.5mm} \textcolor{gray!80!black}{\Large\extitlefont\makefirstuc{#1}}}, 
+\newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{example}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
+title={
+%{\boxfont EXEMPLO}\hspace{3.5mm} 
+\textcolor{cor2}{\large\extitlefont\makefirstuc{#1}}
+}, 
 boxed title style={empty, sharp corners}, 
-attach boxed title to top left={xshift=-1.3 mm , yshift=-10mm},
+attach boxed title to top left={xshift=22mm , yshift=-7.5mm},
 underlay boxed title ={
 % Draw the title underlay rectangle
-\fill[cor1!30] ($(frame.north west) + (0,-.5mm)$) rectangle ($(title.north east)+(-.8mm,-8.5mm)$) coordinate (R);
+\def\temp{#1}\ifx\temp\empty
+%
+\else
+\fill[cor1!30] ($(frame.north west)+(0,-1pt)$) rectangle ($(title.south east)+(3mm,0mm)$) coordinate (R);
+\fi
 %)
 %;
 % Filldraw the darker fancy in front of the rectangle and behind the Example. The coordinates should be better chosen.
-\fill[cor1] (frame.north west) -- ($(title.south west) + (1.3mm,0)$) -- ++ (18mm,0mm) arc [start angle=-90, end angle=0, x radius = 2mm, y radius = 2mm] -- ($(frame.north west) + (20mm,0)$) --  cycle;
 
 
-}
+\fill[cor1] (frame.north west) -- ($(frame.north west)+(0,-1.4pt)+(0,-7mm)$) -- ++ (21mm,0mm) arc [start angle=-90, end angle=0, x radius = 2mm, y radius = 2mm] -- ($(frame.north west) + (23mm,0)$) --  cycle;
+\node [white] at ($(frame.north west) + (11.5mm,-3.5mm)$) {\boxfont EXEMPLO \thetcbcounter};
+
+},
+before upper={\def\currentcolor{cor1}}
 }
 
 \newtcolorbox{research}{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=6mm, bottom=3mm, colback=white, colframe=box3, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 3mm, arc = 3mm, sharp corners = northwest,
@@ -323,6 +332,7 @@ underlay boxed title={
 }
 
 \NewEnviron{project}{%
+\def\currentcolor{cor2}
     \newpage
 	\begin{tikzpicture}[remember picture, overlay]
 		\coordinate (border1) at ($(current page text area.south east) + (0.00mm,8.00mm)$);
@@ -359,10 +369,7 @@ underlay boxed title={
 			\end{minipage}	
 			};
 		\end{pgfonlayer}
-		
-		% \draw [blue] (border1) arc [start angle= 0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -- ++($(-\textwidth,0) + (10.00mm,0.00mm)$) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] |- ++($(\textwidth, \textheight) + (-8.00mm,-10.00mm)$) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] -- cycle;
-		% \draw [blue,line width=2mm] (current page.south west) rectangle (current page.north east);
-		
+	
 		
 	\end{tikzpicture}
     \clearpage
@@ -543,6 +550,9 @@ underlay boxed title={
 \newcommand\chapterwhat{}
 \newcommand\chapterbecause{}
 
+% Formatação dos comandos \section e \subsection
+\titleformat{\section}{\color{\currentcolor}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\vspace{.3\baselineskip}\color{\currentcolor}\normalfont\large\bfseries}{\thesubsection}{1em}{}
 
 % Create box shape
 \pgfdeclareshape{howbecausetextbox}{%
@@ -938,15 +948,14 @@ underlay boxed title={
 
 %% Exercise section
 \newcommand{\exercise}{
-\vspace{8 mm}
 \needspace{.15\textheight}
+\vspace{8 mm}
 
 	\noindent \begin{tikzpicture}[remember picture]
 	\draw [draw=cor2, very thick] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) -- ++(\textwidth , 0.00mm) -- ++(0mm,-2mm);% line
 	\fill [draw=cor2, very thick , fill=cor1] ($(\textwidth/2 , 0mm) + (19mm,6mm)$) -- ++(0.00mm,-5.5 mm) coordinate (line1) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| ++(-38.00mm , 0.00mm)  -- ++ (0mm, 5.5 mm) coordinate (line2) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
 	\node (exercise) at ($(line1)!0.5!(line2) + (0 mm, .8 mm)$) [text=white, font=\thirdtitlefont\Large] {EXERCÍCIOS};%\fontsize{13pt}{0}
 	\end{tikzpicture}
-	\vspace{8 mm}
     \def\currentcolor{cor1}
 	
 \setlist[enumerate]{label=\protect\enumbox{\arabic*}}
@@ -1041,7 +1050,10 @@ underlay boxed title={
 \RequirePackage{tikzpagenodes}
 \RequirePackage[inline]{enumitem}
 
-
+%Alinha equações com item de listas
+\newcommand\Item[1][]{%
+  \ifx\relax#1\relax  \item \else \item[#1] \fi
+  \abovedisplayskip=0pt\abovedisplayshortskip=0pt~\vspace*{-\baselineskip}}
 
 
 \pgfdeclareshape{enumbox}{%
@@ -1104,11 +1116,29 @@ underlay boxed title={
     }
 }
 
+\newcommand*{\@endnotebox}[1]{%
+    \tikz [baseline=(numbereditem.base)]{%
+        \node[shape=enumbox,text=linkscolor, font=\fontsize{11pt}{0}\selectfont\bfseries, 
+        fill=box2!70, drop shadow,
+        minimum width=4.00mm, minimum height=3.00mm,sharp corners] (numbereditem) {#1};
+    }
+}
+
+\newcommand*{\notebox}[1]{%
+    \tikz [baseline=(numbereditem.base)]{%
+        \node[shape=enumbox,text=linkscolor, font=\fontsize{11pt}{0}\selectfont\bfseries, 
+        fill=box2!70, drop shadow,
+        minimum width=16.0mm, minimum height=3.00mm,sharp corners, align=left] (numbereditem) {#1};
+    }
+}
+
 \newcommand*{\enumdefault}[1]{%
     \tikz [baseline=(numbereditem.base)]{%
         \node[shape=enumbox, font=\bfseries\fontsize{11pt}{0}\selectfont, draw=black, minimum width=6.00mm, minimum height=6.00mm] (numbereditem) {#1};
     }
 }
+
+
 
 
 % Defining an alternative shape for itemize, where the bullets are actually squares.
@@ -1120,7 +1150,7 @@ underlay boxed title={
 
 % Defining an alternative shape for itemize, where the bullets are actually colored squares.
 \newcommand*{\itemcoloredsquare}{%
-    \tikz [baseline=(boxitem.base)] {%
+    \tikz {%
         \node[shape=rectangle, fill=\currentcolor, minimum width=1.50mm, minimum height=1.50mm] (boxitem) {};
     }
 }
@@ -1365,6 +1395,7 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 \@endnotetext
 }%
 }%
+
 \def\@xendnotenext[#1]{%
 \begingroup
 \c@endnote=#1\relax
@@ -1459,10 +1490,10 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 }%
 % Redefine, how numbers are formatted in the endnotes-section:
 \renewcommand*\@makeenmark{%
-\hbox{\normalfont\@theenmark~}%
+\normalfont\protect\@endnotebox{\@theenmark}~%
 }%
 % header of endnotes-section
-\enoteheading
+% \enoteheading
 % font-size of endnotes
 \enotesize
 \input{\jobname.ent}%
@@ -1499,8 +1530,6 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 \makeatletter
 %\def\@makeenmark{\hbox{\@textsuperscript{\normalfont\@theenmark}}}
 \def\@makeenmark{\hbox{\normalfont\@theenmark}}
-\makeatother
-
 
 \titlespacing*{\section}
 {0pt}{1mm}{1mm}
@@ -1513,17 +1542,16 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 %%%%%%%%%%%%%%%%  PÁGINA DE TEXTO
 
 \newenvironment{apresentacao}
-{\frontmatter\def\currentcolor{penaqua}
+{\frontmatter\def\currentcolor{cor1}
 \newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}\pagestyle{plain} \begin{multicols}{3}}
 {\clearpage\end{multicols}\pagebreak\restoregeometry 
-\mainmatter}
+\mainmatter\def\currentcolor{session1}}
 
 \newcounter{mypagecount}
 \setcounter{mypagecount}{0}
-\makeatletter
+
 \newenvironment{paginatexto}
 {
-
 \renewcommand\frontmatter{%
   \cleardoublepage
   \@mainmatterfalse
@@ -1534,11 +1562,11 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
   \@mainmattertrue
   %\pagenumbering{arabic}% Don't reset
 }\clearpage\setcounter{mypagecount}{\value{page}}
-\cleardoublepage\setcounter{mypagecount}{\value{page}}\def\currentcolor{penaqua}
+\cleardoublepage\setcounter{mypagecount}{\value{page}}\def\currentcolor{cor1}
 \newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}\thispagestyle{empty}\pagestyle{empty} \begin{multicols}{3}}
-{\clearpage\end{multicols}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
+{\clearpage\end{multicols}\def\currentcolor{session1}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
 }
-\makeatother
+
 
 
 %%%%%%%%%%%%%%%%  PÁGINA DE NOTAS
@@ -1552,26 +1580,25 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 
 %%%%%%%%%%%%% CAIXA DE TEXTO
 
-\makeatletter 
+ 
 \newcommand\semihuge{\@setfontsize\semiHuge{16.72}{21.38}}
-\makeatother
+
 
 \newenvironment{texto}[1]
 {\marginpar{
-  \setlength\parskip{.3\baselineskip}
+  \setlength\parskip{6pt}
+	\vspace{.05em}
   \setlist[enumerate]{label=OE\arabic*,wide}
   \setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}
-  \titleformat{\section}{\color{\currentcolor}\normalfont\semihuge\bfseries}{\thesection}{1em}{}
-  \titleformat{\subsection}{\vspace{.3\baselineskip}\color{\currentcolor}\normalfont\Large\bfseries}{\thesubsection}{1em}{}
-
-    \vspace{.2em}#1}
  
- }
+	#1}
+}
+
 
 
 %%%%%%%%%%%%% CAIXA DE OBJETIVO ESPECÍFICO
 
-\newenvironment{ObjetivoEsp}[4]
+\newenvironment{objectives}[4]
 {\ifnum #3=1   
 {\ifnum #4=1
 
@@ -1585,7 +1612,7 @@ underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north east)+(0,-1pt)$)--($(frame.north east)+(-15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
-before upper={\tcbsubtitle{#1}
+before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
@@ -1595,9 +1622,10 @@ before upper={\tcbsubtitle{#1}
       colback = white,
       coltext = \currentcolor,
       arc = 8pt,
-      top=-10pt,
+      top=0pt,
+      bottom=0pt
     },
-    middle=10pt,
+    middle=5pt,
     break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
     
 
@@ -1613,7 +1641,7 @@ underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
-before upper={\tcbsubtitle{#1}
+before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
@@ -1623,17 +1651,86 @@ before upper={\tcbsubtitle{#1}
       colback = white,
       coltext = \currentcolor,
       arc = 8pt,
-      top=-10pt,
+      top=0pt,
+      bottom=0pt
     },
-    middle=10pt,
+    middle=5pt,
     break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
     
 \fi}
 
 
 \else
-\marginpar{\begin{tcolorbox}[left skip=0pt, enhanced, breakable, colback=penbox2, colframe=penbox2, top=0pt, bottom=0pt, left=0.3mm, right=0.3mm, sharp corners = southeast, sharp corners = southwest, sharp corners = northwest, arc is angular = northeast, width=15mm]
-\textcolor{white}{\textbf{\endnotemark}} \end{tcolorbox}}\endnotetext{\begin{tcolorbox}[left skip=0pt, enhanced, breakable, colback=white, opacityfill=0.2, colframe=penverde, left=0.3mm, right=0.3mm, colbacktitle=penverde, coltitle=black, arc=0mm,boxrule=1pt,rightrule=1pt,toprule=1pt, attach boxed title to top left={yshift=-6pt},title = #1, fonttitle =\titlefont, boxed title style={sharp corners = southeast, sharp corners = southwest, sharp corners = northwest, arc is angular = northeast,left=0.3mm}, before title = \textcolor{white}{\textbf{Objetivos específicos - }}] #2 \end{tcolorbox}}
+
+{\ifnum #4=9
+
+\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+
+
+\endnotetext{\vspace{-1.75\baselineskip}
+\begin{tcolorbox}[blanker, breakable, enhanced, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+title= Objetivos Específicos,  
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+underlay boxed title={
+\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+}, 
+before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
+% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+    subtitle style = {
+      frame empty,
+      fontupper = \bfseries\large,
+      colback = white,
+      coltext = \currentcolor,
+      arc = 8pt,
+      top=0pt,
+      bottom=0pt
+    },
+    middle=5pt,
+    break at=-\baselineskip/0pt] #2 \end{tcolorbox}
+
+}
+
+\else
+
+\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+
+\endnotetext{\adjustbox{valign=t}
+{\begin{tcolorbox}[blanker, breakable, enhanced, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+title= Objetivos Específicos,  
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+underlay boxed title={
+\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+}, 
+before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
+% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+    subtitle style = {
+      frame empty,
+      fontupper = \bfseries\large,
+      colback = white,
+      coltext = \currentcolor,
+      arc = 8pt,
+      top=0pt,
+      bottom=0pt
+    },
+    middle=5pt,
+    break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+
+}
+\fi}
 \fi}
 {}
 
@@ -1642,7 +1739,7 @@ before upper={\tcbsubtitle{#1}
 %%%%%%%%%%%%% CAIXA DE ORIENTAÇÃO
 
 
-\newenvironment{Recomenda}[4]
+\newenvironment{sugestions}[4]
 {\ifnum #3=1   
 {\ifnum #4=1
 
@@ -1656,7 +1753,7 @@ underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north east)+(0,-1pt)$)--($(frame.north east)+(-15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
-before upper={\tcbsubtitle{#1}
+before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
@@ -1666,13 +1763,15 @@ before upper={\tcbsubtitle{#1}
       colback = white,
       coltext = \currentcolor,
       arc = 8pt,
-      top=-10pt,
+      top=0pt,
+      bottom=0pt
     },
-    middle=10pt,
+    middle=5pt,
     break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
     
 
 \else
+
 
 \marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
 borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
@@ -1684,7 +1783,7 @@ underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
-before upper={\tcbsubtitle{#1}
+before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
@@ -1694,28 +1793,33 @@ before upper={\tcbsubtitle{#1}
       colback = white,
       coltext = \currentcolor,
       arc = 8pt,
-      top=-10pt,
+      top=0pt,
+      bottom=0pt
     },
-    middle=10pt,
+    middle=5pt,
     break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
-    
 \fi}
-    
+
 
 \else
+{\ifnum #4=9
 
-\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+\endnotetext{
+{\vspace{-1.75\baselineskip}
+\begin{tcolorbox}[blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
 borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
 fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
-title= Sugestões e discussões, 
+title= Sugestões e discussões,  
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
 attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
-before upper={\tcbsubtitle{#1}
-\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}}},
+before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
     subtitle style = {
@@ -1724,32 +1828,113 @@ before upper={\tcbsubtitle{#1}
       colback = white,
       coltext = \currentcolor,
       arc = 8pt,
-      top=-10pt,
+      top=0pt,
+      bottom=0pt
     },
-    middle=10pt,
+    middle=5pt,
     break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+
+
+}
+
+\else
+
+\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+\endnotetext{\adjustbox{valign=t}
+{
+\begin{tcolorbox}[blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+title= Sugestões e discussões,  
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
+attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+underlay boxed title={
+\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+}, 
+before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
+% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+    subtitle style = {
+      frame empty,
+      fontupper = \bfseries\large,
+      colback = white,
+      coltext = \currentcolor,
+      arc = 8pt,
+      top=0pt,
+      bottom=0pt
+    },
+    middle=5pt,
+    break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+}
 \fi}
-{}
+\fi}
+
 
 \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
 
 
+
 %%%%%%%%%%%%% CAIXA DE RESPOSTA
-\newenvironment{resposta}[3]
+\newenvironment{answer}[3]
 {\ifnum #3=1   
-\marginpar{\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white!50, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Resposta: }}, title= \textcolor{grafite}{#1}]
+\marginpar{\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white!50, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Resposta: }}, title= \textcolor{grafite}{#1},
+before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}},
+    subtitle style = {
+      frame empty,
+      fontupper = \boxtitlefont,
+      colback = white,
+      coltext = grafite,
+      top=1em,
+      before upper = \boxtitlefont \textcolor{\currentcolor}{Resposta: }}]
 #2\end{tcolorbox}}
 \else
-\marginpar{\begin{tcolorbox}[left skip=0pt, enhanced, breakable, colback=penbox2, colframe=penbox2, top=0pt, bottom=0pt, left=0.3mm, right=0.3mm, sharp corners = southeast, sharp corners = southwest, sharp corners = northwest, arc is angular = northeast, width=15mm]
-\textcolor{white}{\textbf{\endnotemark}} \end{tcolorbox}}\endnotetext{\adjustbox{valign=t}{\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Resposta: }}, title= \textcolor{grafite}{#1}, before upper={\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}}]
-#2\end{tcolorbox}}}
+{\ifnum #3=9
+
+\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+\endnotetext{\vspace{-2\baselineskip}
+\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Resposta: }}, title= \textcolor{grafite}{#1}, before upper={\setlength{\parskip}{6pt}\vspace{.3em}
+\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)}}
+},
+    subtitle style = {
+      frame empty,
+      fontupper = \boxtitlefont,
+      colback = white,
+      coltext = grafite,
+      top=1em,
+      before upper = \boxtitlefont \textcolor{\currentcolor}{Resposta: }}]
+#2\end{tcolorbox}}
+
+\else
+\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+\endnotetext{\adjustbox{valign=t}
+{
+
+\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Resposta: }}, title= \textcolor{grafite}{#1}, before upper={\setlength{\parskip}{6pt}\vspace{.3em}
+\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)}}
+},
+    subtitle style = {
+      frame empty,
+      fontupper = \boxtitlefont,
+      colback = white,
+      coltext = grafite,
+      top=1em,
+      before upper = \boxtitlefont \textcolor{\currentcolor}{Resposta: }}]
+#2\end{tcolorbox}}
+}
+
 \fi}
+\fi
+}
 
-
-
-
-%%%%%%%%%%%%% CAIXA DE OBJETIVOS
-\newtcolorbox{objetivos}[1]{colback=penaqua!20!white,colbacktitle=penaqua!20!white,
+%%%%%%%%%%%%% CAIXA DE HABILIDADES
+\newtcolorbox{habilities}[1]{ breakable,colback=penaqua!20!white,colbacktitle=penaqua!20!white,
 colframe=penaqua!20!white, left =2mm, right=2mm, boxrule=0pt, top=1mm, arc=3mm, toptitle=2mm, coltitle=black, fonttitle=\bfseries, arc is angular = northwest, sharp corners = northeast, sharp corners = southwest, arc is angular = southeast, subtitle style={coltitle=black,fonttitle=\bfseries},
 title=#1}
 
