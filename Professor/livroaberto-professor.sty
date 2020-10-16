@@ -875,7 +875,7 @@ underlay boxed title={
         \draw [session1, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
         \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session1}{\MakeUppercase{ #1}}};
     \end{tikzpicture}
-    \vspace{3 mm}
+    \vspace{3pt}
     
     	\def\currentcolor{session1}
 	%setting depth 1 enumerate style
@@ -896,7 +896,7 @@ underlay boxed title={
         \draw [session2, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
         \node (title) at ($(a1)!0.5!(b1)$) [right] { \large\secondtitlefont\textcolor{session2}{\MakeUppercase{ #1}}};
     \end{tikzpicture}
-\vspace{3 mm}
+\vspace{3pt}
 
 	\def\currentcolor{session2}
 	%setting depth 1 enumerate style
@@ -917,7 +917,7 @@ underlay boxed title={
         \draw [session3, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
         \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session3}{\MakeUppercase{ #1}}};
     \end{tikzpicture}
-\vspace{3 mm}
+\vspace{3pt}
 
 	\def\currentcolor{session3}
 	%setting depth 1 enumerate style
@@ -936,7 +936,7 @@ underlay boxed title={
         \draw [session4, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
         \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session4}{\MakeUppercase{ #1}}\newline};
     \end{tikzpicture}
-\vspace{3 mm}
+\vspace{3pt}
 
 	\def\currentcolor{session4}
 	%setting depth 1 enumerate style
@@ -956,8 +956,10 @@ underlay boxed title={
 	\fill [draw=cor2, very thick , fill=cor1] ($(\textwidth/2 , 0mm) + (19mm,6mm)$) -- ++(0.00mm,-5.5 mm) coordinate (line1) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| ++(-38.00mm , 0.00mm)  -- ++ (0mm, 5.5 mm) coordinate (line2) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
 	\node (exercise) at ($(line1)!0.5!(line2) + (0 mm, .8 mm)$) [text=white, font=\thirdtitlefont\Large] {EXERCÍCIOS};%\fontsize{13pt}{0}
 	\end{tikzpicture}
+	\vspace{1mm}
     \def\currentcolor{cor1}
-	
+
+
 \setlist[enumerate]{label=\protect\enumbox{\arabic*}}
 \setlist[enumerate,2]{label=\emph{\alph*)},ref=\theenumi.\emph{\arabic*}}
 \setlist[enumerate,3]{label=\emph{\roman*)},ref=\theenumi.\emph{\roman*}}
@@ -1532,7 +1534,7 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 \def\@makeenmark{\hbox{\normalfont\@theenmark}}
 
 \titlespacing*{\section}
-{0pt}{1mm}{1mm}
+{0pt}{2mm}{1mm}
 \titlespacing*{\subsection}
 {0pt}{1mm}{1mm}
 
@@ -1562,7 +1564,7 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
   \@mainmattertrue
   %\pagenumbering{arabic}% Don't reset
 }\clearpage\setcounter{mypagecount}{\value{page}}
-\cleardoublepage\setcounter{mypagecount}{\value{page}}\def\currentcolor{cor1}
+\cleardoublepage\setcounter{mypagecount}{\value{page}}\def\currentcolor{session1}
 \newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}\thispagestyle{empty}\pagestyle{empty} \begin{multicols}{3}}
 {\clearpage\end{multicols}\def\currentcolor{session1}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
 }
@@ -1602,12 +1604,12 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 {\ifnum #3=1   
 {\ifnum #4=1
 
-\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,right=3mm, left=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
-borderline east={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, leftrule=1pt, rightrule=-1pt, outer arc = 3mm, arc = 3mm,
+\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor, left=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+borderline east={2mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, leftrule=1pt, rightrule=-1pt, outer arc = 3mm, arc = 3mm,
 fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
 title= Objetivos Específicos, 
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top right={xshift=-3mm , yshift=.5mm-.4pt},
+attach boxed title to top right={yshift=.5mm-.8pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north east)+(0,-1pt)$)--($(frame.north east)+(-15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
@@ -1631,12 +1633,12 @@ before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 
 \else
 
-\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
-borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+borderline west={2mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
 fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
 title= Objetivos Específicos, 
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+attach boxed title to top left={yshift=.5mm-.8pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
@@ -1674,7 +1676,7 @@ borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, l
 fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
 title= Objetivos Específicos,  
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+attach boxed title to top left={xshift=3mm , yshift=.5mm-.8pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
@@ -1708,7 +1710,7 @@ borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, l
 fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
 title= Objetivos Específicos,  
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+attach boxed title to top left={xshift=3mm , yshift=.5mm-.8pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
@@ -1743,18 +1745,18 @@ before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 {\ifnum #3=1   
 {\ifnum #4=1
 
-\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,right=3mm, left=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
-borderline east={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, leftrule=1pt, rightrule=-1pt, outer arc = 3mm, arc = 3mm,
+\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor, left=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+borderline east={2mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, leftrule=1pt, rightrule=-1pt, outer arc = 3mm, arc = 3mm,
 fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
 title= Sugestões e discussões, 
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top right={xshift=-3mm , yshift=.5mm-.4pt},
+attach boxed title to top right={ , yshift=.5mm-.2pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north east)+(0,-1pt)$)--($(frame.north east)+(-15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
-\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
+\normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
     subtitle style = {
@@ -1773,18 +1775,18 @@ before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \else
 
 
-\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
-borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+borderline west={2mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
 fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
 title= Sugestões e discussões, 
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+attach boxed title to top left={ , yshift=.5mm-.2pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
-\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
+\normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
     subtitle style = {
@@ -1807,19 +1809,19 @@ before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
 
 \endnotetext{
-{\vspace{-1.75\baselineskip}
+{\vspace{-2\baselineskip}
 \begin{tcolorbox}[blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
 borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
 fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
 title= Sugestões e discussões,  
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+attach boxed title to top left={xshift=3mm , yshift=.5mm-.2pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
-\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
+\normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
     subtitle style = {
@@ -1848,13 +1850,13 @@ borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, l
 fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
 title= Sugestões e discussões,  
 boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top left={xshift=3mm , yshift=.5mm-.4pt},
+attach boxed title to top left={xshift=3mm , yshift=.5mm-.2pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
 }, 
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
-\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
+\normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
     subtitle style = {
@@ -1880,15 +1882,15 @@ before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 %%%%%%%%%%%%% CAIXA DE RESPOSTA
 \newenvironment{answer}[3]
 {\ifnum #3=1   
-\marginpar{\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white!50, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Resposta: }}, title= \textcolor{grafite}{#1},
-before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}},
+\marginpar{\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white!50, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Solução: }}, title= \textcolor{grafite}{#1},
+before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}},
     subtitle style = {
       frame empty,
       fontupper = \boxtitlefont,
       colback = white,
       coltext = grafite,
       top=1em,
-      before upper = \boxtitlefont \textcolor{\currentcolor}{Resposta: }}]
+      before upper = \boxtitlefont \textcolor{\currentcolor}{Solução: }}]
 #2\end{tcolorbox}}
 \else
 {\ifnum #3=9
@@ -1896,9 +1898,9 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=\protect\bfser
 \marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
 
 \endnotetext{\vspace{-2\baselineskip}
-\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Resposta: }}, title= \textcolor{grafite}{#1}, before upper={\setlength{\parskip}{6pt}\vspace{.3em}
-\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)}}
+\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Solução: }}, title= \textcolor{grafite}{#1}, before upper={\setlength{\parskip}{6pt}\vspace{.3em}
+\setlist[enumerate]{label=wide,\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+\setlist[enumerate,2]{\protect\bfseries\textcolor{\currentcolor}{\roman*)}}
 },
     subtitle style = {
       frame empty,
@@ -1906,7 +1908,7 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=\protect\bfser
       colback = white,
       coltext = grafite,
       top=1em,
-      before upper = \boxtitlefont \textcolor{\currentcolor}{Resposta: }}]
+      before upper = \boxtitlefont \textcolor{\currentcolor}{Solução: }}]
 #2\end{tcolorbox}}
 
 \else
@@ -1915,8 +1917,8 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=\protect\bfser
 \endnotetext{\adjustbox{valign=t}
 {
 
-\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Resposta: }}, title= \textcolor{grafite}{#1}, before upper={\setlength{\parskip}{6pt}\vspace{.3em}
-\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Solução: }}, title= \textcolor{grafite}{#1}, before upper={\setlength{\parskip}{6pt}\vspace{.3em}
+\setlist[enumerate]{label=wide,left=0pt,label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
 \setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)}}
 },
     subtitle style = {
@@ -1925,7 +1927,7 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=\protect\bfser
       colback = white,
       coltext = grafite,
       top=1em,
-      before upper = \boxtitlefont \textcolor{\currentcolor}{Resposta: }}]
+      before upper = \boxtitlefont \textcolor{\currentcolor}{Solução: }}]
 #2\end{tcolorbox}}
 }
 

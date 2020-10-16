@@ -489,6 +489,11 @@ underlay boxed title={
 \newcommand\chapterwhat{}
 \newcommand\chapterbecause{}
 
+\titlespacing*{\section}
+{0pt}{2mm}{1mm}
+\titlespacing*{\subsection}
+{0pt}{1mm}{1mm}
+
 % Formatação dos comandos \section e \subsection
 \titleformat{\section}{\color{\currentcolor}\normalfont\Large\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}{\vspace{.3\baselineskip}\color{\currentcolor}\normalfont\large\bfseries}{\thesubsection}{1em}{}
@@ -763,7 +768,7 @@ underlay boxed title={
         \draw [session1, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
         \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session1}{\MakeUppercase{ #1}}};
     \end{tikzpicture}
-    \vspace{3 mm}
+    \vspace{3pt}
     
     	\def\currentcolor{session1}
 	%setting depth 1 enumerate style
@@ -785,7 +790,7 @@ underlay boxed title={
         \draw [session2, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
         \node (title) at ($(a1)!0.5!(b1)$) [right] { \large\secondtitlefont\textcolor{session2}{\MakeUppercase{ #1}}};
     \end{tikzpicture}
-\vspace{3 mm}
+\vspace{3pt}
 
 	\def\currentcolor{session2}
 	%setting depth 1 enumerate style
@@ -808,7 +813,7 @@ underlay boxed title={
         \draw [session3, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
         \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session3}{\MakeUppercase{ #1}}};
     \end{tikzpicture}
-\vspace{3 mm}
+\vspace{3pt}
 
 	\def\currentcolor{session3}
 	%setting depth 1 enumerate style
@@ -827,7 +832,7 @@ underlay boxed title={
         \draw [session4, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
         \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session4}{\MakeUppercase{ #1}}\newline};
     \end{tikzpicture}
-\vspace{3 mm}
+\vspace{3pt}
 
 	\def\currentcolor{session4}
 	%setting depth 1 enumerate style
@@ -848,7 +853,7 @@ underlay boxed title={
 	\fill [draw=cor2, very thick , fill=cor1] ($(\textwidth/2 , 0mm) + (19mm,6mm)$) -- ++(0.00mm,-5.5 mm) coordinate (line1) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| ++(-38.00mm , 0.00mm)  -- ++ (0mm, 5.5 mm) coordinate (line2) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
 	\node (exercise) at ($(line1)!0.5!(line2) + (0 mm, .8 mm)$) [text=white, font=\thirdtitlefont\Large] {EXERCÍCIOS};%\fontsize{13pt}{0}
 	\end{tikzpicture}
-	\vspace{8 mm}
+	\vspace{1mm}
     \def\currentcolor{cor1}
 	
 
