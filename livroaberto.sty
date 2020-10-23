@@ -105,6 +105,8 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 % \RequirePackage{marginfix}
 \RequirePackage{pdfpages}
 \RequirePackage{spverbatim}
+\RequirePackage{ulem}
+\usepackage{cancel}
 
 \@ifclassloaded{memoir}{}{\RequirePackage{fancyhdr}}
 
@@ -131,6 +133,8 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \renewcommand{\bottomtitlespace}{0.25\textheight}
 %\pgfplotsset{compat=1.15}
 \renewcommand{\thead}{\rowfont{\bfseries \color{white}} \rowcolor{\currentcolor!80}}
+
+\newcommand{\tnumber}{\rowfont{\color{white}}\rowcolor{\currentcolor!80}}
 \newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
 \newcommand{\tmcol}[3]{\multicolumn{#1}{#2}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#3}}}}
 \newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
@@ -866,9 +870,13 @@ underlay boxed title={
 	\vspace{1 mm}
     \def\currentcolor{cor1}
 	
-	\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
-\setlist[enumerate,2]{label=\emph{\alph*)},ref=\theenumi.\emph{\arabic*}}
-\setlist[enumerate,3]{label=\emph{\roman*)},ref=\theenumi.\emph{\roman*}}
+\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
+\setlist[enumerate,2]{label=\textit{\alph*)}
+% ,ref=\theenumi.\emph{\arabic*}
+}
+\setlist[enumerate,3]{label=\textit{\roman*)}
+% ,ref=\theenumi.\emph{\roman*}
+}
 }
 
 

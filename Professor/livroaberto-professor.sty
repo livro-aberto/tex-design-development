@@ -107,6 +107,8 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{pdfpages}
 \RequirePackage{stmaryrd}
 % \RequirePackage{natbib}
+\RequirePackage{ulem}
+\usepackage{cancel}
 
 
 
@@ -128,13 +130,20 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \DeclareMathOperator{\dirac}{\delta}
 \DeclareMathOperator{\mmu}{\mu}
 
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
 %Commands
 \renewcommand{\bottomtitlespace}{0.25\textheight}
 %\pgfplotsset{compat=1.15}
 \renewcommand{\thead}{\rowfont{\bfseries \color{white}} \rowcolor{\currentcolor!80}}
+\newcommand{\tnumber}{\rowfont{\color{white}}\rowcolor{\currentcolor!80}}
 \newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
 \newcommand{\tmcol}[3]{\multicolumn{#1}{#2}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#3}}}}
 \newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
+
 \newcommand{\tikzcolor}{\currentcolor!80}
 \newcommand{\sub}{\textsubscript}
 \newcommand{\super}{\textsuperscript}
@@ -142,14 +151,15 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcommand{\newparallel}{\mathrel{\mkern-5mu\clipbox{0 0.75ex 0 0}{${\sslash}$}\!}}
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
+\newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
 
 
 %Coloca listas de enumerate no padrão da seção de exercícios
 \newcommand\exerciselist
 {	
 	\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
-	\setlist[enumerate,2]{label=\emph{\alph*)}}
-	\setlist[enumerate,3]{label=\emph{\roman*)}}
+	\setlist[enumerate,2]{label=\textit{\alph*)}}
+	\setlist[enumerate,3]{label=\textit{\roman*)}}
 }
 
 
@@ -223,7 +233,7 @@ underlay boxed title ={
 % Draw the top line from the left to the right.
 \draw[cor2!70,  line width=1pt] (LU) -- ++ (158mm,0mm) coordinate (R);
 % Think on the Atividade box as an ABCD rectangle (clockwise, A is top left), now you see the coordinates. 
-\fill [cor2!70] ($(R)+(0mm,-.2mm)$) -- ++ (-23.00mm,0mm) coordinate (D) --++ (0mm, 5mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- ++ (23.00mm,0mm) coordinate (B) --++ (0.00mm,-5mm)  arc [start angle=0, end angle=-90, y radius=2.00mm, x radius=2.00mm] -- cycle;
+\fill [cor2!70] ($(R)+(0mm,-.3mm)$) -- ++ (-25.00mm,0mm) coordinate (D) --++ (0mm, 5mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- ++ (25.00mm,0mm) coordinate (B) --++ (0.00mm,-5mm)  arc [start angle=0, end angle=-90, y radius=2.00mm, x radius=2.00mm] -- cycle;
 \node[font=\titlefont\large,white] at ($(B)!0.5!(D)$) {\small Atividade \thetcbcounter};
 }
 }
@@ -961,8 +971,12 @@ underlay boxed title={
 
 
 \setlist[enumerate]{label=\protect\enumbox{\arabic*}}
-\setlist[enumerate,2]{label=\emph{\alph*)},ref=\theenumi.\emph{\arabic*}}
-\setlist[enumerate,3]{label=\emph{\roman*)},ref=\theenumi.\emph{\roman*}}
+\setlist[enumerate,2]{label=\textit{\alph*)}
+% ,ref=\theenumi.\emph{\arabic*}
+}
+\setlist[enumerate,3]{label=\textit{\roman*)}
+% ,ref=\theenumi.\emph{\roman*}
+}
 }
 
 % Defining the section style for the diferent names that eventually appear.
@@ -1897,10 +1911,10 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,
 
 \marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
 
-\endnotetext{\vspace{-2\baselineskip}
+\endnotetext{\vspace{-1.35\baselineskip}
 \begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Solução: }}, title= \textcolor{grafite}{#1}, before upper={\setlength{\parskip}{6pt}\vspace{.3em}
-\setlist[enumerate]{label=wide,\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-\setlist[enumerate,2]{\protect\bfseries\textcolor{\currentcolor}{\roman*)}}
+\setlist[enumerate]{label=wide,left=0pt,label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)}}
 },
     subtitle style = {
       frame empty,
