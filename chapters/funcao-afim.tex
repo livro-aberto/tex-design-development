@@ -117,8 +117,6 @@ k\cdot X \quad &\overline{\quad \quad \quad}& \quad k\cdot Y
 
 Duas piscinas de 1000 litros cada estão sendo enchidas simultaneamente. A piscina 1 leva 5 horas para ficar completamente cheia e a piscina 2, 8 horas. A cada hora, o volume total de água em cada piscina foi sendo registrado em dois gráficos
 
-\item 
-\item 
 
 \begin{figure}[H]
 \centering
@@ -191,7 +189,7 @@ As grandezas volume total de água e tempo de enchimento da piscina 2 são diret
 Suponha que os dados numéricos fossem omitidos dos eixos nos dois gráficos. Ainda assim seria possível determinar a proporcionalidade ou não entre as grandezas? Como?
 \end{reflection}
 
-
+\clearpage
 \arrange{ função linear}
 \label{\detokenize{AF107-1::doc}}\label{\detokenize{AF107-1:organizando-as-ideias-funcao-linear}}
 Considere duas grandezas diretamente proporcionais que podem assumir quaisquer valores reais e vamos representá-las pelas letras \(x\) e \(y\). Então, sempre que multiplicarmos \(x\) por qualquer número real \(k\), o valor correspondente da grandeza \(y\) também fica multiplicado pelo mesmo valor. Isto é
@@ -236,7 +234,7 @@ Podemos afirmar também que \(x\) é uma função linear de \(y\)?
 \end{enumerate}
 \end{reflection}
 
-
+\needspace{.2\textheight}
 \practice{função linear}
 \label{\detokenize{AF107-1:praticando}}
 
@@ -267,7 +265,7 @@ Com a taxa de câmbio que está sendo praticada nesse dia, quantos dólares amer
 \begin{task}{Proporcionalidade na construção de retângulos}
 \label{ativ-prop-retangulo}
 
-Considere o retângulo \(R\) abaixo, de lados \(3\) e \(1,5\), e responda as questões propostas.
+Considere o retângulo \(R\) abaixo, de lados \(3\) e \(1{,}5\), e responda as questões propostas.
 
 \begin{figure}[H]
 \centering
@@ -288,7 +286,7 @@ Considere o retângulo \(R\) abaixo, de lados \(3\) e \(1,5\), e responda as que
 \node[above ]at(3,1.5){$$};
 \node[above ]at(0,1.5){$$};
 \node[above]at(1.7,-.7){$3$};
-\node[right]at(3,.75){$1.5$};
+\node[right]at(3,.75){$1{,}5$};
 \end{tikzpicture}
 
 \end{figure}
@@ -316,7 +314,7 @@ Observe o retângulo da figura a seguir e determine se ele é semelhante ou não
 \node[above ]at(6,1){$$};
 \node[above ]at(0,1){$$};
 \node[above]at(3,-.7){$6$};
-\node[right]at(6,.5){$1.5$};
+\node[right]at(6,.5){$1{,}5$};
 \end{tikzpicture}
 
 \end{figure}
@@ -651,20 +649,24 @@ Complete a tabela a seguir que relaciona os valores de \(h(x)\) e de \(m(x)\) co
 \item {} 
 Calcule, para a função \(h(x)\), as taxas de variação médias nos seguintes intervalos de valores de \(x\):
 
-b.1) entre \(x=0\) e \(x=1\);
+\begin{enumerate}
+\item entre \(x=0\) e \(x=1\);
 
-b.2) entre \(x=1\) e \(x=3\);
+\item entre \(x=1\) e \(x=3\);
 
-b.3) entre \(x=2\) e \(x=5\);
+\item entre \(x=2\) e \(x=5\);
+\end{enumerate}
 
 \item {} 
 Repita o item anterior para a função \(m(x)\) nos intervalos:
 
-c.1) entre \(x=2\) e \(x=3\);
+\begin{enumerate}
+\item entre \(x=2\) e \(x=3\);
 
-c.2) entre \(x=1\) e \(x=4\);
+\item entre \(x=1\) e \(x=4\);
 
-c.3) entre \(x=0\) e \(x=5\);
+\item entre \(x=0\) e \(x=5\);
+\end{enumerate}
 
 \item {} 
 A partir dos itens anteriores, faça uma conjectura sobre as taxas de variação médias de uma função linear qualquer.
@@ -676,12 +678,12 @@ A partir dos itens anteriores, faça uma conjectura sobre as taxas de variação
 \label{ativ-camara}
 
 
-Uma câmara frigorífica está programada para diminuir sua temperatura segundo uma taxa constante em \(^\circ C\) por hora. Na primeira observação constata-se que ela está a \(0^\circ C\). Após \(8\) horas, realiza-se uma nova observação e seu visor mostra a temperatura de \(-24^\circ C\) e também o seguinte gráfico para a evolução da temperatura em função do tempo.
+Uma câmara frigorífica está programada para diminuir sua temperatura segundo uma taxa constante em \(^\circ\)C por hora. Na primeira observação constata-se que ela está a \(0^\circ\) C. Após \(8\) horas, realiza-se uma nova observação e seu visor mostra a temperatura de \(-24^\circ\) e também o seguinte gráfico para a evolução da temperatura em função do tempo.
 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[yscale=.75, xscale=1.25]
+\begin{tikzpicture}[yscale=.6, xscale=1.25]
 \tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=black, fill=black, shift only]
 \draw(-3,-.05) grid(5,.05);
 \draw(-.05,-12) grid(.05,2);
@@ -712,7 +714,12 @@ Qual o valor da taxa (de variação média) constante segundo a qual a temperatu
 Determine a função que relaciona temperatura e tempo nesse contexto, considerando para seu domínio o intervalo de números reais \([0,8]\). Ela é uma função crescente ou decrescente? Por que?
 
 \item {} 
-Como seria o gráfico se a temperatura, no mesmo intervalo de tempo, ao invés de diminuir, estivesse aumentando \(1,5^\circ C/h\)? Qual seria a expressão da função, nesse caso? Teríamos uma função crescente ou decrescente? Por que?
+Como seria o gráfico se a temperatura, no mesmo intervalo de tempo, ao invés de diminuir, estivesse aumentando \(1,5^\circ\)C/h? Qual seria a expressão da função, nesse caso? Teríamos uma função crescente ou decrescente? Por que?
+
+\item {} 
+Complete as lacunas da sentença abaixo para formular uma conjectura que relacione a taxa de variação média da função linear com o crescimento ou decrescimento da função.
+
+“Quando a taxa de variação média de uma função linear é um número real \makebox[6em]{\hrulefill}, a função é \makebox[8em]{\hrulefill} e quando a taxa é um número real \makebox[8em]{\hrulefill}, a função é \makebox[8em]{\hrulefill}.”
 
 \end{enumerate}
 \end{task}
@@ -746,6 +753,7 @@ Qual é a taxa de carregamento desse modelo de telefone celular.
 \end{enumerate}
 \end{task}
 
+\clearpage
 \arrange{taxa de variação média}
 \label{\detokenize{AF107-2:organizando-as-ideias-taxa-de-variacao-media}}
 No capítulo de Taxa de variação, você aprendeu a calcular a taxa de variação média de uma função em um determinado intervalo. É um número expresso em forma de uma razão que fornece diversas informações sobre o comportamento da função no intervalo considerado.
@@ -766,7 +774,7 @@ Podemos destacar duas coisas sobre a conclusão deste último cálculo:
 o valor final para a taxa de variação média não depende dos valores de \(x_1\) e \(x_2\). Isso significa que podemos escolher qualquer intervalo  de números reais e chegaremos ao mesmo resultado.
 
 \item {} 
-o resultado coincide com o coeficiente de \(x\) na expressão da função, e também pode ser obtido calculando-se a imagem de \(x=1\). Sendo assim, podemos afirmar que a função \(y=7x\) tem taxa de variação média constante igual a \(7\), enquanto que a função \(y=-\frac {3x}5\) tem taxa de variação média constante igual a \(-\frac {3}5\).
+o resultado coincide com o coeficiente de \(x\) na expressão da função, e também pode ser obtido calculando-se a imagem de \(x=1\). Sendo assim, podemos afirmar que a função \(y=7x\) tem taxa de variação média constante igual a \(7\), enquanto que a função \(y=-\dfrac {3x}5\) tem taxa de variação média constante igual a \(-\dfrac {3}5\).
 
 \end{itemize}
 
@@ -775,8 +783,11 @@ o resultado coincide com o coeficiente de \(x\) na expressão da função, e tam
 Toda função linear \(f\) tem taxa de variação média constante igual a \(f(1)\), e pode ser representada pela expressão \(f(x)=f(1)\cdot x\).
 \end{description}
 
+\begin{reflection}
+É verdade que se uma função tem taxa de variação média constante então ela é uma função linear? Pense em exemplos com taxas de variação médias constantes e verifique se há ou não proporcionalidade nesses casos.
+\end{reflection}
 
-Usando essas ideias no contexto da \DUrole{xref,std,std-ref}{Atividade Câmara frigorífica}, podemos afirmar que a expressão da temperatura em função do tempo, mostrada pelo gráfico pode ser dada por \(f(t)=-3t\), uma vez que \(f(1)=-3\). A cada hora a temperatura decresce \(3^\circ C\), gerando portanto uma função decrescente.
+Usando essas ideias no contexto da \DUrole{xref,std,std-ref}{Atividade Câmara frigorífica}, podemos afirmar que a expressão da temperatura em função do tempo, mostrada pelo gráfico pode ser dada por \(f(t)=-3t\), uma vez que \(f(1)=-3\). A cada hora a temperatura decresce \(3^\circ\)C, gerando portanto uma função decrescente.
 
 De uma maneira geral, se a taxa de variação média \(a\) de uma função linear é um número real \textbf{negativo}, então essa função é decrescente, pois, para \(a<0\)
 \begin{equation*}
@@ -1021,6 +1032,7 @@ Gráfico da função \(g(x)=-\dfrac{2}{5}x\).
 Concluímos, assim, que toda reta não vertical que contém a origem é o gráfico de uma função linear.
 \end{observation}
 
+\clearpage
 
 \practice{taxa de variação média}
 \label{\detokenize{AF107-3::doc}}\label{\detokenize{AF107-3:praticando}}
@@ -1035,7 +1047,7 @@ Há \(1\) ano você adquiriu um purificador de água com capacidade de refrigera
 \begin{longtabu} to \textwidth{|c|c|c|c|c|c|}
 \hline\endfirsthead
 %\thead
-\cellcolor{\currentcolor!80}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{FIT}}}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{FLAT}}}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{PLUS}}}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{SLIM}}}&\cellcolor{\currentcolor!80}{\textcolor{black}{\textbf{STAR}}}\\
+\cellcolor{\currentcolor!80}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{FIT}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{FLAT}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{PLUS}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{SLIM}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{STAR}}}\\
 \hline
 \makecell{Dimensões \\ Altura \\ Largura \\ Profundidade} &\makecell{ 27cm \\ 29cm \\ 36cm} & \makecell{29cm \\ 36cm \\36cm} & \makecell{40cm \\ 30cm \\ 45cm} & \makecell{36cm \\ 25cm \\ 41cm} & \makecell{40cm \\ 30cm \\ 36cm}\\
 \hline
@@ -1309,7 +1321,7 @@ O número $ a $ é a \textbf{taxa de variação média} da função afim $ f $ (
 \caption{Exemplos: \(\ell(x)=-x\), \(f(x)=-x-2\) e \(g(x)=-x+6\)}\label{\detokenize{AF107-4:id2}}\end{figure}
 \end{example}
 
-\textbf{A inclinação de uma reta e a taxa de variação média}
+\section{A inclinação de uma reta e a taxa de variação média}
 
 \begin{figure}[H]
 \centering
@@ -1331,7 +1343,7 @@ A Associação Brasileira de Normas Técnicas (ABNT) tem normas para a construç
 
 
 \begin{quote}
-6.6.2.1 As rampas devem ter inclinação de acordo com os limites estabelecidos na Tabela. Para inclinação entre 6,25\% e 8,33\% é recomendado criar áreas de descanso (6.5.) nos patamares, a cada 50 m de percurso. Excetuam-se deste requisito as rampas citadas em 10.4 (plateia e palcos), 10.12 (piscinas) e 10.14 (praias).
+6.6.2.1 As rampas devem ter inclinação de acordo com os limites estabelecidos na Tabela. Para inclinação entre $6{,}25\%$ e $8{,}33\%$ é recomendado criar áreas de descanso (6.5.) nos patamares, a cada $50$m de percurso. Excetuam-se deste requisito as rampas citadas em 10.4 (plateia e palcos), 10.12 (piscinas) e 10.14 (praias).
 \end{quote}
 
 \begin{table}[H]
@@ -1341,11 +1353,11 @@ A Associação Brasileira de Normas Técnicas (ABNT) tem normas para a construç
 \thead
 \parbox[1cm]{3.5cm}{\centering\vspace{.3em} Desníveis máximos de cada segmento de rampa\newline$h$} & \parbox[1cm]{3.5cm}{\centering\vspace{.3em} Inclinação admissível em cada segmento de rampa $i$} & \parbox{4cm}{\centering Número máximo de segmentos de rampa} \\[.25cm]
 \hline
-1,50 & $5,00 (1:20)$ & Sem limite \\
+$1{,}50$ & $5{,}00 (1:20)$ & Sem limite \\
 \hline
-1,00 & $5,00 (1:20) < i \leq 6,25 (1:16)$ & Sem limite \\
+$1{,}00$ & $5{,}00 (1:20) < i \leq 6{,}25 (1:16)$ & Sem limite \\
 \hline
-0,80 & $6,25 (1:16) < i \leq 8,33 (1:12)$ & 15\\
+$0{,}80$ & $6{,}25 (1:16) < i \leq 8{,}33 (1:12)$ & 15\\
 \hline
 \end{tabu}
 \end{table}
@@ -1468,7 +1480,7 @@ Retas horizontais não possuem inclinação, de fato não há deslocamento verti
 \label{\detokenize{AF107-6:atividade-antecipando-o-pagamento-de-uma-divida}}\label{\detokenize{AF107-6:ativ-titulo-da-atividade}}
 
 
-O cliente de um banco foi à sua agência de relacionamento para negociar a antecipação de uma dívida no valor de \(R\$ 5.000,00\), que venceria no prazo de 8 meses. Lá, foi informado pelo gerente que a modalidade praticada era a de desconto comercial, no qual o valor a ser descontado é calculado a partir do valor da dívida e é proporcional ao tempo de antecipação. Para o caso em questão, o gerente gerou a seguinte quadro:
+O cliente de um banco foi à sua agência de relacionamento para negociar a antecipação de uma dívida no valor de R\$ \( 5.000,00\), que venceria no prazo de 8 meses. Lá, foi informado pelo gerente que a modalidade praticada era a de desconto comercial, no qual o valor a ser descontado é calculado a partir do valor da dívida e é proporcional ao tempo de antecipação. Para o caso em questão, o gerente gerou a seguinte quadro:
 
 \begin{table}[H]
 \centering
@@ -1508,7 +1520,7 @@ No plano cartesiano a seguir estão representados os pares ordenados \((n,D(n))\
 Uma caixa de água é abastecida por uma torneira cujo fluxo de água é constante e igual a \(10\) litros por minuto e, simultaneamente, seu conteúdo escoa, por um ralo, cujo fluxo de água é controlado à razão constante de \(15\) litros por minuto. Em certo instante, o volume de água dentro da caixa é de \(100\) litros, estando a torneira e o ralo ambos abertos.
 \begin{enumerate}
 \item {} 
-Sendo V(t) o volume de água na caixa após t minutos do instante citado. Exiba uma sentença matemática para V(t).
+Sendo $V(t)$ o volume de água na caixa após t minutos do instante citado. Exiba uma sentença matemática para $V(t)$.
 
 \item {} 
 Complete a tabela abaixo com os valores correspondentes ao volume de água na caixa.
@@ -1584,7 +1596,7 @@ Mesmo em pleno verão um avião, precisa lidar com temperaturas muito baixas. Qu
 \noindent\includegraphics[width=300bp]{frio-aviao.jpg}
 \end{figure}
 
-A temperatura na troposfera (primeira camada da atmosfera que tem aproximadamente \(40\ 000\) pés de altitude) diminui \(2^\circ C\) a cada aumento de \(1\ 000\) pés na altitude. Suponha que, em um determinado dia, a temperatura em um aeroporto seja de \(30^\circ C\), e que a água congela a \(0^\circ C\).
+A temperatura na troposfera (primeira camada da atmosfera que tem aproximadamente \(40.000\) pés de altitude) diminui \(2^\circ\)C a cada aumento de \(1.000\) pés na altitude. Suponha que, em um determinado dia, a temperatura em um aeroporto seja de \(30^\circ\)C, e que a água congela a \(0^\circ\)C.
 \begin{enumerate}
 \item {} 
 Qual a taxa de variação, em \(^\circ C/\text{pé}\), da temperatura da atmosfera, \(T\), em função da altitude, \(h\).
@@ -1596,13 +1608,13 @@ A função \(T(h)\) é crescente ou decrescente? Como isso se reflete na taxa de
 Determine uma expressão para \(T(h)\) e represente seu gráfico.
 
 \item {} 
-Qual a temperatura a \(37\ 200\) pés de altitude?
+Qual a temperatura a \(37.200\) pés de altitude?
 
 \item {} 
 A partir de que altitude o piloto deverá acionar o sistema anti-gelo da aeronave?
 
 \item {} 
-Em outro dia, a temperatura no mesmo aeroporto era de \(25^\circ C\). Qual a altitude de acionamento do sistema anti-gelo, nesse caso?
+Em outro dia, a temperatura no mesmo aeroporto era de \(25^\circ\)C. Qual a altitude de acionamento do sistema anti-gelo, nesse caso?
 
 \item {} 
 Estabeleça uma maneira de calcular a altitude de acionamento do sistema anti-gelo quando a temperatura do aeroporto é igual a \(T_0\).
@@ -1657,11 +1669,11 @@ Por exemplo, o zero da função \(f(x)=5x-21\) é o valor \(k=\dfrac{-(-21)}5\).
 Já o zero da função \(g(x)=7-\dfrac x2\) é \(k=\dfrac{-7}{-\frac 12}=14\) .
 \end{observation}
 
-
+\clearpage
 \begin{task}{Qual a frequência?}
 \label{\detokenize{AF107-6:atividade-qual-a-frequencia}}\label{\detokenize{AF107-6:id4}}
 
-A Agência Nacional de Telecomunicações (ANATEL) determina que as emissoras de rádio FM utilizem as frequências de 87,9 a 107,9 MHz, e que haja uma diferença de 0,2 MHz entre emissoras com frequências vizinhas.
+A Agência Nacional de Telecomunicações (ANATEL) determina que as emissoras de rádio FM utilizem as frequências de 87,9 a 107,9MHz, e que haja uma diferença de 0,2MHz entre emissoras com frequências vizinhas.
 \begin{enumerate}
 \item {} 
 Em uma determinada região as frequências entre a 70ª e 86ª são reservadas rádios comunitárias. Determine a frequência mínima e máxima para uma rádio comunitária.
@@ -1850,6 +1862,7 @@ a_{34}=a_12+22\cdot(\frac{-\pi}{2})=0+22\cdot(\frac{-\pi}{2})=-11\pi.
 De maneira análoga à função afim, se uma progressão aritmética tem razão positiva ela será \textbf{crescente}, e se a razão for um número negativo, ela será \textbf{decrescente}.
 \end{observation}
 
+\clearpage
 \practice{domínios discretos}
 
 \begin{task}{termo geral de uma P.A.}
@@ -1863,9 +1876,9 @@ Complete a tabela abaixo com as progressões ou as fórmulas dos termos gerais.
 \begin{table}[H]
 \setlength\tabulinesep{5pt}
 \centering
-\begin{tabu} to \textwidth{|>{$\displaystyle}l<{$}|>{\centering $}m{2cm}<{$}|>{$}c<{$}|>{$\displaystyle}l<{$}|}
+\begin{tabu} to \textwidth{|>{$\displaystyle}l<{$}|>{\centering$}m{2cm}<{$}|>{$}c<{$}|>{$\displaystyle}l<{$}|}
 \hline
-$\centering P.A.$ & $Primeiro termo$ & $Razão$ & $Termo geral$ \\
+$\centering \tcolor{P.A}.$ & $\tcolor{Primeiro termo}$ & $\tcolor{Razão}$ & $\tcolor{Termo geral}$ \\
 \hline
 (a_1,a_2,a_3) & a_1 & r & a_n=1+2(n-1)=2n-1 \\
 \hline
@@ -1889,8 +1902,8 @@ $\centering P.A.$ & $Primeiro termo$ & $Razão$ & $Termo geral$ \\
 
 Os múltiplos de um número inteiro positivo $m$, quando representados na reta numérica ficam igualmente espaçados entre si.
 \begin{enumerate}
-\item Quantos múltiplos de 13 há entre 100 e 200? Explique sua estratégia.
-\item Quantos múltiplos de 7 há entre 1000 e 2000?
+\item Quantos múltiplos de $13$ há entre $100$ e $200$? Explique sua estratégia.
+\item Quantos múltiplos de $7$ há entre $1.000$ e $2.000$?
 \end{enumerate}
 \end{task}
 
@@ -2080,11 +2093,11 @@ Considere as funções afins $f,g$ definidas por $f(x)=3x+1$ e $g(x)=-5x+2$.
 \centering
 \begin{tabu} to \textwidth{|>{$}c<{$}|*{9}{c|}}
 \hline
-\cellcolor{\currentcolor!80} x & & & & & & & & & \\
+\tcolor{$\bm{x}$} & & & & & & & & & \\
 \hline
-\cellcolor{\currentcolor!80} f(x) & & & & & & & & & \\
+\tcolor{$\bm{f(x)}$} & & & & & & & & & \\
 \hline
-\cellcolor{\currentcolor!80} g(x) & & & & & & & & & \\
+\tcolor{$\bm{g(x)}$} & & & & & & & & & \\
 \hline
 \end{tabu}
 \end{table}
@@ -2115,7 +2128,7 @@ Obtenha expressões para as funções afins cujos gráficos são os segmentos de
 
 \begin{task}{Comprando vinho}
 
-Em uma vinícola podemos comprar vinho por litro. Neste caso, o vinho é colocado em garrafões com capacidade de \(5\) litros. O vinho é vendido a R\$ \(10,00\) por litro e cada garrafão é vendido a R\$ \(5,00\).
+Em uma vinícola podemos comprar vinho por litro. Neste caso, o vinho é colocado em garrafões com capacidade de \(5\) litros. O vinho é vendido a R\$ \(10{,}00\) por litro e cada garrafão é vendido a R\$ \(5{,}00\).
 \begin{enumerate}
 \item {} 
 Calcule o preço que um cliente deverá pagar por \(2\) litros, por \(5\) litros e por \(7\) litros. Explique seus cálculos.
@@ -2124,7 +2137,7 @@ Calcule o preço que um cliente deverá pagar por \(2\) litros, por \(5\) litros
 Determine uma expressão para o preço \(p\) (em reais) em função do volume \(x\) (expresso em litros) de vinho adquirido. Considere \(x\) compreendido entre \(0\) e \(15\).
 
 \item {} 
-Trace a curva que representa a função \(p\) no plano cartesiano. Utilize a escala de \(1\) cm para \(1\) litro no eixo das abscissas e \(1\) cm para \(10\) reais nas ordenadas.
+Trace a curva que representa a função \(p\) no plano cartesiano. Utilize a escala de \(1\) cm para \(1\) litro no eixo das abscissas e \(1\)cm para \(10\) reais nas ordenadas.
 
 \end{enumerate}
 \end{task}
@@ -2136,7 +2149,7 @@ Trace a curva que representa a função \(p\) no plano cartesiano. Utilize a esc
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=.5]
+\begin{tikzpicture}[scale=.3]
 Questão 1
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [thick, <->] (17,0) -- (0,0) -- (0,17);
@@ -2166,7 +2179,7 @@ Quem comprar \(20\) unidades dessa mercadoria, na promoção, pagará por unidad
 \centering
 
 
-	\begin{tikzpicture}[scale=.7]
+  \begin{tikzpicture}[scale=.5]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [thick,<->] (0,13.25) -- (0,0) -- (12,0);
        \node [above] at (-0.5,13.25) {R\$};
@@ -2189,7 +2202,7 @@ Quem comprar \(20\) unidades dessa mercadoria, na promoção, pagará por unidad
 Determine entre que valores de consumo em kWh é cobrada taxa mínima.
 
 \item {} 
-Determine o consumo correspondente à taxa de R\$ \(1.950,00\).
+Determine o consumo correspondente à taxa de R\$ \(1.950{,}00\).
 
 \end{enumerate}
 
@@ -2259,10 +2272,10 @@ Determine o consumo correspondente à taxa de R\$ \(1.950,00\).
 \end{figure}
 \begin{enumerate}
 \item {} 
-Determine em que década a população atingiu a marca de \(5 000\) habitantes.
+Determine em que década a população atingiu a marca de \(5.000\) habitantes.
 
 \item {} 
-Observe que a partir de \(1960\) o crescimento da população em cada década tem se mantido constante. Suponha que esta taxa se mantenha inalterada no futuro. Determine em que década o vilarejo terá \(20 000\) habitantes.
+Observe que a partir de \(1960\) o crescimento da população em cada década tem se mantido constante. Suponha que esta taxa se mantenha inalterada no futuro. Determine em que década o vilarejo terá \(20.000\) habitantes.
 
 \end{enumerate}
 
@@ -2270,7 +2283,7 @@ Observe que a partir de \(1960\) o crescimento da população em cada década te
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=.5]
+\begin{tikzpicture}[scale=.4]
 Questão 4.png
 \draw [thick,<->] (0,12) -- (0,0) -- (17,0);
      \node [below left] at (0,12) {Valor (R\$)};
@@ -2283,7 +2296,7 @@ Questão 4.png
 \end{tikzpicture}
 \end{figure}
 
-Esse veículo foi vendido pelo seu primeiro dono, após \(5\) anos de uso, por R\$ \(24.000,00\). Sabendo-se que o valor comercial do veículo atinge seu valor mínimo após \(20\) anos de uso, e que esse valor mínimo corresponde a \(20\%\) do valor que tinha quando era novo. Responda:
+Esse veículo foi vendido pelo seu primeiro dono, após \(5\) anos de uso, por R\$ \(24.000{,}00\). Sabendo-se que o valor comercial do veículo atinge seu valor mínimo após \(20\) anos de uso, e que esse valor mínimo corresponde a \(20\%\) do valor que tinha quando era novo. Responda:
 \begin{enumerate}
 \item {} 
 Qual o valor de fábrica do veículo (valor quando era novo)?
@@ -2297,14 +2310,13 @@ Qual o valor comercial do carro quando atinge \(2\) anos de uso?
 \end{enumerate}
 
 \item \textbf{(UERJ 2016)} O resultado de um estudo para combater o desperdício de água, em certo município, propôs que as companhias de abastecimento pagassem uma taxa à agência reguladora sobre as perdas por vazamento nos seus sistemas de distribuição. No gráfico, mostra-se o valor a ser pago por uma companhia em função da perda por habitante.
-\begin{figure}[H]
-\centering
-
-\begin{tikzpicture}[scale=.3]
+\adjustbox{center}
+{
+\begin{tikzpicture}[scale=.2]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [thick, -] (22,0) -- (0,0) -- (0, 26);
-     \node [below] at (15,-0.9) {perda por habitante (litros)};
-       \node [above right, rotate=90] at (-1.2,10) { valor por habitante (reais)};
+     \node [below] at (15,-1.5) {perda por habitante (litros)};
+       \node [rotate=90] at (-4,13) { valor por habitante (reais)};
        \node [left] at (0,0) {0};
        \node [left] at (0,2.5) {5};
        \draw [thick] (0,2.5) -- (-0.1,2.5);
@@ -2326,18 +2338,24 @@ Qual o valor comercial do carro quando atinge \(2\) anos de uso?
        \node [ponto, color=\currentcolor!80] at (9,9.5) {};
        \node [ponto, color=\currentcolor!80] at (20,25) {};
 \end{tikzpicture}
-\end{figure}
+}
+
 Calcule o valor V, em reais, representado no gráfico, quando a perda for igual a \(500\) litros por habitante.
 
-\item \textbf{(ENEM-2012)} Certo vendedor tem seu salário mensal calculado da seguinte maneira: ele ganha um valor fixo de R\$ \(750,00\), mais uma comissão de R\$ 3,00 para cada produto vendido. Caso ele venda mais de \(100\) produtos, sua comissão passa a ser de R\$ \(9,00\) para cada produto vendido, a partir do \(101º\) produto vendido. Com essas informações, o gráfico que melhor representa a relação entre salário e o número de produtos vendidos é:
-\begin{figure}[H]
-\centering
 
+\item \textbf{(ENEM-2012)} Certo vendedor tem seu salário mensal calculado da seguinte maneira: ele ganha um valor fixo de R\$ \(750,00\), mais uma comissão de R\$ 3,00 para cada produto vendido. Caso ele venda mais de \(100\) produtos, sua comissão passa a ser de R\$ \(9,00\) para cada produto vendido, a partir do \(101º\) produto vendido. Com essas informações, o gráfico que melhor representa a relação entre salário e o número de produtos vendidos é:
+\begin{enumerate}[left=-1em]
+\begin{multicols}{2}
+
+\item \adjustbox{valign=t}
+{
+\resizebox{.9\linewidth}{!}
+{
 \begin{tikzpicture}[scale=.5]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
   \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-  \node [below, ] at (19,-1) {Produtos vendidos};
-  \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
+  \node [below, scale=1.25] at (19,-1) {Produtos vendidos};
+  \node [above, rotate=90,scale=1.25] at (-2, 9) {Sal\'ario em R\$};
   \node [below,] at (0,0) {0};
   \node [below,] at (2,0) {25};
   \node [below] at (4,0) {50};
@@ -2353,26 +2371,29 @@ Calcule o valor V, em reais, representado no gráfico, quando a perda for igual 
 \node [left] at (0,1) {250};
 \node [left] at (0,2) {500};
 \node [left] at (0,3) {750};
-  \node [left] at (0,4) {1000};
-  \node [left] at (0,5) {1250};
-  \node [left] at (0,6) {1500};
-\node [left] at (0,7) {1750};
-  \node [left] at (0,8) {2000};
-  \node [left] at (0,9) {2250};
-\node [left] at (0,10) {2500};
+  \node [left] at (0,4) {1.000};
+  \node [left] at (0,5) {1.250};
+  \node [left] at (0,6) {1.500};
+\node [left] at (0,7) {1.750};
+  \node [left] at (0,8) {2.000};
+  \node [left] at (0,9) {2.250};
+\node [left] at (0,10) {2.500};
   \draw [ultra thick, color=\currentcolor!80] (0,3) -- (16,6);
 \end{tikzpicture}
+}
+}
 
-\end{figure}
-\begin{figure}[H]
-\centering
 
+\item \adjustbox{valign=t}
+{
+\resizebox{.9\linewidth}{!}
+{
 \begin{tikzpicture}[scale=.5]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
        \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-  \node [below, ] at (19,-1) {Produtos vendidos};
-  \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
+  \node [below, scale=1.25] at (19,-1) {Produtos vendidos};
+  \node [above, rotate=90,scale=1.25] at (-2, 9) {Sal\'ario em R\$};
      \node [below,] at (0,0) {0};
        \node [below,] at (2,0) {25};
        \node [below] at (4,0) {50};
@@ -2388,27 +2409,30 @@ Calcule o valor V, em reais, representado no gráfico, quando a perda for igual 
        \node [left] at (0,1) {250};
        \node [left] at (0,2) {500};
        \node [left] at (0,3) {750};
-       \node [left] at (0,4) {1000};
-     \node [left] at (0,5) {1250};
-       \node [left] at (0,6) {1500};
-       \node [left] at (0,7) {1750};
-       \node [left] at (0,8) {2000};
-       \node [left] at (0,9) {2250};
-       \node [left] at (0,10) {2500};
+  \node [left] at (0,4) {1.000};
+  \node [left] at (0,5) {1.250};
+  \node [left] at (0,6) {1.500};
+\node [left] at (0,7) {1.750};
+  \node [left] at (0,8) {2.000};
+  \node [left] at (0,9) {2.250};
+\node [left] at (0,10) {2.500};
        \draw [ultra thick, color=\currentcolor!80] (0,3) -- (6,6.5) -- (16,8);
 \end{tikzpicture}
+}
+}
 
-\end{figure}
 
-\begin{figure}[H]
-\centering
 
+\item \adjustbox{valign=t}
+{
+\resizebox{.9\linewidth}{!}
+{
 \begin{tikzpicture}[scale=.5]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
        \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-  \node [below, ] at (19,-1) {Produtos vendidos};
-  \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
+  \node [below, scale=1.25] at (19,-1) {Produtos vendidos};
+  \node [above, rotate=90,scale=1.25] at (-2, 9) {Sal\'ario em R\$};
        \node [below,] at (0,0) {0};
        \node [below,] at (2,0) {25};
        \node [below] at (4,0) {50};
@@ -2424,27 +2448,31 @@ Calcule o valor V, em reais, representado no gráfico, quando a perda for igual 
        \node [left] at (0,1) {250};
        \node [left] at (0,2) {500};
        \node [left] at (0,3) {750};
-       \node [left] at (0,4) {1000};
-       \node [left] at (0,5) {1250};
-       \node [left] at (0,6) {1500};
-       \node [left] at (0,7) {1750};
-       \node [left] at (0,8) {2000};
-       \node [left] at (0,9) {2250};
-       \node [left] at (0,10) {2500};
+  \node [left] at (0,4) {1.000};
+  \node [left] at (0,5) {1.250};
+  \node [left] at (0,6) {1.500};
+\node [left] at (0,7) {1.750};
+  \node [left] at (0,8) {2.000};
+  \node [left] at (0,9) {2.250};
+\node [left] at (0,10) {2.500};
        \draw [ultra thick, color=\currentcolor!80] (0,3) -- (8,3) -- (16,7);
 \end{tikzpicture}
+}
+}
 
-\end{figure}
-\begin{figure}[H]
-\centering
 
+
+\item \adjustbox{valign=t}
+{
+\resizebox{.9\linewidth}{!}
+{
 \begin{tikzpicture}[scale=.5]
 Questão 6 item d
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
        \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-  \node [below, ] at (19,-1) {Produtos vendidos};
-  \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
+  \node [below, scale=1.25] at (19,-1) {Produtos vendidos};
+  \node [above, rotate=90,scale=1.25] at (-2, 9) {Sal\'ario em R\$};
      \node [below,] at (0,0) {0};
        \node [below,] at (2,0) {25};
        \node [below] at (4,0) {50};
@@ -2460,25 +2488,31 @@ Questão 6 item d
        \node [left] at (0,1) {250};
      \node [left] at (0,2) {500};
        \node [left] at (0,3) {750};
-       \node [left] at (0,4) {1000};
-     \node [left] at (0,5) {1250};
-       \node [left] at (0,6) {1500};
-       \node [left] at (0,7) {1750};
-       \node [left] at (0,8) {2000};
-       \node [left] at (0,9) {2250};
-       \node [left] at (0,10) {2500};
+  \node [left] at (0,4) {1.000};
+  \node [left] at (0,5) {1.250};
+  \node [left] at (0,6) {1.500};
+\node [left] at (0,7) {1.750};
+  \node [left] at (0,8) {2.000};
+  \node [left] at (0,9) {2.250};
+\node [left] at (0,10) {2.500};
        \draw [ultra thick, color=\currentcolor!80] (0,3) -- (16,3);
 \end{tikzpicture}
-\end{figure}
-\begin{figure}[H]
-\centering
+}
+}
+\end{multicols}
 
+
+\begin{multicols}{2}
+\item \adjustbox{valign=t}
+{
+\resizebox{.9\linewidth}{!}
+{
 \begin{tikzpicture}[scale=.5]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [help lines, dashed, secundario!30, xscale=2] (0,0) grid (11,11);
        \draw [thick, <->, xscale=2] (11,0) -- (0,0) -- (0, 11);
-       \node [below, ] at (19,-1) {Produtos vendidos};
-       \node [above, rotate=90,] at (-2, 9) {Sal\'ario em R\$};
+       \node [below, scale=1.25] at (19,-1) {Produtos vendidos};
+       \node [above, rotate=90,scale=1.25] at (-2, 9) {Sal\'ario em R\$};
        \node [below,] at (0,0) {0};
        \node [below,] at (2,0) {25};
        \node [below] at (4,0) {50};
@@ -2494,16 +2528,22 @@ Questão 6 item d
        \node [left] at (0,1) {250};
        \node [left] at (0,2) {500};
        \node [left] at (0,3) {750};
-       \node [left] at (0,4) {1000};
-       \node [left] at (0,5) {1250};
-       \node [left] at (0,6) {1500};
-       \node [left] at (0,7) {1750};
-     \node [left] at (0,8) {2000};
-     \node [left] at (0,9) {2250};
-     \node [left] at (0,10) {2500};
+  \node [left] at (0,4) {1.000};
+  \node [left] at (0,5) {1.250};
+  \node [left] at (0,6) {1.500};
+\node [left] at (0,7) {1.750};
+  \node [left] at (0,8) {2.000};
+  \node [left] at (0,9) {2.250};
+\node [left] at (0,10) {2.500};
      \draw [ultra thick, color=\currentcolor!80] (0,3) -- (8,4.25) -- (16,8);
 \end{tikzpicture}
-\end{figure}
+}
+
+}
+\end{multicols}
+\end{enumerate}
+
+
 \item \textbf{(UERJ-2014 - 2ª F)} O reservatório A perde água a uma taxa constante de 10 litros por hora, enquanto o reservatório B ganha água a uma taxa constante de 12 litros por hora. No gráfico, estão representados, no eixo y, os volumes, em litros, da água contida em cada um dos reservatórios, em função do tempo, em horas, representado no eixo x.
 \begin{figure}[H]
 \centering
@@ -2548,8 +2588,11 @@ Determine o tempo \(x_{0}\), em horas, indicado no gráfico.
 
 \end{enumerate}
 
+
 \item (UERJ-2003-1ª fase) Uma seqüência de cinco átomos está organizada por ordem crescente de seus números atômicos, cujos valores são regidos por uma progressão aritmética de razão 4. Já o número de nêutrons desses mesmos átomos é regido por uma progressão aritmética de razão 5.
 Se o átomo mais pesado pertence ao elemento ferro e o mais leve possui o número de prótons igual ao número de nêutrons, o número de massa do terceiro átomo da série é:
+\clearpage
+
 \begin{enumerate}
 \item {} 
 18
@@ -2590,26 +2633,26 @@ O vigésimo termo dessa progressão corresponde a:
 
 \end{enumerate}
 
-\item (ENEM-2011) O número mensal de passagens de uma determinada empresa aérea aumentou no ano passado nas seguintes condições: em janeiro foram vendidas \(33 000\) passagens; em fevereiro, \(34 500\); em março, \(36 000\). Esse padrão de crescimento se mantém para os meses subsequentes. Quantas passagens foram vendidas por essa empresa em julho do ano passado?
+\item (ENEM-2011) O número mensal de passagens de uma determinada empresa aérea aumentou no ano passado nas seguintes condições: em janeiro foram vendidas \(33.000\) passagens; em fevereiro, \(34.500\); em março, \(36.000\). Esse padrão de crescimento se mantém para os meses subsequentes. Quantas passagens foram vendidas por essa empresa em julho do ano passado?
 \begin{enumerate}
 \item {} 
-\(38 000\)
+\(38.000\)
 
 \item {} 
-\(40 500\)
+\(40.500\)
 
 \item {} 
-\(41 000\)
+\(41.000\)
 
 \item {} 
-\(42 000\)
+\(42.000\)
 
 \item {} 
-\(48 000\)
+\(48.000\)
 
 \end{enumerate}
 
-\item (UNICAMP) A ANATEL determina que as emissoras de rádio FM utilizem as frequências de \(87,9\) a \(107,9\) MHz, e que haja uma diferença de \(0,2\) MHz entre emissoras com frequências vizinhas. A cada emissora, identificada por sua freqüência, é associado um canal, que é um número natural que começa em \(200\). Desta forma, à emissora cuja frequência é de \(87,9\) MHz corresponde o canal \(200\); à seguinte, cuja frequência é de \(88,1\) MHz, corresponde o
+\item (UNICAMP) A ANATEL determina que as emissoras de rádio FM utilizem as frequências de \(87{,}9\) a \(107{,}9\) MHz, e que haja uma diferença de \(0{,}2\) MHz entre emissoras com frequências vizinhas. A cada emissora, identificada por sua freqüência, é associado um canal, que é um número natural que começa em \(200\). Desta forma, à emissora cuja frequência é de \(87{,}9\) MHz corresponde o canal \(200\); à seguinte, cuja frequência é de \(88{,}1\) MHz, corresponde o
 canal \(201\), e assim por diante. Pergunta-se:
 \begin{enumerate}
 \item {} 

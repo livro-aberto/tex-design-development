@@ -220,12 +220,9 @@ Qual dos gráficos seguintes expressa corretamente a variação da altura $x$ da
 
 Os gráficos mostram a varação da altura $x$ da coluna de água em função to tempo $t$. Associe cada recipiente ao gráfico correspondente a ele e justifique suas escolhas.
 
-\begin{table}[H]
 \centering\setlength\tabcolsep{0pt}
-\begin{tabu} to \textwidth{m{4cm} m{6cm} m{5.5cm}}
-
-
-
+% \begin{enumerate}
+\begin{tabular}{m{4cm} m{6cm} m{5.5cm}}
 \begin{enumerate}[label=(\Roman*)]\setcounter{enumi}{0}
 \item\adjustbox{valign=t}{\begin{tikzpicture}[scale=.25,baseline=(current bounding box.north)]
 
@@ -238,7 +235,6 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 
 \draw [thick] (0,0) -- (2,4);
 \end{tikzpicture}}
-
 \end{enumerate}
 
 &
@@ -257,6 +253,7 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \end{tikzpicture}}
 \end{enumerate}
 
+
 &
 \begin{enumerate}[label=(\Roman*)]\setcounter{enumi}{2}
 \item\adjustbox{valign=t}{\begin{tikzpicture}[scale=.25,baseline=(current bounding box.north), ]
@@ -270,11 +267,9 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 
 \draw [thick] (0,0) -- (8,4);
 \end{tikzpicture}}
-\end{enumerate}
+\end{enumerate}\\
 
-
-\end{tabu}
-\end{table}
+\end{tabular}
 \end{task}
 
 \begin{task}{A água continua subindo}
