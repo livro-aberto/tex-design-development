@@ -1,4 +1,9 @@
 \renewcommand\chapterillustration{abertura-afim}
+\ifnum \aluno=1
+\renewcommand\chapterillustration{abertura-afim}
+\else
+\renewcommand\chapterillustration{abertura-afim-professor}
+\fi
 \renewcommand\chapterwhat{Funções linear e afim e suas representações algébrica e gráfica, taxa de variação, proporcionalidade direta, funções afins de domínio discreto (Progressões Aritméticas), Aplicações.}
 \renewcommand\chapterbecause{O modelo de variação constante é um dos modelos mais presentes em observações científicas e até mesmo em nosso cotidiano. Ele pode ser identificado por exemplo, em relações que modelam a compra/consumo e venda, o esvaziamento de um recipiente por um ralo em função do tempo ou na relação entre distância e tempo do “movimento uniforme” estudado pela Cinemática, entre tantos outros. Um caso particularmente importante é aquele em que há proporcionalidade entre as grandezas envolvidas na modelagem. As ideias desenvolvidas neste capítulo servem como base para aplicações em diversas áreas.}
 \chapter{Função afim}
@@ -85,6 +90,176 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 
 \mainmatter
 
+\begin{apresentacao}
+\section{Função Afim}
+\subsection{Habilidades e pré-requsitos}
+
+Neste capítulo contemplam-se as seguintes habilidades da segunda versão da \href{http://historiadabncc.mec.gov.br/documentos/bncc-2versao.revista.pdf}{Base Nacional Comum Curricular (BNCC):}
+
+\begin{habilities}{EM11MT07}
+
+Reconhecer função afim e suas representações algébrica e gráfica, identificar o modelo de variação e a taxa de variação, incluindo os casos em que a variação é proporcional (linear), e utilizar essas noções para representar e resolver problemas como os de Movimento Uniforme, entre outros.
+\end{habilities}
+
+Os pré-requisitos para este capítulo são:
+
+\begin{habilities}{EF07MA13} Resolver e elaborar problemas que envolvam variação de proporcionalidade direta e de proporcionalidade inversa entre duas grandezas, utilizando sentença algébrica para expressar a relação entre elas.
+
+\tcbsubtitle{EF07MA14} Resolver e elaborar problemas que possam ser representados por equações polinomiais de 1º grau, redutíveis à forma \(ax+b=c\), fazendo uso das propriedades da igualdade.
+\end{habilities}
+
+Além disso há outras habilidades que se relacionam com os conceitos abordados nesse capítulo, a saber,
+
+\begin{habilities}{EF09MA05} Resolver e elaborar problemas que envolvam porcentagens, com a ideia de aplicação de percentuais sucessivos e a determinação das taxas percentuais, preferencialmente com o uso de tecnologias digitais, no contexto da educação financeira.
+
+\tcbsubtitle{EF09MA07} Resolver problemas que envolvam a razão entre duas grandezas de espécies diferentes, como velocidade e densidade demográfica.
+
+\tcbsubtitle{EF09MA08} Resolver e elaborar problemas que envolvam relações de proporcionalidade direta e inversa entre duas ou mais grandezas, inclusive escalas, divisão em partes proporcionais e taxa de variação, em contextos socioculturais, ambientais e de outras áreas.
+
+\end{habilities}
+
+Prezado colega, o presente capítulo foi concebido a partir de uma abordagem de função afim não usual. Deixamos a cargo do aluno levantar conjecturas a respeito dos conceitos, definições e propriedades da função afim. Essas conjecturas ou indagações são provocadas por meio de atividades que abordam os conceitos a serem trabalhados.
+
+Iniciamos o capítulo resgatando a ideia de grandezas proporcionais e relacionando-a com o conceito de função linear. É comum que a noção de proporcionalidade, mais especificamente a de proporcionalidade direta, amplamente vinculada à “regra de três”, seja associada pelos estudantes a qualquer variação entre grandezas. Ainda que, de fato, a proporcionalidade tenha um papel de destaque em modelos da física e da química, nem toda variação entre grandezas é um modelo desse tipo. Portanto acreditamos que, na condução das atividades seja natural para o professor (e recomendamos que o faça) chamar a atenção dos estudantes para o fato que existem grandezas cuja relação não é de proporcionalidade.
+
+Busque com seus estudantes desenvolver as atividades, de maneira a deixá-los livres para criar conjecturas ou até mesmo a chegar a conclusões, por meio de argumentos diversos, sejam eles visuais, geométricos, algébricos, lógicos ou até mesmo dissertativos.
+
+Vale ressaltar alguns pontos:
+\begin{itemize}
+\item {} 
+Boa parte das atividades tem como objetivo apontar para os estudantes a importância da análise da taxa de variação para inferirmos se uma função é afim ou não. Neste capítulo, resolvemos não fazer uso do termo \textbf{coeficiente angular} da reta. Essa decisão se pauta em dois aspectos: (i) Dependendo da escolha da unidade para as grandezas envolvidas, a imagem da representação gráfica pode sugerir um ângulo cuja a tangente não correspnde ao coeficiente angular da reta determinada pela função, e assim levar ao equívoco. (ii) Além disso, acreditamos que a compreensão de taxa de variação pode ser mais fácil se dotada de significado. Assim, por exemplo, é mais fácil compreender a taxa de variação entre temperatura e altitude ou entre velocidade e tempo do que associar essa ideia a um conceito essencialmente numérico, que é o caso do coeficiente angular de uma reta. O ângulo tem apelo visual independente das escalas escolhidas para os eixos, e assim, chamar a taxa de variação de coeficiente angular pode trazer confusão. Portanto, neste texto, optamos por destacar a especificidade de cada conceito associando o termo taxa de variação à função afim e coeficiente angular a retas (desde que estejam em um sistema de coordenadas cujos eixos apresentam-se na mesma escala).
+
+\item {} 
+Também não achamos adequado o termo \emph{coeficiente linear} para o \(b\) em \(f(x)=ax+b\). Primeiramente porque, quando ele é não nulo a função deixa de ser “linear”, então ele funciona mais como uma medida da “não-linearidade” da função. Em alguns livros ele também é chamado de \emph{intercepto}. Também optamos por não utilizar essa nomenclatura por ela ser restringir apenas aos casos em que os eixos estão na posição tradicional (isto é, se cruzando no \((0,0)\)) e além disso, \(0\) deve pertencer ao domínio da função em questão. Por essas razões, resolvemos não dar um nome para o “\(b\)”, apenas lhe dar um significado geométrico que serve em qualquer situação: a medida da translação vertical que se faz no gráfico da função linear \(\ell(x)=ax\) para se obter o gráfico da função \(f(x)=ax+b\).
+
+\item {} 
+Em alguns livros o capítulo tem o nome de “Função do 1° grau”. Também acreditamos que esse termo é equivocado pois função não tem grau, o que tem grau é polinômio. No entanto, podemos dizer que toda função afim pode ser expressa por um polinômio do 1° grau.
+
+\item {} 
+Também é comum, apresentarmos uma função afim da forma \(f(x)=ax+b\), sem nos preocuparmos se o seu domínio é toda real ou não. Algumas atividades abordam funções com domínios discretos, outras cujos domínios são intervalos reais. Sendo assim, ressalte para seus estudantes a importância do domínio da função, como por exemplo: \(f:\mathbb{R}\to\mathbb{R}\) onde \(f(x)=2x+1\) ; \(g:[0,2]\to \mathbb{R}\) onde \(g(x) = -2x\)   e  \(h:\mathbb{N}\to\mathbb{R}\) onde \(h(n)=3n-5\); de maneira que o gráfico de \(f\) é uma reta; de \(g\) é um segmento de reta e de \(h\) é um conjunto de pontos colineares.
+
+\item {} 
+Pode ocorrer que algum estudante tente associar uma reta de inclinação negativa a uma relação de proporcionalidade inversa. Caso essa questão seja levantada durante a execução das atividades, mostre a seus estudantes, com um exemplo simples, como é a curva que representa a variação de proporcionalidade inversa (hipérbole). Decidimos não discutir esse assunto nesse capítulo para que não ficasse demasiadamente extenso.
+
+\item {} 
+Sempre que possível, utilize recursos computacionais para desenvolver o discutir as atividades propostas ou para gerar novas atividades. Isso torna o estudo mais dinâmico.  São propostas duas atividades que apresentam versões digitais criadas no Geogebra. Caso não consiga trabalhá-las em sala de aula, estimule seus estudantes a acessarem os respectivos links.
+
+\item {} 
+As habilidades que estão listadas como pré-requisitos são retomadas pelas atividades e eventualmente aprofundadas em relação à maneira como elas são tradicionalmente exploradas no Ensino Fundamental.
+
+\end{itemize}
+
+\textbf{Alguns distratores} (apontados pela literatura de pesquisa)
+\begin{itemize}
+\item {} 
+A repetida confirmação da validade da proporcionalidade - juntamente com o status intuitivo que o conceito recebe gradualmente - pode conduzir a uma ideia errada: se houver uma relação entre duas variáveis, essa relação provavelmente é proporcional. Estudos mostram que existe uma tendência generalizada entre os estudantes americanos com idade de \(12\) a \(16\) anos de que, se uma figura aumentar de \(k\) vezes, a área e o volume dessa figura serão ampliados também de \(k\) vezes. \cite{Dooren-et-al-2005}
+
+\item {} 
+A pesquisa tem documentado dificuldades dos estudantes com o conceito de inclinação. Há confusões associadas ao cálculo da inclinação e à interpretação de funções lineares e seus gráficos. Os estudantes também apresentam dificuldades em relacionar gráficos a equações lineares e à noção de taxa de variação. Eles têm dificuldade em perceber a inclinação como uma razão e conectar tal razão ao modelo físico. \cite{Stump-1999}
+
+\item {} 
+Nem toda razão pode ser expressa por números racionais, o que vincula, por meio da proporcionalidade, a apresentação dos números irracionais. Isso sinaliza que nem todas as situações podem ser resolvidas recorrendo-se apenas aos números racionais. \cite{Silva-et-al-2013}
+
+\end{itemize}
+\end{apresentacao}
+
+\def\currentcolor{session1}
+\clearmargin
+\begin{objectives}{Na piscina}
+{
+\begin{itemize}
+\item Reconhecer uma relação de proporcionalidade entre grandezas a partir da análise gráfica e da construção e análise dos dados em uma tabela;
+
+\item Conjecturar sobre a representação gráfica de grandezas diretamente proporcionais, associando-a a um conjunto de pontos colineares
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Na piscina}
+{
+\begin{itemize}
+\item Como primeira atividade do capítulo, priorize as ideias em detrimento do rigor matemático. Ajude seus estudantes a transcreverem suas ideias de maneira precisa, ainda que informais.
+No item (b), podem surgir respostas como: a primeira coluna aumenta de “uma em uma hora” enquanto a segunda aumenta de “200 em 200 litros”; a segunda coluna é obtida multiplicando a primeira por 200; tabela gerada pela função f(n)=200⋅n com domínio {0,1,2,3,4,5}. Apesar de não serem consequências diretas da definição, estão corretas e serão tratadas ao longo do capítulo.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Na piscina}
+{
+\begin{enumerate}
+\item Piscina 1
+
+\adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Tempo ($h$) & volume (litros) \\
+\hline
+0 & 0 \\
+\hline
+1 & 200 \\
+\hline
+2 & 400 \\
+\hline
+3 & 600 \\
+\hline
+4 & 800 \\
+\hline
+5 & 1000 \\
+\hline
+\end{tabu}
+}
+
+\vspace{2em}
+
+Piscina 2
+
+\adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Tempo ($h$) & volume (litros) \\
+\hline
+0 & 0 \\
+\hline
+1 & 150 \\
+\hline
+2 & 200 \\
+\hline
+3 & 300 \\
+\hline
+4 & 500 \\
+\hline
+5 & 800 \\
+\hline
+6 & 900 \\
+\hline 
+7 & 950 \\
+\hline
+8 & 1000 \\
+\hline
+\end{tabu}
+}
+
+\vspace{2em}
+
+
+\item Sim, pois para $k\in\{0,2,3,4,5\}$ tempo
+\[\begin{array}{ccc}
+x\quad &\overline{\quad \quad \quad}& \quad y \\
+k\cdot 1 \quad &\overline{\quad \quad \quad}& \quad k\cdot 200
+\end{array}\]
+
+\item Não, pois ao final da primeira hora o volume total de água aumentou 150 litros e na hora seguinte aumentou apenas 50 litros. Para haver proporcionalidade direta, deveria ter aumentado também 150 litros na segunda hora, totalizando 300 litros.
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{sugestions}{Para refletir}
+{
+  Este é um convite à uma primeira reflexão sobre as propriedades geométricas de pontos colineares e sua relação com grandezas proporcionais. Conduza os seus estudantes a fazerem conjecturas sobre como deve ser a representação gráfica de grandezas diretamente proporcionais.
+}{1}{1}
+\end{sugestions}
 \explore{função linear}\label{funcaolinear}
 No capítulo de Funções, você foi apresentado ao conceito de função, uma relação entre duas grandezas que atende determinadas condições. Neste capítulo, pretendemos colocá-lo em contato com um dos modelos mais presentes em observações científicas e até mesmo em nosso cotidiano, o modelo de variação constante, aqui representado pelo conceito de função afim. Este modelo pode ser identificado por exemplo, em relações que modelam a compra/consumo e venda, o esvaziamento de um recipiente por um ralo em função do tempo ou na relação entre distância e tempo do “movimento uniforme” estudado pela Cinemática, entre tantos outros. Antes de estudarmos a função afim propriamente dita, vamos entender um de seus casos particulares, a função linear.
 
@@ -190,6 +365,13 @@ Suponha que os dados numéricos fossem omitidos dos eixos nos dois gráficos. Ai
 \end{reflection}
 
 \clearpage
+\def\currentcolor{session4}
+\begin{sugestions}{Para refletir}
+{
+  Até o presente momento, apenas argumentamos que se duas grandezas são proporcionais então elas se relacionam de maneira que uma delas é uma função linear da outra. Essa reflexão vai no sentido da afirmação recíproca. E ainda faz uma provocação, sem ter o intuito de formalizar, no sentido de intuir que a função inversa de uma função linear é também uma função linear.
+}{1}{2}
+\end{sugestions}
+
 \arrange{ função linear}
 \label{\detokenize{AF107-1::doc}}\label{\detokenize{AF107-1:organizando-as-ideias-funcao-linear}}
 Considere duas grandezas diretamente proporcionais que podem assumir quaisquer valores reais e vamos representá-las pelas letras \(x\) e \(y\). Então, sempre que multiplicarmos \(x\) por qualquer número real \(k\), o valor correspondente da grandeza \(y\) também fica multiplicado pelo mesmo valor. Isto é
@@ -235,6 +417,119 @@ Podemos afirmar também que \(x\) é uma função linear de \(y\)?
 \end{reflection}
 
 \needspace{.2\textheight}
+\def\currentcolor{session2}
+\begin{objectives}{Taxa de Câmbio}
+{
+\begin{itemize}
+\item Utilizar a taxa de câmbio fornecida para realizar a conversão do valor dado em moeda estrangeira para o valor correspondente em reais.
+
+\item Obter a partir das informações fornecidas a função linear que converte dólar americano em reais.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Taxa de Câmbio}
+{
+\begin{itemize}
+\item É bastante provável que no item \titem{c)} os estudantes apresentem o seguinte raciocínio: se 1 dólar americano equivale a R\$ $3{,}20$ reais então $x$ dólares americanos irão corresponder a $y$ reais, isto é, $y=3,20\cdot x$. Em analogia ao que foi feito anteriormente, é importante chamar atenção de que se $y=f(x)$ é a função que fornece a quantia equivalente em reais a x dólares americanos, como as grandezas envolvidas são diretamente proporcionais e $f(1)=3{,}20$, então $f(x)=x\cdot f(1)$ e portanto $f(x)=3{,}20{,}x$.
+
+\item Ainda no item \titem{c)} o questionamente apresentado sobre o domínio da função tem como objetivo levar a uma reflexão de que na prática não faz sentido, por exemplo, converter $\sqrt{5}$ dólares americanaos para reais.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Taxa de Câmbio}
+{
+\begin{enumerate}
+
+\item A partir da taxa de câmbio fornecida sabemos que 1 dólar americano é equivalente a R\$ $320{,}00$, e portanto, para comprar 100 dólares americanos serão necessários R\$ $320{,}00$. \si{kg}
+
+\item Como nesse dia 1 euro é equivalente a R\$ $4{,}00$, então será necessário desembolsar R\$ $800{,}00$ para a compra de $200$ euros.
+
+\item Vamos chamar de $y=f(x)$ a função que fornece a quantia equivalente em reais a x dólares americanos. Como as grandezas envolvidas são diretamente proporcionais e $f(1)=3{,}20$ (veja que isso é a tradução, usando a linguagem de função, de que 1 dólar americano equivale a R\$ $3{,}20$), então $f(x)=x\cdot f(1)$ e portanto $f(x)=3{,}20\cdot x$. Como na prática não existem quantias irracionais de dólares americanos e de reais, devemos considerar $f:\Q\rightarrow\Q$.
+
+\item Utilizando a função obtida no item anterior vemos que R\$ $2000,00$ equivalem a $x\displaystyle=\frac{2000}{3}{,}20=625$ reais. Raciocinando de forma análoga obtemos que com R\$ $2000{,}00$ poderão ser adquiridos $\displaystyle\frac{2000}{4}=500$ euros.
+\end{enumerate}
+}{0}
+\end{answer}
+\begin{objectives}{Proporcionalidade na construção de retângulos}
+{
+\begin{itemize}
+\item Levar o estudante a relacionar os conceitos de proporcionalidade e semelhança de figuras e função linear.
+
+\item Construir retângulos que sejam semelhantes a um retângulo dado.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\clearmargin
+\marginpar{\vspace{.5em}}
+\begin{answer}{Proporcionalidade na construção de retângulos}
+{
+\begin{enumerate}
+\item Não, pois a medida da base dobrou e a altura se manteve.
+
+\item $3$, pois se a medida da base dobrou a altura deve dobrar $1{,}5\cdot2=3$. Os retângulos se relacionam por meio da função linear $f(x)=2\cdot x$.
+
+\item $2{,}5$, pois em todos os retângulos a razão de semelhança, entre a base e a altura é de $12$, portando a altura deve ser a metade da base. Neste caso os retângulos se relacionam por meio da função linear $f(x)=53\cdot x$.
+
+\item $8$, pelo mesmo motivo citado anteriormente, a base deve ser o dobro a altura.
+
+\item Não, pois a razão entre base e altura não é de $12$.
+
+\item $\sqrt{33}$, pois a altura de um triângulo equilátero de lado $3$ é $\frac{3\sqrt{33}}{2}$, ao assumir essa medida como altura do retângulo, sua base deve ser o dobro dessa medida.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Qual é a área?}
+{
+\begin{itemize}
+\item Em um círculo dado, reconhecer a relação de dependência entre a medida do ângulo central e a medida da área do setor circular.
+
+\item Inferir que a medida da área do setor é diretamente proporcional a medida do ângulo central.
+
+\item Determinar a medida da área do setor circular dada a medida do ângulo central e vice-versa.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-1em}}
+\begin{sugestions}{Qual é a área?}
+{
+\begin{itemize}
+\item Nos dois primeiros itens procure incentivar os alunos a resolver o problema utilizando apenas processos mentais, ou ao menos na hora de discutir a solução, utilize argumentações que valorizem a estimativa, tais como:
+
+\begin{itemize}
+\item Como $\frac{1}{4}$ de $20$ é $5$, e $14$ é um valor um pouco menor que $34$ de $20$ então o setor circular de área $14$ tem que ser menor do que $34$ do círculo.
+
+\item Ao analisar as opções descartamos a opção “2” por ser uma região menor que $34$ da área do círculo, descartamos também a opção “3” por se tratar de um valor entre $15$ e $20$ mais próximo de $15$, logo a resposta correta está representada pela opção “1”.
+\end{itemize}
+
+\item Nos itens \titem{c)} e \titem{d)}, discuta com a turma a importância de ter sido apresentado a medida do ângulo.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Qual é a área?}
+{
+\begin{enumerate}\setcounter{enumi}{4}
+\item 2)
+\item 1)
+\item Uma possível resposta seria: sendo a área total do círculo igual a $20$, então $14$ do círculo equivale a uma área 5. No entanto, como as áreas destacadas nos itens apresentados estão muito próximas esse critério não nos permite concluir com exatidão qual seria a resposta correta, que no caso é o item 2).
+\item 2)
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Qual é a área}
+{
+  \begin{enumerate}
+  \item Fazendo uma regra de três, item 1).
+  \item $S:[0,360]\rightarrow\R$ em que $S(x)=\frac{x}{18}$
+  \end{enumerate}
+}{1}
+\end{answer}
+
 \practice{função linear}
 \label{\detokenize{AF107-1:praticando}}
 
@@ -604,6 +899,193 @@ Em uma circunferência, podemos relacionar a área \(A\) e o raio \(r\) por meio
 \end{figure}
 \end{reflection}
 
+\clearpage
+\def\currentcolor{session1}
+\begin{objectives}{Teor de álcool sanguíneo}
+{
+\begin{itemize}
+\item Conjecturar que taxa de variação média de uma função linear qualquer é a mesma para qualquer intervalo.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Teor de álcool sanguíneo}
+{
+\begin{itemize}
+\item A atividade aborda assuntos relacionados a temas transversais, como saúde e consumo de álcool. Sugerimos que procure fazer um trabalho colaborativo com os professores de Biologia, Química e de Geografia para ampliar a discussão com os alunos em questões como os processos bioquímicos do metabolismo do álcool, ou mesmo em questões sobre o a relação entre álcool e direção. No site referenciado há informações adicionais que podem enriquecer a discussão.
+
+\item Caso necessário, faça uma revisão sobre taxa de variação média, vista no capítulo de funções.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Teor de álcool sanguíneo}
+{
+\begin{enumerate}
+\item \adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|>{$}c<{$}|}
+\hline
+\rowfont{\color{white}}\rowcolor{\currentcolor!80}
+\bm{x} & \bm{h(x)} & \bm{m(x)}\tabularnewline
+\hline
+0 & 0 & 0 \tabularnewline
+\hline
+1 & 0{,}0205 & 0{,}3075 \tabularnewline
+\hline
+2 & 0{,}041 & 0{,}615 \tabularnewline
+\hline
+3 & 0{,}615 & 0{,}9225 \tabularnewline
+\hline
+4 & 0{,}082 & 1{,}23 \tabularnewline
+\hline
+5 & 0{,}1025 &1{,}5375 \tabularnewline
+\hline
+\end{tabu}
+
+}
+
+\item 
+\begin{enumerate}
+\item $0{,}0205$
+\item $0{,}0205$
+\item $0{,}0205$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $0{,}3075$
+\item $0{,}3075$
+\item $0{,}3075$
+\end{enumerate}
+
+\item A conjectura é que a taxa de variação média de uma função linear qualquer deve ser constante.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Câmara frigorífica}
+{
+\begin{enumerate}
+\item Perceber com o auxílio da representação gráfica a relação entre taxa de variação média negativa e função linear decrescente.
+\end{enumerate}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Câmara frigorífica}
+{
+É possível que os estudantes utilizem regra de três para responder as questões propostas no item a). A seguir iremos construir a representação gráfica da função linear, por isso é importante fazer a conexão da regra de três com sua interpretação geométrica, destacando o uso da semelhança de triângulos.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[yscale=.5]
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0,    draw=black, fill=black, shift only]
+\draw[->, thick](-1,0)--(5,0);
+\draw[->, thick](0,-13)--(0,2);
+\draw[\currentcolor!80, thick](0,0)--(4,-12);
+\draw[dashed](0,-12)--(4,-12)--(4,0);
+\node[ponto]at (0,0){};
+\node[ponto]at (4,-12){};
+\node[above,rotate=90] at(-1,-10){Temperatura $^\circ$C};
+\node[above] at(5,0){Tempo (h)};
+\node[above] at(4,0){8};
+\node[left] at(0,-12){$-24$};
+\node[above] at(2,0){$t$};
+\node[left] at(0,-6){$f(t)$};
+\draw[dashed](2,0)--(2,-6)--(0,-6);
+\node[ponto]at (2,-6){};
+\end{tikzpicture}
+\end{figure}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Câmara frigorífica}
+{
+\begin{enumerate}
+\item Após 1 hora desde a primeira observaço, a temperatura será de $-3^{\circ}$ C. Após 5 horas, a temperatura será de $-15^{\circ}$, e $t$ horas após a primeira observação, a temperatura 'será de $-3t^{\circ}$ C
+
+\item $-3^{\circ}$ C/h
+
+\item $f:[0,8]\rightarrow\R, f(t)=-3t$ é uma função decrescente, pois à medida que o tempo aumenta, a temperatura correspendente diminui. Ou ainda, para quaisquer tempos $t_1$ e $t_2$ tais que $t_1<t_2$ tem-se que $-3t_1>-3t_2$, isto é $f(t_1)>f(t_2)$.
+
+\item A expressão da função é $f(t)=1{,}5\cdot t$. É uma função crescente, pois à medida que o tempo aumenta, a temperatura correspendente também aumenta.
+
+\begin{tikzpicture}
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
+\draw[->, thick](-1,0)--(6,0)node[above, xshift=-.5cm]{Tempo (h)};
+\draw[->, thick](0,-1)--(0,7)node[left,xshift=-.7cm, rotate=90]{Temperatura ($^\circ$C)};
+\draw[\currentcolor!80, domain=0:4.4]plot(\x, 1.5*\x);
+\node[below]at (1,0){1};
+\node[below]at (4,0){8};
+\node[left]at (0,1.5){1.5};
+\node[left]at (0,6){12};
+\draw[dashed](0,1.5)--(1,1.5)--(1,0);
+\draw[dashed](0,6)--(4,6)--(4,0);
+\end{tikzpicture}
+
+\item Quando a taxa de variação média de uma função linear é um número real \textit{positivo}, a função é \textit{crescente} e quando a taxa é um número real \textit{negativo}, a função é \textit{descrescente}.
+\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Hora de carregar o celular}
+{
+\begin{itemize}
+\item Perceber, a partir da taxa de variação média constante, que o gráfico de uma função linear está contido em uma reta.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Hora de carregar o celular}
+{
+\begin{itemize}
+\item No item d) é possível que os estudantes façam direto a “regra de três”; o que está correto. Contudo, peça para que justifiquem o procedimento usando alguma justificativa geométrica envolvendo os pontos do gráfico. A ideia é que, nesse item eles percebam os triângulos semelhantes que podem ser considerados para a solução.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Hora de carregar o celular}
+{
+\begin{enumerate}
+
+\item \adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+$t$(min) & Porcentagem de recarga \\
+\hline
+0 & 0 \\
+25 & 20 \\
+\hline
+50 & 40 \\
+\hline 
+75 & 60 \\
+\hline 
+100 & 80 \\
+\hline
+125 & 100 \\
+\hline
+\end{tabu}
+}
+
+\item\adjustbox{valign=t}
+{
+\begin{tikzpicture}
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]         
+\draw[->, thick](-1,0)--(6,0) node[below right]{tempo(min)};
+\draw[->, thick](0,-1)--(0,6);
+\foreach \x/\y in{25/20, 50/40, 75/60, 100/80, 125/100}
+\node[ponto]at(.04*\x, .05*\y){};
+\foreach \x/\y in{25/20, 50/40, 75/60, 100/80, 125/100}
+\draw[dashed](.04*\x,0)--(.04*\x,.05*\y)--(0,.05*\y) node[left]{\y} node[below] at(.04*\x,0){\x};
+\node[ponto]at(0,0){};
+\node[below left]at(0,0){0};
+\end{tikzpicture}
+}
+
+\item A partir da representação dos pontos no plano cartesiano pode-se concluir, usando semelhança de triângulos, que se em 25 minutos a carga na bateria é de $20\%$ então em 40 minutos a carga será de $32\%$.
+
+\item $f(t)=\displaystyle\frac{45}{t}=0{,}8t$, com domínio sendo o conjunto ${0,1,2,...,125}$ e a imagem o conjunto ${0,1,2,...,100}$.
+
+\item A bateria carrega a uma taxa de 0{,}8\% a cada minuto, isto é, $0{,}8$/min.
+\end{enumerate}
+}{0}
+\end{answer}
 
 \explore{ taxa de variação média}
 \label{\detokenize{AF107-2:explorando-taxa-de-variacao-media}}\label{\detokenize{AF107-2::doc}}
@@ -683,7 +1165,7 @@ Uma câmara frigorífica está programada para diminuir sua temperatura segundo 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[yscale=.6, xscale=1.25]
+\begin{tikzpicture}[yscale=.6, xscale=1]
 \tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=black, fill=black, shift only]
 \draw(-3,-.05) grid(5,.05);
 \draw(-.05,-12) grid(.05,2);
@@ -714,7 +1196,7 @@ Qual o valor da taxa (de variação média) constante segundo a qual a temperatu
 Determine a função que relaciona temperatura e tempo nesse contexto, considerando para seu domínio o intervalo de números reais \([0,8]\). Ela é uma função crescente ou decrescente? Por que?
 
 \item {} 
-Como seria o gráfico se a temperatura, no mesmo intervalo de tempo, ao invés de diminuir, estivesse aumentando \(1,5^\circ\)C/h? Qual seria a expressão da função, nesse caso? Teríamos uma função crescente ou decrescente? Por que?
+Como seria o gráfico se a temperatura, no mesmo intervalo de tempo, ao invés de diminuir, estivesse aumentando \(1{,}5^\circ\)C/h? Qual seria a expressão da função, nesse caso? Teríamos uma função crescente ou decrescente? Por que?
 
 \item {} 
 Complete as lacunas da sentença abaixo para formular uma conjectura que relacione a taxa de variação média da função linear com o crescimento ou decrescimento da função.
@@ -754,6 +1236,12 @@ Qual é a taxa de carregamento desse modelo de telefone celular.
 \end{task}
 
 \clearpage
+\def\currentcolor{session4}
+\begin{sugestions}{Para refletir}
+{
+  Essa ideia será trabalhada mais adiante na seção dedicada a função afim. Por enquanto, deixe que criem suas próprias jutificativas e contra-exemplos
+}{1}{2}
+\end{sugestions}
 \arrange{taxa de variação média}
 \label{\detokenize{AF107-2:organizando-as-ideias-taxa-de-variacao-media}}
 No capítulo de Taxa de variação, você aprendeu a calcular a taxa de variação média de uma função em um determinado intervalo. É um número expresso em forma de uma razão que fornece diversas informações sobre o comportamento da função no intervalo considerado.
@@ -1033,6 +1521,62 @@ Concluímos, assim, que toda reta não vertical que contém a origem é o gráfi
 \end{observation}
 
 \clearpage
+\def\currentcolor{session2}
+\begin{objectives}{Quando trocar o filtro do purificador?}
+{
+\begin{itemize}
+\item Identificar num conjunto de grandezas distintas e apresentadas em um quadro, duas grandezas que atendem as especificações da situação problema.
+\item Perceber a relação da razão entre as grandezas com a taxa de variação da função linear.
+\item Aplicar os conceitos de função linear com o intuito de resolver a situação problema.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Quando trocar o filtro do purificador?}
+{
+\begin{itemize}
+\item No item \titem{d)}, explore com seus alunos o motivo pelo qual o resultado é o mesmo em ambos os casos.
+\item Utilize o fato que a atividade anterior também aborda o conceito de função linear e faça um comparativo com os gráficos das duas atividades.
+\item Se possível, consulte seu diretor ou responsável direto, como anda a troca dos filtros dos bebedouros da sua escola. Caso consiga o manual dos fabricantes, simule a mesma atividade com os dados da realidade de sua escola.
+\item Conduza seus estudantes a perceber a diferença entre a resposta do item e) que é uma razão: $9$ litros/dia, e as respostas dadas aos dois itens anteriores em que tratam do consumo em litros para cada intervalo de tempo.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Quando trocar o filtro do purificador?}
+{
+\begin{enumerate}
+\item Vida útil do elemento filtrante e vazão máxima recomendada.
+\item A cada minuto sai 0,75 litro de água do purificador.
+\item $0,75\times12=9$ litros.
+\item $9$ litros em ambos os casos.
+\item $9$ litros.
+\item A vida útil do filtro interno, nas condições descritas, será de aproximadamente 14 meses e meio. A troca do filtro interno deverá ser realizada daqui a dois meses e meio.
+\item $f(t)=9t$.
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}[yscale=.5,scale=1.25]
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]   
+\draw[thick,->](-3,0)--(3,0)node[ right]{$t$};
+\draw[thick,->](0,-2)--(0,10)node[right]{$f(t)$};
+\draw[lightgray!50](-3,-2) grid[step=.5](3,10);
+\draw[gray](-3,-2) grid(3,10);
+\foreach \x in { -3, -2,-1}
+\node at  (\x ,-.3)  {\x};
+\foreach \x in {3, 2,1}
+\node at  (\x ,-.3)  {\x};
+\foreach \x in { -2,-1}
+\node at  (-.3 ,\x)  {\x};
+\foreach \x in {1, 2, 3, ..., 10}
+\node at  (-.3 ,\x)  {\x};
+\draw[domain=-.2:1.1, \currentcolor!80,very thick, samples=100]plot(\x,9*\x);
+\end{tikzpicture}
+\end{figure}
+\end{enumerate}
+}{1}
+\end{answer}
 
 \practice{taxa de variação média}
 \label{\detokenize{AF107-3::doc}}\label{\detokenize{AF107-3:praticando}}
@@ -1098,7 +1642,89 @@ Pressão nominal & \multicolumn{5}{c|}{0,196MPa (30 metros de coluna de água)} 
 
 \end{task}
 
+\clearpage
+\def\currentcolor{session1}
+\begin{objectives}{Distância $\times$ tempo}
+{
+\begin{enumerate}
 
+\item Interpretar uma situação que envolve movimento retilíneo uniforme a partir do gráfico que representa a relação entre distância e tempo.
+\item Compreender o modelo de variação que se estabelece entre as variáveis distância e tempo.
+\item Constatar que a distância percorrida sempre será a mesma em intervalos de tempo iguais.
+\item Identificar que mesmo a taxa de variação sendo constante, as grandezas envolvidas não são proporcionais.
+\end{enumerate}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Distância $\times$ tempo}
+{
+\begin{itemize}
+\item Já no item a) é comum boa parte dos alunos não identificarem a posição do ponto de referência, principalmente por criar associações equivocadas entre o gráfico e a situação real. Para isso utilize algum modelo que deixe claro que a reta apresentada do gráfico não é o “caminho” percorrido pela pessoa. Por exemplo:
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
+\draw (0,0) -- (12,0);
+\foreach \x/\y/\z in {0/1/0,2/3/1,4/5/2,6/7/3,8/9/4,10/11/5}{
+  \draw (\x,.2) -- (\x,-.2);
+1 \draw (\y,.2) -- (\y,-.2);
+  \node [below] at (\x,-.2) {$\x$ m};
+  \node [below] at (\y,-.2) {$\y$ m};
+  \draw [<-] (\y,.3) -- (\y,1) node [above] {$\z$ seg};
+  
+}
+\end{tikzpicture}
+\end{figure}
+
+\item Recomendamos que, se possível, discuta com seus alunos uma variante do problema. O caso em que, mesmo que a pessoa não ande em linha reta, o gráfico continua representando a relação entre a distância percorrida e o tempo de percurso. Apresente por exemplo percursos diferentes, refazendo as perguntas, como por exemplo:
+
+\begin{figure}[H]
+\centering
+\usetikzlibrary{arrows.meta}
+
+
+\begin{tikzpicture}[scale=.75]
+\draw circle (2cm);
+\node at (0:2) {$\times$} node at (0:2) [right, overlay] {Ponto de partida}; 
+\node at (300:2) {$\times$} node at (300:2) [below right, overlay] {Ponto de referência}; 
+
+\draw [-{>[length=2mm,width=3mm]},  samples=1000] (2,0) arc (0:30:2);
+\draw [-{>[length=2mm,width=3mm]}, samples=1000] (2,0) arc (0:60:2);
+
+\begin{scope}[scale=2,shift={(3.5,.25)}]
+\draw (0,0) -- (2,0) -- (.2,-1) -- (-.2,-.2);
+\node at (0,0) {$\times$};
+\node [above] at (0,0) {Ponto de referência};
+\node at (2,0) {$\times$};
+\node [right,] at (2,0) {Ponto de partida};
+\end{scope}
+\end{tikzpicture}
+
+\end{figure}
+
+
+\item Discuta com seus alunos o motivo da função não ser linear e consequentemente, nesta situação, a relação entre as grandezas não ser proporcional. Utilize o fato de não atender o Teorema Fundamental da Proporcionalidade.
+
+\item Caso seus alunos já tenham estudado esse conteúdo em Física, aproveite para relacionar a função $f(t)=at+b$ com a equação tradicional do Movimento Uniforme: $S=S+Vt$, associando S com $f(t)$ ; $S_0$ com $b$ e $V$ com $a$.
+ 
+\end{itemize}
+}{0}{2}
+\end{sugestions}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Distância $\times$ tempo}
+{
+\begin{enumerate}
+\item $1$ metro. $9$ metros.
+\item $8$ metros.
+\item Sim, ela está se afastando. A medida que o tempo aumenta a distância até o ponto de referência também aumenta. Isto é, a função é crescente.
+\item A velocidade média é $V=9−14−0=2$ m/s.
+\item $3$ metros. $2$ metros.
+\item $3$ metros em ambos os intervalos de tempo.
+\item A cada segundo a pessoa se afasta $2$ metros do ponto de referência.
+\item Não, pois a distância até o ponto de referência em $2$ segundos é $5$ metros e em $1$ segundo é $3$ metros, ou basta ver que o gráfico não passa pela origem do plano cartesiano .
+\end{enumerate}
+}{1}
+\end{answer}
 \explore{ função afim}
 \label{\detokenize{AF107-4:sec-funcao-afim}}\label{\detokenize{AF107-4::doc}}\label{\detokenize{AF107-4:explorando-funcao-afim}}
 
@@ -1166,6 +1792,19 @@ As grandezas relacionadas pelo gráfico são proporcionais? Porque?
 
 \end{task}
 
+\clearpage
+\def\currentcolor{session4}
+\begin{sugestions}{}
+{
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=100bp]{{codigo3_3}.png}
+\end{figure}
+
+Sugerimos o uso da construção GeoGebra disponível no endereço \url{https://www.geogebra.org/m/NFAmT23H}. Nela os estudantes poderão experimentar dinamicamente propriedades de crescimento, decrescimento e interseção com os eixos coordenados associadas à função afim \(f(x)=ax+b\), em que \(a\) e \(b\) variam no intervalo \([-5,5]\).
+}{1}{2}
+\end{sugestions}
 
 \arrange{ função afim}
 \label{\detokenize{AF107-4:organizando-as-ideias-funcao-afim}}
@@ -1471,7 +2110,192 @@ Já a reta da \hyperref[AF107-4:fig-inclina-2]{Figura \ref{AF107-4:fig-inclina-2
 
 Retas horizontais não possuem inclinação, de fato não há deslocamento vertical quando nos deslocamos horizontalmente sobre a reta, ou seja, sua inclinação será igual a zero.
 
+\clearpage
+\def\currentcolor{session2}
+\begin{objectives}{Antecipando o pagamento de uma dívida}
+{
+\begin{itemize}
+\item Relacionar função afim de domínio discreto com progressões aritméticas.
+\item Perceber nas sequências apresentadas que a diferença entre termos consecutivos é constante, e portanto elas formam uma P.A.
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Antecipando o pagamento de uma dívida}
+{
+\begin{itemize}
+\item Questione seus estudantes sobre o fato de, apesar da variação ser sempre de \textit{250} reais, em um caso a primeira função (valor a pagar) é decrescente e a segunda função (desconto) é crescente, relacionando com as expressões obtidas no item f).
+\item No item d) espera-se que a resposta seja em forma de porcentagem. Caso julgue necessário, aproveite o momento para fazer uma rápida revisão sobre o assunto.
+\item Possivelmente os estudantes não estão familizarizados com alguns dos termos apresentados nessa atividade: \textit{\textbf{antecipação de uma dívida, desconto comercial, tempo de antecipação}}. Antes de iniciar a atividade esclareça para eles o significado de cada um desses termos.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Antecipando o pagamento de uma dívida}
+{
+\begin{enumerate}
+\item \adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|l|c|c|c|c|}
+\hline
+\thead
+Antecipação (meses) & 5 & 6 & 7 & 8 \\
+\hline
+Valor a pagar (R\$) & 3.750 & 3.500 & 3.250 & 3.000 \\
+\hline
+\end{tabu}
+}
 
+\item A medida que o tempo aumenta, o valor a pagar diminui. Entre dois meses consecutivos a variação do valor a pagar é de R\$ $250,00$.
+
+\item A medida que o tempo aumenta, o valor do desconto aumenta. Entre dois meses consecutivos a variação do desconto é de R\$ $250,00$.
+
+\item $5\%$ do valor da dívida.
+
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[xscale=2, scale=.5]
+\draw [help lines, ystep=.5] (0,0) grid (9,11);
+\draw [-{>[length=2mm,width=3mm]},thick] (0,0) -- (9,0);
+\draw [-{>[length=2mm,width=3mm]},thick] (0,0) -- (0,11);
+\foreach \x in {1,...,8}
+{
+\node [below,scale=.75] at (\x,0) {\x};
+};
+\node [below,left,scale=.75] at (0,0) {0};
+
+\foreach \x/\y in {1/500,2/1000,3/1500,4/2000,5/2500,6/3000,7/3500,8/4000,9/4500,10/5000}
+{
+\node [left,scale=.75] at (0,\x) {\y};
+};
+
+\foreach \x in {0,1,2,3,4,5,6,7,8}{
+  \node [fill, circle, inner sep=1pt] at (\x,\x*.5) {};
+  \node [fill, circle, inner sep=1pt] at (\x,10-\x*.5) {};
+};
+
+\end{tikzpicture}
+}
+
+\end{enumerate}
+}{2}
+\end{answer}
+\begin{objectives}{Abastecendo a caixa}
+{
+\begin{itemize}
+\item Identificar a taxa de variação gerada por duas razões distintas.
+\item Reconhecer que a taxa de variação é negativa na situação descrita.
+\item Relacionar o preenchimento do quadro com a expressão algébrica que modela a situação, sem a necessidade da representação gráfica.
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Abastecendo a caixa}
+{
+\begin{itemize}
+\item Discuta com seus alunos a importância da utilização dos conceitos trabalhados no processo de controle do desperdício de água potável. E como ações simples, pautadas em dados quantitativos podem influenciar na economia de água.
+\item Durante a aplicação da atividade, conduza as discussões para que seus alunos argumentem à respeito do sinal da taxa de variação.
+\item Possibilite à seus alunos a oportunidade de apresentar soluções diferentes das usuais, seja utilizando conceitos de Progressões aritméticas ou até mesmo de proporcionalidade (fazendo os ajustes necessários, já que $V(0)$ não é zero).
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Abastecendo a caixa}
+{
+\begin{enumerate}
+\item $V(t)=−5t+100$.
+\item Diminuem.
+\item Reduzem $5$ litros em ambos os casos.
+\item Em $5$ litros.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Temperatura controlada}
+{
+\begin{itemize}
+\item Obter a expressão algébrica de uma função afim a partir de dois pontos dados no plano cartesiano.
+\item Interpretar o ponto de interseção entre as funções que modelam a situação apresentada
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{answer}{Temperatura controlada}
+{
+\begin{enumerate}
+
+\item Como $f$ intersecta o eixo das ordenadas no ponto $A=(0,−4)$ temos que $b=−4$; substituindo o ponto $B=(4,0)$, ou seja, fazendo $f(4)=0$ encontramos $a=1$. Do mesmo modo, $g$ intersecta o eixo das ordenadas no ponto $C=(0,2)$, logo temos que $n=2$; substituindo o ponto $D=(2,0)$, ou seja, fazendo $f(2)=0$ encontramos $m=−1$.
+
+\item Observando os gráficos temos que: a temperatura do composto associado à função $f$ está aumentando, e a temperatura do composto associado à função g está diminuindo.
+\begin{enumerate}
+\item Fazendo $f(t)=1$ encontramos $t=5$, ou seja o composto associado à função afim $f$, atinge $1$ $^{\circ}$C após $5$ minutos. E fazendo $g(t)=1$ encontramos $t=1$, ou seja o composto associado à função afim $g$, atinge $1$ $^{\circ}$C após $1$ minuto.
+
+\item Fazendo $f(t)=−3$ encontramos $t=1$, ou seja o composto associado à função afim $f$, atinge $−3$ $^{\circ}$C após $1$ minuto. E fazendo $g(t)=−3$ encontramos $t=5$, ou seja o composto associado à função afim $g$, atinge $−3$ $^{\circ}$C após $5$ minutos.
+
+\item Fazendo $f(t)=−8$ encontramos $t=−4$, ou seja o composto associado à função afim $f$, nunca atingirá essa temperatura, já que $f$ é sempre maior ou igual a $−4$ $^{\circ}$C. E fazendo $g(t)=−8$ encontramos $t=10$, ou seja o composto associado à função afim $g$, atinge $−8$ $^{\circ}$C após $10$ minutos.
+
+\item Fazendo $f(t)=10$ encontramos $t=14$, ou seja o composto associado à função afim $f$, atinge $10$ $^{\circ}$C após $14$ minutos. E fazendo $g(t)=10$ encontramos $t=−8$, ou seja o composto associado à função afim $g$, nunca atingirá ess a temperatura, já que $g$ é sempre menor ou igual a $2$ $^{\circ}$C.
+
+\end{enumerate}
+\item Basta fazermos $f(t)=g(t)$, ou seja $t−4=−t+2$, resolvendo encontramos $t=3$ minutos, e a temperatura é igual a $f(3)=g(3)=−1$ $^{\circ}$C. Portanto, os dois compostos atigem $−1$ $^{\circ}$C após $3$ minutos de observação.
+
+\end{enumerate}
+}{9}
+\end{answer}
+\clearmargin
+\begin{objectives}{Frio nas alturas}
+{
+\begin{itemize}
+\item Explorar o zero da função afim.
+\item Compreender em um contexto específico a importância da determinação do zero da função.
+\item Perceber que a altitude de acionamento do sistema anti-gelo (o zero da função) se obtém dividindo o valor da temperatura pelo valor absoluto da taxa de variação.
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Frio nas alturas}
+{
+\begin{itemize}
+\item É possível responder à pergunta e) pensando como um problema de progressão aritmética: Se a temperatura local é $30$ $^{\circ}$C e ela diminui $2$ $^{\circ}$C a cada $1.000$ pés, para chegar a zero devemos subtrair $2$ de $30$, um total de $15$ vezes, logo, a altitude é $15.000$ pés.
+\item Os itens f) e g) pretendem dar uma ideia de como se obtem a expressão geral do zero da função afim. Caso julgue pertinente, estimule-os a pensar em situações hipotéticas em que as taxas de variação da temperatura em função da altitude sejam diferentem.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Frio nas alturas}
+{
+\begin{enumerate}
+
+\item $−0{,}002$ $^{\circ}$C/pé
+\item $T$ é decrescente, portanto a taxa de variação é negativa.
+\item $T(h)=30−0{,}002h$
+\item $T(37.200)=−44{,}4$ $^{\circ}$C
+\item $15.000$ pés
+\item $12.500$ pés
+\item Nesse caso, $T(h)=T0−0,{,}02h$. Para determinar a altitude, basta calcular $h$ para o qual se tem $T(h)=0$, isto é, $h=\displaystyle\frac{T_0}{0{,}002}=500T_0$
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\clearmargin
+\begin{objectives}{Qual a frequência?}
+{
+\begin{itemize}
+\item Utilizar a ideia de progressão aritmética para resolver um problema.
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Qual a frequência?}
+{
+\begin{itemize}
+\item Evite usar a fórmula $a_n=a_1+(n−1)r$ como único recurso para resolver problemas de P.A. Ela, apesar de parecer prática, pode esconder as ideias simples dos problemas de progressão aritmética. Por exemplo, da 1ª para 70ª frequencia, somamos $69$ vezes a razão. E depois da 70ª para a 86ª, somamos 16 vezes a razão. Isso é mais simples do que escrever $a_70=a_1+(70−1)r$ e $a_86=a_1+(86−1)r$.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Qual a frequência?}
+{
+\begin{enumerate}
+
+\item 101,7 a 104,9.
+\item 101 emissoras FM.
+\item Resposta individual.
+
+\end{enumerate}
+}{1}
+\end{answer}
 
 \practice{função afim}
 \label{\detokenize{AF107-6::doc}}\label{\detokenize{AF107-6:praticando}}
@@ -1593,7 +2417,7 @@ Mesmo em pleno verão um avião, precisa lidar com temperaturas muito baixas. Qu
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{frio-aviao.jpg}
+\noindent\includegraphics[width=300bp]{frio-aviao.png}
 \end{figure}
 
 A temperatura na troposfera (primeira camada da atmosfera que tem aproximadamente \(40.000\) pés de altitude) diminui \(2^\circ\)C a cada aumento de \(1.000\) pés na altitude. Suponha que, em um determinado dia, a temperatura em um aeroporto seja de \(30^\circ\)C, e que a água congela a \(0^\circ\)C.
@@ -1686,23 +2510,63 @@ Lembre-se da frequência da rádio que você costuma ouvir e determine a posiç�
 
 \end{enumerate}
 \end{task}
+\clearpage
+\def\currentcolor{session1}
+\begin{objectives}{Quadros na parede}
+{
+\begin{itemize}
+\item Introduzir o conceito de Progressão Aritmética.
+\item  Fazer medições e criar estratégias para resolver um problema prático.
+\item  Obter uma expressão que relacione a distância do gancho até a lateral da parede com o número do gancho.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Quadros na parede}
+{
+\begin{itemize}
+\item Compartilhe com a turma algumas das soluções encontradas. Estimule que os estudantes descrevam suas estratégias e critiquem o raciocínio uns dos outros.
+\item  Considere escrever um resumo dos valores bem-sucedidos no quadro, em
+forma de lista.
+\item  Não é exigido que os quadros sejam distribuídos de modo que as distâncias do primeiro e último quadros até as paredes laterais sejam iguais. Ou seja, os ganchos podem ser dispostos de modo que o conjunto de quadros fique mais próximo da parede da esquerda ou da direita.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Quadros na parede}
+{
+\begin{enumerate}
+\item Resposta individual;
+\item Resposta individual;
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Quadros na parede}
+{
+\begin{enumerate}\setcounter{enumi}{2}
+\item Os valores que estão faltando são, nesta ordem, $7$, $15$ e $19$.
+\item Uma possibilidade é desenvolver a sequência até o décimo termo que é $43$. Outra possibilidade é utilizar uma expressão que relacione a distância com o número n que indica a posição do quadro na parede, como por exemplo $d(n)=7+4(n-1)$.
+\item $d(n)=7+4(n-1).$
+\item $d(1)=5m$, $d(6)=15m$, $d(13)$ representa a distância do gancho $13$ até a parede.
+\item Ambas se expressaram corretamente, uma vez que as expressões são equivalentes, isto é, $d(n)=10+3(n-1)=7+3n$.  
+\end{enumerate}
+}{1}
+\end{answer}
 
 \explore{domínios discretos}
 
 \begin{task}{quadros na parede}
 Caso tenha disponibilidade, sugerimos o uso da versão digital desta atividade disponível neste \href{https://teacher.desmos.com/activitybuilder/custom/5e7ba1a876309d7f9879af12}{link}
-
 \begin{figure}[H]
 \centering
-\includegraphics[width=100bp]{qr_code_quadros}
+\includegraphics[width=75bp]{qr_code_quadros}
 
 \end{figure}
-
 Você deseja pedurar três quadros que têm as mesmas dimensões na parede acima do seu sofá. A linha tracejada da figura indica a altura que você deve pedurar os ganhchos. Sem auxílio de instrumentos de medição marque as posições aproximadas dos ganchos sobre a linha tracejada de maneira que os quadros fiquem igualmente espaçados entre si.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=300bp]{quadros_na_parede1}
+\includegraphics[width=250bp]{quadros_na_parede1}
 
 \caption{Fonte: \href{freepik.com}{Freepik}}
 
@@ -1715,7 +2579,7 @@ Você deseja pedurar três quadros que têm as mesmas dimensões na parede acima
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=300bp]{quadros_na_parede2}
+\includegraphics[width=250bp]{quadros_na_parede2}
 
 
 \end{figure}
@@ -1863,6 +2727,206 @@ De maneira análoga à função afim, se uma progressão aritmética tem razão 
 \end{observation}
 
 \clearpage
+\def\currentcolor{session2}
+\begin{objectives}{Termo geral de uma P.A.}
+{
+\begin{itemize}
+\item Objetivos específicos
+\item Introduzir a nomenclatura “termo geral” para uma P.A.
+\item Identificar os elementos principais dessa fórmula: $a_n, a_1,r$
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Termo geral de uma P.A.}
+{
+\begin{itemize}
+\item Evite estimular a memorização dessa fórmula. Procure explorar o significado da relação entre $a_n$ e $a_1$.
+\item As expressões do termo geral podem ficar em função de $n$ ou de $n-1$.
+\item Considere extrapolar a fórmula para a relação com outros termos diferentes do primeiro:
+\begin{equation*}
+a_n=a_k+(n-k)r.
+\end{equation*}
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Termo geral de uma P.A.}
+{
+\begin{table}[H]
+\setlength\tabulinesep{5pt}
+\centering
+\begin{tabu} to \textwidth{|>{$\displaystyle}c<{$}|>{\centering $}m{2cm}<{$}|>{$}c<{$}|>{$\displaystyle}l<{$}|}
+\hline
+$\tcolor{P.A.}$ & 
+$\tcolor{\makecell{Primeiro\\termo}}$ & 
+$\tcolor{Razão}$ & 
+$\tcolor{\centering Termo Geral}$ \tabularnewline
+\hline
+(a_1,a_2,a_3) & a_1 & r & a_n=1+2(n-1)=2n-1 \\
+\hline
+(1,3,5,7,9,...) & 1 & 2 & a_n=1+2(n-1)=2n-1 \\
+\hline
+(2,4,6,8,10,...) & 2 & 2 & a_n=2+2(n-1)=2n \\
+\hline
+(3,2,1,0,-1,...)& 3 & -1 & a_n=3-(n-1)=4-n\\
+\hline
+\Bigg(\frac{49}{5},\frac{48}{5},\frac{47}{5},\frac{46}{5},\frac{45}{5},...\Bigg) & \dfrac{49}{5} & \dfrac{-1}{5} & a_n=10-\dfrac{n}{5} \\
+\hline
+\Big(\pi,\frac{5\pi}{4},\frac{9\pi}{4},...\Big) & \pi & \frac{\pi}{4} &a_n=\pi+\frac{\pi}{4}(n-1)=\frac{3\pi}{4}+\frac{\pi}{r}n \\
+\hline
+(4,6,8,10,12,...)& 4 & 2 & a_n=2+2n \\
+\hline
+\end{tabu}
+\end{table}
+}{0}
+\end{answer}
+
+\begin{objectives}{Quantos múltiplos?}
+{
+\begin{itemize}
+\item Utilizar a mesma estratégia da atividade “Quadros na parede” em um contexto matemático abstrato.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Quantos múltiplos?}
+{
+\begin{itemize}
+\item Estimule que os estudantes descrevam suas estratégias e critiquem o raciocínio uns dos outros.
+\item Caso alguém comece enumerando os múltiplos, peça que tente desenvolver uma estratégia diferente.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Quantos múltiplos?}
+{
+\begin{enumerate}
+\item O primeiro e o último múltiplos de $13$ dentro do intervalo dado são $104$ e $195$, portanto a relação$ 195=104+13(n-1)$, fornece $n=8$.
+\item O primeiro e o último múltiplos de $7$ dentro do intervalo dado são $1001$ e $1995$, portanto a relação $1995=1001+7(n-1)$, fornece $n=143$.
+\end{enumerate}
+}{0}
+\end{answer}
+\begin{objectives}{Plantas companheiras}
+{
+\begin{enumerate}
+\item Identificar a expressão algébrica que expressa a regularidade observada na sequência apresentada na figura.
+\item Identificar funções de domínio discreto e observar a implicação na representação gráfica.
+\end{enumerate}
+}{1}{2}
+\end{objectives}
+\marginpar{\vspace{-2em}}
+\begin{sugestions}{Plantas companheiras}
+{
+\begin{itemize}
+\item Nesta atividade o estudante deve identificar que o domínio de ambas as funções é um conjunto discreto e que esse fato tem implicações no gráfico das funções, que serão conjuntos de pontos colineares, mas não serão retas.
+\item Ainda neste ano de escolaridade boa parte dos alunos terão dificuldades de identificar a expressão algébrica que expressa a relação entre as grandezas apresentadas na figura, caso essa dificuldade atrapalhe o andamento da atividade, sugerimos que o professor intervenha exibindo exemplos mais simples do mesmo assunto.
+\item Aproveite para comentar com os alunos que as funções $C(n)$ descrita no item e) é uma função quadrática com domínio discreto, e que esse será o assunto de um capítulo envolvendo funções quadráticas.
+\item A atividade aborda assuntos relacionados a dois temas transversais, tais como Meio Ambiente, Saúde e sustentabilidade. Sugerimos que procure fazer um trabalho colaborativo com os professores de Biologia e de Geografia para ampliar a discussão com os alunos sobre os benefícios de uma alimentação orgânica e sobre as questões de viabilidade econômica e de sustentabilidade de tal tipo de cultura. 
+
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Plantas companheiras}
+{
+  \begin{enumerate}
+\item \adjustbox{valign=t}
+{
+\setlength\tabulinesep{2.5pt}
+\begin{tabu} to \textwidth{|l|>{\centering}m{2cm}|>{\centering}m{2cm}|}
+\hline
+\thead
+& ({\Large$\bullet$}) & ({\Large$\diamondsuit$}) \\
+\hline
+Modelo 1 & 1 & 4 \\
+\hline
+Modelo 2 & 4 & 8 \\
+\hline
+Modelo 3 & 9 & 12 \\
+\hline
+Modelo 4 & 16 & 16 \\
+\hline
+\end{tabu}
+}
+
+\item A quantidade de vegetais ({\Large$\bullet$}) é o quadrado do número $n$ que identifica a ordem do modelo na sequência
+
+\item A quantidade de plantas companheiras ({\Large$\diamondsuit$}) é o quádruplo do número do modelo.
+
+
+  \end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Plantas companheiras}
+{
+\begin{enumerate}\setcounter{enumi}{3}
+\item $V(n)=n^2$
+
+\item $C(n)=4n$
+\clearpage
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.5]
+\draw [->] (-.5,0) -- (11,0);
+\draw [->] (0,-.5) -- (0,17);
+\draw [help lines] (0,0) grid (11,17);
+
+\foreach \x in {1,...,10} \node [below] at (\x,0) {\x};
+\foreach \x in {1,...,16} \node [left] at (0,\x) {\x};
+\node [below left] {0};
+
+\foreach \x/\y in {1/1, 2/4, 3/9, 4/16} \node [fill, circle, inner sep=2pt] at (\x,\y) {};
+
+\foreach \x/\y in {1/4, 2/8, 3/12, 4/16} \node [fill, circle, inner sep=2pt, red] at (\x,\y) {};
+
+\end{tikzpicture}
+}
+
+\item $C(10)=40$
+
+\item 36
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Imagem da P.A.}
+{
+\begin{itemize}
+\item Deduzir que as funções afins preservam progressões aritméticas.
+\item Reconhecer a relação entre as razões das P.A. e a taxa de variação das funções afins.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-2em}}
+\begin{sugestions}{Imagem da P.A.}
+{
+\begin{itemize}
+\item Verifique se as conjecturas do item (e) estão formuladas de maneira precisa, mesmo que sejam textuais.
+\item Como a demonstração desse fato é simples, conduza os estudantes para a justificativa/demonstração.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Imagem da P.A.}
+{
+\begin{enumerate}
+\item \adjustbox{valign=t}
+{
+\begin{tabu} to \textwidth{|>{$}c<{$}|*{9}{c|}}
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\bm{x}} & 2 & 5 & 8 & 11 & 14 & 17 & 20 & 23 & 26 \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\bm{f(x)}} & 7 & 16 & 25 & 34 & 43 & 52 & 61 & 70 & 79 \\
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\bm{g(x)}} & -8 & -23 & -38 & -53 & -68 & -83 & -98 & -113 & -128 \\
+\hline
+\end{tabu}
+}
+
+\item Razão $3$.
+\item Sim, uma P.A. de razão $9$.
+\item Sim, uma P.A. de razão $-15$.
+\item As imagens de uma P.A. por uma função afim também formam uma P.A..
+\end{enumerate}
+}{0}
+\end{answer}
+
 \practice{domínios discretos}
 
 \begin{task}{termo geral de uma P.A.}
@@ -2108,6 +3172,132 @@ Considere as funções afins $f,g$ definidas por $f(x)=3x+1$ e $g(x)=-5x+2$.
 \end{enumerate}
 \end{task}
 
+\clearpage
+\def\currentcolor{session3}
+\begin{objectives}{Afim de um passeio}
+{
+\begin{enumerate}
+\item Compreender função afim por partes.
+\end{enumerate}
+}{1}{2}
+\end{objectives}
+\marginpar{\vspace{-2em}}
+\begin{sugestions}{Afim de um passeio}
+{
+\begin{itemize}
+\item Experiências envolvendo um contexto simples como esse apresentado na atividade podem ser úteis para explorar o significado da inclinação zero de uma reta. Aproveite a oportunidade para comentar sobre a diferença entre inclinação zero, que é o caso da inclinação do segmento de reta que representa o período em que o personagem da situação descrita na atividade permanece parado, e ausência de inclinação que é observado em retas verticais.
+\item Apresentamos uma possível resposta com o gráfico contendo a origem, no entanto não é necessário iniciar a representação a partir do ponto $(0,0)$.
+\item Se achar necessário peça para os estudantes efetuarem a conversão de km/h para m/min, no entanto as distâncias percorridas podem se obtidas utilizado-se o seguinte raciocínio: se em 1 hora ele percorre $1000$ metros, em 12 minutos que corresponde a $\displaystyle\frac{1}{5}$ de hora, ele percorre $\displaystyle\frac{1000}{5}=200$ metros.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\marginpar{\vspace{-1em}}
+\begin{answer}{Afim de um passeio}
+{
+\begin{enumerate}
+
+\item Por uma reta horizontal (paralela ao eixo das abscissas).
+
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[xscale=.5,scale=.75]
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=black, fill=black, shift only, label={}]
+\draw [help lines, secundario!30] (0,0) grid (22,10);
+\draw [thick, <->] (22,0) -- (0,0) -- (0, 10);
+\node [below right] at (20.5,0) {\small tempo (min)};
+\node [above right, rotate=90] at (0, 8.5) {\small dist\^ancia (m)};
+\node [below] at (0,0) {0};
+\node [below] at (12,0) {12};
+\node [below] at (15,0) {15};
+\node [below] at (20,0) {20};
+\node [left] at (0,4) {200};
+\node [left] at (0,8) {400};
+\draw [thick, dashed] (0,4) -- (12,4);
+\draw [thick, dashed] (12,0) -- (12,4);
+\draw [thick, dashed] (0,8) -- (20,8);
+\draw [thick, dashed] (15,0) -- (15,4);
+\draw [thick, dashed] (20,0) -- (20,8);
+\node [ponto, color=\currentcolor!80] at (0,0) {};
+\node [ponto, color=\currentcolor!80] at (12,4) {};
+\node [ponto, color=\currentcolor!80] at (15,4) {};
+\node [ponto, color=\currentcolor!80] at (20,8) {};
+\draw [very thick, color=\currentcolor!80] (0,0) -- (12,4) -- (15,4) -- (20,8);
+\end{tikzpicture}
+}
+
+\item Opção 1: $f:[0,12[\rightarrow\R$ onde $f(x)=\displaystyle\frac{3}{50}x$; $g[12,15[\rightarrow\R$ onde $g(x)=200$ e $h[15,20]\rightarrow\R$ onde $h(x)=40x-400$
+
+Opção 2: $f:[0,20]\rightarrow\R$ onde $f(x) = \left\{ 
+\begin{array}{rlll} \frac{3}{50}x, & \text{se} & 0\leq x <12 \\ 200, & \text{se} & 12\leq x < 15 \\ 40x-400, & \text{se} & 15 \leq x \leq 20 
+\end{array} \right.$
+\end{enumerate}
+}{2}
+\end{answer}
+\begin{objectives}{Comprando vinho}
+{
+\begin{enumerate}
+\item Compreender função afim por partes.
+\end{enumerate}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Comprando vinho}
+{
+\begin{itemize}
+\item Chame atenção para o significado das bolas “abertas”{}e ”fechadas”, representadas na figura da solução, respectivamente pelas bolas brancas e pretas.
+\item A experiência tem mostrado que os estudantes apresentam dificuldade em perceber que a representação gráfica que ilustra a situação da atividade inicia a partir do ponto $(0,5)$.
+\end{itemize}
+}{0}{2}
+\end{sugestions}
+\begin{answer}{Comprando vinho}
+{
+\begin{enumerate}
+\item R\$ $25{,}00$ por $2$ litros, R\$ $55{,}00$ por $5$ litros e R\$ $80{,}00$ pelos $7$ litros
+
+\item 
+\begin{align*}
+p(x)&=10x+5,\text{ se }x\in(0,5]\\
+p(x)&=10x+10,\text{ se }x\in (5,10]\\
+p(x)&=10x+15, \text{ se }x\in(10,15]
+\end{align*}
+\clearpage
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.25, every node/.style={scale=.8}]
+\tikzstyle{ponto}=[circle, minimum size=7pt, inner sep=0, draw=black, fill=black, shift only, label={}]
+\draw [help lines, secundario!20] (0,0) grid (38,34);
+\draw [thick, <->] (38,0) -- (0,0) -- (0, 34);
+\node [below, right] at (34,-1) {quantidade (litros)};
+\node [above, rotate=90] at (-2, 28) { pre\c{c}o (reais)};
+\node [below] at (0,0) {0};
+\node [below] at (10,0) {5};
+\node [below] at (20,0) {10};
+\node [below] at (30,0) {15};
+\node [left] at (0,1) {5};
+\node [left] at (0,11) {55};
+\node [left] at (0,12) {60};
+\node [left] at (0,22) {110};
+\node [left] at (0,23) {115};
+\node [left] at (0,33) {165}; 
+\draw [thick, dashed] (10,0) -- (10,11) -- (0,11);
+\draw [thick, dashed] (0,12) -- (10,12) ;
+\draw [thick, dashed] (20,0) -- (20,22) -- (0,22);
+\draw [thick, dashed] (0,23) -- (20,23) ;
+\draw [thick, dashed] (30,0) -- (30,33) -- (0,33);
+\node [ponto, color=\currentcolor!80] at (10,11) {};
+\node [ponto, color=\currentcolor!80] at (20,22) {};
+\node [ponto, color=\currentcolor!80] at (30,33) {};
+\draw [very thick, color=\currentcolor!80] (0,1) -- (10,11);
+\node [ponto, draw=\currentcolor!80, fill=white] at (0,1) {};
+\draw [very thick, color=\currentcolor!80] (10,12) -- (20,22);
+\node [ponto, draw=\currentcolor!80, fill=white] at (10,12) {};
+\draw [very thick, color=\currentcolor!80] (20,23) -- (30,33);
+\node [ponto, draw=\currentcolor!80, fill=white] at (20,23) {};
+\end{tikzpicture}
+}
+\end{enumerate}
+}{2}
+\end{answer}
+
 \know{ função afim por partes}
 \label{\detokenize{AF107-A::doc}}\label{\detokenize{AF107-A:para-saber-mais-funcao-afim-por-partes}}
 \begin{task}{Afim de um passeio}
@@ -2143,6 +3333,100 @@ Trace a curva que representa a função \(p\) no plano cartesiano. Utilize a esc
 \end{task}
 
 \exercise
+% %Pagina 1
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}
+\item Temos uma reta que contém esses 6 pontos dada pela função afim $V$ ,tal que $V(q)=aq+b$, onde $V(q)$ representa o valor total da compra de $q$ unidades. Com isso a taxa de variação de V é dada por $a=\dfrac{\Delta x}{\Delta y}=\dfrac{50-150}{30-5}=\dfrac{-100}{25}=-4$, logo temos $V(q)=-4q+b$, substituindo o ponto $(5,150)$ ou o ponto $(30,50)$ temos que b=170. Daí os pontos estão sobre a reta V(q)=−4q+170. Quem comprar 20 unidades $(V(20))$irá pagar R\$ $90{,}00$, portanto para cada unidade temos: $90/20=4{,}5)$, ou seja, R\$ $4{,}50$ a unidade.
+
+De outro modo, poderíamos achar os R\$ $90{,}00$ de outras maneiras, uma delas utiliza o fato que toda função afim possui taxa de variação constante, logo: $a=\Delta x\Delta y=\dfrac{1950-750}{x-100}=\dfrac{50-150}{30-5}=-4$, o que resulta em $x=90$
+
+\item \begin{enumerate}
+\item Entre $0$ e $50$kWh.
+
+\item Temos os pontos $A=(100,750)$ e $B=(200,2250)$ , a reta que passa por esses pontos pode ser representada pela função afim: $f(x)=15x-750$ , queremos obter o valor de x tal que, f(x)=1950 que é dado por: $1950=15x-750$, que resulta em $x=180$kWh.
+\end{enumerate}
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%Pagina 2
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{2}
+\item 
+\begin{enumerate}
+\item A abscissa de ordenada $5$, está entre $1940$ e $1950$. Portanto teremos $5000$ habitantes na década de $40$.
+
+\item Sabendo que os pontos $(1960,7)$ e $(1980,10)$ pertencem à a função afim dada por $P(t)=at+b$ (onde $P(t)$ nos informa a quantidade de habitantes em milhares de pessoas a cada ano $t$) temos $a=\dfrac{3}{20}$ e $b=−287$. Daí, se substituirmos: $P(t)=20$, teremos $t=2046,6666....$ Portanto teremos $20.000$ habitantes na década de $2040$.
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item Pelos dados do problema e sendo $V$ o valor de fábrica do veículo, temos que os pontos $(0,V) ; (5,24000)$ e $(20,\dfrac{v}{5})$ pertencem ao gráfico da função afim $f$ dada por $f(x)=ax+b$, com isso temos que a taxa de variação é representada por $a=\dfrac{24000-V}{5−0}=\dfrac{0{,}2V-V}{20−0}$ daí encopntramos $V=30000$, ou seja o valor de fábrica do veículo é de R\$ $30.000{,}00$.
+Ao utilizarmos os pontos $(0,30000)$ e $(5,24000)$, encontramos: $f(x)=-1200x+30000$.
+
+\item Ao substituirmos $x=2$ em $f$, encontramos $f(2)=27600$, portanto o valor comercial do veículo após dois anos de uso é de $27.600{,}00$ reais.
+\end{enumerate}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%Pagina 3
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{4}
+\item Sendo $a$ a taxa de variação da função afim, representada no gráfico pela reta que contém os pontos $(100,5) ; (200,20)$ e $(500,V)$, temos que $a=\dfrac{V-20}{500-200}=\dfrac{20-5}{200−100}$ logo: $a=\dfrac{V-20}{300}=\dfrac{15}{100}$. Portanto temos $V=65$.
+
+\item O gráfico deve ser apresentado por partes, a primeira parte com valores do eixo horizontal de $0$ a $100$, passando pelos pontos $(0,750)$ $(100,1050)$, após isso o gráfico deverá ser representada por uma outra reta mais inclinada já que a taxa de variação aumentou de 3 para 9. Gabarito Letra \textit{e)}.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%Pagina 4
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{6}
+\item   Sendo $A$ a função afim dada por $A(x)=-10x+720$ que representa a quantidade de litros de água do reservatório $A$ após $x$ horas de perda de água. E, sendo $B$ a função afim dada por $B(x)=12x+60$ que representa a quantidade de litros de água do reservatório $B$ após $x$ horas de ganho de água. Para encontrarmos o valor de $x_0$, basta igualarmos as funções, daí teremos: $12x+60=−10x+720$ o que resulta em $x_0=30$. Portanto 30 horas.
+
+\item  $(8,13,18,23,28,33,38,43,48,53,58,63,68,73,78,83)$ 
+%Sugiro trocar pela 12
+
+\item  Precisamos saber quantos números multiplos de $15$ há de $1$ a $10000$, depois subtrairmos este valor de $10000$, para isso basta descobrir a quantidade $n$ de termos da P.A.: $(15,30,45,...,9990)$ daí temos: $9990=15+(n-1)\cdot15$ e concluimos que $n=666$, portanto $10000-666=9334$. Gabarito letra \textit{e)}
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%Pagina 5
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{9}
+\item Letra D %Sugiro trocar pela 13
+\item Letra A %Sugiro trocar pela 14
+\item  O padrão de crescimento adotado caracteriza a sequência: $(33000,34500,36000)$ como uma P.A. de razão $r=1500$ e $a_1=33000$. Queremos encontrar o sétimo termo dessa P.A. dado por: $a_7=33000+6\cdot1500=42000$. Gabarito letra \textit{d)}.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%Pagina 6
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{12}
+\item
+\begin{enumerate}
+\item Os números que representam as frequências formam uma PA de primeiro termo $87{,}9$; razão $0{,}2$ e último termo $107{,}9$. Logo, $87{,}9+(n-1)\cdot0{,}2$ o que resulta em $n=101$. Temos então, $101$ emissoras. Os números dos canais constituem uma PA com $101$ termos, onde o primeiro termo é 200 e razão 1 com $a_{101}=200+(101-1)\to a_{101}=300$. Portanto temos $101$ emissoras, e $300$ é o número do canal com maior frequência.
+
+\item Na PA formada pelos números dos canais, temos: $285=200+n-1\to n=285–199=86$. Daí, na PA constituída pelos números das frequências: $a_86=87{,}9+(86-1).0{,}2=87{,}9+17=104{,}9$. Portanto a frequência do canal $285$ é $104{,}9$MHz.
+\end{enumerate}
+\item A condição de ordenação das fichas caracteriza como P.A. a sequência abordada, com isso, temos $a_16=103$ e $a_31=58$, obtendo assim as os sistema linear cujas duas equações são dadas por: $a_1+15r=103$ e $a_1+30r=58$ resolvendo encontramos: $a_1=148$ e $r=-3$. Logo $x_50=148+49\cdot(-3)=1$ e portanto $x_50=1$.
+\end{enumerate}
+}{1}
+\end{answer}
+
+
 \label{\detokenize{AF107-E:exercicios}}\label{\detokenize{AF107-E::doc}}
 \begin{enumerate}
 \item \textbf{(Uerj-1998)} A promoção de uma mercadoria em um supermercado está representada, no gráfico abaixo, por \(6\) pontos de uma mesma reta.
@@ -2179,7 +3463,7 @@ Quem comprar \(20\) unidades dessa mercadoria, na promoção, pagará por unidad
 \centering
 
 
-  \begin{tikzpicture}[scale=.5]
+	\begin{tikzpicture}[scale=.5]
 \tikzstyle{ponto}=[circle, minimum size=5pt, inner sep=0, draw=black, fill=black, shift only, label={}]
 \draw [thick,<->] (0,13.25) -- (0,0) -- (12,0);
        \node [above] at (-0.5,13.25) {R\$};

@@ -1,4 +1,10 @@
-\renewcommand\chapterillustration{./abertura-ladrilhos}%Photo by <a href="https://unsplash.com/@teckhonc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">T.H. Chia</a> on <a href="https://unsplash.com/s/photos/tesselations?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+\ifnum\aluno=1
+\renewcommand\chapterillustration{./abertura-ladrilhos}
+\else
+\renewcommand\chapterillustration{./abertura-ladrilhos-professor}
+\fi
+
+%Photo by <a href="https://unsplash.com/@teckhonc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">T.H. Chia</a> on <a href="https://unsplash.com/s/photos/tesselations?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
 \def\chapterwhat{Ladrilhamentos regulares, semirregulares e irregulares. }
 
 \def\chapterbecause{O ladrilhamento de uma superfície plana é uma cobertura do plano onde formas (por exemplo, polígonos) são repetidos sem sobreposição ou buracos. No caso de polígonos, estes podem ser regulares ou não. Os ladrilhos compostos por figuras geométricas podem ser vistos como uma arte, usados em outras aplicações, como papéis de parede, forros de madeira, estamparia de tecidos, bordados entre outros. Apesar do número de possibilidades de realizar um ladrilhamento parecer infinita, é possível comprovar que ao utilizar apenas polígonos regulares existe apenas 11 possibilidades. Contudo pode-se aprofundar o estudo e investigar a utilização de polígonos irregulares.} 
@@ -63,13 +69,15 @@ Gráficos: & --- \\
 
 {\large Licença:}
 
-  \includegraphics[width=3.5cm]{Figuras/cc-by-nc-sa}
+  \includegraphics[width=3.5cm]{cc-by-nc-sa}
 \end{minipage}\hfill
 \begin{minipage}[c]{5cm}
 \centering
 {\large Desenvolvido por}
-
-
+\includegraphics[width=2.5cm]{logo-associacao.jpg}
+\end{minipage}
+\begin{minipage}[r]{5cm}
+\centering
 
 {\large Patrocínio:}
   \vspace{1em}
@@ -78,6 +86,221 @@ Gráficos: & --- \\
 \end{figure}
 
 \mainmatter
+
+\begin{apresentacao}
+\section*{Habilidades e pré-requisitos}
+
+Neste capítulo contempla-se a seguinte habilidade da versão homologada da Base Nacional Comum Curricular (BNCC) para o Ensino Médio:
+
+\begin{habilities}{EM13MAT509}
+Resolver problemas sobre ladrilhamento do plano, com ou sem apoio de aplicativos de geometria dinâmica, para conjecturar a respeito dos tipos ou composição de polígonos que podem ser utilizados em ladrilhamento, generalizando padrões observados.
+\end{habilities}
+
+ 
+As habilidades (conforme a versão homologada da BNCC para o Ensino Fundamental) consideradas como pré-requisitos para o entendimento dessa unidade são:
+
+\begin{habilities}{EF03MA16}
+Reconhecer figuras congruentes, usando sobreposição e desenhos em malhas quadriculadas ou triangulares, incluindo o uso de tecnologias digitais.
+\tcbsubtitle{ EF05MA17} Reconhecer, nomear e comparar polígonos, considerando lados, vértices e ângulos, e desenhá-los, utilizando material de desenho ou tecnologias digitais.
+
+\tcbsubtitle {EF06MA18} Reconhecer, nomear e comparar polígonos, considerando lados, vértices e ângulos, e classificá-los em regulares e não regulares, tanto em suas representações no plano como em faces de poliedros.
+\tcbsubtitle {EF06MA19} Identificar características dos triângulos e classificá-los em relação às medidas dos lados e dos ângulos.
+\tcbsubtitle {EF06MA20} Identificar características dos quadriláteros, classificá-los em relação a lados e a ângulos e reconhecer a inclusão e a intersecção de classes entre eles.
+\tcbsubtitle {EF07MA27} Calcular medidas de ângulos internos de polígonos regulares, sem o uso de fórmulas, e estabelecer relações entre ângulos internos e externos de polígonos,
+preferencialmente vinculadas à construção de mosaicos e de ladrilhamentos.
+
+\tcbsubtitle {EF08MA18} Reconhecer e construir figuras obtidas por composições de transformações geométricas (translação, reflexão e rotação), com o uso de instrumentos de desenho ou de softwares de geometria dinâmica.
+\end{habilities}
+
+
+
+
+Considera-se também como pré-requisitos para o entendimento dessa unidade, as seguintes habilidades (conforme a versão homologada da BNCC para o Ensino Médio):
+\begin{habilities}{EM13MAT105} 
+Utilizar as noções de transformações isométricas (translação, reflexão,
+rotação e composições destas) e transformações homotéticas para construir figuras e
+analisar elementos da natureza e diferentes produções humanas (fractais, construções
+civis, obras de arte, entre outras).
+\end{habilities}
+
+\section*{Tópicos abordados na unidade}
+Nessa unidade serão abordados os seguintes assuntos:
+\begin{itemize}
+\item  Ladrilhamentos regulares, semirregulares e irregulares.
+\item  O uso das isometrias na construção de ladrilhamentos.
+\end{itemize}
+	
+
+Levando em consideração a habilidade EM13MAT509 citada anteriormente, nossa escolha nesta unidade é focar em:
+
+\vspace{-1em}
+\begin{itemize}
+\item Reconhecer: 
+\vspace{-.5em}
+\begin{itemize}
+\item os tipos de ladrilhamento do plano;
+\item os possíveis ladrilhamentos do plano formado por polígonos regulares;
+\item outros tipos de ladrilhamentos do plano.
+\end{itemize}
+\vspace{-.5em}
+\item Explorar os conceitos geométricos necessários para a construção de ladrilhamentos do plano.
+\end{itemize}
+\vspace{-1em}
+
+
+\section*{Abordagem adotada no capítulo}
+
+Conforme mencionamos, a Base Comum Curricular (BNCC) – Brasil (2017) para o Ensino Fundamental (EF) aborda o tema ladrilhamento em uma das habilidades citadas, quando trata de polígonos, no sétimo ano.
+
+\begin{habilities}{EF07MA22}: Calcular medidas de ângulos internos de polígonos regulares, sem o uso de fórmulas, e estabelecer relações entre ângulos internos e externos de polígonos, preferencialmente vinculadas à construção de mosaicos e de ladrilhamentos, à confecção de ferramentas e peças mecânicas, entre outras. 
+\end{habilities}
+
+Os Parâmetros Curriculares Nacionais (PCN) (BRASIL, 1999) indicam o uso de ladrilhamentos como um procedimento para o cálculo de áreas.
+\begin{quote}
+Desse modo, o trabalho com áreas deve apoiar-se em procedimentos que favoreçam a compreensão das noções envolvidas, como obter a área pela composição e decomposição de figuras cuja área eles já sabem calcular (recortes e sobreposição de figuras) por procedimentos de contagem (papel quadriculado, ladrilhamento), por estimativas e aproximações (p.131).
+\end{quote}
+
+Brasil (1999) apresentam os ladrilhamentos, também para o EF no que tange o ensino de figuras geométricas.
+\begin{quote}
+No que diz respeito ao campo das figuras geométricas, inúmeras possibilidades de trabalho se colocam. Por exemplo, as atividades de classificação dessas figuras com base na observação de suas propriedades e regularidades. Atividades que exploram a composição e decomposição de figuras, como ladrilhamentos, tangrans, poliminós, fazem com que os alunos verifiquem que o recobrimento de uma superfície pode ser feito por determinadas figuras, como triângulos equiláteros, quadrados, retângulos, hexágonos regulares (p.123).
+\end{quote}
+
+Essa abordagem possui uma aproximação com o que a BNCC do o Ensino Médio (EM) apresenta para o campo da geometria, no terceiro ano.
+
+
+\begin{habilities}{EM13MAT505} 
+Resolver problemas sobre ladrilhamento do plano, com ou sem apoio de aplicativos de geometria dinâmica, para conjecturar a respeito dos tipos ou composição de polígonos que podem ser utilizados em ladrilhamento, generalizando padrões observados.
+\end{habilities}
+
+Observa-se que os ladrilhamentos não são citados nos PCN EM (Brasil, 2006), apesar da recomendação de trabalhar com padrões em sala de aula. 
+\begin{quote}
+[...] estimular a busca de regularidades, a generalização de padrões, a capacidade de argumentação, elementos fundamentais para o processo de formalização do conhecimento matemático e para o desenvolvimento de habilidades essenciais à leitura e interpretação da realidade e de outras áreas do conhecimento (p.42)
+\end{quote}
+
+Os padrões são importantes nesse contexto, pois, ladrilhamentos do plano são padrões repetidos de formas (geométricas ou não) denominadas ladrilhos. Essas formas devem preencher o plano sem lacunas e sem sobreposição (Billstein, Libeskind \& Lott, 2015). Também é importante que o ladrilhamento cubra  um plano infinito e isso será  possível, ao encontrar um padrão que se repete em todas as direções. Mesmo que uma forma cubra uma área ampla, não há um teste geral para saber se ela continuará a cobrir todo o plano (Eberle, 2014). Nesse contexto, no  presente capítulo, um ladrilhamento  será considerado como uma estrutura composta por uma área limitada que se repete em todas as direções. 
+
+Acredita-se que um dos  objetivos ao propor o estudo de ladrilhamentos, principalmente nos anos iniciais da educação básica, deve ser melhorar as habilidades psicomotoras dos alunos e ensinar matemática com base em  atividades da vida diária, evoluindo do concreto ao abstrato. Além disso, artistas combinam matemática com arte e revelam a incrível beleza da geometria em áreas como têxteis, design de interiores, desenho industrial (Hatfieldet al, 2000). Além das preferências estéticas, os alunos precisam decidir quais formas são mais adequadas para preencher/decorar uma determinada área, levando em consideração as características das formas (Callingham, 2014). Pesquisas como Fuys, Geddes e Tischler(1988); Serra(1993) e  Wheatley e Reynolds(1996) mostram que trabalhar com ladrilhamentos do plano auxilia os alunos a compreender outros conceitos relacionados à geometria, como por exemplo áreas e transformações isométricas.  
+
+Como ladrilhamento do plano é um conceito que pode melhorar a compreensão dos alunos sobre as concepções em geometria,  enquando professores, podemos  solicitar aos alunos que expressem sua compreensão sobre os ladrilhamentos. Pois conforme Callingham(2004) concepções errôneas (missconceptions)  sobre esse assunto, podem afetar o desenvolvimento de outras ideias. Algumas pesquisas mostram que a maioria dos alunos do ensino fundamental apenas consegue descrever os ladrilhamentos de forma visual. Outras pesquisas apontam que os alunos podem fazer ladrilhamentos  usando objetos e formas geométricas desde a primeira série (Eberle, 2014; O'Daffer et al. 1998; Ward, 2003). Por outro lado, estudos como Outhred e Mitchelmore (2000) afirmam que as crianças não compreendem totalmente as sequências finitas de quadrados antes do quarto ou quinto ano. Marchini (2003) mostra que é  difícil para os alunos compreenderem a área infinita dos ladrilhamentos. Nessa pesquisa, o autor indica que os alunos pensam que o ladrilhamento está concluído quando o papel termina e o infinito não faz sentido. Além disso,  poucos alunos fazem tentativas criativas de adicionar um novo papel. Conforme Owens \& Outhred(1998) ao colocar ladrilhos em uma área limitada, os alunos trabalham mais com triângulos do que com retângulos. Isso indica que o sucesso dos alunos ao construir diferentes tipos de ladrilhamento  pode mudar.
+
+Uma pesquisa muito interessante a respeito das dificuldades dos alunos sobre ladrilhamentos no plano é Callinghan (2004). Esse estudo focou em classificar a compreensão dos alunos sobre ladrilhamentos pelos níveis de pensamento geométrico de Van Hiele. Nesse contexto, no Nível 0 de acordo com os Níveis de Pensamento Geométrico de Van Hiele, esperava-se que os alunos reconhecessem as formas geométricas presentes no ladrilhamento, bem como a unidade fundamental ( forma ou combinação das formas) formam o padrão do ladrilhamento. No Nível 1, os alunos deveriam definir as formas e as transformçãoes  usadas para compor o ladrilhamento. No nível 2, espera-se que expliquem e façam alguma tentativa de medir a extensão da transformação, usando o nível de linguagem técnica, como “girar, rotacionar” ou “transladar ”. Embora o uso dos Níveis de Pensamento Geométrico de Van Hiele revele implicitamente os resultados acima mencionados, Callinghan (2004) sugere que a natureza dos equívocos que alguns alunos realizam não foi suficientemente definida por esta abordagem. 
+
+Neste capitulo, não estamos interessando em identificar os Níveis de Pensamento Geométrico dos alunos, porém estes foram levados em conta ao pensarmos nas atividades propostas. Começamos trabalhando com ladrilhamentos monoédricos, formados por polígonos regulares e irregulares. Pensamos em começar por eese tipo de ladrilhamento, pois são mais simples de construir e por considerar que  os alunos estão familiarizados com a maioria das  formas . Os ladrilhamentos semirregulares que são os compostos por mais de um polígono regular, são trabalhados na sequencia. Após estudar e dominar esses conceitos, são propostas atividades onde os alunos necessitam utilizar conceitos de transformações isométricas para criar e explorar ladilhamentos.
+
+Em todas as atividades do capítulo, pensamos em abordagens fundamentadas na metodologia de investigação matemática. Justifica-se essa escolha, pois conforme \cite[p.2]{Ponte} \textit{"em contextos de ensino, aprendizagem ou formação, investigar não significa necessariamente lidar com problemas na fronteira do conhecimento nem com problemas de grande dificuldade. Significa, apenas, trabalhar a partir questões que nos interessam e que se apresentam inicialmente confusas, mas que conseguimos clarificar e estudar de modo organizado." }
+
+Além disso, pensamos que para aprender geometria, a investigação é um métodos eficazes de instrução. Nossa experiência didática mostra que os alunos, em geral, não conseguem aprender geometria por observação passiva, mas dão significado aos conceitos no momento que interagem com as formas. Dessa foram, em vários momentos, no decorrer do capítulo, serão propostas atividades com a utilização de materiais manipuláveis, para que os alunos possam investigar os conceitos por conta própria,  para determinar as propriedades em cada situação. 
+
+
+\section*{Orientações sobre o uso do material}
+
+Esse material é dividido em seções do tipo Explorando, Organizando, Praticando, Exercícios e Para saber mais. As seções explorando, organizando e praticando foram pensadas para o desenvolvimento em sala. As seções denominadas “\textit{Para saber mais}” são de caráter opcional, ao omiti-las não irá prejudicar o desenvolvimento das demais atividades. Apenas observamos que em geral  exploram aspectos interessantes do conteúdo. A seção denominada Exercícios contém atividades que devem ser desenvolvidos pelos estudantes fora do horário de aula. 
+
+O material foi planejado para ser desenvolvido em 2 ou 3 semanas, em classes com três horas aula semanais e, para isso, seria necessário o desenvolvimento das atividades de modo eficiente pelos estudantes. Você  professor pode suprimir  algumas das atividades se julgar que a turma já possui nível de maturidade adequado naqueles tópicos
+
+
+\end{apresentacao}
+
+\def\currentcolor{session1}
+\begin{texto}
+{
+	\section{Explorando: A Arte de Ladrilhar}
+	\subsection{Objetivos gerais}
+
+	Reconhecer ladrilhamentos no plano
+
+	\subsection{Sugestões e discussões}
+	Quando se trata de ladrilhamentos em matemática, também conhecidos como mosaicos ou pavimentações, é necessário explicar alguns termos comumente utilizados em outras áreas do conhecimento, caso esses apareçam na discussão.
+
+	\begin{itemize}
+	\item Ladrilho: laje de forma retangular ou quadrada, em geral de barro cozido.
+	\item Azulejo: ladrilho vidrado em várias cores, mas que inicialmente era construído com a cor azul.
+	\item Mosaico: conjunto embutido de pedras (pintadas ou não) com que se formam figuras ou desenhos.
+	\item Mosaicista ou mosaísta: o que trabalha em obras de mosaico.
+	\item Pavimentar: ato de recobrir artificialmente o chão ou o piso.
+	\item Parquete: (do francês, parquet) pavimento construído com tacos de madeira, cerâmica ou outros materiais.
+	\item Tecelagem: fábrica de tecidos, onde se tece.
+	\item Tecelão: operário que lida com o tear, aparelho que tece, que faz o entrançamento dos fios. 
+	\item Tessela: pedra para lajear, peça de mosaico.
+	\item Tesselário: operário que prepara pedras para revestimento de pisos. (BARBOSA, 1993, p. 5).
+	\end{itemize}
+
+	Assim, pode-se considerar que mosaico é o resultado, é o produto final de uma pavimentação usando ou não algum tipo de padrão. Por sua vez, o termo tesselação é mais adequado para se referir a um padrão em tecidos, por exemplo. Quanto a ladrilhamento, é plausível concluir que são pavimentações construídas a partir de  polígonos regulares ou não.  Como foi colocado, propõe-se reconhecer ladrilhamentos no plano, assim, optou-se por utilizar preferencialmente esse termo. 
+	No material disponibilizado ao estudante, ainda não faremos uma definição formal de ladrilhamento, porém utilizaremos a seguinte ideia que será utilizada é a seguinte: “Quando revestimos uma superfície plana com alguma figura sem deixar falhas ou sobrepô-las, dizemos que houve um ladrilhamento dessa superfície” (adaptado de BIANCHINI, 2015, p. 264).
+
+}
+\end{texto}
+\clearmargin
+\begin{objectives}{Brincando de ser Escher}
+{
+	\begin{itemize}
+		\item Construir um ladrilhamento
+		\item \textbf{Conceitos abordados}: ladrilhamentos de forma geral
+	\end{itemize}	
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Brincando de ser Escher}
+{
+	\textbf{Organização em sala de aula}: Nesta atividade, o aluno deve construir um ladrilhamento. O ideal é que ele faça isso individualmente. 
+
+	\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao material utilizado. Mas a ideia é que os estudantes consigam montar o ladrilhamento usando as peças disponibilizadas.
+
+	\textbf{Sugestões gerais}: Nesse momento espera-se que os alunos utilizem transformações no plano (de forma intuitiva) para que consigam construir o ladrilhamento utilizando o material proposto, analisem as imagens e percebam quais podem e quais não podem ser consideradas um ladrilhamento, justificando as suas respostas.
+
+	Para o desenvolvimento da tarefa, recomenda-se : 
+	\begin{itemize}
+	\item Que o professor prepare o material com antecedência, imprimindo os lagartos do encarte em papel cartão, ou solicitando que os alunos o façam. 
+	\item Caso o professor opte por utilizar o site indicado (\url{http://www.cdme.im-uff.mat.br/jogos_artisticos_geometricos_eletronico/Mosaico/aluno01.html}) , verifique se o mesmo está funcionando de forma satisfatória. 
+	\item Caso tenha possibilidade de fazer a impressão dos elementos em impressora 3D, o Thingiverse possui alguns modelos prontos (\url{https://www.thingiverse.com/thing:89983}).
+	\end{itemize}
+ 
+	\textbf{Enriquecimento da discussão}: Sugere-se ainda que o professor incetive seus alunos a perceper quais as transformações os alunos utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+
+	\textbf{Material necessário}: Lagartos impressos do encarte em folha de gramatura mais alta ou impressos em 3D .
+}{0}{0}
+\end{sugestions}
+\begin{objectives}{Reconhecendo um ladrilhamento}
+{
+	\begin{itemize}
+	\item Reconhecer um ladrilhamento
+	\item \textbf{Conceitos abordados}: ladrilhamentos de forma geral.
+	\end{itemize}
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Reconhecendo um ladrilhamento}
+{
+	\textbf{Organização em sala de aula}: Nesta atividade, inicialmente o aluno deve verificar se determinada figura é ou não um ladrilhamento. O ideal é que ele faça isso individualmente e depois compartilhe em pequenos grupos. Em um momento posterior, faz-se a discussão no grande grupo.
+
+	\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, visto que é um conceito novo e visto que os exemplos colocados servem exatamente para gerar discussão e questionamentos. 
+
+	\textbf{Sugestões gerais}: Nesse momento espera-se que os alunos analisem as imagens e percebam quais podem e quais não podem ser consideradas um ladrilhamento, justificando as suas respostas.
+
+	Para o desenvolvimento da tarefa, recomenda-se que: 
+	\begin{itemize}
+	\item O professor apresente outros exemplos, ou solicite que os alunos pesquisem com antecedência ( Parte 2: Onde podemos encontrar ladrilhamentos no mundo ao nosso redor? Vamos pensar em alguns exemplos?).
+	\item Depois que os alunos apresentaram seus exemplos, o professor pode projetá-los(com o auxílio de um projetor multimídia) incentivando a autonomia e protagonismo dos estudantes. 
+	\end{itemize}
+}{1}{0}
+\end{sugestions}
+% \marginpar{\vspace{.5\baselineskip}}
+\begin{answer}{Reconhecendo um ladrilhamento}
+{
+	O objetivo da atividade Reconhecendo um ladrilhamento é fazer com que os alunos consigam definir ladrilhamento a partir dos exemplos apresentados. São expostas 6 figuras, cuja intenção é provocar discussão.
+
+	\textbf{Figura 1}- A ilustração representa uma pavimentação de pedras coloridas, onde existem alguns espaços não utilizados (lacunas).  Os "ladrilhos" devem se encaixar como as peças de um quebra-cabeça. Além disso, não existe um padrão sendo respeitado. Então “NÃO”
+
+	\textbf{Figura 2}- Na metade inferior esquerda da foto, sim porque as penas se encaixam sem folgas ou sobreposições e claramente, esse padrão pode ser repetido para sempre para preencher um plano. No entanto, na metade superior direita da foto, muitas das penas estão sobrepostas. Os "ladrilhos" em não devem se sobrepor. Então, na área superior direita, "NÃO".
+
+	\textbf{Figura 3} - A forma básica (triângulo) se repete perfeitamente. Se fossem apenas triângulos, seria um ladrilhamento. No entanto, existem lacunas ( espaços amarelos) a resposta é  "NÃO, isso não é um ladrilhamento".
+
+	\textbf{Figura 4} - A forma básica (novamente triângulos) se repete perfeitamente. Se fossem apenas triângulos, seria um ladrilhamento. No entanto, como a forma que se repete é o Yoda, a resposta é  "NÃO, isso não é um ladrilhamento" porque nesse caso, os triângulos azuis são as lacunas.
+
+
+	\textbf{Figura 5}- A forma básica se repete perfeitamente, sem espaços ou sobreposições, logo a resposta é SIM, pois em um ladrilhamento do plano, as formas devem se encaixar, sem espaços ou sobreposições.
+
+	\textbf{Figura 6}-  A forma básica se repete perfeitamente, porém existem sobreposições, logo a resposta é NÃO, pois em um ladrilhamento do plano, as formas devem se encaixar porfeitamente sem sobreposições.
+}{0}
+\end{answer}
 
 
 \explore{A arte de ladrilhar}
@@ -188,6 +411,235 @@ Destas palavras antigas derivam termos semelhantes que aparecem em várias aplic
 Em design e arquitetura, a tesselação se refere à pavimentação de paredes, pisos ou outras superfícies com um padrão de pequenos ladrilhos feitos de cerâmica, vidro ou outros materiais. Essesa ladrilhoa normalmente são cortadas em formas geométricas que se encaixam perfeitamente em designs simples ou complexos formando um padrão aparentemente infinito. A aplicação de ladrilhamentos  na arquitetura pode é  amplamente encontrada em muitas civilizações do mundo, incluindo o antigo Egito, mouros, romanos, Pérsia, Arábia, Japão e China, existindo ao longo da história do desenvolvimento da arquitetura. Embora os ladrilhamentos geralmente consistam em formas abstratas, principalmente retângulos, hexágonos, octógonos e outros polígonos, também podem consistir em elementos figurativos, como no trabalho de artistas como M.C. Escher (1898-1972). Escher é famoso por suas tesselações compostas de cavalos, borboletas, pássaros e criaturas imaginárias.
 
 
+\clearpage
+\def\currentcolor{session1}
+\begin{texto}
+{
+	\section{Explorando: Ladrilhando com polígonos do mesmo tipo}
+	\subsection{Objetivos gerais}
+	\begin{itemize}
+	\item Criar ladrilhamentos do plano, usando apenas um tipo de polígono regular.
+	\item Reconhecer quais polígonos regulares ladrilham o plano.
+	\item Reconhecer que alguns polígonos irregulares ladrilham o plano.
+	\end{itemize}
+
+
+	Observamos que todas as atividades desse explorando são muito parecidas, porém cada uma tem um objetivo específico.
+
+	\subsection{Sugestões e discussões}
+
+	Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imedita, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) ou por meio de aplicativos a resposta ao questionamento. Dessa forma, em todas pas atividades dessa seção, o professor poderá optar pela Parte 1 ou pela parte 2, caso tenha pouco tempo para explorar o tema. No organizando haverá a formalização do que foi abordado.  
+}
+\end{texto}
+\begin{objectives}{Ladrilhamento usando triângulos}
+{
+	\begin{itemize}
+	\item Criar Ladrilhamentos do plano usando apenas um tipo de triângulo (equilátero ou não).
+	\item Reconhecer que qualquer triângulo ladrilha o plano.
+	\item \textbf{Conceitos abordados}: Ladrilhamenos monoédricos.
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Ladrilhamento usando triângulos}
+{
+\textbf{Organização em sala de aula}: Sugerimos que as atividades sejam realizadas de forma individual ou em duplas. A reflexão mediada pela manipulação dos polígonos pode ser favorecida pela discussão com um colega. Grupos maiores podem gerar dispersão.
+
+\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao material utilizado (ou os aplicativos ou o material manipulativo). Mas a ideia é que os estudantes consigam montar o ladrilhamento usando as peças disponibilizadas.  Observar que os alunos podem construir pavimentações como a seguinte:
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=150bp]{ladrilhamento-professor1}
+\end{figure}
+
+\begin{itemize}
+\item Que não ladrilhamentos que satisfazer a condição: "Para isso, procure distribuir os triângulos ao redor de um vértice". Mas será salutar que isso ocorra, para que o aluno perceba a condição imposta e não repita o "erro" nas demais atividades.
+\end{itemize}
+
+\textbf{Enriquecimento da discussão}: Sugere-se que o professor incetive seus alunos a perceber quais as transformações isométricas utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+
+\textbf{Material necessário}: Polígonos impressos do encarte em folha de gramatura mais alta, recortados em EVA, feitos com MDF em corte a laser ou impressos em 3D e aplicativos indicados .
+
+}{0}{0}
+\end{sugestions}
+\begin{answer}{Ladrilhamento usando triângulos}
+{
+	\begin{enumerate}
+	\item ---
+	\item ---
+	\item Primeiro ladrilhamento continha um triângulo com lados iguais, já o segundo com lados diferentes entre si.
+	\item 
+	\begin{enumerate}
+	    \item Sim.
+		\item Sim, todo triângulo pode ladrilhar um plano. O triângulo irregular é aquele que não possui.
+		\item Serão congruentes quando satisfizerem um dos condições de congruência, por exemplo, lados correspondentes congruentes
+		\item Sim, pela “regra imposta”: procure distribuir os triângulos ao redor de um vértice.
+		\item  Por exemplo,  usou translações, rotações ou reflexões ou uma combinação de tranformações
+	\end{enumerate}
+	\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Ladrilhamentos usando quadriláteros}
+{\begin{itemize}
+	\item Criar ladrilhamentos do plano usando apenas um tipo de quadrilátero.
+	\item Reconhecer que todos os quadrláteros ladrilham o plano.
+	\item \textbf{Conceitos abordados}: Ladrilhamentos monoédricos.
+\end{itemize}
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Ladrilhamento usando quadriláteros}
+{
+\textbf{Organização em sala de aula}: Sugerimos que as atividades sejam realizadas de forma individual ou em duplas. A reflexão mediada pela manipulação dos polígonos pode ser favorecida pela discussão com um colega. Grupos maiores podem gerar dispersão.
+
+\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao material utilizado (ou os aplicativos ou o material manipulativo). Mas a ideia é que os estudantes consigam montar o ladrilhamento usando as peças. 
+
+\textbf{Sugestões gerais}: Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imedita, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) a resposta ao questionamento. No organizando haverá a formalização do que foi abordado.  Os alunos podem ter dificuldade com o conceito de convexo. Pode ser necessário uma explicação para o conceito. 
+
+\textbf{Enriquecimento da discussão}: Sugere-se que o professor incetive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+
+\textbf{Material necessário}: polígonos impressos do encarte em folha de gramatura mais alta, recortados em EVA, feitos com MDF em corte a laser ou impressos em 3D e aplicativos indicados .
+}{0}{0}
+\end{sugestions}
+\begin{objectives}{Ladrilhamento usando pentágonos}
+{
+\begin{itemize}
+\item Reconhecer que os pentágonos regulares não ladrilham o plano, mas que alguns pentágonos irregulares o fazem.
+\item \textbf{Conceitos abordados}: Ladrilhamentos monoédricos
+\end{itemize}
+}{1}{0}
+\end{objectives}
+
+\begin{sugestions}{Ladrilhamento usando pentágonos}
+{
+\textbf{Organização em sala de aula}: Sugerimos que as atividades sejam realizadas de forma individual ou em duplas. A reflexão mediada pela manipulação dos polígonos pode ser favorecida pela discussão com um colega. Grupos maiores podem gerar dispersão.
+
+\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao material utilizado (ou os aplicativos ou o material manipulativo). Mas a ideia é que os estudantes não consigam  montar o ladrilhamento usando os pentágonos regulares. Nesse sentido é interessante reforçar que “que quando revestimos uma superfície plana com figuras sem deixar falhas ou sobrepô-las, dizemos que houve um ladrilhamento dessa superfície”. Observa-se que será possível realizar o ladrilhamento usando o pentágono irregular. Aproveite para questionar se isso vai ocorrer com qualquer pentágono irregular, como acontece com os quadriláteros. A resposta é negativa, como você poderá conferir no organizando. 
+
+\textbf{Sugestões gerais}: Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imedita, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) a resposta ao questionamento. No organizando haverá a formalização do que foi abordado.  
+
+\textbf{Enriquecimento da discussão}: Sugere-se que o professor incetive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+
+\textbf{Material necessário}: polígonos impressos do encarte em folha de gramatura mais alta, recortados em EVA, feitos com MDF em corte a laser ou impressos em 3D e aplicativos indicados.
+}{0}{0}
+\end{sugestions}
+\marginpar{\vspace{.5\baselineskip}}
+\begin{answer}{Ladrilhamento usando quadriláteros}
+{
+	
+	\begin{enumerate}
+	\item ---
+	\item ---
+	\item Na \titem{a)} são quadriláteros que podem ser divididos em triângulos congruentes e não \item{b)} não.
+	\item 
+	\begin{enumerate}
+	\item Apenas a letra \titem{a)}
+	\item Quadrilátero não convexo é aquele que pelo menos uma das diagonais corta um dos seus lados.
+	\end{enumerate}
+	\end{enumerate}
+	\tcbsubtitle{Ladrilhamento usando pentágonos}
+	\begin{enumerate}
+	\item ---
+	\item ---
+	\item Primeiro é regular e o segundo não, e no segundo foi possível ladrilhar.
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Ladrilhamentos usando hexágonos}
+{
+	\begin{itemize}
+	\item Reconhecer que hexágonos regulares ladrilham o plano.
+	\item Criar ladrilhamentos do plano, usando apenas um tipo de hexágono.
+	\item Reconhecer que alguns tipos especiais de hexágonos podem ladrilhar o plano.
+	\item \textbf{Conceitos abordados}: Ladrilhamentos monoédricos.
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Ladrilhamentos usando hexágonos}
+{
+	\textbf{Organização em sala de aula}: Sugerimos que as atividades sejam realizadas de forma individual ou em duplas. A reflexão mediada pela manipulação dos polígonos pode ser favorecida pela discussão com um colega. Grupos maiores podem gerar dispersão.
+
+	\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao material utilizado (ou os aplicativos ou o material manipulativo). Mas a ideia é que os estudantes consigam montar o ladrilhamento usando as peças disponibilizadas. Observe com os alunos que alguns hexágonos irregulares ladrilham o plano e questione se são todos os hexágonos regulares que possuem essa propriedade.
+
+	\textbf{Sugestões gerais}: Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imedita, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) a resposta ao questionamento. No organizando haverá a formalização do que foi abordado.  
+
+	\textbf{Enriquecimento da discussão}: Sugere-se que o professor incetive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+
+	\textbf{Material necessário}: polígonos impressos do encarte em folha de gramatura mais alta, recortados em EVA, feitos com MDF em corte a laser ou impressos em 3D e aplicativos indicados.
+
+}{0}{1}
+\end{sugestions}
+\marginpar{\vspace{.5\baselineskip}}
+\begin{answer}{Ladrilhamento usando hexágonos}
+{
+	\begin{enumerate}
+	\item ---
+	\item ---
+	\item Primeiro é regular o segundo não.
+	\item Para que um hexágono possa ladrilhar um plano, ele precisa ter pares de lados iguais, por exemplo, sendo os lados $a,b,c,d,e,f$ com $a=f,b=d$ e $c=e$.
+	\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Que formas podem ser usadas para ladrilhar o plano?}
+{
+	\begin{itemize}
+	\item Reconhecer quais polígonos regulares ladrilham o plano
+	\item Criar ladrilhamentos do plano, usando apenas um tipo de polígono regular.
+	\item \textbf{Conceitos abordados}: Ladrilhamentos monoédricos.
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Que formas podem ser usadas para ladrilhar o plano?}
+{
+	\textbf{Organização em sala de aula}: Sugerimos que as atividades sejam realizadas de forma individual ou em duplas. A reflexão mediada pela manipulação dos polígonos pode ser favorecida pela discussão com um colega. Grupos maiores podem gerar dispersão.
+
+	\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao material utilizado (ou os aplicativos ou o material manipulativo). Mas a ideia é que os estudantes consigam montar o ladrilhamento usando as peças disponibilizadas, com exceção dos pentágonos regulares. Ao realizar o ladrilhamento com pentágonos regulares, os alunos certamente não irão conseguir fazer o ladrilhamento. Nesse sentido é interessante reforçar que “que quando revestimos uma superfície plana com figuras sem deixar falhas ou sobrepô-las, dizemos que houve um ladrilhamento dessa superfície”. 
+
+	\textbf{Enriquecimento da discussão}: Sugere-se que o professor incetive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+
+	\textbf{Material necessário}: Aplicativo indicado.
+}{0}{1}
+\end{sugestions}
+\begin{answer}{Que formas podem ser usadas para ladrilhar o plano?}
+{
+	\begin{enumerate}
+	\item e \titem{b)}
+
+	\begin{table}[H]
+	\centering
+	\setlength\tabulinesep{2.5pt}
+	\begin{tabu} to \textwidth{|l|c|c|}
+	\hline
+	\thead
+	\centering{Polígono} & \pbox[c][1.5cm]{.25\textwidth}{Medida de \\ cada ângulo \\ interno} & \pbox[c][1.5cm]{.25\textwidth}{Previsão: \\ polígono \\ ladrilha o plano?}  \\
+	\hline
+	Triângulo Equilátero & $60^{\circ}$ & Sim \\
+	\hline
+	Triângulo qualquer & Depende do polígono & Sim \\
+	\hline
+	Quadrado & $90^{\circ}$ & Sim \\
+	\hline
+	Quadrilátero qualquer & Depende do polígono & Sim \\
+	\hline
+	Pentágono regular & $108^{\circ}$ & Não \\
+	\hline
+	Hexágono regular & $120^{\circ}$ & Sim \\
+	\hline
+	Quadrilátero irregular & Depende do polígono & Sim \\
+	\hline
+	Pentágono irregular & Depende do polígono & Depende do polígono \\
+	\hline
+	Hexágono irregular & Depende do polígono & Depende do polígono \\
+	\hline
+	\end{tabu}
+	\end{table}
+	\setcounter{enumi}{2}
+	\item Não, pois para um polígono regular poder ladrilhar, precisa que a medida do ângulo interno seja um divisor de $360^{\circ}$.
+	\item Resposta pessoal.
+	\end{enumerate}
+}{0}
+\end{answer}
 \explore{Ladrilhando com polígonos do mesmo tipo}
 
 Ladrilhamentos são frequentemente feitos de repetições de um padrão, chamado forma fundamental, como ilustra a \hyperref[porce]{figura \ref{porce}}. No que segue, vamos aprender a fazer ladrilhamentos usando polígonos de um só tipo e investigar quais polígonos são capazes de ladrilhar o plano.
@@ -293,13 +745,11 @@ Ladrilhamentos são frequentemente feitos de repetições de um padrão, chamado
 \thead
 \centering{Polígono} & \makecell{Medida de \\ cada ângulo \\ interno} & \makecell{Previsão: \\ O polígono \\ ladrilha o plano?}  \\
 \hline
-Triângulo equilátero & &  \\
+Triângulo Equilátero & &  \\
 \hline
-Triângulo qualquer & &  \\
+Triângulo isóceles & &  \\
 \hline
 Quadrado & &  \\
-\hline
-Quadrilátero qualquer & &  \\
 \hline
 Pentágono regular & &  \\
 \hline
@@ -455,7 +905,6 @@ Também tentamos utilizar pentágonos para ladrilhar o plano (na \hyperref[lad_p
 
 Em 2015 matemáticos da  Universidade de Washington Bothell, descobriram um pentágono irregular que ladrilha o plano. Antes desta descoberta, havia apenas quatorze tipos conhecidos de pentágonos irregulares capazes de ladrilhar o  plano, cuja descoberta varia do início ao final do século XX. Em 2017, com o auxílio de algoritmos computacionais, foi provado que são exatamente 15 tipos de pentágonos irregulares que ladrilham o plano (\hyperref[pentagono]{figura \ref{pentagono}}).
 
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=400bp]{pentagono}
@@ -538,7 +987,122 @@ Para realizar o ladrilhamento com esse tipo de polígono, os hexágonos devem se
 
 No item d) da \hyperref[lad_hex]{atividade \ref{lad_hex}} apresentamos o terceiro tipo de hexágonos que ladrilham o plano. Nesse tipo, os lados adjacentes são congruentes e os ângulos entre esses lados são congruentes e medem $120^{\circ}$. Na \hyperref[hex7]{figura \ref{hex7}}, $a=f$, $b=c$, $d=e$ e $\hat{A}=\hat{C}=\hat{E}= 120^{\circ}$.
 
+\clearmargin
 
+\def\currentcolor{session2}
+\begin{objectives}{Ladrilhando com losangos}
+{
+	Reconhecer que os losangos são quadriláteros, e portanto, ladrilham o plano.	
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Ladrilhando com losangos}
+{
+	Estas atividades, foram pensadas para serem realizadas com o uso de ferramentas computacionais. Pretende-se com o uso dessas ferramentas chamar a atenção para os diferentes tipos de ladrilhamentos e realizar comparações entre eles e reconhecer qual a razão para os ladrilhamentos serem possíveis. 
+
+	\textbf{Organização em sala de aula}: Recomenda-se que os estudantes trabalhem em duplas, de preferência em um laboratório de informática, onde o aplicativo GeoGebra esteja previamente instalado.
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Ladrilhando usando losangos}
+{
+	\begin{enumerate}
+	\item Sim, como os ângulos são dois a dois suplementares, em todo o nó se tem $360^{\circ}$.
+	\item É um losango que possui os ângulos de de $60^{\circ}$ e $120^{\circ}$
+	\begin{figure}[H]
+	\centering
+	
+	\includegraphics[width=125bp]{ladrilhamento-professor2}
+	\end{figure}
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Ladrilhamentos usando trapézios}
+{
+	\begin{itemize}
+	\item Aplicar os conceitos vistos até então.
+	\item Analisar os tipos de ladrilhamentos e criar novas suposições.
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Ladrilhamentos usando trapézios}
+{
+	Estas atividades, foram pensadas para serem realizadas com o uso de lápis e papel. Pretende-se com a atividade chamar a atenção para os diferentes tipos de ladrilhamentos e criados comparando entre eles e reconhecer quais padrões encontrado. 
+
+	\textbf{Organização em sala de aula}: Recomenda-se que os estudantes trabalhem individualmente. E no final seja realizado um compartilhamento dos diferentes resultados.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Ladrilhamentos usando trapézios}
+{
+	\begin{enumerate}
+	\item Um trapézio é um quadrilátero, e como a soma dos ângulos internos de qualquer quadrilátero é $360^{\circ}$, ele ladrilha o plano.
+	\item
+	\begin{enumerate}
+	\item 
+	\adjustbox{valign=t}
+	{
+	\includegraphics[width=150bp]{ladrilhamento-professor3}
+	}
+
+	\item
+	\adjustbox{valign=t}
+	{	
+	\includegraphics[width=.9\linewidth]{ladrilhamento-professor4}
+	}
+	\end{enumerate}
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Ladrilhamento com pentágonos irregulares}
+{
+	Aplicar os conceitos apresentados na seção
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Ladrilhamento com pentágonos irregulares}
+{
+	Estas atividades, foram pensadas para serem realizadas com o uso de lápis e papel. Pretende-se com a atividade chamar a atenção para os diferentes tipos de ladrilhamentos e criados comparando entre eles e reconhecer quais padrões encontrado. 
+
+	\textbf{Organização em sala de aula}: Recomenda-se que os estudantes trabalhem individualmente. E no final uma exposição dos diferentes resultados
+
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Ladrilhamento com pentágonos irregulares}
+{
+\begin{enumerate}
+\item Pessoal
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.9\linewidth]{pentagono}
+}
+\end{enumerate}
+}
+{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Ladrilhamento dual}
+{
+	\begin{itemize}
+	\item Analisar os tipos de ladrilhamentos presentes e reconhecê-los.
+	\item Criar novas suposições, seguindo o raciocínio exposto
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Ladrilhamento dual}
+{
+	Estas atividades, foram pensadas para serem realizadas com o uso de lápis e papel. Pretende-se com a atividade chamar a atenção para uma maneira diferente de criar  ladrilhamentos, utilizando os ladrilhamentos já conhecidos, além de  reconhecer quais padrões são encontrados. 
+
+	\textbf{Organização em sala de aula}: Recomenda-se que os estudantes trabalhem individualmente ou em duplas.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Ladrilhamento dual}
+{
+	\begin{figure}[H]
+	\centering
+	
+	\includegraphics[width=.8\linewidth]{ladrilhamento-professor5}
+	\end{figure}
+}{1}
+\end{answer}
 
 \begin{figure}[H]
 \centering
@@ -562,7 +1126,9 @@ Quanto aos demais polígonos irregulares convexos (com mais de 7 lados) esses n�
 Observamos que nesse primeiro momento trabalhamos com ladrilhamentos monoédricos, ou seja, formados por ladrilhos de um só tipo. Mas se  ladrilhos forem polígonos regulares, de vários tipos. O que ocorre?
 
 
+
 \practice{Vamos ladrilhar}
+
 
 \begin{task}{Ladrilhamentos usando losangos}
 
@@ -661,6 +1227,45 @@ O diagrama a seguir ilustra um ladrilhamento de quadrados. Adicionando um ponto 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{objectives}{Ladrilhando o plano com polígonos de mais de um tipo}
+{
+	\begin{itemize}
+	\item Reconhecer que é possível ladrilhar o plano com dois ou mais polígonos regulares
+	\item \textbf{Conceitos abordados}: Ladrilhamentos semirregulares
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-\baselineskip}}
+\begin{sugestions}{Ladrilhando o plano com polígonos de mais de um tipo}
+{
+Tenha  em mente alguns exemplos de ladrilhamenos semirregulares, incentivando os alunos a terems êxito na  atividade.
+
+Relembrar os ângulos internos de cada polígono regular pode ser útil. Deixando uma dica aos alunos para pensar nisso antes de escolher seus polígonos.
+
+\textbf{Organização em sala de aula}: Nesta atividade, o aluno deverá construir ladrilhamentos com polígonos regulares de tipos diferentes. O ideal é que ele faça isso em grupos de no máximo 4 alunos, para que possam discutir sobre as construções realizadas. 
+
+\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao desafio proposto. Observa-se que a descoberta via experimento utilizando polígonos regulares de diferentes tipos congruentes entre si, pode ser realizada, como foi feito para polígonos regulares de um único tipo. Porém, é preciso ter cuidado, pois poderá conduzir a conclusões errôneas, se não for observado a soma dos ângulos internos dos polígonos que circundam um vértice, no sentido de verificar se essa soma é, ou não, igual a 360º. Os enganos podem ocorrer visto pequenas imperfeições no material utilizado, ou por erros de aproximação do tipo visual. No exemplo (figura) tem-se um pentágono, um hexágono e um octógono regulares. Nesse caso, a soma dos ângulos é 363º, o que ultrapassa em apenas 3º o valor de uma volta completa.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=150bp]{ladrilhamento-professor6}
+\end{figure}
+
+}{1}{1}
+\end{sugestions}
+\begin{sugestions}{Ladrilhando o plano com polígonos de mais de um tipo}
+{
+	\textbf{Sugestões gerais}: Espera-se que os alunos consigam chegar à conclusão que existem exatamente 8 tipos de mosaicos semirregulares sendo obtidos com 2 ou, no máximo, 3 tipos de polígonos regulares. Observa-se que nem todos os polígonos regulares podem ser usados para fazer ladrilhamentos semirregulares; assim, pentágonos, heptágonos, eneágonos e decágonos regulares não compõem ladrilhamentos semirregulares
+	Para o desenvolvimento da tarefa, recomenda-se ainda que o professor prepare o material com antecedência, imprimindo os polígonos do encarte em papel cartão, ou solicitando que os alunos o façam. Caso opte por utilizar o site indicado (http://www.cdme.im-uff.mat.br/ppr/ppr-html/ppr-st-br.html) , verifique se o mesmo está funcionando de forma satisfatória. 
+	 
+	\textbf{Enriquecimento da discussão}: Sugere-se ainda que o professor incetive seus alunos a perceper quais as combinações produzem ladrilhamentos e quais os padrões que estão sendo formados.
+
+	\textbf{Material necessário}: Polígonos impressos do encarte em folha de gramatura mais alta ou impressos em 3D	
+}{0}{1}
+\end{sugestions}
 
 \explore{Ladrilhando com polígonos regulares}
 
@@ -1059,6 +1664,35 @@ $3$ & $3$ & $3$ & $3$ & $3$ & $3$ & $3-3-3-3-3-3$ \\
 
 Será que todas as  combinações /configurações que constam na tabela anterior podem ser construídas geometricamente de modo a ladrilhar o plano?
 
+\clearpage
+\def\currentcolor{session1}
+
+\begin{objectives}{Investigando as combinações}
+{
+	\begin{itemize}
+	\item Entender que existe uma regra geral que permite determinar quando uma certa combinação de polígonos regulares produz um ladrilhamento
+	\item Criar ladrilhamentos no plano usando polígonos regulares de mais de um tipo
+	\item \textbf{Conceitos abordados}: Ladrilhamentos semirregulares
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Investigando as combinações}
+{
+	\textbf{Organização em sala de aula}: Sugerimos que as atividades sejam realizadas de forma individual ou em duplas. A reflexão mediada pela manipulação dos polígonos pode ser favorecida pela discussão com um colega. Grupos maiores podem gerar dispersão.
+
+	\textbf{Dificuldades previstas}: A ideia é que os estudantes  tentem  montar o ladrilhamento usando as peças de cada configuração (quando possível). Se o professor não tiver as peças disponíveis, sugira que os launos façam esboços e tentem chegar em alguma conclusão.
+ 
+	\textbf{Enriquecimento da discussão}: Estimule os alunos a justificarem cada vez que eliminarem alguma configuração ou afirmarem que é possível realizar o ladrilhamento. Observe com os alunos que é possível construir um ladrilhamento usando triângulos equiláteros, quadrados e dodecágonos regulares, mas a distribuição de ladrilhos ao redor de cada vértice não será sempre a mesma. Observe com os alunos que quando um ladrilhamento como queremos é possível,  a sequência dos polígonos ao redor
+	de cada vértice é sempre a mesma, em ambos os sentidos. É o  que ocorre com a configuração 3-6-3-6.  Apesar de ser possível construir um vértice do tipo 3-3-6-6 não é possível manter em um ladrilhamento todos os vértices com este mesmo tipo. Questione aos alunos se isso é um problema.
+
+	\textbf{Material necessário}: Poligonos regulares do encarte.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Investigando as combinações}
+{
+	Todas as respostas para as questões realizadas na atividade encontram-se no organizando.
+}{1}
+\end{answer}
 
 \explore{Ladrilhamentos semirregulares} \label{at_ladsemi}
 
@@ -1411,9 +2045,108 @@ Ou seja, acabamos de mostrar que existem exatamente 11 maneiras de se cobrir o p
 %%%%%%%%%%%%%%%
 
 
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{texto}
+{
+\section{Explorando: Outros ladrilhamentos}
+\subsection{Objetivo geral}
+Reconhecer que existem outros ladrilhamentos, como os aperiódios e os que não são do tipo lado a lado.}
+\end{texto}
+\marginpar{\vspace{-\baselineskip}}
+\begin{objectives}{Ladrilhando com retângulos}
+{
+	\begin{itemize}
+	\item Reconhecer ladrilhamentos que não são do tipo lado a lado.
+	\item \textbf{Conceitos abordados}: Ladrilhamentos monoédricos.
+	\end{itemize}	
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-2\baselineskip}}
+\begin{sugestions}{Ladrilhando com retângulos}
+{
+	\textbf{Organização em sala de aula}: A atividade pode ser feita em duplas, para que os alunos possam discutir com o colega os ladrilhamentos que serão construídos.
+
+	\textbf{Dificuldades previstas}: Nesta atividade, o aluno deverá construir um ladrilhamento que não é do tipo lado a lado..É possível que inicialmente os alunos tenham alguma dificuldade, pois deverão quebrar as regras estabelecidas. Ou seja, poderão construir ladrilhamentos onde existem arestas que não são comuns a dois polígonos.
+
+	\textbf{Enriquecimento da discussão}: Observe com os alunos que esse tipo de ladrilho é muito comum no revestimento do tipo parquet. Faça-os perceber que existem vários designs possíveis no momento que não existe mais a necessidade das arestas dos polígonos serem comuns. 
+
+	\textbf{Material necessário}: lápis e papel
+
+}{1}{1}
+\end{sugestions}
+\marginpar{\vspace{-\baselineskip}}
+\begin{answer}{Ladrilhando com retângulos}
+{
+	\begin{enumerate}
+	\item Não são ladrilhamentos lado a lado.
+	\item Qualquer um desses padrões, por exemplo:
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\linewidth]{lad_ret}
+	\end{figure}
+	\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Ladrilhamento do tipo Penrose}
+{
+	\begin{itemize}
+	\item Reconhecer ladrilhamentos do tipo Penrose.
+	\item \textbf{Conceitos abordados}: ladrilhamentos com polígonos irregulares.
+	\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Ladrilhamento do tipo Penrose}
+{
+	\textbf{Organização em sala de aula}: A atividade pode ser feita em duplas, para que os alunos possam discutir com o colega os ladrilhamentos que serão construídos.
+
+	\textbf{Dificuldades}: A primeira dificuldade poderá ser a construção das peças, pois será necessário usar um pentágono regular. Nesse sentido oriente seus alunos a utilizarem o material do encarte. Acredita-se também que o aluno possa ter dificuldade em ladrilhar o plano com as formas, pois poderá fazer um ladrilhamento do tipo não periódico, que é diferente do que já estava sendo apresentado. 
+
+	\textbf{Enriquecimento da discussão}: Faça os alunos perceberem  que existem vários designs possíveis usando essas duas peças, porém a maioria produzirá ladrilhamentos que não são periódicos. Questione os alunos sobre o tipo de transformação usada, fazendo questionamento do tipo: você usou translações, rotações ou reflexões para criar seu design? Você usou uma combinação de transformações? 
+
+	\textbf{Material necessário}: Polígono impresso do encarte, tesoura, cola, lápis de cor.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Ladrilhamento do tipo Penrose}
+{
+	\begin{enumerate}
+	\item ---
+	\item ---
+	\item Translações e rotações, por exemplo.
+	\item Não periódico e feitos com um ladrilho não convexo.
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Um ladrilhamento no estilo Escher}
+{
+	\begin{itemize}
+	\item Utilizar transformações geométricas para construir ladrilhamentos.
+	\item Entender que é necessário utilizar polígonos regulares e transformações geométricas para construir ladrilhamentos do tipo Escher.
+	\item \textbf{Conceitos abordados}: transformações e ladrilhamentos.
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Um ladrilhamento no estilo Escher}
+{
+	\textbf{Organização em sala de aula}: Essa atividade foi planejada para ser realizada de forma individual. 
+
+	\textbf{Dificuldades previstas}: Nesta atividade, o aluno deverá construir um  ladrilhamento começando com um polígono regular , mas fazendo alterações no seu formato.  Acreditamos que se o aluno seguir as orientações, não terá dificuldade em realizar a atividade.
+
+	\textbf{Enriquecimento da discussão}: lembre aos alunos que no inicio do capitulo trabalhamos com um ladrilhamento utilizando lagartos. A técnica que o artista que inventou aquele ladrilamento é a mesma que estamos utilizando essa atividade. 
+
+	\textbf{Material necessário}: Polígono impresso do encarte, tesoura, cola, lápis de cor
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Um ladrilhamento no estilo Escher}
+{
+	Resposta pessoal.
+}{1}
+\end{answer}
 
 
 \explore{Outros ladrilhamentos}
+
 
 
 \begin{task}{Ladrilhando com retângulos} \label{at_outros1}
@@ -1504,7 +2237,7 @@ Observe que os ladrilhos têm em duas formas diferentes, a pipa e a flecha. Esse
 
 
 
-
+\clearpage
 \arrange{Outros ladrilhamentos}
 
 
@@ -1529,7 +2262,6 @@ A \hyperref[lad_ret]{figura \ref{lad_ret}} ilustra exemplos de como os retângul
 	\caption{Exemplos de ladrilhamentos.}
 	\label{lad_ret}
 	\end{figure}
-
 
 A \hyperref[at_outros2]{atividade \ref{at_outros2}} tratou de ladrilhos especiais que são construídos a partir de um pentágono regular. Essas peças são ditas especiais pois são constituídas por triângulos denominados áureos. De fato, considerando  um pentágono $ABCDE$ de lado unitário, sabemos que cada um dos ângulos internos desse polígono mede $108^{\circ}$ (\hyperref[penr_9]{figura \ref{penr_9}}). 
 
@@ -1652,6 +2384,172 @@ A mesma técnica pode ser observada no vídeo \href{ https://youtu.be/T6L6bE_bTM
 
 
 \needspace{.2\textheight}
+\def\currentcolor{session2}
+
+\begin{objectives}{Como criar um ladrilhamento usando translações}
+{
+	\begin{itemize}
+	\item Perceber que para construir ladrilhamentos utiliza-se transformaçõe geométricas.
+	\item \textbf{Conceitos abordados}: transformações e ladrilhamentos.
+	\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Como criar um ladrilhamento usando translações}
+{
+	Nas seções anteriores construímos ladrilhamentos usando polígonos regulares e irregulares. Mas os ladrilhamentos podem ser construídos combinando esses dois tipos de polígonos e usando transformações geométricas, que foi um conceito visto no capitulo Transformações Isométricas. Se for necessário, retome tais conceitos com os alunos.
+
+	\textbf{Organização em sala de aula}: Nesta atividade, o aluno deverá construir ladrilhamentos com polígonos regulares de tipos diferentes utilizando transformações. O ideal é que ele faça isso em grupos de no máximo 4 alunos, para que possam discutir sobre as construções realizadas. 
+
+	\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente pois utilizarão transformações geométricas e deverão descrever quais transformações foram utilizadas.
+
+	\textbf{Material necessário}: Polígonos impressos do encarte em folha de gramatura mais alta ou impressos em 3D , tesoura, cola, lápis de cor.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Como criar um ladrilhamento usando translações}
+{
+	Um exemplo:
+	\begin{enumerate}
+	\setcounter{enumi}{3}
+		\item
+		\begin{enumerate}
+			\item Hexágono e triângulos
+			\item Sim, colocando um triângulo em dois lados consecutivos do hexágono e rotacionando e transladando a figura
+		\end{enumerate}
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Identificando as transformações}
+{
+	\begin{itemize}
+	\item Perceber que para construir ladrilhamentos utiliza-se transformações geométricas.
+	\item Perceber que o ladrilhamento apresentado não é um ladrilhamento semirregular.
+	\item \textbf{Conceitos abordados}: transformações e ladrilhamentos.
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Identificando as transformações}
+{
+	\textbf{Organização em sala de aula}: Nesta atividade, o aluno deverá construir ladrilhamentos com polígonos regulares de tipos diferentes utilizando transformações. O ideal é que ele faça isso em grupos de no máximo 4 alunos, para que possam discutir sobre as construções realizadas. 
+
+	\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente pois utilizarão transformações geométricas e deverão descrever quais transformações foram utilizadas.
+
+	\textbf{Enriquecimento da discussão}: Nas seções anteriores construímos ladrilhamentos usando polígonos regulares e irregulares. Essa atividade apresenta um ladrilhamento que não é semirregular. Solicite aos alunos que tentem fazer outros arranjos desses polígonos.
+
+
+	\textbf{Material necessário}: Polígonos impressos do encarte em folha de gramatura mais alta ou impressos em 3D , tesoura, cola, lápis de cor.
+
+}{0}{1}
+\end{sugestions}
+\marginpar{\vspace{\baselineskip}}
+\begin{answer}{Identificando as transformações}
+{
+	\begin{enumerate}
+	\item Quadrados, triângulos e hexágonos.
+	\item Exemplo:
+	\begin{figure}[H]
+	\centering
+	
+	\includegraphics[width=150bp]{ladrilhamento-professor7}
+	\end{figure}
+	\item Não é semirregular, pois as configurações mudam para cada vértice
+	\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Como criar um ladrilhamento usando rotação}
+{
+	\begin{itemize}
+	\item Perceber que para construir ladrilhamentos utiliza-se transformações geométricas.
+	\item \textbf{Conceitos abordados}: transformações e ladrilhamentos.
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Como criar um ladrilhamento usando rotação}
+{
+	\textbf{Organização em sala de aula}: Nesta atividade, o aluno deverá construir um ladrilhamento regular usando rotações. O ideal é que ele faça isso individualmente
+
+	\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, pois deverão usar apenas rotações para ladrilhar o plano.
+
+	\textbf{Enriquecimento da discussão}: Essa atividade pode ser utilizada usando o software Geogebra. Se esse for o caso, incentive os alunos a usarem o comando sequência.
+	Caso faça a atividade usando lápis e papel, basta seguir as instruções.
+
+	\textbf{Material necessário}: Polígonos impressos do encarte em folha de gramatura mais alta ou impressos em 3D , tesoura, cola, lápis de cor.
+}{0}{1}
+\end{sugestions}
+\begin{answer}{Como criar um ladrilhamento usando rotação}
+{
+	\begin{enumerate}
+	\item \titem{b)} e \titem{c)} ---
+	\setcounter{enumi}{3}
+	\item 
+	\begin{enumerate}
+	\item Um hexágono.
+	\item 6 vezes
+	\item Rotacionando os hexágonos ao redor de um vértice
+	\item ---
+	\item Quadrados, por exemplo.
+	\end{enumerate}
+	\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Ladrilho de 12 lados}
+{
+	\begin{itemize}
+	\item Construir ladrilhamento usando polígonos não convexos.
+	\item \textbf{Conceitos abordados}: ladrilhamentos com polígonos irregulares.
+	\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Ladrilho de 12 lados}
+{
+	\textbf{Organização em sala de aula}: Essa atividade pode ser realizada em duplas, fomentando a discussão entre os alunos. 
+
+	\textbf{Dificuldades previstas}: O segundo e o terceiro item poderão trazer algum tipo de dificuldade, visto que os alunos deverão realizar ladrilhamentos usando polígonos não convexos diferentes dos usuais. Os demais itens não devem apresentar dificuldades pois tratam de ladrilhamento com hexágonos, algo que já foi trabalhado no decorrer do capítulo.
+
+	\textbf{Enriquecimento da discussão}: Incentive os alunos a pensar em um polígono que ladrilha o plano e que possa der decomposto em dois polígonos congruentes. 
+
+	\textbf{Material necessário}: lápis e papel
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Ladrilho de 12 lados}
+{
+	\begin{enumerate}
+	\item Nesse caso, pois é formada por 3 hexágonos regulares.
+	\item Um exemplo:
+	\begin{figure}[H]
+	\centering
+	
+	\includegraphics[width=150bp]{ladrilhamento-professor8}
+	\end{figure}
+	\item Nesse caso é uma figura formada por quadrados
+	{
+	\begin{figure}[H]
+	\centering
+	
+	\includegraphics[width=75bp]{ladrilhamento-professor9}
+	\end{figure}
+	}
+	\item Um exemplo:
+	{
+	\begin{figure}[H]
+	\centering
+	
+	\includegraphics[width=125bp]{ladrilhamento-professor10}
+	\end{figure}
+	}
+	\clearpage
+	\item Nesse caso o hexágono possui dois lados paralelos e congruentes, o que garante que se consiga um ângulo de $360^{\circ}$ em torno de um vértice.
+	\begin{figure}[H]
+	\centering
+	
+	\includegraphics[width=175bp]{ladrilhamento-professor11}
+	\end{figure}
+
+	Como $AB\newparallel CD$, segue que $\alpha+\beta=180^{\circ}$, mas como $\hat{D}+\hat{B}+\hat{F}=\alpha+\beta+\gamma+\delta+\hat{F}= 360º$, pois $\gamma,\delta$ e $\hat{F}$ são ângulos internos do triângulo $DBF$. Reciprocamente, se $\hat{D}+\hat{B}+\hat{F}=360^{\circ}$, resulta que $AB \newparallel CD$.
+	E como a soma dos ângulos internos de um hexágono é $720^{\circ}$, resulta que  $\hat{D}+\hat{B}+\hat{F}=360^{\circ}$ equivale a  $\hat{D}+\hat{E}+\hat{A} = 360^{\circ}$.
+	\end{enumerate}
+}{0}
+\end{answer}
 \practice{Outros ladrilhamentos }
 
 
@@ -1756,11 +2654,7 @@ A \hyperref[12lados]{figura \ref{12lados}} ilustra um encaixe formado por figura
 	
 \end{task}
 
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
 
 \exercise
 

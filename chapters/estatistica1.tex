@@ -1,4 +1,8 @@
-\renewcommand\chapterillustration{abertura-estatistica1}%Photo by Hoach Le Dinh on Unsplash, https://unsplash.com/photos/c8TWWQ5ZnUw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText 
+\ifnum \aluno=1
+\renewcommand\chapterillustration{abertura-estatistica1.jpg}
+\else
+\renewcommand\chapterillustration{abertura-estatistica1-professor}
+\fi
 \renewcommand\chapterwhat{Especificidade do pensamento estatístico a partir de problemas. Conceitos: população e amostra, parâmetro e estimador. Variáveis estatísticas e suas classificações. Organização dos dados em tabelas de frequências. Representações gráficas adequadas para os diferentes tipos de variáveis. Noções básicas de amostragem.}
 \renewcommand\chapterbecause{A Estatística está presente no mundo contemporâneo e chega aos cidadãos em todos os
 meios de comunicação. Diariamente somos confrontados com informações estatísticas
@@ -94,6 +98,491 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 \end{figure}
 
 \mainmatter
+
+\begin{apresentacao}
+\section{A Natureza da Estatística}
+\subsection{Habilidades da BNCC trabalhadas no Capítulo}
+\begin{habilities}{EM13MAT102}
+Teste Analisar tabelas, gráficos e amostras de pesquisas estatísticas em relatórios divulgados por diferentes meios de comunicação, identificando, quando for o caso, inadequações que possam induzir a erros de interpretação, como escalas e amostras não apropriadas.
+
+\tcbsubtitle{EM13MAT106} Identificar situações da vida cotidiana nas quais seja necessário fazer escolhas levando-se em conta os riscos probabilísticos (usar este ou aquele método contraceptivo, optar por um tratamento médico em detrimento de outro etc.)
+
+\tcbsubtitle{EM13MAT406} Construir e interpretar tabelas e gráficos de frequências com base em dados obtidos em pesquisas por amostras estatísticas, incluindo ou não o uso de softwares que inter-relacionem estatística, geometria e álgebra.
+
+\end{habilities}
+
+\subsection{Observações}
+\begin{enumerate}
+\item {} 
+Como a BNCC ainda não entrou em vigor, os pré-requisitos não necessariamente foram contemplados no Ensino Fundamental. Por essa razão, muitos deles serão abordados nesse capítulo e no capítulo de “Medidas de Posição e Dispersão” que dá sequência a esse capítulo.
+
+\item {} 
+Ao longo do capítulo utilizamos o termo \textit{progressão aritmética}. O conhecimento deste tópico não é um pré-requisito. A conexão entre conceitos da Matemática é favorável para a visão do estudante sobre a Matemática como um todo.
+
+\end{enumerate}
+
+\subsection{Pré-requisitos}
+\begin{habilities}{EF08MT08}
+Identificar, em gráficos de barras, colunas ou setores, divulgados pela mídia, as variáveis e seus valores, os resultados e os elementos constitutivos do gráfico (título, eixos, legenda e fonte), interpretando-os para analisar a adequação do gráfico ao tema e aos dados e para propor outras formas de comunicação dos resultados da pesquisa, tais como texto escrito ou outro tipo de gráfico.
+
+\tcbsubtitle{EF08MA23}
+Selecionar razões, de diferentes naturezas (física, ética ou econômica), que justificam a realização de pesquisas amostrais e não censitárias, e reconhecer que a seleção da amostra pode ser feita de diferentes maneiras (amostra casual simples, sistemática e estratificada).
+
+\tcbsubtitle{EF09MT09}
+Escolher e construir o gráfico mais adequado (colunas, setores, linhas e histogramas) para apresentar um determinado conjunto de dados de uma pesquisa, destacando aspectos como as medidas de tendência central para compor um relatório descritivo dos resultados.
+
+\tcbsubtitle{EF09MT10}
+Planejar uma pesquisa amostral envolvendo tema da realidade social, definir a técnica de amostragem e a amostra, coletar, organizar e interpretar os dados, para comunicar os resultados por meio de relatório contendo texto escrito, avaliação de medidas de tendência central e da amplitude, tabelas e gráficos adequados construídos com o apoio de planilhas eletrônicas.
+
+\tcbsubtitle{EF09MA05}
+Resolver e elaborar problemas que envolvam porcentagens, com a ideia de aplicação de percentuais sucessivos e a determinação das taxas percentuais, preferencialmente com o uso de tecnologias digitais, no contexto da educação financeira.
+\end{habilities}
+
+A Estatística está presente no mundo contemporâneo e chega aos cidadãos em todos os meios de comunicação e é a ferramenta por excelência no tratamento de modelagem de fenômenos aleatórios (não-determinísticos). Diariamente somos confrontados com informações estatísticas sobre temas que variam de Economia à Educação, de filmes a esportes, de comida à medicina, e de pesquisas de opinião a comportamento social. Tais informações orientam decisões em nossas vidas pessoais e permitem-nos exercer nossas responsabilidades como cidadãos. (Franklin, C. A., 2007, GAISE).
+
+A produção de conhecimento - sempre em constante evolução e reavaliação - nas mais variadas áreas muitas vezes requer o conhecimento estatístico.
+
+A relevância do raciocínio estatístico e do conhecimento para o efetivo funcionamento na sociedade da informação levou à introdução do termo \textbf{Letramento Estatístico}: “A capacidade de compreender e avaliar criticamente resultados estatísticos que permeiam a vida diária,  acompanhada da capacidade de apreciar como o pensamento estatístico pode contribuir em decisões públicas e privadas, profissionais e pessoais.” (Batanero, Borovcnik, 2016)
+
+De acordo com De Veaux et al. (2008), o desafio para o estudante (e o professor) de Estatística introdutória é que, como na literatura e na arte, navegar por e dar sentido a exige não somente um conjunto de regras e axiomas, mas experiência de vida e “senso comum”. São várias habilidades a serem trabalhadas e a maior parte delas exige capacidade de avaliação crítica em adição à manipulação matemática. A capacidade de avaliação crítica é adquirida com exemplos e experiência e isso demanda mais tempo.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=\linewidth]{{menina-globo}.png}
+\end{figure}
+
+\subsection{Objetivo geral}
+\begin{itemize}
+\item Motivar o pensamento estatístico a partir de suas ideias fundamentais, a saber, população e amostra, parâmetro e estimador, distribuições empíricas de dados.
+\end{itemize}
+
+Este capítulo aborda os conteúdos de organização e representação dos dados (incluindo agrupamentos de dados em classes), a construção de gráficos apropriados (incluindo o histograma), a interpretação e a análise crítica apresentadas em relatórios descritivos destacados na habilidade. Os conteúdos:
+\begin{enumerate}
+\item {} 
+realização de pesquisas considerando o planejamento, a discussão (se será censitária ou por amostra),
+
+\item {} 
+seleção de amostras,
+
+\item {} 
+elaboração e aplicação de instrumentos de coleta
+
+\end{enumerate}
+
+serão trabalhados de forma transversal ao  longo dos capítulos que tratam de Estatística, revisitando pré-requisitos previstos pela BNCC para o Ensino Fundamental.
+
+As atividades propostas envolvem o uso da Estatística em diferentes situações, motivando o pensamento estatístico a partir de suas ideias fundamentais, a saber, população e amostra, parâmetro e estimador, distribuição e caracterizações da distribuição (posição e dispersão). Essas atividades não têm como objetivo o cálculo das medidas, mas a sua compreensão estrutural. Também serão trabalhados alguns distratores nessas atividades tais como:
+\begin{enumerate}
+\item {} 
+explorar a diferença entre um gráfico de barras e um histograma;
+
+\item {} 
+destacar que a informação importante no gráfico de barras, adequado para variáveis qualitativas ou quantitativas discretas que assumem um conjunto moderado de valores, é a frequência na qual cada resposta ocorre,
+
+\item {} 
+destacar ainda que, para efeito de comparações múltiplas, a frequência deve ser relativa ou porcentagem, dado que diferentes conjuntos podem ter tamanhos diferentes.
+
+\end{enumerate}
+
+Neste capítulo serão apresentadas algumas atividades envolvendo a realização de pesquisas e coleta de dados e, no final do capítulo, será sugerida a realização de um projeto que deverá ser realizado ao longo de pelo menos três meses paralalelamente às aulas. O projeto envolverá a formulação de um problema a ser investigado (de preferência envolvendo outra disciplina), a definição da população, a construção de um questionário, a coleta de dados (amostra ou censo), a análise dos resultados obtidos construindo gráficos e calculando medidas-resumo e a confecção de relatório final. Na conclusão do projeto, o capítulo “Medidas de Posição e Dispersão” já terá sido trabalhado. Recomenda-se que essa atividade seja preferencialmente trabalhada no primeiro ou segundo ano do Ensino Médio, pois no último ano há maior limitação de tempo em razão dos vários exames a serem realizados pelos estudantes.
+
+
+Neste capítulo incluem-se:
+\begin{enumerate}
+\item {} 
+apresentação do diagrama de pontos introduzindo o conceito de distribuição empírica tanto em seu aspecto morfológico quanto variacional logo na primeira atividade revelando com isso a essência da Estatística;
+
+\item {} 
+reflexão sobre possíveis equivalências, do ponto de vista estatístico, de medidas-resumo com a finalidade de tomada de decisão sob incerteza;
+
+\item {} 
+utilização de uma base de dados reais de uma pesquisa já realizada;
+
+\item {} 
+discussão sobre a adequação entre tipo de variável e tipo de gráfico;
+
+\item {} 
+uso de tecnologia para a construção de gráficos;
+
+\item {} 
+conceituação de parâmetro e estimador, elementos cruciais na Estatística.
+
+\item {} 
+abordagem da estatística e seus problemas, privilegiando o pensamento estatístico para interpretação dos resultados, ao invés de um puro tratamento matemático dos cálculos que levam aos resultados.
+
+\end{enumerate}
+
+De acordo com Batanero e Borovnick (2016), mesmo que os métodos de análise de dados nessa fase do ensino envolvam somente calcular e interpretar porcentagens  ou medidas estatísticas simples, bem como interpretar vários tipos de gráficos, os autores sugerem que os estudantes apresentam problemas na compreensão dos conceitos e na relação desses conceitos para o contexto de modo a ter algum significado. Uma razão para essas dificuldades é que o ensino, em geral, foca sobre a aplicação de métodos em detrimento à interpretação de resultados em um dado contexto, buscando, assim, de forma equivocada, dar a estes um caráter determinístico.
+
+Os distratores apresentados a seguir refletem a experiência dos envolvidos com o desenvolvimento desse capítulo.
+\begin{enumerate}
+\item {} 
+Confundir o valor da variável com o da frequência.
+
+\item {} 
+Em caso de variável quantitativa discreta, considerar apenas os valores da variável apresentados na tabela ignorando as frequências.
+
+\item {} 
+Confundir gráfico de barras com o histograma.
+
+\item {} 
+Dificuldade de interpretar um resultado obtido via procedimento de inferência estatística.
+
+\end{enumerate}
+
+Apesar de variáveis e variação também aparecerem em muitas áreas da Matemática, a Matemática lida com variação funcional (determinística) enquanto que a Estatística lida com variação aleatória. Portanto, um objetivo da Educação Estatística é capacitar os estudantes a raciocinar sobre dados em contextos sob condições de incerteza, e distinguir entre raciocínio estatístico e raciocínio matemático. Além disso, a Estatística fornece métodos para identificar, quantificar, explicar, controlar e reduzir variação.
+
+Para evitar o uso de vários termos com o mesmo significado: variação, variabilidade e dispersão, optamos por usar a palavra dispersão no livro.
+
+Como estratégia pedagógica propomos usar um processo reflexivo baseado no pensamento estatístico.
+\begin{enumerate}
+\item {} 
+Cálculos não serão valorizados, o mais importante neste capítulo é a compreensão dos conceitos.
+
+\item {} 
+As atividades deverão estar sempre bem caraterizadas a um problema a ser resolvido em um contexto específico.
+
+\item {} 
+O uso de recursos tecnológicos para a realização de cálculos e para a construção de gráficos é recomendado. Como recurso tecnológico, fez-se a opção pelo GeoGebra, por supor que os professores, em especial os Licenciados em Matemática têm familiaridade com o programa. Além disso, o GeoGebra atende satisfatoriamente as demandas da abordagem e das atividades propostas em todo o livro, é o recurso digital que ampara o texto em outros eixos temáticos e é um programa livre e disponível em: \url{https://www.geogebra.org/?lang=pt} .
+
+\end{enumerate}
+
+Como alternativa ao GeoGebra pode ser utilizado o programa computacional \textit{R}, livre e de código aberto, que pode ser baixado gratuitamente em: \url{https://www.r-project.org/} . O \textit{R}, muito popular entre os Estatísticos, permite desde cálculos simples até análises sofisticadas. Para utilização com estudantes do Ensino Médio recomendamos a Interface Rcmdr, por ser mais amigável e não exigir conhecimento prévio dos comandos. O link (\url{http://gae.uniriotec.br/7/material.html}) apresenta uma apostila com os passos iniciais para utilização do Rcmdr.
+
+O capítulo está estruturado em três seções principais.
+
+
+\subsection{Explorando 1} Proposição de atividades que ensejam uma reflexão sobre o papel central da variabilidade na Estatística como ferramenta fundamental no tratamento da incerteza. Na sequência,  apresentamos os conceitos básicos trabalhados nas atividades com discussão e algumas atividades complementares.
+
+Na primeira atividade será trabalhada a noção de distribuição empírica, conceito chave para a construção de modelos de probabilidade. Em Estatística e Probabilidade, distribuição é uma coleção de propriedades de um conjunto de dados como um todo, não de um particular valor do conjunto. Uma distribuição consiste de todos os valores diferentes nos dados incluindo as frequências (ou probabilidades) associadas com cada valor. Variação e distribuição estão relacionadas a outras noções estatísticas fundamentais tais como “centro” ou “posição” (modeladas pela média, mediana, ou moda), dispersão (modeladas pelo desvio-padrão, ou variância, etc) e forma (por exemplo, bi-modal, uniforme, simétrica, assimétrica à direita, etc). Medidas de “centro” ou “posição” resumem a informação sobre uma distribuição, enquanto medidas de dispersão resumem a variabilidade no conjunto de dados. Cada valor de uma variável mostra algum desvio do “centro”. Tais medidas serão trabalhadas no capítulo que dá sequência ao Capítulo “A Natureza da Estatística” (“Medidas de Posição e Dispersão”), mas elas já ocorrem nas atividades propostas nesse capítulo, pois média, mediana e moda são trabalhadas no Ensino Fundamental.
+
+\subsection{Explorando 2} Proposição de atividades que envolvem analisar variáveis quantitativas contínuas: uma cujo objetivo é estudar a distribuição de frequências dos valores observados e, a outra, cujo objetivo é estudar seu comportamento ao longo do tempo. Na sequência, destacamos algumas propriedades do histograma.
+
+\subsection{Aprofundando o assunto}
+\begin{enumerate}
+\item {} 
+Tipos de seleção de amostras serão apresentados com um exemplo, lembrando que, na BNCC do Ensino Fundamental, está previsto trabalhar no oitavo ano com amostras probabilísticas aleatória simples, sistemática e estratificada. Após a descrição de alguns tipos de seleção de amostra, um exemplo é explorado.
+
+\item {} 
+Projeto a ser realizado ao longo de pelo menos três meses paralalelamente às aulas. O projeto envolverá a formulação de um problema a ser investigado (de preferência envolvendo outra disciplina), a definição da população, a construção de um questionário, a coleta de dados (amostra ou censo), a análise dos resultados obtidos construindo gráficos e calculando medidas-resumo e a confecção de relatório final. Na conclusão do projeto, o capítulo “Medidas de Posição e Dispersão” já terá sido trabalhado. Serão recomendados para o professor vários temas, caso os grupos ou a turma demandem. As etapas sugeridas para o desenvolvimento do projeto estão destacadas no documento da ABE (2015).
+
+\end{enumerate}
+
+Ao final do capítulo são sugeridos vídeos e projetos aplicados envolvendo  Estatística, várias páginas para pesquisar dados reais e exercícios incluindo questões do ENEM e Vestibulares, abordando os conteúdos desse capítulo. Nos exercícios serão tratados os distratores.
+
+\end{apresentacao}
+
+
+\def\currentcolor{session1}
+\clearmargin
+\begin{objectives}{Escolha do melhor fornecedor - Tomada de decisão}
+{
+\begin{itemize}
+
+\item Comparar distribuições empíricas de dados, estimulando a necessidade de resumir a informação a partir de medidas de posição e de dispersão, tais como moda e amplitude, que auxiliam na descrição das distribuições.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Escolha do melhor fornecedor - Tomada de decisão}
+{
+Pretende-se trabalhar nessa atividade vários conceitos importantes na Estatística tais como distribuição empírica, medidas de posição, medidas de dispersão, forma da distribuição, sem se preocupar com formalizações.
+
+No item a) a resposta esperada é “diâmetros dos parafusos”. No entanto os alunos podem achar que a frequência com que cada valor de diâmetro ocorre também é necessária. Esse tipo de gráfico, diagrama de pontos, reflete exatamente a tabela de frequências absolutas. No entanto, ele permite perceber por simples visualização a forma da distribuição e suas propriedades.
+
+No item b), como todos os parafusos estão fora da especificação, a resposta é zero.
+
+Item c): Fornecedor A: $14{,}5$ mm; fornecedor B: $15{,}0$ mm; fornecedor C: $15{,}0$ mm e fornecedor D: $14{,}74$ mm.
+
+Para o item d) é necessário perceber que os intervalos assinalados no eixo horizontal correspondentes a $0{,}1$ mm estão subdivididos em 5 partes de medida $0{,}02$ mm. Portanto, a resposta a esse item é
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Fornecedor & Valor Mínimo & Valor Máximo \\
+\hline
+A & $14{,}42$ & $14{,}58$ \\
+\hline
+B & $14{,}60$ & $15{,}24$ \\
+\hline
+C & $14{,}58$ & $15{,}60$ \\
+\hline
+D & $14{,}56$ & $14{,}12$ \\
+\hline
+\end{tabu}
+\end{table}
+
+A reflexão tem o intuito de provocar um debate sobre estratégias de amostragem e representatividade das amostras, mesmo sem formalizar tais conceitos. No último item, observe que não é para resolver o problema proposto e sim, pensar em situações semelhantes que levariam a uma análise similar à análise feita nessa atividade, como por exemplo, estudar a vida de baterias de diferentes marcas, ou de uma mesma marca, porém fabricada em países diferentes, etc.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Escolha do melhor fornecedor - Tomada de decisão}
+{
+\begin{enumerate}
+
+\item Apenas as medidas dis diâmetros dos parfusos.
+
+\item Nenhum, pois todos apresentam diâmetro inferior ao mínimo aceitável $14{,}8$ mm.
+
+\item Fornecedor A: $14{,}5$ mm; fornecedor B: $15{,}0$ mm; fornecedor C: $15{,}0$ mm e fornecedor D: $14{,}74$ mm.
+
+\clearpage
+
+\item \adjustbox{valign=t}
+{
+  \begin{tabu} to \textwidth{|c|c|c|}
+  \hline
+  \thead
+  Fornecedor & Valor Mínimo & Valor Máximo \\
+  \hline
+  A & $14{,}42$ & $14{,}58$ \\
+  \hline
+  B & $14{,}60$ & $15{,}24$ \\
+  \hline
+  C & $14{,}58$ & $15{,}60$ \\
+  \hline
+  D & $14{,}56$ & $14{,}12$ \\
+  \hline
+  \end{tabu}
+}
+
+\item Menor amplitude: fornecedor A e maior amplitude: fornecedor C
+
+\item Em relação à amplitude, menor dispersão: fornecedor A e maior dispersão: fornecedor C.
+
+\item Fornecedores B, C e D.
+
+\item Fornecedor B, pois é o que tem maior número de parafusos dentro das especificações.
+
+\item Não, dois seriam descartados.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Comparação de medicamentos}
+{
+\begin{itemize}
+
+\item Construir diagrama de pontos
+
+\item Analisar distribuições empíricas, ou seja, construídas a partir de dados experimentais, usando diagrama de pontos para comparar médias; mais especificamente, para comparar médias populacionais, verificando que nem sempre é possível concluir que estas são iguais quando as médias amostrais são diferentes.
+
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Comparação de medicamentos}
+{
+O objetivo principal dessa atividade é mostrar situações distintas nas quais ao comparar duas médias diferentes (resultantes de amostras), não é possível afirmar que na população, os parâmetros correspondentes sejam diferentes. Por exemplo, situações nas quais apesar de as médias amostrais serem diferentes, não podemos rejeitar a hipótese de que as médias populacionais são iguais, devido à dispersão resultante da amostra.
+
+As respostas possíveis a serem relatadas no campo para pesquisar devem estar contidas nos campos sobre observações referentes a reações adversas, interações medicamentosas, etc. Em geral, as bulas sempre relatam situações que envolvem a observação de dados nesses casos e, algumas, apresentam a frequência na qual essas interações ou reações ocorrem. No entanto, pode ocorrer que uma particular bula não contenha informações do tipo solicitado.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Comparação de medicamentos}
+{
+\begin{enumerate}
+
+\item 
+\adjustbox{valign=t}
+{
+   \begin{tikzpicture}[x=10,y=10]
+   % \begin{scope}[x=10,y=10]
+   \draw [help lines, lightgray, xstep=1, ystep=1] (6,0) grid (19,10) ;
+   \draw [eixos] (6,0) -- (19.5,0);
+   \foreach \x in {6,...,19}{
+     \coordinate (A\x) at ($(0,0)+(\x,0)$);
+     \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+     \node [below, scale=0.5] at ($(A\x)-(0,0.5ex)$) {\x} ;
+   }
+   \foreach \y in {1,...,10}{
+     \coordinate (A\y) at ($(6,0)+(0,\y)$);
+     %\draw ($(A\y)+(2pt,0)$) -- ($(A\y)-(2pt,0)$);
+     \node [left, scale=0.5] at ($(A\y)-(0.5ex,0)$) {\y} ;
+   }
+   \node[above] at (12.5,10) {Medicamento X};
+   \foreach \x/\y in  {7/1,8/2,9/4,10/6,11/4,12/2,13/1}{
+       \foreach \i in {1,...,\y}{
+           \filldraw[color=primario] (\x,\i) circle (2.5pt);
+       }
+   }
+   \end{tikzpicture}
+   \begin{tikzpicture}[x=10,y=10]
+   \draw [help lines, lightgray, xstep=1, ystep=1] (6,0) grid (19,10) ;
+   \draw [eixos] (6,0) -- (19.5,0);
+   \foreach \x in {6,...,19}{
+     \coordinate (A\x) at ($(0,0)+(\x,0)$);
+     \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+     \node [below, scale=0.5] at ($(A\x)-(0,0.5ex)$) {\x} ;
+   }
+   \foreach \y in {1,...,10}{
+     \coordinate (A\y) at ($(6,0)+(0,\y)$);
+     %\draw ($(A\y)+(2pt,0)$) -- ($(A\y)-(2pt,0)$);
+     \node [left, scale=0.5] at ($(A\y)-(0.5ex,0)$) {\y} ;
+   }
+   \node[above] at (12.5,10) {Medicamento Y};
+   \foreach \x/\y in  {7/1,8/1,9/2,10/2,11/3,12/3,13/2,14/2,15/2,16/1,18/1}{
+       \foreach \i in {1,...,\y}{
+           \filldraw[color=primario] (\x,\i) circle (2.5pt);
+       }
+   }
+   \end{tikzpicture}
+}
+
+   \begin{tikzpicture}[x=10,y=10]
+   \draw [help lines, lightgray, xstep=1, ystep=1] (6,0) grid (19,10) ;
+   \draw [eixos] (6,0) -- (19.5,0);
+   \foreach \x in {6,...,19}{
+     \coordinate (A\x) at ($(0,0)+(\x,0)$);
+     \draw ($(A\x)+(0,2pt)$) -- ($(A\x)-(0,2pt)$);
+     \node [below, scale=0.5] at ($(A\x)-(0,0.5ex)$) {\x} ;
+   }
+   \foreach \y in {1,...,10}{
+     \coordinate (A\y) at ($(6,0)+(0,\y)$);
+     %\draw ($(A\y)+(2pt,0)$) -- ($(A\y)-(2pt,0)$);
+     \node [left, scale=0.5] at ($(A\y)-(0.5ex,0)$) {\y} ;
+   }
+   \node[above] at (12.5,10) {Medicamento Z};
+   \foreach \x/\y in {11/5,12/9,13/5}{
+       \foreach \i in {1,...,\y}{
+           \filldraw[color=primario] (\x,\i) circle (2.5pt);
+       }
+   }
+   ;
+
+   % \end{scope}
+   \end{tikzpicture}
+
+\item Analisando os diagramas de pontos, percebe-se que o medicamento Y foi o que apresentou maior dispersão dos tempos de cura. Observe que é a distribuição que apresentou a maior amplitude.
+
+\item De acordo com as somas informadas na tabela, as médias observadas de tempo de cura foram 10 minutos para o medicamento X; 12 minutos para o medicamento Y e 12 minutos para o medicamento Z.
+
+\item Comparando os diagramas de pontos:
+\begin{enumerate}
+\item Observa-se que o medicamento X apresenta uma média amostral (10 min) inferior à do medicamento Y (12 min), porém existe uma interseção razoável, quando analisamos as duas distribuições empíricas dos tempos de cura para esses medicamentos. Isso potencialmente indicaria não existir uma diferença significativa entre os tempos médios de cura desses dois medicamentos. Uma forma de reforçar essa conclusão seria coletar mais dados para cada um dos medicamentos e observar se reproduzem o mesmo padrão observado na análise inicial.
+
+\item Quando analisamos as distribuições empíricas dos tempos de cura dos medicamentos X e Z, observamos que o medicamento X apresenta uma média amostral inferior à do medicamento Z. Neste caso, a interseçâo das duas distribuições é pequena. Além disso, todas as 20 medições do tempo de cura de Z são maiores do que a média de X. Nesta comparação, os dados se revelam mais favoráveis à escolha do medicamento X.
+
+\item Observa-se que ambos medicamentos apresentam a mesma média amostral, porém dispersões diferentes. Assim, esses dados favorecem o medicamento Z, que apresenta menor dispersão em torno do tempo médio de cura.
+
+\item Como já foi discutido, apenas os medicamentos X e Z apresentam uma diferença clara. No entanto, para uma conclusão mais confiável seria conveniente coletar mais informações.
+\end{enumerate}
+\end{enumerate}
+}{9}
+\end{answer}
+\clearmargin
+\begin{objectives}{Pesquisa sobre a prática de esportes e atividade física}
+{
+\begin{itemize}
+
+\item Apresentar os conceitos de população e amostra.
+
+\item Comparar os diferentes tipos de variáveis analisados em uma pesquisa para adiante identificar variáveis qualitativas e quantitativas.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Pesquisa sobre a prática de esportes e atividade física}
+{
+\begin{itemize}
+\item No item \titem{a)}, espera-se que sejam indicadas algumas entre as seguintes variáveis: idade, sexo, educação, trabalho, rendimento, se pratica ou não atividade física, modalidade da atividade para quem pratica, motivação para a prática de atividade física, local da prática, frequência da prática, duração da atividade, participação em competições, etc.
+
+\item No item \titem{b)} deve-se informar as variáveis que assumem atributos (respostas não-numéricas) tais como sexo, prática de atividade física (sim ou não), modalidade da atividade física praticada, etc.
+
+\item No item \titem{c)} deve-se informar as variáveis que assumem valores numéricos tais como idade, rendimento, duração da atividade física, etc.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Pesquisa sobre a prática de esportes e atividade física}
+{
+\begin{enumerate}
+\item Sexo. Idade. Educação. Trabalho. Rendimento. Prática de Atividade Física(AF). Modalidade da AF para quem pratica. Motivação para a AF. Local da Prática da AF. Duração da Prática da AF etc.
+
+\item Sexo. Educação. Trabalho. Prática de AF. Modalidade de AF. Motivação da Prática de AF. Local da Prática da AF.
+
+\item Idade. Rendimento. Duração da Prática de AF.
+\end{enumerate}
+}{1}
+\end{answer}
+
+\begin{objectives}{Análise de Infográficos}
+{
+\begin{itemize}
+\item Análise de infográficos. Mais especificamente, analisar infográficos construídos pelo IBGE com os resultados da pesquisa PNAD/2015 referente ao suplemento especial de Prática de Atividades Físicas.
+
+\item Explorar possíveis associações sobre a prática de atividades físicas com outras variáveis envolvidas na pesquisa, tais como sexo, nível de instrução e rendimento.
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\clearmargin
+\begin{sugestions}{Infográfico 1}
+{
+O item \titem{b)} pretende estimular a reflexão sobre o papel da inferência estatística. De fato, foi observada uma amostra de domicílios de algumas cidades brasileiras, mas como a amostra foi cuidadosamente planejada e a estrutura da população brasileira é conhecida, foi possível dar um passo maior e calcular uma estimativa da proporção das pessoas de 15 anos ou mais que praticam atividades físicas no Brasil. A porcentagem $37{,}9$\%, realização numérica de um estimador, representa uma estimativa da proporção das pessoas de 15 anos ou mais que praticaram atividades físicas no Brasil (2015) (parâmetro). Observe que não foi realizado um censo para obter essa informação. Portanto, associada a essa estimativa existe uma margem de erro (valor correspondente à oscilação em torno da estimativa pontual) e um nível de confiança. Por exemplo, se o nível de confiança for $95$\% isso implica que para cada 100 amostras de mesmo tamanho, em $95$\% delas o parâmetro se situa no intervalo considerando a margem de erro. Claro que a margem de erro deve ser pequena e o nível de confiança alto na PNAD. Esses conceitos, margem de erro e nível de confiança, têm sido bem divulgados nas pesquisas eleitorais para o público em geral. Se for um ano de eleição, peça aos alunos para trazer resultados de pesquisas eleitorais incluindo a margem de erro e o nível de confiança. Cabe também destacar que todas as proporções apresentadas na pesquisa são estimativas que devem ter pequena margem de erro com nível de confiança alto. Assim, pequenas diferenças nessas proporções devem ser olhadas com cuidado, não sendo possível afirmar que elas são diferentes.
+
+O item \titem{c)} visa levar a uma reflexão sobre hábitos saudáveis. Por que achamos que a prática de atividades físicas é importante para a saúde de uma pessoa? Como essa conclusão foi obtida?
+
+Os itens \titem{d)} e \titem{e)} têm como objetivo estudar possíveis associações entre duas variáveis qualitativas, a saber, sexo e prática de atividade física d) e faixa etária e prática de atividade física \titem{e)}. Observe que embora a idade seja uma variável quantitativa, quando ela é representada por faixas etárias ela se torna qualitativa.
+
+É importante destacar, na análise desses gráficos, que o que se fez foi separar o conjunto de dados em subconjuntos como por exemplo, sexo feminino e sexo masculino e depois, observou-se a resposta sobre a prática de atividade física em cada subgrupo. Para efeito de comparação de grupos distintos, é importante trabalhar com a frequência relativa (ou porcentagem), pois os grupos podem ser de tamanhos diferentes e se os gráficos forem construídos com as frequências absolutas não será possível visualizar as relações entre as variáveis analisadas.
+}{1}{1}
+\end{sugestions}
+\begin{sugestions}{Infográfico 2}
+{
+Os itens \titem{f)} e \titem{g)} têm como objetivo estudar possíveis associações entre duas variáveis qualitativas, a saber, grau de instrução e prática de atividade física \titem{a)} e rendimento per capita e prática de atividade física \titem{b)}. Observe que, embora rendimento seja uma variável quantitativa, quando ele é representado por intervalos de rendimento, se torna variável qualitativa. Novamente é importante destacar, nessa discussão, que o conjunto inteiro foi subdividido em subconjuntos ditados pelas categorias, grau de instrução ou faixas de rendimento, e que para cada subconjunto calculou-se a porcentagem de pessoas que praticam atividade física. Usar frequências absolutas não seria útil para comparar os diferentes grupos quando eles têm tamanhos diferentes.
+}{2}{1}
+\end{sugestions}
+\begin{sugestions}{Infográfico 3}
+{
+Na análise do infográfico 3, cabe destacar que trata-se de um gráfico de barras típico representando a distribuição de frequências de uma variável qualitativa. É importante levar os alunos a perceber que para a variável modalidade, considerando o conjunto de todas as pessoas que responderam essa questão, calculou-se as porcentagens para cada tipo de atividade indicada. Discuta sobre a categoria outras atividades indicando que foram respostas com frequência muito pequena e, de fato, não faria sentindo ir listando uma a uma essas modalidades. Em geral, nesses casos, o que se faz é agregar as respostas com frequência muito pequena na categoria outras. Sugira ao aluno pesquisar no link dessa pesquisa para verificar se, no instrumento de coleta de dados, essa questão era aberta (resposta livre) ou fechada (com opções a serem assinaladas).
+
+Na análise desse gráfico, deve-se destacar que a altura das barras correspondem às porcentagens (frequências relativas) na qual ocorreram e que a soma dessas porcentagens será $100$\%. Também cabe comentar que as barras devem ter larguras iguais, mas não existe nenhum lugar geométrico definido ao longo do eixo horizontal para as respostas da variável modalidade de prática neste gráfico, ou seja, podemos mudar a posição das diferentes modalidades. As barras, separadas, são equidistantes e foram organizadas por ordem de decrescente de frequência. Como só há um eixo numérico (frequência), comente que as barras podem ser tanto verticais, como horizontais e essa orientação determinará a orientação do eixo que representa as frequências no gráfico.
+}{1}{2}
+\end{sugestions}
+\begin{sugestions}{Infográfico 4}
+{
+Na análise do infográfico 4, é importante destacar que foram usados dois tipos de gráficos diferentes para representar variáveis qualitativas, mas ambos usam a mesma ideia, a saber, uma região é subdividida de maneira harmônica em sub-regiões (o círculo em setores circulares e o retângulo em retângulos menores de mesma largura contidos nele) cujas áreas em relação à área da região correspondem exatamente à frequência relativa (ou porcentagem) da categoria de resposta que a sub-região representa. Por exemplo, a área do setor em vermelho dividida pela área do círculo é $0{,}147$ (ou $14{,}7$\% da área do círculo). A área do retângulo verde dividida pela área do retângulo inteiro é $0{,}578$ (ou $57{,}8$\% da área do retângulo inteiro). São duas formas de olhar como cada categoria de resposta aparece em relação ao todo.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Análise de Infográficos}
+{
+\begin{enumerate}[itemsep=2pt]
+
+\item $37{,}9\%$
+
+\item População brasileira de 15 anos ou mais.
+
+\item Não parece satisfatório. Vários estudos têm demonstrado que a prática de atividades físicas é fundamental para se ter boa saúde.
+
+\item Sim. Entre os homens brasileiros de 15 anos ou mais, pouco mais de $40$ praticam atividade física; enquanto esse percentual para mulheres brasileiras de 15 anos ou mais é pouco menor do que $35\%.$
+
+\item Sim. Percebe-se uma diminuição dos percentuais de pessoas que praticam atividade física, conforme a idade aumenta. Na faixa de 15 a 17 anos temos mais de $50\%$, na faixa de 18 a 24 anos temos um pouco menos do que $50\%$ na faixa de 25 a 39 anos temos pouco mais de $40\%$, na faixa de 40 a 59 anos temos mais de $30\%$ e na faixa 60 anos ou mais temos menos de $30\%$.
+
+\item Sim, a porcentagem de pessoas de 15 anos ou mais que pratica atividade física cresce conforme o grau de instrução é maior.
+
+\item Sim, a porcentagem de pessoas de 15 anos ou mais que pratica atividade física cresce conforme a faixa de rendimento per capita é maior.
+
+\item Modalidade de atividade física praticada.
+
+\item Não-numéricas: futebol, natação, etc.
+
+\item Futebol
+
+\item Como as últimas modalidades discriminadas no gráfico apresentaram porcentagens muito pequenas (“ciclismo”, “ginástica rítmica e artística”, “lutas e artes marciais”, “voleibol, basquetebol e handebol”), cerca de $2\%$, a categoria outros esportes reuniu modalidades que ocorreram com porcentagens muito pequenas, não cabendo representá-las separadamente no gráfico. Observe que a última modalidade, antes de “outros esportes” já está reunida em mais de uma modalidade, a saber, “voleibol, basquetebol e handebol”.
+
+\item $73,3$\%
+
+\item Entre as pessoas que acham que se deva priorizar investimentos em atividades físicas, $91{,}1\%$ acha que o investimento deve ser para atividades físicas para as pessoas em geral, $8\%$ acha que deve ser para a formação de atletas e, o restante ($0{,}9\%$) respondeu outro tipo de prioridade.
+
+\item Entre as pessoas que não concordam que o poder público deve investir em atividades físicas, $57{,}8$\% acham que a prioridade deve ser Saúde, $21{,}3\%$ acham que a prioridade deve ser Segurança, $16{,}5\%$, acham que a prioridade deve ser Educação e, o restante ($4{,}4\%$) respondeu outros tipos de prioridade.
+
+\item Não, de fato, são $57{,}8\%$ de $14{,}7\%$ o que dá cerca de ${,},5\%$ das pessoas de 15 anos ou mais.
+
+\end{enumerate}
+}{1}
+\end{answer}
 
 \explore{a natureza da Estatística}
 \label{est1-exp-1}
@@ -834,6 +1323,169 @@ Também, quando deseja-se fazer comparações múltiplas o gráfico de setores n
 
 \end{observation}
 
+\clearpage
+\def\currentcolor{session2} 
+\begin{objectives}{Prática de atividade física na turma}
+{
+\begin{itemize}
+\item Conduzir uma coleta de dados sobre a turma envolvendo as informações do suplemento “Prática de Esporte e Atividade Física” para comparar os resultados dessa “amostra” com os da PNAD/2015.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\marginpar{\vspace{-2em}}
+\begin{sugestions}{Prática de atividade física na turma}
+{
+\begin{itemize}
+\item Preparar uma tabela a ser preenchida pela turma com as informações: sexo, idade, prática ou não de atividade física em seu tempo livre, e a modalidade, de maneira a viabilizar a comparação dos dados obtidos com os resultados da PNAD/2015. A tabela poderá conter outras variáveis se forem julgadas de interesse pela turma como por exemplo, local da prática, duração da prática entre outras. Mas, para efeito de comparação com os infográficos, sexo e idade serão as variáveis necessárias nesse levantamento. Comente com os alunos que essa será uma amostra de conveniência, pois o interesse é estudar o perfil da turma quanto à prática de atividades físicas e por isso, as respostas da turma podem não ser similares às da pesquisa.
+
+\item Com base nas respostas obtidas, resumir a informação em tabelas de frequências, contar quantas respostas foram sim, calcular a porcentagem da turma que pratica atividade física e comparar com o resultado geral das pessoas de 15 anos ou mais, o percentual correspondente a essa faixa etária e o percentual correspondente a esse grau de instrução. Construir uma tabela de frequências com as modalidades esportivas incluindo as categorias apresentadas no infográfico do IBGE. Construir gráficos para representar as distribuições de frequências das variáveis investigadas nessa pesquisa. Construir gráficos de barras múltiplas, isto é, gráficos de barras separados por grupos diferentes, como por exemplo, sexo.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\marginpar{\vspace{-2em}}
+\begin{objectives}{Classificação de variáveis}
+{
+\begin{itemize}
+\item Diferenciar variável qualitativa e variável quantitativa.
+\item Identificar variáveis qualitativas binárias.
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{answer}{Classificação de variáveis}
+{
+\begin{enumerate}
+ \begin{multicols}{3}
+  
+ \item quantitativa.
+ \item quantitativa.
+ \item quantitativa.
+ \item quantitativa. 
+ \item qualitativa binária.
+ \item qualitativa.
+ \item quantitativa. 
+ \item quantitativa.
+ \item qualitativa binária.
+ \item quantitativa.
+ \item qualitativa binária.
+ \item qualitativa.
+ \end{multicols}
+\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Construção de gráficos para variáveis qualitativas}
+{
+\begin{itemize}
+\item Construir gráficos de distribuições de frequências para variáveis qualitativas.
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Construção de gráficos para variáveis qualitativas}
+{
+Embora os gráficos solicitados nesta atividade sejam simples, recomenda-se sugerir aos alunos usar algum recurso tecnológico para a construção dos mesmos, tais como, uma planilha ou o GeoGebra.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Construção de gráficos para variáveis qualitativas}
+{
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}
+\begin{scope}[x=19,y=19, scale=.75]
+\node at (0,11) {O poder público deve investir em atividades fí­sicas?};
+\draw [fill=session2!80] (-1,10) rectangle (1,2.67);
+\draw [fill=session3!80] (-1,2.67) rectangle (1,1.2);
+\draw [fill=secundario!80] (-1,1.2) rectangle (1,0);
+\node [color=white] at (0,6.335) {\textbf{Sim}};
+\node [color=white] at (0,1.935) {\textbf{Não}};
+\draw [thick,->] (-1.5,9.5) -- (-7,9.5) -- (-7,8.5); 
+\draw [thick,->] (1.5,1.935) -- (7,1.935) -- (7,3); 
+\draw[fill=session2!80] (7,7) -- (7,10) arc (90:-118.08:3);
+\draw [fill=primario!80] (7,7) -- + (-118.08:3) arc (-118.08:-194.76:3);
+\draw [fill=session1!80] (7,7) -- + (-194.76:3) arc (-194.76:-254.16:3);
+\draw [fill=secundario!80] (7,7) -- + (-254.16:3) arc (-254.16:-270:3);
+\draw (7,7) -- (7,10);
+\draw[fill=session4!80] (-7,4.5) -- (-7,7.5) arc (90:-237.96:3);
+\draw [fill=box3!80] (-7,4.5) -- + (-237.96:3) arc (-237.96:-266.76:3);
+\draw [fill=secundario!80] (-7,4.5) -- + (-266.76:3) arc (-266.76:-270:3);
+\draw (-7,4.5) -- (-7,7.5);
+\draw [fill=session4!80, line width=0] (-10,-1) rectangle (-9,-2);
+\node [right] at (-9,-1.5) {Atividades para};
+\node [right] at (-9,-2.5) {pessoas em geral};
+\draw [fill=box3!80, line width=0] (-10,-3.5) rectangle (-9,-4.5);
+\node [right] at (-9,-4) {Formação de atletas};
+\draw [fill=secundario!80, line width=0] (-10,-5) rectangle (-9,-6);
+\node [right] at (-9,-5.5) {Outra};
+\draw [fill=session1!80, line width=0] (4,-1) rectangle (5,-2);
+\node [right] at (5,-1.5) {Saúde};
+\draw [fill=primario!80, line width=0] (4,-2.5) rectangle (5,-3.5);
+\node [right] at (5,-3) {Segurança};
+\draw [fill=session2!80, line width=0] (4,-4) rectangle (5,-5);
+\node [right] at (5,-4.5) {Educação};
+\draw [fill=secundario!80, line width=0] (4,-5.5) rectangle (5,-6.5);
+\node [right] at (5,-6) {Outra};
+\end{scope}
+\end{tikzpicture}
+\end{figure}
+}{0}
+\end{answer}
+\begin{objectives}{Análise de gráfico}
+{
+\begin{itemize}
+\item Mostrar que podem existir diversas formas de usar barras para representar algum tipo de dado, mas que nem todos os gráficos que usam barras são gráficos de barras no sentido da representação de uma distribuição de frequências.
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Análise de gráfico}
+{
+O gráfico desse exemplo é “um gráfico de barras”, mas as barras representam o valor da inflação da alimentação acumulado nos últimos 12 meses em função do tempo: de agosto de 2016 até agosto de 2017. Na seção “Explorando 2”, veremos que, para esse tipo de informação - valores de uma variável quantitativa ao longo do tempo -, é mais comum usar um gráfico de linhas unindo por segmentos os pontos consecutivos dados (tempo, valor da variável).
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Análise de gráfico}
+{
+\begin{enumerate}
+\item É um gráfico que usa barras, mas nesse gráfico o comprimento das barras não é frequência.
+
+\item Valor da inflação da alimentação acumulada nos últimos 12 meses. Esses valores são apresentados em função do período de tempo: agosto de 2016 até agosto de 2017.
+
+\item O valor da inflação da alimentação acumulada nos últimos 12 meses é uma variável quantitativa, o período de tempo representado em mês/ano é uma variável qualitativa ordinal.
+
+\item (gráfico) Como evoluiu a inflação da alimentação acumulada em 12 meses no período investigado, a saber, agosto de 2016 até agosto de 2017. Mais precisamente, percebe-se que a inflação da alimentação acumulada em 12 meses apresentou no período analisado uma forte tendência de queda.
+
+\begin{figure}[H]
+\centering
+
+
+\begin{tikzpicture}
+\begin{scope}[x=20, y=10, scale=.7]
+      \draw (0,0) -- (28,0);
+      \draw (0,-7) -- (0,20);
+
+      \foreach \ye in {-5,0,5,10,15,20}{
+         \draw [help lines, gray] (0,\ye) -- (28,\ye);
+         \node [left, overlay] at (0,\ye) {\ye};
+      };
+      \foreach \x/\y/\z in {1/16.79/AGO,2/16.11/SET,3/14.85/OUT,4/11.57/NOV,5/9.36/DEZ,6/6.47/JAN,7/4.34/FEV,8/3/MAR,9/2.54/ABR,10/1.08/MAI,11/-0.56/JUN,12/-3.07/JUL,13/-5.19/AGO}{
+      \draw [help lines, gray] (2*\x,-7) -- (2*\x,20);
+      \node at (2*\x,-8) {\z};
+      }
+    \draw [help lines] (2*14,-7) -- (2*14,20);
+      \draw [color=primario, very thick] (2,16.79) node[ponto] {}
+      \foreach \x/\y/\z in {1/16.79/AGO,2/16.11/SET,3/14.85/OUT,4/11.57/NOV,5/9.36/DEZ,6/6.47/JAN,7/4.34/FEV,8/3/MAR,9/2.54/ABR,10/1.08/MAI,11/-0.56/JUN,12/-3.07/JUL,13/-5.19/AGO}{
+         -- (2*\x,\y) node[ponto] {}
+      };
+      \node at (2,-9.5) {2016};
+      \node at (12,-9.5) {2017};
+      \node [right] at (0,23.5) {INFLAÇÃO DA ALIMENTAÇÃOO NO DOMICÍLIO};
+      \node [right] at (0,22) {(acumulado em 12 meses, em $\%$)};
+      \end{scope}
+\end{tikzpicture}
+\end{figure}
+\end{enumerate}
+}{9}
+\end{answer}
+
 
 \practice{A natureza da estatística}
 \label{est1-prac-1}
@@ -887,7 +1539,9 @@ Modo de locomoção para a escola.
 
 \end{enumerate}
 \end{task}
+\clearpage
 \phantomsection\label{est1-ativ-7}
+
 \begin{task}{ Construção de gráficos para variáveis qualitativas}
 
 Considerando o \hyperref[est1-fig-5]{infográfico 4}, transforme o gráfico de setores em gráfico de retângulos e os gráficos de retângulos em gráficos de setores.
@@ -944,7 +1598,111 @@ Construa um gráfico diferente para representar a mesma informação, marcando n
 
 
 \end{task}
-\newpage
+
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{objectives}{Construção do histograma}
+{
+\begin{itemize}
+\item Identificar, na construção de um gráfico que represente a distribuição de frequências, a necessidade de agrupar em intervalos de classe os valores observados de uma variável quantitativa contínua.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Construção do histograma}
+{
+A construção do histograma será dirigida nessa atividade, mas recomenda-se fortemente o uso de recursos tecnológicos, como o GeoGebra, para esse tipo de construção.
+
+Incluir link do arquivo desses dados em formato GeoGebra. Em alguns aplicativos, e é o caso do GeoGebra, é necessário substituir a vírgula como separador decimal do padrão brasileiro por ponto.
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\marginpar{\vspace{.5em}}
+\begin{answer}{Construção do histograma}
+{
+\begin{enumerate}
+
+\item \adjustbox{valign=t}
+{
+  \begin{tabu} to \linewidth {|c|c|}
+  \hline
+  \thead 
+  Intervalo de classe & Número de observações \\
+  \hline
+  ${[} 3{,}0 ; 3{,}5 {[}$ & 2 \\ 
+  \hline
+  ${[} 3{,}5 ; 4{,}0 {[}$ & 3 \\
+  \hline
+  ${[} 4{,}0 ; 4{,}5 {[}$ & 7 \\
+  \hline
+  ${[} 4{,}5 ; 5{,}0 {[}$ & 9 \\
+  \hline
+  ${[} 5{,}0 ; 5{,}5 {[}$ & 11 \\
+  \hline
+  ${[} 5{,}5 ; 6{,}0 {[}$ & 11 \\
+  \hline
+  ${[} 6{,}0 ; 6{,}5 {[}$ & 9 \\
+  \hline
+  ${[} 6{,}5 ; 7{,}0 {[}$ & 7\\
+  \hline
+  ${[} 7{,}0 ; 7{,}5 {[}$ & 4 \\
+  \hline
+  ${[} 7{,}5 ; 8{,}0 {[}$ & 2 \\
+  \hline
+  \end{tabu}
+}
+\item[\titem{b)} e \titem{c})]\adjustbox{valign=t}
+{
+  \begin{tikzpicture} [yscale=0.5, scale=.85]
+
+  \foreach \y in {0,...,12}{
+     \draw [help lines,color=secundario!50] (-0.1,\y) -- (12,\y);}
+
+  \foreach \x in {0,12}{
+  \draw [help lines, color=secundario!50] (\x,-0.2) -- (\x,12);}
+
+  \foreach \x in {1,...,11}{
+  \draw [help lines, color=secundario!50] (\x,0) -- (\x,-0.2);}
+
+  \foreach \y in {0,...,12} \node [left, scale=0.8] at (-0.1,\y) {\y}; 
+
+  \foreach \x/\y/\z in {.5/0/$\leq$ 3.0,1.5/2/3.0 a 2.5,2.5/3/3.5 a 4.0,3.5/7/4.0 a 4.5,4.5/9/4.5 a 5.0,5.5/11/5.0 a 5.5, 6.5/11/5.5 a 6.0, 7.5/9/6.0 a 6.5, 8.5/7/6.5 a 7.0,9.5/3/7.0 a 7.5,10.5/2/7.5 a 8.0,11.5/0/$>$ 8.0} {\node [right, rotate=-90, scale=0.8] at (\x, 0) {\z};
+
+  \draw [fill=\currentcolor!80] (\x-0.5,0) rectangle (\x+0.5,\y);}
+
+  \node [below, rotate=-0, scale=1, align=center] at (6,-1) {$\bigg\uparrow$ \\ Média};
+  \end{tikzpicture}
+}
+
+\setcounter{enumi}{3}
+
+\item A área do histograma construído é dada por $$A=0{,}5\cdot(2+3+7+9+11+11+9+7+3+2)=0{,}5\cdot64=32.$$
+
+Por exemplo, o quociente da área do primeiro retângulo sobre a área total é $$\displaystyle\frac{0{,}5\cdot2}{32}=\frac{13}{2}=264=0,03125$$ que é a frequência relativa desse intervalo de classe. Da mesma forma, o quociente da área do terceiro retângulo sobre a área total é $$\displaystyle\frac{0{,}5⋅\cdot7}{32}=\frac{3{,}5}{32}=\frac{7}{64}=0{,}109375$$ que é a frequência relativa desse intervalo de classe. Essa verificação ilustra a propriedade do histograma em representar a distribuição de frequências dos dados observados tal que cada retângulo do histograma representa a frequência do intervalo de classe correspondente no conjunto de dados como um todo.
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Medição da temperatura ao longo do tempo}
+{
+\begin{itemize}
+\item Definir série temporal a partir de um conjunto de observações sobre uma variável quantitativa contínua variando no tempo.
+
+\item Trabalhar com gráficos de linha para ilustrar a evolução dos valores da variável ao longo do tempo.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Medição da temperatura ao longo do tempo}
+{
+Para a construção do gráfico de linha será fornecida uma malha quadriculada para o preenchimento dos pontos, recomenda-se também uso de planilhas de cálculo para essa construção. Veja em \url{shorturl.at/pHJLU} uma sugestão para realizar esta atividade.
+
+Respostas possíveis na reflexão proposta são: índices de inflação, preços de diversos bens, índices da bolsa de valores, a população total em um território, a incidência de alguma enfermidade, a quantidade de vendas de um produto. É importante usar exemplos de dados que tenham aparecido recentemente na mídia ou que tenham relevância local.
+
+Na discussão sobre sazonalidade, pedir aos alunos para trazer notícias de jornais ou revistas que contenham séries temporais. Mostrar que existem várias medições que são comparadas com as do ano anterior, por exemplo, inflação, crescimento do PIB, taxas de desemprego por trimestre, entre outras.
+}{1}{1}
+\end{sugestions}
+
+
+
+
 \explore{estruturas de variáveis quantitativas}
 \label{est1-exp-2}
 
@@ -1417,11 +2175,11 @@ Observe que nessa tabela todos os intervalos têm amplitude 2. Veja um histogram
 \noindent
 \begin{tikzpicture}[scale=0.4, every node/.style={scale=0.75}]
 
-\draw (0,0) -- (0,15) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequencia absoluta};
+\draw (0,0) -- (0,15) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequência absoluta};
 
 \draw (1,-0.2) -- (25,-0.2) node [below, midway, yshift=-20, scale=1.4] {registros de tempo};
 
-\node [above,scale=1.5] at (13,16.5) {Histograma na escala da frequencia absoluta};
+\node [above,scale=1.5] at (13,16.5) {Histograma na escala da frequência absoluta};
 \node [,scale=1.3] at (13,16.4) {intervalos de amplitudes iguais};
 
 
@@ -1686,6 +2444,197 @@ Não podemos variar livremente a posição dos intervalos nesse gráfico (\hyper
 \end{observation}
 \clearpage
 
+
+\def\currentcolor{session2}
+\begin{objectives}{Construção de histogramas}
+{
+\begin{itemize}
+\item Avaliar a forma do histograma a partir da variação do número de intervalos considerados
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Construção de histogramas}
+{
+Essa atividade deve ser realizada com algum recurso tecnológico. Um exemplo de como realizá-la usando o Geogebra pode ser acessado em \url{shorturl.at/qDNQZ}.
+
+Arrastando o cursor na linha que representa classes (intervalos) é possível variar de três a 20 intervalos.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Construção de histogramas}
+{
+Existem várias possibilidades e algumas delas estão apresentadas aqui. Na comparação é importante perceber que esses dados revelam uma estrutura simétrica, ocorrendo com frequências altas entre 4 e 6, e, occorrendo com frequências bem menores nos intervalos extremos inferior e superior.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[scale=.75*0.45]
+
+\draw (0,0) -- (0,18) node [rotate=90, above, yshift=20, midway] {frequência absoluta};
+\draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20] {registros de tempo};       
+\foreach \y/\z in {0/0,1/2,2/4,3/6,4/8,5/10,6/12,7/14,8/16,9/18} \draw (0,\y*2) -- (-0.2,\y*2) node [above, rotate=90] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x-1,-0.2) -- (\x-1,-0.4) node [below,] {\z }; 
+\foreach \x/\y in {0/4,1/11,2/17,3/17,4/11,5/4} \draw [fill=primario] (\x/6*5*4+1,0) rectangle (\x/6*5*4+5/6*4+1,\y);   
+\end{tikzpicture}
+
+\caption{Histograma com 6 intervalos}
+\label{}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[xscale=0.75, scale=.45]
+
+\draw (0,0) -- (0,12) node [rotate=90, above, yshift=20, midway] {frequência absoluta};
+\draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20] {registros de tempo};          
+
+\foreach \y/\z in {0,2,4,6,8,10,12} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x-1,-0.2) -- (\x-1,-0.4) node [below] {\z }; 
+
+\foreach \x/\y in {0/2,1/5,2/8,3/11,4/12,5/11,6/8,7/5,8/2} \draw [fill=primario] (\x/9*5*4+1,0) rectangle (\x/9*5*4+5/9*4+1,\y);
+\end{tikzpicture}
+\caption{Histograma com 9 intervalos}
+\label{}
+\end{figure}
+
+\hfill\null
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[xscale=0.75, scale=.45]
+
+\draw (0,0) -- (0,12) node [rotate=90, above, yshift=20, midway] {frequência absoluta};
+\draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20] {registros de tempo};
+            
+\foreach \y/\z in {0,2,4,6,8,10,12} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x-1,-0.2) -- (\x-1,-0.4) node [below] {\z }; 
+
+\foreach \x/\y in {0/2,1/2,2/4,3/7,4/8,5/9,6/9,7/8,8/6,9/5,10/2,11/2} \draw [fill=primario] (\x/12*5*4+1,0) rectangle (\x/12*5*4+5/12*4+1,\y); 
+\end{tikzpicture}
+\caption{Histograma com 12 intervalos}
+\label{}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[xscale=0.75, scale=.45]
+
+\draw (0,0) -- (0,12) node [rotate=90, above, yshift=20, midway,] {frequência absoluta};
+\draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20] {registros de tempo};
+
+\foreach \y/\z in {0,2,4,6,8,10,12} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90 ] {\z}; 
+\foreach \x/\z in {2/3,6/4,10/5,14/6,18/7,22/8} \draw (\x-1,-0.2) -- (\x-1,-0.4) node [below] {\z }; 
+
+\foreach \x/\y in {0/1,1/2,2/2,3/4,4/6,5/6,6/7,7/8,8/7,9/6,10/6,11/4,12/2,13/2,14/1} \draw [fill=primario] (\x/15*5*4+1,0) rectangle (\x/15*5*4+5/15*4+1,\y)
+;
+\end{tikzpicture}
+\caption{Histograma com 15 intervalos}
+\label{}
+\end{figure}
+}{9}
+\end{answer}
+
+\begin{objectives}{Histogramas com intervalos de amplitudes desiguais}
+{
+\begin{itemize}
+\item Construir histogramas nos casos em que os intervalos apresentam amplitudes desiguais.
+
+\item Definir densidade de frequência absoluta e relativa.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Histogramas com intervalos de amplitudes desiguais}
+{
+Nessa atividade o histograma deve ser construído usando a escala de densidade de frequência (absoluta ou relativa).
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Histogramas com intervalos de amplitudes desiguais}
+{
+\begin{enumerate}
+
+\item \adjustbox{valign=t}
+{
+\begin{tabu} to \linewidth {|c|e{.15\linewidth}|c|e{.2\linewidth}|}
+\hline
+\thead
+Intervalo de classe & Frequência absoluta & Amplitude &  Dens. de freq. absoluta \\
+\hline
+${[} 2{,}0 ; 3{,}0 {[}$ & $12$ & $1$ & $12$ \\ 
+\hline
+${[} 3{,}0 ; 5{,}0 {[}$ & $40$ & $2$ & $20$ \\
+\hline
+${[} 5{,}0 ; 7{,}0 {[}$ & $80$ & $2$ & $40$ \\
+\hline
+${[} 7{,}0 ; 10{,}0 {[}$ & $48$ & $3$ & $16$ \\
+\hline
+${[} 10{,}0 ; 15{,}0 {[}$ & $20$ & $5$ & $4$ \\
+\hline
+\end{tabu}
+}
+
+\clearpage
+\item \adjustbox{valign=t}
+{
+\begin{tikzpicture}[yscale=0.75, scale=0.45]
+
+\draw (0,0) -- (0,20) node [rotate=90, above, yshift=20, midway] {frequência absoluta};
+
+\draw (1,-0.2) -- (16,-0.2);
+
+\node [above] at (8.5,21.5) {Histograma errado};
+
+\foreach \y/\z in {0/0,5/20,10/40,15/60,20/80} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90] {\z}; 
+\foreach \x/\z in {0/0,2/2,3/3,5/5,7/7,10/10,15/15} \draw (\x+1,-0.2) -- (\x+1,-0.4) node [below] {\z}; 
+
+\foreach \x/\y/\z in {3/4/12,4/6/40,6/8/80,8/11/48,11/16/20}
+\draw [fill=primario!80] (\x,0) rectangle (\y,\z/4) node [above] at (\x/2+\y/2,\z/4)  {(\z)}
+;
+
+\foreach \x/\y/\z in {4/6/{0{,}161},6/8/{0{,}323},8/11/{0{,}290},11/16/{0{,}202}}
+\node [above,scale=.75] at (\x/2+\y/2,0) {{$\z$}}
+;
+\node [align=center,  below right, yshift = 1cm] at (8.5,18.5) 
+{\parbox[c]{8cm}{\centering 
+Área total = $1 \times 12+2 \times 40+$ 
+$2 \times 80+ 3 \times 48+5 \times 20=496$ 
+\\
+
+Área relativa do primeiro retângulo $=\frac{12}{496} \approx 0,0242$ 
+\\
+
+No entanto, a frequência relativa desse intervalo é $\frac{12}{200} = 0,06$}};
+
+\end{tikzpicture}
+}
+
+\vspace{2em}
+\begin{tikzpicture}[yscale=0.75,scale=.45]
+
+\draw (0,0) -- (0,20) node [rotate=90, above, yshift=20, midway] {densidade de frequência absoluta};
+
+\draw [very thin] (1,-0.2) -- (16,-0.2) ;
+
+\node [above] at (8.5,21.5) {Histograma correto};
+
+
+\foreach \y/\z in {0/0,2/4,6/12,8/16,10/20,20/40} \draw (0,\y) -- (-0.2,\y) node [above, rotate=90] {\z}; 
+\foreach \x/\z in {0/0,2/2,3/3,5/5,7/7,10/10,15/15} \draw (\x+1,-0.2) -- (\x+1,-0.4) node [below] {\z }; 
+
+
+\foreach \x/\y/\z in {3/4/12,4/6/20,6/8/40,8/11/16,11/16/4}
+\draw [fill=primario!80] (\x,0) rectangle (\y,\z/2);
+\end{tikzpicture}
+
+
+
+\end{enumerate}
+}{0}
+\end{answer}
+
+
 \practice{ESTRUTURAS DE VARIÁVEIS QUANTITATIVAS}
 \label{est1-prac-2}
 
@@ -1870,6 +2819,292 @@ Ministério da Saúde - Datasus \textendash{} \url{http://datasus.saude.gov.br/t
 \clearpage
 
 \exercise
+\begin{answer}{Exercícios}
+%página 1
+{\exerciselist
+  \begin{enumerate}
+  \item 
+  \begin{enumerate}
+  \item Inferencial
+  \item Descritiva
+  \item Descritiva
+  \item Inferencial
+  \end{enumerate}
+  \item
+  \begin{enumerate}
+  \item Matemática
+  \item Estatística
+  \item Estatística
+  \item Matemática
+  \item Estatística
+  \item Matemática
+  \end{enumerate}
+  \item 
+  \begin{enumerate}
+  \item Peso e pressão são tratados como variáveis quantitativas contínuas.
+  \item O peso é tratado como variável qualitativa ordital e a pressão é tratada como variável quantitativa contínua.
+  \item O peso é tratado como variável quantitativa contínua e a pressão como variável qualitativa ordinal
+  \item Ambos são tratados como variáveis qualitativas ordinais.
+  \end{enumerate}
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 2
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{3}
+  \item 
+  \begin{enumerate}
+  \item Amostra 
+  \item "Você deseja viver até os 100 anos?"
+  \item "Até que idade você gostaria de viver?"
+  \end{enumerate}
+  \item 
+  \begin{enumerate}
+  \item Principal equipamento usado por aluno para acessar a internet. Variável qualitativa nominal.
+  \item Gráfico de barras.
+  \item De fato, vimos que o gráfico de setores é um gráfico adequado para representar as frequências de respostas de variáveis qualitativas, mas nesse caso, há frequências muito pequenas $(1\%,2\%,5\%,6\%)$ e essas pequenas diferenças levarão a setores pouco distinguíveis entre si.
+  \end{enumerate}
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 3
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{5}
+  \item 
+  \begin{enumerate}
+  \item Países com maior número absoluto de mortes atribuíveis à poluição em 2015, que é uma variável qualitativa nominal e foi organizada no gráfico em ordem decrescente de frequência. Frequência absoluta de casos. Décima primeira.
+  \item A porcentagem de mortes atribuíveis em relação ao total de óbitos em 2015. De fato, cada óbito foi classificado em "atribuível à poluição"{} ou não (variável qualitativa) e em cada país calculou-se a porcentagem de óbitos atribuíveis à pouição. Trata-se de um gráfico de barras múltiplas, para comparar os diversos países em relação a essa porcentagem. A mudança radical de posição no Brasil se deve ao fato de que em relação ao total de óbitos, os atribuíveis à poluição correspondem a apenas $7{,}49\%$, não sendo nesse o caso mais comum. (Pesquise na internet sobre a distribuição de óbitos por caus no Brasil).
+  \item O número absoluto é importanto, por exemplo, para que seja possível fazer planejamento de alocação de recursos na saúde.
+  \end{enumerate}
+  \item Existem diversas possibilidades. A figura apresentada aqui é um gráfico de barras em porcentagem com as barras na orientação horizontal.
+  \begin{figure}[H]
+  \centering
+  
+  \begin{tikzpicture}
+
+    \draw (0,4) -- (0,0) -- (8,0);
+    \foreach \x/\y in {1/5,2/10,3/15,4/20,5/25,6/30,7/35,8/40} {
+    \draw (\x,0) -- (\x,4);
+    \node [below] at (\x,0) {\y};
+    }
+    \foreach \x/\y/\z in {1/19.02/4T,2/24.1/3T,3/21.76/2T,4/35.10/1T}
+    {
+    \draw [fill=\tikzcolor] (0,\x-.75) rectangle (\y/5,\x-.25);
+    \node [left] at (0,\x-.5) {\z};
+    }
+    \node [above,align=center] at (4,4) {Distribuição percentual do número \\ de notificações por trimestre};
+
+  \end{tikzpicture}
+  \end{figure}
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 4
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{7}
+  \item 
+  \begin{enumerate}
+  \item Falsa. As mulheres economicamente ativas eram cerca de 44 milhões e, os homens, cerca de 56 milhões, o que leva a concluir a população economicamente ativa de mulheres era cerca de $79\%$ da população economicamente ativa de homens.
+  \item Falsa. Para homens cresceu de cerca de 52 milhões para cerca de 58 milhões, o que dá um crescimento percentual relativo a 2003 de cerca de R. Para mulheres cresceu de cerca de 37,5 milhões para cerca de 47,5 milhões, o que dá um crescimento percentual relativo a 2003 de cerca de $27\%$.
+  \item Falsa. Em 2005 eram cerca de 40 milhões e, em 2011, cerca de 45 milhões, o que dá um crescimento percentual relativo a 2005 de cerca de $12,5\%.$
+  \item Verdadeira. Ver justificativa do item \textit{b)}.
+  \item Falsa. Em 2007 eram cerca de 54 milhões e em 2015 cerca de 58 milhões, o que dá um crescimento percentual relativo a 2007 de cerca de $7\%$.
+  \end{enumerate}
+    \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 5
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{8}
+  \item Letra \textit{d)}. A maior vantagem relativa corresponde à maior diferença entre a nota do produto proposto e as notas dos produtos A e B de tal sorte que a nota do produto proposto seja maior do que as notas alcançadas por A e B. Desse modo, é fácil ver que a característica a ser escolhida é o sabor.
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 6
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{9}
+  \item Considerando a tabela dos percentuais (valores relativos), a única afirmação correta é a da letra \textit{a)}. 
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Órgão & Transplantes & Fila de espera \\
+\hline
+Rim & 33 & 75 \\
+\hline
+Fígado & 9 & 15 \\
+\hline
+Pulmão & 3 & 6 \\
+\hline
+Coração & 1 & 1 \\
+\hline
+Rim/pâncreas & 1 & 1 \\
+\hline
+Córnea & 53 & 2 \\
+\hline
+Total & 100 & 100 \\
+\hline
+\end{tabu}
+\caption{Porcentagens dos números de transplantes até julho 2015 e das pessoas em fila de espera em julho de 2015 por órgão}
+\label{}
+\end{table}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 7
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{10}
+  \item 
+  \begin{enumerate}
+  \item Não. Tanto em 2014 como em 2015 o comportamento é decrescente.
+  \item Não. O gráfico de 2016 está acima dos gráficos de 2014 e 2015 nas sete primeiras semanas.
+  \item Sim. Basta observar que entre as semanas 9 e 18 o número de casos foi maior do que ou igual a $80.000$.
+  \item Nâo. Não há informações sobre o número de casos na décima quarta semana em 2016.
+  \item Entre a décima terceira e a décima sétima semana, pois nos anos anteriores, 2014 e 2015, foi entre essas semanas que ocorreu o maior número de casos.
+  \end{enumerate}
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 8
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{11}
+  \item Letra \titem{a)}. O único mês que satisfaz todas as condições é janeiro. Com efeito,
+  \begin{itemize}
+  \item de fevereiro para março e de novembro para dezembro houve redução na temperatura máxima;
+  \item a variação da pluviosidade de agosto para setembro e de dezembro para janeiro foi maior do que 50 mm.
+  \end{itemize}
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 9
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{12}
+  \item Letra \titem{c)}. Sendo de $37{,}8\%$ a porcentagem do total de PET reciclado para uso final têxtil, e de $30\%$ dessa quantidade para tecidos e malhas, segue que a resposta é dada por $\dfrac{37{,}8}{100}\cdot\dfrac{30}{100}\cdot⋅282\approx32{,}0$kton
+  \item
+  \begin{enumerate}
+  \item Falsa, houve períodos de crescimento e períodos de decaimento, portanto, com taxas de variação diferentes. 
+  \item Falsa, pois $22{,}3-19{,}3 $não representam $30\%$ de $19{,}3$.
+  \item Falsa, pois em 2005 e 2006 as emissões foram inferiores à emissão em 2008.
+  \item Falsa, pois $36{,}3-24{,}6=11{,}7$, aproximadamente $50\%$.
+  \item Verdadeira, pois $36{,}3-24{,}6=11{,}7$, aproximadamente $50\%$ de $24{,}6$.
+  \end{enumerate}
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 10
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{14}
+  \item Letra \titem{c)}. Os países com notas abaixo da média de $24{,}6$ são: Rússia, Portugal, México, Itália e Israel. Dentre esses países, o que apresenta maior quantidade de horas de estudo é Israel.
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 11
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{15}
+  \item A porcentagem de horas do dia com outras atividades é dada por $100-(25+10+30+14)=21$. $2\%$ de 24h é dado por $\dfrac{21}{100}\cdot24=5{,}04$h. A opção correta é a letra \titem{d)}.
+  \item Observe que o histograma apresentado é composto por quatro retângulos cujas bases medem $0{,}1$. Assim a área total do histograma é dada por $0{,}1\cdot(3+9+6+2)=2,0$ , ou seja, soma das áreas dos 4 retângulos que compõem o histograma. Assim, a metade da área corresponde ao valor $1{,}0$.
+
+  Considerando os dois primeiros retângulos, a área é $0{,}1\cdot12=1{,}2$ que supera a metade da área total. Isso significa que a mediana será um valor que está entre $1{,}70$ e $1{,}80$. Considerando o primeiro retângulo, falta para completar 1 um sub-retângulo do segundo, com área igual a $0{,}7$, ou seja, $(x_0−1{,}7)\cdot9=0{,}7$ tal que $x_0=1{,}7+0{,}79\approx1{,}78$m.
+
+  \begin{figure}[H]
+  \centering
+  \capstart
+
+  \begin{tikzpicture}[scale=.75]
+
+  \draw [->] (0,0) -- (11,0) node [below left, yshift=-.5cm] {altura (m)};
+  \draw [->] (0,0) -- (0,9.5) node [above left, rotate=90, yshift=.5cm] {número de alunos};
+  \foreach \x/\y/\z in {2/1/6, 4/1/7, 6/1/8, 8/1/9, 10/2/0} \node [below] at (\x,0) {$\y{,}\z0$};
+  \foreach \x in {2,3,6,9} {
+  \node [left] at (0,\x) {\x};
+  \draw [gray!80, dashed] (0,\x) -- (11,\x);
+  };
+
+  \foreach \x/\y in {2/3, 4/9, 6/6, 8/2}
+  {
+  \draw [fill=\currentcolor!80] (\x,0) rectangle (\x+2,\y);
+  \node [above] at (\x+1,0) {$0{,}\y$};
+  }
+
+  \node at (9,8) {Área total=$2{,}0$};
+  \end{tikzpicture}
+  \end{figure}
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 12
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{17}
+  \item De fato, pelo comprimento das barras, a barra correspondente ao tipo A tem comprimento maior do que o dobro dos comprimentos somados das barras correspondentes ao tipo C e outros. O gráfico não está correto, pois não respeita a escala de frequências: usa o mesmo tamanho para representar 10 unidades de 0 a 60, para representar apenas uma unidade entre 71 e 75.
+
+  Gráfico adequado:
+  \begin{figure}[H]
+  \centering
+  \capstart
+
+  \begin{tikzpicture}
+
+  \draw (0,0) -- (6,0);
+  \draw (0,0) -- (0,8);
+
+  \foreach \x in {1,...,8}{
+  \draw [help lines] (0,\x) -- (6,\x);
+  \node [left] at (-.1,\x) {\x0};
+  \draw (-0.1,\x) -- (.1,\x);}
+
+  \draw [help lines] (0,7.5) -- (6,7.5);
+  \node [left] at (-.1,7.5) {75};
+  \draw (-.1,7.5) -- (.1,7.5);
+
+  \foreach \x/\y/\z/\w/\t in {1/7.4/A/primario!80/74, 2/6.8/B/session4!80/68, 3/3.2/C/session2!80/32, 4/2.2/Outros/session3!80/22}{ 
+  \draw [fill=\w] (\x,0) rectangle (\x+1,\y);
+  \node [below] at (\x+.5,0) {\z};
+  \node [above] at (\x+.5,\y) {(\t)};
+  };
+
+  \end{tikzpicture}
+  \end{figure}
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+%página 13
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate} \setcounter{enumi}{18}
+  \item A opção correta é a letra \titem{d)}: a inclinação maior no gráfico II comparada ao gráfico I deve-se a escolha de escalas distintas. No gráfico I a amplitude do intervalo no eixo vertical para 50 unidades é um pouco menor do que a amplitude correspondente utilizada no gráfico II. As outras opções estão incorretas.
+
+  \item Considere a organização dos $800$ funcionários em ordem alfabética: a cada funcionário corresponde uma posição de $1$ a $800$. Temos que $\dfrac{800}50=16$. Sorteie ao acaso um número entre $1$ e $16$, por exemplo $5$. Agora considere os $50$ primeiros termos de uma Progressão Aritmética de primeiro termo $5$ e razão $16$: $5, 21, 37,..., 789$. Selecione então os $50$ funcionários correspondentes a essas posições na listagem em ordem alfabética.
+  \end{enumerate}
+}{1}
+\end{answer}
+
+
 \label{\detokenize{PE103-E:exercicios}}\label{\detokenize{PE103-E::doc}}
 \begin{enumerate}
 \item Estabeleça se as seguintes conclusões a respeito de dados estatísticos provêm do uso da Estatística Descritiva (D) ou Estatística Inferencial (I), justificando as respostas.
@@ -2073,6 +3308,7 @@ Em relação a 2007, a população economicamente ativa de homens em 2015 cresce
 
 \end{enumerate}
 
+\clearpage
 \item (ENEM 2ª aplicação 2016)  A diretoria de uma empresa de alimentos resolve apresentar para seus acionistas uma proposta de novo produto. Nessa reunião, foram apresentadas as notas médias dadas por um grupo de consumidores que experimentaram o novo produto e dois produtos similares concorrentes (A e B).
 
 \begin{figure}[H]
@@ -2353,19 +3589,19 @@ Rússia.
 A quantidade de horas gastas pelo estudante com otras atividades em um dia é de:
 \begin{enumerate}
 \item {} 
-2,25 h
+2,25h
 
 \item {} 
-3,02 h
+3,02h
 
 \item {} 
-3,57 h
+3,57h
 
 \item {} 
-5,04 h
+5,04h
 
 \item {} 
-6,70 h
+6,70h
 
 \end{enumerate}
 
@@ -2377,9 +3613,9 @@ A quantidade de horas gastas pelo estudante com otras atividades em um dia é de
 
 \begin{tikzpicture}[scale=.75]
 
-\draw [->] (0,0) -- (11,0) node [below, xshift=.5cm] {altura (m)};
+\draw [->] (0,0) -- (11,0) node [below left, yshift=-.5cm] {altura (m)};
 \draw [->] (0,0) -- (0,9.5) node [above left, rotate=90, yshift=.5cm] {número de alunos};
-\foreach \x/\y/\z in {2/1/6, 4/1/7, 6/1/8, 8/1/9, 10/2/0} \node [below] at (\x,0) {\y,\z0};
+\foreach \x/\y/\z in {2/1/6, 4/1/7, 6/1/8, 8/1/9, 10/2/0} \node [below] at (\x,0) {$\y{,}\z0$};
 \foreach \x in {2,3,6,9} {
 \node [left] at (0,\x) {\x};
 \draw [gray!80, dashed] (0,\x) -- (11,\x);
@@ -2391,32 +3627,35 @@ A quantidade de horas gastas pelo estudante com otras atividades em um dia é de
 
 Em um histograma, se uma reta vertical de equação \(x=x_0\) divide o histograma em duas partes de mesma área, então o valor de \(x_0\) corresponde à \index{mediana}mediana da distribuição representada no histograma. Calcule a mediana das alturas dos alunos com base no histograma apresentado.
 
+\clearpage
 \item Numa pesquisa sobre a preferência dos jovens por sucos, obteve-se, entre os tipos principais A, B e C, o seguinte resultado.
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\begin{tikzpicture}
+\begin{tikzpicture}[yscale=.65]
 
 \draw (0,0) -- (6,0);
-\draw (0,0) -- (0,8);
+\draw (0,0) -- (0,12.5);
 
 \foreach \x in {1,...,7}{
 \node [left] at (-.1,\x) {\x0};
 \draw (-0.1,\x) -- (.1,\x);};
 
-\node [left] at (-.1,7.5) {75};
-\draw (-.1,7.5) -- (.1,7.5);
+\foreach \x/\y in {8/71,9/72,10/73,11/74,12/75}{
+\node [left] at (-.1,\x) {\y};
+\draw (-.1,\x) -- (.1,\x);
+}
 
-\foreach \x/\y/\z/\w/\t in {1/7.5/A/primario!80/74, 2/6.8/B/session4!80/68, 3/3.2/C/session2!80/32, 4/2.2/Outros/session3!80/22}{ 
+\foreach \x/\y/\z/\w/\t in {1/11.9/A/primario!80/74, 2/6.8/B/session4!80/68, 3/3.2/C/session2!80/32, 4/2.2/Outros/session3!80/22}{ 
 \draw [fill=\w] (\x,0) rectangle (\x+1,\y);
 \node [below] at (\x+.5,0) {\z};
 \node [above] at (\x+.5,\y) {(\t)};
 };
 
-
 \end{tikzpicture}
+
 \caption{O número entre parênteses corresponde ao número de respostas para cada tipo de suco entre os jovens selecionados na pesquisa}\label{\detokenize{PE103-E:id11}}\label{\detokenize{PE103-E:id28}}\end{figure}
 \begin{enumerate}
 \item {} 

@@ -154,7 +154,7 @@ O ambiente de figura possui uma diferença crucial que é o uso da opção \verb
 
 Pedimos que ao se referir a uma atividade, figura ou tabela utilize \verb|\hyperref[label]{float \ref{label}}|, onde float é substituído por figura, atividade ou tabela, de acordo com a referência. 
 
-\textbf{Atenção}: Os \textit{labels} devem sempre ficar após as \textit{captions} no código, senão o \LaTeX não as reconhece propriamente.
+\textbf{Atenção}: Os \textit{labels} devem sempre ficar após as \textit{captions} no código, senão o \LaTeX{} não as reconhece propriamente.
 \end{task}
 
 \begin{task}{Tabelas}
@@ -169,24 +169,6 @@ Assim como nas figuras, deve-se usar o parâmetro \verb|H| para que ela funcione
 \item \verb|\thead| coloca as cores e o texto na forma padrão que usamos para toda uma linha. Funciona apenas para tabelas do pacote \verb|tabu| (explicação a seguir).
 \end{itemize}
 
-
-\begin{table}[H]
-\centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
-\hline
-\thead
-Atividade Física & Manhã & Tarde & Total \\
-\hline
-\tcolor{Não pratica} & 140 & 130 & 270 \\
-\hline
-\tmcol{2}{|c|}{Futebol} & 80 & 240 \\
-\hline
-\end{tabu}
-\caption{Exemplo de tabela usando os três comandos}
-\label{tabela}
-\end{table}
-
-% \clearpage
 \begin{verbatim}
 \begin{table}[H]
 \centering
@@ -205,13 +187,71 @@ Atividade Física & Manhã & Tarde & Total \\
 \end{table}
 \end{verbatim}
 
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|c|}
+\hline
+\thead
+Atividade Física & Manhã & Tarde & Total \\
+\hline
+\tcolor{Não pratica} & 140 & 130 & 270 \\
+\hline
+\tmcol{2}{|c|}{Futebol} & 80 & 240 \\
+\hline
+\end{tabu}
+\caption{Exemplo de tabela usando os três comandos}
+\label{tabela}
+\end{table}
+
+% \clearpage
+
 \end{task}
 
 \begin{observation}{Pacote tabu}
 Na maioria das tabelas encontradas nos capítulos já prontos, é utilizado o estilo de tabela \verb|tabu|. Este pacote introduz diversas funcionalidades úteis para a construção de tabelas, entretanto, o criador do pacote não o atualizou por muito tempo, gerando incompatibilidades com outros pacotes (não criou conflitos com nenhum usado no livro aberto), e por isso alguns usuários fizeram mudanças para resolver esses problemas. Porém, essa atualização tirou a principal funcionalidade que usamos que é o comando \verb|\rowcolor|, que é usado na macro \verb|\thead|. Por isso, não é recomendado o uso desse ambiente, podendo ser substituído por \verb|tabular| ou outros tipos de tabelas, desde que se use \verb|\tcolor| nas célular necessárias. 
 
+É possível recriar a mesma tabela feita anteriormente usando o ambiente \verb|tabular|:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\tcolor{Atividade Física} & \tcolor{Manhã} & \tcolor{Tarde} & \tcolor{Total} \\
+\hline
+\tcolor{Não pratica} & 140 & 130 & 270 \\
+\hline
+\tmcol{2}{|c|}{Futebol} & 80 & 240 \\
+\hline
+\end{tabular}
+\caption{Versão da tabela usando tabular}
+\label{tabela}
+\end{table}
+
+% \clearpage
+\begin{verbatim}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\tcolor{Atividade Física} & \tcolor{Manhã} & \tcolor{Tarde} & 
+\tcolor{Total} \\
+\hline
+\tcolor{Não pratica} & 140 & 130 & 270 \\
+\hline
+\tmcol{2}{|c|}{Futebol} & 80 & 240 \\
+\hline
+\end{tabular}
+\caption{Versão da tabela usando tabular}
+\label{tabela}
+\end{table}
+\end{verbatim}
+
 Para aqueles que se interessarem em usar o pacote \verb|tabu| em sua versão mais antiga, basta entrar na pasta \verb|\texlive\2020\texmf-dist\tex\latex\tabu| no local de instalação de seu \TeX{} Live (na versão de 2020) e trocar o nome do arquivo \verb|tabu-2018| para \verb|tabu|.
+
+
 \end{observation}
+
+\clearpage
 
 Na caixa anterior temos o "Observação", que pode ser introduzido no texto no ambiente \verb|observation|:
 \begin{verbatim}
@@ -267,7 +307,7 @@ Esta caixa pede um título, que pode possivelmente ser vazio.
 \end{example}
 
 \begin{observation}{}
-As caixas são feitas usando o pacote \verb|tcolorbox|, e é importante ressaltas que este pacote não permite sobrepor caixas, isto é, não se pode colocar uma caixa dentre de outra, logo, não é possível colcoar uma observação no meio de uma atividade ou semelhantes.
+As caixas são feitas usando o pacote \verb|tcolorbox|, e é importante ressaltar que este pacote não permite sobrepor caixas, isto é, não se pode colocar uma caixa dentre de outra, e portanto não é possível colcoar uma observação no meio de uma atividade ou semelhantes.
 \end{observation}
 
 \arrange{Headers}

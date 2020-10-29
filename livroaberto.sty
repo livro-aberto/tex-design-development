@@ -96,17 +96,24 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{siunitx}
 \RequirePackage{caption}
 \RequirePackage{pdfpages}
-\RequirePackage{layout}
-\RequirePackage{stackengine}
-\RequirePackage{changepage}
-\RequirePackage{graphicx}
-\RequirePackage{adjustbox}
-% \RequirePackage{scrlayer-notecolumn}
-% \RequirePackage{marginfix}
-\RequirePackage{pdfpages}
+\RequirePackage{stmaryrd}
+% \RequirePackage{natbib}
 \RequirePackage{spverbatim}
 \RequirePackage{ulem}
-\usepackage{cancel}
+\RequirePackage{cancel}
+\RequirePackage{ifthen}
+\RequirePackage{booktabs}
+\RequirePackage{url}
+\RequirePackage{graphicx}
+\RequirePackage{forloop}
+\RequirePackage{lipsum}
+\RequirePackage{suffix}
+\RequirePackage{refcount}
+\RequirePackage{xcolor}
+\RequirePackage{multicol}
+\RequirePackage{etex}
+\RequirePackage{blindtext}
+\RequirePackage{cleveref}
 
 \@ifclassloaded{memoir}{}{\RequirePackage{fancyhdr}}
 
@@ -145,6 +152,19 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcommand{\newparallel}{\mathrel{\mkern-5mu\clipbox{0 0.75ex 0 0}{${\sslash}$}\!}}
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
+\newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
+
+%Coloca listas de enumerate no padrão da seção de exercícios
+\newcommand\exerciselist
+{	
+	\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
+	\setlist[enumerate,2]{label=\textit{\alph*)}}
+	\setlist[enumerate,3]{label=\textit{\roman*)}}
+}
+
+
+
+
 
 %Seção 1 - Livro Aberto Boxes
 %***************************************************************************************

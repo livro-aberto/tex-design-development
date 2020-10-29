@@ -1,4 +1,8 @@
+\ifnum \aluno=1
 \renewcommand\chapterillustration{abertura-log.jpg}
+\else
+\renewcommand\chapterillustration{abertura-log-prof.jpg}
+\fi
 
 %Imagem da Wikimedia Commons - https://commons.wikimedia.org/wiki/File:Pedra_Azul_Milky_Way.jpg
 \renewcommand\chapterwhat{Conceito de logaritmo.
@@ -89,6 +93,333 @@ Capa: & (adaptado da) Foto "Pedra Azul Milky Way"\, de EduardoMSNeves, na Wikime
 
 \mainmatter
 
+\begin{apresentacao}
+\section*{Contextualizando o ensino de logaritmos.}
+A BNCC determina o estudo de logaritmos no ensino médio através das habilidades:
+
+\begin{habilities}{EM13MAT305}
+Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+\tcbsubtitle{EM13MAT403}
+Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+\end{habilities}
+
+Os logaritmos estão presentes em problemas de natureza exponencial sempre que a incógnita aparece no expoente. O logaritmo é o expoente ao qual a base deve ser elevada para obter-se determinado número\notarodape{Chamado de logaritmando.}. Estamos convencidos que esse entendimento conceitual é importante para a interpretação de situações em diversos contextos e subsequente construção de modelos, análise de resultados, comunicação desses resultados e  tomadas de decisão, etapas essas previstas nas competências 1, 2, 3 e 4 da BNCC.
+
+
+Alguns contextos frequentemente ligados aos logaritmos são os juros compostos da matemática financeira, a escala Richter, as definições de decibel e de PH. Eles também estão presentes no decaimento radioativo, na datação por carbono 14, na farmacologia e na homeopatia.
+
+Além dos contextos específicos, os logaritmos são um recurso para representarmos dados de magnitudes muito distintas em um mesmo gráfico, como no caso da pandemia de Covid19, e quando os crescimentos relativos são mais importantes que os valores propriamente ditos, como no caso de ações da bolsa de valores.
+
+Devido aos muitos contextos envolvidos, o conteúdo também é uma oportunidade para auxiliar no desenvolvimento de outras habilidades da BNCC:
+\begin{itemize}
+\item O logaritmo é uma ferramenta natural para problemas de matemática financeira quando a incógnita é o tempo necessário para chegar a determinado objetivo, o que está relacionado à habilidade:
+\end{itemize}
+
+\begin{habilities}{EM13MAT303}
+Interpretar e comparar situações que envolvam juros simples com as que envolvem juros compostos, por meio de representações gráficas ou de análise de planilhas, destacando o crescimento linear ou exponencial de cada caso.
+\end{habilities}
+
+\begin{itemize}
+\item Situações envolvendo juros compostos são comuns no cotidiano familiar. Saber como isso funciona pode auxiliar na tomada de decisão, por exemplo, para fazer uma aplicação ou saldar uma dívida.
+\end{itemize}
+
+\begin{habilities}{EM13MAT203}
+Aplicar conceitos matemáticos no planejamento, na execução e na análise de ações envolvendo a utilização de aplicativos e a criação de planilhas (para o controle de orçamento familiar, simuladores de cálculos de juros simples e compostos, entre outros), para tomar decisões.
+\end{habilities}
+
+\begin{itemize}
+\item Dados relacionados a diferentes aspectos da natureza, podem ser apresentados por meio de gráficos em escala logarítmica, sendo o conhecimento desse conteúdo necessário na apresentação dos dados e na análise dos mesmos.
+\end{itemize}
+
+\begin{habilities}{EM13MAT101}
+Interpretar criticamente situações econômicas, sociais e fatos relativos às Ciências da Natureza que envolvam a variação de grandezas, pela análise dos gráficos das funções representadas e das taxas de variação, com ou sem apoio de tecnologias digitais.
+\end{habilities}
+
+\begin{habilities}{EM13MAT104}
+Interpretar taxas e índices de natureza socioeconômica (índice de desenvolvimento humano, taxas de inflação, entre outros), investigando os processos de cálculo desses números, para analisar criticamente a realidade e produzir argumentos.
+\tcbsubtitle{EM13MAT102} Analisar tabelas, gráficos e amostras de pesquisas estatísticas apresentadas em relatórios divulgados por diferentes meios de comunicação, identificando, quando for o caso, inadequações que possam induzir a erros de interpretação, como escalas e amostras não apropriadas.
+\end{habilities}
+
+
+
+\section*{O que dizem as pesquisas sobre o tema?}
+
+As quatro competências 1, 2, 3 e 4 da BNCC \cite{BNCC2018} \notarodape{de um total de cinco} indicam um foco em problemas concretos e aplicabilidade na vida real. 
+
+Também destacam a importância das questões praticas, os testes utilizados para avaliar o desempenho dos estudantes em larga escala (de sistemas educacionais inteiros, como o SAEB e o PISA). Por exemplo, em \cite[p.139]{OCDE2016}:
+
+\textit{"Isto é, o PISA analisa até que ponto estudantes dessa idade sabem lidar adequadamente com a matemática ao serem confrontados com certos problemas e situações, a maioria apresentada em contextos do mundo real."}
+
+
+Ressaltamos aqui que a preocupação com questões do mundo real está presente, em maior ou menor grau, nos livros didáticos aprovados pelo PNLD, contudo esses livros usualmente acrescentam as aplicações em cima de uma abordagem tradicional. As pesquisas sobre o tema parecem apontar que algumas dificuldades encontradas pelos estudantes podem estar relacionadas a essa forma de trabalhar o conteúdo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+	Muitos trabalhos buscam entender, especificamente, as dificuldades no estudo de logaritmos.
+	 
+	Um dos trabalhos encontrados \cite{Liang2005} estudou estatisticamente o desempenho dos estudantes em questões propondo avaliar o desempenho nas categorias computação, entendimento e aplicação \notarodape{aplicadas na matemática e não em questões da vida real}, baseado-se em uma taxonomia de Bloom modificada, e concluiu que os estudantes têm maior dificuldade nas questões de entendimento e de aplicação. A análise deles é que parecem haver erros devido ao não entendimento conceitual do conteúdo, apesar da razoável capacidade operacional.
+
+Na dissertação \cite{Berezovski2004}, a autora buscou analisar e descrever as principais causas de problema no entendimento dos estudantes ao aprender logaritmos e chegou à conclusão que vários estudantes tiveram dificuldades em entender os logaritmos como números e em reconhecer as propriedades dos logaritmos. Ela destacas duas causas possíveis para essas dificuldades:
+	\begin{itemize}
+	\item obstáculos cognitivo-epistemológicos na compreensão dos logaritmos como números e suas propriedades operatórias;
+	\item o material didático, que pode estar focado demasiadamente nos conceitos de exponenciação e de função exponencial (tratando logaritmo como conceito secundário).
+	\end{itemize}
+
+No trabalho \cite{Kenney2013}, os autores discutem dificuldades que perceberam nos estudantes ao buscar entender o conteúdo de logaritmos. As dificuldades relatadas são:
+	\begin{itemize}
+	\item perceber o logaritmo como uma função (que pode ter origem em dificuldades com os conceitos de função exponencial ou função inversa);
+	\item entender a notação corretamente; 
+	\item entender e aplicar as propriedades dos logaritmos.
+	\end{itemize}
+Eles relatam, ainda, que outros autores também perceberam dificuldades semelhantes em seus trabalhos.
+
+No trabalho \cite{Panagiotou2011}, o autor considera o uso da história no ensino de matemática e faz uma proposta concreta para o conteúdo de logaritmos. O autor afirma que a introduzir os logaritmos pela definição de Euler pode tornar difícil a compreensão do conceito de logaritmo e posa vários questionamentos difíceis de responder a partir desse ponto de vista.
+
+No trabalho \cite{Weber2016}, o autor (Weber) explora detalhadamente a causa das dificuldades e conclui que os erros no entendimento dos logaritmos podem ser causados pela introdução do tema como a inversa de uma exponencial, pois os alunos não podem aplicá-lo diretamente. Ele apresenta os seguintes argumentos para isso:
+\begin{itemize}
+\item a definição de Euler\notarodape{Que define a função logarítmica como a inversa da função exponencial.} surgiu posteriormente ao surgimento dos logaritmos e reflete a visão de um especialista com grande experiência\notarodape{... e não de alguém entrando em contato com o assunto};
+\item definições indiretas (a de Euler e outras) são pouco operacionais (não permitem o cálculo do logaritmo diretamente);
+\item há similaridades no ensino de logaritmos com o ensino de divisão (inversa à multiplicação), mas a divisão é ensinada através de diversos contextos, ao contrário da elegância lógica dos logaritmos.
+\end{itemize}
+	
+Assim, os estudos parecem indicar que há espaço para a melhoria dos resultados no ensino-aprendizagem de logaritmos por meio de uma metodologia focada na introdução dos conceitos através das aplicações e não no conteúdo matemático formal.
+
+Uma das possibilidades encontradas foi a de introduzir o conteúdo baseado no desenvolvimento histórico do conceito por Napier e Briggs (por exemplo em \cite{Pedrosa2018} e \cite{Panagiotou2011}), o que pode ser bastante interessante, mas não tem o foco na resolução de problemas práticos recomendada pela BNCC e pelos testes de larga escala.
+
+Outra possibilidade encontrada foi a da Educação Matemática Realística (EMR), que busca engajar os estudantes através de contextos significativos e, ao invés de apresentar os conteúdos formais plenamente desenvolvidos, permite aos estudantes realizarem seus próprios raciocínios informais e formalizarem seus raciocínios progressivamente, indo do concreto para o abstrato.
+
+De acordo com  \cite{HeuvelPanhuizen}, a Educação Matemática Realística (EMR) é uma teoria de instrução específica para matemática, que foi desenvolvida na Holanda. A principal característica da EMR é o uso de situações \textit{realistas}; que tem uma posição de destaque no processo de aprendizagem. Estas situações servem como fonte para iniciar o desenvolvimento de conceitos, ferramentas e procedimentos matemáticos em um contexto no qual os estudantes podem, em uma etapa posterior, aplicar seus conhecimentos matemáticos, que então, gradualmente, se tornam mais formais e gerais indo além do contexto inicial. Na EMR ao invés de serem receptores de matemática pronta, os estudantes devem ser participantes ativos no processo educacional, desenvolvendo ferramentas matemáticas e \textit{insights} por si mesmos.
+
+A EMR baseia-se em alguns princípios fundamentais para o ensino da matemática, fortemente ligados à situações realistas, que listamos a seguir:
+\begin{itemize}
+\item \textit{O princípio da atividade}: os estudantes são tratados como participantes ativos no processo de aprendizagem e enfatiza que a matemática é melhor aprendida fazendo matemática.
+\item \textit{O princípio do realismo}: o objetivo da educação matemática inclui desenvolver a habilidade de resolver problemas da vida real. Esse princípio também significa que a educação matemática deveria começar de situações problema, ao invés de começar pelas abstrações e definições para aplicá-las depois.
+\item \textit{O princípio dos níveis}: os estudantes passam por vários níveis de entendimento, iniciando em soluções informais e relacionadas aos contextos, até atingir esquematizações das soluções e formalização matemática dos conceitos. 
+\item \textit{O princípio do entrelaçamento}: os domínios do conteúdo matemático como número, geometria, análise de dados são altamente integrados.
+\item \textit{O princípio da interatividade}: aprender matemática não é apenas uma atividade individual, mas uma atividade social. Assim, a educação matemática realista favorece discussões em classe e trabalhos em grupo.
+\item \textit{O princípio da orientação}: refere-se a ideia de Freudenthal da "reinvenção guiada" da matemática. Ela implica que o/a professor/a deve ter um papel proativo no aprendizado do estudante e guiá-lo por uma trajetória de aprendizagem com o potencial de promover avanços no entendimento do estudante.
+\end{itemize}
+
+
+A EMR é aplicada no conteúdo de logaritmos em \cite{Webb2011}. O método consiste em apresentar o conteúdo a partir do que é concreto até atingir o que é abstrato, e isso é realizado através de contextos e problemas da vida real.
+
+Devido à necessidade do foco em questões práticas apontada pela BNCC e pelo SAEB, acreditamos que a EMR é uma metodologia adequada ao conteúdo de logaritmos. Também justificamos essa escolha pelas observações de Weber apresentadas anteriormente.
+
+Contudo, ressaltamos que essas aplicações da matemática devem ser feitas de modo cuidadoso. O livro Dez Questões para professores de matemática, publicado pela OCDE e traduzido para o português pela SBM (\cite{OCDE2018}) utiliza os dados do PISA para avaliar a eficácia de diversas estratégias no ensino e conclui que, surpreendentemente, os estudantes com maior exposição à matemática pura apresentam melhor desempenho na prova do PISA (apesar de a mesma avaliar questões práticas). O relatório atribui isso ao fato de a matemática aplicada restringir-se nas escolas, muitas vezes, a questões de “faz de conta” e a aplicações forçadas e descoladas da realidade. Todavia o texto da OCDE ainda afirma que a matemática pura tem suas limitações no que pode atingir em termos de aprendizado.
+
+Para resolver isso o material da OCDE sugere [p. 80]:
+
+\textit {"A solução de problemas mais envolvida e multifacetada em diferentes contextos provavelmente é mais benéfica, porque ela pode ensinar aos alunos como questionar, fazer conexões e previsões, conceituar e construir modelos para interpretar e entender situações reais."}
+
+O material indica [p. 86] aos professores três estratégias, que podem ser encontradas com explicações mais aprofundadas no material da OCDE, referentes a esse ponto:
+\begin{itemize}
+\item \textit{cubra as ideias matemáticas centrais com profundidade suficiente e mostre como elas estão relacionadas;}
+\item \textit{não cubra somente as partes fundamentais do currículo;}
+\item \textit{forneça aos estudantes uma variedade de problemas para resolver.}
+\end{itemize}
+    
+Esse capítulo sobre logaritmos é desenvolvido, então, com inspiração na Educação Matemática Realística, mas levando em consideração as orientações sugeridas pela análise dos resultados do PISA elencados acima.
+
+\section*{Objetivos Gerais}
+
+Tendo em vista as demandas da BNCC, as avaliações dos testes de larga escala e as aplicações do conteúdo em diversos contextos, o presente material tem os seguintes objetivos gerais:
+
+\begin{itemize}
+\item  Compreender o conceito de logaritmo e como operar com potências.
+\item Manipular corretamente expressões envolvendo logaritmos (propriedades) e calculá-lo efetivamente
+(por meio de estimativas e por meio de usando a calculadora).
+\item Reconhecer a importância dos logaritmos e da função logarítmica, sendo capaz de
+aplicá-los a problemas concretos.
+\item Esboçar e interpretar graficamente a função logarítmica e relacioná-la com a função
+exponencial.
+\item Compreender o uso da função logarítmica para expressar dados em que as grandezas
+variam em escalas muito grandes, em particular analisando situações concretas com
+gráficos expressos em escalas logarítmicas.
+\end{itemize}
+
+\section*{Orientações sobre o uso do material}
+
+Esse material é dividido em seções do tipo \textit{explorando, organizando, praticando, exercícios, projeto aplicado e para saber mais}. As seções de exercícios contém exercícios que devem ser desenvolvidos pelos estudantes fora do horário de aula. As seções para saber mais são opcionais, de modo que sua omissão não atrapalha o desenvolvimento das demais atividades, apesar de explorarem aspectos interessantes do conteúdo.
+
+As seções explorando, organizando e praticando foram pensadas para o desenvolvimento em sala.
+
+O material foi planejado para ser desenvolvido em 4 semanas com três horas aula por semana e, para isso, seria necessário o desenvolvimento das atividades de modo eficiente pelos estudantes. O/a professor/a pode não realizar algumas das atividades, se julgar que a turma já atingiu o nível de maturidade adequado nos respectivos assuntos.
+
+As 4 semanas sobre logaritmos e as funções logarítmicas podem ser divididas equitativamente nos seguintes tópicos:
+\begin{itemize}
+\item logaritmos;
+\item propriedades dos logaritmos;
+\item a função logarítmica e sua relação com a função exponencial;
+\item gráficos em escala logarítmica e aplicações.
+\end{itemize}
+
+A primeira semana, sobre logaritmos, compreende as seções explorando: logaritmos, organizando: logaritmos, praticando: logaritmos e a seção de exercícios seguinte. A seção opcional \textit{"Para saber +: sem ferramentas de cálculo..."} poderia ser realizada ao final desse bloco. A metodologia adotada é baseada na introdução de contextos, nos quais a variável de interesse está no expoente de alguma potência. Somente após os contextos, discutimos os conceitos matemáticos formais. Diferentemente da maioria dos livros didáticos, fazemos uma discussão sobre o erro, pois muitas vezes não é possível encontrar o valor exato para um logaritmo e entendemos que as aproximações sempre estão atreladas aos seus erros.
+
+A segunda semana, sobre as propriedades dos logaritmos, compreende as seções explorando: logaritmo do produto, organizando: logaritmo do produto, exercícios, explorando: mudança de base, organizando: mudança de base e exercícios. A seção opcional \textit{"Para saber +: logaritmos com a régua de cálculo"} poderia ser realizada ao final desse bloco. A metodologia adotada é baseada na investigação dos valores dos logaritmos e observação de padrões, correspondentes às propriedades. É destacada a aplicação dessas propriedades na resolução de problemas concretos.
+
+A terceira semana, sobre a função logarítmica e sua relação com a função exponencial, compreende as seções explorando: função logarítmica, organizando: função logarítmica, explorando: funções logarítmicas e exponenciais e exercícios. As seções opcionais \textit{"Para saber +: ajuste de curvas"} e \textit{"Para saber +: logaritmos e progressões"} poderiam ser realizadas ao final desse bloco.. A metodologia adotada consiste em formular o conceito de função a partir de um dos contextos, no caso a definição de decibel. Na exploração do gráfico da função introduzimos o conceito de ajuste de curvas, que é uma aplicação importante em todas as áreas da ciência.
+
+A quarta semana, sobre gráficos em escala logarítmica e aplicações, compreende as seções explorando: escala logarítmica, organizando: escala logarítmica, explorando: o logaritmo natural, organizando: decaimento radioativo, explorando: escalas logarítmicas e exercícios. A seção opcional \textit{"Para saber +: a lei de Weber"} poderia ser realizada ao final desse bloco. A metodologia consiste em apresentar dados reais e discutir as dificuldades de sua representação se os dados tem magnitudes muito distintas. Uma maneira de lidar com isso é colocar os gráficos em escalas logarítmicas, o que é amplamente utilizado nas mais diversas áreas da ciência, apesar de dificilmente ser abordado nos livros didáticos. Por fim apresentam-se conceitos específicos nos quais os logaritmos são aplicados com frequência.
+
+Cabe ressaltar que a maior parte dos cálculos é realizada em exercícios contextualizados. Assim, o material não apresenta exercícios de equações ou inequações logarítmicas per si. A decisão de não incluí-los deve-se à preferência por fixar os conceitos e interpretações dos conteúdos em detrimento a fórmulas com pouco significado, uma vez que o tempo para trabalhá-lhos é finito.
+
+Sobre a notação utilizada, observa-se que os estudantes utilizam flechas na resolução de exercícios indicando uma sequência de eventos ou substituindo o símbolo de igual "$=$". Todavia as flechas têm significados precisos na matemática. No contexto de resolução de exercícios, as flechas simples ($\Longrightarrow$) significam "implica" ou "então"; já as flechas duplas ($\Longleftrightarrow$) são usadas nas "bi-implicações" ou "equivalências". Recomenda-se o uso das flechas (na resolução de exercícios) somente com esses significados. Em outros contextos as flechas podem ter outros significados.
+
+Um caso onde esse efeito têm particular importância é na resolução de exercícios. Muitas vezes são escritas equações sucessivas sem que se diga a relação entre elas, o que não é adequado. Existem algumas formas de contornar isso. Uma dessas formas é simplesmente iniciar com a incógnita no lado esquerdo e desenvolver o lado direito somente, de modo que temos sempre expressões iguais à incógnita e, assim, temos a certeza de ter encontrado a solução no final.
+
+Quando é necessário desenvolver os dois lados de uma equação, obtemos uma sequência de equações distintas e é necessário tomar cuidado com as relações entre elas, pois só temos certeza de ter obtido uma solução se tivermos bi-implicações ($\Longleftrightarrow$) entre todas as equações, contudo verificar isso pode ser excessivamente trabalhoso. Por isso recomenda-se a utilização das implicações simples ($\Rightarrow$), que são consequência da aplicação de qualquer \textit{função} matemática, mas que só garantem que o valor obtido satisfaz condições necessárias para a solução. Assim, a resposta obtida é apenas uma candidata à solução e é necessário testar se ela, de fato, resolve o problema.
+
+Por fim destacamos que a operação de potenciação $a^b$, com $a>0$, $a\neq 1$ tem duas variáveis e, por isso, apresenta duas possibilidades de inversa:
+\begin{itemize}
+\item se pensamos no expoente $b$ como fixo e desejamos obter $a$, devemos aplicar a radiciação de índice $b$: $\sqrt[b]{a^b}=a$;
+\item se pensamos na base $a$ como fixa e desejamos obter $b$, devemos aplicar o logaritmo de base $a$: $\log_a a^b =b$.
+\end{itemize}
+O tema dessa unidade relaciona-se à segunda forma de inverter a potenciação e sua correspondente: a função exponencial.
+\end{apresentacao}
+
+\def\currentcolor{session1}
+\begin{texto}
+{
+\section{Explorando: Logaritmos}
+\subsection{Objetivos gerais}
+\begin{itemize}
+\item Observar situações práticas em que a incógnita está no expoente.
+\item Desenvolver raciocínios informais sobre o número de vezes que uma operação de multiplicação é aplicada.
+\item Desenvolver a interpretação e a comparação de situações que envolvam juros simples com as que envolvem juros compostos (EM13MAT303).
+\item Reconhecer questões em que as incógnitas encontram-se em expoentes.
+\item Compreender o logaritmo como o expoente ao qual a base deve ser elevada para obter determinado número e reconhecer que essa definição corresponde aos valores procurados nas atividades realizadas.
+\end{itemize}
+
+\subsection{Sugestões e discussões}
+
+Indica-se que o/a professor/a desenvolva com os estudantes a evolução  do capital apresentando os dados da \hyperref[juros-compostos]{figura \ref{juros-compostos}} e questione o tempo para que o montante seja de R\$$1.102{,}50$. Espera-se que os estudantes relacionem o número de meses com as multiplicações repetidas, obtendo
+\begin{align*} 
+1^{\circ} \mbox{m\^es} - &1000 \times 1,05 = 1050\\
+2^{\circ} \mbox{m\^es} - (&1000 \times 1,05) \times 1,05\\
+ = &1000 \times (1,05)^2 = 1102,50.
+\end{align*}
+O/A professora pode, recordando as propriedades da potenciação, ressaltar que os montantes correspondentes aos meses seguintes são 
+$1000 \times (1,05)^3$, $1000 \times (1,05)^4$ e assim por diante.
+}
+\end{texto}
+\begin{sugestions}{Para refletir}
+{
+	Numa segunda etapa, indica-se a reflexão, em grupo, com os estudantes sobre o tempo que seria necessário para que um valor fora da progressão fosse atingido (no quadro para refletir). Aqui esperam-se respostas informais e talvez até algum debate entre "os ajustes ocorrem apenas mensalmente"\, e "um valor entre 2 e 3", o que pode auxiliar no desenvolvimento da argumentação da competência 3 da BNCC. Pode-se aproveitar a oportunidade para destacar que o acréscimo não é de 50 reais por mês, ressaltando a diferença entre juro simples e composto (que é o mais frequente).
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Para Refletir}  %% Texto inferior
+{Para 2 meses o montante está em $1102,50$. Contudo para 3 meses o montante está em R$\$ 1557{,}62$. Portanto, se houver a correção em períodos fracionários, serão necessários menos de 3 meses e mais do que 2 meses. Se não houver correção fracionária é necessário esperar 3 meses e o montante ultrapassa valor inicialmente buscado. O fato dos juros serem compostos mês a mês leva a não aplicação de juros simples e a não aplicação do acréscimo de simplesmente R$\$50{,}00$ mensais. Por isso não chega-se ao valor exato de R$\$1.150{,}00$.
+
+\tcbsubtitle{Dívida no cartão}
+
+Podemos utilizar a tabela para calcular o montante em cada mês a partir de R$\$10.000{,}00$.
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|c|}
+\hline
+\thead
+Mês & Montante (R\$) \\
+\hline
+0 & $10.000$\\
+\hline
+1 & $11.000$\\
+\hline
+2 & $12.100$\\
+\hline 
+3 & $13.310$\\
+\hline
+4 & $14.640$\\
+\hline
+5 & $16.100$\\
+\hline
+6 & $17.710$\\
+\hline
+7 & $19.480$\\
+\hline
+8 & $21.430$\\
+\hline
+9 & $23.570$\\
+\hline
+10 & $25.930$\\
+\hline
+\end{tabu}
+\end{table}
+
+Assim, atingimos R$\$15.000{,}00$, R$\$20.000{,}00$ e R$\$25.000{,}00$ em, respectivamente 5, 8 e 10 meses.
+
+\tcbsubtitle{Bactérias no Leite}
+
+A evolução do número de bactérias pode ser tabelado
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|c|l|l|}
+\hline
+\thead
+Tempo (horas) & Evolução das Bactérias & População \\
+\hline
+$0$ & $200$ & $200$ \\
+\hline
+$1$ & $200\times3$ & $600$ \\
+\hline
+$2$ & $200\times3^2$ & $1.800$ \\
+\hline
+$3$ & $200\times3^3$ & $5.400$ \\
+\hline
+$4$ & $200\times3^4$ & $16.200$ \\
+\hline
+\end{tabu}
+\end{table}
+A população atinge 16.200 indivíduos após 4 horas.
+}
+{0}
+\end{answer}
+
+\clearmargin
+
+\begin{sugestions}{Atividades}
+{
+	Após essa introdução indica-se que seja dado tempo aos estudantes para resolver as atividades em duplas ou trios utilizando a tabela apresentada no livro texto. Para utilizar a tabela é necessária a ligação entre o número de vezes que a multiplicação é aplicada com as potências e o professor pode auxiliar os pequenos grupos a concluir isso, caso tenham dificuldade.
+}
+{1}{0}
+\end{sugestions}
+\begin{answer}{Economizando para uma viagem}
+{
+	Calculando os montantes mês a mês, vemos que Rebeca precisará esperar 10 meses.
+	\begin{table}[H]
+	\centering
+
+	\begin{tabu} to \textwidth{|c|l|l|}
+	\hline
+	\thead
+	$0$ & $40.000$ & $40.000$ \\
+	\hline
+	$1$ & $40.000\times1{,}01$ & $40.400$ \\
+	\hline
+	$\vdots$ & $\vdots$ & $\vdots$ \\
+	\hline
+	$9$ & $40.000\times(1{,}01)^9$ & $43.720$ \\
+	\hline
+	$10$ & $40.000\times(1{,}01)^{10}$ & $44.160$ \\
+	\hline
+	\end{tabu}
+	\end{table}
+	}{1}
+\end{answer}
+\def\currentcolor{session4}
+\begin{sugestions}{Apresentando o conceito}
+{
+	Indica-se que o/a professor/a ressalte que as incógnitas buscadas nas atividades eram expoentes e, então, apresente a definição formal de logaritmo. Em seguida pode-se ilustrar como o conceito estava sendo utilizado nas atividades anteriores através do exemplo "Identificando os logaritmos", contudo pode ser necessário reforçar que os valores encontrados na tabela como resposta eram aproximações superiores para os logaritmos, pois correspondiam ao mês em que o respectivo valor era ultrapassado.
+}{1}{0}
+\end{sugestions}
+\begin{objectives}{Nomeclaturas}
+{
+Compreender a notação de logaritmo e suas componentes: base e logaritmando}
+{1}{0}
+\end{objectives}
 
 \explore{logaritmos}\label{expoente_incog}
 
@@ -129,6 +460,7 @@ Na seção sobre a função exponencial, você observou diversas situações em 
 \draw (28.7,3.2) -- (28.7,-2) -- (-4.5,-2) -- (-4.5,3.2) -- (28.7,3.2);
 \end{tikzpicture}
 \caption{O crescimento com juros compostos.}
+\label{juros-compostos}
 \end{figure}
   
 Muitas vezes estamos interessados em saber quanto tempo, ou quantos períodos são necessários para que determinada quantia seja atingida. Na situação acima, por exemplo, quantos meses seriam necessários para atingirmos R\$ $1.102{,}5$? Vemos na sequência de montantes, que seriam necessários dois meses para isso.
@@ -170,6 +502,7 @@ Um pessoa tem uma dívida de R\$ $10.000{,}00$ no cartão de crédito, que cobra
 Uma população de uma determinada bactéria contamina um copo de leite à temperatura ambiente. Suponha que o leite seja considerado impróprio para o consumo se a população do copo for maior ou igual a 16.200 indivíduos. A população de bactérias tem, inicialmente, 200 indivíduos e sua população triplica a cada hora até atingir 40.000 indivíduos. Em quanto tempo a população atingirá 16.200 indivíduos?
 \end{task}
 
+% \clearmargin
 
 
 \begin{task}{Economizando para uma viagem}
@@ -187,7 +520,7 @@ Por exemplo, 3 é o expoente ao qual precisamos elevar a base 2 para obter 8. Di
 
 \begin{description}
 \item[Definição]
-Para dois números reais $a$ e $b$ positivos, o \textit{logaritmo de a em base b}, que denotamos $\log_b a$, é o expoente ao qual a base $b$ deve ser elevada para obtermos $a$. Assim $c=\log_b a$ se, e somente se, $b^c=a$.
+Para dois números reais $a$ e $b$ positivos, o \textit{logaritmo de a em base b}, que denotamos $\log_b a$, é o expoente ao qual a base $b$ deve ser elevada para obtermos $a$. Assim, $c=\log_b a$ se, e somente se, $b^c=a$.
 \end{description}
 
 \begin{observation}{}
@@ -224,17 +557,68 @@ Na atividade "Dívida no cartão"\, temos os logaritmandos $a=15000/10000=1,5$, 
 \end{example}
 
 \begin{observation}{}
-Assim o logaritmo $c = \log_b a$ é o expoente em que a base precisa ser elevada para obtermos o logaritmando, ou seja $b^{\log_b a}=a$.
+Assim, o logaritmo $c = \log_b a$ é o expoente em que a base precisa ser elevada para obtermos o logaritmando, ou seja $b^{\log_b a}=a$.
 \end{observation}
+\clearpage
 
+\begin{sugestions}{Escrevendo os logaritmos}
+{
+	Indica-se que seja reforçado com os estudantes que o logaritmo é o expoente, como na observação do primeiro quadro. Então os estudantes podem praticar individualmente a notação na atividade "Escrevendo os logaritmos", que propõem a identificação dos valores obtidos nas atividades anteriores através dos logaritmos.
+
+	%\tcblower
+	\tcbsubtitle{Cuidado!!!}
+
+	Um distrator apontado na literatura para os logaritmos é que os estudantes buscam operar com $\log_b$ como se fosse um número real per si, por isso o quadro de destaque logo após a atividade, que ressalta também a notação especial para base 10.
+
+	Pode-se comparar esse caso especial com a raiz quadrada, $\sqrt{a}$, na qual o 2 é omitido.
+
+	Dificilmente obtém-se um valor inteiro para um logaritmo em problemas práticos e faz-se necessária a discussão das aproximações. O exemplo estimando logaritmos é conceitualmente um pouco mais elaborado, mas é necessário para dar sentido às aproximações utilizadas.
+}
+{1}{1}
+\end{sugestions}
+\begin{objectives}{Lei de Moore e a base 10}
+{
+	Resolver um problema contextualizado aplicando a noção de logaritmo.
+	%\tcblower
+
+	\tcbsubtitle{Sugestões e discussões}
+	Em seguida indica-se aos alunos o exercício sobre a Lei de Moore. Ao apresentar a solução deve-se aproveitar a oportunidade para utilizar a notação de base 10 omitindo a base.
+}{1}{1}
+\end{objectives}
+% \begin{sugestions}{Lei de Moore e a base 10}
+% {
+% 	Em seguida indica-se aos alunos o exercício sobre a Lei de Moore. Ao apresentar a solução deve-se aproveitar a oportunidade para utilizar a notação de base 10 omitindo a base.
+% }{1}{1}
+% \end{sugestions}
+\begin{answer}{Lei de Moore}
+{
+	Suponhamos que hoje a capacidade computacional seja representada pela constante c. Após 5 anos, teremos $10c$. Após 10 anos, teremos $10 \times (10c) = c \times 10^2$. Após $t$ quinquênios , teremos $c \times 10^t$
+	\begin{enumerate} 
+	\item Queremos chegar a 100 vezes o que é hoje, ou seja, queremos
+	$$
+	t = \log 100 = \log_{10} 100  = 2.
+	$$
+	\item Queremos chegar a 1000 vezes o que é hoje, ou seja, queremos
+	$$
+	t = \log 1000 = \log_{10} 1000  = 3.
+	$$
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Estimando logaritmos}
+{
+	Dificilmente obtém-se valores inteiros para logaritmos em problemas práticos e faz-se necessária a discussão das aproximações. O exemplo estimando logaritmos é conceitualmente um pouco mais elaborado, mas é necessário para dar sentido às aproximações utilizadas.
+}{1}{0}
+\end{sugestions}
 
 \begin{task}{Escrevendo os logaritmos}
 Identifique nas atividades "Bactérias no leite"\, e "Economizando para uma viagem"\, os logaritmandos, as bases e as aproximações de logaritmos encontradas na tabela como respostas e escreva-os utilizando a notação simbólica $\log_b a \approx c$.
 \end{task}
 
 
-\begin{observation}{}
-Cuidado!!! $\log_b a$ é um número, mas $\log_b$ não é. No entanto, para a base 10, existe a convenção de omitirmos a base. Desse modo que $\log 100$ significa $\log_{10} 100$ (que é igual a 2). De modo geral $\log a =\log_{10} a$.
+\begin{observation}{Cuidado!!!}
+$\log_b a$ é um número, mas $\log_b$ não é. No entanto, para a base 10, existe a convenção de omitirmos a base. Desse modo que $\log 100$ significa $\log_{10} 100$ (que é igual a 2). De modo geral $\log a =\log_{10} a$.
 \end{observation}
 
 
@@ -252,7 +636,7 @@ Logaritmos de base 1 não fazem sentido! Qual seria $\log_1 3$? Seria o expoente
 \end{observation}
 
 \begin{example}{Estimando logaritmos}
-Nem sempre conseguimos calcular um logaritmo exatamente e precisamos aproximá-lo. Por exemplo sabemos que $\log_5 25 = 2$ e $\log_5 125 = 3$, porque $5^2=25$ e $5^3 = 125$. Mas qual seria o valor de $\log_5 100$? Ou seja, qual o expoente que devemos elevar $5$ para obtermos $100$? Do nosso estudo das funções exponenciais, sabemos que $5^x$ é crescente (pois a base é maior do que 1). Como $25 < 100$, o expoente em que precisamos elevar $5$ para obtermos $100$ é maior do que $2$, ou seja $\log_5 100 >2$. De modo análogo, como $125 > 100$, temos $\log_5 100<3$. Assim sabemos que $2<\log_5 100<3$.
+Nem sempre conseguimos calcular um logaritmo exatamente e precisamos aproximá-lo. Por exemplo sabemos que $\log_5 25 = 2$ e $\log_5 125 = 3$, porque $5^2=25$ e $5^3 = 125$. Mas qual seria o valor de $\log_5 100$? Ou seja, qual o expoente que devemos elevar $5$ para obtermos $100$? Do nosso estudo das funções exponenciais, sabemos que $5^x$ é crescente (pois a base é maior do que 1). Como $25 < 100$, o expoente em que precisamos elevar $5$ para obtermos $100$ é maior do que $2$, ou seja $\log_5 100 >2$. De modo análogo, como $125 > 100$, temos $\log_5 100<3$. Assim, sabemos que $2<\log_5 100<3$.
 
 \begin{figure}[H]
 \centering
@@ -270,11 +654,42 @@ Nem sempre conseguimos calcular um logaritmo exatamente e precisamos aproximá-l
 \end{tikzpicture}
 \end{figure}
 
-Assim a distância do $\log_5 100$ para $2$ ou para $3$ é menor do que $1$ e poderíamos aproximá-lo por $2$ ou $3$ com erro menor do que $1$. Poderíamos, também, aproximar $\log_5 100$ por $2{,}5$ com erro menor do que $0{,}5$. 
+Assim, a distância do $\log_5 100$ para $2$ ou para $3$ é menor do que $1$ e poderíamos aproximá-lo por $2$ ou $3$ com erro menor do que $1$. Poderíamos, também, aproximar $\log_5 100$ por $2{,}5$ com erro menor do que $0{,}5$. 
 \end{example}
 
-\practice{logaritmos}
 
+\def\currentcolor{session2}
+\begin{texto}
+{\section{Praticando: Logaritmos}
+
+Essa seção contém exercícios que podem ser resolvidos fora da sala da aula.
+
+Os primeiros pretendem que os cálculos sejam apoiados na definição de logaritmo.
+
+Os últimos têm como propósito a utilização de alguma ferramenta (a tabela ou o applet de GeoGebra) para o cálculo de logaritmos. Na prática, atualmente, recorre-se frequentemente à calculadora para o cálculo de logaritmos e o exercício inicia o estudante a essa prática.
+
+Antigamente recorria-se a tabelas ou réguas de cálculo para encontrar-se os valores de logaritmos e mais informações históricas sobre essas práticas podem ser encontradas nas seções \textit{Para saber +: sem ferramentas de cálculo} e \textit{Para saber +: a régua de cálculo}.
+}
+\end{texto}
+\begin{objectives}{Cálculos sem a calculadora}
+{
+Praticar a definição de logaritmo e o seu cálculo através do conceito propriamente dito.
+}{1}{0}
+\end{objectives}
+
+\begin{answer}{Cálculos sem a calculadora}
+{
+	\begin{enumerate}
+	\item $\log_2 8 = 3$ pois $2^3 = 8$;
+	\item $\log_{1/2} 32 = -5$ pois $(1/2)^{-5} = 2^5 = 32$;
+	\item $\log 1000= 3$ pois $10^3 = 1000$;
+	\item Como $2^3=8 <10 <2^4 =16$, temos $\log_2 10$ pode ser aproximado por 3 ou 4 com erro menor do que 1;
+	\item Como $10 ^2 = 100 < 113 < 10^3 = 1000$, temos $\log 113$ pode ser aproximado por 2 ou 3 com erro menor do que 1;
+	\item Como $3^3= 27 <30 <3^4 =81$, temos $\log_3 30$ pode ser aproximado por 3 ou 4 com erro menor do que 1.
+	\end{enumerate}
+}{1}
+\end{answer}
+\practice{logaritmos}
 
 \begin{task}{cálculos sem a calculadora}
 
@@ -297,6 +712,26 @@ Calcular logaritmos manualmente pode ser muito laborioso, por isso utiliza-se, p
 \noindent\fbox{\includegraphics[height=25mm]{{AelevadoB}.png}}\hspace{15mm}\includegraphics[height=30mm]{QRcode_AelevadoB.png}
 \caption{Ilustração do applet e QR code.}
 \end{figure}
+
+\clearpage
+
+\begin{objectives}{Cálculos com ferramentas computacionais}
+{
+	Encontrar o valor dos logaritmos em bases distintas através de tabelas e/ou de aplicativos.
+	}{1}{1}
+\end{objectives}
+\begin{answer}{Cálculo com ferramentas computacionais}
+{
+	\begin{enumerate}
+	\item $\log_{1,41} 4 \approx 4,03$;
+	\item $\log_{2,71} 4 \approx 1,39$;
+	\item $\log_{2} 5 \approx 2,32$;
+	\item $\log_{4} 7 \approx 1,4$;
+	\item $\log_{2,71} 9 \approx 2,2$;
+	\item $\log_{3} 7 \approx 1,77$.
+	\end{enumerate}
+}{1}
+\end{answer}
 
 \begin{task}{cálculos com ferramentas computacionais}
 
@@ -342,9 +777,88 @@ Base & $\bm{1}$ & $\bm{2}$ & $\bm{3}$ & $\bm{4}$ & $\bm{5}$ & $\bm{6}$ & $\bm{7}
 \label{tabela_logs}
 \end{table}
 
+\marginpar{\vspace{2em}}
+\begin{texto}
+{\def\currentcolor{cor1}
+	\section{Exercícios}
+	\subsection{Objetivos gerais}
+	\begin{itemize}
+	\item Consolidar o conceito de logaritmo através do cálculo por meio da definição.
+	\item Reconhecer os papeis da base, do logaritmando e do logaritmo e calcular os logaritmos.
+	\end{itemize}
+
+	\subsection{Sugestões e discussões}
+	Essa seção contém exercícios que podem ser resolvidos fora da sala da aula.
+
+	As atividades pretendem fixar os conceitos adquiridos e, por isso trazem novamente exercícios para os quais são necessários cálculos pela definição e cálculos com ferramentas (computacionais ou tabelas).
+}
+\end{texto}
 \exercise
 
+\begin{answer}{Exercícios}
+{
+\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
+\setlist[enumerate,2]{label=\emph{\alph*)},ref=\theenumi.\emph{\arabic*}}
+\setlist[enumerate,3]{label=\emph{\roman*)},ref=\theenumi.\emph{\roman*}}
+	\begin{enumerate}
+	\item
+		\begin{enumerate}
+		\item $\log_2 64 = 6$, pois $2^6 = 64$;
+		\item $\log_{3} 27 = 3$, pois $3^{3} = 27$;
+		\item $\log_{3} 81 = 4$, pois $(3)^{4} = 81$;
+		\item $\log_{1/5} 625 = -4$, pois $(1/5)^{-4} =  5^4 = 625$;
+		\item $\log 0,0001 = -4$, pois $10^{-4} =1/10^4 = 0,0001 $;
+		\item $\log_{27} 243 = 5/3$, pois $27=3^3$ e $243 = 3^5$, assim, $27^{5/3} =(3^3)^{5/3}= 3^5 = 243$;
+		\item $\log_{1/4} 32 = 5/2$, pois $4=2^2$ e $32 = 2^5$, assim, $4^{5/2} =(2^2)^{5/2}= 2^5 = 32$.
+		\end{enumerate}
 
+	\item 
+		\begin{enumerate}
+		\item[] Não há cálculos a realizar, apenas encontrar os valores na tabela 2 ou através do applet. 
+		\item $x$ é a base, que deve igualar 2,71;
+		\item $x$ é o logaritmando, que deve igualar 8;
+		\item $x$ é a base, que deve igualar 1,41;
+		\item $x$ é o logaritmo, que deve igualar 1,46;
+		\item $x$ é o logaritmo, que deve igualar 0;
+		\item $x$ é o logaritmando, que deve igualar 6.
+		\end{enumerate}
+	
+    \item
+    Devemos encontrar $t$ de forma que
+    \begin{align*}
+    & 5000 \times (1,0035)^t = 5141,72
+    \Leftrightarrow (1,0035)^t = 1,028388.
+    \end{align*}
+    Pela tabela vemos que t = 8 meses.
+
+    \item 
+    O tempo que a pessoa ficou sem pagar é calculado por
+    \begin{align*}
+    t =& \log_{1{,}14} (2310{,}50/1200)= \log_{1{,}14} 1{,}925.
+    \end{align*}
+    De acordo com a tabela $t = 5$ meses.
+
+    Se a dívida tivesse a taxa de 3$\%$,
+    \begin{align*}
+    D =& 1200 \times (1,03)^5= 1391,
+    \end{align*}
+    ela estaria em R$\$1391{,}12$ após 5 meses.
+	\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Problemas contextualizados}
+{
+	Resolver questões práticas envolvendo logaritmos no contexto de matemática financeira, auxiliando no desenvolvimento da habilidade
+
+	\textit{EM13MAT305 - Resolver e elaborar problemas com funções logarítmicas no contexto de matemática financeira.}
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Problemas contextualizados}
+{
+	Os exercícios contextualizados retornam ao contexto importantíssimo de matemática financeira, colaborando no desenvolvimento da habilidade EM13MAT305, apesar de a formulação não trazer explicitamente uma função, pois temos implicitamente montantes que dependem de variáveis de tempo.
+}{1}{0}
+\end{sugestions}
 \begin{enumerate}
 
 \item {}\label{calcule}
@@ -360,9 +874,10 @@ Calcule, usando a definição, os seguintes logaritmos:
 \item $log_{1/4} 32$.
 \end{enumerate}
 
+\needspace{.15\textheight}
 \item{}\label{identifique}
 
-Identifique, em cada caso, se $x$ é a base, o logaritmo  ou o logaritmando e utilize o applet do geogebra ou a Tabela \ref{tabela_logs} para encontrar o valor de $x$:
+Identifique, em cada caso, se $x$ é a base, o logaritmo  ou o logaritmando e utilize o applet do geogebra ou a \hyperref[tabela_logs]{tabela \ref{tabela_logs}} para encontrar o valor de $x$:
 \begin{enumerate}
 \item $\log_{x} 10 = 2{,}31$;
 \item $\log_{2{,}71} x = 2{,}09$;
@@ -371,7 +886,7 @@ Identifique, em cada caso, se $x$ é a base, o logaritmo  ou o logaritmando e ut
 \item $\log_{2{,}71} 1= x$;
 \item $\log_{2} x= 2{,}58$.
 \end{enumerate}
-\end{enumerate}
+\end{enumerate} 
 
 
 Se não tiver acesso ao applet, as atividades seguintes podem ser resolvidas utilizando a tabela seguinte.
@@ -410,7 +925,162 @@ Uma pessoa que devia R$\$ 1.200,00$ no cartão de crédito, com uma taxa de $14\
 
 \end{enumerate}
 
+\clearpage
+\def\currentcolor{session1}
+\begin{texto}
+{
+	\section{Explorando: Logaritmo do Produto}
+	\subsection{Objetivos gerais}
+	\begin{itemize}
+	\item Observar padrões nos valores dos logaritmos quando os logaritmandos são multiplicados por um número natural.
+	\item Inferir a propriedade do logaritmo do produto a partir da observação dos valores tabelados.
+	\item Sintetizar a propriedade do logaritmo a partir da sua validade nos exemplos específicos.
+	\end{itemize}
 
+	\subsection{Sugestões e discussões}
+
+	A \textit{descoberta} de uma propriedade acontece, muitas vezes, através da observação de sua validade em exemplos específicos. Acreditamos que auxiliar os estudantes a descobrir a propriedade pode ser preferível ao simplesmente apresentá-la. Levamos isso ao encontro da proposta da Educação Matemática Realista, no sentido de partir de raciocínios informais e buscar amadurecê-los até a formalização.
+
+	Nesse espírito propõe-se a atividade \textit{"Relações entre os logaritmos"}, com o intuito de induzi-los a observar a propriedade naturalmente. Segue-se com um \textit{Para refletir}, que pode ser realizado como uma discussão em grupo, moderada pelo/a professor/a.
+	\vspace{2em}
+}
+\end{texto}
+\begin{answer}{Relações entre os logaritmos}
+{
+	\begin{enumerate}
+	\item $\log_2 2 = 1$, $\log_2 4 = 2$, $\log_2 8 = 3$ e $\log_2 16 = 4$.
+	\item $\log_2 3 \approx 1{,}58$, $\log_2 6 \approx 2{,}58$, $\log_2 12 \approx 3{,}58$ e $\log_2 24 \approx 4{,}58$.
+	\item $\log_3 3 = 1$, $\log_3 9 = 2$ e $\log_3 27 = 3$.
+	\item $\log_2 3 \approx 1{,}58$, $\log_2 5 \approx 2{,}32$ e $\log_2 15 \approx 3{,}9$.
+	\end{enumerate}
+
+	\tcbsubtitle{Para refletir}
+
+	Espera-se respostas dos estudantes como "Multiplicar por dois aumenta o resultado em 1 no item a), e também no b)", "Multiplicar por três aumenta o resultado em 1 no item c)". No item d) pode ser necessária a mediação do/a professor/a para observar-se que $\log _2 15$ é a soma de $\log _2 3$ e $\log _2 5$. A conclusão da atividade poderia ser em raciocínios como "Ao multiplicarmos (o logaritmando) soma-se o valor do logaritmo", contudo pode ser necessária a mediação novamente.
+}{1}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Desenvolvimento bacteriano}
+{
+	A atividade \textit{"Desenvolvimento bacteriano"} busca destacar a propriedade do produto. Recomenda-se que, ao resolver os exercícios com os estudantes, seja ressaltado que no item b) dobramos o logaritmando e a resposta aumentou em 1, no item c) o logaritmando é multiplicado por 32 e a resposta aumenta em 5, que é $\log_2 32$; e no item d) o logaritmando é multiplicado novamente por 32 e a resposta aumenta em 5 (que é o logaritmo de 32 em base 2).
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Desenvolvimento bacteriano}
+{
+	A população após $n$ meses é $P(n) = 100 \times 2^n$, assim,
+	\begin{enumerate}[label = \alph*)]
+	\item $3200 = P(n) = 100 \times 2^n \Rightarrow 2^n = 32 \Rightarrow n=5$.
+	\item $6400 = P(n) = 100 \times 2^n \Rightarrow 2^n = 64 \Rightarrow n=6$.
+	\item $204800 = P(n) = 100 \times 2^n \Rightarrow 2^n = 2048 = 32 \times 64 \Rightarrow n=5+6=11$.
+	\item $6553600 = P(n) = 100 \times 2^n \Rightarrow 2^n = 65536 = 2048 \times 32 \Rightarrow n=11+5=16$.
+	\end{enumerate}
+}{0}
+\end{answer}
+\def\currentcolor{session4}
+\begin{objectives}{Teorema do logaritmo do produto}
+{
+	Comprovar a validade da propriedade do logaritmo do produto.
+	%\tcblower
+
+	\tcbsubtitle{Teorema do logaritmo do quociente}
+	Comprovar a validade da propriedade do logaritmo do quociente.
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Teorema do logaritmo do produto}
+{
+	Recomenda-se a demonstração da propriedade, pois é saudável ao estudante que questione as informações que lhe são apresentadas, mas que também seja capaz de buscar evidências para sua validade ou não. Também recomenda-se que seja ressaltada a necessidade de questionar as próprias conjecturas e não acreditar em poucos exemplos pontuais como confirmação da validade de fatos.
+
+	Por fim a demonstração finaliza a investigação da propriedade e relaciona-se à 5ª competência da BNCC:
+
+	\textit{Investigar e estabelecer conjecturas a respeito de diferentes conceitos e propriedades matemáticas, empregando estratégias e recursos, como observação de padrões, experimentações e diferentes tecnologias, identificando a necessidade, ou não, de uma demonstração cada vez mais formal na validação das referidas conjecturas.}
+
+	\tcbsubtitle{Cuidado!!!}
+	A literatura sobre o ensino de logaritmos apresentada na introdução traz o diagnóstico: os estudantes buscam tratar "$\log_a$" como um número per si e assumem a validade da distributividade, que é incorreta. Por isso recomenda-se o destaque que tal propriedade não é válida.
+}{1}{0}
+\end{sugestions}
+\clearmargin
+% \marginpar{\vspace{-\baselineskip}}
+\begin{sugestions}{Cuidado!!!}
+{
+	Recomenda-se destacar que a soma/subtração de logartimos não é igual ao logaritmo da soma/subtração. A literatura aponta que os estudantes, com frequência, assumem que podem utilizar a "distributividade"\, no logaritmo, que é incorreta.
+	%\tcblower
+
+	\tcbsubtitle{Valores além da tabela}
+
+	Ainda desenvolvendo a investigação das propriedades do logaritmo, chegamos a uma aplicação na matemática, que é o cálculo dos logaritmos de números além daqueles nas tabelas.
+
+	Posteriormente, será realizada a exploração dessas propriedades na resolução de problemas práticos, mas, conforme indicado pelos resultados do pisa (\cite{OCDE2016}), a exploração da matemática pura também é importante, inclusive para a resolução de problemas aplicados. Assim, essa etapa do desenvolvimento do conteúdo parece adequada para a exploração dessas propriedades.
+
+	\tcbsubtitle{Para refletir}
+
+	Recomenda-se a reflexão com os estudantes sobre o logaritmo da potência, que é uma propriedade fundamental na resolução de problemas práticos, pois é amplamente utilizada para "retirar" a variável do expoente de alguma equação. Recomenda-se que a atividade seja desenvolvida como uma discussão em grupo com os estudantes.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Além da tabela}
+{
+	\begin{enumerate}
+	\item $\log_2 64 = \log_2 16 \times 4= \log_2 16 + \log_2 4 \approx 4+2 =6$;
+	\item $\log_2 48 = \log_2 24 \times 2= \log_2 24 + \log_2 2 \approx 4{,}58+1 =5{,}58;$
+	\item $\log_2 60 = \log_2 30 \times 2= \log_2 30 + \log_2 2 \approx 4{,}9+1 =5{,}9;$
+	\item $\log_2 3/2 = \log_2 3 - \log_2 2 \approx 1{,}58-1 =0{,}58;$
+	\item $\log_2 600/1024 = \log_2 75/128= \log_2 3 \times 25- \log_2 8 \times 16= \log_2 3 + \log_2 25- (\log_2 8 +\log_2 16) \approx 1{,}58 + 4{,}64-(3+4)= 6{,}22-7 = -0{,}78.$
+	\end{enumerate}
+
+\tcbsubtitle{Para refletir}
+
+Recomenda-se a reflexão com os estudantes sobre o logaritmo da potência,
+que é uma propriedade fundamental na resolução de problemas
+práticos, pois é amplamente utilizada para ”retirar”a variável do
+expoente de alguma equação. Recomenda-se que a atividade seja desenvolvida
+como uma discussão em grupo com os estudantes.
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Casas decimais}
+{
+	\begin{itemize}
+	\item Aplicar a propriedade do logaritmo da potência para encontrar aproximações inteiras de logaritmos.
+	\item Explorar o conceito de erro nas aproximações dos logaritmos.
+	\end{itemize}
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Casas decimais}
+{
+	Infelizmente o cálculo de logaritmos não produz, com frequência, resultados inteiros ou fracionais. Recomenda-se, por isso, que erros e aproximações sejam discutidos, na medida do possível, conforme for necessário. Também a BNCC recomenda essas considerações na habilidade:
+
+	\textbf{(EM13MAT313)} \textit{Utilizar, quando necessário, a notação científica para expressar uma medida, compreendendo as noções de algarismos significativos e algarismos duvidosos, e reconhecendo que toda medida é inevitavelmente acompanhada de erro}.
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Ordens de grandeza}
+{
+	\begin{enumerate}
+	\item Como $10^0=1 < 6{,}7 <10 =10^1$ e $f(t)=10^t$ é crescente, temos $0 < \log 6{,}7 < 1$ e sua parte inteira (e sua ordem de grandeza) é $0$.
+	\item Como $10^1=10 < 23 <100 =10^2$ e $f(t)=10^t$ é crescente, temos $1 < \log 23 < 2$ e sua parte inteira (e sua ordem de grandeza) é $1$.
+	\item Como $10^2=100 < 179{,}28 <1000 =10^3$ e $f(t)=10^t$ é crescente, temos $2 < \log 179{,}28 < 3$ e sua parte inteira (e sua ordem de grandeza) é $2$.
+	\item Como $10^3=1000 < 8341 <10000 =10^4$ e $f(t)=10^t$ é crescente, temos $3 < \log 8341 < 4$ e sua parte inteira (e sua ordem de grandeza) é $3$.
+	\end{enumerate}
+	}{0}
+\end{answer}
+\begin{sugestions}{Você sabia?}
+{
+	Aproveitamos a discussão sobre aproximações para introduzir a noção de ordem de grandeza, que está intimamente relacionada à notação científica, e sua relação com o logaritmo de base 10: a ordem de grandeza pode ser definida como a parte inteira do logaritmo em base 10, também chamada de \textit{característica} (a parte decimal do logaritmo é chamada de \textit{mantissa}). Destacamos, ainda, que o exemplo trazendo o Mol poderia ser uma oportunidade para a realização de uma atividade interdisciplinar com o/a professor/a de química.
+}{1}{0}
+\end{sugestions}
+\begin{objectives}{Teorema do logaritmo da potência}
+{
+	Verificar a validade da propriedade do logaritmo da potência para expoentes reais.
+}{1}{0}
+\end{objectives}
+\clearpage
+\begin{sugestions}{Teorema do logaritmo da potência}
+{
+	Por fim, o material traz a exploração do logaritmo da potência novamente, pois  ela se aplica aqui para quaisquer reais positivos, e não somente a naturais. Recomenda-se que o/a professor/a ressalte que isso é uma generalização da propriedade, como vista anteriormente, e que não se deve assumir que as generalizações sempre são válidas, sendo necessário questionar sua validade também no contexto maior.
+
+	Recomenda-se a observação de que essa propriedade é fundamental, na forma apresentada, pois é utilizada amplamente nas aplicações para "baixar" o expoente e transformar uma equação exponencial em linear, que pode ser facilmente resolvida.
+
+	O exemplo \textit{Crescimento populacional} ilustra esse uso do logaritmo. Pode ser necessária a mediação, assegurando que é permitido aplicar o logaritmo nos dois lados de uma equação, mantendo a igualdade (pois o logaritmo é uma função e estamos aplicando-o no mesmo valor ("$=$") nos dois lados). Pode-se ressaltar que isso não é permitido somente para o logaritmo, mas que pode ser feito para qualquer \textit{função}.
+}{1}{1}
+\end{sugestions}
 \explore{Logaritmo do produto}\label{prod_logaritmo}
 
 Existem algumas propriedades que auxiliam na resolução de problemas envolvendo logaritmos. Uma dessas propriedades é chamada de logaritmo do produto e estudaremos ela a seguir.  Vamos explorar os valores dos logaritmos e buscar relações entre eles.%Veremos que essas propriedades estão relacionadas com o surgimento dos logaritmos e sua aplicação inicial: facilitar cálculos de multiplicação.
@@ -505,7 +1175,7 @@ Iniciamos utilizando a tabela de potências racionais de 2 a seguir para buscar 
 
 
 \begin{task}{Relações entre os logaritmos}
-Utilize a Tabela \ref{potencias2_log} para encontrar os valores (aproximados) dos seguintes logaritmos em seu caderno:
+Utilize a \hyperref[potencias2_log]{tabela \ref{potencias2_log}} para encontrar os valores (aproximados) dos seguintes logaritmos em seu caderno:
 \begin{enumerate}
 \item $\log_2 2$, $\log_2 4$, $\log_2 8$ e $\log_2 16$.
 \item $\log_2 3$, $\log_2 6$, $\log_2 12$ e $\log_2 24$.
@@ -537,8 +1207,8 @@ Observamos nas atividades anteriores, que se conhecemos os logaritmos de dois n�
 
 
 \begin{description}
-\item[Teorema]\label{teo_log_prod}
-[do logaritmo do produto] Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos
+\item[Teorema do logaritmo do produto]\label{teo_log_prod}
+Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos
 $$
 \log_a(bc) = \log_a b + \log_a c.
 $$
@@ -568,8 +1238,8 @@ $$
 
 
 \begin{description}
-\item[Teorema]\label{teo_log_div}
-[do logaritmo do quociente] Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos
+\item[Teorema do logaritmo do quociente]\label{teo_log_div} 
+Dados números reais positivos $a,b$ e $c$, com $a \neq 1$, temos
 $$
 \log_a(b/c) = \log_a b - \log_a c.
 $$
@@ -600,7 +1270,7 @@ $$
 
 
 \begin{example}{Valores além da tabela}
-Qualquer tabela será limitada, mas podemos utilizar as propriedades dos logaritmos de valores que estão além da tabela. Por exemplo, utilizando a Tabela \ref{potencias2_log}, podemos calcular (aproximações) de logaritmos de números maiores que os tabelados:
+Qualquer tabela será limitada, mas podemos utilizar as propriedades dos logaritmos de valores que estão além da tabela. Por exemplo, utilizando a \hyperref[potencias2_log]{tabela \ref{potencias2_log}}, podemos calcular (aproximações) de logaritmos de números maiores que os tabelados:
 $$
 \log_2 300 = \log_2 15 \times 20 = \log_2 15 +\log_2 20 \approx 3{,}9 + 4{,}32 = 8{,}22;
 $$
@@ -612,7 +1282,7 @@ $$
 
 
 \begin{task}{Além da tabela}
-Utilize a Tabela \ref{potencias2_log} para encontrar os valores dos seguintes logaritmos:
+Utilize a \hyperref[potencias2_log]{tabela \ref{potencias2_log}} para encontrar os valores dos seguintes logaritmos:
 \begin{enumerate}
 \item $\log_2 64$;
 \item $\log_2 48$;
@@ -659,16 +1329,15 @@ A \textbf{ordem de grandeza} de um determinado valor é o expoente de dez na not
 $$
 6{,}02214076 \times 10^{23},
 $$
-assim a ordem de grandeza do Mol é $23$, que é a parte inteira de $\log 602214076000000000000000 \approx 23{,}7798$, com $4$ casas decimais de precisão.
+assim, a ordem de grandeza do Mol é $23$, que é a parte inteira de $\log 602214076000000000000000 \approx 23{,}7798$, com $4$ casas decimais de precisão.
 \end{knowledge}
 
 Na atividade \textit{"Ordens de grandeza"}, utilizamos a propriedade do logaritmo de uma potência inteira, mas é possível observarmos que essa propriedade vale para expoentes reais quaisquer, e isso será fundamental nas aplicações:
 
  
-
 \begin{description}
-\item[Teorema]\label{teo_log_pot}
-[do logaritmo da potência] Dados números reais positivos $a,b$, com $a \neq 1$, e um número real qualquer $t$, temos
+\item[Teorema do logaritmo da potência]\label{teo_log_pot} 
+Dados números reais positivos $a,b$, com $a \neq 1$, e um número real qualquer $t$, temos
 $$
 \log_a b^t = t\log_a b.
 $$
@@ -715,9 +1384,98 @@ P_t &= P_0 \times (1{,}07)^t = 2 P_0\\
 \end{align*}
 Então a cidade levaria aproximadamente $10$ anos para dobrar a população.
 \end{example}
+\clearpage
+\def\currentcolor{cor1}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Exercícios}
+{
+	\exerciselist
+	\begin{enumerate}
+	\item 
+		\begin{enumerate}
+		\item $\log 6 = \log 3+ \log 2 \approx 0{,}778$;
+		\item $\log 12 = \log 6+ \log 2 \approx 1{,}079$;
+		\item $\log 18 = \log 6+ \log 3 \approx 1{,}255$;
+		\item $\log 30 = \log 3+ \log 10 \approx 1{,}477$;
+		\item $\log (3/2) = \log 3 - \log 2 \approx 0{,}176$;
+		\item $\log (2/3) = \log 2 - \log 3 \approx -0{,}176$;
+		\item $\log 3{,}2 = 5\log 2 - \log 10 \approx 0{,}505$;
+		\item $\log 0{,}81 = 4\log 3 - 2\log 10 \approx 0{,}092$;
+		\item $\log 0{,}002 = \log 2 - 3\log 10 \approx 2{,}699$.
+		\end{enumerate}
+	\Item
+		\begin{align*}
+		&B(t) = 10 \times 3^{t-1} \Rightarrow  810 = 10 \times 3^{t-1}\Rightarrow  81 = 3^{t-1}\\
+		&\Rightarrow  3^4 = 3^{t-1}\Rightarrow  t-1 =4\Rightarrow  t =5.
+		\end{align*}
+		
+	\Item
+		\begin{align*}
+		&V(t) = 6{,}75 \times (1{,}05)^{t-1}\Rightarrow  13{,}5 = 6{,}75 \times (1{,}05)^{t-1}\\
+		&\Rightarrow  13{,}5/6{,}75 =(1{,}05)^{t-1}\\
+		&\Rightarrow  2 = (1{,}05)^{t-1}\Rightarrow  \log 2 = \log (1{,}05)^{t-1}\Rightarrow  \log 2 = (t-1)\times \log (1{,}05)\\
+		&\Rightarrow  0{,}3 = (t-1)\times 0{,}02\Rightarrow  0{,}3/0{,}02 = (t-1)\Rightarrow  t-1=15\Rightarrow  t = 16.
+		\end{align*}
+		Logo, para $t = 16$, temos $2010 + 16 = 2026$.
 
+	\item
+		O dinheiro aplicado deve ser igual ao valor do carro, ou seja, $Md = Mc$.
+		\begin{align*}
+		&5000(1+0{,}28)^{t/2} = 40000(1-0{,}19)^{t/2} \\
+		&\Rightarrow  5(1+0{,}28)^{t/2} = 40(1-0{,}19)^{t/2}\\
+		&\Rightarrow  (1{,}28)^{t/2} = 8(0{,}81)^{t/2}\Rightarrow  \log (1{,}28)^{t/2} = \log 8(0{,}81)^{t/2}\\
+		&\Rightarrow  \frac{t}{2}\log (1{,}28) = \log 8 + \frac{t}{2}\log(0{,}81)\\
+		&\Rightarrow  \frac{t}{2}\log (128/100) = \log 8 + \frac{t}{2}\log(81/100)\\
+		&\Rightarrow  \frac{t}{2}(\log 128-\log 100) = \log 8 + \frac{t}{2}(\log81-\log 100)\\
+		&\Rightarrow  \frac{t}{2}(\log 2^7-\log 10^2) = \log 2^3 + \frac{t}{2}(\log 3^4-\log 10^2)\\
+		&\Rightarrow  \frac{t}{2}(7\log 2-2\log 10) = 3\log 2 + \frac{t}{2}(4\log 3-2\log 10)\\
+		&\Rightarrow  \frac{t}{2}(7\times 0{,}3-2\times 1) = 3 \times 0{,}3 + \frac{t}{2}(4 \times 0{,}48-2\times 1)\\
+		&\Rightarrow  \frac{t}{2}(0{,}1) = 0{,}9 - \frac{t}{2}(0{,}08)\Rightarrow  \frac{t}{2}(0{,}18) = 0{,}9\Rightarrow  t = 0{,}9/0{,}09 = 10.
+		\end{align*}
+		Assim, serão necessários $10$ períodos de $2$ anos, ou seja $20$ anos, para que Pedro possa comprar o carro de Jorge.
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{	
+	\exerciselist
+	\begin{enumerate}\setcounter{enumi}{4}
+		\Item
+		\begin{align*}
+		&Q(t) = 750 \times (0{,}6)^t\Rightarrow 150 = 750 \times (0{,}6)^t\Rightarrow \frac{150}{750} = (0{,}6)^t\\
+		& \Rightarrow 0{,}2= (0{,}6)^t \Rightarrow\log 0{,}2= \log (0{,}6)^t\\
+		& \Rightarrow \log (2/10)= t \log(2\times 3 / 10) \\
+		& \Rightarrow \log 2 - \log 10= t (\log 2 +\log 3 - \log 10)\\
+		& 0{,}3 -1 = t(0{,}3+0{,}48-1) \Rightarrow-0{,}7 = -0{,}22 \times t\\
+		&\Rightarrow t=\frac{-0{,}7}{-0{,}22}\approx 3{,}18. 
+		\end{align*}
+		Assim, o tempo necessário será de aproximadamente $3{,}18$ horas ou $3h$ e $11min$.
+
+		\Item
+		\begin{align*}
+		&12500 = 10000(1+0{,}01)^t\Rightarrow 1{,}25 = 1{,}01^t\Rightarrow \log 1{,}25 = \log 1{,}01^t\\
+		&\Rightarrow \log (125/100) = t\log (101/100)\\
+		&\Rightarrow \log 125 -\log 100 = t(\log 101 -\log 100)\\
+		&\Rightarrow \log 5^3 -\log 10^2 = t(\log 101 -\log 10^2)\\
+		&\Rightarrow 3\log 5 -2\log 10 = t(\log 101 -2\log 10)\\
+		&\Rightarrow 3\times0{,}7 -2 = t(2{,}004 -2)\Rightarrow 0{,}1 = t(0{,}004)\\
+		&\Rightarrow t = 0{,}1/0{,}004 = 25.
+		\end{align*}
+		Assim, serão necessários $25$ meses para conseguir o montante necessário para a reforma.
+
+		\Item
+		\begin{align*}
+		&0{,}2 = 0{,}5 \times 2^{-t}\Rightarrow 0{,}2/0{,}5 = 2^{-t}\Rightarrow 0{,}4 = 2^{-t}\\
+		&\Rightarrow \log (4/10) =\log 2^{-t}\Rightarrow \log 4- \log 10 = -t \log 2 \\
+		&\Rightarrow 2 \times 0{,}3 - 1 = -0{,}3 t\\
+		&\Rightarrow t= \frac{-0{,}4}{-0{,}3} = 1{,}3\overline{3}
+		\end{align*}
+		Assim, o motorista deverá esperar $1{,}3\overline{3} = 1h$ $20min$.
+	\end{enumerate}
+}{1}
+\end{answer}
 \exercise
-
 
 \begin{enumerate}
 
@@ -795,17 +1553,72 @@ Quando um paciente ingere um medicamento, a droga entra na corrente sanguínea e
 \end{enumerate}
 \end{enumerate}
 
+\cleardoublepage
+
+\def\currentcolor{session1}
+\begin{texto}
+{
+\section{Explorando: Mudança de Base}
+\subsection{Objetivos gerais}
+\begin{itemize}
+\item Investigar a aplicação de logaritmos em diferentes bases na solução de problemas.
+\item Observar que a propriedade da mudança de base surge naturalmente dessa investigação.
+\end{itemize}
+\subsection{Sugestões e discussões}
+É comum, no ensino de logaritmos, que eles sejam apresentados como um método para "baixar", uma incógnita do expoente utilizando a propriedade do logaritmo da potência. Essa é uma aplicação importante dos logaritmos, mas não recomenda-se que a discussão se reduza a isso. Todavia há um ponto a ser explorado nessa aplicação: podemos escolher a base do logaritmo que será utilizada.
+
+Utilizando a base induzida pelo problema (que é $1{,}5$ no exemplo "Uma doença infecciosa") e comparando o resultado obtido ao utilizarmos base $10$, pode-se observar que obtém-se o mesmo resultado através de uma ferramenta computacional.
+
+Aproveitamos esse \textit{insight} para concluirmos a validade da propriedade nesse caso particular (assumindo que a solução do problema é única, o que está frequentemente implícito em diversos problemas). Recomenda-se que o/a professora desenvolva esse exemplo cuidadosamente com os estudantes.
+}
+\end{texto}
+
+\clearmargin
+\begin{sugestions}{Resolvendo com bases distintas}
+{
+	Sugere-se a que os estudantes desenvolvam a atividade para que experimentem o surgimento da propriedade e reforcem a técnica utilizada na solução do exemplo.
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Resolvendo com bases distintas}
+{
+	Calculando com base $10$:
+	\begin{align*} &10 \times 2^t = 2000\\
+	\Rightarrow& t\log 2 = \log 200\\
+	\Rightarrow& t = \frac{\log 200}{\log 2}\\
+	& = \frac{\log 2 + 2}{\log 2}= \frac{2{,}3}{0{,}3} \approx 7{,}\overline{6}.
+	\end{align*}
+	Calculando com base $2$:
+	\begin{align*} &10 \times 2^t = 2000\\
+	\Rightarrow& t\log_{2} 2 = \log_{2} 200\\
+	\Rightarrow& t = \log_{2} 200  = 1+2\log_2 10 \approx 7{,}66.
+	\end{align*}
+}{1}
+\end{answer}
+\begin{objectives}{Para refletir}
+{
+	\begin{itemize}
+	\item Compreender a estratégia utilizada na atividade como um método para realizar cálculos.
+	\item Entender que cálculos com logaritmos em quaisquer bases podem ser realizados a partir do conhecimento dos valores dos logaritmos em uma base determinada.
+	\end{itemize}
+}{1}{0}
+\end{objectives}
+\begin{answer}{Para refletir}
+{
+	Espera-se que os estudantes concluam, como no exemplo anterior, que 
+	\begin{equation*}
+	\log_2 200 = \dfrac{\log 200}{\log 2}.
+ 	\end{equation*}
+	Recomenda-se que seja ressaltado que essa equação pode ser utilizada para calcular esse logaritmo em base $2$ utilizando apenas logaritmos em base $10$.
+}{1}
+\end{answer}
+
 \explore{Mudança de base}
-
-
-
-
 
 Funções exponenciais modelam diversas situações que podem influenciar na vida de todos nós. Por exemplo, é bem conhecido na medicina que, muitas vezes, o número de infectados, $I(t)$, por uma nova doença infecciosa cresce exponencialmente em seus estágios iniciais\footnote{Ressaltamos que esse modelo não é adequado quando o número de infectados é parte significativa da população.}, como pode ser observado nos dados da Covid-19 para o Brasil:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{Figuras/totalcasescovid19.png}
+\includegraphics[width=0.7\linewidth]{totalcasescovid19.png}
 
 \caption{Número total de casos confirmados \\ Fonte: \textit{Our World in Data} (\url{ourworldindata.org})}
 \end{figure}
@@ -835,7 +1648,7 @@ Calculando com base $1,5$:
 \end{align*}
 onde utilizamos como aproximação os valores apresentados pela calculadora.
 
-Assim apenas no $14^o$ dia, mais de $2000$ pessoas estariam doentes. 
+Assim, apenas no $14^o$ dia, mais de $2000$ pessoas estariam doentes. 
 
 As duas maneiras de resolver estão corretas e a calculadora mostrou o mesmo resultado para $t$ (o último algarismo está diferente, por que estamos trabalhando com aproximações e não com os números exatos). Não poderia ser diferente, pois estamos encontrando o mesmo $t$. Isso nos indica que
 $$
@@ -856,6 +1669,41 @@ Com base no exemplo e na atividade acima, você conseguiria imaginar (fazer uma 
 
 
 Os cálculos realizados nas atividades acima indicam uma propriedade que é valida em um contexto mais geral: a mudança de base (para logaritmos).
+
+\clearpage\def\currentcolor{session4}
+\begin{texto}
+{
+	\section{Organizando: Mudança de base}
+	\subsection{Objetivos gerais}
+	\begin{itemize}
+	\item Comprovar a propriedade da mudança de base.
+	\item Aplicar a propriedade da mudança de base em aproximações manuais.
+	\item Aplicar a propriedade da mudança de base em cálculos com a calculadora.
+	\end{itemize}
+
+	\subsection{Sugestões e discussões}
+	A demonstração do teorema demanda o entendimento do conceito de logaritmo e pode ser uma oportunidade para reforçá-lo.
+
+	Em seguida recomenda-se que os estudantes resolvam a atividade "Logaritmos com mudança de base" em sala para operacionalizar e fixar a propriedade. Uma vez que esteja claro o significado do teorema, recomenda-se que seja destacada a utilização desse teorema para a efetuação de cálculos com a calculadora, o que é fundamental para a utilização prática e tem a importância reconhecida pela BNCC, que propõe que os estudantes utilizem tecnologias, como calculadoras e planilhas eletrônicas, desde os anos iniciais do Ensino Fundamental. 
+}
+\end{texto}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Logaritmos com mudança de base}
+{
+	\begin{enumerate}
+	\item  $\log_3 7=\dfrac{\log 7}{\log 3} = \dfrac{0{,}845}{0{,}477} \approx 1{,}7715;$
+	\item  $\log_7 21=\dfrac{\log 3 + \log 7}{\log 7} = \dfrac{0{,}477 + 0{,}845}{0{,}845} \approx 1{,}5645;$
+	\item  $\log_9 16=\dfrac{\log 16}{\log 9} =\dfrac{4\log 2}{2\log 3} = \frac{2*0{,}301}{0{,}477} \approx 1{,}262.$
+	\end{enumerate}
+
+	\tcbsubtitle{Com a calculadora}	
+	\begin{enumerate}
+	\item $\log_2 375=\dfrac{\log 375}{\log 2} = \dfrac{2{,}57403126772}{0{,}47712125471} \approx 5{,}39492056215;$
+	\item $\log_7 698 =\dfrac{\log 698}{\log 7} = \dfrac{2{,}84385542262}{0{,}84509804001} \approx 3{,}36511894238;$
+	\item $\log_{2{,}71} 166 = \dfrac{\log 166}{\log 2{,}71} = \dfrac{2{,}22010808804}{0{,}43296929087} \approx 5{,}12763407205.$
+	\end{enumerate}
+}{1}
+\end{answer}
 
 \arrange{Mudança de base}\label{secao_mud_base}
 
@@ -904,11 +1752,43 @@ Utilize uma calculadora ou aplicativo de celular para calcular:
 \end{enumerate}
 \end{task}
 
+\clearpage
+\def\currentcolor{cor1}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Exercícios}
+{
+	\exerciselist
+	\begin{enumerate}
+	\Item 
+	\begin{equation*}
+	x-y= \log_4 7 -\frac{\log_4 7^2}{\log_4 16} = \log_4 7 -2\frac{\log_4 7}{2} =0.
+	\end{equation*}
 
+	\Item
+	\begin{equation*}
+	 \log_9 128 = \frac{\log 2^7}{\log 3^2}= \frac{7\log 2}{2\log 3}\approx \frac{7\times 0{,}301}{2\times 0{,}477} \approx 2{,}208
+	\end{equation*}
+
+	\item O montante após o tempo $t$ é dado por $m(t) = 2500\times (1{,}03)^t$, de modo que $(1{,}03)^t = \dfrac{m(t)}{2500}$ e
+
+	\begin{align*}
+	t &= \log_{1{,}03} \left(\frac{m(t)}{2500}\right)=\log_{1{,}03} \left(\frac{3359,79}{2500}\right)\\
+	&=\frac{1}{\log {1{,}03}} \log \left(\frac{3359,79}{2500}\right)\approx \frac{\log 1{,}344}{\log {1{,}03}} \approx 10{,}002.
+	\end{align*}
+	Como sabemos que o capital ficou aplicado por um número inteiro de meses, tomamos o inteiro mais próximo da resposta obtida, que é $10$. Não espera-se uma resposta exata pois os cálculos, mesmo na calculadora, são aproximações.
+
+	\item O valor do veículo, após o tempo $t$ é dado por $v(t) = 40000\times (0{,}8)^t$, de modo que $(0{,}8)^t = \dfrac{v(t)}{40000}$ e
+
+	\begin{align*}
+	t =& \log_{0{,}8} \left(\frac{v(t)}{40000}\right)=\log_{0{,}8} \left(\frac{25600}{40000}\right)=\frac{\log {0{,}64}}{\log {0{,}8}}=2.
+	\end{align*}
+	\end{enumerate}
+}{1}
+\end{answer}
 \exercise
 
 
-Assim o proprietário ficou com o veículo por dois anos.
+Assim, o proprietário ficou com o veículo por dois anos.
 
 \begin{enumerate}
 
@@ -929,6 +1809,54 @@ Um montante de R$\$ 3.359{,}79$ foi obtido de uma aplicação de R$\$ 2.500{,}00
 Um veículo que foi adquirido por R$\$ 40.000{,}00$ sofre taxa de depreciação de $20\%$ ao ano. Depois de um determinado tempo o dono quis vender o carro e verificou que depois desse tempo o veículo tinha um valor de R$\$25.600,00$. Escreva, usando logaritmos, a fórmula que permite calcular depois de quanto tempo o carro estava sendo vendido, em seguida, calcule esse tempo.
 \end{enumerate}
 
+\clearpage
+\def\currentcolor{session1}
+\begin{texto}
+{
+	\section{Explorando: Função Logarítmica}
+	\subsection{Objetivos gerais}
+	\begin{itemize}
+	\item Compreender a definição de decibel.
+	\item Entender o logaritmo como função (a função logarítmica).
+	\item Resolver questões envolvendo logaritmos e a unidade de decibel.
+	\item Identificar gráficos de funções logarítmicas em bases e contextos distintos.
+	\end{itemize}
+
+	\subsection{Sugestões e discussões}
+	A habilidade \textbf{EM13MAT305} traz contextos nos quais os logaritmos são utilizados. Um contexto de importância prática e que aparece com certa frequência em concursos é o de ondas sonoras. Essa exploração é realizada para introduzir a função logarítmica, uma vez que existem ondas sonoras de todo nível de intensidade, de modo a dar espaço para os contextos e raciocínios pré-formais antes da introdução do conteúdo per si, no espírito da Educação Matemática Realística.
+}
+\end{texto}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Para refletir}
+{
+	A potência é multiplicada por $10$, enquanto soma-se $10$ ao nível de intensidade. Isso significa que a potência cresce exponencialmente, enquanto o nível de intensidade cresce linearmente.
+}{1}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Fogos de artifício}
+{
+	Recomenda-se a resolução da atividade em sala para oportunizar o surgimento de dúvidas, tendo em vista que a definição de decibel pode parecer complicada à primeira vista.
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Fogos de artifício}
+{
+	Calculamos o nível de intensidade
+\begin{align*}
+	I_{dB} =& 10 \log \left(\frac{3{,}7}{10^{-12}}\right)\\
+	=& 10 \log (3{,}7\times 10^{12})\\
+	=& 10 (\log 3{,}7+12)\\
+	=& 10\times 12{,}5682 = 125{,}682
+	\end{align*}
+	e verificamos que o artefato estaria em desacordo com a norma.
+}{1}
+\end{answer}
+\def\currentcolor{session4}
+\begin{texto}
+{
+	
+}
+\end{texto}
+
 \explore{Função logarítmica}
 
 
@@ -936,11 +1864,11 @@ Um veículo que foi adquirido por R$\$ 40.000{,}00$ sofre taxa de depreciação 
 A audição é o sentido que nos faz perceber ondas de pressão no ar, chamadas de ondas acústicas. A intensidade sonora dessas ondas mede quanta energia a onda é capaz de transmitir e a unidade frequentemente utilizada é o \textit{watt por metro quadrado} $W/m^2$. Quanto maior a potência, mais alto percebemos o som; mas a nossa percepção do aumento do som depende do som já presente no ambiente. Por exemplo uma pessoa falando em uma sala quieta pode parecer bastante alto, enquanto a mesma pessoa falando em um show de rock não faz diferença alguma.
 
 
-Para lidarmos com o modo como percebemos o som e a potência das ondas sonoras, utilizamos uma unidade chamada de \textbf{decibel (dB)} que mede o \textit{nível sonoro} dos sons em relação a o limiar da audição humana. Observe a Tabela \ref{tab_decibeis} com diferentes sons, seus níveis sonoros em decibéis, suas intensidades sonoras em $W/m^2$ e percepções ao ouvido humano
+Para lidarmos com o modo como percebemos o som e a potência das ondas sonoras, utilizamos uma unidade chamada de \textbf{decibel (dB)} que mede o \textit{nível sonoro} dos sons em relação a o limiar da audição humana. Observe a \hyperref[tab_decibeis]{tabela \ref{tab_decibeis}} com diferentes sons, seus níveis sonoros em decibéis, suas intensidades sonoras em $W/m^2$ e percepções ao ouvido humano
 
 \begin{table}[H]
 \centering
-
+\setlength\tabulinesep{2pt}
 \begin{tabu} to \textwidth{|l|c|l|l|}
 \hline
 \thead
@@ -1004,10 +1932,98 @@ $$
 Algumas cidades brasileiras estão limitando o nível sonoro dos fogos de artifício utilizados em celebrações, permitindo apenas fogos de até $100dB$ a 100 metros de distância. A classificação do som como forte ou fraco está relacionada à intensidade sonora, medida em watts por metro quadrado $W/m^2$. A menor intensidade sonora audível ou limiar de audibilidade possui intensidade $I_0 = 10^{-12} W/m^2$. O nível sonoro pode ser calculado a partir da intensidade da onda pela expressão $I_{dB} = 10 \times log(I/I_0)$, onde $I_0$ é o limiar de audibilidade. Um técnico mede a intensidade sonora de um foguete como sendo de $3{,}7 W/m^2$ a 100 metros de distância. Esse foguete poderia ser utilizado de acordo com a norma determinada por essas cidades?
 \end{task}
 
+\marginpar{\vspace{2em}}
+\def\currentcolor{session4}
+\begin{texto}
+{
+	\section{Organizando: Função logarítmica}
+	Recomenda-se ressaltar que são possíveis ondas sonoras das mais diversas intensidades sonoras, de modo que devemos pensar no nível sonoro como uma uma função da intensidade. Essa função associa a cada intensidade sonora, que é sempre um número positivo, o respectivo nível sonoro em decibéis.
+
+	Dessa maneira maneira temos uma função logarítmica, contudo cabe ressaltar que a definição de função logarítmica apresentada (e que é, provavelmente, a mais frequente) não apresenta uma constante multiplicando-a ou uma constante dividindo o argumento, como no exemplo apresentado.
+}
+\end{texto}
+\clearmargin
+\begin{objectives}{Gráficos dos logarítmos}
+{
+	Reconhecer gráficos das funções logarítmicas de bases maior do que $1$ e menor do que $1$.
+
+Relacionar os gráficos de funções logarítmicas de base $a>1$ e $1/a$.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Gráficos dos logarítmos}
+{
+	O enunciado apresenta os valores dos logaritmos para encurtar o tempo da atividade, tendo em vista que cálculos de logaritmos já foram explorados nas atividades anteriores. Recomenda-se a reflexão sobre os valores do logaritmo de base $1/2$, se necessário com mediação do/a  professor/a, para que se conclua que eles são iguais a "menos"\, os valores listados. Como mediação pode-se comparar $2^3=8$, $2^{-3}=1/8$, $1/2^3=1/8$ e $(1/2)^{-3}=8$.
+}{1}{1}
+\end{sugestions}
+
+\begin{answer}{Gráficos dos logarítmos}
+{
+	Os gráficos de $f$ em verde e $g$ em laranja.
+
+	\begin{figure}[H]
+	\centering
+
+	\begin{tikzpicture}
+	\foreach \n in {0,...,10}{% 10 (instead of 9) is used here to make sure the last line is drawn.
+	            \draw[gray] (\n,0) -- (\n,10);
+	            \draw[gray] (0,\n) -- (10,\n);}
+	%            \node at (\n-0.2, 3.7) {\n};
+	\node [below left] at (0,4) {0};
+	\foreach \n in {-4,...,-1,1,2,...,6}{\node[left] at (0, \n+4) {\n};}
+	\draw[black,->] (0,-0.3) -- (0,10.3);
+	%\node[black] at (-0.2,10.3) {y};
+	\draw[black,->] (-0.3,4.0) -- (10.3,4.0);
+	%\node[black] at (10.3,3.7) {x};
+	\draw[cor1!80, domain=0.125:10,samples=1000, thick] plot (\x, {4+log2(\x)});
+	\draw[\currentcolor!80, domain=0.125:10,samples=1000, thick] plot (\x, {4-log2(\x)});
+	\draw[black,->] (-0.3,4.0) -- (10.3,4.0);
+	\node[black] at (10.3,3.7) {$x$};
+	\node[black, above] at (-0.2,10.3) {$y$};
+	\end{tikzpicture}
+	\end{figure}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Observação: Invertendo a base}
+{
+	Comprovar a propriedade da inversão da base para logaritmos.
+
+	% %\tcblower
+	\tcbsubtitle{Para refletir}
+
+	Compreender para que valores faz sentido calcular o logaritmo e concluir que o domínio da função logarítmica contém apenas os números reais positivos.
+
+	\tcbsubtitle{Comparando funções conhecidas}
+
+	Reconhecer o gráfico de uma função logarítmica e diferenciá-la de outras funções conhecidas.
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Para refletir}
+{
+	Uma vez introduzida a função logarítmica e seu gráfico, surge naturalmente o questionamento: o que ocorre com o gráfico para $x$ negativo? Pode-se utilizar esse questionamento para reforçar que o argumento do logaritmo não pode ser negativo. Para justificar esse fato pode-se ressaltar que o logaritmo é o expoente em que a base deve ser elevada para a obtenção do argumento (logaritmando) e que as exponenciais só geram valores positivos (mesmo com expoentes negativos).
+
+	Essa atividade pode levar os estudantes a questionar o sinal da base do logaritmo e pode ser uma oportunidade para explorar esse ponto. Nesse caso também pode ser necessário retornar à definição da função exponencial $f(x)=a^x$, que só faz sentido para todo $x \in \mathbb{R}$ se $a>0$, apesar de fazer sentido para $x \in \mathbb{Z}$.
+
+	Por fim relembramos que a exploração desse tipo de questão é indicada pela BNCC, por exemplo na \textbf{EM13MAT403}.
+
+	\tcbsubtitle{Comparando funções conhecidas}
+
+	A atividade \textit{"Comparando funções conhecidas"} compara o gráfico da função logarítmica com os gráficos de outras funções conhecidas. Essa comparação ajuda a distinguir a função recém apresentada das demais e serve de preparação para as aplicações práticas a seguir, que demandam o conhecimento do perfil da função.
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Para refletir}
+{
+	Encontrar o valor de $\log_2 (-4)$ é o mesmo que encontrar o expoente ao qual devemos elevar $2$ para obter $-4$. Agora $2^x>0$ para qualquer $x \in \mathbb{R}$, de modo que não existe número real $x$ de modo que $2^x=-4$. O mesmo raciocínio vale para qualquer outro logaritmando negativo. Por isso só faz sentido calcular o logaritmo de números (logaritmandos) positivos e o domínio das funções logarítmicas só pode conter os números reais positivos.
+
+	\tcbsubtitle{Comparando funções desconhecidas}
+
+	$f(x)$ descreve uma reta e foi plotada em verde, $g(x)$ descreve uma parábola e foi plotada em azul, $h(x)$ descreve uma exponencial, cujos valores são sempre positivos, e foi plotada em vermelho e $l(x)$ é uma função logarítmica, definida apenas no semi-eixo positivo, e foi plotada em roxo.
+}{0}
+\end{answer}
 
 \arrange{Função logarítmica}
 
-Os sons na natureza podem ter os mais diversos valores, e não estarem definidos apenas para intensidades $I = 10^n$, para algum valor $n \in \mathbb{Z}$, como na Tabela \ref{tab_decibeis}. Assim o nível sonoro, em decibéis, é uma \textit{função} da intensidade sonora ($I$) do som:
+Os sons na natureza podem ter os mais diversos valores, e não estarem definidos apenas para intensidades $I = 10^n$, para algum valor $n \in \mathbb{Z}$, como na \hyperref[tab_decibeis]{tabela \ref{tab_decibeis}}. Assim, o nível sonoro, em decibéis, é uma \textit{função} da intensidade sonora ($I$) do som:
 $$
 I_{dB}(I) = 10 \log_{10} \left(\frac{I}{10^{-12}}\right).
 $$
@@ -1071,24 +2087,54 @@ Por que calculamos apenas os logaritmos de números reais positivos? Qual seria 
 
 
 \begin{task}{Comparando funções conhecidas}
-As curvas na figura representam as funções $f(x) = 2x-3$, $g(x)=2x^2-1$, $h(x)=1{,}5^x$ e $l(x)=\log_2 x$. Identifique que curva representa cada função. Calcular o valor da função para alguns valores de $x$ pode auxiliar na identificação.
+As curvas na figura a seguir representam as funções $f(x) = 2x-3$, $g(x)=2x^2-1$, $h(x)=1{,}5^x$ e $l(x)=\log_2 x$. Identifique que curva representa cada função. Calcular o valor da função para alguns valores de $x$ pode auxiliar na identificação.
 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.8\linewidth]{Figuras/graficos_varias_funcoes}
+\includegraphics[width=\linewidth]{graficos_varias_funcoes}
 \end{figure}
 
 \end{task}
 
 \clearpage
+\begin{objectives}{Crescimento logarítmico}
+{
+	Reconhecer que dados reais podem ser aproximados por funções conhecidas.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Crescimento logarítmico}
+{
+	Recomenda-se, a seguir, a exploração do exemplo com dados do número de mortes confirmadas da Covid-19 na França. O exemplo mostra como os gráficos de funções conhecidas podem ser utilizadas para identificar tendências, auxiliando na análise de situações concretas, que contribui na tomada de decisão, auxiliando no desenvolvimento da habilidade EM13MAT101, indicada na BNCC.
+}{1}{1}
+\end{sugestions}
+
+\begin{objectives}{Brasil e Reino Unido na Pandemia}
+{
+	\begin{itemize}
+	\item Utilizar o ajuste de curvas para identificar tendências em dados reais.
+	\item Interpretar criticamente a situação dos dois países na pandemia de Covid-19 pela análise dos gráficos das funções representadas e das taxas de variação, com ou sem apoio de tecnologias digitais. (EM13MAT101)
+	\item Analisar tabelas, gráficos e amostras de pesquisas estatísticas apresentadas em relatórios divulgados por diferentes meios de comunicação, identificando, quando for o caso, inadequações que possam induzir a erros de interpretação, como escalas e amostras não apropriadas. (EM13MAT102)
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+
+\clearmargin
+\begin{sugestions}{Brasil e Reino Unido na Pandemia}
+{
+	A atividade propõem a análise de tendências nos gráficos apresentados comparando as situações do Brasil e do Reino Unido. O resultado esperado da atividade não é uma resposta exata, mas uma discussão sobre o tema, que pode ser realizada em grupo na sala de aula. Espera-se que os alunos identifiquem uma mudança na tendência do gráfico do Reino Unido, de crescimento exponencial (muito rápido) para logarítmico (mais lento) um pouco depois do dia 10 de abril, enquanto que no Brasil o número de mortos parece estar abandonando o crescimento exponencial somente em 13 de junho. O número de mortos no Brasil, no momento da aparente mudança no perfil, está entre 3x e 4x o número de mortos no Reino Unido no momento de mudança. Isso poderia sugerir que o Brasil atingiria entre 3x e 4x o número de mortos, se a pandemia continuasse se  desenvolvendo da mesma forma nos dois países e o perfil final dos dois países fosse parecido (o que não sabemos antes do final da pandemia). Recomenda-se que o/a professor/a busque dados atualizados da pandemia e mostre aos estudantes, assim os alunos poderiam verificar se as suas hipóteses e previsões realizadas concretizaram-se.
+
+	Ainda na atividade é importante ressaltar em uma análise que há grandes diferenças entre os países e essas contribuem bastante para o resultado final. Essa atividade poderia ser desenvolvida de forma interdisciplinar com a disciplina de geografia, que poderia explorar diferenças demográficas, sociais, dos sistemas de saúde, socio-econômicas e das reações socio-políticas dos países. Por exemplo, citamos o fato óbvio que as populações do Brasil (de 209,5 milhões (2018), segundo o Banco mundial) e do Reino Unido (de 66,65 milhões (2018), segundo o Banco Mundial) são fatores importantes a se levar em consideração.
+}{1}{0}
+\end{sugestions}
+
 \begin{example}{Crescimento logarítmico e exponencial}
-A figura abaixo mostra o total de mortes confirmadas causadas pela Covid-19 na França a cada dia, entre 15 de fevereiro e 13 de junho. Observamos no gráfico uma mudança no padrão da curva por volta da data de 7 de abril. No período inicial a curva é melhor aproximada por uma exponencial e depois é melhor aproximada por uma função logarítmica.
+A figura a seguir mostra o total de mortes confirmadas causadas pela Covid-19 na França a cada dia, entre 15 de fevereiro e 13 de junho. Observamos no gráfico uma mudança no padrão da curva por volta da data de 7 de abril. No período inicial a curva é melhor aproximada por uma exponencial e depois é melhor aproximada por uma função logarítmica.
 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.95\linewidth]{Figuras/mortes_franca}
+\includegraphics[width=0.95\linewidth]{mortes_franca}
 \caption{Fonte: Dados do site \textit{Our World in Data} (\url{ourworldindata.org})}
 \end{figure}
 
@@ -1098,18 +2144,121 @@ Buscar uma função que melhor aproxime os dados de um determinado experimento o
 A curva exponencial sugere que haveria um crescimento muito rápido no número de mortes. Contudo a redução posterior mostra um número muito menor, que pode ter sido causada pelas medidas adotadas pelo governo Francês (entre outras possibilidades).
 \end{example}
 
+
 \begin{task}{Brasil e Reino Unido na Pandemia}
 Observando o gráfico abaixo, em que data (aproximadamente) o crescimento mudou de exponencial para logarítmico no Reino Unido? E no Brasil? Apesar do número ser parecido na data final do gráfico, você acredita que o número total de mortos manteve-se próximo? Que fatores sociais, econômicos e demográficos podem ter influenciado o desenvolvimento da pandemia nesses países? 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{Figuras/Brasil_Inglaterra_mortes.png}
+\includegraphics[width=0.8\linewidth]{Brasil_Inglaterra_mortes.png}
 
 \caption{Mortes confirmadas Covid-19 no Brasil e no Reino Unido. \\ Fonte: \textit{Our World in Data} (\url{ourworldindata.org}}
 \end{figure}
 \end{task}
 
+\clearpage
+\def\currentcolor{session1}
+\begin{texto}
+{
+	\section{Explorando: Funções Logarítmicas e Exponenciais}
+	\subsection{Objetivos gerais}
+	Analisar e estabelecer relações entre as representações de funções exponencial e logarítmica (\textbf{EM13MAT403}).
 
+	\subsection{Sugestões e discussões}
+	A exploração propõem a utilização do \textit{applet} do GeoGebra no celular ou no computador, o que recomenda-se fortemente. Não sendo possível a utilização do \textit{applet}, pode-se falar do gráfico mostrado e explicar que a mesma simetria vale para outras bases.
+
+	Espera-se que os alunos estejam intrigados com a simetria nos gráficos das funções exponenciais e logarítmicas. Recomenda-se, então, que se recorde que um ponto $(x,y)$ pertence ao gráfico da função $a^x$, se $y=a^x$. Então o logaritmo desse $y$ em base $a$ só pode ser $x$, que é o expoente ao qual $a$ foi elevado para obter-se $y$, o que garante que o ponto $(y,x)$ está no gráfico de $\log_a y$. De modo semelhante, se um ponto $(y,x)$ está no gráfico de $\log_a y$, então $x$ é o expoente ao qual devemos elevar $a$ para obter $y$ e $a^x=y$, de modo que $(x,y)$ está no gráfico de $a^x$.
+}
+\end{texto}
+\begin{objectives}{Para pesquisar}
+{
+	Perceber que a função logarítmica não está definida quando o valor da base é igual a 1.
+}{1}{1}
+\end{objectives}
+\begin{answer}{Para pesquisar}
+{
+	O gráfico de $a^x$ torna-se constante igual a 1 e o gráfico do $\log_a x$ desaparece. Isso ocorre pois, para $a=1$, temos $f(x)=1^x =1$ para todo $x \in \mathbb{R}$, de modo que $\log_1 x$ não existe para $x \neq 1$.
+}{1}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Funções inversas na prática}
+{
+	A troca nos papeis de $x$ e $y$ como argumentos das funções pode causar dificuldade e pode ser necessário relembrar que uma função age sobre seu argumento, independente das variáveis que sejam utilizadas.
+
+	A atividade propõem colocar a "mão na massa" na exponencial e no logaritmo, observando a ação da inversão explicitada na observação anterior.
+
+	\tcbsubtitle{Para refletir}
+	A reflexão proposta busca levar o aluno a expressar o significado da inversão das funções como inversa uma da outra e pode ser usada para avaliar se houve compreensão do argumento para a simetria do gráfico.
+
+	\tcbsubtitle{Funções logarítmicas distintas}
+	Por fim é proposta outra atividade no GeoGebra, que pretende mostrar que trocar de base é o mesmo que multiplicar a função logarítmica por uma constante, que é ressaltada na observação seguinte. Não havendo a possibilidade de usar o \textit{applet}, essa atividade poderia ser deixada de lado e a conclusão poderia ser reforçada como interpretação da equação $\log_a x = \log_a b \log_b x$.
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Funções Inversas na prática}
+{
+	\begin{table}[H]
+	\centering
+	
+	\begin{tabu} to \textwidth{|c|c|c|}
+	\hline
+	\thead
+	$\bm{x}$ & $\bm{y=2^x}$ & $\bm{{\log_2 x}}$ \\
+	\hline
+	$1$ & $2$ & $1$ \\
+	\hline
+	$2$ & $4$ & $2$ \\
+	\hline
+	$3$ & $8$ & $3$ \\
+	\hline
+	$4$ & $16$ & $4$ \\
+	\hline
+	\end{tabu}
+	\hspace{2em}
+	\begin{tabu} to \textwidth{|c|c|c|}
+	\hline
+	\thead
+	$\bm{y}$ & $\bm{x=3^y}$ & $\bm{{\log_3 x}}$ \tabularnewline
+	\hline
+	$-1$ & $1/3$ & $-1$ \\
+	\hline
+	$1$ & $3$ & $1$ \\
+	\hline
+	$0$ & $1$ & $0$ \\
+	\hline
+	$2$ & $9$ & $2$ \\
+	\hline
+	\end{tabu}
+	\end{table}
+
+	\tcbsubtitle{Para refletir}
+	Espera-se respostas como "$a^{\log_a x}=x$ porque o logaritmo é o expoente ao qual devemos elevar $a$ para obter $x$"{}e "$\log_a (a^y)=y$ porque $y$ é o expoente ao qual devemos elevar $a$ para obter $a^y$".
+
+	\tcbsubtitle{Funções logarítmicas distintas}
+	$a = 3{,}8$, que é uma aproximação muito boa para $$\log_{1{,}2}2 \approx 3{,}8017840169239,$$ que é a resposta do desafio.
+
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Funções logarítmicas de bases distintas}
+{
+	Reconhecer o perfil de funções logarítmicas de bases distintas.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Funções logarítmicas de bases distintas}
+{
+	O gráfico ilustra diversas funções logarítmicas simultaneamente e recomenda-se que destaque-se duas características:
+	\begin{itemize}
+	\item As linhas laranjas representam os gráficos das funções logarítmicas de base maior do que 1, sendo que quanto maior a base, menores são os valores dos logaritmos. Assim, o gráfico a função de maior base é a linha laranja mais próxima do eixo $x$ e a de menor base (mas ainda maior do que 1) é aquela que cresce mais rapidamente, ultrapassando os valores do gráfico logo após o número 1.
+	\item As linhas verdes representam os gráficos das funções logarítmicas de base menor do que 1 (mas ainda maior do que 0), sendo que quanto mais próxima de 1 a base for, maiores em módulo são os valores dos logaritmos. Assim, o gráfico da função de menor base (no intervalo $(0,1)$) é a mais próxima do eixo $x$ e a função de maior base (mas ainda menor do que 1) é a linha verde que diminui mais rapidamente, ficando menor do que os valores do gráfico logo após o número 1.
+	\end{itemize}
+	Recomenda-se que se aponte o fato que as funções logarítmicas de base maior do que 1 são crescentes e que funções logarítmicas de base menor do que 1 são decrescentes. O fato em si é importante, inclusive para as aplicações, mas a demonstração só é recomendada se a turma dominar o conceito de função crescente. Pode-se ressaltar que esse fato já estava aparente nas tabelas de logaritmos anteriores.
+}{1}{1}
+\end{sugestions}
+\begin{objectives}{Funções logarítmicas crescentes e descrescentes}
+{
+	Comprovar que funções logarítmicas de base maior do que 1 são crescentes e que funções logarítmicas de base menor do que 1 são decrescentes.
+}{1}{1}
+\end{objectives}
 \explore{Funções logarítmicas e exponenciais}
 
 
@@ -1119,7 +2268,7 @@ O gráfico abaixo ilustra as funções $f(x)=2^x$ (verde), $g(x)=\log_2 x$ (azul
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.8\linewidth]{Figuras/Fun_Exp_Log.png}
+\includegraphics[width=0.8\linewidth]{Fun_Exp_Log.png}
 \caption{Funções exponencial e logarítmica de mesma base.}
 
 \end{figure}
@@ -1128,7 +2277,7 @@ Para qualquer base $a>0$, $a \neq 1$, temos $f(x)=a^x$ e $g(x)=\log_a x$ são si
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.3\linewidth]{Figuras/QRcode_exp_log.png}
+\includegraphics[width=.3\linewidth]{QRcode_exp_log.png}
 
 \url{https://www.geogebra.org/calculator/wx7fkdk7}
 \end{figure}
@@ -1203,7 +2352,7 @@ No \textit{applet} do GeoGebra, disponível através do atalho abaixo, podemos m
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.3\linewidth]{Figuras/QRcode_mult_constante.png}
+\includegraphics[width=.3\linewidth]{QRcode_mult_constante.png}
 
 \url{https://www.geogebra.org/calculator/qyuzhbmp}
 \end{figure}
@@ -1220,11 +2369,11 @@ Podemos utilizar o fato das funções exponenciais e logarítmicas serem inversa
 Ou seja a função $\log_a x$ é igual à função $\log_b x$ multiplicada pela constante $\log_a b$. Essa constante pode ser negativa se $a<b$.
 \end{observation}
 
-A figura abaixo ilustra os gráficos de funções logarítmicas de bases distintas (base maior do que 1 na cor laranja e menor do que 1 na cor verde).
+A figura a seguir ilustra os gráficos de funções logarítmicas de bases distintas (base maior do que 1 na cor laranja e menor do que 1 na cor verde).
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.8\linewidth]{Figuras/Graficos_logs.png}
+\includegraphics[width=0.8\linewidth]{Graficos_logs.png}
 \caption{Funções logarítmicas de bases distintas.}
 \end{figure}
 
@@ -1249,14 +2398,91 @@ $$
 
 
 \end{observation}
+\clearpage
+\def\currentcolor{cor1}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Exercícios}
+{
+	\exerciselist
+	\begin{enumerate}
+	\item Comparando os valores da função para $m$ igual a 200, 300 e 400 com as linhas da grade, observamos:
+	\begin{enumerate}
+	\item $80>f(200)>60$, de modo que 70 é uma estimativa adequada;
+	\item $120>f(300)>100$, de modo que 110 é uma estimativa adequada;
+	\item $140>f(400)>120$, de modo que 130 é uma estimativa adequada.
+	\end{enumerate}
 
+	\Item 
+	\begin{align*}
+	& 35 = 10 \log(I \times 10^{12}) \Rightarrow   3{,}5 = \log I + 12\\
+	\Rightarrow & -8{,}5 = \log I \Rightarrow I = 10^{-8{,}5}
+	\end{align*}
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{
+	\exerciselist
+	\begin{enumerate}\setcounter{enumi}{2}
+	\Item 
+	\begin{align*}
+	& 80 = 120+10 \log I_1 \Rightarrow  -40 = 10\log I_1\\
+	\Rightarrow & I_1 = 10^{-4},
+	\end{align*}
+	\begin{align*}
+	& 60 = 120+10 \log I_2 \Rightarrow -60 = 10\log I_2\\
+	\Rightarrow & I_2 = 10^{-6},
+	\end{align*}
+	Assim,
+	$$
+	\frac{I_1}{I_2}=\frac{10^{-4}}{10^{-6}}= 100.
+	$$
 
+	\Item
+	\begin{align*}
+	 20 =& N_1-N_2 = 120 +10\log I_1- (120 +10\log I_1) \\
+	 =& 10\log I_1 - \log I_2 = 10\log (I_1/I_2)\\
+	\Rightarrow I_1/I_2  =& 10^{2}
+	\end{align*}
+
+	\item
+	\begin{enumerate}
+	\item Verdadeira pois
+	$$
+	0 = 10(12+\log I) \Rightarrow I = 10^{-12}
+	$$
+	\item Falsa pois a intensidade do ruído do avião a jato é
+	$$
+	160 = 10(12+\log I) \Rightarrow I = 10^{4},
+	$$
+	enquanto a intensidade do ruído do tráfego é
+	$$
+	80 = 10(12+\log I) \Rightarrow I = 10^{-4}.
+	$$
+	Assim, a intensidade do ruído do avião é 100 milhões ($10^8$) de vezes maior do que a intensidade do ruído da esquina movimentada.
+	\item Verdadeira, de acordo com o enunciado da questão, pois essa é a intensidade sonora da esquina movimentada.
+	Assim, a intensidade do ruído do avião é 100 milhões ($10^8$) de vezes maior do que a intensidade do ruído da esquina movimentada.
+	\end{enumerate}
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{
+	\exerciselist
+	\begin{enumerate}\setcounter{enumi}{5}
+	\item $\beta$ aumenta em 20 decibéis pois
+	\begin{align*}
+	\beta =& 10\log(100 I/I_0) = 10(\log 100 + \log(I/I_0))\\
+	=& 20 + 10\log(I/I_0).
+	\end{align*}
+	\end{enumerate}
+}{1}
+\end{answer}
 \exercise
-
-
 \begin{enumerate}
-\item {} \label{EstimaGraf}
-
+\item 
 É possível verificar rapidamente, utilizando gráficos, o tempo que uma aplicação demora para dobrar, triplicar, quadruplicar, ... o valor aplicado. O gráfico abaixo, da função $f(m)=\log_{1{,}01}(m/100)$, representa o tempo, em meses, para que determinado montante seja atingido a partir de um capital de $R\$ 100{,}00$, aplicado a uma taxa mensal de $1\%$.  Observando o gráfico, estime com erro menor do que $10$ o número de meses necessário para o capital inicial:
 \begin{enumerate}
 \item dobrar;
@@ -1267,8 +2493,9 @@ $$
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.8\linewidth]{Figuras/Tempo_montante.png}
+\includegraphics[width=.8\linewidth]{Tempo_montante.png}
 \caption{Gráfico da função $f(m)=\log_{1{,}01} (m/100)$.}
+\label{EstimaGraf}
 \end{figure}
 
 
@@ -1306,13 +2533,12 @@ intensidade correspondente ao nível sonoro de 80 decibéis de um cruzamento de 
 intensidade correspondente ao nível sonoro de 60 decibéis do interior de um automóvel com ar-condicionado. A razão 
 $I_1/I_2$ é igual a:
  \begin{enumerate}
-\begin{multicols}{2}
+
      \item 1/10
      \item 1
      \item 10 
      \item 100
-     \item 1.000
-\end{multicols}
+     \item 1 000
  \end{enumerate}
 
 
@@ -1323,13 +2549,11 @@ $I_1/I_2$ é igual a:
 níveis sonoros, $N_1$ e $N_2$, de dois ruídos com Intensidades $I_1$ e $I_2$, respectivamente. Sendo $N_1 - N_2 = 20 dB$, 
 a razão $I_1/I_2$ é:
 \begin{enumerate}
-\begin{multicols}{2}
     \item $10^{-2}$
     \item $10^{-1}$
      \item $10$
      \item $10^{2}$
      \item $10^{3}$
-\end{multicols}
 \end{enumerate}
 
 
@@ -1350,28 +2574,70 @@ ouvido humano. Com base nessas informações, julgue os itens que se seguem.
 \end{enumerate}
 
 
-
-
 \item {}\label{UCSSRS}
 
 (UCS-RS) O nível $\beta$, em decibel, de um som que tem intensidade I é dado pela fórmula $\beta = 10 \cdot log 
 (I/I_0)$, em que $I_0 = 10^{-12}$. Se a intensidade I for multiplicada por 100, em quantos decibel aumenta $\beta$?
 
 \begin{enumerate}
-\begin{multicols}{2}
     \item 2
     \item 20
     \item 100
     \item 120
     \item 140
-\end{multicols}
 \end{enumerate}
 \end{enumerate}
 
+\clearpage
+\def\currentcolor{session1}
+\begin{texto}
+{
+\section{Explorando: Escala Logarítmica}
+\subsection{Objetivos gerais}
+\begin{itemize}
+\item Reconhecer a inadequação de gráficos em escala linear para dados de magnitudes muito distintas.
+\item Representar dados em escala logarítmica.
+\end{itemize}
+\subsection{Sugestões e discussões}
+Gráficos em escala logarítmica estão presentes em muitas áreas da ciência. Esses gráficos são utilizados, por exemplo, quando temos dados de magnitude muito distinta em uma mesma análise ou quando crescimentos relativos (ou percentuais) são mais importantes do que os valores absolutos do crescimento, como no caso de ações da bolsa. 
+
+Essa exploração propõem comparar a apresentação dos planetas do sistema solar e do sol na escala linear e na escala logarítmica. Pode ser interessante explicar aos estudantes que muitas imagens na astronomia utilizam escalas logarítmicas. Em representações do sistema solar, frequentemente utiliza-se uma escala logarítmica para as distâncias dos planetas, o que não foi feito nas figuras ao lado, e outra escala logarítmica para os tamanhos dos planetas. Isso ocorre pois as distâncias no sistema solar são muito maiores do que os tamanhos dos planetas e do sol. Seria possível aproveitar o assunto para uma exploração interdisciplinar, junto com a/o docente de física, sobre o sistema solar (incluindo as distâncias entre os objetos e suas magnitudes).
+}
+\end{texto}
+\clearmargin
+\begin{objectives}{Ordens de magnitude dos planetas}
+{
+	Compreender corretamente a magnitude de dados em um gráfico em escala logarítmica.
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{Ordens de magnitude dos planetas}
+{
+	A atividade "Ordens de magnitude dos planetas" pode ser realizada como uma discussão em grupo e pretende que seja discutida a interpretação correta dos dados nessa escala.
+}{1}{0}
+\end{sugestions}
+\begin{answer}{Ordens de magnitude dos planetas}
+{
+	A observação do gráfico pode ser difícil de traduzir em termos numéricos diretamente e é possível tentar responder a questão de duas maneiras:
+	\begin{itemize}
+	\item O raio de Vênus está na parte superior ($\log 5 \approx 0{,}7$) do intervalo $[0; 10]$, o que indica que o raio está no intervalo $[5; 10]$, e o raio de Saturno está na parte superior do intervalo $[10; 100]$, o que indica que o raio está no intervalo [$50; 100]$. Desse modo a razão $r$ entre os raios de Saturno e Vênus estaria entre $50/10=5$ e $100/5=20$. Tomando o valor médio do intervalo $[5; 20]$ como aproximação, que é $12{,}5$, a resposta $10$ seria a melhor das opções.
+	\item A distância linear (na escala logarítmica) entre os raios de Vênus e Saturno é de aproximadamente 1, o que se traduz em um aumento de 10 vezes na escala logarítmica.
+	\end{itemize}
+	O raio Saturno é de $58.232$ Km e o de Vênus é de $6.051{,}8$ Km e $10$ vezes é, de fato, a melhor aproximação.
+}{0}
+\end{answer}
+
+\begin{sugestions}{Você sabia?}
+{
+	A observação "Distâncias entre os planetas"{} objetiva evitar que os estudantes sejam induzidos ao erro, imaginando que as distâncias entre os planetas estavam em escala nas atividades anteriores.
+
+	\tcbsubtitle{Comprimentos e massas de primatas}
+	O exemplo visa mostrar que dados concretos com grande variação podem ser difíceis de analisar em escala linear. O/A professor/a poderia ilustrar a situação com um exemplo como: na escala linear um társio ($200$ g e $8$ cm) e um mico-leão-dourado ($800$ g e $26$ cm) estariam muito próximos (no canto inferior esquerdo), apesar de um ser muito maior do que o outro.	
+}{1}{0}
+\end{sugestions}
 \explore{Escala logarítmica}
 
 
-Às vezes, em situações concretas, podemos ter magnitudes muito diferentes dentro de um conjunto de valores. Na figura abaixo, por exemplo, as circunferências têm raios proporcionais aos raios do Sol (amarelo) e dos 8 planetas do sistema solar: Mercúrio (cinza, muito pequeno para ver), Vênus (rosa), Terra (azul pálido), Marte (vermelho), Júpiter (amarelo queimado), Saturno (laranja), Urano (azul claro) e Netuno (azul).
+Às vezes, em situações concretas, podemos ter magnitudes muito diferentes dentro de um conjunto de valores. Na figura a seguir, por exemplo, as circunferências têm raios proporcionais aos raios do Sol (amarelo) e dos 8 planetas do sistema solar: Mercúrio (cinza, muito pequeno para ver), Vênus (rosa), Terra (azul pálido), Marte (vermelho), Júpiter (amarelo queimado), Saturno (laranja), Urano (azul claro) e Netuno (azul).
 
 
 \begin{figure}[H]
@@ -1389,17 +2655,17 @@ ouvido humano. Com base nessas informações, julgue os itens que se seguem.
 \draw[fill=olive!20!orange] (10.4,0) circle [radius=0.58232];
 \draw[fill=blue!30!white] (11.4,0) circle [radius=0.253];
 \draw[fill=blue] (12,0) circle [radius=0.246];
-\draw[color=white](-7.2,1)--(-7.5,1)node[color=white,left,font=\large]{100};  
-\draw[color=white](-7.2,5)--(-7.5,5)node[color=white,left,font=\large]{500};     
-\draw[color=white](-7.2,0)--(-7.5,0)node[color=white,left,font=\large]{0};
-\draw[color=white](-7.2,0)--(-7.2,7);
+\draw[color=white, very thick](-7.2,1)--(-7.5,1)node[color=white,left,font=\large\bfseries]{100};  
+\draw[color=white, very thick](-7.2,5)--(-7.5,5)node[color=white,left,font=\large\bfseries]{500};     
+\draw[color=white, very thick](-7.2,0)--(-7.5,0)node[color=white,left,font=\large\bfseries]{0};
+\draw[color=white, very thick](-7.2,0)--(-7.2,7);
 \end{tikzpicture}}
 
 \caption{O sol e os planetas em escala linear (em milhares de quilômetros).}\label{log_planetas}
 \end{figure}
 
 
-É muito difícil ver os planetas menores na figura. Para lidar com dados de magnitudes muito distintas, com frequência, utiliza-se uma escala logarítmica (a mesma da régua de cálculo). Na figura abaixo observamos os mesmos objetos em uma escala logarítmica (branca).
+É muito difícil ver os planetas menores na figura. Para lidar com dados de magnitudes muito distintas, com frequência, utiliza-se uma escala logarítmica (a mesma da régua de cálculo). Na figura a seguir observamos os mesmos objetos em uma escala logarítmica (branca).
 
 
 \begin{figure}[H]
@@ -1416,16 +2682,16 @@ ouvido humano. Com base nessas informações, julgue os itens que se seguem.
 \draw[fill=olive!20!orange] (14.7,0) circle [radius=(ln(58.232)/ln(10))];
 \draw[fill=blue!30!white] (18,0) circle [radius=(ln(25.3)/ln(10))];
 \draw[fill=blue] (21,0) circle [radius=(ln(24.6)/ln(10))];
-\draw[color=white](-3,2)--(-3.2,2)node[color=white,left,font=\large]{100};  
-\draw[color=white](-3,3)--(-3.2,3)node[color=white,left,font=\large]{1000};  
-\draw[color=white](-3,1)--(-3.2,1)node[color=white,left,font=\large]{10};     
-\draw[color=white](-3,0)--(-3.2,0)node[color=white,left,font=\large]{0};
-\draw[color=white](-3,0)--(-3,3);
-\draw[color=gray](-4.5,2)--(-4.7,2)node[color=gray,left,font=\large]{2};  
-\draw[color=gray](-4.5,3)--(-4.7,3)node[color=gray,left,font=\large]{3};  
-\draw[color=gray](-4.5,1)--(-4.7,1)node[color=gray,left,font=\large]{1};     
+\draw[color=white,very thick](-3,2)--(-3.2,2)node[color=white,left,font=\large\bfseries]{100};  
+\draw[color=white,very thick](-3,3)--(-3.2,3)node[color=white,left,font=\large\bfseries]{1000};  
+\draw[color=white,very thick](-3,1)--(-3.2,1)node[color=white,left,font=\large\bfseries]{10};     
+\draw[color=white,very thick](-3,0)--(-3.2,0)node[color=white,left,font=\large\bfseries]{0};
+\draw[color=white,very thick](-3,0)--(-3,3);
+\draw[color=gray, very thick](-4.5,2)--(-4.7,2)node[color=gray,left,font=\large\bfseries]{2};  
+\draw[color=gray, very thick](-4.5,3)--(-4.7,3)node[color=gray,left,font=\large\bfseries]{3};  
+\draw[color=gray, very thick](-4.5,1)--(-4.7,1)node[color=gray,left,font=\large\bfseries]{1};     
 %\draw[color=gray](-10.2,0)--(-10.7,0)node[color=gray,left,font=\Huge]{0};
-\draw[color=gray](-4.5,0)--(-4.5,3);
+\draw[color=gray, very thick](-4.5,0)--(-4.5,3);
 \end{tikzpicture}}
 
 \caption{O sol e os planetas em escala logarítmica (em milhares de quilômetros).}
@@ -1436,11 +2702,11 @@ Na escala logarítmica da figura, a cada unidade linear (cinza) os valores são 
 
 
 \begin{observation}{Colocar um gráfico em escala logarítmica.}
-A escala cinza na Figura \ref{log_planetas} explica o que fizemos para colocar o gráfico em escala logarítmica: calculamos os logaritmos dos raios dos planetas e fizemos novas circunferências com raios iguais a esses logaritmos. Como os valores da escala são as potências de 10 dos valores da escada linear, os logaritmos são exatamente os valores necessários para obter-se os respectivos valores originais nessa nova escala.
+A escala cinza na \hyperref[log_planetas]{figura \ref{log_planetas}} explica o que fizemos para colocar o gráfico em escala logarítmica: calculamos os logaritmos dos raios dos planetas e fizemos novas circunferências com raios iguais a esses logaritmos. Como os valores da escala são as potências de 10 dos valores da escada linear, os logaritmos são exatamente os valores necessários para obter-se os respectivos valores originais nessa nova escala.
 \end{observation}
 
 \begin{task}{Ordens de magnitude dos planetas.}
-Observado as circunferências e a escala logarítmica da Figura \ref{log_planetas}, qual é a melhor aproximação na comparação dos tamanhos de Vênus (rosa) e de Saturno (laranja).
+Observado as circunferências e a escala logarítmica da \hyperref[log_planetas]{figura \ref{log_planetas}}, qual é a melhor aproximação na comparação dos tamanhos de Vênus (rosa) e de Saturno (laranja).
 \begin{enumerate}
 \item O diâmetro de Saturno é o dobro do diâmetro de Vênus.
 \item O diâmetro de Saturno é dez vezes o diâmetro de Vênus.
@@ -1479,6 +2745,81 @@ Em escala logarítmica.
 
 Os dados ficam, assim, mais distribuídos e melhores para análise. Muitos dos primatas têm menos de 1 Kg e menos de 50 cm, contudo um animal  100 g e 10 cm é muito menor do que um animal de 1 Kg e 50 cm.
 \end{example}
+
+\clearpage
+
+\def\currentcolor{session4}
+\begin{objectives}{Três cidades}
+{
+	Representar dados em escala logarítmica.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Três cidades}
+{
+	A atividade "Três cidades"\, propõem que os estudantes coloquem os dados em escala logarítmica e busquem algumas informações básicas. Essa atividade é uma preparação para o "Para refletir", que tem uma mensagem principal: crescimentos percentuais (ou relativos) iguais, produzem acréscimos de mesmo tamanho nos gráficos de escala logarítmica, independente da magnitude dos dados.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Três cidades}
+{
+	\begin{center}
+\begin{tikzpicture}[domain=0:5]
+\draw[->] (-1,0) -- (4,0);
+\draw[->] (0,-1) -- (0,5);
+\draw[step=0.1,gray,thin, dotted] (0,0) grid (4,5);
+\draw [fill=session1!80] (0.25,0) rectangle (0.75,4);
+\draw [fill=session1!80] (2.25,0) rectangle (2.75,4.04);
+\draw [fill=session2!80] (0.75,0) rectangle (1.25,3);
+\draw [fill=session2!80] (2.75,0) rectangle (3.25,3.3);
+\draw [fill=session4!80] (1.25,0) rectangle (1.75,3.7);
+\draw [fill=session4!80] (3.25,0) rectangle (3.75,4);
+\draw[dashed] (1,5) -- (1,0)node[below] {$S$};
+\draw[dashed] (1.5,5) -- (1.5,0)node[below] {$G$};
+\draw[dashed] (0.5,5) -- (0.5,0)node[below] {$M$};
+\node at (1,-0.7) {$2000$};
+\node at (3,-0.7) {$2010$};
+\draw[dashed] (3,5) -- (3,0)node[below] {$S$};
+\draw[dashed] (3.5,5) -- (3.5,0)node[below] {$G$};
+\draw[dashed] (2.5,5) -- (2.5,0)node[below] {$M$};
+\node[left] at (0,1) {$10$};
+\node[left] at (0,2) {$100$};
+\node[left] at (0,3) {$1.000$};
+\node[left] at (0,4) {$10.000$};
+\end{tikzpicture}
+\end{center}
+\begin{enumerate}
+\item A cidade com o maior aumento na população  foi Gotham City, com um acréscimo de 5.000 habitantes.
+\item As cidades Smallville e Gotham City dobraram suas populações no período, tendo o mesmo crescimento relativo. A população de Metrópolis aumentou apenas 10\%.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Para refletir}
+{Compreender que gráficos em escala logarítmica apresentam variações iguais para crescimentos relativos iguais.}{1}{0}
+\end{objectives}
+\begin{answer}{Para refletir}
+{As cidades de Smallville e Gotham City dobraram suas populações no período e as barras dos gráficos que as representam aumentaram em $\log 2 \approx 0{,}3$. Isso ocorre pois calcular o logaritmo da população vezes um fator é o mesmo que somar o logaritmo daquele fator ao logaritmo da população original. A população da cidade de Metrópolis aumentou o mesmo tanto que a população de Smallville, mas a barra azul quase não se alterou, pois o 1.000 indivíduos equivalem a apenas 10\% da população de Metrópolis no ano 2000, enquanto equivalem a 100\% da população de Smallville no ano 2000.}
+{0}
+\end{answer}
+\begin{sugestions}{Crescimento relativo.}
+{A taxa de crescimento relativa de uma população é definida como a variação na população em dois momentos distintos dividida pelo tamanho inicial da população. Esse conceito importante na estatística é bem representado em gráficos de escala logarítmica.
+
+Recomenda-se a apresentação da observação "Crescimento proporcional com logaritmos". Ela justifica a interpretação que os gráficos em escala logarítmica representam variações percentuais iguais com a mesma diferença no gráfico, independentemente de suas magnitudes absolutas. Observamos isso nas atividades anteriores, mas poucos exemplos não garantem a validade da propriedade em geral. O cuidado em não assumir generalizações automáticas é uma atitude importante nos processos de argumentação matemática, cuja ênfase é recomendada pela BNCC.}
+{1}{0}
+\end{sugestions}
+\begin{objectives}{Exemplo: Criptomoedas}
+{\begin{itemize}
+\item Comparar dados apresentados em gráficos de escala linear e logarítmica.
+\item Utilizar dados de escala logarítmica para compreender a evolução de um investimento.
+\end{itemize}}
+{1}{0}
+\end{objectives}
+\clearmargin
+\begin{sugestions}{Exemplo: Criptomoedas.}
+{O exemplo apresenta os valores de uma Bitcoin, dia a dia, nas escalas linear e logarítmica. Na análise do desempenho de ações ou outros investimentos é comum a utilização de gráficos em escala logarítmica, especialmente para a análise de longo prazo. Recomenda-se que seja ressaltado que o gráfico em escala logarítmica destaca os crescimentos relativos, que eram particularmente difíceis de perceber na escala linear para os dados de menor valor.
+
+Com frequência sites de corretoras trazem a opção de mostrar dados escala logarítmica, o que é uma aplicação fora da matemática para essa técnica.}
+{1}{1}
+\end{sugestions}
 
 \arrange{Escala logarítmica}
 
@@ -1591,6 +2932,49 @@ Esse gráfico traz informações importantes, mas não é adequado todas as ques
 O gráfico mostra, então, que o crescimento proporcional no início da venda da Bitcoin foi maior do que o crescimento proporcional no pico de valor em dezembro de 2017 / janeiro de 2018, o que não estava aparente no gráfico linear.
 \end{example}
 
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{texto}
+{
+	\section{Explorando: O Logaritmo Natural}
+	\subsection{Objetivos gerais}
+	\begin{itemize}
+	\item Utilizar logaritmos em base $e$.
+	\item Aplicar a função logarítmica natural para reescrever funções exponenciais.
+	\end{itemize}
+
+	\subsection{Sugestões e discussões}
+	As funções exponenciais do tipo $f(x) = a e^{kx}$ estão ligada ao crescimento natural pois são as funções cuja taxa de crescimento é proporcional ao valor da função (únicas soluções da equação $df/dx = k f$).  Todavia apresentar esse contexto não está no escopo atual do ensino médio. Por isso apresentamos apenas a informação, sem maiores justificativas.
+
+	Os problemas de provas (como ENEM e vestibular) apresentam as questões em diferentes bases, inclusive dentro do mesmo contexto, e isso pode causar confusão. Então apresentamos uma técnica para mudar a base de qualquer exponencial para base $e$ (e que poderia ser utilizada para alterar a base para qualquer outra). Recomenda-se ressaltar que poderíamos escolher a base em que escrevemos as equações de qualquer problema, e que a base $e$ é a base de escolha das ciências naturais.
+}
+\end{texto}
+\begin{answer}{Na base $\bm{e}$}
+{
+	\begin{enumerate}
+\item $3^x = e^{\ln 3^x} = e^{x\ln 3} \approx e^{1{,}098 x}$;
+\item $10^x = e^{\ln 10^x} = e^{x\ln 10} \approx e^{2{,}302 x}$;
+\item $75^x = e^{\ln 75^x} = e^{x\ln 75} \approx e^{4{,}317 x}$.
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{texto}
+% \marginpar
+{\def\currentcolor{session4}
+\setlength\parskip{5pt}
+	\section{Organizando: Decaimento Radioativo}
+	\subsection{Objetivos Gerais}
+	Resolver questões contextualizadas envolvendo o contexto de decaimento radioativo.
+
+	\subsection{Sugestões e Discussões}
+	Os contextos específicos são importantes no conteúdo de logaritmos, ao ponto de serem explicitados na habilidade \textbf{EM13MAT305} da BNCC. Por isso dedicamos as últimas seções aos contextos específicos.
+
+	Recomenda-se a apresentação dos contextos específicos, pois eles podem parecer difíceis ou estranhos à primeira vista. Todavia destacamos que os contextos apresentados não pretendem substituir o conteúdo das respectivas matérias (física, biologia, química, ...), mas complementá-lo.
+
+	O estudo do decaimento radioativo abre a oportunidade para o estudo interdisciplinar da radiação com a física ou da datação por Carbono-14 com a química ou a biologia.
+
+}
+\end{texto}
 
 \explore{O logaritmo natural}
 
@@ -1598,7 +2982,7 @@ O gráfico mostra, então, que o crescimento proporcional no início da venda da
 A função $e^x$, onde $e=2{,}718\cdots$ número de Euler, já foi estudada no capítulo sobre a função exponencial e ela é a função exponencial preferencial nas ciências naturais e na engenharia. Isso ocorre pois ela é a linguagem natural do crescimento. A preferência do logaritmo natural está presente nas próprias calculadoras, que normalmente só calculam logaritmos em base 10, que escrevemos $\log_{10}$ ou $\log$, e a base $e$, que escrevemos $\log_e$ ou $\ln x$.
 
 \begin{observation}{A função logarítmica natural.}
-A função logarítmica de base $e$, $\log_e: \mathbb{R}^+_* \to \mathbb{R}$, é chamada de \textbf{função logarítmica natural} e denotada por $\ln$. Assim como para as outras bases, as funções $\ln x$ e $e^x$ são inversas, de modo que, para quaisquer reais $x$ e $y$, com $x>0$, temos:
+A função logarítmica de base $e$, $\log_e: \mathbb{R}^+_* \to \mathbb{R}$, é chamada de \textbf{função logarítmica natural} e denotada por $\ln$. Assim, como para as outras bases, as funções $\ln x$ e $e^x$ são inversas, de modo que, para quaisquer reais $x$ e $y$, com $x>0$, temos:
 \begin{align*}
 & e^{\ln x} = x;
 & \ln e^y = y.
@@ -1611,7 +2995,7 @@ $$
 $$
 onde utilizamos a aproximação com três casas decimais para $\ln 5$.
 
-\begin{task}{Na base $e$.}
+\begin{task}{Na base $\bm{e}$.}
 Escreva as seguintes funções exponenciais utilizando a base $e$, como no exemplo acima, utilizando aproximações com três casas decimais de precisão para os logaritmos naturais.
 \begin{enumerate}
 \item $f(x)=3^x$;
@@ -1619,9 +3003,8 @@ Escreva as seguintes funções exponenciais utilizando a base $e$, como no exemp
 \item $f(x)=75^x$.
 \end{enumerate}
 \end{task}
-
-
 \arrange{Decaimento radioativo}
+
 
 \begin{figure}[H]
 \centering
@@ -1641,7 +3024,7 @@ Escreva as seguintes funções exponenciais utilizando a base $e$, como no exemp
 \end{figure}
 
 
-Os elementos químicos são catalogados na tabela periódica. A figura acima ilustra o \textbf{isótopo mais comum do carbono}, o Carbono-12, que tem número atômico 6 (e, assim, 6 prótons) e número de massa 12, tendo 6 nêutrons. Contudo nem todos os átomos de carbono são iguais, alguns têm nêutrons em excesso ou em falta. Classificamos os átomos em isótopos de acordo com o número de nêutrons que eles têm. Um isótopo importante do carbono é o Carbono-14, que é utilizado na datação de objetos antigos.
+Os elementos químicos são catalogados na tabela periódica. A figura anterior ilustra o \textbf{isótopo mais comum do carbono}, o Carbono-12, que tem número atômico 6 (e, assim, 6 prótons) e número de massa 12, tendo 6 nêutrons. Contudo nem todos os átomos de carbono são iguais, alguns têm nêutrons em excesso ou em falta. Classificamos os átomos em isótopos de acordo com o número de nêutrons que eles têm. Um isótopo importante do carbono é o Carbono-14, que é utilizado na datação de objetos antigos.
 
 O Carbono-14 é um isótopo instável, e pode, espontaneamente, emitir radiação (e transformar-se em um átomo de nitrogênio). Esse processo natural é chamado de decaimento radioativo e diferentes isótopos decaem à taxas (velocidades) diferentes.
 
@@ -1667,7 +3050,32 @@ A \textbf{meia vida} de um isótopo radioativo é o tempo necessário para que a
 \end{table}
 
 \end{observation}
-
+\clearmargin
+\begin{sugestions}{Meia vida biológica}
+{
+	Na farmácia e na medicina utiliza-se a meia vida como meio para aproximar a concentração plasmática de um fármaco em um organismo após a administração. A resolução da questão é análoga às resoluções envolvendo o decaimento radioativo e a adaptação das técnicas conhecidas entre contextos diferentes é fundamental, uma vez que a exploração de todos os contextos específicos possíveis não é viável.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Meia vida biológica}
+{
+	Como a concentração cai pela metade a cada 61,3 minutos, poderíamos escrever a seguinte função para a concentração
+$$
+Q(t)=0{,}1(1/2)^{t/61{,}3},
+$$
+que pode ser escrita na base $e$ como
+\begin{align*}
+Q(t)=&0{,}1e^{(t/61{,}3)\ln{(1/2)}}\\
+\approx &0{,}1e^{-t\frac{0{,}693}{61{,}3}} = 0{,}1e^{-0{,}0113t}.
+\end{align*}
+Assim o tempo necessário para a concentração cair abaixo de 0,005 pode ser calculado resolvendo:
+\begin{align*}
+&0{,}005 = 0{,}1e^{-0{,}0113t}\\
+\Rightarrow &e^{-0{,}0113t} = 0{,}05\\
+\Rightarrow &t = \frac{-\ln 0{,}05}{0{,}0113} \approx 265{,}1.
+\end{align*}
+E seria necessário mais de 265min e 10s para a concentração cair abaixo de 0,005 mg/ml.
+}{1}
+\end{answer}
 \begin{example}{Decaimento do Carbono-14.}
 O decaimento do Carbono-14 é utilizado para determinar a idade de tecidos orgânicos mortos e, por isso, é muito importante em diversas áreas da ciência. Vamos considerar uma amostra com 100g de Carbono-14 e determinar quanto tempo seria necessário para que sobrasse apenas 10g de Carbono-14 na amostra.
 
@@ -1701,7 +3109,7 @@ Vemos que a quantidade cai exponencialmente a cada 5.730 anos. Assim, poderíamo
 $$
 Q(t) = 100\times \left(\frac{1}{2}\right)^{t/5730} = 100\times e^{t\frac{\ln 1/2}{5730}} = 100\times e^{-t\frac{0{,}693}{5730}},
 $$
-onde escrevemos a função exponencial de base $e$ por ser a mais utilizada nesse contexto. Assim o tempo necessário para termos 10g seria
+onde escrevemos a função exponencial de base $e$ por ser a mais utilizada nesse contexto. Assim, o tempo necessário para termos 10g seria
 \begin{align*}
 & 0{,}1=e^{-t\frac{0{,}693}{5730}}\\
 \Longrightarrow& -t\frac{0{,}693}{5730} = \ln 0{,}1\\
@@ -1709,11 +3117,33 @@ onde escrevemos a função exponencial de base $e$ por ser a mais utilizada ness
 \end{align*}
 \end{example}
 
-
 \begin{task}{Meia vida biológica.}
 A meia vida de um fármaco é o tempo necessário para a concentração plasmática dele cair pela metade em um organismo. Esse conceito serve para estimarmos qual a concentração de determinado medicamento no organismo. O antibiótico Amoxicilina tem meia vida biológica de 61,3 minutos. Vejamos a seguinte situação: um paciente de 75Kg recebe uma dose do medicamento de 500mg. Uma pessoa com esse peso tem cerca de 5 litros de sangue (a quantidade exata pode variar de pessoa para pessoa). Supondo que o medicamento foi completamente dissolvido e distribuído uniformemente no sangue, teríamos a concentração plasmática do medicamento igual a 500/5000 = 0,1 mg/ml. Escreva uma função exponencial de base $e$ para descrever concentração plasmática (em mg/ml) após $t$ minutos. Utilize a função encontrada para determinar quanto tempo levará para a concentração cair abaixo de 0,005 mg/ml. 
 \end{task}
 
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{sugestions}{Escala Richter}
+{A utilização da escala Richter para a determinação da magnitude de  eventos sísmicos de larga escala não é mais feita hoje em dia. Todavia ela é tão famosa que, muitas vezes, magnitudes em outras escalas são atribuídas a ela e questões de provas ainda fazem referência a ela.
+
+Ressaltamos, ainda, que não usa-se \textit{graus} na escala Richter. Uma escala em graus é a de Mercalli, que avalia os danos causados às estruturas locais, todavia ela não é diretamente correlacionada à magnitude (física) do evento.}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{sugestions}{Magnitude de Momento Sísmico}
+{A escala de Magnitude de Momento Sísmico é a escala mais utilizada para eventos de grande magnitude atualmente.}{1}{2}
+\end{sugestions}
+\clearmargin
+
+\begin{sugestions}{pH}
+{
+	O estudo do pH abre a oportunidade para o estudo interdisciplinar do assunto na química. Isso é particularmente recomendado pois o cálculo pode ser realizado de forma diferente em outros contextos.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{pH no vestibular}
+{
+	A chuva ácida tem pH 1 unidade menor do que o pH da chuva comum. Isso indica que a atividade de íons de hidrônio é 10 vezes maior. Assim a chuva ácida é dez vezes mais ácida.
+}{1}
+\end{answer}
 
 \explore{Escalas logarítmicas.}
 
@@ -1745,7 +3175,7 @@ Segundo a Wikipedia, a explosão na central nuclear de Chernobyl, em 1986, apres
 \implies & 2{,}53 = \log_{10} A_{CR} - \log_{10} A_{Ch} = \log_{10} \left(\frac{A_{CR}}{A_{Ch}}\right)\\
 \implies & \left(\frac{A_{CR}}{A_{Ch}}\right) = 10^{2{,}53} \approx 338{,}84.
 \end{align*} 
-Assim o Sismo da Costa Rica registrou amplitudes 338 vezes maiores do que a explosão nuclear de Chernobyl.
+Assim, o Sismo da Costa Rica registrou amplitudes 338 vezes maiores do que a explosão nuclear de Chernobyl.
 \end{example}
 
 A escala Richter apresenta distorções para eventos de grande ($>6{,}5$) intensidade e não é utilizada para grandes eventos sísmicos atualmente.
@@ -1764,7 +3194,7 @@ Segundo a Wikipedia, a explosão da Tsar Bomba (maior artefato nuclear já deton
 \implies & 4{,}7 = {\frac{2}{3}}\left(\log_{10}\left(M_{D}\right)-\log_{10}\left(M_{T}\right)\right) =  {\frac{2}{3}}\log_{10}\left(\frac{M_D}{M_T}\right)\\
 \implies & \left(\frac{M_D}{M_T}\right) = 10^{7{,}05} \approx 11.220.184{,}54.
 \end{align*} 
-Assim o impacto do meteoro gerou um Momento Sísmico mais de 11 milhões de vezes maior do que o Momento Sísmico do maior artefato nuclear já detonado pela espécie humana. 
+Assim, o impacto do meteoro gerou um Momento Sísmico mais de 11 milhões de vezes maior do que o Momento Sísmico do maior artefato nuclear já detonado pela espécie humana. 
 \end{example}
 
 \section{pH}
@@ -1774,7 +3204,7 @@ O pH, às vezes chamado de potencial de Ionização, é uma escala utilizada par
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2pt}
+\setlength\tabulinesep{1pt}
 
 \begin{tabu} to \textwidth{|l|l|}
 \hline
@@ -1827,7 +3257,6 @@ $$
 pH = - \log_{10} a_{H^+}
 $$
 
-
 \begin{task}{\,pH no vestibular.}
 [UDESC 2009] “Chuva ácida” é um termo que se refere à precipitação, a partir da
 atmosfera, de chuva com quantidades de ácidos nítricos e sulfúrico maiores que o
@@ -1839,7 +3268,7 @@ combustíveis fósseis. O pH da água da chuva considerado normal é de 5,5 (dev
 Um químico monitorando uma região altamente industrializada observou que o pH da
 água da chuva era igual a 4,5. Considerando que a acidez está relacionada com a
 concentração de $H_3O^+$, é correto afirmar que a água com pH 4,5 era:
-\begin{enumerate}
+\begin{enumerate}[itemsep=0pt]
 \item duas vezes mais básica que o normal.
 \item duas vezes mais ácida que o normal.
 \item dez vezes mais básica que o normal.
@@ -1848,9 +3277,182 @@ concentração de $H_3O^+$, é correto afirmar que a água com pH 4,5 era:
 \end{enumerate}
 \end{task}
 
-
+\clearmargin
 
 \exercise
+
+\begin{answer}{Exercícios}
+{\exerciselist
+
+\begin{enumerate}
+
+\item A formiga aparenta ter massa de $10^{-6}$Kg e o besouro parece ter massa de cerca de $10^{-4}$Kg, assim o peso do besouro é cerca de 100 vezes o peso da formiga. Já o coelho, com $1$Kg, tem 10.000 vezes o peso do besouro e 1.000.000 de vezes o peso da formiga.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{
+\exerciselist
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item O gráfico em escala linear não permite entender a evolução dos dados quando a magnitude deles é muito pequena em relação ao número total de casos. No gráfico em escala logarítmica, que preserva os crescimentos relativos, vê-se que no intervalo inicial o número de casos aumenta mais de 10 vezes, mas muito menos do que isso entre 30 de abril e 20 de maio. O gráfico em escala logarítmica é melhor para observarmos variações em dados que tenham natureza exponencial. Por exemplo percebe-se uma redução na taxa de crescimento no início de março, mas uma nova aceleração no final do mês.
+\item O gráfico em escala linear não permite entender a evolução dos dados quando a magnitude deles é muito pequena em relação ao número total de casos. No gráfico em escala logarítmica, que preserva os crescimentos relativos, vê-se um crescimento mais acentuado entre 02/10/2013 e 25/01/2014 do que entre 05/11/2017 e 28/02/2018. O pico de valor nas Bitcoins em escala linear acaba mascarando outros períodos de crescimento relativo (percentual) similares em outros períodos, nos quais o valor absoluto da moeda era menor.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{3}
+\item O número de dias necessários para a planta atingir sua altura de venda pode ser encontrada resolvendo a equação
+\begin{align*}
+&30 = 5\log_2 (t+1)\\
+\Rightarrow &t+1 = 2^6\\
+\Rightarrow &t = 63.
+\end{align*}
+O número de dias necessários para a planta atingir sua altura máxima pode ser encontrado resolvendo a equação
+\begin{align*}
+&40 = 5\log_2 (t+1)\\
+\Rightarrow& t+1 = 2^8\\
+\Rightarrow& t = 255.
+\end{align*}
+Assim entre os dois períodos temos $255-63 = 192$ dias.
+
+\item Podemos encontrar o tempo necessário resolvendo a equação
+\begin{align*}
+&50 = 5(1{,}184)^t\\
+\Rightarrow& (1{,}184)^t = 10\\
+\Rightarrow& t\log(1{,}184) = 1\\
+\Rightarrow& t = \frac{1}{0{,}073} \approx 13{,}
+7.
+\end{align*}
+Assim seria necessário mais do que 13 anos e teríamos 50 milhões de usuários entre 2013 e 2014.
+
+\item $pH = -\log 10^{-5}=5$.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{6}
+\item Apenas as proposições II e III são verdadeiras pois:
+
+I - É falsa pois nenhuma das informações dadas permite calcular o valor de $A_0$.
+
+II- \hspace{30mm}\begin{minipage}[t]{0.8\linewidth}
+$\,\,\,\,\,\,\,4 = \log (A) - \log (A_0)$
+
+$\Rightarrow 4 = \log (A/A_0)$
+
+$\Rightarrow (A/A_0) = 10^4.$
+\end{minipage}
+
+III- \begin{minipage}[t]{0.8\linewidth}
+Se a amplitude do primeiro terremoto é $A_1$ e a amplitude do segundo terremoto é $A_2$, temos
+\begin{align*}
+&1 = \log (A_1) - \log (A_0)\\
+& \hspace{4mm}- (\log (A_2) - \log (A_0))\\
+\Rightarrow &1 = \log (A_1/A_2)\\
+\Rightarrow &(A_1/A_2) = 10.
+\end{align*}
+\end{minipage}
+
+\item Aplicando os valores na expressão
+\begin{align*}
+&7{,}3 = -10{,}7+\frac{2}{3} \log M_0\\
+\Rightarrow & \frac{2}{3} \log M_0 = 18\\
+\Rightarrow & \log M_0 = 27\\
+\Rightarrow & M_0 = 10^{27}.
+\end{align*}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{8}
+\item O tempo pode ser encontrado resolvendo
+\begin{align*}
+&3{,}5 = 1{,}5+\log_3 (t+1)\\
+\Rightarrow & \log_3 (t+1) = 2\\
+\Rightarrow & (t+1) = 3^2 =9\\
+\Rightarrow & t = 8.
+\end{align*}
+
+\item Podemos encontrar o tempo necessário resolvendo a equação
+\begin{align*}
+& 30 = 5(1{,}02)^t\\
+\Rightarrow & (1{,}02)^t = 6\\
+\Rightarrow & t\ln(1{,}02) = \ln 2 + \ln 3\\
+\Rightarrow & t \approx \frac{0{,}7+1{,}1}{0{,}02}=90.
+\end{align*}
+Seriam necessários 90 anos se a taxa de crescimento permanecesse a mesma (contudo não há evidências para essa suposição).
+
+\item Calcula-se o pH diretamente da fórmula:
+\begin{align*}
+pH =& -\log (5{,}4\times 10^{-8})\\
+=& -\log (3^3\times 2 \times 10^{-9})\\
+\approx& 9-3\log 3 -\log 2 \\
+\approx& 9 -3\times 0{,}48 -0{,}3=7{,}26.
+\end{align*}
+
+\item A temperatura $T$, em $^oC$, pode ser escrita em função do tempo $t$, em minutos, através da expressão:
+$$
+T(t) = 3000(0{,}99)^{t/30}.
+$$
+Calcula-se o pH diretamente da fórmula:
+\begin{align*}
+&30= 3000(0{,}99)^{t/30}\\
+\Rightarrow & 1/100 = (0{,}99)^{t/30}\\
+\Rightarrow & \frac{t}{30} \log(0{,}99)= -2\\
+\Rightarrow & t= -\frac{60}{\log(0{,}99)} \\
+&\,\,= -\frac{60}{-2+\log(3^2)+\log(11)}\\
+&\,\,\approx \frac{60}{0{,}005} = 12000.
+\end{align*}
+Assim serão necessários 12000min=200h.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{12}
+\item Podemos encontrar o tempo necessário resolvendo a equação
+\begin{align*}
+& \frac{P_0}{4} = P_0 e^{-\frac{t}{250}}\\
+\Rightarrow & e^{-\frac{t}{250}} = \frac{1}{4}\\
+\Rightarrow & -\frac{t}{250} = \ln \left(\frac{1}{4}\right) \approx -2 \times 0{,}693\\
+\Rightarrow & t \approx 250 \times 2 \times 0{,}693 = 346{,}5.
+\end{align*}
+Seriam necessários aproximadamente 346 dias.
+
+\item Podemos encontrar a altitude diretamente da equação
+\begin{align*}
+ h =& 20 \log 1/0{,}4 = 20 \log 10/4\\
+=& 20 (\log 10 -2\log 2)\\
+\approx& 20 (1-2\times0,3) = 8.
+\end{align*}
+Assim a altitude é de 8Km.
+
+\item A probabilidade de ganhar ao menos um partida, dentre $n$ jogadas, pode ser calculada como 1 menos a probabilidade de perder todas consecutivamente
+\begin{align*}
+P =& 1 - 0{,}9^n.
+\end{align*}
+Assim, o número de partidas necessário para que a probabilidade de vencer ao menos uma seja maior do que 99\% pode ser obtida resolvendo
+\begin{align*}
+ &0{,}99 = 1 - 0{,}9^n\\
+\Rightarrow & 0{,}9^n = 0{,}01\\
+\Rightarrow & n\log(0{,}9) = \log(0{,}01)\\
+\Rightarrow & n = \frac{-2}{\log(9/10)}= \frac{-2}{2\log(3)-1}\\
+& \,\, \approx\frac{-2}{-0{,}046} \approx 43{,}48.
+\end{align*}
+Contudo o número de partidas só pode ser um número inteiro positivo, desse modo serão necessárias 44 partidas para que a probabilidade de que haja vitória em apenas uma delas seja maior do que 99\%.
+\end{enumerate}
+}{1}
+\end{answer}
+
 
 
 \begin{enumerate}
@@ -1880,13 +3482,13 @@ Fonte: \textit{Our World in Data} (\url{ourworldindata.org}).}
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.9\linewidth]{World_log.png}\vspace{3mm}\\
+\includegraphics[width=.9\linewidth]{World_log.png}
 \caption{Total de casos confirmados da Covid-19 no mundo (log)\\
 Fonte: \textit{Our World in Data} (\url{ourworldindata.org}).}
 \end{figure}
 
 
-\item \label{Exer3} Observando as figuras \ref{bitcoinlinear} e \ref{bitcoinlog}, o crescimento percentual do valor da Bitcoin foi maior entre as datas de 02/10/2013 e 25/01/2014 ou entre 05/11/2017 e 28/02/2018? Como isso pode ser observado nos gráficos?
+\item \label{Exer3} Observando as \hyperref[bitcoinlinear]{figuras \ref{bitcoinlinear}} e \ref{bitcoinlog}, o crescimento percentual do valor da Bitcoin foi maior entre as datas de 02/10/2013 e 25/01/2014 ou entre 05/11/2017 e 28/02/2018? Como isso pode ser observado nos gráficos?
 
 
 \item \label{Exer4} (ENEM 2019) Um jardineiro cultiva plantas ornamentais e as coloca à venda quando estas atingem 30 centímetros de altura. Esse jardineiro estudou o crescimento de suas plantas, em função do tempo, e deduziu uma fórmula que calcula a altura em função do tempo, a partir do momento em que a planta brota do solo até o momento em que ela atinge sua altura máxima de 40 centímetros. A fórmula é $h = 5\log_2 (t + 1)$, em que t é o tempo contado em dia e h, a altura da planta em centímetro. A partir do momento em que uma dessas plantas é colocada à venda, em quanto tempo, em dia, ela alcançará sua altura máxima?
@@ -1950,7 +3552,7 @@ Assinale a correta.
 \item \label{Exer8} (Enem 2011) A Escala de Magnitude de Momento (abreviada como MMS e denotada como $M_w$), introduzida em 1979 por Thomas 
 Haks e Hiroo Kanamori, substituiu a Escala de Richter para medir a magnitude dos terremotos em termos de energia 
 liberada. Menos conhecida pelo público, a MMS é, no entanto, a escala usada para estimar as magnitudes de todos os 
-grandes terremotos da atualidade. Assim como a escala Richter, a MMS é uma escala logarítmica. 
+grandes terremotos da atualidade. Assim, como a escala Richter, a MMS é uma escala logarítmica. 
 $M_w$ e $M_0$ se relacionam pela fórmula:
 $$
 M_w = - 10,7 + \frac{2}{3}\log_{ 10 }(M_0).
@@ -1976,7 +3578,7 @@ terremoto de Kobe (em dina$\cdot$cm)?
     \item $10^{27,00}$
 \end{enumerate}
 
-
+\clearpage
 \item \label{Exer9} (UFSCar-SP) A altura média do tronco de certa espécie de árvore, que se destina a produção de madeira, evolui, 
 desde que é plantada, segundo o seguinte modelo matemático:
 $$
@@ -2088,7 +3690,39 @@ necessário, use $\log(3) = 0{,}477$.
 
 \end{enumerate}
 
-\pagebreak
+\clearpage
+\def\currentcolor{session3}
+\begin{texto}
+{	\section{Para saber +: Sem ferramentas de cálculo...}
+	
+	\subsection{Objetivos gerais}
+	\begin{itemize}
+	\item Conhecer a motivação histórica para o surgimento dos logaritmos.
+	\item Calcular logaritmos manualmente através do método da bissecção, que têm sua importância como método computacional também em outros contextos.
+	\end{itemize}
+
+	\subsection{Sugestões e discussões}
+	Essa seção é opcional. A informação histórica, de que os logaritmos foram desenvolvidos para resolver problemas de multiplicação e divisão, pode ser apresentada nesse momento, mas só poderá ser plenamente desenvolvida quando a turma estiver confortável com as propriedades operatórias dos logaritmos.
+
+	Tendo em vista a dificuldade no cálculo explicito dos logaritmos, vê-se uma oportunidade para a apresentação de métodos de aproximação. Um método de grande importância no Pensamento Computacional é o método da bissecção, que é ilustrado através de um exemplo de cálculo de um logaritmo.
+
+	Apesar do cálculo manual não ter muito interesse hoje em dia, o método é interessante e amplamente utilizado para o cálculo de aproximações nos mais diversos códigos de computador.
+}
+\end{texto}
+
+\begin{objectives}{O método da bissecção}
+{
+	Aplicar o método da bissecção para a obtenção de aproximações sucessivas cada vez melhores.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{O método da bissecção}
+{
+	O método é apresentado de forma repetitiva, pois essa é uma de suas característica fundamentais, e pode-se destacar que isso o torna adequado para a implementação no computador, que é uma boa ferramenta para a execução de cálculos repetitivos. A seção sobre \textit{Pensamento Computacional} explora o conceito de erro sob a ótica do computador de maneira mais explícita.
+
+	A ilustração geométrica do método esclarece o seu nome "método da bissecção", pois dividimos, vez após vez, um intervalo que contém a solução e decidimos em quais das duas metades deve estar o $\log_2 3$. 
+}{1}{2}
+\end{sugestions}
+
 \know{sem ferramentas de cálculo...}
 
 
@@ -2098,7 +3732,7 @@ Os logaritmos foram inventados pelo matemático escocês John Napier (1550 - 161
 \begin{figure}[H]
 \centering
 \includegraphics[height=80mm]{Logarithmorum_Chilias_Prima_page_0-67.jpg}%Figura de domínio público
-\caption{Uma página do \textit{Logarithmorum Chilias Prima} de Henry Briggs, publicado em 1617, com aproximações dos logarimos em base 10 dos números inteiros de 0 à 67 com precisão de 14 casas decimais.}
+\caption{Uma página do \textit{Logarithmorum Chilias Prima} de Henry Briggs, publicado em 1617, com aproximações dos logaritmos em base 10 dos números inteiros de 0 à 67 com precisão de 14 casas decimais.}
 \end{figure}
 
 
@@ -2111,7 +3745,7 @@ Para aplicarmos o método da bissecção, tomamos uma aproximação superior e o
 \end{observation}
 
 
-O $\log_2 3$ é o expoente em que precisamos elevar $2$ para obter $3$, ou seja $2^{\log_2 3} = 3$, assim precisamos encontrar expoentes tais que 2 elevado a esses expoentes se aproxima cada vez mais de 3.  Podemos iniciar nossas tentativas com os expoentes $1$ e $2$. De fato $2^1=2<3$ e $2^2 = 4>3$, junto ao fato que as potências de 2 crescem quando crescem os expoentes, temos $1<\log_2 3 < 2$. Para aplicar o método, escolhemos então, inicialmente, as aproximações inferior $i=1$ e superior $s=2$.
+O $\log_2 3$ é o expoente em que precisamos elevar $2$ para obter $3$, ou seja $2^{\log_2 3} = 3$, assim, precisamos encontrar expoentes tais que 2 elevado a esses expoentes se aproxima cada vez mais de 3.  Podemos iniciar nossas tentativas com os expoentes $1$ e $2$. De fato $2^1=2<3$ e $2^2 = 4>3$, junto ao fato que as potências de 2 crescem quando crescem os expoentes, temos $1<\log_2 3 < 2$. Para aplicar o método, escolhemos então, inicialmente, as aproximações inferior $i=1$ e superior $s=2$.
 
 Tomamos, então a metade do intervalo $(1,2)$ como uma primeira aproximação $x=(1+2)/2 = 3/2$.
 
@@ -2132,7 +3766,7 @@ Tomamos, então a metade do intervalo $(1,2)$ como uma primeira aproximação $x
 \end{figure}
 
 
-Agora precisamos verificar se $x = 3/2$ é uma aproximação superior ou inferior e fazemos isso verificando se $2^{3/2}$ é maior ou menor do que $3$, que é o mesmo que comparar $2^3=8$ com $3^2=9$, pois a raiz quadrada é uma função crescente. Como $2^3 < 3^2$, temos $2^{3/2}<3$ e $3/2<\log_2 3$, novamente pelo fato das potências de 2 crescerem quando crescem os expoentes. Assim a nova aproximação inferior passa a ser $i=3/2$ e aproximação superior continua sendo $s=2$.
+Agora precisamos verificar se $x = 3/2$ é uma aproximação superior ou inferior e fazemos isso verificando se $2^{3/2}$ é maior ou menor do que $3$, que é o mesmo que comparar $2^3=8$ com $3^2=9$, pois a raiz quadrada é uma função crescente. Como $2^3 < 3^2$, temos $2^{3/2}<3$ e $3/2<\log_2 3$, novamente pelo fato das potências de 2 crescerem quando crescem os expoentes. Assim, a nova aproximação inferior passa a ser $i=3/2$ e aproximação superior continua sendo $s=2$.
 
 Tomamos, então a metade do intervalo $(3/2, 2)$ como uma segunda aproximação $x=(3/2+2)/2 = 7/4$. 
 
@@ -2196,15 +3830,125 @@ Podemos continuar esse processo quantas vezes desejarmos, mas vamos parar com o 
 \end{tikzpicture}
 \end{figure}
 
+\clearpage
+\begin{objectives}{Cálculo do $\log_2 5$}
+{
+	Praticar o método da bissecção, aplicando-o no cálculo de logaritmos.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Cálculo do $\log_2 5$}
+{
+	O cálculo manual pode ser uma oportunidade para fixar o método da bissecção e poderia ser complementado com atividades práticas interdisciplinares de computação com a implementação do método em alguma linguagem.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Cálculo do $\log_2 5$}
+{
+	Calcular $\log_2 5$ significa encontrar o expoente ao qual deve-se elevar $2$ para obter $5$, ou seja, é o número tal que $2^{\log_2 5} = 5$. Assim buscamos expoentes de $2$ que levem a resultados cada vez mais próximos de 5.
 
+Como $2^2 = 4 <5<8 =2^3$, tomamos $i=2$ e $s=3$ como aproximações iniciais.
 
-A aproximação para o logaritmo está boa? Pelo fato de $3/2 < \log_2 3 < 13/8$, temos certeza que $\log_2 3$ está no intervalo $(3/2,13/8)$. Contudo nossa aproximação está no centro do intervalo e à uma distância menor do que a metade do seu comprimento ($(13/8-3/2)/2= 1/16 = 0,0625$) de qualquer ponto do intervalo, inclusive $\log_2 3$. Assim garantimos que o erro em nossa aproximação é menor do que $0{,}0625$.
+	Verificamos, então, se o ponto médio $(2+3)/2=5/2$ é uma aproximação superior ou inferior. Isso é feito comparando $2^5=32$ com $5^2=25$. Como $2^5 > 5^2$ temos que $2^{5/2} > 5$ e $5/2 > \log_2 5$, pois a função exponencial $2^x$ cresce, conforme crescem os valores de $x$. Então tomamos $s=5/2=2,5$, enquanto mantemos $i=2$. A aproximação seguinte é, então, $(2+5/2)/2 = 9/4 = 2,25$.
+
+	Como $\log_2 5 \in (2, 5/2)$ e $2,25$ está a uma distância menor do que 0,25 de qualquer ponto do intervalo, temos que 2,25 é uma aproximação com o erro menor do que o pedido.
+}{1}
+\end{answer}
+
+A aproximação para o logaritmo está boa? Pelo fato de $3/2 < \log_2 3 < 13/8$, temos certeza que $\log_2 3$ está no intervalo $(3/2,13/8)$. Contudo nossa aproximação está no centro do intervalo e à uma distância menor do que a metade do seu comprimento ($(13/8-3/2)/2= 1/16 = 0,0625$) de qualquer ponto do intervalo, inclusive $\log_2 3$. Assim, garantimos que o erro em nossa aproximação é menor do que $0{,}0625$.
 
 \begin{task}{cálculo do $\log_2 5$}
 Utilize o método da bissecção para calcular $\log_2 5$ com erro menor do que $0,25$. 
 \end{task}
 
 \clearpage
+\begin{texto}
+{
+\section{Para Saber +: Logaritmos com a Régua de Cálculo}
+\subsection{Objetivos gerais}
+\begin{itemize}
+\item Observar as dificuldades inerentes à realização de operações de multiplicação com números grandes.
+\item Desenvolver operações de multiplicação e divisão utilizando a soma de logaritmos.
+\item Efetuar cálculos de multiplicação e divisão utilizando a régua de cálculo.
+\end{itemize}
+
+\vspace{-\parskip}
+\subsection{Sugestões e discussões}
+	
+A seção \textit{Para saber +: logaritmos com a régua de cálculo} é opcional. A seção realiza uma exploração das ideias que levaram ao desenvolvimento dos logaritmos, como recomenda-se às explorações históricas, que não sejam apenas fatos e anedotas desconexos das ideias e necessidades que levaram ao surgimento de determinada ideia.
+
+Iniciamos a seção apresentado o problema da multiplicação de grandes números, que pode parecer trivial para o leitos moderno, mas que facilmente gera erros. Para ilustrar esse ponto, sugerimos na atividade \textit{Multiplicação manual} que os estudantes calculem $19683 \times 2187$ manualmente.
+
+Nessa etapa ilustra-se como uma tabela de logaritmos pode ser utilizada para realizar multiplicações e divisões. Recomenda-se que o cálculo da atividade anterior seja realizado somando as potência de três, cujos valores poderiam estar tabelados. Para tornar esse tipo de operação mais concreta recomenda-se o desenvolvimento, das operações de multiplicação triviais listadas, com o auxílio da tabela disponível no material do aluno.
+
+Algum estudante pode questionar que é muito mais fácil simplesmente realizar as multiplicações e divisões listadas, o que é verdade, mas cabe ressaltar que estamos realizando esses cálculos apenas para ilustrar a técnica, mas que ela é realmente útil quando trabalhamos com números grandes. Por fim, o funcionamento da régua de cálculo será baseado nesse princípio, o que é a motivação para essa discussão aqui.
+}
+\end{texto}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Multiplicação manual}
+{
+	Recomenda-se perguntar os resultados obtidos à turma antes de apresentar a resposta correta e espera-se obter diversos resultados distintos. \textbf{O resultado é $43046721$}, mas a experiência mostra que dificilmente algum estudante chega ao resultado correto e recomenda-se que o/a professor/a diga que tais erros eram esperados, pois é muito fácil cometer erros ao multiplicar grandes números.
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Multiplicações com uma tabela}
+{
+	Entender como uma tabela de logaritmos pode ser utilizada para efetuar cálculos de multiplicação.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Multiplicações com uma tabela}
+{
+	Nessa etapa busca-se ilustrar como a multiplicação de dois números pode ser realizada utilizando uma tabela. Isso é efetuado somando os logaritmos dos números e encontrando o valor dessa soma na tabela. Os cálculos efetuados são simples devido as limitações de nossa tabela e buscam apenas mostrar o princípio, que será fundamental para os cálculos com a régua de cálculo.
+
+	Essa explicação pode ser transformada em uma atividade se o/a professor/a achar necessário.
+}{1}{2}
+\end{sugestions}
+\clearmargin
+\begin{objectives}{Régua em base 2}
+{
+	Entender o mecanismo de funcionamento da régua de cálculo.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Régua em base 2}
+{
+	Nessa etapa busca-se ilustrar como a régua de cálculo funciona em uma régua de cálculo de base $2$, que pode ser mais natural para os estudantes. Recomenda-se que o professor mostre como fazer cálculos com a régua dessa base e, se possível, construa o par de réguas de base $2$ em maior tamanho para mostrar aos estudantes o funcionamento.
+
+	Recomenda-se que seja destacado que, ao colocarmos as réguas lado a lado, estamos somando os logaritmos dos números na escala linear e, de acordo com os exemplos anteriores, obtemos o resultado correto na multiplicação.
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{objectives}{Cálculos com a régua}
+{
+	Aplicar uma régua de cálculo em operações de multiplicação e divisão.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Cálculos com a régua}
+{
+	Recomenda-se que se destaque um problema na utilização da régua em base dois: os números crescem rápido demais. Aqui seria possível questionar aos alunos como esse problema poderia ser resolvido, antes de apresentar a resposta: tomar uma base menor (mas que ainda precisará ser maior do que $1$, caso contrário teríamos uma escala decrescente na régua).
+
+Recomenda-se então que os estudantes utilizem, em grupos, as réguas disponíveis com o material para efetuar as operações indicadas. O/A professor/a pode tirar cópias das réguas no anexo, recortá-las e entregar aos alunos para que não sejam removidas do material.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Cálculos com a régua}
+{
+	Nessas atividades basta deslizar a metade superior de modo que o número 1 esteja sobre o primeiro dos fatores e observar a resposta abaixo do segundo fator na régua superior.
+
+	\begin{enumerate}
+	\item $9 \times 7 = 63$.
+	\item $3{,}5 \times 4 = 14$.
+	\item $2{,}8 \times 2,5 = 7$.
+	\item $28 \times 25 = 700$. Apesar dos números $28$ e $25$ estarem nas duas metades da régua, a posição onde estaria a reposta fica além do comprimento da régua, mas podemos realizar esse cálculo lembrando que $28 \times 25 = 2{,}8 \times 2{,}5 \times 10^2 = 7 \times 10^2 = 700$.
+	\item $3{,}2 \times 3{,}1 \approx 9{,}9$. Ao aplicarmos o procedimento a resposta parece dar $9,9$. Isso ocorre pois há um limite para a escala de graduações escrita na régua, que tem precisão máxima de uma casa decimal para números menores do que $10$ e precisão apenas da parte inteira para números maiores do que $10$. A resposta exata seria $9{,}92$ e a resposta $9{,}9$ é uma aproximação para ela.
+	\item $5{,}8 \times 9{,}3 \approx 54$. A régua mostra a aproximação $54$, que está bastante próxima da resposta exata $53{,}94$.
+	\item $583 \times 93\approx 54000$. $583 \times 93 = 5,83 \times 9,3 \times 10^3 \approx 54 \times 10^3 = 54000$, que é uma aproximação para a resposta exata $54219$.
+	\item $78326 \times 648 \approx 51000000$. $78326 \times 648 = 7,8326 \times 6,48 \times 10^6 \approx 51 \times 10^6 = 51000000$, que é uma aproximação para a resposta exata $50755248$.
+	\item $56 \div 7 = 8$.
+	\item $58 \div 4 = 14{,}5$. A régua mostra um valor entre $14$ e $15$, nesses casos podemos tomar a média entre eles, $14{,}5$, que, por acaso, acaba coincidindo com a resposta exata.
+	\item $93 \div 5 \approx 18{,}6$. A régua mostra um valor entre $18$ e $19$, nesses casos podemos tomar a média entre eles, $18{,}5$, que aproxima resposta exata $18{,}6$.
+	\item $476 \div 93 \approx 5{,}1$. $476 \div 93 = 47{,}6 \div 9{,}3 \approx 5{,}1$, que é uma aproximação para a resposta dada pela calculadora $5{,}11827957$ (que é apenas uma aproximação...).
+	\item $7345 \div 57 \approx 125$. $7345 \div 57 =73,45 \div 5{,}7 \times 10\approx 12{,}5 \times 10 = 125$, que é uma aproximação para a resposta dada pela calculadora $128{,}859649123$ (que é apenas uma aproximação...).
+\end{enumerate}
+}{0}
+\end{answer}
+
 
 \know{Logaritmos com a régua de cálculo}
 
@@ -2244,7 +3988,7 @@ O cálculo realizado acima pode ser feito de modo muito mais rápido se tivermos
 \end{itemize}
 
 
-Assim, podemos utilizar a Tabela \ref{potencias2_log} para fazer cálculos de multiplicação ou divisão, somando ou subtraindo  os logaritmos e localizando o resultado correspondente a soma, ao invés de multiplicar explicitamente:
+Assim, podemos utilizar a \hyperref[potencias2_log]{tabela \ref{potencias2_log}} para fazer cálculos de multiplicação ou divisão, somando ou subtraindo  os logaritmos e localizando o resultado correspondente a soma, ao invés de multiplicar explicitamente:
 \begin{itemize}
  \item $5 \times 4 \approx 2^{2{,}32} \times 2^2 = 2^{2{,}32 + 2} = 2^{4{,}32} \approx 20$;
  \item $3 \times 5 \approx 2^{1{,}58} \times 2^{2{,}32} = 2^{1{,}58 + 2{,}32} = 2^{3{,}9} \approx 15$;
@@ -2261,7 +4005,7 @@ Napier escreveu um livro inteiro de logaritmos tabelados para consulta e utiliza
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{Figuras/Reguadecalculo}\\
+\includegraphics[width=0.5\linewidth]{Reguadecalculo}\\
 
 \caption{Uma régua de cálculo \\ Fonte: Slide Rule em Flickr / Usuário: The Last Cookie}
 \end{figure}
@@ -2270,9 +4014,9 @@ A régua linear de Oughtred efetuava multiplicações e divisões com duas escal
 ginásio. Ela aprimorada por diversos cientistas e engenheiros até chegar em sua versão atual. Estudaremos uma régua de cálculo simplificada nas atividades seguintes.
 
 
-\textbf{A Régua de Cálculo}
+\subsection{A Régua de Cálculo}
 
-Na régua aritmética ou linear, o comprimento 1cm corresponde ao número 1, o comprimento 2 cm corresponde ao número 2 e assim sucessivamente. Na régua de cálculo logarítmica de base 2, o número 1 corresponde ao comprimento do logaritmo de 1 em base 2, o número 2 corresponde ao comprimento do logaritmo de 2 e assim por diante. A Figura \ref{Reguas} 
+Na régua aritmética ou linear, o comprimento 1cm corresponde ao número 1, o comprimento 2 cm corresponde ao número 2 e assim sucessivamente. Na régua de cálculo logarítmica de base 2, o número 1 corresponde ao comprimento do logaritmo de 1 em base 2, o número 2 corresponde ao comprimento do logaritmo de 2 e assim por diante. A \hyperref[Reguas]{figura \ref{Reguas}}
 ilustra uma régua de cálculo formada por duas partes, cada uma com uma linha central e uma escala linear, ambas na cor 
 cinza, e uma escala logarítmica na cor preta. Note que na escala logarítmica marcamos, por exemplo, o número 3 à distância 1,59 do 
 ponto inicial da escala, o número 1, pois $\log_2 3 \approx 1{,}59$.
@@ -2381,7 +4125,7 @@ ponto inicial da escala, o número 1, pois $\log_2 3 \approx 1{,}59$.
 Podemos utilizar as réguas de cálculo para fazer multiplicações ou divisões.
 
 Para multiplicar $a \times b$, basta colocar as duas metades da régua uma sobre a outra, como na figura, colocando o número 1 da metade 
-superior da régua sobre $a$. O resultado estará então abaixo de $b$. Como ilustra a Figura \ref{Reguas} nas 
+superior da régua sobre $a$. O resultado estará então abaixo de $b$. Como ilustra a \hyperref[Reguas]{figura \ref{Reguas}} nas 
 multiplicações 4x2 e 4x3.
 
 
@@ -2490,12 +4234,12 @@ Isso funciona pois ao colocarmos as réguas assim, estamos adicionando ou  subtr
 
 Por fim ainda temos o problema que a base dois cresce muito rapidamente. Para resolver isso podemos tomar uma que seja bem próxima de 1 e um pouco maior.
 
-Produzimos réguas de cálculo, que estão no final do capítulo, utilizando a base $x = 10^{1/50}\approx 1{,}04713$, de modo que $\log_{x}100=100$. As graduações na régua correspondem aos logaritmos em base $x$ dos números de 0 a 10 com uma casa decimal de precisão e dos números naturais de 11 até 100. A régua também contém uma escala linear e as posições dos números na escala logarítmica correspondem aos valores dos logaritmos daqueles números na base $x$. A Figura \ref{ReguaCalculo} ilustra a régua.
+Produzimos réguas de cálculo, que estão no final do capítulo, utilizando a base $x = 10^{1/50}\approx 1{,}04713$, de modo que $\log_{x}100=100$. As graduações na régua correspondem aos logaritmos em base $x$ dos números de 0 a 10 com uma casa decimal de precisão e dos números naturais de 11 até 100. A régua também contém uma escala linear e as posições dos números na escala logarítmica correspondem aos valores dos logaritmos daqueles números na base $x$. A \hyperref[ReguaCalculo]{figura \ref{ReguaCalculo}} ilustra a régua.
 
 \begin{figure}[H]
-\includegraphics[width=\linewidth]{Figuras/Ruler1.pdf}
+\includegraphics[width=\linewidth]{Ruler1.pdf}
 
-\includegraphics[width=\linewidth]{Figuras/Ruler2.pdf}
+\includegraphics[width=\linewidth]{Ruler2.pdf}
 
 \caption{A régua de cálculo que acompanha este material. \\ Fonte: Logaritmos e a régua de cálculo, Pedrosa \& Adames.}\label{ReguaCalculo}
 \end{figure}
@@ -2521,6 +4265,55 @@ Em pequenos grupos, vamos utilizar as réguas de cálculo para efetuar os seguin
 \end{enumerate}
 \end{task}
 
+\clearpage
+\begin{texto}
+{
+\section{Para Saber +: Ajustes de curvas}
+\subsection{Objetivos gerais}
+Utilizar ferramentas computacionais na busca de funções que melhor aproximem dados reais.
+
+\subsection{Sugestões e discussões}
+O desenvolvimento dessa seção é opcional e pretende explorar a aproximação de dados reais através de funções conhecidas. A atividade propõe analisar a adequação do ajuste de curvas aos dados reais utilizando ferramentas matemáticas e computacionais (já desenvolvidas no applet do GeoGebra relacionado), relacionando-se à habilidade \textbf{EM13MAT104}.
+
+Se o/a professor/a achar adequado no contexto da turma e tiver disponibilidade de tempo, seria possível estender a atividade para as outras medidas listadas (colocando os dados no \textit{applet} fazendo discussões similares).
+}
+\end{texto}
+\clearmargin
+\begin{objectives}{Para refletir}
+{
+	\begin{itemize}
+	\item Analisar a utilização de diversas funções no ajuste de curvas de dados reais.
+	\item Interpretar criticamente o ajuste de curvas utilizando funções conhecidas, contextualizando a situação na realidade.
+	\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Para refletir}
+{
+	Recomenda-se a observação das funções ajustadas no applet do GeoGebra, seguida da reflexão sobre a adequação das funções escolhidas, que pode levar em conta fatores conhecidos, como o fato que crianças crescem mais rápido do que adultos e que seres humanos atingem suas alturas máximas no início da vida adulta. Também pode ser importante discutir as limitações dos modelos, que não se aplicariam à velhice, quando nossa altura começa a diminuir.
+}{1}{2}
+\end{sugestions}
+
+\begin{answer}{Para refletir}
+{
+	Observa-se que as funções exponencial, linear e polinomial tem crescimento muito rápido para valores maiores que os dados apresentados. Isso levaria a previsões de crescimento que não condizem com seres humanos. As funções logarítmica e logística crescem muito lentamente para valores maiores do que aqueles dos dado apresentados, gerando valores abaixo dos esperados para a altura de um ser humano saudável. Por eliminação das outras possibilidades, a função potência parece ser mais adequada à situação.
+}{0}
+\end{answer}
+
+\begin{objectives}{Regressão Linear}
+{
+	\begin{itemize}
+	\item Analisar uma situação real a partir de dados concretos, com auxilio da tecnologia, e fazer previsões sobre valores futuros.
+	\item Avaliar criticamente os resultados obtidos.
+	\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{answer}{Regressão linear}
+{
+	Utilizando os dados reais do número de casos nos Estados Unidos (fonte: Our World in Data) entre 22/01/2020 e 21/03/2020, aplicamos regressão linear com uma ferramenta computacional para estimar o número de casos pela fórmula $f(t) = 0{,}000275279 \times 1{,}36451^t$, onde $t=0$ representa o dia 22/01 e $t= 59$ o dia 21/03. %(Ref: https://towardsdatascience.com/modeling-exponential-growth-49a2b6f22e1f)
+
+	Utilizando a fórmula, quantos dias seriam necessários para que a pandemia ultrapassasse 100.000 infectados naquele país?
+}{1}
+\end{answer}
 
 \know{Ajustes de curvas}
 
@@ -2532,7 +4325,7 @@ A caderneta de saúde abaixo traz as medidas (nas datas especificadas) da idade,
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.8\linewidth]{Figuras/Caderneta.png}
+\includegraphics[width=0.8\linewidth]{Caderneta.png}
 \caption{Dados médicos na carteirinha de uma criança.}
 \end{figure}
 
@@ -2541,7 +4334,7 @@ Anotamos os dados de idade e altura no GeoGebra, no endereço abaixo, e utilizam
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.3\linewidth]{Figuras/QRcode_ajuste_curvas.png}
+\includegraphics[width=.3\linewidth]{QRcode_ajuste_curvas.png}
 
 \url{https://www.geogebra.org/calculator/za7dq64a}
 \end{figure}
@@ -2585,13 +4378,44 @@ Vamos comparar os dados obtidos pela fórmula com os dados reais.
 
 Os valores são próximos no começo, mas começam a ficar distintos. Explicamos isso pelo fato da pandemia não se desenvolver livremente, mas há reações da população e das autoridades, como medidas sanitárias, que podem reduzir as taxas de infecção.
 
+\clearpage
+\begin{texto}
+{
+	\section{Para Saber +: Logaritmos e Progressões}
+	\subsection{Objetivos gerais}
+	\begin{itemize}
+	\item Conhecer o desenvolvimento histórico das ideias envolvendo logaritmos.
+	\item Entender a relação dos logaritmos aos conteúdos de P.A. e P.G.
+	\end{itemize}
+
+	\subsection{Sugestões e discussões}
+	Essa atividade é opcional, caso haja espaço no cronograma e o desejo de explorar o desenvolvimento de ideias da história da matemática. Quando Napier desenvolveu seus logaritmos, eram frequentes as construções matemáticas envolvendo movimentos e Napier explicou suas ideias sobre logaritmos nesses termos.
+
+	No movimento proposto por Napier, as posições de dois objetos eram observadas a intervalos regulares de tempo. Como o primeiro objeto move-se a velocidade constante, suas posições formam uma P.A. Já o segundo move-se uma quantidade de unidades proporcional à sua distância da origem, formando uma P.G. A atividade propõem que isso seja verificado em um exemplo concreto.
+
+	Após a atividade, recomenda-se que se reforce a interpretação de que o logaritmo de um termo da P.G é o respectivo termo da P.A.
+
+	Por fim essa relação entre logaritmos e as progressões pode ser associada à habilidade da BNCC - EM13MAT508: Identificar e associar progressões geométricas (PG) a funções exponenciais de domínios discretos, para análise de propriedades, dedução de algumas fórmulas e resolução de problemas.
+}
+\end{texto}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Progressões}
+{
+	\begin{itemize}
+	\item $\{1,2,3,4,5,6,7,8,\cdots\};$
+	\item[] $\{2,4,8,16,32,64,\cdots\};$
+	\item $\{1,2,3,4,5,6,7,8,\cdots\};$
+	\item são os valores da primeira sequência.
+	\end{itemize}
+}{1}
+\end{answer}
 
 \know{Logaritmos e progressões}
 
 
-Napier pensava nos logaritmos como produzidos por um movimento dinâmico. Traduzimos isso pensando em dois objetos $P$ e $Q$ movendo-se sobre duas semi-retas, um partindo da origem 0 e o outro do número 1, de modo que o  primeiro desloca-se com velocidade constante, mas o segundo tem velocidade proporcional a distância que ele está da origem da semi-reta. Assim, se tomarmos intervalos de tempo igualmente espaçados $T, 2T, 3T, 4T, \ldots$, obtemos posições distintas $P_1,P_2, \ldots$ e $Q_1,Q_2, \ldots$ para os dois objetos, como ilustra a Figura \ref{Movimento}.  
+Napier pensava nos logaritmos como produzidos por um movimento dinâmico. Traduzimos isso pensando em dois objetos $P$ e $Q$ movendo-se sobre duas semi-retas, um partindo da origem 0 e o outro do número 1, de modo que o  primeiro desloca-se com velocidade constante, mas o segundo tem velocidade proporcional a distância que ele está da origem da semi-reta. Assim, se tomarmos intervalos de tempo igualmente espaçados $T, 2T, 3T, 4T, \ldots$, obtemos posições distintas $P_1,P_2, \ldots$ e $Q_1,Q_2, \ldots$ para os dois objetos, como ilustra a \hyperref[Movimento]{figura \ref{Movimento}}.  
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 
 \begin{tikzpicture}[scale=1.5]
@@ -2631,7 +4455,7 @@ Napier pensava nos logaritmos como produzidos por um movimento dinâmico. Traduz
 \end{figure}
 
 
-Podemos, então, associar os pontos das duas semi-retas entendendo que dois pontos $P_t$ e $Q_t$ estão associados se os objetos $P$ e $Q$ estão nessas respectivas posições no mesmo instante $t$. Assim $Q_1$ está associado à 
+Podemos, então, associar os pontos das duas semi-retas entendendo que dois pontos $P_t$ e $Q_t$ estão associados se os objetos $P$ e $Q$ estão nessas respectivas posições no mesmo instante $t$. Assim, $Q_1$ está associado à 
 $P_1$, $Q_2$ está associado à $P_2$ e assim por diante.
 
 
@@ -2645,7 +4469,38 @@ Vamos pensar que o objeto $P$ na primeira reta move-se, a cada segundo, uma unid
 \end{task}
 
 Observamos que a sequência das distâncias do ponto $Q$ à origem forma a P.G. $Q_n=r^n$, de razão $r$, e a sequências das distâncias do ponto $P$ à origem forma uma P.A. $P_n =n$. A interpretação de Napier é que o logaritmo do número $r^n$ da P.G. é o número associado na P.A., $n$. Assim, Napier associava os conceitos de P.A. e P.G. ao conceito de logaritmo.
+\clearpage
 
+\begin{texto}
+{
+	\section{Para Saber +: A Lei de Weber}
+	\subsection{Objetivos gerais}
+	Criar uma ferramenta para avaliar o custo benefício de um produto utilizando funções logarítmicas.
+
+
+	\subsection{Sugestões e discussões}
+	A seção "Para saber +: a lei de Weber"\, é opcional e propõem que o estudante crie uma escala para auxiliar em suas decisões financeiras. É a única atividade no material de logaritmos a estimular diretamente o desenvolvimento do nível mais alto da Taxonomia de Bloom Revisada - Criar.
+
+	Recomendamos que o/a professor/a desenvolva a atividade antes de trazê-la aos estudantes, para  melhor avaliar sua adequação à turma. Não apresentamos respostas para os exercícios, pois eles dependem das escolhas realizadas pelos estudantes.
+
+	Cabe ressaltar que não há respostas certas e que é possível que o estudante chegue a conclusão que a fórmula proposta (em toda a sua simplicidade e subjetividade) não auxilia no processo de escolha do produto com melhor relação de custo-benefício. Por fim incentiva-se que os estudantes reflitam sobre os resultados obtidos.
+}
+\end{texto}
+\clearmargin
+\begin{answer}{Criando a própria escala}
+{
+	\begin{enumerate}
+	\item automóveis;
+	\item carro A 1.0 – R$\$ 40.000{,}00$ e carro B 1.3 – R$\$60.000{,}00$;
+	\item devido aos opcionais adicionados e o motor mais potente, considero o carro B 30$\%$ melhor;
+	\item $v(x) = 0{,}3\log_{3/2}\left(x/40000\right)$;
+	\item carro C 1.0 - R$\$ 48.000{,}00$, $p_c=10\%$; carro D 1.5 - R$\$ 65.000{,}00$, $p_d=35\%$; carro E 1.3 - R$\$ 50.000{,}00$, $p_e=25\%$;
+	\item $v(c) = 0{,}3\log_{3/2}\left(48/40\right) \approx 13{,}48\%$; $v(d) = 0{,}3\log_{3/2}\left(65/40\right) \approx 35{,}92\%$ e $v(e) = 0{,}3\log_{3/2}\left(45/40\right) \approx 16{,}51\%$;
+	\item $p_c = 10\% < 13{,}48\% = v(c)$, assim consideramos o carro $10\%$ melhor, mas seu valor relativo de compra é $13{,}48\%$ maior, desse modo seu custo relativo é maior do que o aumento no preço e sua aquisição não parece ser muito recomendável; $p_d = 35\% < 35{,}92\% = v(c)$, assim consideramos o carro é $35\%$ melhor e seu valor relativo de compra é $35{,}92\%$ maior, desse modo seu custo benefício é similar ao dos carros A e B; $p_e = 25\% > 16{,}51\% = v(e)$, assim consideramos o carro $25\%$ melhor, mas seu valor relativo de compra é $16{,}51\%$ maior, desse modo seu custo relativo é melhor do que os anteriores e sua aquisição parece mais recomendável;
+	\item a fórmula parece adequar os valores de modo a permitir comparar custo-benefício de produtos com preços bastante distintos. 
+	\end{enumerate}
+}{1}
+\end{answer}
 
 \know{A Lei de Weber.}
 
@@ -2681,6 +4536,34 @@ de modo que $v(b) = p$ e $v(a)=a$, ou seja, $v(x)$ tenta estimar a diferença pe
 \end{enumerate}
 \end{task}
 
+\clearpage
+\def\currentcolor{cor2}
+\begin{texto}
+{
+\section{Projeto Aplicado}
+\subsection{Objetivo específico}
+Utilizar os conhecimentos sobre logaritmos como ferramenta para a tomada de decisão.
+
+\subsection{Sugestões e discussões}
+Essa atividade lúdica deve ser desenvolvida com toda a turma se for possível encaixá-la no cronograma da turma, pois está relacionada a habilidade \textbf{EM13MAT203}, que não precisa ser, necessariamente, trabalhada no contexto de logaritmos. A atividade ilustra como os logaritmos poderiam auxiliar na tomada de decisão em um contexto de matemática financeira. O professor precisará de papeletes ou um dado de 10 faces para realizar os sorteios.
+
+No item \titem{a)}, o professor pode discutir com os estudantes os cálculos que devem ser realizados, e apresentar os valores dos logaritmos.
+
+No item \titem{b)} o/a professor/a deve sortear números mensalmente e os alunos vão saindo da brincadeira conforme seus números são sorteados, até que alguém atinja o objetivo.
+
+Obs: quem escolheu o plano A não vai  sair, mas como sua taxa de juros é baixa, até que ele atinja o valor, outro aluno pode vencer antes, daí ele também perde. Se todos os outros perderem os investidores do plano A são os vencedores. }
+\end{texto}
+\begin{answer}{Projeto Aplicado}
+{
+	\begin{itemize}
+	\item Plano A - $\log_{1,01} 1,5 \approx 40,75$, portanto serão necessários 41 meses; 
+	\item Plano B - $\log_{1,02} 1,5 \approx 20,48$, portanto serão necessários 21 meses;
+	\item Plano C - $\log_{1,05} 1,5 \approx 8,31$, portanto serão necessários 9 meses;
+	\item Plano D - $\log_{1,07} 1,5 \approx 5,99$, portanto serão necessários 6 meses.
+	\end{itemize}
+}{1}
+\end{answer}
+
 \begin{project}
 Um banco tem 4 opções de investimento (A : sem risco, B: baixo risco, C: médio risco e D: alto risco), com taxas de juros mensais de $1\%$, $2\%$, $5\%$ e $7\%$ respectivamente. Você investirá R$\$ 10.000,00$ em um desses investimentos e quer obter R$\$15.000,00$.
 
@@ -2703,8 +4586,12 @@ Plano & A & B & C & D \tabularnewline
 \end{table}
 
 
-\item Nesse item propomos um jogo. “JOGO DE RISCO” depois que os alunos calcularem o tempo (em meses) para acumular o valor desejado eles devem escolher um dos planos possíveis para investir seu capital. Cada aluno escolhe, então, 0, 1, 2 ou 3 “números do azar” de 0 a 9. Quem escolheu o plano A escolhe 0 números de azar e quem escolheu D deve escolher 3 números. A cada mês o professor sorteará um número de 0 a 9 e aqueles que tiverem o número sorteado perdem tudo e saem do jogo. O primeiro a atingir o montante desejado vence.
+\item Nesse item propomos um jogo. “JOGO DE RISCO” depois que os alunos calcularem o tempo (em meses) para acumular o valor desejado eles devem escolher um dos planos possíveis para investir seu capital. Cada aluno escolhe, então, 0, 1, 2 ou 3 “números do azar” de 0 a 9. Quem escolheu o plano A escolhe 0 númerUtilizar os conhecimentos sobre logaritmos como ferramenta para a tomada de decisão.os de azar e quem escolheu D deve escolher 3 números. A cada mês o professor sorteará um número de 0 a 9 e aqueles que tiverem o número sorteado perdem tudo e saem do jogo. O primeiro a atingir o montante desejado vence.
 \end{enumerate}
 \end{project}
 
+\ifnum \aluno=1
 \includepdf[angle=-90]{Figuras/Ruler.pdf}
+\else
+\includepdf[angle=-90, offset = 0mm 2mm]{Figuras/Ruler.pdf}
+\fi

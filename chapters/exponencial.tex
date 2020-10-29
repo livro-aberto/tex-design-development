@@ -1,4 +1,8 @@
-\renewcommand\chapterillustration{abertura-exponencial}
+\ifnum\aluno=1
+\renewcommand\chapterillustration{./abertura-exponencial}
+\else
+\renewcommand\chapterillustration{./abertura-exponencial-professor}
+\fi
 \renewcommand\chapterwhat{Crescimento e decaimento exponenciais, função exponencial, juros compostos, progressão geométrica, expoentes racionais e irracionais.}
 \renewcommand\chapterbecause{Dizemos que estamos diante de um crescimento exponencial sempre que o aumento percentual de determinada quantidade por unidade de tempo é constante. Este é o caso das medições econômicas, financeiras e políticas de crescimento - de vendas, lucros, preços de ações, produto interno bruto, inflação, taxas de juros. Assim, compreender bem o crescimento exponencial é crucial para compreender o mundo.}
 \chapter{Função Exponencial}
@@ -12,7 +16,7 @@
 \begin{center}
 Projeto: LIVRO ABERTO DE MATEMÁTICA
 
-\noindent \begin{tabular}{lcccr}
+ \begin{tabular}{lcccr}
 \includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
 \end{tabular}
 \end{center}
@@ -29,7 +33,7 @@ Versão digital do capítulo:
 \begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
 Título: & Função Exponencial\\
 \\
-Ano/ Versão: & 2019 / versão 0.2 de 20 de outubro de 2020\\
+Ano/ Versão: & 2019 / versão 0.1 de 23 de outubro de 2020\\
 \\
 Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
 \\
@@ -81,6 +85,275 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 
 \mainmatter
 
+\begin{apresentacao}
+\section{Função Exponencial}
+
+As ideias que envolvem as funções exponenciais (e logarítmicas) estão entre as mais comuns na ciência e ao mesmo tempo são as que oferecem os maiores desafios aos professores e estudantes, especialmente na Educação Básica. São ideias impregnadas de sutilezas conceituais e epistemológicas e que, para quase a totalidade dos docentes, passam despercebidas, fazendo com que o ensino desse tópico acabe por ficar reduzido a memorizações e procedimentos mecânicos. Como se trata de um assunto desafiador para ambos estudantes e professores, torna-se mais difícil antecipar as dificuldades dos estudantes e como consequência não há espaço para refletir sobre que ações tomar para superar tais dificuldades. \cite{Davis2009}; \cite{Weber2002}
+
+Durante os anos do Ensino Fundamental o estudante aprende a lidar com a potenciação considerando-a como uma nova operação/notação para indicar a multiplicação repetida (potências que envolvem expoentes naturais). No Ensino Médio, entretanto, ele deve ser capaz de extrapolar esse conceito e generalizá-lo de duas maneiras não triviais: (1) fazer a transição da multiplicação repetida $(2^{3}=2 \times 2 \times 2 )$ para a correspondência ou função cujo domínio é o conjunto dos números naturais $(n \longrightarrow 2^{n})$ estender para expoentes inteiros, racionais e irracionais, de maneira a dar significado para essas extensões. Infelizmente, como documentam diversas pesquisas relacionadas a este tema, esse objetivo raramente é atingido com sucesso.  Davis (2009) aponta que a perspectiva de multiplicação repetida impõe dificuldades aos estudantes quando se deparam com expoentes não inteiros.
+
+É fundamental que os alunos sejam capazes de entender a exponenciação como um processo matemático e as expressões exponenciais como objetos matemáticos que são o resultado desse processo. \cite{Weber2002}
+
+O conceito de função exponencial está intimamente relacionado com os juros compostos e as progressões geométricas e raramente essas conexões (especialmente com as P.G.) são bem exploradas nos livros didáticos brasileiro. Pretendemos neste livro fazer as conexões entre tais tópicos que são explicitamente apontada pela BNCC \cite{BNCC2018} (EM13MAT304, EM13MAT508). 
+
+Tradicionalmente a função exponencial é apresentada nos livros didáticos na sua forma, digamos, mais sucinta: $f(x)=a^x$. Neste capítulo, optamos por apresentar a função exponencial na forma $f(x) = c \cdot a^x$, porque entendemos que esse formato se mostra mais conveniente nos modelos matemáticos de situações reais. A constante $c$ comumente é explicitada (ou solicitada) nos problemas como a quantidade/valor inicial. Também fica mais simples fazer a relação com os problemas de Progressões Geométricas cuja fórmula do termo geral contém o primeiro termo multiplicando a potência ($a_{n+1}=a_1\cdot q^n$). 
+Matematicamente, tanto é possível considerar o caso $f(x)=a^x$ como um caso particular do outro, em que a constante $c=1$, quanto considerar que o caso $f(x)=c\cdot a^x$ é obtido do outro realizando-se uma translação na variável do domínio:
+\[
+f(x)=c\cdot a^x = a^{\log_a c} \cdot a^x = a^{x + \log_a c}=a^{x+k}
+\]
+Uma outra observação importante é que por conta das aplicações, consideramos para a função exponencial apenas os casos em que $c>0$. Isso também evita algumas confusões em relação ao crescimento e decrescimento das funções: note que para $c<0$, a função $f(x)=c\cdot a^x$ é crescente se, somente se, $0<a<1$.
+
+\section*{Objetivos Gerais}
+
+\begin{itemize}
+\item {} Diferenciar situações de crescimento e decaimento exponenciais;
+
+\item {} Reconhecer situações que podem ser modeladas por uma função exponencial $f(x)=c \cdot a^{x}$, identificando $c$ como o valor inicial e $a$ como fator de crescimento, e propor modelos;
+
+\item {} Transitar entre as diferentes representações para a função exponencial: tabelas, fórmulas, gráficos, problemas textuais;
+
+\item {} Associar as progressões geométricas a funções exponenciais de domínios discretos;
+
+\item {} Apresentar o número $e$.
+\end{itemize}
+
+\section*{Habilidades da BNCC}
+
+\begin{habilities}{EM13MAT304} 
+Resolver e elaborar problemas com funções exponenciais nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como o da Matemática Financeira, entre outros.
+
+\tcbsubtitle{EM13MAT403}
+Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+
+\tcbsubtitle{EM13MAT508}
+Identificar e associar progressões geométricas (PG) a funções exponenciais de domínios discretos, para análise de propriedades, dedução de algumas fórmulas e resolução de problemas.
+\end{habilities}
+
+\section*{Pré-requisitos}
+
+\begin{habilities}{EF08MA01} 
+Efetuar cálculos com potências de expoentes inteiros e aplicar esse conhecimento na representação de números em notação científica. Potenciação e radiciação.
+
+\tcbsubtitle{EF08MA02} 
+Resolver e elaborar problemas usando a relação entre potenciação e radiciação, para representar uma raiz como potência de expoente fracionário.
+
+\tcbsubtitle{EF09MA02} 
+Reconhecer um número irracional como um número real cuja representação decimal é infinita e não periódica, e estimar a localização de alguns deles na reta numérica.
+
+\tcbsubtitle{EF09MA03} 
+Efetuar cálculos com números reais, inclusive potências com expoentes fracionários.
+\end{habilities}
+
+\section*{Distratores}
+
+\begin{itemize}
+
+\item Estudantes de nível superior têm dificuldades em entender e explicar as regras da exponenciação e não são capazes de conectá-las às regras do logaritmo. Não conseguem explicar o que significa uma função do tipo $f(x)=ax$, nem justificar porque uma função do tipo $f(x)=\left(\dfrac{1}{2} \right)^{x}$ é decrescente. \cite{Weber2002}
+
+\item Em geral os professores são capazes de fazer uso das representações gráfica, algébrica e tabular, no entanto isso não implica necessariamente conhecimento conceitual acerca das funções exponenciais. \cite{Presmeg2005}
+
+\item Estudantes do ensino fundamental apresentam dificuldades em fazer a transição das representações lineares para as exponenciais, ou em identificar o que torna os dados exponenciais. \cite{Alagic2006}
+
+\item Abordagens tradicionais do ensino de funções apoiam-se em uma visão de correspondência, na qual uma função é vista como uma relação estática entre os elementos de dois conjuntos. Essa visão estática está na base da maneira como esse tema é tratado na matemática escolar, e não é difícil perceber como os estudantes lutam para fazer a transição do entendimento da multiplicação repetida para a ideia de correspondência em um domínio de números naturais. \cite{Ellis2012}
+
+\item Na matemática escolar, qualquer propriedade que é válida para números irracionais é automaticamente considerada válida para números irracionais, sem justificativas matemáticas. \cite{Wu2011}
+
+\end{itemize}
+
+O capítulo está organizado da seguinte forma: a primeira seção aborda situações-problema em que se observa crescimento ou decaimento exponencial. O objetivo dessa seção é que os estudantes aprendam o vocabulário básico e reconheçam os padrões exponenciais em textos, tabelas, gráficos e equações, com destaque para o papel do fator de crescimento e do valor inicial nas expressões exponenciais. É esperado também nessa seção que os estudantes consigam deduzir fórmulas que modelem esse tipo de crescimento/decaimento e representem graficamente os dados de um problema ou situação real.
+
+A seção 2 tem como objetivo apresentar uma outra maneira de expressar a variação exponencial: por meio de taxas percentuais. Novos problemas são apresentados, mas agora com essa linguagem que expressa o fator de crescimento como aumento ou diminuição percentual em relação aos valores anteriores. A relação entre a taxa ($r$) e o fator de multiplicação ($1+r$) é explorada em algumas situações incluindo as que envolvem juros e transações financeiras.
+
+Na seção 3 apresentamos, de fato, a função exponencial. Começamos com atividades que recordam as propriedades dos expoentes naturais, inteiros e racionais para, em seguida, fazer a passagem para os expoentes irracionais. Representações gráficas e as relações das propriedades com os parâmetros em expressões completas do tipo $f(x)=c\cdot a^{\frac xd}$ são também exploradas nesta seção.
+
+A próxima seção é dedicada a explorar a taxa de variação da função exponencial, evidenciando que ela supera todos os outros crescimentos que já foram estudados. A seção termina com a construção do número de Euler em situações de crescimento contínuo.
+
+A última seção é dedicada ao estudo das Progressões Geométricas e como elas se relacionam com as funções exponenciais. De fato, todas as ideias principais são desenvolvidas ao longo de todo o capítulo (em situações onde se observa crescimento/decaimento exponencial em domínios discretos), mas apenas neste as traduzimos para a linguagem de sequências. O conceito de PG é um pouco mais amplo, por incluir sequências em que o primeiro termo ou a razão são negativos. Essa ressalva é feita em algumas atividades. As últimas atividades tratam das somas de termos de uma PG estabelecendo uma relação dessas somas com problemas geométricos.
+\end{apresentacao}
+
+\clearpage
+\def\currentcolor{session1}
+\begin{texto}
+{	
+	\section{Explorando: Crescimento e Decaimento Exponenciais}
+	Nesta seção iremos explorar as ideias de crescimento e decaimento exponenciais, apresentando alguns contextos onde esse tipo de variação aparece naturalmente.
+
+	Por enquanto, vamos nos restringir a expoentes inteiros positivos, aproveitando a oportunidade para revisar algumas propriedades operatórias das potências. Outros expoentes serão tratados mais adiante, na seção (retornar e informar a seção).
+
+	O material foi concebido de forma a contribuir para a ampliação da visão do estudante sobre a exponenciação, fazendo com que ele deixe de vê-la apenas como multiplicação repetida (ação), passando a enxergá-la como resultado de uma transformação ou de uma correspondência entre conjuntos (processo), podendo operar com as exponenciais sem necessariamente “efetuar a operação”. Esse entendimento conduz o estudante a conclusões como $3^{x}$ é sempre um número positivo para $x$ inteiro positivo, pois você começa com $3$ e segue sempre multiplicando por um número positivo, ou que a correspondência gera uma sequência (função) crescente, ou ainda a compreender as propriedades tais como $5^{x} \cdot 5^{y} = 5^{x+y}$, dentre outras. (WEBER, 2002)
+
+	Neste primeiro momento sugerimos não antecipar as propriedades que envolvem os expoentes negativos e racionais para que isso não afete a construção das ideias mais adiante.
+
+	Ao introduzir este assunto, caso haja disponibilidade, sugerimos compartilhar com a turma o vídeo \url{https://youtu.be/s-lgS-4Xqy0}, em que a ideia de crescimento exponencial é exemplificada por meio do crescimento de Vitórias-Régias.
+}
+\end{texto}
+\begin{objectives}{A epidemia}
+{
+	\begin{itemize}
+	\item Simular uma situação de crescimento exponencial;
+	\item Reconhecer padrões exponenciais em tabelas, gráficos, identificando o papel do fator de crescimento.
+	\end{itemize}
+}{1}{1}
+\end{objectives}
+\clearmargin
+\begin{sugestions}{A epidemia}
+{
+	\begin{itemize}
+	\item Caso deseje peça anteriormente que seus estudantes realizem uma pesquisa sobre epidemias, pandemias, endemias. Pode ser um trabalho realizado em conjunto com outras disciplinas como Geografia, Sociologia, Biologia.
+	\item Esta atividade trata de um dos Temas Contemporâneos Transversais da BNCC: Saúde. E com potencial para tratar de “Vida Familiar e Social” e “Trabalho”.
+	\item Para uma melhor visualização, considere organizar os estudantes em círculo
+	\item É muito importante anotar os números na lousa e ir apagando à medida em que forem sendo escolhidos, para ajudar os novos infectados a escolher suas vítimas.
+	\item Escolha um estudante para ser o pesquisador e anotar os dados no quadro.
+	\item Ao final de cada rodada pergunte à turma como evoluiria o total de infectados nas próximas rodadas caso houvesse mais alunos na turma.
+	\item Para responder o item (e) você pode consultar a população da sua cidade e estado neste link (\url{https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html?=&t=resultados})
+	\item Adaptado de BUSH, S., GIBBONS, K., KARP, K., DILLON, F. Epidemics, exponential function and modelling, Mathematics Teaching in the Middle School, Vol. 21, No. 2, pp. 90-97, 2015.
+	\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{A epidemia}
+{
+	\begin{enumerate}
+\item {} 
+Tabela com o número de infectados até a rodada 8.
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\tcolor{Rodada} & \tcolor{Epidemia 1} & \tcolor{Epidemia 2} & \tcolor{Epidemia 3} \\ \hline
+0      & 2          & 3          & 1          \\ \hline
+1      & 4          & 6          & 3          \\ \hline
+2      & 8          & 12         & 9          \\ \hline
+3      & 16         & 24         & 27         \\ \hline
+4      & 32         & 48         & 81         \\ \hline
+5      & 64         & 96         & 243        \\ \hline
+6      & 128        & 192        & 729        \\ \hline
+7      & 256        & 384        & 2187       \\ \hline
+8      & 512        & 768        & 6561       \\ \hline
+\end{tabular}
+
+\item\adjustbox{valign=t}
+{
+\includegraphics[width=.7\linewidth]{epidemias.png}
+}
+
+\item{}
+Uma resposta possível é dizer que nas epidemias $1$ e $2$ a cada rodada o número de infectados dobra. Na epidemia $3$ o número de infectados triplica a cada rodada.
+
+\item{}
+A informação solicitada depende do número de estudantes da escola.
+
+\item{}
+As informações solicitadas dependem de informações sobre a população da cidade, estado e país.
+
+\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Contando quadrados}
+{
+	\begin{itemize}
+\item Investigar um modelo discreto de decaimento exponencial;
+\item Identificar gráficos de funções exponenciais decrescentes e relacionar ao fator de crescimento;
+\item Reconhecer o modelo exponencial em dados experimentais.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Contando quadrados}
+{
+	\begin{itemize}
+	\item Esta atividade é uma adaptação do experimento \textit{Eliminando Quadrados} (\url {https://m3.ime.unicamp.br/recursos/1008}) que faz parte da coleção  Matemática Multimídia da UNICAMP (\url{https://m3.ime.unicamp.br}) que oferece diversos recursos educacionais de Matemática para o ensino médio.
+	\item No item \titem{d)} as perguntam visam estimular conjecturas do tipo os números são sempre positivos, sempre menores que um, eventualmente são iguais a 0 ou 1, mas isso ocorre apenas para quantidades pequenas de quadradinhos, ficam próximos de $0{,}5$, etc. Estimule que eles registrem as razões que os levaram a tais conjecturas.
+	\item Discuta sobre o que ocorreria caso o número de quadradinhos fosse bem maior; veja se há interesse na turma em desenvolver um projeto de programação que simule os lançamentos.
+	\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Contando quadrados}
+{
+	\begin{enumerate}
+	\item {} 
+	\adjustbox{valign=t}
+	{
+	\includegraphics[width=.6\linewidth]{Contando_quadrados.png}
+	}
+
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Contando quadrados}
+{
+	\begin{enumerate}\setcounter{enumi}{1}
+	\item{}
+	Observa-se que o número de quadrados com a face verde voltada para cima fica entre $40$ e $50\%$ do valor anterior a cada lançamento. O valor zero do final acontece por causa da quantidade pequena de quadrados.
+
+	\item{}
+	\adjustbox{valign=t}
+	{
+	\begin{tabu} to \textwidth{|c|c|c|}
+	\hline
+	\tcolor{Lançamento} & \tcolor{\# verdes} & \tcolor{quocientes} \\ 
+	\hline
+	0 & $240$ & --- \\ 
+	\hline
+	1 & $126$ & $\frac{126}{240}=0{,}525$\\ 
+	\hline
+	2 & $68$ & $\frac{68}{126}\approx0{,}539$ \\ 
+	\hline
+	3 & $34$ & $\frac{34}{68}=0{,}5$ \\ 
+	\hline
+	4 & $13$ & $\frac{13}{34}\approx 0{,}382$\\ 	
+	\hline
+	5 & $5$ & $\frac{5}{13}\approx 0{,}384$\\ 
+	\hline
+	6 & $2$ & $\frac{2}{5}=0{,}4$\\ 
+	\hline
+	7 & $0$ & $\frac{0}{2}=0$\\ 
+	\hline
+	\end{tabu}
+	}
+
+	\item{}
+	Algumas respostas possíveis: serão sempre números positivos, sempre menores ou iguais a um, o quociente tende a ficar próximo a $0,5$.
+
+	\item{}
+	Responder em concordância com o que foi conjecturado no item anterior.
+
+	\item{}
+	Expressão da forma $F(n)=240\times a^{n}$, em que $a$ é qualquer valor próximo a $0,5$.
+
+	\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Populações}
+{
+	\begin{itemize}
+	\item Deduzir uma equação exponencial a partir da identificação do valor inicial e do fator de crescimento/decaimento;
+
+	\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Populações}
+{
+	\begin{itemize}
+	\item O site do Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio) apresenta uma classificação de acordo com o grau do risco de extinção de uma espécie. Ela pode ser acessada neste endereço: \url{https://www.icmbio.gov.br/ran/images/Arquivos/especies_ameacadas/categorias_criterios_iucn_2012.pdf}.\\ Pode ser um tema interessante a ser discutido também com o professor de Biologia.
+	\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Populações}
+{
+	\begin{enumerate}
+
+	\item{}
+	$P(n)=300000 \times \left(\dfrac{1}{3}\right)^{n}$.
+
+	\item{}
+	Ao final do quinto ano.
+
+	\item{}
+	$p(n)=5 \times10^{5} \times 4^{n}$.
+
+	\end{enumerate}
+}{0}
+\end{answer}
 
 \explore{Crescimento e decaimento exponenciais}%\label{credecai}
 
@@ -88,7 +361,7 @@ A pandemia de COVID-19, uma doença respiratória aguda provocada pelo coronaví
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=.75\textwidth]{reportagem.png}
+\includegraphics[width=.75\textwidth]{reportagem.png}
 %\caption{}
 \end{figure}
 
@@ -102,7 +375,7 @@ Vamos simular três situações de epidemia. O professor irá distribuir envelop
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{epidemia.png}
+\includegraphics[width=300bp]{epidemia.png}
 %\caption{https://youtu.be/s-lgS-4Xqy0}
 \end{figure}
 
@@ -166,7 +439,7 @@ Em uma caixa há $240$ quadradinhos de papel cartão dupla face, verde de um lad
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=250bp]{eliminando_quadrados.png}
+\includegraphics[width=250bp]{eliminando_quadrados.png}
 \caption{Imagem retirada do experimento \textit{Eliminando Quadrados}, da coleção Recursos educacionais multimídia para a matemática do ensino médio. \url{https://m3.ime.unicamp.br/recursos/1008} }
 \end{figure}
 
@@ -220,7 +493,7 @@ Acrescente uma terceira coluna à tabela contendo os quocientes entre as quantid
 \hline
 3 & $34$ & \\ 
 \hline
-4 & $13$ & \\ 
+4 & $13$ &\\ 
 \hline
 5 & $5$ & \\ 
 \hline
@@ -281,7 +554,7 @@ Há diversas situações bastante comuns na natureza que não são bem modeladas
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{covid_brasil.png}
+\includegraphics[width=300bp]{covid_brasil.png}
 \caption{Fonte: \href{https://pt.wikipedia.org/wiki/Ficheiro:Casos_acumulados_de_COVID-19_no_Brasil.svg}{Wikipedia}}
 
 \end{figure}
@@ -290,7 +563,7 @@ Como, afinal identificamos o crescimento (ou decaimento) exponencial? Em todos o
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{esquema.png}
+\includegraphics[width=300bp]{esquema.png}
 \caption{Crescimento/decrescimento exponenciais.}
 \end{figure}
 
@@ -307,7 +580,7 @@ ou \textbf{decaimento exponencial} quando o fator está entre 0 e 1.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=200bp]{exp_cresc.png}\includegraphics[width=200bp]{exp_decresc.png}
+\includegraphics[width=200bp]{exp_cresc.png}\includegraphics[width=200bp]{exp_decresc.png}
 \caption{Crescimento/decrescimento exponenciais.}
 \end{figure}
 
@@ -317,7 +590,7 @@ ou \textbf{decaimento exponencial} quando o fator está entre 0 e 1.
 \item O crescimento exponencial é tão rápido que com poucas multiplicações podemos alcançar valores cujas ordens de grandeza são maiores que a quantidade de átomos estimada para o universo observável (que é algo em torno de $10^{80}$).
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{universo.png}
+\includegraphics[width=300bp]{universo.png}
 \caption{Por Pablo Carlos Budassi - Obra do próprio, CC BY-SA 4.0, \url{https://commons.wikimedia.org/w/index.php?curid=74584500}}
 \end{figure}
 
@@ -333,7 +606,7 @@ E aí? Com quantas dobras a espessura alcançaria a ordem de grandeza o número 
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=200bp]{noodles.png}
+\includegraphics[width=200bp]{noodles.png}
 \caption{Imagem extraída do vídeo: \url{https://youtu.be/S2AnYEheaFM?t=120}}
 \end{figure}
 
@@ -341,7 +614,7 @@ E aí? Com quantas dobras a espessura alcançaria a ordem de grandeza o número 
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=250bp]{intel.jpg}
+\includegraphics[width=250bp]{intel.jpg}
 \caption{Foto de Slejven Djurakovic, Unsplash}
 \end{figure}
 
@@ -350,6 +623,222 @@ Uma outra lei similar é conhecida como lei de Moore. Gordon Moore foi um dos fu
 \end{itemize}
 
 \end{knowledge}
+\clearpage
+
+\def\currentcolor{session2}
+\begin{objectives}{A Fazenda de Árvores}
+{
+	\begin{itemize}
+	\item Deduzir uma fórmula para o decaimento exponencial aproximado a partir dos dados de uma tabela;
+	\item Fazer previsões a partir da expressão encontrada tanto para o problema direto quanto para o inverso.
+	\end{itemize}
+
+	\tcbsubtitle{Cara ou coroa?}
+
+	\begin{itemize}
+	\item Reconhecer o padrão de crescimento exponencial que aparece no experimento descrito;
+	\item Identificar o fator de crescimento e reconhecer o papel que ele desempenha na situação descrita.
+
+	\end{itemize}
+
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{A Fazenda de Árvores}
+{
+	\begin{itemize}
+	\item Os dados dessa atividade ficam próximos da exponencial com fator $0{,}95$. Caso seja possível, use ferramentas tecnológicas para análise dos dados.
+	\item No item \titem{b)} os valores são pedidos de $5$ em $5$ anos. Verifique se algum estudante percebeu que basta multiplicar $(0,95)^{5}$, e caso positivo peça que ele compartilhe com a turma. Se não, conduza as discussões até essa conclusão.
+	\item No item \titem{c)} a pergunta é do tipo problema inverso. Não devemos esperar o uso de logaritmos na solução, mas que o estudante analise os resultados a partir dos dados que ele mesmo gerou no item anterior, fazendo, se necessário, novos cálculos. Algo como: $35$ anos $\rightarrow$ $16,61\%$, $40$ anos $\rightarrow$ $12,85\%$, então os $15\%$ deve estar em algum lugar no meio do caminho, etc.
+	\end{itemize}
+
+	\tcbsubtitle{Cara ou coroa?}
+	\begin{itemize}
+	\item Estimule os estudantes a realizarem o experimento.
+	\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{A Fazenda de Árvores}
+{
+
+	\begin{enumerate}
+
+	\item{}
+	$f(n)=10.000 \times 0,95^{n}$.
+
+	\item{}
+	\adjustbox{valign=t}
+	{
+	\begin{tabu} to \textwidth{|>{\centering}d{.15\textwidth}|*{7}{c|}}
+	\hline
+	\tcolor{Ano} & 10 & 15 & 20 & 25 & 30 & 35 & 40 \\
+	\hline
+	\tcolor{Árvores remanescentes} & 5.987 & 4.633 & 3.585 & 2.774 & 2.146 & 1.661 & 1.285 \\
+	\hline
+	\end{tabu}
+	}
+
+	\item{}
+	No trigésimo sexto ano.
+
+	\end{enumerate}
+
+	\tcbsubtitle{Cara ou Coroa?}
+	\begin{enumerate}
+
+	\item{}
+	$\{CC, CK, KC, KK\}$.
+
+	\item{}
+	$\{CCC, CCK, CKK, CKC, KKK, KKC, KCK, KCC\}$.
+
+	\item{}
+	Deve ser notado que o tamanho do espaço amostral do lançamento de uma moeda $n$ vezes ao ar é dado por $2^{n}$.
+
+	\end{enumerate}
+}{0}
+\end{answer}
+\begin{objectives}{Dobradura}
+{
+	\begin{itemize}
+	\item Reconhecer o padrão de decrescimento exponencial que aparece no experimento descrito;
+	\item Identificar o fator de decrescimento e reconhecer o papel que ele desempenha na situação descrita.
+
+	\end{itemize}
+
+	\tcbsubtitle{Duas exponenciais}
+
+	\begin{itemize}
+	\item Reconhecer o padrão exponencial em tabelas e gráficos;
+	\item Identificar o fator de decrescimento e reconhecer o papel que ele desempenha.
+	\end{itemize}
+}{1}{1}
+
+\end{objectives}
+\marginpar{\vspace{-1.5em}}
+\begin{sugestions}{Dobradura}
+{
+	\begin{itemize}
+	\item Estimule os estudantes a realizarem o experimento.
+	\end{itemize}
+
+	\tcbsubtitle{Duas exponenciais}
+
+	\begin{itemize}
+	\item Havendo disponibilidade utilize uma calculadora gráfica para explorar junto com a turma as características observadas nos gráficos associados a cada uma das expressões.
+	\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Dobradura}
+{
+	\begin{enumerate}
+	\item \adjustbox{valign=t}
+	{\setlength\tabulinesep{2.5pt}
+	\begin{tabu} to \textwidth{|c|c|c|}
+	\hline
+	\tcolor{Etapas} & \tcolor{Área de cada região} & \tmcol{1}{c|}{Número de regiões} \\ 
+	\hline
+	0 & $1$ & $1$ \\ 
+	\hline
+	1 & $\dfrac{1}{3}$ & $3$ \\ 
+	\hline
+	2 & $\dfrac{1}{9}$ & $9$ \\ 
+	\hline
+	3 & $\dfrac{1}{27}$ & $27$ \\ 
+	\hline
+	4 & $\dfrac{1}{81}$ & $81$ \\ 
+	\hline
+	5 & $\dfrac{1}{243}$ & $243$ \\ 
+	\hline
+	\end{tabu}
+	}
+
+	\item Em cada nova etapa a área da menor região é obtida dividindo por 3 a área da menor região da etapa anterior, já o número de regiões de uma nova etapa é obtido fazendo a multiplicação de 3 pelo número de regiões da etapa anterior.
+
+	\end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Duas exponenciais}
+{
+	\begin{table}[H]
+	\centering
+
+	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\hline
+	\tnumber
+	\bm{x} & \bm{2\cdot3^x} \\
+	\hline
+	1 & 6 \\
+	\hline
+	2 & 18 \\
+	\hline
+	3 & 54 \\
+	\hline
+	4 & 162 \\
+	\hline
+	5 & 486 \\
+	\hline
+	6 & 1458 \\
+	\hline
+	7 & 4374 \\
+	\hline
+	8 & 13122 \\
+	\hline
+	9 & 39366 \\
+	\hline
+	10 & 118098 \\
+	\hline
+	\end{tabu}\hspace{1em}
+	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\hline
+	\tnumber
+	\bm{x} & \bm{64\cdot(1{,}5)^x} \\
+	1 & 96 \\
+	\hline
+	2 & 144 \\
+	\hline
+	3 & 216 \\
+	\hline
+	4 & 324  \\
+	\hline
+	5 & 486 \\
+	\hline
+	6 & 729 \\
+	\hline
+	7 & 1093{,}5 \\
+	\hline
+	8 & 1640{,}25 \\
+	\hline
+	9 & 2460{,}375 \\
+	\hline
+	10 & 3690{,}5625 \\
+	\hline
+	\end{tabu}
+	\end{table}
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=200bp]{Duas_exponenciais.png}
+	\end{figure}
+
+	\begin{enumerate}
+	\item{}
+	$y$ cresce com maior taxa na segunda expressão. As tabelas acima mostram  que os valores correspondentes de $x$ retornam sempre valores de $y$ maiores ou iguais para a segunda expressão.
+
+	\item{}
+	$x=5$. Neste ponto os gráficos se interceptam.
+	\end{enumerate}
+}{9}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Para refletir}
+{
+	Neste primeiro ``Para Refletir'' do capítulo problematizamos sobre o crescimento exponencial irrestrito, que na maioria das situações se mostra irrealista. Além do crescimento populacional outras situações podem ser utilizadas para ilustrar este fato: crescimento do número de infectados em situações de epidemia (na primeira atividade rapidamente toda a turma foi infectada, depois toda a escola e assim por diante).
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{refletir_logistico.png}
+	\end{figure}
+	Essas situações são melhores modeladas pelo crescimento logístico, comente sobre o ponto de inflexão, momento em que há uma mudança de comportamento e a curva tende a se aproximar de um limiar, que para o caso de crescimento populacional é chamado capacidade de suporte.
+}{1}{2}
+\end{sugestions}
 
 \practice{Crescimento e Decaimento exponenciais}
 
@@ -426,7 +915,7 @@ Uma folha de papel de área 1 é dobrada em três partes iguais, depois em mais 
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=250bp]{dobradura.png}
+\includegraphics[width=250bp]{dobradura.png}
 \end{figure}
 
 \begin{enumerate}
@@ -479,18 +968,201 @@ Para que valor de $x$, os valores de $y$ coincidem? Como isso se reflete na repr
 \end{task}
 
 
-\begin{reflection}{}
-
+\begin{reflection}
 O crescimento exponencial pressupõe recursos ilimitados e isso faz com que em muitos casos esse tipo de comportamento seja observado apenas em certos períodos de tempo. Isso pode ser visto, por exemplo, na forma como crescem as populações. Com pouco ou sem nenhuma limitação de recursos as populações podem apresentar um crescimento exponencial. No entanto, na prática sabemos que há uma série de limitações - espaço, existência de predadores, escassez de alimentos, etc. - é o que os pesquisadores costumam chamar de \textbf{Resistência Ambiental}. Portanto, após experimentar um período de crescimento exponencial, o que observamos é que a população tende a se estabilizar. Esse comportamento é chamado de \textbf{crescimento logístico}.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=400bp]{logistico.png}
+\includegraphics[width=400bp]{logistico.png}
 \caption{Exemplos reais de um aumento populacional como descrito acima. (a) a Bactéria Lactobacillus sakei crescendo em um meio de cultura. (b) A população de gnu, na região do Seringueti na Tanzânia. (C) População de juncácea anual , Juncus gerardi.
 Fonte: CEPA}
 \end{figure}
 
 \end{reflection}
+\clearpage
+\def\currentcolor{session1}
+\begin{texto}
+{	\section{Explorando: Variação Percentual}
+	Em situações reais é muito comum que a taxa de crescimento seja dada em forma de porcentagem, em que a variação é expressa como fração da quantidade anterior. Nesses casos a variável independente é tomada em intervalos fixos e o foco recai sobre a fração que a variação representa do valor anterior. O caso mais emblemático é o caso dos juros compostos: normalmente se escolhe uma unidade de tempo para a capitalização (meses, anos, trimestres, etc) e se expressa o crescimento/decaimento como uma taxa percentual.
+
+	É importante ressaltar a diferença entre a taxa percentual e a taxa de variação da função. A taxa de variação, como definimos no capítulo sobre Taxa de Variação deste livro, é a razão entre as variações das duas variáveis que estão relacionadas pela função: variação de $y$ por unidades da variável $x$, isto é, $\left( \dfrac{\Delta{y}}{\Delta{x}}\right)$. Para a taxa percentual o $\Delta x$ é fixado e estamos interessados no quociente $\dfrac{y(n+1)-y(n)}{y(n)}$. As atividades aqui nesta seção vão na direção de relacionar a taxa percentual com o fator de crescimento/decaimento. Se uma determinada grandeza cresce (respectivamente diminui) a uma taxa percentual de $20\%$ ao mês, o fator de crescimento (respectivamente decaimento) é o número que multiplicamos o valor atual para obter o valor no próximo mês, a saber $1+0,2$ (respectivamente $1-0,2$). Assim, as funções exponenciais terão a forma $f(x)=c(1+r)^{x}$ (crescimento) ou $f(x)=c(1-r)^{x}$ (decaimento), em que $r$ é a taxa expressa como fração sobre $100$ (ou na forma decimal).
+
+	A primeira atividade do Explorando tem o objetivo de fazer uma breve revisão sobre a ideia de porcentagem. Avalie se é o caso de fazer com a sua turma uma revisão um pouco maior sobre porcentagem.
+}
+\end{texto}
+\begin{objectives}{Tá caro!}
+{
+	\begin{itemize}
+	\item Revisar o conceito de porcentagem.
+
+	\end{itemize}
+	\tcbsubtitle{As colônias}
+
+	\begin{itemize}
+	\item Reconhecer situações em que uma quantidade aumenta ou diminui a uma taxa percentual constante por unidade da outra.
+	\item Expressar o crescimento/decaimento exponencial em termos de variação percentual e vice-versa.
+	\end{itemize}
+	}{1}{1}
+\end{objectives}
+\begin{sugestions}{Tá caro!}
+{
+	\begin{itemize}
+	\item Avalie a necessidade de realizar com a turma uma revisão maior sobre porcentagem.
+	\end{itemize}
+
+	\tcbsubtitle{As colônias}
+
+	\begin{itemize}
+	\item Discuta com os estudantes a possibilidade exibir tabelas e gráficos com valores não necessariamente iguais a 6\% ou 10\% dos valores anteriores, mas que possam ser aproximados tentando retratar alguma coleta de dados real e que tenha levado os cientistas a escolher o modelo exponencial.
+	\item No item (g), se achar conveniente, apresente as expressões $(1+r)$ para crescimento e $(1-r)$ para decaimento, nas quais a taxa percentual $r$ é sempre considerada um número positivo.
+	\end{itemize}
+}{0}{0}
+\end{sugestions}
+\begin{answer}{Tá caro!}
+{
+	\begin{enumerate}[itemsep=0pt]
+
+	\item{}
+	Aumento de $R\$ 80,00$, que representa $50\%$ do valor original do tênis.
+
+	\item{}
+	$R\$ 176,00$.
+
+	\item{}
+	Narrativa apresentando um produto ou serviço cujo valor seja maior ou igual a $R\$ 800,00$.
+
+	\end{enumerate}
+
+	\tcbsubtitle{As colônias}
+
+	\begin{enumerate}
+	
+	\item{}
+	Os valores abaixo não são a única resposta correta, e podem variar dependendo da maneira como se procede os cálculos.
+
+	\begin{table}[H]
+	\centering
+	
+	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\hline
+	\tnumber
+	\bm{t}\text{ \textbf{(meses)}} & \bm{C}\text{ \textbf{coelhos}} \\
+	\hline
+	0 & 100 \\
+	\hline
+	1 & 106 \\
+	\hline
+	2 & 112 \\
+	\hline
+	3 & 119 \\
+	\hline
+	4 & 126 \\
+	\hline
+	5 & 133 \\
+	\hline 
+	6 & 141 \\
+	\hline
+	7 & 150 \\
+	\hline
+	8 & 159 \\
+	\hline
+	9 & 169 \\
+	\hline
+	10 & 179 \\
+	\hline
+	11 & 190 \\
+	\hline
+	12 & 201 \\
+	\hline
+	\end{tabu}
+	\hspace{1em}	
+	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\hline
+	\tnumber
+	\bm{t}\text{ \textbf{(meses)}} & \bm{B}\text{ \textbf{bactérias}} \\
+	\hline
+	0 & 950.000 \\
+	\hline
+	1 & 855.000 \\
+	\hline
+	2 & 769.500 \\
+	\hline
+	3 & 692.550 \\
+	\hline
+	4 & 623.295 \\
+	\hline 
+	5 & 560.965 \\
+	\hline
+	6 & 504.868 \\
+	\hline
+	7 & 454.382 \\
+	\hline
+	8 & 408.943 \\
+	\hline
+	9 & 368.049 \\
+	\hline
+	10 & 331.244 \\
+	\hline
+	11 & 298.120 \\
+	\hline
+	12 & 268.308 \\
+	\hline
+	\end{tabu}
+	\end{table}
+
+	\item{}
+	$100+6\%100 = 106$, $106+6\%106=112$, e assim sucessivamente.
+
+	$950.000-10\%950.000 = 855.000$, $855.000-10\%855.000 = 769.500$, e assim sucessivamente. 
+
+	\item{}
+	Sim. Basta fazer as divisões de cada valor pelo anterior e observar que os valores ficam próximos de constantes, em cada caso: $1,06$ no primeiro caso e $0,9$ no segundo caso.
+
+	\item{}
+	O fator será dado por $1$ mais a taxa percentual considerada positiva no caso de crescimento ($1+6\%$) e negativa para o decaimento ($1-10\%$).
+
+	\item{}
+	$C(t)=100\cdot1,06^{t}$, e $B(t)=950.000\cdot0,9^t$.
+
+	\item{}
+	---
+	\item{}
+	$P(t)=P_0\cdot(1+r)^t$.
+
+	\end{enumerate}
+}{9}
+\end{answer}
+\clearmargin
+\begin{objectives}{Juros}
+{
+\begin{itemize}
+\item Investigar o crescimento de uma movimentação financeira com uma dada taxa de capitalização composta. Relacionar taxa percentual $r$ e fator de crescimento $(1+r)$ / decaimento $(1 - r)$.
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Juros}
+{
+\begin{itemize}
+\item Reforce com os estudantes a relação entre a taxa percentual e o fator de multiplicação. 
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Juros}
+{
+\begin{enumerate}
+
+\item{}
+$100(1+r)^2 =110,25 \iff r=0,05 = 5\%$ 
+
+\item{}
+$100(1+0,05)=105$
+
+\item{}
+$100(1+0,05)^3=115,76$
+
+\end{enumerate}
+}{1}
+\end{answer}
 
 \explore{Variação percentual}
 
@@ -517,10 +1189,10 @@ Construa uma narrativa de outra situação em que o mesmo aumento de preço de $
 
 Analise cada uma das situações abaixo e em seguida responda as perguntas para cada uma delas.
 
-\noindent \textbf{(A)} Uma população de 100 coelhos é introduzida em uma reserva ecológica. Após um período de observação de 12 meses, os biólogos concluíram que essa colônia cresceu ao longo do ano seguindo uma taxa percentual aproximada de $6\%$ ao mês, isto é, a cada mês a população de coelhos na colônia estava aproximadamente $6\%$ maior em relação ao registro do mês anterior.
+ \textbf{(A)} Uma população de 100 coelhos é introduzida em uma reserva ecológica. Após um período de observação de 12 meses, os biólogos concluíram que essa colônia cresceu ao longo do ano seguindo uma taxa percentual aproximada de $6\%$ ao mês, isto é, a cada mês a população de coelhos na colônia estava aproximadamente $6\%$ maior em relação ao registro do mês anterior.
 
 
-\noindent \textbf{(B)} Um laboratório está pesquisando a eficácia de um antibiótico e uma equipe de biomédicos o adiciona em uma colônia de bactérias com uma população de $950.000$ indivíduos. As células então começam a morrer de maneira que ao final de 12 horas, os pesquisadores afirmam que população da colônia diminuiu a uma taxa percentual de $10\%$ a cada hora.
+ \textbf{(B)} Um laboratório está pesquisando a eficácia de um antibiótico e uma equipe de biomédicos o adiciona em uma colônia de bactérias com uma população de $950.000$ indivíduos. As células então começam a morrer de maneira que ao final de 12 horas, os pesquisadores afirmam que população da colônia diminuiu a uma taxa percentual de $10\%$ a cada hora.
 
 \begin{enumerate}
 %\item{}
@@ -577,7 +1249,7 @@ Denotando por $P(t)$ a população no tempo $t$, $P_0$ seu valor inicial e $r$ a
 \begin{task}{Juros}
 
 
-Você acabou de adquirir um produto de R\$ $200$ e o pagamento proposto pela loja é da seguinte maneira: uma entrada de R\$ $100$ paga no ato da compra e mais uma parcela de  R\$ $110,25$ após 2 meses.
+Você acabou de adquirir um produto de R\$ $200$ e o pagamento proposto pela loja é da seguinte maneira: uma entrada de R\$ $100$ paga no ato da compra e mais uma parcela de  R\$ $110{,}25$ após 2 meses.
 
 \begin{enumerate}
 
@@ -637,23 +1309,234 @@ O valor de um investimento de R\$ 1.000 a uma taxa de juros de 10\% ao mês evol
 \hline
 \tcolor{Tempo} & \tcolor{Valor}                       & \tcolor{Juro}                \\ \hline
 $t=0$   & R\$ $1.000$ (capital inicial) & R\$ 0               \\ \hline
-$t=1$   & R\$ $1.000(1+0,1)$ = R\$ $1.100$   & R\$ $100$             \\ \hline
-$t=2$   & R\$ $1.100(1+0,1)$ = R\$ $1.210$   & R\$ $110$             \\ \hline
-$t=3$   & R\$ $1.210(1+0,1)$ = R\$ $1.331$   & R\$ $121$             \\ \hline
+$t=1$   & R\$ $1.000(1+0{,}1)$ = R\$ $1.100$   & R\$ $100$             \\ \hline
+$t=2$   & R\$ $1.100(1+0{,}1)$ = R\$ $1.210$   & R\$ $110$             \\ \hline
+$t=3$   & R\$ $1.210(1+0{,}1)$ = R\$ $1.331$   & R\$ $121$             \\ \hline
       &                             &                     \\ \hline
-$t=n$   & $R\$1000\cdot (1,1)^{n}$               & $R\$ 1000\cdot (1,1)^{n-1} \cdot 0,1$ \\ \hline
+$t=n$   & $R\$1000\cdot (1{,}1)^{n}$               & $R\$ 1000\cdot (1{,}1)^{n-1} \cdot 0,1$ \\ \hline
 \end{tabu}
 \end{table}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=150bp]{juros.png}
+\includegraphics[width=150bp]{juros.png}
 \caption{Evolução do valor de um investimento de R\$ 1000,00 capitalizado a uma taxa de juros de 10\% ao mês.}
 \end{figure}
 
 \needspace{.2\textheight}
-\practice{Variação percentual}
 
+\def\currentcolor{session2}
+\begin{objectives}{Antílopes}
+{
+\begin{itemize}
+\item Comparar o crescimento exponencial e o crescimento de variação linear por meio de tabelas.
+\end{itemize}
+
+\tcbsubtitle{Fatores e taxas}
+
+\begin{itemize}
+\item Identificar, a partir da expressão exponencial seus principais elementos e reconhecer nela o crescimento ou decaimento.
+
+\item Esboçar gráficos de exponenciais discretas.
+\end{itemize}
+
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Antílopes}
+{
+\begin{itemize}
+\item Atividade retirada de \textit{Sawalha, Yamamah, "The Effects Of Teaching Exponential Functions Using Authentic Problem Solving On Students’ Achievement
+And Attitude" (2018).Wayne State University Dissertations. 1959.}
+\url{https://digitalcommons.wayne.edu/oa_dissertations/1959}
+
+\item Para identificar os crescimentos exponenciais é necessário fazer alguns arredondamentos. A ideia é que o estudante identifique as tabelas que mais se aproximam dos modelos teóricos.
+\end{itemize}
+
+\tcbsubtitle{Fatores e taxas}
+\begin{itemize}
+\item Até esse momento estamos considerando apenas domínio natural, portanto os gráficos deverão ser esboçados apenas com pontos.
+
+\item Estimule os estudantes a escrever a variação percentual na representação decimal e com o símbolo de porcentagem.
+
+\end{itemize}
+
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Antílopes}
+{
+
+\begin{enumerate}
+
+\item{}
+Tabela $1$.
+
+\item{}
+Tabela $2$.
+
+\item{}
+$0,3\%$ ao ano ou $3$ antílopes por ano.
+
+\item{}
+Tabela $1$ é exponencial com fator $1,03$, tabela $2$ tem variação linear com taxa variação $30$ antílopes. A tabela $3$ pode ser considerada exponencial com fator $1,003$ ou linear com taxa de variação $3$ antílopes.
+
+\end{enumerate}
+
+\vspace{-.5em}
+
+\tcbsubtitle{Fatores e taxas}
+
+\begin{table}[H]
+\centering
+\setlength\tabulinesep{3.5pt}
+
+\begin{tabu} to \linewidth{|c|c|c|>{\centering}m{.2\linewidth}|>{\centering}d{.2\textwidth}|}
+\hline
+\thead
+Valor inicial & Fator & Taxa percentual & Crescimento ou decaimento? & Esboço do gráfico 
+\tabularnewline 
+\hline
+$3$ & $1{,}7$ & $0{,}7=70\%$ & Crescimento & 
+
+%Figura 1
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/3]
+\draw [thick] (0,6cm) -- (0,0) -- (6cm,0);
+\draw [domain=0:1.3, densely dashed, \currentcolor!80] 
+plot (\x,{3*(1.7)^(\x)}) 
+
+node at (0,3) [fill, circle, inner sep=1pt, label=left:{$3$}, overlay] {}; 
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+$10$ & $0{,}2$ & $-0{,}8=-80\%$ & Decaimento & 
+
+%Figura 2
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/5]
+\draw [thick] (0,11cm) -- (0,0) -- (11cm,0);
+\draw [very thick, domain=0:11, densely dashed, \currentcolor!80] 
+plot (\x,{10*(0.2)^(\x)}) 
+
+node at (0,10) [fill, circle, inner sep=1pt, label=left:{$10$}, overlay] {}; 
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+$2$ & $0{,}5$ & $-0{,}5=-50\%$ & Decaimento & 
+
+%Figura 3
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/2]
+\draw [thick] (0,5cm) -- (0,0) -- (5cm,0);
+\draw [very thick, domain=0:5, \currentcolor!80, densely dashed] 
+plot (\x,{2*(1/2)^(\x)}) 
+
+node at (0,2) [fill, circle, inner sep=1pt, label=left:{$2$}, overlay] {};
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+$5$ & $3$ & $2=200\%$ & Crescimento & 
+
+%Figura 4
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/5]
+\draw [thick] (0,11cm) -- (0,0) -- (11cm,0);
+\draw [very thick, domain=0:.715, densely dashed,\currentcolor!80] 
+plot (\x,{5*(3)^(\x)}) 
+
+node at (0,5) [fill, circle, inner sep=1pt, label=left:{$5$}, overlay] {}; 
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+$0{,}2$ & $7$ & $6=600\%$ & Crescimento & 
+
+%Figura 5
+
+\adjustbox{valign=c}
+{
+\resizebox{.2\textwidth}{!}
+{
+\begin{tikzpicture}[scale=1/2]
+\draw [thick] (0,5cm) -- (0,0) -- (5cm,0);
+\draw [very thick, domain=0:1.65, densely dashed,\currentcolor!80] 
+plot (\x,{0.2*(7)^(\x)}) 
+
+node at (0,.2) [fill, circle, inner sep=1pt, label=left:{$0{,}2$}, overlay] {};  
+\end{tikzpicture}
+}
+}
+
+\tabularnewline 
+\hline
+\end{tabu}
+\end{table}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Juros sobre juros}
+{
+\begin{itemize}
+\item Praticar em situações concretas os conceitos de juro, taxa e período. 
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Juros sobre juros}
+{
+\begin{itemize}
+\item A ideia aqui não é fazer uma exposição exaustiva sobre juros compostos, mas sim se apoiar nas ideias construídas até aqui para resolver os problemas propostos.
+
+\item  Sugerimos dividir a turma em duplas/trios para a resolução dos problemas e posterior apresentação para os colegas. Caso julgue necessário aumente a lista de problemas para deixar a atividade mais interessante.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Juros sobre juros}
+{
+\begin{enumerate}
+
+\item{}
+$\dfrac{27.500}{1{,}017^{12}}=22.463{,}70$
+
+\item{}
+$40.000(1+r)^4=43.894{,}63 \iff r=0,0235=2{,}35\%$
+
+\item
+$88.000(1{,}045)^5-88.000=21.664{,}01$
+
+\item
+$(1{,}099)^2=1{,}2078$, portanto geram o mesmo valor.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\practice{Variação percentual}
 
 \begin{task}{Antílopes}
 
@@ -752,16 +1635,16 @@ Classifique dentre os modelos dados abaixo os que apresentam crescimento exponen
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|>{\centering}m{.2\textwidth}|c|c|>{\centering}m{.1\textwidth}|>{\centering}m{.2\textwidth}|>{\centering}d{.15\textwidth}|}
+\begin{tabu} to \textwidth{|>{\centering}m{.2\textwidth}|c|c|>{\centering}m{.1\textwidth}|>{\centering}m{.2\textwidth}|>{\centering}m{.15\textwidth}|}
 \hline
 \thead
 Modelo & Valor inicial & Fator & Taxa percentual & Crescimento ou decaimento? & Esboço do gráfico 
 \tabularnewline 
 \hline
-$y(z)=3(1,7)^{z}$ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
+$y(z)=3(1{,}7)^{z}$ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
 \tabularnewline 
 \hline
-$p(r)=10(0,2)^{r}$ & & & &  & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
+$p(r)=10(0{,}2)^{r}$ & & & &  & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
 \tabularnewline 
 \hline
 $s(t)=2\cdot \left(\dfrac{1}{2}\right)^{t}$ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
@@ -787,20 +1670,210 @@ Resolva os seguintes problemas:
 \begin{enumerate}
 
 \item{}
-Se uma pessoa deseja obter $R\$27.500,00$ em um ano, quanto deverá depositar hoje em uma alternativa de poupança que rende $1,7\%$ de juros compostos ao mês?
+Se uma pessoa deseja obter R\$ $27.500{,}00$ em um ano, quanto deverá depositar hoje em uma alternativa de poupança que rende $1{,}7\%$ de juros compostos ao mês?
 
 \item{}
-Qual a taxa percentual mensal de juros de uma aplicação de $R\$40.000,00$ que produz um total de $R\$43.894,63$ ao final de um quadrimestre.
+Qual a taxa percentual mensal de juros de uma aplicação de R\$ $40.000{,}00$ que produz um total de R\$ $43.894{,}63$ ao final de um quadrimestre.
 
 \item{}
-Determinar o juro total a ser pago em um empréstimo de $R\$88.000,00$ pelo prazo de $5$ meses à taxa composta de $4,5\%$ ao mês.
+Determinar o juro total a ser pago em um empréstimo de R\$ $88.000{,}00$ pelo prazo de $5$ meses à taxa composta de $4{,}5\%$ ao mês.
 
 \item{}
-Qual das opções gera um valor maior ao final de 1 ano: aplicar um capital de $R\$60.000,00$ à taxa de juros de $9,9\%$ ao semestre ou à taxa de $20,78\%$ ao ano.
+Qual das opções gera um valor maior ao final de 1 ano: aplicar um capital de $R\$60.000{,}00$ à taxa de juros de $9{,}9\%$ ao semestre ou à taxa de $20{,}78\%$ ao ano.
 
 \end{enumerate}
 
 \end{task}
+
+\begin{paginatexto}
+\section{Explorando: Propriedades Aritméticas}
+
+Até esse momento espera-se que o estudante tenha o entendimento da exponenciação como processo (e não apenas somente como ação de multiplicações repetidas), enxergando $2^{3}$ como um produto de três fatores $2$, sem ter que necessariamente ``fazer a conta'', ou ainda como uma função de domínio discreto (finito ou enumerável). O objetivo dessa seção é avançar na direção de dar sentido aos expoentes não naturais: negativos, racionais e irracionais, e com isso entender a função exponencial definida para todo o conjunto dos números reais. 
+
+Em geral, os livros-texto de matemática apoiam-se no fato de o estudante ter aprendido as operações com potências durante o Ensino Fundamental (incluindo operações e propriedades operatórias envolvendo expoentes negativos e racionais) e a partir daí constroem a função exponencial de domínio real. Não é raro, entretanto, muitas vezes devido à abordagem tecnicista e mecânica que se dá ao tema, que os estudantes não se recordem ou mesmo que confundam as propriedades, sem saber o que devem fazer com os expoentes em cada caso (BORGES et al, 2015). Dessa forma, escolhemos aqui percorrer novamente esse caminho, sem necessariamente gastar muito tempo com as propriedades mecânicas, mas com a intenção de redirecionar o foco e trazer significados para as definições. 
+
+O estudante deve em algum momento dar sentido ao ``produto de x fatores a'' quando $x$ não é um número inteiro positivo. Responder a perguntas do tipo: o quanto cresce uma planta em um dia, considerando que sua altura dobra de medida a cada semana? E em meia semana, um décimo de semana, e a duas semanas atrás etc? A chave para responder a esses questionamentos está na ideia de fator de crescimento. Por exemplo, para as frações, se a altura da planta duplica em uma semana, uma semana atrás a altura era a metade do que é hoje; em meia semana adiante ela vai ser multiplicada por um outro fator $k$ de maneira que $k \times k=2$, ou seja, $k= \sqrt{2}$ . Por outro lado, como se trata da função $f(t)=2^{t}$, temos $k=f\left( \dfrac{1}{2} \right)$ o que nos leva (e dá sentido) à igualdade $2^{1/2}=\sqrt{2}$.
+
+\resizebox{\linewidth}{!}
+{
+\includegraphics[width=350bp]{exp_racional.png}
+}
+
+É claro que há sutilezas aqui, estamos falando de um processo de limite que envolve uma função contínua. Mais importante do que saber calcular (por aproximação) uma potência com expoente racional é olhar para ele como um número real que existe e está bem definido. Ou seja, superar a ideia de ter que ``fazer a conta'' para entendê-lo como um objeto matemático com características e potencial aritméticos.
+
+A abordagem que adotamos nesta seção está baseada em um conjunto de quatro níveis sucessivos que os estudantes devem percorrer enquanto aprendem funções exponenciais. Eles foram propostos por \cite{Weber2002}) com base na teoria APOS (ação - processo - objeto - esquema) de Dubinsky. Estes quatro níveis (do mais básico para o mais avançado) são:
+
+\begin{enumerate}[label=\titem{\arabic*.}]
+\item  Uma compreensão de \textbf{ação} dos expoentes (calcular $b^{x}$ envolve multiplicar repetidamente por $b$ um número $x$ de vezes).
+\item  Uma compreensão de \textbf{processo} dos expoentes. Um entendimento do processo surge quando um aluno repete uma ação e reflete sobre ela. Segundo Weber (2002), um aluno com um entendimento de processo pode imaginar o resultado da exponenciação sem realmente executar o cálculo. Ele pode raciocinar sobre as propriedades da função exponencial e pode reverter a exponenciação para obter logaritmos; o domínio é restrito aos números naturais.
+
+\item  \textbf{Expressões exponenciais} a partir de um processo. Neste nível, uma expressão exponencial representa o resultado da exponenciação. O número $2^{3}$ pode ser percebido de dois modos: como um comando externo para multiplicar o número dois por ele mesmo três vezes, ou pode ser percebido como um objeto matemático, representado o resultado da exponenciação.
+
+\item  Uma compreensão \textbf{generalizada} dos expoentes. Neste nível, o estudante pode interpretar situações nas quais o domínio da função exponencial não está restrito ao conjunto dos números naturais.
+\end{enumerate}
+\end{paginatexto}
+\def\currentcolor{session1}
+\begin{objectives}{Expoentes inteiros}
+{
+\begin{itemize}
+\item Revisar as propriedades aritméticas das potências com expoentes inteiros;
+\item Construir de modo intuitivo o significado de potências com expoentes inteiros negativos;
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Expoentes inteiros}
+{
+\begin{itemize}
+
+\item Esta atividade tem um grande potencial para ser aplicada na forma de investigação. Separe a turma em grupos de no máximo $4$ alunos e peça que analisem os cartões em busca de relações e padrões, sem deixar que vejam as perguntas seguintes. Como se trata de um assunto supostamente conhecido por eles desde o Ensino Fundamental, espera-se que consigam perceber algumas relações importantes. Procure provocá-los com perguntas que levem-nos às propriedades das potências. Ao final, peça que socializem com os demais colegas as suas descobertas;
+
+\item Espera-se que aqui ele solidifique a ideia de potência como produto de fatores repetidos, mas que perceba que não necessariamente ele precisa saber o resultado dessa operação para trabalhar com os objetos. Por outro lado, espera-se que ele extrapole essa ideia de multiplicação repetida ao lidar com expoentes negativos;
+
+\item Chame a atenção dos estudantes para o fato de que ao lidar com expoentes negativos ampliamos a noção de potência de forma que a multiplicação repetida não é mais “a regra” ou a maneira correta de enxergar, ou seja, que $2^{-3}$ não é $2$ multiplicado por si mesmo $-3$ vezes. E que essa ampliação é feita de maneira que preserva as propriedades aritméticas já conhecidas.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Expoentes inteiros}
+{
+\begin{enumerate}
+\item
+O número $2$ elevado ao número em cinza é igual ao número em vermelho.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\marginpar{\vspace{.5em}}
+\begin{answer}{Expoentes inteiros}
+{
+\begin{enumerate}\setcounter{enumi}{1}
+
+\item
+Quando nos movemos de um cartão para o cartão seguinte a direita observamos que o número em vermelho é multiplicado por $2$ e o número em cinza aumenta uma unidade.
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=\linewidth]{resp_inteiros_b.png}
+\end{figure}
+
+\item
+O esquema será:
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=.75\linewidth]{resp_inteiros_c.png}
+\end{figure}
+
+Alguns outros exemplos: $2^{9} \times 2^{4} =2^{9+4}=2^{13}$,\quad $2^{11} \times 2^8=2^{11+8}=2^{19}$. De um modo geral, se $m$ e $n$ são números inteiros então $2^m \times 2^n = 2^{m+n}$.
+
+\item Quando nos movemos de um cartão para o cartão seguinte a esquerda observamos que o número em vermelho é dividido por $2$ e o número em cinza diminui uma unidade.
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=\linewidth]{resp_inteiros_d.png}
+\end{figure}
+
+
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Expoentes inteiros}
+{
+\begin{enumerate}\setcounter{enumi}{4}
+\item
+O esquema será:
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=.5\linewidth]{resp_inteiros_e.png}
+\end{figure}
+
+Alguns outros exemplos: $\dfrac{2^7}{2^5} =2^{7-5}=2^2$,\quad $\dfrac{2^{12}}{2^8} =2^{12-8}=2^4$. De um modo geral, se $m$ e $n$ são números inteiros então $\dfrac{2^m}{2^n} =2^{m-n}$.
+
+\item Deverá ficar:
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=.5\linewidth]{resp_inteiros_f.png}
+\end{figure}
+
+\item Teremos:
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=.5\linewidth]{resp_inteiros_g.png}
+\end{figure}
+
+\item Completando o esquema vamos obter:
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=.8\linewidth]{resp_inteiros_h.png}
+\end{figure}
+
+Alguns outros exemplos: $(2^{2})^{3}=2^{2\times3}=2^6$,\quad $(2^{8})^{5}=2^{8\times5}=2^{40}$. De um modo geral, se $m$ e $n$ são números inteiros então $(2^{m})^{n}=2^{m \times n}$.
+
+\item (1)-(B),\quad (2)-(C),\quad (3)-(A).
+\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\marginpar{\vspace{-1.5em}}
+\begin{objectives}{Expoentes racionais}
+{
+\begin{itemize}
+\item Revisar as propriedades aritméticas das potências com expoentes racionais;
+\item Construir de modo intuitivo o significado de potências com expoentes inteiros racionais;
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-2.5em}}
+\begin{sugestions}{Expoentes racionais}
+{
+\begin{itemize}
+
+\item Esta atividade guarda bastantes semelhanças com a anterior, no sentido de que pode ser feita de maneira investigativa e que se trata de uma ampliação da definição de potência para expoentes racionais;
+
+\item Alguns estudantes podem optar por representar os racionais na forma decimal e isto pode dificultar a percepção dos padrões. Sugira que estes também considerem trabalhar com frações;
+
+\item Para muitos estudantes esse tema já deve ser conhecido do Ensino Fundamental, mas acreditamos que a maneira como expomos pode ajudar a construir uma intuição das justificativas/demonstrações das propriedades com expoentes racionais;
+
+\item Essa intuição servirá de base para as discussões envolvendo a função exponencial de domínio real, onde abordaremos o cálculo do fator de crescimento, ou a imagem da função exponencial para tempos não inteiros.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Expoentes racionais}
+{
+\begin{enumerate}
+
+\item Completando os cartões obtemos:
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=.8\linewidth]{resp_racionais_a.png}
+\end{figure}
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Expoentes racionais}
+{
+\begin{enumerate}
+\item As expressões serão representadas por:
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=\linewidth]{resp_racionais_b.png}
+\end{figure}
+
+\item $5^{\frac{m}{n}}=(\sqrt[n]{5})^{m}$.
+
+\end{enumerate}
+}{0}
+\end{answer}
 
 \explore{Propriedades Aritméticas}
 
@@ -811,7 +1884,7 @@ Observe os cartões abaixo, e responda às perguntas que seguem.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=350bp]{aritm1.png}
+\includegraphics[width=.5\linewidth]{aritm1.png}
 \end{figure}
 
 \begin{enumerate}
@@ -824,7 +1897,7 @@ Que padrões se observam nos números em vermelho (embaixo) quando movemos para 
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=65bp]{aritm2.png} \hspace{0,5cm}
+\includegraphics[width=65bp]{aritm2.png} \hspace{0,5cm}
 \includegraphics[width=90bp]{aritm3.png} \hspace{0,5cm}
 \includegraphics[width=120bp]{aritm4.png}
 \end{figure}
@@ -834,7 +1907,7 @@ Complete o que falta no esquema abaixo. Escreva outros exemplos semelhantes e, e
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=200bp]{aritm5.png}
+\includegraphics[width=200bp]{aritm5.png}
 \end{figure}
 
 \item{}
@@ -842,7 +1915,7 @@ Que padrão se observa nos números em vermelho (embaixo) quando movemos para a 
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=280bp]{aritm6.png}
+\includegraphics[width=280bp]{aritm6.png}
 \end{figure}
 
 \item{}
@@ -850,7 +1923,7 @@ Complete o que falta no esquema abaixo. Escreva outros exemplos semelhantes e, e
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=220bp]{aritm7.png}
+\includegraphics[width=220bp]{aritm7.png}
 \end{figure}
 
 \item{}
@@ -858,7 +1931,7 @@ Proponha novos cartões, e explique suas escolhas.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=200bp]{aritm8.png}
+\includegraphics[width=200bp]{aritm8.png}
 \end{figure}
 
 \item{}
@@ -866,7 +1939,7 @@ Baseado na sua proposta resolva.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=200bp]{aritm9.png}
+\includegraphics[width=200bp]{aritm9.png}
 \end{figure}
 
 \item{}
@@ -874,17 +1947,17 @@ Complete o que falta no esquema abaixo. Escreva outros exemplos semelhantes e, e
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{aritm10.png}
+\includegraphics[width=300bp]{aritm10.png}
 \end{figure}
 
 \item{}
 Sejam $m$ e $n$ números inteiros. Baseado nas suas conclusões nos itens anteriores, relacione a coluna da direita com a coluna da esquerda.
 
-\noindent (1) $2^{m} \cdot 2^{n}$  \hspace{1,0cm} (A) $2^{m \cdot n}$
+ (1) $2^{m} \cdot 2^{n}$  \hspace{1,0cm} (A) $2^{m \cdot n}$
 
-\noindent (2) $\dfrac{2^{m}}{2^{n}}$   \hspace{1,5cm} (B) $2^{m + n}$
+ (2) $\dfrac{2^{m}}{2^{n}}$   \hspace{1,5cm} (B) $2^{m + n}$
 
-\noindent (3) $(2^{m})^{n}$  \hspace{1,1cm} (C) $2^{m - n}$
+ (3) $(2^{m})^{n}$  \hspace{1,1cm} (C) $2^{m - n}$
 
 \end{enumerate}
 
@@ -901,13 +1974,13 @@ Completes os cartões vazios nas sequências abaixo. Explique seu raciocínio.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{aritm11.png}
+\includegraphics[width=300bp]{aritm11.png}
 \end{figure}
 
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{aritm12.png}
+\includegraphics[width=300bp]{aritm12.png}
 \end{figure}
 
 \item{}
@@ -915,17 +1988,17 @@ Represente nos cartões abaixo as expressões pedidas:
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=350bp]{aritm13.png}
+\includegraphics[width=350bp]{aritm13.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=350bp]{aritm14.png}
+\includegraphics[width=350bp]{aritm14.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=350bp]{aritm15.png}
+\includegraphics[width=350bp]{aritm15.png}
 \end{figure}
 
 \item{}
@@ -939,11 +2012,11 @@ Qual a sua conclusão sobre que significado tem a expressão $5^{\frac{m}{n}}$ ?
 
 Baseado nas propriedades discutidas nas duas atividades anteriores, que números reais estão representados pelas expressões?
 
-\noindent (a) $27^{-2/3}$  \hspace{1,5cm} (d) $3^{1/2}\cdot 3^{3/2}$ \hspace{1,5cm} (g) $\pi^{1/3} \cdot \pi^{1/2}$
+ (a) $27^{-2/3}$  \hspace{1,5cm} (d) $3^{1/2}\cdot 3^{3/2}$ \hspace{1,5cm} (g) $\pi^{1/3} \cdot \pi^{1/2}$
 
-\noindent (b) $6^{-1/2}$   \hspace{1,7cm} (e) $3^{1/2+3/2}$  \hspace{1,7cm} (h) $(10^{1/2})^{1/3}$
+ (b) $6^{-1/2}$   \hspace{1,7cm} (e) $3^{1/2+3/2}$  \hspace{1,7cm} (h) $(10^{1/2})^{1/3}$
 
-\noindent (c) $\left( \dfrac{1}{16}\right)^{-3/4}$  \hspace{1,0cm} (f) $\left( \dfrac{1}{2}\right)^{7/9} \cdot \left( \dfrac{1}{2}\right)^{2/9}$  \hspace{0,3cm} (i) $(10^{1/4})^{3/5}$
+ (c) $\left( \dfrac{1}{16}\right)^{-3/4}$  \hspace{1,0cm} (f) $\left( \dfrac{1}{2}\right)^{7/9} \cdot \left( \dfrac{1}{2}\right)^{2/9}$  \hspace{0,3cm} (i) $(10^{1/4})^{3/5}$
 
 \end{reflection}
 
@@ -990,7 +2063,7 @@ a>1 \iff 0<a^{-n}<1
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{rac1.png}
+\includegraphics[width=300bp]{rac1.png}
 \end{figure}
 
 Perceba no gráfico, que os pontos do lado esquerdo do eixo $y$ estão todos acima do gráfico (positivos) e abaixo do ponto que está sobre o eixo (menores que $1$). Observe também que quanto mais negativo é o expoente, mais próximo de zero estará o resultado da potência. O gráfico mantém o aspecto crescente: para $m$ e $n$ inteiros, temos
@@ -1003,7 +2076,7 @@ Se acrescentamos agora as frações de denominador 2, ou seja os pontos médios 
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{rac2.png}
+\includegraphics[width=300bp]{rac2.png}
 \end{figure}
 
 As propriedades gráficas anteriores todas se mantêm: gráfico crescente (com crescimento rápido para valores de x positivos), sempre acima do eixo x, se aproximando de zero à medida que o valores do domínio são números negativos cada vez menores.
@@ -1012,24 +2085,24 @@ Acrescentando outras frações, os pontos vão se acumulando mantendo sempre o m
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{rac3.png}
+\includegraphics[width=300bp]{rac3.png}
 \end{figure}
 
 O último gráfico parece ser uma linha contínua, mas é apenas uma questão de escala: basta aproximar para um intervalo menor e ver que os pontos estão, na verdade, espaçados. O processo continua indefinidamente. Podemos aumentar o denominador nessa janela até parecer novamente contínuo e depois aproximar até ver os espaços entre os pontos.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{rac4.png}
+\includegraphics[width=300bp]{rac4.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{rac5.png}
+\includegraphics[width=300bp]{rac5.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{rac6.png}
+\includegraphics[width=300bp]{rac6.png}
 \end{figure}
 
 Por se tratar de um processo infinito, podemos repeti-lo tantas vezes quanto desejamos de forma que será possível, definir também as potências com expoentes irracionais.
@@ -1040,49 +2113,49 @@ Vejamos o caso do número $2^{\sqrt{2}}$. (versão interativa \url{https://www.g
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{irrac1.png}
+\includegraphics[width=300bp]{irrac1.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{irrac2.png}
+\includegraphics[width=300bp]{irrac2.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{irrac3.png}
+\includegraphics[width=300bp]{irrac3.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{irrac4.png}
+\includegraphics[width=300bp]{irrac4.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{irrac5.png}
+\includegraphics[width=300bp]{irrac5.png}
 \end{figure}
 
 \begin{eqnarray*}
 {\sqrt{2}}&\approx& 1,414213562...\\
-2^{1,4}\approx 2,6390158215...& <2^{\sqrt{2}} < & 2^{1,5}\approx 2,8284271247...\\
-2^{1,41}\approx {\color{red} 2,6}573716281... & < 2^{\sqrt{2}} < & 2^{1,42}\approx {\color{red} 2,6}758551095...\\
-2^{1,414}\approx {\color{red} 2,66}47496501...&<2^{\sqrt{2}} < & 2^{1,415}\approx {\color{red} 2,66}65973541...\\
-2^{1,4142}\approx {\color{red} 2,665}1190885...&<2^{\sqrt{2}} <& 2^{1,4143}\approx {\color{red} 2,665}3038269...\\
-2^{1,41421}\approx {\color{red} 2,6651}375617...&<2^{\sqrt{2}} <& 2^{1,41422}\approx {\color{red} 2,6651}560351...\\
-2^{1,414213}\approx {\color{red} 2,66514}3103...&<2^{\sqrt{2}} <& 2^{1,414214}\approx {\color{red} 2,66514}49511...\\
-2^{1,4142135}\approx {\color{red} 2,665144}0274...&<2^{\sqrt{2}} <& 2^{1,4142136}\approx {\color{red} 2,665144}212...\\
-2^{1,41421356}\approx {\color{red} 2,6651441}383... &<2^{\sqrt{2}} <& 2^{1,41421357}\approx {\color{red} 2,6651441}567... \\
-2^{1,414213562}\approx {\color{red} 2,66514414}2.. &<2^{\sqrt{2}} <& 2^{1,414213563}\approx {\color{red} 2,66514414}38...\\
+2^{1{,}4}\approx 2{,}6390158215...& <2^{\sqrt{2}} < & 2^{1{,}5}\approx 2{,}8284271247...\\
+2^{1{,}41}\approx {\color{red} 2{,}6}573716281... & < 2^{\sqrt{2}} < & 2^{1{,}42}\approx {\color{red} 2{,}6}758551095...\\
+2^{1{,}414}\approx {\color{red} 2{,}66}47496501...&<2^{\sqrt{2}} < & 2^{1{,}415}\approx {\color{red} 2{,}66}65973541...\\
+2^{1{,}4142}\approx {\color{red} 2{,}665}1190885...&<2^{\sqrt{2}} <& 2^{1{,}4143}\approx {\color{red} 2{,}665}3038269...\\
+2^{1{,}41421}\approx {\color{red} 2{,}6651}375617...&<2^{\sqrt{2}} <& 2^{1{,}41422}\approx {\color{red} 2{,}6651}560351...\\
+2^{1{,}414213}\approx {\color{red} 2{,}66514}3103...&<2^{\sqrt{2}} <& 2^{1{,}414214}\approx {\color{red} 2{,}66514}49511...\\
+2^{1{,}4142135}\approx {\color{red} 2{,}665144}0274...&<2^{\sqrt{2}} <& 2^{1{,}4142136}\approx {\color{red} 2{,}665144}212...\\
+2^{1{,}41421356}\approx {\color{red} 2{,}6651441}383... &<2^{\sqrt{2}} <& 2^{1{,}41421357}\approx {\color{red} 2{,}6651441}567... \\
+2^{1{,}414213562}\approx {\color{red} 2,66514414}2.. &<2^{\sqrt{2}} <& 2^{1{,}414213563}\approx {\color{red} 2{,}66514414}38...\\
 &\therefore& \\
-2^{\sqrt{2}}&\approx& 2.66514414...\\
+2^{\sqrt{2}}&\approx& 2{,}66514414...\\
 \end{eqnarray*}
 
 O valor que obtemos com esse processo (mesmo que façamos muitas etapas) é uma aproximação racional do número $2^{\sqrt{2}}$, que é um número irracional. Mas, o grande interesse aqui não é no valor numérico de uma potência com expoente irracional, porque isso pode ser feito em qualquer calculadora científica ou mesmo nos principais sites de busca, por exemplo, para $2^{\sqrt{2}}$ basta digitar $ \boxed{2}$\ ,  $\boxed{x^y}$ ou $\boxed{\land}$\ ,  $\boxed{\sqrt{\ }}$ ou  $\boxed{sqrt}$ e $\boxed{2}$\ , mas entender que tais números podem ser definidos a partir de um processo de aproximação por potências cujos expoentes são racionais (frações), e que, além disso podem ser operados obedecendo às mesmas propriedades que valem para os expoentes racionais.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=3cm]{calc.png}
+\includegraphics[width=3cm]{calc.png}
 \includegraphics[width=5cm]{calc2.png}
 \caption{Calculadora Android e página de busca do Google.}
 \end{figure}
@@ -1092,7 +2165,7 @@ Na próxima seção faremos uma revisão sobre tais propriedades quando definirm
 \begin{knowledge}
 Experimente digitar em uma calculadora convencional o número $\boxed{2}$ seguido da tecla $\boxed{\sqrt{\ }}$ (ou na ordem contrária na calculadora do celular, isto é, aperte $\boxed{\sqrt{\ }}$ seguido de $\boxed{2}$. 
 
-Observe o número aparece no visor da calculadora. Será correto afirmar que $\sqrt{2}$ é \textbf{igual} a este resultado, isto é, que $\sqrt{2}=1,414213562$ ? Experimente agora digitar esse número $1,414213562$ e elevá-lo ao quadrado. O resultado que aparece é $2$?
+Observe o número aparece no visor da calculadora. Será correto afirmar que $\sqrt{2}$ é \textbf{igual} a este resultado, isto é, que $\sqrt{2}=1{,}414213562$ ? Experimente agora digitar esse número $1{,}414213562$ e elevá-lo ao quadrado. O resultado que aparece é $2$?
 
 Embora apertemos a tecla $\boxed{=}$, o resultado dado pela calculadore, neste caso, é apenas aproximado, e isso ocorre porque as calculadoras (e os computadores) são máquinas capazes de armazenar e manipular apenas quantidades finitas de dados. Por isso, quando elas tem que armazenar ou fazer contas com números que não admitem uma representação decimal finita, como é o caso dos números irracionais, o que elas fazem é trabalhar com aproximações destes números. A boa notícia é que para a grande maioria das situações isso é bom o suficiente. 
 
@@ -1100,20 +2173,129 @@ Existem duas subáreas da Matemática que lidam com aproximações deste tipo: u
 
 \end{knowledge}
 
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{objectives}{Um cafézinho}
+{
+\begin{itemize}
+\item Compreender o significado de potências com expoentes racionais nas situações problema.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Um cafézinho}
+{
+\begin{itemize}
+\item Oferecemos nesta atividade um exemplo com dados reais em que aparecem expoentes não inteiros. Havendo disponibilidade você pode ou mostrar para a turma a animação desta situação disponível neste link \url{https://www.desmos.com/calculator/nn0f7iw3tz} ou indicar que eles assistam.
+
+\item Destaque que a quantidade inicial de cafeína no organismo do indivíduo de que trata a questão é obtida tomando t=0 na função.
+
+\item Em processos envolvendo decaimento exponencial é interessante identificar o intervalo de tempo necessário para que a quantidade inicial decaia pela metade. Você pode utilizar a animação em GeoGebra disponível neste endereço \url{https://www.geogebra.org/m/qgfuymx9} para ilustrar graficamente esse processo.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Um cafézinho}
+{
+\begin{enumerate}
+\item
+As quantidades de cafeína no organismo do indivíduo meia hora (0,5), uma hora e meia (1,5) e quatro horas (4) após a ingestão da xícara de café serão, respectivamente, dadas por:
+
+$f(0,5)=94{,}39$mg, \quad $f(1,5)=84{,}09$mg, \quad $f(4)=63$mg.
+
+\item $50=100\cdot(0,5)^{\frac{t}{6}}\iff\dfrac{1}{2}=\left( \dfrac{1}{2} \right)^{\frac{t}{6}}$ $\iff$ $t=6$ horas.
+
+\item $F(t)=150\cdot(0{,}5)^{\frac{t}{8}}$.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Qual é a expressão?}
+{
+\begin{itemize}
+\item Deduzir expressões de funções exponenciais envolvendo expoentes racionais, a partir de situações problema.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Qual é a expressão?}
+{
+\begin{itemize}
+\item A ideia central é que se a cada $4$ dias o número de infectados triplica, a cada dois dias ficará multiplicado por $\sqrt{3}$, e cada $1$ dia ficará multiplicado por $\sqrt[4]{3}=\sqrt{\sqrt{3}}$. E isso levará à expressão $3^{\frac 14}$.
+
+\item Como estamos propondo uma simulação de dados reais, é possível trabalhar com uma margem de aproximações para os valores colocados.
+
+\item Ao término da atividade, durante as discussões, proponha algumas generalizações como: qual seria a fórmula se houvesse $200$ infectados no início? Se quintuplicasse a cada $4$ dias? Se quadruplicasse a cada $5$ dias? etc.
+
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Qual é a expressão?}
+{
+\begin{enumerate}
+
+\item $300, 900, 2700, 8100, 24300$
+
+\item $100\sqrt{3} \approx 173$ e $300\sqrt{3} \approx 519$
+
+\item $131, 173, 227, 300, 395, 520, 684, 900$. Para obter o valor do dia seguinte, multiplicar o anterior por $\sqrt[4]{3}$.
+
+\item Modelo (III).
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Afim e Exponencial}
+{
+\begin{itemize}
+\item Investigar por meio de gráficos as variações da função exponencial em intervalos de tamanho fixo, comparando com a variações da função afim.
+
+\item Identificar os papéis das constantes na expressão da função exponencial $f(x)=ca^{\frac xk}$.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Afim e Exponencial}
+{
+\begin{itemize}
+\item Após a discussão peça para os estudantes proporem desafios para os colegas: eles mostram $3$ pontos e os colegas tentam “adivinhar” o próximo e fornecer a expressão analítica.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Afim e Exponencial}
+{
+\begin{enumerate}
+
+\item $3$ é o intercepto-y, $1$ é o deslocamento vertical que corresponde a um deslocamento horizontal de $4$ unidades.
+
+\item
+$1$ é o intercepto-y (valor inicial), a cada $4$ unidades de deslocamento horizontal o valor anterior fica multiplicado por $3$.
+
+\item
+Valor inicial $4$ e a cada $5$ unidades de deslocamento horizontal, multiplicamos por $\frac 64=\frac 32$. Assim, para $x=15$ teremos $f(15)=9\cdot \frac 32=13{,}5$.
+A expressão então é dada por $f(x)=4\cdot \left(\dfrac 32\right)^{\frac x5}$.
+
+\end{enumerate}
+}{1}
+\end{answer}
+
+
 \explore{Função exponencial}
 
-\begin{task}{Um cafezinho}
+\begin{task}{Um cafézinho}
 
 Chamamos meia-vida biológica da cafeína o tempo necessário para que o nosso corpo elimine a metade de uma dose desta substância. Esse tempo varia amplamente entre os indivíduos de acordo com fatores como gravidez, ingestão outras drogas, nível de função enzimática hepática (necessário para o metabolismo da cafeína) e idade. Em adultos saudáveis, a meia-vida da cafeína varia entre três a sete horas. Nos recém-nascidos, a meia-vida da cafeína pode ser de $80$ horas ou mais, sendo esta uma das razões para a recomendação  de não dar qualquer alimento que contenha cafeína para bebês.
 Fonte: \url{https://pt.wikipedia.org/wiki/Cafe\%C3\%ADna}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=250bp]{cafeina.png}
+\includegraphics[width=250bp]{cafeina.png}
 \caption{Gráfico mostrando como a quantidade de cafeína no organismo de um indivíduo que ingeriu uma xícara de café de $250 ml$ varia ao longo do tempo (medido em horas).}
 \end{figure}
 
-Para um indivíduo que acabou de ingerir uma xícara de café de $250 ml$ - que contém cerca de $100 mg$ de cafeína - exames laboratoriais mostraram que a quantidade de cafeína no seu organismo variou com o passar do tempo (em horas) de acordo com a seguinte função $f(t)=100 \cdot (0,5)^{\frac{t}{6}}$, pergunta-se:
+Para um indivíduo que acabou de ingerir uma xícara de café de $250 ml$ - que contém cerca de $100 mg$ de cafeína - exames laboratoriais mostraram que a quantidade de cafeína no seu organismo variou com o passar do tempo (em horas) de acordo com a seguinte função $f(t)=100 \cdot (0{,}5)^{\frac{t}{6}}$, pergunta-se:
 
 \begin{enumerate}
 
@@ -1140,7 +2322,7 @@ Uma epidemia causada por um vírus está se espalhando na cidade. Os cientistas,
 
 %\begin{figure}[H]
 %\centering
-%\noindent\includegraphics[width=300bp]{infectados.png}
+%\includegraphics[width=300bp]{infectados.png}
 %\end{figure}
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
@@ -1188,7 +2370,7 @@ Uma epidemia causada por um vírus está se espalhando na cidade. Os cientistas,
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=5cm]{grafico_afim.png}
+\includegraphics[width=5cm]{grafico_afim.png}
 \includegraphics[width=5cm]{grafico_exp.png}
 \end{figure}
 
@@ -1202,7 +2384,7 @@ Uma epidemia causada por um vírus está se espalhando na cidade. Os cientistas,
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=170bp]{pontos.png}
+\includegraphics[width=170bp]{pontos.png}
 \end{figure}
 
 \end{enumerate}
@@ -1224,7 +2406,7 @@ Por que você acha que precisamos  fazer as restrições nos valores da base? O 
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{exp.png}
+\includegraphics[width=275bp]{exp.png}
 \end{figure}
 
 Se a base $a$ é um número positivo menor que $1$, estamos diante de uma função exponencial decrescente. Caso $a$ seja maior que $1$, teremos uma função crescente. Os gráficos, em ambos os casos, ficam acima do eixo $x$, isto é, à região correspondente às ordenadas positivas, e intersectam o eixo das ordenadas no ponto $(c,0)$.
@@ -1243,7 +2425,7 @@ Você pode explorar mais e aprender sobre os aspectos visuais do gráfico da fun
 
 \begin{observation}{Observações}
 
-\noindent \textbf{1.} As propriedades aritméticas que vimos anteriormente e que valem para quaisquer números reais $x$, $x'$ são
+ \textbf{1.} As propriedades aritméticas que vimos anteriormente e que valem para quaisquer números reais $x$, $x'$ são
 
 \begin{itemize}
 
@@ -1257,7 +2439,7 @@ Você pode explorar mais e aprender sobre os aspectos visuais do gráfico da fun
 
 \end{itemize}
 
-\noindent \textbf{2.} Como vimos nas atividades da seção anterior, em algumas situações-problema quando é conveniente, o expoente $x$ pode aparecer multiplicado por uma constante. Mas perceba que, uma expressão do tipo $y=3 \cdot 4^{x/2}$ pode ser reescrita como $y=3\cdot 4^{(1/2)\cdot x}=3 \cdot (4^{1/2})^{x} = 3 \cdot 2^{x}$, que é a forma padrão que apresentamos da função exponencial. Generalizando para qualquer base, $a^{kx} = (a^{k})^{x}$.
+ \textbf{2.} Como vimos nas atividades da seção anterior, em algumas situações-problema quando é conveniente, o expoente $x$ pode aparecer multiplicado por uma constante. Mas perceba que, uma expressão do tipo $y=3 \cdot 4^{x/2}$ pode ser reescrita como $y=3\cdot 4^{(1/2)\cdot x}=3 \cdot (4^{1/2})^{x} = 3 \cdot 2^{x}$, que é a forma padrão que apresentamos da função exponencial. Generalizando para qualquer base, $a^{kx} = (a^{k})^{x}$.
 
 Expressões do tipo $ y=8^{x+2} $, se transformam em $ y=8^x \cdot 8^2 = 64\cdot 8^x$, ou de maneira mais geral, $ y=a^{x+\ell}=a^\ell \cdot a^x $.
 
@@ -1268,10 +2450,10 @@ Nos problemas, entretanto, a constante multiplicando o expoente $x$ pode ajudar 
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{exp2.png}
+\includegraphics[width=275bp]{exp2.png}
 \end{figure}
 
-\noindent \textbf{3.} Quando temos uma exponencial decrescente, tipo $y=\left( \dfrac{1}{7} \right)^{x}$, podemos reescrevê-la da seguinte forma:
+ \textbf{3.} Quando temos uma exponencial decrescente, tipo $y=\left( \dfrac{1}{7} \right)^{x}$, podemos reescrevê-la da seguinte forma:
 
 \[
 y=\left( \dfrac{1}{7} \right)^{x} \iff y=( 7^{-1})^{x} \iff y=7^{-x}
@@ -1281,6 +2463,89 @@ y=\left( \dfrac{1}{7} \right)^{x} \iff y=( 7^{-1})^{x} \iff y=7^{-x}
 
 
 \practice{Função Exponencial}
+
+\begin{objectives}{Analgésicos}
+{
+\begin{itemize}
+\item Modelar situações (dadas verbalmente, em tabelas ou gráficos) de decaimento exponencial.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Analgésicos}
+{
+\begin{itemize}
+\item Caso haja dificuldade de acesso a internet, considere em seu planejamento solicitar aos estudantes que já tragam de casa a informação referente a meia-vida de três analgésicos. Alternativamente você pode oferecer essa informação, neste endereço há uma lista com diversos medicamentos e suas meia-vidas.  
+\url{https://sbgg.org.br/wp-content/uploads/2016/06/farmacocinetica-dos-medicamentos.pdf}
+
+\item Curiosamente um analgésico bastante conhecido e para o qual não há conclusão científica sobre a sua meia-vida no organismo humano é a Dipirona.
+
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Analgésicos}
+{
+\begin{itemize}
+
+\item Resposta pessoal.
+
+\item ACETAMINOFENO (PARACETAMOL) ME Via Oral (VO): 4h
+
+ÁCIDO ACETILSALICÍLICO (AAS) VO: 6h 
+
+DICLOFENACO VO Lib. Imediata: (Diclofenaco de Potássio): 2h
+
+CELECOXIBE (COX-2) VO: 11h 
+
+IBUPROFENO ME VO: 4h
+
+CETOROLACO VO: 6h 
+
+NAPROXENO VO Lib. Imediata: 12h 
+
+INDOMETACINA VO: 2h
+
+\item $Q(t)=Q_0\cdot (0{,}5)^{\frac tk}$, em que $k$ denota a meia vida.
+
+\item 5$00$mg, tomados de 8 em 8 horas. Meia-vida = 1h.
+
+\end{itemize}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Várias curvas}
+{
+\begin{itemize}
+\item Deduzir expressões algébricas para funções exponenciais a partir de gráficos.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Várias curvas}
+{
+\begin{itemize}
+
+\item Peça aos estudantes que compartilhem com a turma sobre os raciocínios que tiveram para deduzir as expressões.
+
+\item Após a discussão peça para os estudantes proporem desafios para os colegas.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Várias curvas}
+{
+\begin{itemize}
+
+\item (1) $y=6^x$ ; (2)$y=3{,}5^x$ ; (3)$y=2^x$ ;(4)$y=0{,}25^x$.
+
+\item (1) $y=16 \cdot 0{,}5^x$ ; (2)$y=6\cdot \left(\frac 43\right)^x$ ; (3)$y=2\cdot 4^x$ ; (4)$y=8^x$.
+
+\item (1) $y=\left(\frac 13\right)^x=3^{-x}$; (2) $y=\left(\frac 23\right)^x=1.5^{-x}$; (3) $y=2^x$.
+
+
+\end{itemize}
+}{1}
+\end{answer}
 
 \begin{task}{Analgésicos}
 
@@ -1300,7 +2565,7 @@ Todo medicamento é acompanhado por uma bula, que contém, entre outros tópicos
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{antibioticos.png}
+\includegraphics[width=300bp]{antibioticos.png}
 \end{figure}
 
 \end{task}
@@ -1330,7 +2595,7 @@ Abaixo, todos os gráficos são de funções exponenciais. Escreva expressões p
 \item{}
 \adjustbox{valign=t}
 {
-\noindent\includegraphics[width=350bp]{exponenciais.png}
+\includegraphics[width=350bp]{exponenciais.png}
 }
 
 
@@ -1338,7 +2603,7 @@ Abaixo, todos os gráficos são de funções exponenciais. Escreva expressões p
 
 \adjustbox{valign=t}
 {
-\noindent\includegraphics[width=350bp]{exponenciais1.png}
+\includegraphics[width=350bp]{exponenciais1.png}
 }
 
 
@@ -1346,7 +2611,7 @@ Abaixo, todos os gráficos são de funções exponenciais. Escreva expressões p
 
 \adjustbox{valign=t}
 {
-\noindent\includegraphics[width=350bp]{exponenciais3.png}
+\includegraphics[width=350bp]{exponenciais3.png}
 }
 
 
@@ -1368,37 +2633,37 @@ Rapidamente você vai dizer que ela deverá pagar $2$ reais. OK! Mas vamos pensa
 Considerando que $50\%$ $(r=1/2)$ é a taxa proporcional correspondente ao período de $6$ meses, então o dinheiro vale $(1+1/2)=1,50$ reais. Então, considerando que a pessoa só vá te pagar no fim de um ano, a pessoa permaneceria com esse valor de $1,50$ por mais $6$ meses. Sendo assim, ao final de um ano ela deveria pagar esse valor mais metade dele, ou seja:
 
 \[
-\left(1+\frac{1}{2}\right)+\frac{1}{2}\left(1+\frac{1}{2}\right)=\left(1+\frac{1}{2}\right)\left(1+\frac{1}{2}\right)=\left(1+\frac{1}{2}\right)^{2}= 2,25 \text{ reais}.
+\left(1+\frac{1}{2}\right)+\frac{1}{2}\left(1+\frac{1}{2}\right)=\left(1+\frac{1}{2}\right)\left(1+\frac{1}{2}\right)=\left(1+\frac{1}{2}\right)^{2}= 2{,}25 \text{ reais}.
 \]
 
-E se pensássemos assim de 4 em 4 meses? Nesse caso a taxa proporcional é $r=1/3$, e ao final do primeiro quadrimestre o dinheiro emprestado vale $1+\frac13$, passados 4 meses, esse valor já corrigido sofrerá um novo acréscimo e passará a valer $\left(1+\frac13\right)+\frac13\left(1+\frac13\right)=\left(1+\frac13\right)^2$ e finalmente, depois do último quadrimestre teremos $\left(1+\frac13\right)^3 = 2,37$ reais.
+E se pensássemos assim de 4 em 4 meses? Nesse caso a taxa proporcional é $r=1/3$, e ao final do primeiro quadrimestre o dinheiro emprestado vale $1+\frac13$, passados 4 meses, esse valor já corrigido sofrerá um novo acréscimo e passará a valer $\left(1+\frac13\right)+\frac13\left(1+\frac13\right)=\left(1+\frac13\right)^2$ e finalmente, depois do último quadrimestre teremos $\left(1+\frac13\right)^3 = 2{,}37$ reais.
 
 Seguindo este raciocínio, isto é, capitalizando a quantidade emprestada em diferentes períodos obtemos a seguinte tabela:
 
 %\begin{figure}[H]
 %\centering
-%\noindent\includegraphics[width=300bp]{capitalização_contínua.png}
+%\includegraphics[width=300bp]{capitalização_contínua.png}
 %\end{figure}
 \begin{center}
 	\begin{tabular}{|l|l|}
 		\hline
-		Se capitalizado trimestralmente & $\left(1+\frac 14 \right)^4=2,44140625$                     \\ \hline
-		Se capitalizado diariamente     & $\left(1+\frac 1{365} \right)^{365}=2,714567482$           \\ \hline
-		Se capitalizado a cada minuto   & $\left(1+\frac 1{525600} \right)^{525600}=2,718279215$     \\ \hline
-		Se capitalizado a cada segundo  & $\left(1+\frac 1{31536000} \right)^{31536000}=2,718282473$ \\ \hline
+		Se capitalizado trimestralmente & $\left(1+\frac 14 \right)^4=2{,}44140625$                     \\ \hline
+		Se capitalizado diariamente     & $\left(1+\frac 1{365} \right)^{365}=2{,}714567482$           \\ \hline
+		Se capitalizado a cada minuto   & $\left(1+\frac 1{525600} \right)^{525600}=2{,}718279215$     \\ \hline
+		Se capitalizado a cada segundo  & $\left(1+\frac 1{31536000} \right)^{31536000}=2{,}718282473$ \\ \hline
 	\end{tabular}
 \end{center}
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{euler1.png}
+\includegraphics[width=300bp]{euler1.png}
 \end{figure}
 
 Isso nos mostra que na medida em que vamos considerando períodos de tempo cada vez menores vamos nos aproximando de um valor máximo constante $2,71828...$ que é conhecido como \textbf{número de Euler} e denotado pela letra $ e $. Ou seja, se adotássemos um regime de capitalização contínua ao final de um ano a pessoa deveria pagar $e$ reais.
 
 Mas o que isso significa? Que o número $e$ é o resultado máximo possível quando consideramos um crescimento/decaimento contínuo de $100\%$ por um período de tempo. O que é sutil aqui é a ideia de que cada pequeno crescimento/decaimento gera uma pequena parte que também começará a crescer/decair por conta própria. É como se o número $e$ representasse uma barreira, um limite de quão rápido um processo pode crescer/decair continuamente. Levando isto em conta, temos que qualquer outra taxa de crescimento/decaimento poderá ser escrita usando $e$. Neste link \url{https://www.desmos.com/calculator/ywfoix8smn} você pode explorar esta propriedade, encontrando o valor de K que melhor aproxima as funções $G(x)=a^{x}$ e $F(x)=e^{Kx}$.
 
-O número de Euler, essa constante que vale aproximadamente $2,71828...$ é, assim como o famoso número \textit{pi} ($\pi \approx 3,1415928...$), um número irracional, ou seja, não pode ser escrito na forma de fração, ou que a sua representação decimal não é uma dízima periódica. Este fato foi provado pelo matemático suíço Leonhard Euler (por volta de 1737), usando uma técnica conhecida hoje como frações contínuas. Dada a importância e relevância do seu trabalho, a constante recebe hoje seu nome (embora tenha sido descoberta quase meio século antes por outro matemático suíço, Jacob Bernoulli, enquanto estudava juros compostos) e a notação escolhida por Euler para representá-la foi mantida e é a que usamos como padrão até hoje.
+O número de Euler, essa constante que vale aproximadamente $2{,}71828...$ é, assim como o famoso número \textit{pi} ($\pi \approx 3{,}1415928...$), um número irracional, ou seja, não pode ser escrito na forma de fração, ou que a sua representação decimal não é uma dízima periódica. Este fato foi provado pelo matemático suíço Leonhard Euler (por volta de 1737), usando uma técnica conhecida hoje como frações contínuas. Dada a importância e relevância do seu trabalho, a constante recebe hoje seu nome (embora tenha sido descoberta quase meio século antes por outro matemático suíço, Jacob Bernoulli, enquanto estudava juros compostos) e a notação escolhida por Euler para representá-la foi mantida e é a que usamos como padrão até hoje.
 
 \begin{figure}[H]
 	\centering
@@ -1421,6 +2686,90 @@ Essa Lei pode ser traduzida matematicamente pela função exponencial $D(t)=D_{0
 %Se olharmos com um pouco mais de atenção podemos perceber que em qualquer círculo, sempre que dividimos o seu comprimento pelo seu diâmetro iremos obter um valor bem próximo de $\pi$. De fato, $\pi$  pode ser definido como a razão fundamental presente em todos os círculos e, portanto, presente no cálculo de qualquer área ou circunferência de círculos, ou mesmo no volume e área da superfície de esferas e cilindros. Será que há uma interpretação como esta para o número $e$?  A resposta é que sim, conforme vamos ver agora.
 \end{knowledge}
 \newpage
+
+\def\currentcolor{session3}
+\begin{objectives}{Próximo valor}
+{
+\begin{itemize}
+\item Reconhecer a função exponencial como modelo que apresenta maior crescimento em relação aos modelos afim e quadrático;
+
+\end{itemize}
+
+\tcbsubtitle{Intervalo de tempo}
+\begin{itemize}
+\item Concluir que o fator de crescimento de uma função exponencial depende apenas do comprimento do intervalo de tempo considerado;
+
+\end{itemize}
+
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-2em}}
+\begin{sugestions}{Próximo valor}
+{
+\begin{itemize}
+\item Para ter uma maior variedade de exemplos no item (d) peça que cada estudante faça um diferente do que está no enunciado e que comparem uns com os outros.
+
+\item No item (d), dependendo da escolha dos valores iniciais, pode ser que avaliar até $x=6$ não seja suficiente para concluir que a exponencial cresce mais. Caso isso ocorra, provoque os estudantes no sentido de extrapolar para valores maiores de $x$, e nesse caso, o uso de calculadoras gráficas é recomendado.
+
+\item Uma construção feita no Desmos para explorar a construção dessa atividade \url{https://www.desmos.com/calculator/qtfjexncpo?lang=pt-BR}
+
+\item Havendo possibilidade utilize esta construção \url{https://www.geogebra.org/m/GMvvpwrm\#material/CVMPHDfd} para explorar com a turma  as diferenças entre crescimento linear e exponencial.
+
+\item Este outro link, explora como o crescimento exponencial supera os crescimento de funções polinomiais:  \url{https://www.geogebra.org/m/GMvvpwrm\#material/UfD3BXQa}
+
+\end{itemize}
+
+\tcbsubtitle{Intervalo de tempo}
+
+\begin{itemize}
+\item Nos itens em que se espera uma generalização (c, d, e) certifique-se de que os estudantes foram além dos exemplos, que escreveram intervalos do tipo $[t,t+h]$.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+
+\begin{answer}{Próximo valor}
+{
+AFIM: 9,12,15, 18,21.
+
+QUADRÁTICA: infinitas respostas (as diferenças devem ser PAs de segunda ordem).
+
+EXPONENCIAL: 12, 24, 48, 56, 112.
+
+\begin{enumerate}
+
+\item Sim, o modelo quadrático.
+
+\item $f(x)=kx^2+3$, e como $f(1)=6$, logo $k=3$: $15, 30, 51, 78, 111$.
+
+\item $y=3+3x$, $y=3x^2+3$, $y=3\cdot 2^x$.
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=250bp]{proximo_valor_itemC.png}
+\end{figure}
+
+\item Exponencial. A resposta se mantém, ou seja, a exponencial sempre vence.
+
+\end{enumerate}
+
+\tcbsubtitle{Intervalo de tempo}
+
+\begin{enumerate}
+\item $\sqrt{1,44}=1,2$, ou $20\%$ a cada meia hora.
+
+\item Todos iguais a $1,2$.
+
+\item $\dfrac{A(t+0,5)}{A(t)}=\dfrac{100\cdot 1,44^{t+0,5}}{100\cdot 1,44^t}=\dfrac{1,44^t \cdot 1,44^{0,5}}{1,44^t}=\sqrt{1,44}$.
+
+\item $\dfrac{A(t+0,25)}{A(t)}=\dfrac{100\cdot 1,44^{t+0,25}}{100\cdot 1,44^t}=\dfrac{1,44^t \cdot 1,44^{0,25}}{1,44^t}=\sqrt[4]{1,44}$.
+
+\item $\dfrac{A(t+h)}{A(t)}=\dfrac{100\cdot 1,44^{t+h}}{100\cdot 1,44^t}=\dfrac{1,44^t \cdot 1,44^{h}}{1,44^t}=1,44^h$.
+
+\end{enumerate}
+}{0}
+\end{answer}
+
 \know{Função Exponencial}
 
 \begin{task}{Próximo valor}
@@ -1482,7 +2831,7 @@ Um biólogo observou que a área ocupada por uma cultura de bactérias em uma pl
 Determine o fator de crescimento na primeira meia hora.
 
 \item{}
-Determine o fator de crescimento na segunda, na terceira e na décima meia hora, ou seja, os valores de $\dfrac{A(1)}{A(0,5)}, \dfrac{A(1,5)}{A(1)}$ e $\dfrac{A(5)}{A(4,5)}$.
+Determine o fator de crescimento na segunda, na terceira e na décima meia hora, ou seja, os valores de $\dfrac{A(1)}{A(0{,}5)}, \dfrac{A(1{,}5)}{A(1)}$ e $\dfrac{A(5)}{A(4{,}5)}$.
 
 \item{}
 Mostre que o fator de crescimento é o mesmo em qualquer intervalo de meia hora.
@@ -1508,7 +2857,6 @@ f(x+h)=c\cdot a^{x+h} = c \cdot a^x \cdot a^h = f(x) \cdot a^h
 \]
 
 A última expressão significa que o fator de multiplicação nesse intervalo depende apenas do comprimento $(h)$ desse intervalo. Nesse mesmo intervalo se olhamos para a taxa de variação média teremos
-
 \begin{eqnarray*}
 \frac{\Delta f}{\Delta x}&=&\frac{f(x+h)-f(x)}{h}=\frac{c\cdot a^{x+h}-c\cdot a^x}{h}\\
 &=& \frac{c\cdot a^x \cdot a^h-c\cdot a^x}{h} = c\cdot a^x \quad \frac{a^{h}-1}{h}\\
@@ -1517,23 +2865,20 @@ A última expressão significa que o fator de multiplicação nesse intervalo de
 \[
 \therefore \quad \frac{\Delta f}{\Delta x}=f(x) \frac{a^{h}-1}{h}
 \]
-
 Ou seja, a taxa de variação média também pode ser obtida a partir da imagem do valor inicial do intervalo multiplicado por um fator que depende apenas do comprimento do intervalo. Mas o que isso quer dizer? 
 
 Bem, a taxa de variação está relacionada com a velocidade de crescimento, isso significa que se olhamos em intervalos iguais a velocidade sempre será proporcional ao valor da função no início do intervalo. Vejamos um exemplo:
 
-Para a função $f(x)=4^{x}$ em intervalos de tamanho $0,5$, $[x, x+0,5]$ temos
-
+Para a função $f(x)=4^{x}$ em intervalos de tamanho $0{,}5$, $[x, x+0{,}5]$ temos
 \begin{eqnarray*}
-\frac{\Delta f}{\Delta x}&=&\frac{4^{x+0.5}-4^x}{0.5}= 4^x \quad \frac{4^{0.5}-1}{0.5}\\
-&=& f(x) \quad \frac{\sqrt 4 -1}{0.5}= 2 f(x)\\
+\frac{\Delta f}{\Delta x}&=&\frac{4^{x+0.5}-4^x}{0{,}5}= 4^x \quad \frac{4^{0{,}5}-1}{0{,}5}\\
+&=& f(x) \quad \frac{\sqrt 4 -1}{0{,}5}= 2 f(x)\\
 \end{eqnarray*}
-
 Isto é, a velocidade média em intervalos de tamanho $0,5$ é sempre o dobro da posição no início do intervalo.
 
 %\begin{figure}[H]
 %\centering
-%\noindent\includegraphics[width=300bp]{tabela1_para_saber_mais.png}
+%\includegraphics[width=300bp]{tabela1_para_saber_mais.png}
 %\end{figure}
 \begin{table}[H]
 \centering
@@ -1577,7 +2922,7 @@ O fator de multiplicação na taxa de variação média depende apenas da base a
 
 % \begin{figure}[H]
 % \centering
-% \noindent\includegraphics[width=400bp]{tabela2_para_saber_mais.png}
+% \includegraphics[width=400bp]{tabela2_para_saber_mais.png}
 % \end{figure}
 
 Perceba que, para cada uma das bases, os fatores parecem estar se aproximando de um valor que, agora, só depende da base da exponencial. Isso nos leva a querer conjecturar que 
@@ -1617,7 +2962,7 @@ Pode-se conjecturar, ainda a partir da última tabela que, para bases menores qu
 
 % \begin{figure}[H]
 % \centering
-% \noindent\includegraphics[width=400bp]{tabela3_para_saber_mais.png}
+% \includegraphics[width=400bp]{tabela3_para_saber_mais.png}
 % \end{figure}
 
 Essa base, é exatamente o número de Euler  que vimos anteriormente.
@@ -1625,6 +2970,168 @@ Essa base, é exatamente o número de Euler  que vimos anteriormente.
 A função $f(x)=e^{x}$ é, portanto, uma função real que em cada ponto o valor da função (posição) é igual a taxa de crescimento (velocidade).
 
 As conjecturas acima são todas verdadeiras e as demonstrações poderão ser vistas em um curso de cálculo no nível superior, ao se estudar o conceito de derivada de uma função.
+
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{texto}
+{
+\section{Explorando: Progressões Geométricas}
+Nesta seção iremos explorar a relação entre função exponencial e progressões geométricas. Neste ponto os estudantes já tiveram contato com muitas atividades que exploraram o comportamento de crescimento e decaimento exponencial, bem como funções exponenciais em domínios discretos, e portanto, já desenvolveram algumas das ideias centrais de progressão geométrica. Além de traduzir essas ideias já construídas para a linguagem e notação de sequências - dando ênfase à ideia de recursão - levamos o estudante a deduzir e reconhecer a expressão do termo geral de uma progressão geométrica, bem como a determinar a soma dos seus termos, tanto no caso finito quanto no infinito (decrescente), sem entretanto, se apegar às diversas fórmulas que são tradicionais no ensino deste tema.
+
+Conforme você deverá notar, em alguns momentos do texto repetimos o processo que leva à dedução de certas expressões, como por exemplo aquela usada para determinar a soma dos termos de uma progressão geométrica, essa "repetição" foi intencional e tem como objetivo retirar o foco na memorização de fórmulas. Na parte final desta seção ressaltamos a relação entre progressões geométricas e geometria, e exploramos algumas das características geométricas do triângulo de Sierpinski, isto é, que sua área é zero e seu perímetro é infinito.
+}
+\end{texto}
+\begin{objectives}{Progressões}
+{
+\begin{itemize}
+\item Identificar progressões geométricas de razão positiva definidas recursivamente como funções exponenciais de domínio discreto (natural);
+\end{itemize}
+
+\tcbsubtitle{De 8 em 8 horas}
+
+\begin{itemize}
+\item Deduzir a expressão que dá a soma dos termos de uma PG finita.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Progressões}
+{
+\begin{itemize}
+
+\item A ideia é apresentar PGs definidas recursivamente, incluindo as que têm primeiro termo ou razão negativos. O estudante deve identificar as que têm primeiro termo e razão positivos com o crescimento/decaimento exponenciais.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Progressões}
+{
+\begin{enumerate}
+
+\item 
+\begin{enumerate}
+\item $(10, 30, 90, 270, 810…)$
+
+\item  $(5, 10, 20, 40, 80, …)$
+
+\item  $(4, -4, 4, -4, 4,...)$
+
+\item  $(-100; -50; -25; -12,5; …)$
+
+\item  $(4,12,36,108, 324,...)$
+
+\item  $(8; 3,2; 1,28; 0,512;...)$
+
+\item  $(1000; 800; 640; 512; 409,6;...)$
+
+\item  $(1, -3, 9, -27, 81, …)$
+
+\item  $(\sqrt 7, \sqrt 7, \sqrt 7, \sqrt 7,...)$
+\end{enumerate}
+
+\item Os termos, a partir do segundo, podem ser obtidos multiplicando-se um fator constante pelo termo anterior.
+
+\item Crescimento (1), (2), (5). Decaimento (6) e (7). Todas têm primeiro termo positivo e fator de multiplicação positivo e diferente de 1.
+
+
+\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{sugestions}{De 8 em 8 horas}
+{
+\begin{itemize}
+\item Faça, caso julgue conveniente, a construção dessas tabelas em uma planilha eletrônica.
+
+\begin{figure}[H]
+\centering
+\noindent\includegraphics[width=\linewidth]{planilhaPG.png}
+\end{figure}
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{De 8 em 8 horas}
+{
+\begin{enumerate}
+\item $25\%$
+\item $125+500=625$mg
+\item
+\adjustbox{valign=t}
+{
+\begin{tabular}{|c|c|c|c|}
+\hline
+\tcolor{Comprimido} & \tcolor{Quant. presente (mg)} & \tcolor{Nova dose (mg)} & \tcolor{Total (mg)} \\ 
+\hline
+1 (0h) & --- & $500$ & $500$ \\ 
+\hline
+2 (8h) & $125$& $500$ & $625$ \\ 
+\hline
+3 (16h) & $181{,}25$ & $500$ & $681{,}25$ \\ 
+\hline
+4 (24h) & $170{,}31$ & $500$ & $670{,}31$ \\ 
+\hline
+\end{tabular}
+}
+
+\item 
+\adjustbox{valign=t}
+{\setlength\tabcolsep{2.5pt}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\tcolor{Comprimido} & \tcolor{Quant. presente (mg)} & \tcolor{Nova dose (mg)} & \tcolor{Total (mg)} \\ 
+\hline
+0 & $d$ & --- & $d$ \\ 
+\hline
+1 & $dq$ & $d$ & $d+dq$ \\ 
+\hline
+2 & $q(d+dq)$ & $d$ & $d+dq+dq^2$\\ 
+\hline
+3 & $q(d+dq+dq^2)$ & $d$ & $d+dq+dq^2+dq^3$\\
+\hline
+$\cdots$ & $\cdots$ & $\cdots$ & $\cdots$ \\ 
+\hline
+10 & $q(d+dq+\cdots+dq^9)$ & $d$ & $q(d+dq+\cdots+dq^10)$ \\ 
+\hline
+$\cdots$ & $\cdots$ & $\cdots$ & $\cdots$ \\ 
+\hline
+$n$ & $q(d+dq+\cdots+dq^{n-1})$ & $d$ & $q(d+dq+\cdots+dq^n)$ \\ 
+\hline
+\end{tabular}
+}
+
+\item $S=500\dfrac{1-0{,}25^{16}}{1-0{,}25}=666{,}66$mg
+\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Escala Infinita}
+{
+\begin{itemize}
+\item Deduzir uma expressão para a soma dos termos de uma PG infinita.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Escala Infinita}
+{
+\begin{itemize}
+\item O item (f) envolve uma demonstração. Caso os estudantes encontrem alguma dificuldade, considere fazer a discussão dos itens anteriores e resolva este último item juntamente com eles, conectando com ideias que eles desenvolveram.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Escala Infinita}
+{
+\begin{enumerate}
+\item $DE=EF=q^2$, $FG=GH=q^3$, $HI=q^4$
+\item $(AB, CD, EF, GH)$, $(BC, DE, FG, HI)$
+\item $q^4, q^5, q^6,... $ a soma de todos seria igual ao comprimento de $AP$.
+\item $AP=AB+BP=1+BP$ e $BP=PQ$, pois o triângulo $BPQ$ é isósceles.
+\item Pois $APQ$ é semelhante a $ABC$, assim $\dfrac{PQ}{AP}=\dfrac{BC}{AB}=q$.
+
+$ 1+q+q^2+q^3+...= AP $ e $AP= PQ+1 = q\cdot AP +1$, logo $AP-q\cdot AP=1$, o que nos leva a $AP(1-q)=1 \iff AP=\dfrac 1{1-q}$.
+\end{enumerate}
+}{1}
+\end{answer}
 
 \explore{Progressões Geométricas}
 
@@ -1685,7 +3192,7 @@ Organize os valores em uma tabela, e descubra a quantidade de paracetamol no seu
 
 %\begin{figure}[H]
 %\centering
-%\noindent\includegraphics[width=300bp]{tabela1_oito_oito_horas.png}
+%\includegraphics[width=300bp]{tabela1_oito_oito_horas.png}
 %\end{figure}
 
 \begin{center}
@@ -1704,7 +3211,7 @@ Vamos generalizar: complete a tabela a seguir considerando a variável $d$ para 
 
 %\begin{figure}[H]
 %\centering
-%\noindent\includegraphics[width=300bp]{tabela2_oito_oito.png}
+%\includegraphics[width=300bp]{tabela2_oito_oito.png}
 %\end{figure}
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
@@ -1758,7 +3265,7 @@ Como adaptar o raciocínio do último item da atividade anterior para o vigésim
 \[
 S=d+dq+dq^2+\cdots +dq^n
 \]
-Use a mesma ideia para responder o seguinte problema: Você recebe por e-mail uma proposta de trabalho. Uma empresa que oferece a seguinte forma de pagamento a seus funcionários: $R\$0,10$ pelo primeiro dia, $R\$0,20$ pelo segundo dia, $R\$0,40$ pelo terceiro dia e assim sucessivamente, dobrando a cada dia o valor do dia anterior. Você aceitaria a proposta ou deletaria o e-mail?
+Use a mesma ideia para responder o seguinte problema: Você recebe por e-mail uma proposta de trabalho. Uma empresa que oferece a seguinte forma de pagamento a seus funcionários: R\$ $0{,}10$ pelo primeiro dia, R\$ $0{,}20$ pelo segundo dia, R\$ $0{,}40$ pelo terceiro dia e assim sucessivamente, dobrando a cada dia o valor do dia anterior. Você aceitaria a proposta ou deletaria o e-mail?
 
 \end{reflection}
 
@@ -1768,7 +3275,7 @@ Na figura abaixo, os ângulos indicados são retos, $AB$ mede $1$, $BC=CD=q<1$.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=250bp]{escada.png}
+\includegraphics[width=250bp]{escada.png}
 \end{figure}
 
 \begin{enumerate}
@@ -1812,7 +3319,7 @@ a_{n+1} &=& a_n \cdot q=a_1 \cdot q^n\\
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=250bp]{Organizando_PG.png}
+\includegraphics[width=250bp]{Organizando_PG.png}
 \end{figure}
 
 Todas as sequências da atividade ”Progressões” são progressões geométricas, mas apenas algumas delas apresentam comportamento exponencial conforme definimos no início deste capítulo. Especificamente, são aquelas que têm primeiro termo positivo e razão positiva e diferente de $1$.
@@ -1831,7 +3338,7 @@ Na atividade “8 em 8 horas”, vimos uma situação, normalmente estudada por 
 
 Apesar de podermos deduzir uma fórmula que nos dê a soma dos termos de uma Progressão Geométrica, queremos destacar que ela é de fácil dedução e a ideia pode ser reproduzida sempre que for preciso.
 
-Para evitar discussões demasiadamente técnicas, vamos nos concentrar nos casos em que a razão é positiva e começaremos com um exemplo: vamos somar os termos da PG $(8, 24, 72, … , 1417176, 4251528)$. Trata-se de uma progressão de razão $3$, isto é, cada termo é igual ao anterior multiplicado por $3$. Chamemos de $S$ a soma procurada: 
+Para evitar discussões demasiadamente técnicas, vamos nos concentrar nos casos em que a razão é positiva e começaremos com um exemplo: vamos somar os termos da PG $(8, 24, 72,\cdots, 1417176, 4251528)$. Trata-se de uma progressão de razão $3$, isto é, cada termo é igual ao anterior multiplicado por $3$. Chamemos de $S$ a soma procurada: 
 
 \[
 S=8+24+72+ \cdots +1417176+4251528
@@ -1887,9 +3394,17 @@ De forma que, a cada nova parcela acrescentada na soma faz com que ela cresça s
 
 Resta-nos olhar o caso em que a razão está entre $0$ e $1$. Analise as figuras a seguir. Que identidades elas sugerem?
 
+\begin{sugestions}{}
+{
+$ \dfrac 14 + \left(\dfrac 14\right)^2+\left(\dfrac 14\right)^3+\left(\dfrac 14\right)^4+\cdots=\dfrac13 $ e $ \dfrac 12 + \left(\dfrac 12\right)^2+\left(\dfrac 12\right)^3+\left(\dfrac 12\right)^4+\cdots=1 $.
+
+Vídeo com animações sobre somas infinitas: \url{https://www.youtube.com/watch?v=-y1Ob0K63hc}	
+}{1}{2}
+\end{sugestions}
+
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=400bp]{PG_infinita.png}
+\includegraphics[width=400bp]{PG_infinita.png}
 \end{figure}
 
 Ao se considerar uma razão positiva e menor que $1$, estamos diante de um decaimento exponencial em que os termos da PG vão ficando rapidamente cada vez menores. Essa taxa de decaimento é suficiente para garantir que a soma dos infinitos termos será igual a um número real (e não infinita como no caso anterior). A forma como procedemos para encontrar a soma neste caso é igual à anterior: PG infinita decrescente de primeiro termo $d$ e razão $q<1$:  $(d,dq,dq^2,dq^3,...)$
@@ -1937,7 +3452,7 @@ S= 4+\frac43+\frac49+\cdots
 
 %\begin{figure}[H]
 %\centering
-%\noindent\includegraphics[width=300bp]{tabela_procedimento_formula.png}
+%\includegraphics[width=300bp]{tabela_procedimento_formula.png}
 %\end{figure}
 
 \begin{center}
@@ -1957,6 +3472,169 @@ S= 4+\frac43+\frac49+\cdots
 
 
 \clearpage
+\def\currentcolor{session2}
+\begin{objectives}{Na Geometria}
+{
+\begin{itemize}
+\item Identificar progressões geométricas em construções geométricas
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Na Geometria}
+{
+\begin{itemize}
+\item Esta atividade depende de conhecimentos sobre semelhanças de triângulos, arco capaz, relações métricas no triângulo retângulo.
+
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Na Geometria}
+{
+\begin{enumerate}
+\item {} Os ângulos $A\hat{B}C$, $B\hat{C}D$, $C\hat{D}E$, $D\hat{E}F$ e $E\hat{F}G$. Isso implica que os triângulos retângulos $ABC$, $BCD$, $CDE$, $DEF$ e $EFG$ são todos semelhantes. Assim,
+\[
+\dfrac{BC}{AB}=\dfrac{CD}{BC}=\dfrac{DE}{CD}=\dfrac{EF}{DE}=\dfrac{FG}{EF}
+\]
+E como $AB=1$ todas essas razões são iguais ao comprimento da hipotenusa $BC$ que é maior que $1$. Logo a PG é crescente.
+\item Considere o triângulo $ACD$. Por se tratar de um triângulo inscrito em uma semicircunferência, o ângulo $A\hat{D}C$ é reto, isto é, o triângulo é retângulo. Assim, $BD$ é altura e $AB$ e $BC$ são projeções dos catetos sobre a hipotenusa. Pela semelhança entre os triângulos $ABD$ e $BCD$ podemos afirmar que
+\[
+\dfrac{BD}{AB}=\dfrac{BC}{BD}
+\]
+isto é, que as medidas dos segmentos, $AB, BD$ e $BC$.
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{0,9999...}
+{
+\begin{itemize}
+\item Relacionar a soma da PG infinita com a representação decimal de um número real.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\clearmargin
+\begin{sugestions}{0,9999...}
+{
+\begin{itemize}
+\item O que é feito nessa atividade pode ser generalizado para a representação decimal de qualquer número real e o fato de podermos somar a PG infinita de razão $\frac 1{10}$ é o que garante que podemos escrever os famosos "três pontinhos" no final de cada número.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{0,9999...}
+{
+\begin{enumerate}
+\item {} Coincidindo com o número $1$.
+	
+\item{} Uma PG decrescente de razão $0{,}1$.
+	
+\item{} $0,\overline{9}=0{,}9+ 0{,}09+0{,}009+0{,}0009+\cdots$ é igual à soma infinita da PG.
+
+\item{} 
+%	PARA ESSE COMANDO CANCEL FUNCIONAR PRECISA DO PACOTE \usepackage{cancel}	
+\begin{tabular}{ccccc}
+\  & $S$ & = & $0{,}9+\cancel{0{,}09}+\cancel{0{,}009}+\cancel{0{,}0009}+\cdots$ & \ \\
+$-($ & $0{,}1\cdot S$  & = & $\cancel{0{,}09}+\cancel{0{,}009}+\cancel{0{,}0009}+\cancel{0{,}00009}+\cdots$  & ) \\
+\midrule
+\  & $0{,}9\cdot S$ & = & $ 0{,}9 $ & \ \\
+\end{tabular}
+
+Portanto $S=1$
+
+\item{} Resposta pessoal.		
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Triângulo de Sierpinski}
+{
+\begin{itemize}
+\item Identificar progressões geométricas em construções geométricas.
+
+%\item Apresentar os objetos matemáticos chamados fractais. 
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Triângulo de Sierpinski}
+{
+\begin{itemize}
+\item A Geometria Fractal pode ser utilizada para trabalhar alguns conceitos matemáticos de áreas como geometria plana e espacial, logaritmo, álgebra e progressões, sendo este último o conceito abordado nesta atividade. Caso seja de interesse explorar mais este assunto com os seus estudantes sugerimos essa referência \url{http://pmo.sbm.org.br/wp-content/uploads/sites/16/2018/11/pmo-sbm-v002-n001-cortes-e-antunes.pdf}.
+
+\item Havendo possibilidade o software gratuito Xaos pode ser utilizado com a turma para explorar algumas das características dos fractais, em especial, a autossimilaridade. Ele pode ser baixado neste endereço \url{https://sourceforge.net/projects/xaos/}.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+% \clearmargin
+\begin{answer}{Triângulo de Sierpinski}
+{
+\begin{enumerate}
+\item A área se aproxima de zero e o perímetro do infinito
+
+\setcounter{enumi}{2}
+
+\item{}
+$A_n=\left(\dfrac{3}{4}\right)^n\cdot A$
+
+$P_n=\left(\dfrac{3}{2}\right)^n\cdot P$
+
+$B_n=\dfrac{1}{4}\cdot A \cdot \left[1+\dfrac{3}{4}+\left(\dfrac{3}{4}\right)^2+ \dots +\left(\dfrac{3}{4}\right)^{n-1}\right]$
+
+\item{}
+A área esburacada no triângulo de Sierpinski será dada por
+
+\[
+\dfrac{1}{4}\cdot A \cdot \left[1+\dfrac{3}{4}+\left(\dfrac{3}{4}\right)^2+ \dots +\left(\dfrac{3}{4}\right)^{n-1}+ \cdots \right]
+\]
+
+Calculando a soma da PG infinita de razão $\dfrac{3}{4}$ que aparece dentro do colchete obtemos $\dfrac{1}{1-\frac{3}{4}}=4$, e portanto concluímos que a área esburacada será igual a $\dfrac{1}{4}\cdot A \cdot 4 = A$. Ou seja, o processo de construção do triângulo de Sierpinski nos leva ao final a uma figura com área igual a zero, uma vez que a área dos buracos será igual a área do triângulo que era nossa figura original.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Triângulo de Sierpinski}
+{
+\begin{enumerate}\setcounter{enumi}{1}
+\item\phantom{a}
+\end{enumerate}
+
+\setlength\tabulinesep{2.5pt}
+\setlength\tabcolsep{2.5pt}
+\begin{tabu} to \linewidth{|c|c|c|c|}
+\hline
+\tmcol{1}{|l|}{} & \tcolor{Área} & \tcolor{Perímetro} & \tcolor{Área esburacada} \\ 
+\hline
+Figura inicial & A & P & 0 \\ 
+\hline
+
+$1$\super{a} Iteração & 
+$A_1=\dfrac{3}{4}\cdot A$ & 
+$P_1=\dfrac{3}{2}\cdot P$ & 
+$B_1=\dfrac{1}{4}\cdot A$ \\ 
+\hline
+
+$2$\super{a} Iteração & 
+$A_2=\left(\dfrac{3}{4}\right)^2\cdot A$ & 
+$P_2=\left(\dfrac{3}{2}\right)^2\cdot P$ & 
+$B_2=\dfrac{1}{4}\left[A+\dfrac{3}{4}\cdot A\right]$ \\ 
+\hline
+
+$3$\super{a} Iteração & 
+$A_3=\left(\dfrac{3}{4}\right)^3\cdot A$ & 
+$P_3=\left(\dfrac{3}{2}\right)^3\cdot P$ & 
+$B_3=\dfrac{1}{4}\cdot A\left[1+\dfrac{3}{4}+\bigg(\dfrac{3}{4}\bigg)^2\right]$\\ 
+\hline
+
+$4$\super{a} Iteração & 
+$A_4=\left(\dfrac{3}{4}\right)^4\cdot A$ & 
+$P_4=\left(\dfrac{3}{2}\right)^4\cdot P$& 
+$B_4=\dfrac{1}{4}\cdot A\left[1+\dfrac{3}{4}+\bigg(\dfrac{3}{4}\bigg)^2+\bigg(\dfrac{3}{4}\bigg)^3\right]$\\ 
+\hline
+\end{tabu}
+
+}{0}
+\end{answer}
+
 \practice{Progressões Geométricas}
 
 \begin{task}{Na Geometria}
@@ -1968,7 +3646,7 @@ Na figura abaixo, os ângulos indicados são retos e o segmento $AB$ mede $1$. J
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=250bp]{imagem_na_geometria.png}
+\includegraphics[width=250bp]{imagem_na_geometria.png}
 \end{figure}
 
 \item{}
@@ -1976,7 +3654,7 @@ Na figura abaixo, o arco $AC$ é uma semicircunferência e o segmento $BD$ é pe
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=200bp]{imagem2_na_geometria.png}
+\includegraphics[width=200bp]{imagem2_na_geometria.png}
 \end{figure}
 
 \end{enumerate}
@@ -1989,7 +3667,7 @@ Na figura abaixo, o arco $AC$ é uma semicircunferência e o segmento $BD$ é pe
 O número $0,9999\ldots$ é uma dízima periódica, ou seja, é um número que apresenta um sequência infinita de algarismos decimais que se repetem. De um modo geral esses algarismos que se repetem - e que podem aparecer em grupos de um ou mais algarismos - ordenados sempre na mesma disposição é chamado de período da dízima. Uma outra notação muito utilizada consiste em pôr um traço sobre o período. Veja alguns exemplos:
 
 \[
-0,333333\ldots = 0,\overline{3} \,\ \,\ \,\   0,142857142857\ldots = 0,\overline{142857} \,\ \,\ \,\ 0,99999\ldots = 0,\overline{9}
+0{,}333333\ldots = 0,\overline{3} \,\ \,\ \,\   0{,}142857142857\ldots = 0{,}\overline{142857} \,\ \,\ \,\ 0{,}99999\ldots = 0{,}\overline{9}
 \]
 
 \begin{enumerate}
@@ -1999,11 +3677,11 @@ Posicione o número $0,\overline{9}$ na reta real abaixo.
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=400bp]{reta01.png}
+\includegraphics[width=400bp]{reta01.png}
 \end{figure}
 
 \item{}
-Considere a progressão geométrica $(0,9; 0,09; 0,009; 0,0009; … )$. Trata-se de uma sequência crescente ou decrescente? Qual a razão dessa PG?
+Considere a progressão geométrica $(0{,}9; 0{,}09; 0{,}009; 0{,}0009; \ldots )$. Trata-se de uma sequência crescente ou decrescente? Qual a razão dessa PG?
 
 \item{}
 Que relação que a PG tem com o número $0,\overline{9}$?
@@ -2025,7 +3703,7 @@ Considere a seguinte construção geométrica. A partir de um triângulo equilá
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=300bp]{sierpinski.png}
+\includegraphics[width=300bp]{sierpinski.png}
 \end{figure}
 
 Seguimos adiante com a construção repetindo esse mesmo processo para cada um dos triângulos equiláteros sombreados que aparecem na figura 2. Obtemos assim a terceira figura da imagem acima. Seguindo com este processo recursivo indefinidamente obtemos uma figura conhecida como triângulo de Sierpinski, ele faz parte de um conjunto de objetos matemáticos chamados de fractais. Leia mais sobre eles no \textit{Você sabia} a seguir.
@@ -2071,7 +3749,7 @@ Utilize a expressão para a área esburacada que você encontrou no item anterio
 
 %\begin{figure}[H]
 %\centering
-%\noindent\includegraphics[width=4cm]{fractal1.png}
+%\includegraphics[width=4cm]{fractal1.png}
 %\includegraphics[width=4cm]{fractal2.png}
 %\includegraphics[width=4cm]{fractal3.png}
 %\caption{Reportagens abordando crescimento exponencial.}
@@ -2079,21 +3757,81 @@ Utilize a expressão para a área esburacada que você encontrou no item anterio
 
 \begin{figure}[H]
 	\centering
-	\noindent\includegraphics[width=5cm]{fractal.png}
+	\includegraphics[width=5cm]{fractal.png}
 	\caption{Fractais na natureza. Samambaia.
 \textit{Foto de Mike C. S. em Unsplash}; Região do Egito \textit{Google Earth Fractals} e \textit{Fundo do olho humano}.
 }
 \end{figure}
 
 \end{knowledge}
-
+\clearpage
+\def\currentcolor{cor1}
+\marginpar{\vspace{.5em}}
+\begin{answer}{Exercícios}
+{\exerciselist
+	\begin{enumerate}
+	\item Letra E
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+	\begin{enumerate}\setcounter{enumi}{1}
+	\item Letra A
+	\item Letra E
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+	\begin{enumerate}\setcounter{enumi}{3}
+	\item Letra E
+	\item Letra E
+	\item Letra D
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+	\begin{enumerate}
+	\item Letra B
+	\item Letra D
+	\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+	\begin{enumerate}
+	\item 
+	\begin{enumerate}
+	\item $b=\dfrac{1}{29}$
+	\item $52{,}22$ bequerels
+	\end{enumerate}
+	\item 
+	\begin{enumerate}
+	\item $C(t)=377{,}4\cdot 1{,}005^t$
+	\item $C(16)\approx408{,}75$ppm
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+	\item $T(t)=30-9\cdot10^{-t/4}$
+	\item $29{,}1$\super{${\circ}$}C
+	\end{enumerate}
+	\end{enumerate}
+}{1}
+\end{answer}
 %EXERCÍCIOS_ENEM
 \exercise 
 % \exerciselist
 
+
 \begin{enumerate}
 	\item (Enem 2009 caderno amarelo AR Questão 137) A população mundial está ficando mais velha, os índices de natalidade diminuíram e a expectativa de vida aumentou. No gráfico seguinte, são apresentados dados obtidos por pesquisa realizada pela Organização das Nações Unidas (ONU), a respeito da quantidade de pessoas com 60 anos ou mais em todo o mundo. Os números da coluna da direita representam as faixas percentuais. Por exemplo, em 1950 havia 95 milhões de pessoas com 60 anos ou mais nos países desenvolvidos, número entre 10\% e 15\% da população total nos países desenvolvidos.
-	\begin{figure}[h]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\linewidth]{Enem2009questao137AR}
 		\caption{}
@@ -2114,10 +3852,9 @@ Utilize a expressão para a área esburacada que você encontrou no item anterio
 		\item 810 e 860 milhões.
 		\item 870 e 910 milhões. 
 	\end{enumerate}
-	
 	\clearpage
 	\item (Enem 2011 caderno cinza PPL Questão 171) A torre de Hanói é um jogo que tem o objetivo de mover todos os discos de uma haste para outra, utilizando o menor número possível de movimento, respeitando-se as regras.
-	\begin{figure}[h]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Enem2011questao171PLL}
 		\caption{}
@@ -2169,18 +3906,18 @@ Utilize a expressão para a área esburacada que você encontrou no item anterio
 		\item $ P(t)=0,5\cdot t^{-1}+8.000 $
 		\item $ P(t)=50\cdot t^{-1}+8.000 $
 		\item $ P(t)=4.000\cdot t^{-1}+8.000 $
-		\item $ P(t)=8.000\cdot (0{,}5)^{t-1} $
-		\item $ P(t)=8.000\cdot (1{,}5)^{t-1} $
+		\item $ P(t)=8.000\cdot (0,5)^{t-1} $
+		\item $ P(t)=8.000\cdot (1,5)^{t-1} $
 	\end{enumerate}
 	
-	\item (Enem 2015 caderno cinza PPL questão 167) O sindicato de trabalhadores de uma empresa sugere que o piso salarial da classe seja de $ R\$ 1.800,00 $, propondo um aumento percentual fixo por cada ano dedicado ao trabalho. A expressão que corresponde à proposta salarial $ (s) $, em função do tempo de serviço $ (t) $, em anos, é $ s(t)=1.800\cdot(1{,}03)^t $.
+	\item (Enem 2015 caderno cinza PPL questão 167) O sindicato de trabalhadores de uma empresa sugere que o piso salarial da classe seja de $ R\$ 1.800,00 $, propondo um aumento percentual fixo por cada ano dedicado ao trabalho. A expressão que corresponde à proposta salarial $ (s) $, em função do tempo de serviço $ (t) $, em anos, é $ s(t)=1.800\cdot(1,03)^t $.
 	De acordo com a proposta do sindicato, o salário de um profissional dessa empresa com dois anos de tempo de serviço será, em reais,
 	\begin{enumerate}
-		\item $7.416{,}00$
-		\item $3.819{,}24$
-		\item $3.709{,}62$
-		\item $3.708{,}00$
-		\item $1.909{,}62$
+		\item 7.416,00
+		\item 3.819,24
+		\item 3.709,62
+		\item 3.708,00
+		\item 1.909,62
 	\end{enumerate}
 	
 	\item (Enem 2016 caderno amarelo PPL questão 141) O governo de uma cidade está preocupado com a possível epidemia de uma doença infectocontagiosa causada por bactéria. Para decidir que medidas tomar, deve calcular a velocidade de reprodução da bactéria. Em experiências laboratoriais de uma cultura bacteriana, inicialmente com 40 mil unidades, obteve-se a fórmula para a população:
@@ -2195,8 +3932,9 @@ Utilize a expressão para a área esburacada que você encontrou no item anterio
 	\end{enumerate}
 	
 	\clearpage
+
 	\item (Enem 2016 caderno amarelo PPL questão 174) Admita que um tipo de eucalipto tenha expectativa de crescimento exponencial, nos primeiros anos após seu plantio, modelado pela função $ y(t)=a^{t-1} $ , na qual $ y $ representa a altura da planta em metro, $ t $ é considerado em ano, e $ a $ é uma constante maior que 1. O gráfico representa a função $ y $.
-	\begin{figure}[h]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.4\linewidth]{Enem2016questao174PLLamarela}
 		\caption{}

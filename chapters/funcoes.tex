@@ -4,7 +4,6 @@
 O estudo de funções nos permite, por exemplo, relacionar a área de um polígono com o comprimento de seus lados, a distância percorrida por um objeto com o intervalo de tempo gasto no percurso e o valor da conta de energia elétrica com o consumo de energia.
 De um modo mais geral, funções são úteis para o estudo do crescimento populacional, disseminação de doenças, lançamento de foguetes e satélites, interpretação de exames médicos, etc.}
 \chapter{Introdução às Funções}
-\label{chap-funcoes}
 
 \mbox{}\thispagestyle{empty}\clearpage
 
@@ -30,7 +29,7 @@ Versão digital do capítulo:
 \begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
 Título: & Introdução às Funções\\
 \\
-Ano/ Versão: & 2020 / versão 0.6 de 17 de setembro de 2020\\
+Ano/ Versão: & 2020 / versão 0.1 de 23 de outubro de 2020\\
 \\
 Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
 \\
@@ -85,8 +84,235 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 
 \mainmatter
 
-\explore{ conceito de Função}
-\label{\detokenize{AF106-0:sec-funcoes}}\label{\detokenize{AF106-0:explorando-conceito-de-funcao}}\label{\detokenize{AF106-0::doc}}
+\begin{apresentacao}
+\section{Introdução às Funções}
+
+Muitas situações e decisões do dia a dia dependem do reconhecimento de uma relação entre duas grandezas e da análise de como a variação de uma delas influencia na variação da outra (Por exemplo, a distância percorrida e o tempo, a área de um polígono e o comprimento de seus lados, a absorção de um medicamento pelo organismo humano e o tempo desde a sua ingestão, valor da conta de energia elétrica e consumo, quantidade de vereadores e a população etc). O tema \textit{funções} trata da relação entre grandezas, sendo uma ferramenta matemática importante para descrever, analisar e tomar decisões em diversas situações. Além disso, na Matemática como ciência, função é considerado um conceito fundamental e elementar para que outros conceitos e resultados da própria Matemática sejam estabelecidos.
+Objetivos do capítulo:
+
+\begin{habilities}{EM11MT06}
+
+Compreender função como uma relação de dependência entre duas variáveis, as ideias de domínio, contradomínio e imagem, e suas representações algébricas e gráficas e utilizá- las para analisar, interpretar e resolver problemas em contextos diversos, inclusive fenômenos naturais, sociais e de outras áreas.
+
+Espera-se também que o estudante compreenda função como uma relação unívoca entre duas variáveis.
+\end{habilities}
+
+Destaca-se que, segundo a Base Nacional Comum Curricular (BNCC), no nono ano do Ensino Fundamental, é esperado que o estudante tenha alcançado a habilidade: \textbf{(EF09MA06)} Compreender as funções como relações de dependência unívoca entre duas variáveis e suas representações numérica, algébrica e gráfica e utilizar esse conceito para analisar situações que envolvam relações funcionais entre duas variáveis. O foco nessa habilidade é retomado neste capítulo com os propósitos de revisão e de aprofundamento, visando aos objetivos indicados acima.
+
+O capítulo tem início com a seção \textit{Explorando}, que propõe três atividades que envolvem aspectos fundamentais da definição de função e algumas formas de representação. Serão tratadas a relação de dependência, a existência de correspondência e a univocidade. Essas atividades têm também o objetivo de resgatar conceitos já tratados no Ensino Fundamental, tais como reconhecimento de padrões, leitura e interpretação de gráficos. Na primeiro \textit{Organizando as Ideias} desse capítulo, o conceito de função é formalizado e, em seguida, na seção \textit{Praticando}, é explorado a partir de atividades variadas.  A primeira parte do capítulo termina com uma seção de \textit{Aprofundando}, na qual são propostos problemas e situações em que os conceitos e as ideias já tratados são explorados em contextos mais desafiadores. Na segunda parte, em uma nova seção \textit{Explorando}, a representação gráfica de função é abordada. Algumas das atividades já apresentadas anteriormente são revisitadas, e são propostas outras nas quais discutem-se vantagens e desvantagens da representação gráfica quando comparada com tabelas, a localização de pontos no plano cartesiano a partir de situações reais e a representação gráfica para pares ordenados com coordenada não numérica. Em seguida, em um segundo \textit{Organizando as ideias}, o conceito de representação gráfica é formalizado, para logo após ser explorado em outra seção \textit{Praticando}. O capítulo encerra com um \textit{Aprofundamento}, no qual são propostas duas atividades que relacionam os conceitos apreendidos com problemas de Modelagem Matemática, e uma proposta de Projeto Aplicado, em que os estudantes são estimulados a construírem uma caixa de volume máximo.
+
+Algumas observações:
+\begin{itemize}
+\item {} 
+O conceito de função é apresentado e explorado de maneira contextualizada e geral, isto é, não restrito apenas a conjuntos numéricos. Assim, busca-se ressaltar que a importância desse conceito transcende a Matemática alcançando outras áreas do conhecimento.
+
+\item {} 
+Reconhecer a dependência, observando como a variação de uma ou mais grandezas afeta        a variação de outras, é um objetivo. A partir dessse reconhecimento, sempre que possível, busca-se, usando linguagem matemática ou não, estabelecer uma maneira de descrever a relação observada.
+
+\item {} 
+A univocidade como condição para que uma relação entre grandezas ou variáveis seja identificada como função é destacada desde as atividades iniciais.
+
+\item {} 
+As conversões entre representações algébrica e gráfica são de vital importância para a compreensão do conceito de função, amparando a análise e a interpretação das relações existentes entre as variáveis envolvidas.
+
+\item {} 
+Incentive e conduza seus estudantes a expressarem seus raciocínios de maneira precisa, mesmo que seja apenas usando palavras, tanto de forma verbal como escrita.
+
+\item {} 
+Ao criar suas próprias atividades, sugerimos que sejam evitadas as que envolvem cálculos algébricos exaustivos.
+
+\item {} 
+Nas atividades extras que você venha a apresentar para seus estudantes, é importante estar atento para não reforçar a crença bastante comum de que relações entre grandezas são sempre proporcionais.
+
+\end{itemize}
+
+\subsection{O que dizem as pesquisas sobre o tema?}
+
+A noção de função é considerada uma das mais importantes da matemática. Segundo Pontes \cite{Ponte-1992}, assim como o ponto, a reta e o plano são conceitos básicos da Geometria Euclidiana, o  conceito de função tem um papel fundamental na Análise Matemática. Documentos oficiais como os Parâmetros Curriculares Nacionais do Ensino Médio (PCNEM) e a (segunda versão da) Base Nacional Comum Curricular (BNCC)  evidenciam a preocupação com tal conteúdo no Ensino Médio, trazendo inclusive sugestões no que diz respeito a sua abordagem.
+\begin{quote}
+
+Nessa etapa de escolaridade, merece especial destaque o estudo das funções por seu papel como modelo matemático para analisar e interpretar relações de dependência entre variáveis de duas grandezas em fenômenos do mundo natural ou social, incluindo os trabalhados em componentes de outras áreas de conhecimento (BNCC-2016, p.576)
+
+O estudo das funções permite ao aluno adquirir a linguagem algébrica como a linguagem das ciências, necessária para expressar a relação entre grandezas e modelar situações-problema, construindo modelos descritivos de fenômenos e permitindo várias conexões dentro e fora da própria matemática. (PCNEM-2006, p.121)
+\end{quote}
+
+São muitos os relatos sobre as  diversas dificuldades que os estudantes apresentam no processo de aprendizagem da noção de função. Sierpinska \cite{Sierpinska-1992} chama atenção para alguns dos problemas mais comuns:  fazer a ligação entre as diferentes representações (fórmulas, gráficos, diagramas, descrição por palavras); interpretar gráficos e manipular algebricamente, entre outros.
+
+Neste ponto do desenvolvimento do seu aprendizado é muito comum o estudante fazer confusão entre os diferentes papéis que as variáveis (letras) representam nas expressões algébricas. Para Ursini \cite{Ursini-et-al-2001}, as distintas interpretações possíveis para a simbologia algébrica constituem aspectos que geram dificuldades adicionais a muitos estudantes.
+
+Segundo Eisenberg \cite{Eisenberg-1992}, os estudantes têm uma forte tendência para pensar em funções algebricamente, em vez de visualmente, mesmo que a visualização possa ser extremamente útil. Segundo esse autor, os estudantes resistem às representações visuais porque o processamento visual requer habilidades de nível mais elevado do que o processamento analítico.
+
+Jones \cite{Jones-2006} chama atenção para três níveis de abstração nos quais é possível situar o entendimento do conceito de função:  como \textit{ação}, como \textit{processo} e como \textit{objeto}. O nível ação é aquele em que são conhecidas todas as ações que devem ser tomadas para converter a variável independente \(x\) na sua imagem, por exemplo: tome \(x\), primeiro eleve ao quadrado e então subtraia do seu dobro. Nesse nível de abstração, que é o mais simples entre os três, os procedimentos e algoritmos estão bem definidos. A ideia de função como processo está diretamente relacionada com o nível ação, no sentido de que a partir da variável \(x\) chega-se por um processo à variável \(y\). Contudo nesse nível de abstração os procedimentos algorítmicos não são tão importantes como no nível anterior. Aqui as funções que não envolvem conjuntos numéricos fazem mais sentido, apoiadas pela ideia de correspondência entre conjuntos. Por exemplo, uma atividade que envolva uma tabela, sem especificar a expressão algébrica ou algoritmo que a gerou pode ser associada ao nível processo. Finalmente, o nível objeto é o mais abstrato dos três. Uma função nesse nível de abstração passa a ser considerada como parte de um universo de funções. Torna-se um elemento dentro de um conjunto. Nesse nível de compreensão, estão as operações com as funções: soma, produto, composição, derivada, integral etc.
+
+\begin{figure}[H]
+\centering
+
+\noindent\includegraphics[width=\linewidth]{{caixa_3}.png}
+\end{figure}
+
+Considerando essas pesquisas, procura-se, neste texto, não privilegiar o pensamento algébrico em detrimento da visualização, buscando alcançar os diferentes níveis de abstração indicados por Jones \cite{Jones-2006}.
+
+Além disso, para que os alunos não fiquem com a ideia restrita de relação, identificando os conceitos de relação e de função, são propostas atividades que tratam de relações que não são funções.
+
+\end{apresentacao}
+
+
+\explore{conceito de Função}
+
+\clearmargin
+\begin{objectives}{Pluviometria do Sistema Cantareira}
+{
+\begin{itemize}
+
+\item Interpretar representações gráficas de relações de dependência entre grandezas.
+
+\item Reconhecer uma relação de dependência entre grandezas a partir da sua representação gráfica.
+
+\item Reconhecer a univocidade em uma relação de dependência entre grandezas.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Pluviometria do Sistema Cantareira}
+{
+\begin{itemize}
+\item Nível de abstração: \textbf{Processo}.
+
+\item Os valores apresentados no gráfico são estimativas. Na página \url{https://www.nivelaguasaopaulo.com/cantareira} é possível ter acesso aos valores exatos para cada mês. No entanto, cabe observar que os dados do período apresentado na atividade (de 12/2013 a 11/2016) podem não estar mais disponíveis na página de referência. Você pode (e é interessante que o faça) modificar e adequar esta atividade usando dados atualizados do Sistema Cantareira ou substiuindo esses dados por dados da região em que você leciona.
+
+\item No item \titem{b)}, o objetivo é identificar o valor absoluto da diferença, não sendo importante se o valor é positivo ou negativo, ou seja, se choveu menos ou mais do que o esperado.
+\end{itemize}
+
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Pluviometria do Sistema Cantareira}
+{
+\begin{itemize}
+\item {} 
+Há duas relações: uma envolvendo tempo e volume de chuva real e a outra tempo e o volume de chuva esperado.
+
+\item {} 
+De acordo com os dados apresentados no gráfico, a maior e a menor incidência de chuvas ocorreram e fevereiro de 2015 e em abril de 2016, respectivamente.
+
+\item {} 
+Em dezembro de 2013, janeiro e fevereiro de 2014, janeiro e fevereiro de 2015 e junho de 2016.
+
+\item {} 
+Sim, nos meses de abril e julho do ano de 2016.
+
+\item {} 
+Houve uma coindicência entre a quantidade de chuva esperada e a que realmente caiu sobre a região do Sistema Cantareira
+
+\end{itemize}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Números triangulares}
+{
+\begin{enumerate}
+
+\item Reconhecer a relação de dependência entre a ordem e os termos de uma sequência.
+
+\item Reconhecer, a partir de um padrão geométrico, os primeiros termos de uma sequência e ser capaz de, a partir do padrão identificado, inferir os próximos termos da sequência.
+
+\item Generalizar, ainda que em palavras, a determinação de um termo qualquer da sequência a partir da sua ordem segundo um padrão identificado.
+
+\end{enumerate}
+}{1}{1}
+\end{objectives}
+\begin{answer}{Números triangulares}
+{
+\begin{enumerate}
+\item {} 
+$21$, $28$ e $36$
+
+\item {} 
+Uma resposta possível seria a partir de um raciocínio aditivo baseado em contagem: $T_6$ é obtido adicionando $6$ círculos a um dos lados do triângulo equilátero que corresponde a $T_5$ e efetuando a soma dos círculos presentes nesse novo triângulo equilátero: $T_6=1+2+3+4+5+6=21$. Outra maneira é a partir do raciocínio recursivo. Assim $T_6$ é obrido adicionando $6$ círculos ao total de círculos do triângulo equilátero que corresponde a $T_5$: $T_6=T_5+6=15+6=21$. Os números triangulares $T_7$ e $T_8$ podem ser obtidos de formas análogas.
+
+\item {} 
+$T_1000=1+2+3+4+5+6+...+1000=500500$.
+
+\item {} 
+Uma resposta possível é: o número triangular $T_n$ é obtido somando $n$ ao número triangular anterior
+
+\item {} 
+$n$ e $T_n$.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{sugestions}{Números triangulares}
+{
+\begin{itemize}
+\item Nível de abstração: \textbf{Ação}.
+
+
+\item Muito provavelmente os estudantes descreverão a sequência de formas diferentes, mas obtendo o mesmo resultado para o sexto, o sétimo e o oitavo números triangulares. Por exemplo, um estudante poderá dizer que, para identificar os números triangulares solicitados, “constrói”{} os triângulos “de cima para baixo”{}. Já ouro pode argumentar que o faz “de baixo para cima”. Outro ainda pode agumentar a partir da observação do padrão recursivo: “basta acrescentar uma linha ao último triângulo construído”. Assim, como a resposta ao ítem (b) não é única, procure aproveitar e explorar as diferentes respostas na discussão com a turma: os resultados são os mesmos para essas diferentes formas de descrever a sequência? Por que? Por exemplo, “somar de cima para baixo” produz o mesmo resultado que “somar de baixo para cima”, pois a adição é comutativa.
+
+
+\item Pela mesma razão apontada no ítem (b), a resposta do item (d) não é única.
+
+\item Não é objetivo, neste momento, que o estudante expresse a relação por meio da linguagem simbólica matemática, escrevendo, por exemplo, $T_n=T_n−1+n$, mas que seja matematicamente preciso em suas palavras, dizendo, por exemplo, que “o $n$-ésimo termo da sequência é obtido a partir do termo anterior acrescido de mais uma fileira com $n$”{} ou que “o $n$-ésimo triângulo da sequência é obtido a partir do triângulo anterior acrescido de mais uma fileira com $n$ círculos", portanto, “o $n$-ésimo número triangular é obtido a partir do termo anterior acrescido de $n$“.
+
+
+\item É possível que algum estudante descreva o $n$-ésimo número triangular como a soma dos primeiros $n$ números naturais. Nesse caso, você pode mostrar que essa maneira de descrever o procedimento é equivalente à recursiva. Não apenas testando exemplos, mas sim fazendo uso da propriedade associativa da adição: seja qual for o $n$ tem-se
+
+\begin{align*}
+T_n &= 1+2+...+(n-1)+n \\
+&=[1+2+...+(n-1)]+n \\
+&=T_{n-1}+n
+\end{align*}
+
+\end{itemize}
+}{0}{1}
+\end{sugestions}
+\clearmargin
+\begin{objectives}{Arranha-céu}
+{
+\begin{itemize}
+
+\item Reconhecer uma relação de dependência entre variáveis apresentada em forma de tabela.
+
+\item Interpretar tabela que representa relação de dependência entre variáveis.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Arranha-céu}
+{
+\begin{itemize}
+\item Nível de abstração: \textbf{Processo}.
+
+\item A escolha dessa atividade se apoia no fato de que os estudantes têm familiaridade com a noção de proporcionalidade, que é explorada em álgebra e em geometria desde os anos iniciais do Ensino Fundamental.
+
+\item Deseja-se, entretanto, que os estudantes levem em conta o contexto do problema.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Arranha-céu}
+{
+\begin{enumerate}
+\item {} 
+$4$ metros
+\item {} 
+$39$ metros
+
+\item {} 
+Significa que a garagem está abaixo do nível da rua
+
+\item {} 
+$23^{\circ}$ andar.
+
+\item {} 
+O $40^{\circ}$ andar está localizado a $159$ metros do solo, e como cada andar possiu altura $4$ metros,a altura total do prédio é $163$ metros.
+
+\item A resposta depende do período em que a pesquisa for realizada. Em setembro de $2017$ o maior arranha-céu brasileiro é o Millennium Palace, localizado em Balneário Camboriú, Santa Catarina, com $177$ metros de altura e $46$ andares.
+
+\end{enumerate}
+}{1}
+\end{answer}
+
+
 O que o nosso batimento cardíaco, um terremoto ou a variação das ações de uma empresa na bolsa de valores possuem em comum? Os batimentos cardíacos podem ser monitorados a partir de um sinal bioelétrico cujo gráfico é representado em um eletrocardiograma, as ondas sísmicas produzidas por um terremoto podem ser observadas a partir do registro de um sismógrafo e as variações dos valores das ações de uma empresa percebidas ao longo do tempo podem ser facilmente visualizadas em um gráfico.
 
 \begin{figure}[H]
@@ -177,7 +403,6 @@ O que pode ser observado nos meses de agosto de 2015 e março de 2016?
 
 
 \begin{task}{ Números triangulares}
-\phantomsection\label{numeros-triangulares-funcoes}
 \begin{figure}[H]
 \centering
 
@@ -274,8 +499,8 @@ Quais são as variáveis relacionadas?
 \end{enumerate}
 \end{task}
 
-
-\begin{task}{ Arranha-céu}\label{ativ-arranha}
+\clearpage
+\begin{task}{Arranha-céu}\label{ativ-arranha}
 
 Imagine um arranha-céu de \(40\) andares cujas diferentes alturas que correspondem a alguns andares estão representadas na tabela abaixo.
 
@@ -393,15 +618,275 @@ Em uma função \(f\) de \(A\) em \(B\), a dependência estabelecida entre as va
 A definição de uma função \(f\) de \(A\) em \(B\) exige que a cada elemento \(x\in A\) corresponda uma imagem \(y=f(x)\in B\) e que não haja ambiguidade na determinação dessa imagem, ou seja, que ela seja única. Asssim, nem toda relação de \(A\) em {\color{red}\bfseries{}{}`}B é uma função. Por exemplo, a relação que associa a cada pessoa o número de seu telefone não é função, pois a imagem pode não ser única, ou seja, há ambiguidade: algumas pessoas têm mais de um número de telefone. E além disso, nem todas as pessoas têm telefone.
 \end{observation}
 
-\begin{reflection}{}
-
+\begin{reflection}
 Junto com seus colegas, reflita sobre a definição que acabamos de ver. Vocês conseguem pensar em outros exemplos de relações do seu dia a dia que possam ser consideradas funções? Descrevam algumas delas e compartilhem com o restante da turma, destacando os conjuntos domínio e contradomínio dessas funções.
 \end{reflection}
 \newpage
-\practice{}
 
-\label{\detokenize{AF106-2:sec-funcao-organizando-ideias}}\label{\detokenize{AF106-2::doc}}\label{\detokenize{AF106-2:praticando}}
+\def\currentcolor{session2}
+\begin{objectives}{Colorindo o mapa}
+{
+\begin{itemize}
 
+\item Identificar, em um contexto, diferentes relações de dependência entre conjuntos de dados.
+
+\item Identificar característica de univocidade (ou não) de uma relação..
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Colorindo o mapa}
+{
+\begin{itemize}
+\item Nível de abstração: \textbf{Processo/Ação}.
+
+\item Nem todos os estudantes vão usar o mesmo critério para a distribuição das cores. Incentive-os a usarem as quatro cores e, no momento da discussão do item (b), chame a atenção para o fato de não haver uma única resposta correta para o item (a).
+
+\item Deixamos a seu critério a escolha da unidade para a velocidade média. Os valores obtidos em km/min podem causar certa estranheza, uma vez que na maioria das situações cotidianas a velocidade é apresentada em km/h.
+
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Colorindo o mapa}
+{
+\begin{enumerate}
+\item {} 
+Uma resposta possível é: associar a cor verde aos tempos de $13$ e $14$ minutos, a cor laranja aos tempos de $15$ e $16$ minutos, vermelha ao tempo de $18$ minutos e a cor vinho ao tempo de $23$ minutos.
+\item {} 
+Isso se deu pelo fato de haver somente 4 cores disponíveis e, na tabela, haver 6 tempos diferentes de travessia.
+
+\item {} 
+A velocidade média é determinada pela razão entre a distância percorrida e o tempo gasto para percorrê-la. Assim, os valores das velocidades médias nos diferentes poríodos do dia são, pela ordem em que aparecem na tabela: $1{,}00$ km/min, $0{,}72$ km/min, $0{,}87$ km/min, $0{,}81$ km/min, $0{,}56$ km/min e $1{,}00$ km/min.
+
+\item {} 
+Não. Como a velocidade média é calculada efetuando-se a divisão da distância percorrida pelo tempo gasto no percurso, uma vez que o trecho considerado é o mesmo, diferentes tempos de travessia da ponte irão resultar em velocidades médias diferentes.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{É função?}
+{
+\begin{itemize}
+
+\item Identificar, em um contexto, diferentes relações de dependência entre conjuntos de dados, reconhecendo quais são funções.
+
+\item Identificar a univocidade (ou não) de uma relação.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{É função?}
+{
+\begin{itemize}
+\item Nível de abstração: \textbf{Processo}.
+
+\item Esta é a oportunidade para reforçar as condições que garantem que uma relação é função, em particular, a univocidade.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{É função?}
+{
+Apenas as relações de $B$ em $A$ e de $B$ em $C$ não são funções. A primeira porque a uma mesma cor estão associados diferentes tempos de travessia, e a segunda porque a uma mesma cor estão assiciadas velocidades médias diferentes.
+
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Não é função!}
+{
+\begin{itemize}
+
+\item Identificar a univocidade (ou não) em uma relação
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-2em}}
+\begin{sugestions}{Não é função!}
+{
+\begin{itemize}
+\item Nível de abstração: \textbf{Processo}.
+
+\item Esta é a oportunidade para reforçar as condições que garantem que uma relação é função, em particular, a univocidade.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Não é função!}
+{
+\begin{enumerate}
+\item {} 
+$(2,8),(3,9), (1,1)$ e $(5,10)$ pertencem à relação.
+
+\item {} 
+Por exemplo, os pares $(3,12)$ e $(3,15)$ pertencem à relação e isso nos mostra que o número natural $3$ está associado a $12$ e a $15$. Portanto, a relação não pode ser função.
+
+\item {} 
+Infinitos.
+
+\item {} 
+Um exemplo não númerico: a relação associa cada livro ao seu autor
+
+\end{enumerate}
+}{1}
+\end{answer}
+
+\begin{objectives}{A família!}
+{
+\begin{itemize}
+
+\item Identificar uma relação a partir de sua representação no plano cartesiano.
+
+\item Identificar a univocidade (ou não) de uma relação a partir de sua representação no plano cartesiano.
+
+\end{itemize}
+
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-2em}}
+\begin{sugestions}{A família!}
+{
+\begin{itemize}
+\item Nível de abstração \textbf{Processo}.
+
+\item No item (b) o objetivo é que os estudantes percebam que, como as pessoas representadas pelos pontos $C$ (Márcia) e $D$ (Júlio) têm a mesma idade mas alturas diferentes, a relação apresentada no gráfico, que associa a idade com a altura nessa ordem, não é função.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{A família!}
+{
+\begin{enumerate}
+\item O ponto $A$ representa o bebê Miguel, ponto $B$ Sofia, ponto $C$ Márcia, $D$ Júlio, $E$ Antônio e o ponto $F$ Laura.
+
+\item Não é função, pois Márcia e Júlio têm a mesma idade mas alturas diferentes; no plano, os pontos $C$ e $D$ têm a mesma abscissa e ordenadas diferentes.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Praticando a notação}
+{
+\begin{itemize}
+
+\item Compreender funções a partir de sua representação analítica.
+
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Praticando a notação}
+{
+\begin{itemize}
+\item Nível de abstração: \textbf{Ação}.
+
+\item Muitos estudantes cometem erros relacionados ao uso da expressão analítica que representa a função. É comum, por exemplo, que o cálculo de $f(-2)$ para $f(x)=x^2$ seja feito da seguinte forma: $f(-2)=-2^2=-4$. O que claramente está errado. Muito frequentemente, esse tipo de erro está relacionado à falta de compreensão do papel de uma varíavel em uma expressão algébrica. Aproveite a atividade para fazer uma revisão.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Praticando a notação}
+{
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|l|>{$}c<{$}|}
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Função}} & $\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Valor}}$ \\
+\hline
+\(f(3)\) & 42\\ 
+\hline
+\(g(-1)\) & -1\\
+\hline
+\(k(2)\) & 6\\
+\hline
+\(f(1)+g(1)\) & 8\\
+\hline
+\(g(2)-k(-1)\) & -\frac{46}{3}\\
+\hline
+\(k(0).f(-2)\) & 20\\
+\hline
+\(f(0)+h(0)-1\) & -8\\
+\hline
+\(f(-2).g(-2)+k(2)\) & \frac{36}{5}\\
+\hline
+\(\dfrac{f(-3)}{k(0)}\) & \frac{6}{5}\\
+\hline
+\(x\) quando \(h(x)=0\) & \frac{7}{2}\\
+\hline
+\(x\) quando \(h(x)=3\) & 5\\
+\hline
+\end{tabu}
+\end{table}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Enchendo o cone}
+{
+\begin{itemize}
+
+\item Determinar valores da imagem (respectivamente, do domínio) de uma função a partir da sua expressão analítica e de ponto do domínio (respectivamente, da imagem).
+
+\item Interpretar valores do domínio e da imagem de uma função dada que modela uma situação real específica.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\marginpar{\vspace{-2em}}
+\begin{sugestions}{Enchendo o cone}
+{
+\begin{itemize}
+\item Nível de abstração \textbf{Ação}.
+
+\item É importante que o estudante identifique a relação existente entre a altura do nível da água no reservatório e o volume do mesmo.
+
+\item Essa pode também ser uma oportunidade para explorar conversão de unidades. Sabemos que a expressão $V=\frac{1}{3}(\pi r^2)h$ fornece o volume do cone em função do raio $r$ e da altura $h$ do nível de água, desde que raio e altura estejam expressos na mesma unidade. A partir das dimensões dadas no enunciado, tem-se $r=\frac{h}{2}$ e, portanto, $V(h)=\frac{1}{3}\pi\frac{h^3}{4}$ é o volume de água no reservatório, em metros cúbicos, correspondente a uma altura de $h$ em metros. Considerando $3$ como aproximação de $\pi$ obtem-se que o volume, em metros cúbicos, é dado, aproximadamente, por $V(h)=\frac{h^3}{4}$, o que equivale em litros a $V(h)=250h^3$.
+
+\item Destaque a “não proporcionalidade” da situação, observando por exemplo, que $2$ é a metade de $4$, mas $2000$ não é a metade de $16000$.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\marginpar{\vspace{-2em}}
+\begin{objectives}{Uniformemente variado}
+{
+\begin{itemize}
+
+\item Compreender funções a partir de sua representação analítica, relacionando-a ao contexto descrito pelo problema.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+
+\begin{sugestions}{Uniformemente variado}
+{
+\begin{itemize}
+\item Nível de abstração: \textbf{Ação}.
+
+\item Chamar atenção do estudante para o importante papel que as funções desempenham na Física, em especial na Mecânica Clássica, relacionando grandezas como tempo, deslocamento, velocidade e aceleração.
+\end{itemize}
+}{0}{1}
+\end{sugestions}
+\begin{answer}{Enchendo o cone}
+{
+\begin{enumerate}
+
+\item $V(2)$, $V(3)$ e $V(4)$ são, respectivamente iguais a $2000, 6750$ e $16000$ litros e correspondem aos volumes quando a altura da água no reservatório é igual a $2,3$ e $4$ metros, respectivamente.
+
+\item O menor volume observado é $V=0$ litros, que corresponde a $h=0$m, e o maior volume é $V(6)=54000$ litros.
+
+\item Corresponde a uma altura de $2,4$ metros.
+
+\end{enumerate}
+
+\tcbsubtitle{Uniformemente variado}
+
+\begin{enumerate}
+\item Inicialmente o veículo está posicionado a $S(0)=2$ quilômetros da origem $O$.
+
+\item Após $4$ horas.
+
+\end{enumerate}
+}{0}
+\end{answer}
+
+
+\practice{Conceito do função}
 
 \begin{task}{ colorindo o mapa}
 \label{\detokenize{AF106-2:atividade-colorindo-o-mapa}}\label{\detokenize{AF106-2:ativ-funcoes-colorindo-o-mapa}}
@@ -544,10 +1029,9 @@ Cada ponto do gráfico a seguir representa uma das seguintes pessoas.
 \begin{figure}[H]
 \centering
 
-
-
 \noindent\includegraphics[width=300bp]{{familia}.png}
-\label{\detokenize{AF106-2:fig-altura-idade}}\end{figure}
+\label{\detokenize{AF106-2:fig-altura-idade}}
+\end{figure}
 
 \begin{enumerate}
 \item {} 
@@ -714,6 +1198,90 @@ Após quanto tempo o veículo estará a $18$km da origem?
 \end{enumerate}
 \end{task}
 
+\clearpage
+\def\currentcolor{session3}
+\begin{objectives}{Por que não é função?}
+{
+\begin{enumerate}
+
+\item Identificar em contextos mais variados por que uma dada relação não define uma função.
+
+\end{enumerate}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Por que não é função?}
+{
+\begin{itemize}
+\item Nível de abstração \textbf{Processo}.
+
+\item Procure incentivar os estudantes a se manifesrem verbalmente, expressando seu entendimento sobre a relação dada. Para a primeira relação, por exemplo, sugerimos que seja considerado, em um primeiro momento, o conjunto formado por todos os estudantes da sala. Possivelmente haverá estudantes sem irmãos e estudantes com mais de um irmão.
+
+\item No item (b) relembre com os alunos que a raiz quadrada é sempre um valor positivo. Por exemplo, $\sqrt{4}=2$. Apesar de a equação $x^2=4$ ter duas soluções: $2$ e $−2$.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Por que não é função?}
+{
+\begin{enumerate}
+\item Como existem filhos únicos no mundo e famílias com mais do que dois filhos, existem "pessoas" no conjunto $\mathcal{P}$ que não têm irmão e pessoas que têm mais do que um irmão. Portanto, pela relação dada, há no conjunto $\mathcal{P}$ elementos sem correspondente bem como elementos com mais do que um correspondente. Por isso, a relação dada não é função.
+
+\item Como não existe $\mathbb{R}$ raiz quadrada de número negativo, a relação dada não se aplica aos números reais negativos, isto é, por exemplo o número real $-1$ não pode ser associado à $\sqrt{-1}$, uma vez que $\sqrt{-1}$ não pertence ao conjunto dos números reais. Portanto, haverá elementos (todos os números reais negativos) sem correspondente. Por isso, a relação dada não é função. Observe que, no entanto, a mesma relação considerada apenas para os números reais não negativos, ou seja, com domínio $\mathbb{R}^+$, seria uma função.
+
+\item Considerando, por exemplo, o número real $15$ é possível construir dois triângulos distintos, ambos com área igual a $15$. Basta considerar para o primeiro base e altura iguais a $5$ e $6$ e para o segundo base e altura iguais a $10$ e $3$, que claramente não são triângulos congruentes. Dessa forma, haverá ambiguidade na determinação de correspondentes. Por isso, a relação dada não é função.
+
+\end{enumerate}
+}{0}
+\end{answer}
+\begin{objectives}{Domínio e imagem}
+{
+\begin{itemize}
+
+\item Determinar a partir da expressão algébrica os conjuntos domínio e imagem.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Domínio e imagem}
+{
+\begin{itemize}
+\item Nível de abstração: \textbf{Ação}.
+
+\item É importante que o estudante perceba as restrições para a escolha de $x$ impostas por algumas das expressões dadas.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Domínio e imagem}
+{
+Ajude o estudante a completar a tabela.
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Expressão & Domínio $A$ & Imagem \\
+\hline
+\((a)\) & \(\mathbb{R}^+\) & $\mathbb{R}^+$\\
+\hline
+\((b)\) & $[5,+\infty[$ & $\mathbb{R}^+$\\
+\hline
+\((c)\) & $\mathbb{R}\setminus\{3\}$ & \(\mathbb{R}\setminus \{0\}\) \\
+\hline
+\((d)\) & \(\mathbb{R}\setminus \{-8\}\) & $\mathbb{R}\setminus\{0\}$ \\
+\hline
+\((e)\) & $]0,+\infty[$ & $]0,+\infty[$ \\ 
+\hline
+\((f)\) & $\mathbb{R}$ & \([7,+\infty[\) \\
+\hline
+\((g)\) & $\mathbb{R}$  & $[8,+\infty[$ \\
+\hline
+\((h)\) & $\mathbb{R}$  & $[-3,+\infty[$ \\
+\hline
+\end{tabu}
+\end{table}
+}{1}
+\end{answer}
+
 \know{}
 \label{\detokenize{AF106-3::doc}}\label{\detokenize{AF106-3:sec-aprofundando}}\label{\detokenize{AF106-3:para-saber-mais}}
 
@@ -806,10 +1374,213 @@ Expressão & Domínio $A$ & Imagem \\
 \end{task}
 
 \exercise
-%\begin{multicols}{2}
-\thispagestyle{empty}
 
-\label{\detokenize{AF106-E1:sec-funcoes-exercicios}}\label{\detokenize{AF106-E1:exercicios}}\label{\detokenize{AF106-E1::doc}}
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}
+  \item 
+  \begin{enumerate}
+  \item \adjustbox{valign=t}
+  {\resizebox{.95\linewidth}{!}
+  {
+  
+    \begin{tikzpicture}
+    \draw [fill] (0.,0.) circle (.5pt);
+    \draw [fill] (0.2,0.) circle (.5pt);
+    \draw [fill] (0.2,0.2) circle (.5pt);
+    \draw [fill] (0.,0.2) circle (.5pt);
+    \draw [fill] (0.4,0.) circle (.5pt);
+    \draw [fill] (0.4,0.4) circle (.5pt);
+    \draw [fill] (0.,0.4) circle (.5pt);
+    \draw [fill] (0.6,0.) circle (.5pt);
+    \draw [fill] (0.6,0.6) circle (.5pt);
+    \draw [fill] (0.,0.6) circle (.5pt);
+    \draw [fill] (0.8,0.) circle (.5pt);
+    \draw [fill] (0.8,0.8) circle (.5pt);
+    \draw [fill] (0.,0.8) circle (.5pt);
+    \draw [fill] (0.4,0.2) circle (.5pt);
+    \draw [fill] (0.2,0.4) circle (.5pt);
+    \draw [fill] (0.6,0.2) circle (.5pt);
+    \draw [fill] (0.6,0.4) circle (.5pt);
+    \draw [fill] (0.4,0.6) circle (.5pt);
+    \draw [fill] (0.2,0.6) circle (.5pt);
+    \draw [fill] (0.8,0.2) circle (.5pt);
+    \draw [fill] (0.8,0.4) circle (.5pt);
+    \draw [fill] (0.8,0.6) circle (.5pt);
+    \draw [fill] (0.6,0.8) circle (.5pt);
+    \draw [fill] (0.4,0.8) circle (.5pt);
+    \draw [fill] (0.2,0.8) circle (.5pt);
+    \begin{scope}[xshift=1.3cm]
+    \draw [fill] (0.,0.) circle (.5pt);
+    \draw [fill] (0.2,0.) circle (.5pt);
+    \draw [fill] (0.2618033988749895,0.19021130325903063) circle (.5pt);
+    \draw [fill] (0.1,0.3077683537175253) circle (.5pt);
+    \draw [fill] (-0.06180339887498945,0.19021130325903074) circle (.5pt);
+    \draw [fill] (0.4,0.) circle (.5pt);
+    \draw [fill] (0.523606797749979,0.38042260651806126) circle (.5pt);
+    \draw [fill] (0.2,0.6155367074350506) circle (.5pt);
+    \draw [fill] (-0.1236067977499789,0.3804226065180615) circle (.5pt);
+    \draw [fill] (0.6,0.) circle (.5pt);
+    \draw [fill] (0.7854101966249685,0.570633909777092) circle (.5pt);
+    \draw [fill] (0.3,0.9233050611525759) circle (.5pt);
+    \draw [fill] (-0.18541019662496844,0.5706339097770922) circle (.5pt);
+    \draw [fill] (0.8,0.) circle (.5pt);
+    \draw [fill] (1.047213595499958,0.7608452130361225) circle (.5pt);
+    \draw [fill] (0.4,1.2310734148701012) circle (.5pt);
+    \draw [fill] (-0.2472135954999578,0.760845213036123) circle (.5pt);
+    \draw [fill] (0.4618033988749895,0.19021130325903063) circle (.5pt);
+    \draw [fill] (0.3618033988749895,0.49797965697655594) circle (.5pt);
+    \draw [fill] (0.038196601125010596,0.49797965697655605) circle (.5pt);
+    \draw [fill] (0.6618033988749895,0.19021130325903068) circle (.5pt);
+    \draw [fill] (0.7236067977499789,0.3804226065180614) circle (.5pt);
+    \draw [fill] (0.6236067977499793,0.6881909602355865) circle (.5pt);
+    \draw [fill] (0.4618033988749902,0.8057480106940809) circle (.5pt);
+    \draw [fill] (0.1381966011250101,0.8057480106940811) circle (.5pt);
+    \draw [fill] (-0.023606797749979813,0.6881909602355861) circle (.5pt);
+    \draw [fill] (0.86180339887499,0.19021130325903102) circle (.5pt);
+    \draw [fill] (0.9236067977499794,0.38042260651806226) circle (.5pt);
+    \draw [fill] (1.0075247947399484,0.5619653557018063) circle (.5pt);
+    \draw [fill] (0.8831438349325862,0.880048871647975) circle (.5pt);
+    \draw [fill] (0.7190740743652143,0.9992525302598276) circle (.5pt);
+    \draw [fill] (0.5550043137978428,1.1184561888716802) circle (.5pt);
+    \draw [fill] (0.24674654820709388,1.1160849093529024) circle (.5pt);
+    \draw [fill] (0.09375519577774943,1.0007479119524167) circle (.5pt);
+    \draw [fill] (-0.06488577814196421,0.8933141263850993) circle (.5pt);
+    \begin{scope}[xshift=1.7cm]
+    \draw [fill] (0.,0.) circle (0.5pt);
+    \draw [fill] (0.2,0.) circle (0.5pt);
+    \draw [fill] (0.3,0.17320508075688776) circle (0.5pt);
+    \draw [fill] (0.2,0.34641016151377557) circle (0.5pt);
+    \draw [fill] (0.,0.3464101615137756) circle (0.5pt);
+    \draw [fill] (-0.1,0.1732050807568879) circle (0.5pt);
+    \draw [fill] (0.4,0.) circle (0.5pt);
+    \draw [fill] (0.6,0.3464101615137755) circle (0.5pt);
+    \draw [fill] (0.4,0.6928203230275511) circle (0.5pt);
+    \draw [fill] (0.,0.6928203230275513) circle (0.5pt);
+    \draw [fill] (-0.2,0.3464101615137758) circle (0.5pt);
+    \draw [fill] (0.6,0.) circle (0.5pt);
+    \draw [fill] (0.9,0.5196152422706631) circle (0.5pt);
+    \draw [fill] (0.6,1.0392304845413265) circle (0.5pt);
+    \draw [fill] (0.,1.0392304845413265) circle (0.5pt);
+    \draw [fill] (-0.3,0.5196152422706637) circle (0.5pt);
+    \draw [fill] (0.8,0.) circle (0.5pt);
+    \draw [fill] (1.2,0.692820323027551) circle (0.5pt);
+    \draw [fill] (0.8,1.3856406460551023) circle (0.5pt);
+    \draw [fill] (0.,1.3856406460551025) circle (0.5pt);
+    \draw [fill] (-0.4,0.6928203230275516) circle (0.5pt);
+    \draw [fill] (0.5,0.17320508075688776) circle (0.5pt);
+    \draw [fill] (0.5,0.5196152422706634) circle (0.5pt);
+    \draw [fill] (0.4,0.6928203230275511) circle (0.5pt);
+    \draw [fill] (0.2,0.6928203230275511) circle (0.5pt);
+    \draw [fill] (-0.1,0.5196152422706635) circle (0.5pt);
+    \draw [fill] (0.7,0.1732050807568877) circle (0.5pt);
+    \draw [fill] (0.8,0.34641016151377546) circle (0.5pt);
+    \draw [fill] (0.8,0.6928203230275509) circle (0.5pt);
+    \draw [fill] (0.7,0.8660254037844384) circle (0.5pt);
+    \draw [fill] (0.4,1.0392304845413265) circle (0.5pt);
+    \draw [fill] (0.2,1.0392304845413265) circle (0.5pt);
+    \draw [fill] (-0.1,0.8660254037844397) circle (0.5pt);
+    \draw [fill] (-0.2,0.6928203230275531) circle (0.5pt);
+    \draw [fill] (0.9,0.17320508075688779) circle (0.5pt);
+    \draw [fill] (1.,0.34641016151377557) circle (0.5pt);
+    \draw [fill] (1.1,0.5196152422706637) circle (0.5pt);
+    \draw [fill] (1.1,0.8660254037844383) circle (0.5pt);
+    \draw [fill] (1.,1.039230484541325) circle (0.5pt);
+    \draw [fill] (0.9,1.212435565298211) circle (0.5pt);
+    \draw [fill] (0.6,1.385640646055102) circle (0.5pt);
+    \draw [fill] (0.4,1.3856406460551023) circle (0.5pt);
+    \draw [fill] (0.2,1.3856406460551023) circle (0.5pt);
+    \draw [fill] (-0.1,1.2124355652982246) circle (0.5pt);
+    \draw [fill] (-0.2,1.0392304845413458) circle (0.5pt);
+    \draw [fill] (-0.3,0.8660254037844671) circle (0.5pt);
+    \end{scope}
+    \end{scope}
+    \end{tikzpicture}
+  }
+  }
+  \vspace{.5em}
+
+  \item Para a primeira sequência (números quadrados perfeitos): $1,4,9,16,25,...$, para a segunda sequência (números pentagonais): $1,5,12,22,35,...$ e para a terceira sequência (números hexagonais): $1,6,15,28,45,...$
+
+  \item Uma resposta possível: 
+
+  \begin{itemize}
+  \item O $n$-ésimo número quadrado perfeito é da forma $n^2$.
+  
+  \item Denotando por $P_n$ o $n$-ésimo número pentagonal, temos $P_{n+1}=P_n+(3(n-1)+4)$, ou ainda, $P_n=\dfrac{3n^2-n}{2}$.
+
+  \item Denotando por $H_n$ o $n$-ésimo número hexagonal, temos $H_{n+1}=H_n+(4(n-1)+5)$, ou ainda, $H_n=2n^2-n$.
+  \end{itemize}
+  \end{enumerate}
+
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{1}
+  \item 
+  \begin{enumerate}
+  \item Na primeira sequência observa-se que o número seguinte é obtido pela soma dos dois números anteriores a ele. A sequência obtida dessa forma é conhecida como \textit{Sequência de Fibonacci}. Na segunda sequência nota-se que o número seguinte é obtido dividindo-se o anterior por $10$
+  \item Na primeira, o vigésimo termo é $6765$ e na segunda $10^{-16}$.
+  \end{enumerate}
+
+
+  \item
+  \begin{enumerate}
+  \item O prisma seguinte é obtido a partir do anterior pela adição de $4$ cubos cinzas à pilha de cubos cinzas já existente.
+  \item São necessários $16$ cubos cinzas.
+  \item O número de cubos cinzas em qualquer um dos primas da sequência será sempre um múltiplo de $4$, e portanto um número par.
+  \item O prisma $200$ terá $200\cdot4=800$ cubos cinzas.
+  \item O prisma $n$ terá $n\cdot4$ cubos cinzas.
+  \item A expressão $4n$, que fornece o número de cubos cinzas no Prisma $n$, é um número par qualquer que seja o valor de $n$ considerado.
+  \item Cada Prisma da sequência possui $8$ cubos brancos, sendo assim, se $x$ representa o total de cubos (brancos e cinzas), então o número de cubox cinzas será dado por $x-8$.
+  \end{enumerate}
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{3}
+  \item 
+  \begin{enumerate}
+  \item Ela gastou $6$s
+  \end{enumerate}
+  \item
+  As duas primeiras afirmações são falsas, pois Ana prcorreu $\dfrac{4}{5}$ (mais da metade) da distância correndo e o $\dfrac{1}{5}$ restante andando. A terceira afirmação é falsa, uma vez que Ana correu durante $\dfrac{1}{4}$  do tempo apenas. De acordo com o gráfico, a quarta afirmação é verdadeira.
+  \end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{5}
+  \item 
+  \begin{enumerate}
+  \item No mês de janeiro o comprimento do cabelo de Vitor era de $3$cm e no mês de junho $10$cm.
+  \item $1{,}4$cm.
+  \item $C(M)=3+1{,}4M$
+  \item A partir da expressão obtida no item anterior, resolvemos $19{,}8=3+1{,}4M$, obtendo $M=12$ meses.
+  \end{enumerate}
+  \item
+  \begin{enumerate}
+  \item $g(\sqrt{10})<g(\sqrt{5})<g(\sqrt{2})$.
+  \item $x=1$ e $x=-1$.
+  \item Não, pois $g(x)=9-x^2\leq 9$, qualquer que seja o $x\in\R$.
+  \item $b$ deveria ser um número real menor ou igual a $9$.
+  \end{enumerate}
+  \item
+  \begin{enumerate}
+  \item $1+3+7+1+7=19$
+  \item Uma resposta possível é $499$.
+  \item Veja que os números $3,30,300,3000,12,120,1200,102,1020,\\1002,111,1101,1011,1110,21,210,201,2001,2100$ e $2010$ são tais que a soma de seus algarismos é igual a $3$ e são todos os números entre $1$ e $10000$ com essa propriedade. Portanto há 20 números com a propriedade requerida.
+  \item Sim. Dado um número natural $n$, basta considerar o número com $n$ dígitos sendo cada dígito igual a $1$.
+  \end{enumerate}
+  \end{enumerate}
+}{1}
+\end{answer}
 
 \begin{enumerate}
 \item  Assim como os números triangulares (ver {\hyperref[\detokenize{AF106-4:ativ-funcoes-numeros-triangulares}]{Atividade: números triangulares no plano}}), fala-se nos números quadrados perfeitos, pentagonais, hexagonais, inspirados, respectivamente, pelas sequências abaixo.
@@ -923,8 +1694,7 @@ Descreva a regra de formação de cada uma dessas sequências de números.
 
 \end{enumerate}
 
-\clearpage
-
+ \clearpage
 \item Observe as duas sequências que se seguem:
 \begin{equation*}
 \begin{split}1, 1, 2, 3, 5, 8, 13, \dots\end{split}
@@ -1060,8 +1830,6 @@ Justifique novamente a afirmação do item (c), agora a partir da expressão que
 Se \(x\) representar o número total de cubos (brancos e cinzas) de um prisma desta sequência, qual das expressões seguintes representará o número de cubos cinzas desse prisma. Justifique sua escolha.
 
 \end{enumerate}
-
-
 \begin{equation*}
 \begin{split}\square \ x-8 \quad \quad \square \ 2x-4 \quad \quad \square \ x-4 \quad \quad \square \ 4x\end{split}
 \end{equation*}
@@ -1112,13 +1880,13 @@ Pensando em uma estratégia para melhorar a preformance da atleta, seu treinador
 \end{tikzpicture}\end{center}
 Apresentam-se, a seguir, quatro afirmações. De acordo com o gráfico, apenas uma é verdadeira. Assinale-a com X, explicando por que motivo cada uma das demais opções é falsa.
 
-(    ) A Ana percorreu metade da distância andando e a outra metade correndo.
+( { } ) A Ana percorreu metade da distância andando e a outra metade correndo.
 
-(    ) A Ana percorreu maior distância andando do que correndo.
+( { } ) A Ana percorreu maior distância andando do que correndo.
 
-(    ) A Ana esteve mais tempo correndo do que andando.
+( { } ) A Ana esteve mais tempo correndo do que andando.
 
-(    ) A Ana iniciou o percurso correndo e terminou-o andando.
+( { } ) A Ana iniciou o percurso correndo e terminou-o andando.
 
 \item Em Janeiro, o Vitor, depois de ter vindo do barbeiro, decidiu estudar o comprimento do seu cabelo, registando todos os meses a sua medida. O gráfico seguinte representa o crescimento do cabelo do Vitor, desde o mês de Janeiro (mês 0), até ao mês de Junho (mês 5).
 \phantomsection\label{\detokenize{AF106-E1:fig-cabelo}}
@@ -1129,17 +1897,17 @@ Apresentam-se, a seguir, quatro afirmações. De acordo com o gráfico, apenas u
 \draw[->,color=black] (-.2,0.) -- (10.5,0.);
 \foreach \x in {0., 1.,2.,3.,4.,5.}
 \draw[shift={(2*\x,0)},color=black] (0pt,-2pt) -- (0pt,-2pt) node[below, scale=.7] { $\x$};
-\foreach \m[count=\x from 0]in {{janeiro} , {fevereiro} , {mar\c{c}o}, {abril}, {maio}, {junho}}
-\draw (2*\x, -.8) node{\footnotesize \m};
+\foreach \m[count=\x from 0]in {{janeiro} , {fevereiro} , {março}, {abril}, {maio}, {junho}}
+\draw (2*\x, -.8) node {\footnotesize \m};
 \draw[->,color=black] (0.,-.1) -- (0.,5.5);
 \foreach \y in {0., 2.,4.,6., 8., 10.}
 \draw[shift={(0,.5*\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left, scale=.7] { $\y$};
-\draw [fill](0,1.5)circle (2pt);
-\draw [fill](2,2.1)circle (2pt);
-\draw [fill](4,2.9)circle (2pt);
-\draw [fill](6,3.6)circle (2pt);
-\draw [fill](8,4.3)circle (2pt);
-\draw [fill](10,5)circle (2pt);
+\draw [fill](0,1.5) circle (2pt);
+\draw [fill](2,2.1) circle (2pt);
+\draw [fill](4,2.9) circle (2pt);
+\draw [fill](6,3.6) circle (2pt);
+\draw [fill](8,4.3) circle (2pt);
+\draw [fill](10,5) circle (2pt);
 \end{tikzpicture}\end{center}\begin{enumerate}
 \item {} 
 A partir dos dados apresentados no gráfico, complete a tabela acima.
@@ -1187,10 +1955,254 @@ Quantos números entre \(1\) e \(10000\) nos levam ao resultado \(3\)?
 
 \end{enumerate}
 \end{enumerate}
-%\end{multicols}
 
-\explore{ gráfico}
-\label{\detokenize{AF106-4:explorando-grafico}}\label{\detokenize{AF106-4::doc}}\label{\detokenize{AF106-4:sec-explorando-grafico}}
+
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{objectives}{Ação promocional}
+{
+\begin{itemize}
+
+\item Reconhecer vantagens da representação gráfica. Na questão, mais especificamente, em detrimento da representação na forma de tabela.
+
+\item Argumentar a partir da análise de gráficos e/ou tabelas.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Ação promocional}
+{
+\begin{itemize}
+\item Observe para os seus alunos que tabela e gráfico têm seus papéis. Ainda que um gráfico seja importante para um determinado objetivo, ele não exclui uso da tabela, que pode ser importante para outros objetivos. Uma tabela não substitui um gráfico se o domínio da função for um conjunto infinito, por exemplo.
+
+\item Para os itens de análise do crescimento e decrescimento do valor dos dados numéricos da imagem em função da variação apresentada, pode ser útil conectar os pontos, formando uma linha poligonal. Contudo é importante destacar que os segmentos que conectam os pontos consecutivos não são pontos correspondentes da função, uma vez que o domínio dessa função é um conjunto discreto.
+
+\item O item (e) está mais relacionado com o contexto do problema. Algumas possíveis justificativas para o crescimento seriam: início de veiculação de alguma propaganda em TV ou rádio, utilização da \textit{hashtag} por alguma celebridade (publipost) ou Blog famoso. Para o decrescimento pode-se pensar na ocorrência de algum fato de grande destaque na mídia, surgimento de algum \textit{meme}, evento negativo associado à empresa, dentre outros.
+
+\item Explore o fato de ter-se aqui duas representações: para qual representação o aluno olhou, em cada um dos itens? Conclua apontando para o fato de que, muitas vezes, uma representação é mais “esclarecedora” que outra.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Ação promocional}
+{
+\begin{enumerate}
+
+\item $6$ vezes.
+
+\item No décimo segundo dia.
+
+\item Do segundo ao sexto dia, do sétimo ao décimo segundo dia, do décimo quarto ao décimo sexto dia, entre o vigésimo e vigésimo primeiro dia e entre o vigésimo quarto e vigésimo sétimo dia.
+
+\item Do primeiro para o segundo dia, do sexto para o sétimo dia, do décimo segundo ao décimo quarto dia, do décimo sexto ao vigésimo dia e entre o vigésimo primeiro ao vigésimo quarto dia.
+
+\item Resposta variada.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Do mapa para o gráfico}
+{
+\begin{itemize}
+
+\item Estabelecer representação gráfica para pares ordenados com coordenada não numérica.
+
+\item Estender o domínio da função para o conjunto dos números reais positivos, a partir de uma tabela.
+
+\item Reconhecer diferentes representações gráficas para uma mesma função.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Do mapa para o gráfico}
+{
+\begin{itemize}
+\item No item (a) espera-se que o estudante indique um conjunto de pares ordenados da forma: $\{(13, \text{Verde}),(15, \text{Laranja}),...\}$.
+
+\item É natural que a primeira representação gráfica dos estudantes seja em um plano cartesiano, com as cores indicadas no eixo vertical. Essa é a resposta esperada para o item (b). No entanto, no último item, espera-se que sejam exploradas outras formas de representação, usando ou não eixos cartesianos. Uma representação possível é a partir de um retângulo colorido como a escala apresentada no item (a) da atividade "Colorindo o gráfico", em que se indique os tempos em que ocorre a mudança de cor, veja imagem na resposta da atividade.
+
+\item Estimule a criatividade nas representações.
+
+\item Caso algum estudante resolva simplesmente inverter os eixos, colocando as cores no eixo horizontal (como domínio), chame a atenção para o fato de que a relação inversa não é função.
+
+\item No item (c) há várias respostas possíveis. Para que a resposta esteja correta, é necessário que todo o intervalo está coberto, ou seja, o domínio considerado é $[0,23]$. Além disso, não deve haver interseção entre os subintervalos.
+\end{itemize}
+}{0}{1}
+\end{sugestions}
+\begin{answer}{Do mapa para o gráfico}
+{
+\begin{enumerate}
+\item Uma possibilidade é $\{(13,\text{verde}),(14,\text{verde}),(15,\text{laranja}),(18,\text{vermelha}),\\(23, \text{vinho})\}$
+
+\item Três possíveis representações são:
+
+\resizebox{.9\linewidth}{!}
+{
+\begin{tikzpicture}
+\draw[->](0,4.5) node[left, scale=.7]{CORES}--(0,0)--(6,0) node[below right, scale=.7]{TEMPO (min)};
+\foreach \x in{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+\draw(.5*\x, -.1)--(.5*\x,0);
+\draw(.5,-.3) node[scale=.7]{13};
+\draw(1,-.3) node[scale=.7]{14};
+\draw(1.5,-.3) node[scale=.7]{15};
+\draw(2,-.3) node[scale=.7]{16};
+\draw(3,-.3) node[scale=.7]{18};
+\draw(5.5,-.3) node[scale=.7]{23};
+\draw(-.5,1)node[scale=.7]{verde};
+\draw(-.6,2)node[scale=.7]{laranja};
+\draw(-.65,3)node[scale=.7]{vermelho};
+\draw(-.5,4)node[scale=.7]{vinho};
+\draw[dashed](0,1)--(.5,1)--(.5,0);
+\draw[dashed](0,1)--(1,1)--(1,0);
+\draw[dashed](0,2)--(1.5,2)--(1.5,0);
+\draw[dashed](0,2)--(2,2)--(2,0);
+\draw[dashed](0,3)--(3,3)--(3,0);
+\draw[dashed](0,4)--(5.5,4)--(5.5,0);
+\draw[fill](.5,1)circle(1pt);
+\draw[fill](1,1)circle(1pt);
+\draw[fill](1.5,2)circle(1pt);
+\draw[fill](2,2)circle(1pt);
+\draw[fill](3,3)circle(1pt);
+\draw[fill](5.5,4)circle(1pt);
+\begin{scope}[yshift=-5.5cm]
+\draw[->](0,4.5) node[left, scale=.7]{CORES}--(0,0)--(6,0) node[below right, scale=.7]{TEMPO (min)};
+\foreach \x in{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+\draw(.5*\x, -.1)--(.5*\x,0);
+\draw(.25,-.3) node[scale=.7]{13};
+\draw(.75,-.3) node[scale=.7]{14};
+\draw(1.25,-.3) node[scale=.7]{15};
+\draw(1.75,-.3) node[scale=.7]{16};
+\draw(2.75,-.3) node[scale=.7]{18};
+\draw(5.25,-.3) node[scale=.7]{23};
+\draw(-.5,0.5)node[scale=.7]{verde};
+\draw(-.6,1.5)node[scale=.7]{laranja};
+\draw(-.65,2.5)node[scale=.7]{vermelho};
+\draw(-.5,3.5)node[scale=.7]{vinho};
+\draw[dashed,fill, color=green](0,0) rectangle (.5,1);
+\draw[black,dashed,fill, color=green](.5,0) rectangle (1,1);
+\draw[dashed,fill, color=orange](1,1) rectangle (1.5,2);
+\draw[black,dashed,fill, color=orange](1.5,1) rectangle (2,2);
+\draw[black,dashed,fill, color=red](2.5,2) rectangle (3,3);
+\draw[black,dashed,fill, color=violet](5,3) rectangle (5.5,4);
+\draw [color=black,dashed, xstep=.5cm,ystep=1cm] (-.1,-.1) grid (5.5,4);
+\begin{scope}[yshift=-2.5cm]
+\draw[dashed,fill, color=green](0,0) rectangle (1,1);
+\draw[dashed,fill, color=orange](1,0) rectangle (1.5,1);
+\draw[dashed,fill, color=red](2.5,0) rectangle (3,1);
+\draw[black,dashed,fill, color=violet](5,0) rectangle (5.5,1);
+\draw (.6,1.5)node[scale=.7, rotate=45]  {verde};
+\draw (.25,.5)node[scale=.7]  {13};
+\draw (.75,.5)node[scale=.7]  {14};
+\draw(1.25,.5) node[scale=.7]{15};
+\draw(2.75,.5) node[scale=.7]{18};
+\draw[white](5.25,.5) node[scale=.7]{23};
+\draw (1.6,1.5)node[scale=.7, rotate=45]  {Laranja};
+\draw (3.1,1.5)node[scale=.7, rotate=45]  {Vermelho};
+\draw (5.5,1.5)node[scale=.7, rotate=45]  {Vinho};
+\draw [color=black,dashed, xstep=.5cm,ystep=1cm] (0,0) grid (5.5,1);
+\end{scope}\end{scope}
+\end{tikzpicture}
+}
+
+\item Uma possibilidade de reposta é: verde para $t\in [0,15[$, laranjar para $t\in[15,18[$, vermelho para $t\in[18,23[$ e vinho para $t\in[25,25]$
+
+\item Ver item (b)
+
+\end{enumerate}
+}{0}
+\end{answer}
+\begin{objectives}{Números triangulares no plano}
+{
+\begin{itemize}
+
+\item Representar graficamente.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Números triangulares no plano}
+{
+\begin{itemize}
+\item Destaque para os seus alunos que nesse caso não cabe ligar os pontos. As abscissas indicam a ordem sequencial dos números triangulares, portanto, resumem-se apenas a números naturais.
+
+\item Observe que os pontos do gráfico não são colineares.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Números triangulares no plano}
+{
+\begin{tikzpicture}[scale=1.5, every node/.style={scale=1.5, black}, every path/.style={color=black}]
+
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
+\draw[help lines,xstep=.25,ystep=.25, lightgray] (0,0) grid (4,4);
+\draw[help lines, black, xstep=1, ystep=1] (0,0) grid (4,4);
+\draw[thick,->](0,0)--(4.2,0);
+\draw[thick,->](0,0)--(0,4.2);
+\foreach \x in {2, 4, 6, 8}
+\draw(.5*\x,-.2)node{\x};
+\foreach \x in{1, 2, 3, 4, 5, 6, 7, 8}
+\node[ponto] at(.5*\x, {.05*\x*(1+\x)}){};
+\foreach \y in{10, 20, 30, 40}
+\draw(0,.1*\y) node[left]{\y};
+
+\end{tikzpicture}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Jornada até a escola}
+{
+\begin{itemize}
+
+\item  Representar pontos no plano cartesiano a partir de uma situação real.
+
+\item  Estabelecer uma função a partir da seleção de pontos em um sistema cartesiano, associando a univocidade à identificação de apenas um ponto para cada valor da abscissa.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Jornada até a escola}
+{
+\begin{itemize}
+\item Durante a discussão, chame a atenção para a necessidade de certificar-se da associação de um único valor de ordenada para cada valor de abscissa.
+
+\item Discuta com os estudantes sobre o significado dos segmentos de reta que conectam os pontos.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Jornada até a escola}
+{
+\begin{enumerate}
+
+\item A jornada de Leonardo é descrita pelo gráfico abaixo:
+
+\begin{tikzpicture}
+
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only]
+\begin{scope}[yscale=.7, every node/.style={black}, every path/.style={black}]
+\draw[help lines,xstep=.2,ystep=.25, lightgray] (0,0) grid (6.5,6.2);
+\draw[help lines, black, xstep=1, ystep=1] (0,0) grid (6.5,6.2);
+\draw[thick,->](-.6,0)--(6.5,0) node[below left, yshift =-.2cm]{\tiny tempo(minutos)};
+\draw[thick,->](0,-.4)--(0,6.2) node[rotate=90,left,yshift =.7cm]{\tiny distância percorrida (km)};
+\foreach \x in {5, 10, ..., 30}
+\draw(.2*\x,-.3)node{\x};
+\foreach \y in {1, 2, 3, 4, 5, 6}
+\draw(-.3, \y)node{\y};
+\node[ponto] at(0,0){};\node[ponto] at(0,1){};\node[ponto] at(1,.2){};\node[ponto] at(1,.51){};\node[ponto] at(1,1.2){};\node[ponto] at(1,2){};\node[ponto] at(2,0){};\node[ponto] at(2,0.9){};\node[ponto] at(2,1.4){};\node[ponto] at(2,1.6){};\node[ponto] at(2,3){};\node[ponto] at(3,1.2){};\node[ponto] at(3,2.5){};\node[ponto] at(3,1.4){};\node[ponto] at(3,2){};\node[ponto] at(3,4){};\node[ponto] at(4,1.6){};\node[ponto] at(4,2.7){};\node[ponto] at(4,2.9){};\node[ponto] at(4,3.2){};\node[ponto] at(4,4){};\node[ponto] at(5,2){};\node[ponto] at(5,3.2){};\node[ponto] at(5,4){};\node[ponto] at(5,5){};\node[ponto] at(5,6){};\node[ponto] at(6,2.5){};\node[ponto] at(6,4){};\node[ponto] at(6,5){};\node[ponto] at(6,5.8){};\node[ponto] at(6,6){};
+\draw[thick, session3](0,0)--(1,0)--(2,3)--(3,4)--(4,4)--(5,6)--(6,6);
+\end{scope}
+\end{tikzpicture}
+
+
+\item Aproximadamente $1{,}25$ km
+
+\item Resposta pessoal.
+
+\end{enumerate}
+}{1}
+\end{answer}
+
+\explore{ gráficos}
 Segundo informações do \href{http://www.bigdatabusiness.com.br/visualizacao-de-dados-por-que-transformar-big-data-em-graficos/}{Big Data Business}, as palavras estimulam o lado esquerdo do cérebro e são um recurso essencial para a manutenção da memória. No entanto, as imagens são ainda mais eficazes, porque elas conseguem ativar os dois lados do cérebro simultaneamente e, assim, permitem o resgate de ideias e informações com maior precisão e agilidade. Especialmente quando se quer analisar grande quantidade de dados, apresentá-los em uma imagem ou em um gráfico, pode favorecer a comunicação.
 
 \begin{figure}[H]
@@ -1252,7 +2264,6 @@ No caso de funções reais de variável real, isto é, cujos domínio e contrado
 
 A representação geométrica mais comum para esses pontos, e que você provavelmente já conhece, é no \index{plano cartesiano}plano cartesiano. Essa representação tem como base duas retas numéricas perpendiculares que se intersectam em suas origens conforme a figura abaixo.
 
-\clearpage
 \begin{center}\begin{tikzpicture}[scale=.65]
 \tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=black, fill=black, shift only]
 \draw[lightgray](-4.5,-4.5)grid[xstep=.5,ystep=.5,line width =1pt](4.5,4.5);
@@ -1360,7 +2371,7 @@ Para funções reais de variável real, isto é, funções cujo domínio é um s
 \end{tikzpicture}
 \end{figure}
 
-\begin{reflection}{}
+\begin{reflection}
 
 Os conjuntos domínio e imagem ficam evidenciados na representação gráfica de uma  função a partir dos eixos coordenados. Observe a representação gráfica a seguir, em que estão destacados conjuntos sobre os eixos. Qual deles você identifica como domínio? A que conjunto corresponde o outro?
 \begin{figure}[H]
@@ -1385,13 +2396,325 @@ Os conjuntos domínio e imagem ficam evidenciados na representação gráfica de
 \end{figure}
 \end{reflection}
 
-
 \clearpage
-\practice{}
+
+\def\currentcolor{session2}
+\begin{objectives}{Indo para escola}
+{
+\begin{itemize}
+
+\item Fazer uso de simbologia matemática para representar informações apresentadas pictórica e verbalmente.
+
+\item Interpretar e relacionar informações a partir da representação gráfica apresentada.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Indo para escola}
+{
+\begin{itemize}
+\item É importante que os estudantes percebam o significado de dois pontos estarem na mesma horizontal ou na mesma vertical.
+
+\item Chame a atenção para o uso da escala.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Indo para escola}
+{
+\begin{enumerate}
+
+\item\adjustbox{valign=t}{\begin{minipage}{\linewidth}
+\begin{tikzpicture}
+\tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=black, fill=black, shift only]
+\begin{scope}[xscale=3, every node/.style={black}, every path/.style={black}]
+\draw[help lines,xstep=.2,ystep=.2, lightgray] (0,0) grid (3,7);
+\draw[help lines, black, xstep=1, ystep=1] (0,0) grid (3,7);
+\draw[thick,->](0,0)--(3,0);
+\draw[thick,->](0,0)--(0,7);
+\draw(1.5,-.8)node{tempo até a escola(min)};
+\draw(-.4,4)node[rotate=90]{distância até a escola(min)};
+\node[ponto] at(.9,2){};
+\node[ponto] at(.9,6){};
+\node[ponto] at(1.5,4){};
+\node[ponto] at(2,2){};
+\node[ponto] at(2,6){};
+\node[  left] at(.9,2){Caetano};
+\node[left] at(.9,6){ Levi};
+\node[above] at(1.5,4){Pedro};
+\node[right] at(2,2){Gael};
+\node[right] at(2,6){Arthur};
+\foreach \y in{0,1, 2, 3, 4, 5, 6}
+\draw(-.1,\y)node{\y};
+\draw(1,0)node[below]{20};
+\draw(2,0)node[below]{40};
+\end{scope}
+\end{tikzpicture}
+\end{minipage}}
+
+\item Pedro e Caetano foram para a escola de bicicleta ou correndo (ou de alguma forma que seja mais rápida do que ir a pé e mais lenta que ir de carro). Caetano e Gael moram ambos a $2$ km doa escola. Como Gael, que foi caminhando, levou $40$ minutos, Caetano que gastou aproximadamente $18$ minutos não pode ter ido caminhando. Caetano também não pode ter ido de carro, pois Levi que mora a $6$ km da escola demorou o mesmo tempo que ele e foi de carro.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Qual é o gráfico?}
+{
+\begin{itemize}
+
+\item  Reconhecer comportamentos crescente e decrescente em funções a partir de sua representação gráfica.
+
+
+\item O “Para refletir”{} apresentado adiante, explora diferentes tipos de gráficos de funções decrescente e crescente. Procure fazer conexão desta atividade com esse “para Refletir”
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Qual é o gráfico?}
+{
+\begin{itemize}
+\item Fazer a conexão com o “Para refletir”{} apresentado mais adiante, onde são explorados diferentes tipos de gráficos de função decrescente e crescente.
+
+\item Como os gráficos são apenas esboços, mais importante que os valores da tabela são as suas variações.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Qual é o gráfico?}
+{
+\begin{enumerate}
+\item (g)
+
+\item (a)
+
+\item (e) 
+
+\item (k)
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Imaginando gráficos}
+{
+\begin{enumerate}
+
+\item Reconhecer o comportamento crescente e decrescente de funções a partir de suas representações dadas. Sugere-se, associar esse comportamento a situações cotidianas.
+
+\end{enumerate}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Imaginando gráficos}
+{
+\begin{itemize}
+\item Não existe resposta única para cada item. Certifique-se de que seus estudantes tenham argumentos consistentes sobre as suas escolhas. Você pode sugerir que eles compartilhem entre si os seus argumentos.
+
+\item É fundamental definir o que representa cada eixo, por exemplo, no item (I), se consideramos o tempo no eixo horizontal e a intensidade sonora no vertical, somente os gráficos (e) e (h) consideram o silêncio inicial, no entanto o gráfico (h) não leva em conta que “\textit{rapidamente} todos estavam aplaudindo e se manifestando”{} e ainda há diminuição na intensidade sonora. Portanto, o gráfico (e) é o mais adequado. Agora, caso coloquemos no eixo horizontal a quantidade pessoas aplaudindo, os mais adequados são os gráficos (a) ou (d), eles passam pela origem e são crescentes.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Imaginando gráficos}
+{
+\begin{enumerate}[label=($\Roman*$)]
+\item (e) eixo horizontal, eixo vertical: intensidade sonora.
+
+\item (h) eixo horizontal: número de clientes, eixo vertical: lucro.
+
+\item (k) eixo horizontal: tempo, eixo vertical: preço
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Para refletir}
+{
+  Aqui deseja-se que os alunos percebam que as funções que correspondem às representações gráficas da primeira linha são crescentes e as que correspondem às da segunda linha são decrescentes. Quanto às colunas, espera-se que tenham alguma ideia sobre a taxa de variação do crescimento (segunda derivada da função). Os da primeira coluna tem crescimento/decrescimento constante, os da segunda coluna, o crescimento/decrescimento é cada vez maior enquanto nos da terceira coluna é cada vez menor.
+}{1}{1}
+\end{objectives}
+
+\clearmargin
+\begin{objectives}{Leia no gráfico!}
+{
+\begin{itemize}
+
+\item  Calcular, a partir da representação gráfica de uma função real de variável real, os valores de $f(x)$ e $x$ solicitados.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Leia no gráfico!}
+{
+\begin{itemize}
+\item Todos os valores solicitados são exatos, esta opção foi feita com o intuito de facilitar a feitura da atividade. Caso julgue adequado você poderá explorar a determinação de valores aproximados, como por exemplo: $f(0,5)$ ou os valores aproximados de $x$ tais que $f(x)=0$.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Leia no gráfico!}
+{
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|l|>{$}c<{$}|}
+\hline
+\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Notação}} & \cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Valor}} \\
+\hline
+\(f(1)-f(0)\) & 3 \\
+\hline
+\(4\cdot f(3)\) & 12 \\
+\hline
+\(f(4)/f(2)\) & 1/3 \\
+\hline
+\(f(6)\cdot f(2)\) & -6 \\
+\hline
+\(x\) quando \(f(x)=-2\) & x=6 \\
+\hline
+\(x\) quando \(f(x)=0\) & x=8 \\
+\hline
+\(f(3\cdot 2)-4\cdot f(\sqrt{81})+1\) & -21 \\
+\hline
+\end{tabu}
+\end{table}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Imposto de renda}
+{
+\begin{itemize}
+
+\item  Calcular imagens por uma função definida por mais de uma sentença
+
+\item Transitar entre diferentes representações de função: tabela, expressão e gráfico
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Imposto de renda}
+{
+\begin{itemize}
+\item É bastante comum os estudantes acharem que se trata de várias funções em vez de uma única função definida por mais de uma sentença. Isso se dá pelo fato de fazerem confusão entre o conceito de função e a expressão que a define.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Imposto de renda}
+{
+\begin{enumerate}
+\item Os valores são
+
+\begin{enumerate}
+\item R\$ $0$ 
+\item R\$ $58{,}20$
+\item R\$ $277{,}37$
+\item R\$ $643{,}14$
+\end{enumerate}
+
+\item
+\adjustbox{valign=t}{
+\centering
+\begin{tabu} to \textwidth{|c|c|c|}
+\hline
+\thead
+Ponto & Alíquota & Salário \\
+\hline
+A & $7{,}5\%$ (segundo intervalo) & R\$ $2600{,}00$\\
+\hline
+B & $15\%$ (terceiro intervalo) & R\$ $3400{,}00$\\
+\hline
+C & $22{,}5\%$ (quarto intervalo) & R\$ $4000{,}00$\\ 
+\hline
+\end{tabu}}
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Planos telefônicos}
+{
+\begin{itemize}
+
+\item Interpretar informações registradas textual e graficamente.
+
+\item Visualizar o gráfico de uma função definida por mais de uma sentença.
+
+\item  Utilizar informações de um gráfico para tomada de decisão.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Planos telefônicos}
+{
+\begin{itemize}
+\item Não é esperado nesse momento que os estudantes apresentem uma expressão para a função cujo gráfico é apresentado.
+
+\item Estimule uma discussão sobre os diferentes planos oferecidos pelas operadoras e as experiências de cada um.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Planos telefônicos}
+{
+\begin{enumerate}
+\item R\$ $80{,}00$
+\item R\$ $0{,}15$
+\item 1000MB
+\item\adjustbox{valign=t}{
+\resizebox{.9\linewidth}{!}
+{
+  
+\begin{tikzpicture}[yscale=.5,scale=.75, every node/.style={scale=.75}]
+
+\draw [->] (0,0) -- (14,0) node [below left, yshift=-.5cm] {Dados (MB)};
+\draw [->] (0,0) -- (0,20) node [above left, rotate=90, yshift=.75cm] {Valor (R\$)};
+\draw [help lines] (0,0) grid (14,20);
+
+\foreach \x in {2,4,...,20} \node [left] at (0,\x) {\x0};
+\foreach \x in {1,2,...,14} \node [below] at (\x,0) {\x00};
+
+\node [below left] at (0,0) {0};
+
+\draw [thick, session1] (0,8) -- (6,8) -- (14,20);
+
+\draw [thick, session3] (0,14) -- (14,14);
+
+\end{tikzpicture}
+}
+}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Bandeiras tarifárias}
+{
+\begin{enumerate}
+
+\item Interpretar informações registradas textual e graficamente.
+
+\item  Visualizar o gráfico de uma função definida por mais de uma sentença.
+
+\item Utilizar informações de um gráfico para tomada de decisão.
+
+\end{enumerate}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Bandeiras tarifárias}
+{
+\begin{itemize}
+\item Este é um tema que tem potencial interdisciplinar. Considere conversar com os professores de Geografia, Física, Química, Biologia, Sociologia para tratar de temas como: energia, formas alternativas de geração, custo de produção e distribuição, políticas públicas de fornecimento, roubos de carga, etc.
+
+\item Caso haja a possibilidade assista com seus alunos o vídeo oficial da ANEEL sobre as bandeiras tarifárias \url{https://youtu.be/w1rS7_tGSvM}.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Bandeiras tarifárias}
+{
+
+\begin{enumerate}
+\item R\$ $0{,}80$ por kWh
+\item R\$ $284{,}70$
+\item $356$ kWh
+\end{enumerate}
+}{1}
+\end{answer}
+\practice{gráficos}
 
 %\label{\detokenize{AF106-5:sec-praticando-grafico}}\label{\detokenize{AF106-5:praticando}}
 
-\begin{task}{ Indo para escola*}
+\begin{task}{ Indo para escola}
 \label{\detokenize{AF106-5:ativ-indo-para-escola}}\label{\detokenize{AF106-5:atividade-indo-para-escola}}
 
 Arthur, Caetano, Gael, Levi e Pedro utilizam a mesma avenida para ir à escola a cada manhã. Levi vai com seu pai de carro, Arthur de bicicleta e Gael caminhando. Os demais variam, a cada dia, a forma como percorrem o trajeto. O mapa a seguir mostra a posição da casa de cada um em relação à escola.
@@ -1460,13 +2783,14 @@ Como Pedro e Caetano foram para a escola na última segunda-feira? Por que?
 
 \end{task}
 
-\begin{task}{ qual é o gráfico?*}
+\begin{task}{ qual é o gráfico?}
 \label{\detokenize{AF106-5:ativ-qual-e-o-grafico}}\label{\detokenize{AF106-5:atividade-qual-e-o-grafico}}
 
 Dentre os gráficos apresentados a seguir identifique aquele que melhor descreve os dados apresentados em cada uma das tabelas seguintes.
 
 
-\(a)\) Café esfriando
+\begin{enumerate}
+\item  Café esfriando
 \begin{table}[H]
 \centering
 \begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|}
@@ -1478,7 +2802,7 @@ Dentre os gráficos apresentados a seguir identifique aquele que melhor descreve
 \end{tabu}
 \end{table}
 
-\(b)\) Preparando a ceia
+\item Preparando a ceia
 
 \begin{table}[H]
 \centering
@@ -1491,7 +2815,7 @@ Dentre os gráficos apresentados a seguir identifique aquele que melhor descreve
 \end{tabu}
 \end{table}
 
-\(c)\) Depois de três canecas de cerveja…
+\item Depois de três canecas de cerveja…
 
 \begin{table}[H]
 \centering
@@ -1504,7 +2828,7 @@ Dentre os gráficos apresentados a seguir identifique aquele que melhor descreve
 \end{tabu}
 \end{table}
 
-\(d)\) Como um bebê cresce antes do nascimento
+\item Como um bebê cresce antes do nascimento
 
 \begin{table}[H]
 \centering
@@ -1516,6 +2840,7 @@ Dentre os gráficos apresentados a seguir identifique aquele que melhor descreve
 \hline
 \end{tabu}
 \end{table}
+\end{enumerate}
 
 \begin{figure}[H]
 \centering
@@ -1613,8 +2938,7 @@ Adaptado do artigo \emph{Michal Ayalon \& Anne Watson \& Steve Lerman (2015). Pr
 \end{task}
 
 \clearpage
-\begin{reflection}{}
-
+\begin{reflection}
 Observe as figuras abaixo
 \begin{figure}[H]
 \centering
@@ -1803,8 +3127,7 @@ Notação & Valor \\
 
 \end{task}
 
-\begin{reflection}{}
-
+\begin{reflection}
 Observe o gráfico da função real dada pela expressão \(f(x)=3x^2-15x+18\). Veja que ele possui interseções com o eixo das abscissas e com o eixo das ordenadas. Qual procedimento você utilizaria para determinar esses pontos de interseção?
 \begin{center}\begin{tikzpicture}
 \draw[->, thick](-.5,0)--(4,0);
@@ -1937,9 +3260,11 @@ O plano Ouro cobra R\$ $140{,}00$ por dados ilimitados e o plano Prata tem a mes
 \end{task}
 
 \clearpage
+
 \begin{task}{Bandeiras tarifárias}
 
 Desde o ano de 2015, as contas de energia passaram a trazer uma novidade: o Sistema de Bandeiras Tarifárias, que apresenta as seguintes modalidades: verde, amarela e vermelha - as mesmas cores dos semáforos - e indicam se haverá ou não acréscimo no valor de energia a ser repassada ao consumidor final, em função das condições de geração de eletricidade. Cada modalidade apresenta as seguintes características:
+
 
 \begin{itemize}
 \item[
@@ -1952,14 +3277,14 @@ Desde o ano de 2015, as contas de energia passaram a trazer uma novidade: o Sist
 
 \item[{\begin{tikzpicture}[scale=.5,remember picture, overlay, shift={(-1,-.75))}]
       \draw [very thick] (0,-.25) -- (0,1);
-      \draw [fill=box2!80!yellow] (0,1) .. controls (.25,1.25) and (.75,.75) .. (1,1) -- (1,.5) .. controls (.75,.25) and (.25,.75) .. (0,.5) -- cycle;
+      \draw [fill=box2!50!yellow] (0,1) .. controls (.25,1.25) and (.75,.75) .. (1,1) -- (1,.5) .. controls (.75,.25) and (.25,.75) .. (0,.5) -- cycle;
       \end{tikzpicture}}]
 
 \textbf{Bandeira amarela}: condições de geração menos favoráveis. A tarifa sobre acréscimo de R\$ $0{,}01343$ para cada quilowatt-hora (kWh) consumidos;
 
 \item[{\begin{tikzpicture}[scale=.5,remember picture, overlay, shift={(-1,-.75))}]
       \draw [very thick] (0,-.25) -- (0,1);
-      \draw [fill=session3!80!red] (0,1) .. controls (.25,1.25) and (.75,.75) .. (1,1) -- (1,.5) .. controls (.75,.25) and (.25,.75) .. (0,.5) -- cycle;
+      \draw [fill=session3!50!red!90!white] (0,1) .. controls (.25,1.25) and (.75,.75) .. (1,1) -- (1,.5) .. controls (.75,.25) and (.25,.75) .. (0,.5) -- cycle;
       \end{tikzpicture}}]
 
 \textbf{Bandeira vermelha - patamar 1}: condições mais custosas de geração. A tarifa sofre acréscimo de R\$ $0{,}04169$ para cada quilowatt-hora (kWh) consumido.
@@ -1985,14 +3310,14 @@ O sistema de coordenadas abaixo contém os gráficos para as funções que relac
 \begin{tikzpicture}[yscale=2.5,scale=.75, every node/.style={scale=.75}]
 
 \draw [->] (0,5) -- (11,5) node [below left, yshift=-.5cm] {consumo (kWh)};
-\draw [->] (0,5) -- (0,9) node [above left, , rotate=90, yshift=1.2cm] {Preço a pagar (R\$)};
+\draw [->] (0,5) -- (0,9) node [above left, , rotate=90, yshift=1.5cm, overlay] {Preço a pagar (R\$)};
 
 \foreach \x in {2,4,...,10} {\node [below] at (\x,5) {\x00};
 \draw [help lines] (\x,5) -- (\x,9);
 };
 \foreach \x/\y in {8/{800,00},8.1343/{813,43},8.4169/{841,89},8.6243/{862,43}} {
 
-\node [left] at (0,\x) {\y};
+\node [left,overlay] at (0,\x) {\y};
 
 \draw [thick, \currentcolor!80] (0,5) -- (10,\x);
 \draw [help lines] (0,\x) -- (10,\x);
@@ -2002,6 +3327,187 @@ O sistema de coordenadas abaixo contém os gráficos para as funções que relac
 \end{figure}
 
 \end{task}
+
+\clearpage
+\def\currentcolor{session3}
+\begin{objectives}{Todo mundo tem Facebook?}
+{
+\begin{itemize}
+
+\item Utilizar os conhecimentos adquiridos ao longo do Capítulo para investigar o crescimento do número de usuários ativos na rede social Facebook.
+
+\item Fazer inferência baseado em um modelo matemático.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Todo mundo tem Facebook?}
+{
+\begin{itemize}
+\item No item (e) os dados indicam que o número de usuários não irá ultrapassar $1.500.000.000$, mas isso pode não ser facilmente percebido. Espera-se, caso o estudante acredite que o número de usuários atinja os $2$ bilhões, que isso ocorra depois de um grande intervalo de tempo.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Todo mundo tem Facebook?}
+{
+\begin{enumerate}
+\item $19999900\% , 450\%, 118\%, 483\%, 114\%, 147\%, 62\%, 33\%, 32\%, 16\%, 7\%$.
+
+\item\adjustbox{valign=t}{
+\resizebox{.9\linewidth}{!}
+{
+\begin{tikzpicture}[scale=1.5, every node/.style={black}, every path/.style={black}]
+\draw [help lines, xstep=.5cm,ystep=.25cm] (-.1,-.1) grid (7.5,4.1);
+\foreach \x in {0,1, 2,3, 4, 5, 6,7,8,9,10,11,12,13,14, 15}
+\draw[shift={(.5*\x,0)},color=black] (0pt,-2pt) -- (0pt,-2pt) node[below] { $\x$};
+\foreach \y in {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600}
+\draw[shift={(-.3,.18 +.0025*\y)},color=black] (0pt,-2pt) -- (0pt,-2pt) node[below] { $\y$};
+\draw[thick, ->](-.1,0)--(7.6,0);
+\draw[thick, ->](0,-.1)--(0,4.1);
+\draw[fill =session1](.5,0) circle(1pt);
+\draw[fill =session1](1,.06) circle(1pt);
+\draw[fill =session1](1.5,.08) circle(1pt);
+\draw[fill =session1](2,.09) circle(1pt);
+\draw[fill =session1](2.5,.2) circle(1pt);
+\draw[fill =session1](3,.37) circle(1pt);
+\draw[fill =session1](3.5,.92) circle(1pt);   
+\draw[fill =session1](4,1.5) circle(1pt);
+\draw[fill =session1](4.5,2) circle(1pt);
+\draw[fill =session1](5,2.62) circle(1pt);
+\draw[fill =session1](5.5,3.08) circle(1pt);
+\draw[fill =session1](6,3.35) circle(1pt);
+\end{tikzpicture}
+}}
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Todo mundo tem Facebook?}
+{
+\begin{enumerate}\setcounter{enumi}{2}
+\item No primeiro ano, observa-se um grande crescimento no número de usuários ativos, entre os anos de $2006$ e $2010$, o crescimento percentual oscila e, a partir de $2011$, é cada vez menor, indicando que o crescimento do número de usuários está com tendência a diminuir.
+
+\item Espera-se para $2016$ um valor acima de $1.317.000.000$ e abaixo de $1.400.000.000$. Para $2017$ um valor maior que o anterior e que não ultrapasse $1.500.000.000$.
+
+\item É razoável imaginar que o número de usuários continuará a aumentar. Com um crescimento percentual cada vez menor a tendência observada é que a marca de $2$ bilhões de usuários não será atingida.
+
+\item Para o ano de $2013$ tem-se $f(9)=1.055.876.085$ e para o ano de $2014$ tem-se $f(10)=1.220.936.348$.
+
+\item Para o ano de $2016$ o modelo prevê um número de usuários de $f(12)=1.359.620.842$ e para $2017$, $f(13)=1.381.536.488$.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Decodificando a mensagem}
+{
+\begin{itemize}
+
+\item Estabelecer modelo matemático a partir de funções, mais especificamente, em uma situação que envolve codificação de mensagens.
+
+\item Compreender intuitivamente as condições necessárias para a existência da inversa de uma função. (injetividade e sobrejetividade)
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Decodificando a mensagem}
+{
+\begin{itemize}
+\item Na solução do item \titem{d)} estimule seus estudantes a descrever com palavras de maneira precisa o que acontece com os números maiores que $26$ caso ele use a expressão $f(x)=x+14$.
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\clearmargin
+\marginpar{\vspace{.5em}}
+\begin{answer}{Decodificando a mensagem}
+{
+\begin{enumerate}
+\item XBPVTB
+
+\item Usaria a linha debaixo para descobrir a letra original correspondente: CRIPTOGRAFAR.
+
+\item Resposta pessoal
+\end{enumerate}
+}{1}
+\end{answer}
+
+\begin{answer}{Decodificando a mensagem}
+{
+\begin{enumerate}\setcounter{enumi}{3}
+\item Uma resposta possível seria:
+
+\end{enumerate}
+\begin{table}[H]
+\centering
+\resizebox{\linewidth}{!}
+{
+\setlength\tabcolsep{2.5pt}
+\begin{tabu} to \textwidth{|c|*{26}{>{$}c<{$}|}}
+\hline
+\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Original}}} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 \\
+\hline
+\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Código}}} & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+\hline
+\end{tabu}}
+\end{table}
+
+Outra possibilidade é escrever $f(x)=x+15$, subtraindo $26$ se $f(x)$ for maior que $26$.
+
+\begin{enumerate}\setcounter{enumi}{4}
+
+\item\adjustbox{valign=t}
+{
+\resizebox{.9\linewidth}{!}
+{
+\begin{tikzpicture}[every node/.style={black}, every path/.style={black}]
+\draw[scale=.5](0,0)grid(26,26);
+\foreach \i [count=\x from 0] in{{A}, {B},{C}, {D}, {E}, {F}, {G}, {H},{I},{J},{K},{L},{M},{N},{O},{P},{Q},{R},{S},{T},{U},{V},{W},{X},{Y},{Z}}
+\draw (.2+.5*\x,-.4) node {\i};
+\foreach \i [count=\x from 0] in{{A}, {B},{C}, {D}, {E}, {F}, {G}, {H},{I},{J},{K},{L},{M},{N},{O},{P},{Q},{R},{S},{T},{U},{V},{W},{X},{Y},{Z}}
+\draw (-.4,.2+.5*\x) node {\i};
+\fill[color=\currentcolor!80] ( 0.0 , 0.0 )--( 0.5 , 0.0 )--( 0.5 , 0.5 )--( 0.0 , 0.5 );
+\fill[color=\currentcolor!80] ( 0.5 , 1.5 )--( 1.0 , 1.5 )--( 1.0 , 2.0 )--( 0.5 , 2.0 );
+\fill[color=\currentcolor!80] ( 1.0 , 4.0 )--( 1.5 , 4.0 )--( 1.5 , 4.5 )--( 1.0 , 4.5 );
+\fill[color=\currentcolor!80] ( 1.5 , 7.5 )--( 2.0 , 7.5 )--( 2.0 , 8.0 )--( 1.5 , 8.0 );
+\fill[color=\currentcolor!80] ( 2.0 , 12.0 )--( 2.5 , 12.0 )--( 2.5 , 12.5 )--( 2.0 , 12.5 );
+\fill[color=\currentcolor!80] ( 2.5 , 4.5 )--( 3.0 , 4.5 )--( 3.0 , 5.0 )--( 2.5 , 5.0 );
+\fill[color=\currentcolor!80] ( 3.0 , 11.0 )--( 3.5 , 11.0 )--( 3.5 , 11.5 )--( 3.0 , 11.5 );
+\fill[color=\currentcolor!80] ( 3.5 , 5.5 )--( 4.0 , 5.5 )--( 4.0 , 6.0 )--( 3.5 , 6.0 );
+\fill[color=\currentcolor!80] ( 4.0 , 1.0 )--( 4.5 , 1.0 )--( 4.5 , 1.5 )--( 4.0 , 1.5 );
+\fill[color=\currentcolor!80] ( 4.5 , 10.5 ) rectangle ( 5.0 , 11.0 );
+\fill[color=\currentcolor!80] ( 5.0 , 8.0 ) rectangle ( 5.5 , 8.5 );
+\fill[color=\currentcolor!80] ( 5.5 , 6.5 ) rectangle ( 6.0 , 7.0 );
+\fill[color=\currentcolor!80] ( 6.0 , 6.0 ) rectangle ( 6.5 , 6.5 );
+\fill[color=\currentcolor!80] ( 6.5 , 6.5 ) rectangle ( 7.0 , 7.0 );
+\fill[color=\currentcolor!80] ( 7.0 , 8.0 ) rectangle ( 7.5 , 8.5 );
+\fill[color=\currentcolor!80] ( 7.5 , 10.5 ) rectangle ( 8.0 , 11.0 );
+\fill[color=\currentcolor!80] ( 8.0 , 1.0 ) rectangle ( 8.5 , 1.5 );
+\fill[color=\currentcolor!80] ( 8.5 , 5.5 ) rectangle ( 9.0 , 6.0 );
+\fill[color=\currentcolor!80] ( 9.0 , 11.0 ) rectangle ( 9.5 , 11.5 );
+\fill[color=\currentcolor!80] ( 9.5 , 4.5 ) rectangle ( 10.0 , 5.0 );
+\fill[color=\currentcolor!80] ( 10.0 , 12.0 ) rectangle ( 10.5 , 12.5 );
+\fill[color=\currentcolor!80] ( 10.5 , 7.5 ) rectangle ( 11.0 , 8.0 );
+\fill[color=\currentcolor!80] ( 11.0 , 4.0 ) rectangle ( 11.5 , 4.5 );
+\fill[color=\currentcolor!80] ( 11.5 , 1.5 ) rectangle ( 12.0 , 2.0 );
+\fill[color=\currentcolor!80] ( 12.0 , 0.0 ) rectangle ( 12.5 , 0.5 );
+\fill[color=\currentcolor!80] ( 12.5 , 12.5 ) rectangle ( 13.0 , 13.0 );
+\draw(12.3,-1)node{alfabeto};
+\draw(-1,12.3) node[rotate=90.]{Código};   
+\end{tikzpicture}
+}
+}
+
+Para valores maiores que $26$ devemos subtrair $26$ sucessivamente até encontrar um valor positivo menor que ou igual a $26$ e então encontrar a letra correspondente. Isso equivale a tomar o resto da divisão por $26$.
+
+
+\item Impossível decodificar, pois os códigos P, Q e X não têm correspondente no alfabeto e os códigos G e J têm mais de uma opção de escolha.
+
+\item Códigos de D a K têm duas letras do alfabeto associadas a cada um. Códigos de P a T e de X a Z não têm correspondente no alfabeto.
+
+\item Todo código deve possuir um único correspondente no alfabeto. Ou seja, a relação (código, alfabeto) deve ser uma função.
+
+\end{enumerate}
+}{1}
+\end{answer}
 
 \know{}
 \label{\detokenize{AF106-A::doc}}\label{\detokenize{AF106-A:para-saber-mais}}\label{\detokenize{AF106-A:sec-aprofundando-grafico}}
@@ -2214,7 +3720,16 @@ Que propriedades deve ter um código para que seja possível decodificá-lo?
 
 \end{task}
 
+\clearpage
+\def\currentcolor{cor2}
+\begin{sugestions}{Projeto Aplicado}
+{
+  Este problema fica mais simples se for adotada uma abordagem prática e recomenda-se que seja realizado em grupos. Serão necessárias algumas tesouras e quadrados de cartolina de lados medindo 40 cm. Isso permitirá que os alunos construam modelos de várias caixas diferentes. Calculadoras poderão ser necessárias para ajudar no cálculo dos volumes. Desafie cada grupo de alunos a fazer a caixa de maior volume a partir do quadrado de cartolina dado. Inicialmente, poucos alunos provavelmente adotarão uma abordagem algébrica. Normalmente eles preferem começar a realizar uma série de experiências até que tenham adquirido uma forte intuição para a situação, e só então consideram adotar um método sistematizado. Esta é uma sequência natural de raciocinar em matemática, portanto recomendamos que eles não sejam desencorajados ou apressados. A seguir fornecemos uma solução gráfica para o problema. A relação entre o volume V da caixa (em centímetros cúbicos) e o tamanho x do lado do quadrado (medido em centímetros) é dada por $V(x)=(40−2x)\cdot(40−2x)\cdot x=(40−2x)^2\cdot x$.
+}{1}1
+\end{sugestions}
+
 \begin{project}
+
 \label{\detokenize{AF106-A:projeto-aplicado}}\label{\detokenize{AF106-A:sec-projeto-aplicado}}
 
 \textbf{Como construir uma caixa de volume máximo?}
@@ -2224,7 +3739,7 @@ Vamos utilizar uma folha de cartolina quadrada de lado \(40\) cm para construir 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.9]
 \usetikzlibrary[patterns]
 \fill[fill=black,pattern=dots,pattern color=black] (-3.,3.) -- (-2.,3.) -- (-2.,2.) -- (-3.,2.) -- cycle;
 \fill[fill=black,pattern=dots,pattern color=black] (-3.,-2.) -- (-2.,-2.) -- (-2.,-3.) -- (-3.,-3.) -- cycle;
@@ -2256,10 +3771,10 @@ Vamos utilizar uma folha de cartolina quadrada de lado \(40\) cm para construir 
 \draw [line width=0.4pt] (3.,2.)-- (2.,2.);
 \draw [<-,line width=0.4pt] (-3.4,-2.98) -- (-3.4,-1.);
 \draw [->,line width=0.4pt] (-3.4,1) -- (-3.4,3.);
-\draw (-3.5,0) node[rotate=90] {40 cm};
+\draw (-4,-1) node[rotate=90] {40 cm};
 \draw [<-,line width=0.4pt] (-3.,3.36) -- (-1,3.36);
 \draw [->,line width=0.4pt] (1,3.36) -- (3.02,3.36);
-\draw (-1,3.6) node {40 cm};
+\draw (-1,) node {40 cm};
 \begin{scope}[xshift=4cm]
 \fill[line width=2.pt,fill=black,fill opacity=1.0] (0.,-0.2) -- (0.,0.2) -- (0.4,0.2) -- (0.4,0.4) -- (0.8025630171471898,0.) -- (0.4,-0.4) -- (0.4,-0.2) -- cycle;
 \begin{scope}[xshift=2cm, yshift=-1cm]
@@ -2315,6 +3830,25 @@ Utilize um software ou uma calculadora gráfica para visualizar a representaçã
 \end{project}
 
 \exercise
+
+\begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}
+  \item Tempo (variável independente) e altura do nível de água na piscina (variável dependente). A diminuição na altura do nível de água observada nas primeiras 5h deve ser causada pelo vazamento. No período entre 5h e 8h a piscina foi enchida (entrando uma quantidade maior de água do que aquela que está sendo perdida pelo vazamento). A partir das 8h a piscina parou de ser enchida e o vazamento fez com que a altura do nível de água voltasse a diminuir.
+
+  \item
+  \begin{enumerate}
+  \item $D$
+  \item $B$
+  \item $A$ e $E$. As garrafas que correspondem a esses pontos são vendidas pelo mesmo preço.
+  \item $B$ e $E$. As garrafas que correspondem a esses pontos armazenam a mesma quantidade de água.
+  \item $E$ apresenta melhor custo-benefício que $A$, uma vez que ambas são vendidas pelo mesmo preço e $E$ armazena maior quantidade de água. Com relação à $B$, $E$ também apresenta melhor custo-benefício, pois armazena a mesma quantidade de água e custa menos.
+
+  \end{enumerate}
+  \end{enumerate}
+}{1}
+\end{answer}
+
 
 \label{\detokenize{AF106-E2:sec-exercicios-grafico}}\label{\detokenize{AF106-E2:exercicios}}\label{\detokenize{AF106-E2::doc}}
 

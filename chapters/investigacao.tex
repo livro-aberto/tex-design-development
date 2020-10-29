@@ -1,4 +1,9 @@
-\renewcommand\chapterillustration{./abertura-investigacao}%Photo by Hoach Le Dinh on Unsplash, https://unsplash.com/photos/c8TWWQ5ZnUw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText 
+\ifnum\aluno=1
+\renewcommand\chapterillustration{./abertura-investigacao}
+\else
+\renewcommand\chapterillustration{./abertura-investigacao-professor}
+\fi
+
 \def\chapterwhat{Taxas, índices e indicadores sociais, econômicos e ambientais. Compreensão de aspectos teóricos e práticos dessas informações, com uma metodologia que busca a análise de situações reais, tanto locais quanto globais.}
 
 \def\chapterbecause{Na era da informação, somos inundados por dados sobre os mais diversos fenômenos da realidade. Compreender a obtenção e organização desses dados torna-se importante para planejarmos ações que busquem uma organização social mais justa e sustentável.} 
@@ -83,6 +88,167 @@ Gráficos: & --- \\
 
 \mainmatter
 
+\begin{apresentacao}
+\section{Para começo de conversa}
+\subsection{Introdução}
+
+Este capítulo é um convite à experiência de uma nova forma de trabalhar em sua sala de aula. A proposta aqui é possibilitar que os estudantes se aprofundem em perguntas próprias, por meio de uma metodologia de investigação que será guiada por você. A temática da pandemia causada pelo novo coronavírus será utilizada durante todo o capítulo como exemplo de projeto, de forma a dar mais concretude à proposta. A escolha da metodologia de trabalho como foco do capítulo tem o objetivo de abrir a possibilidade para que você e seus estudantes escolham uma temática que julguem importante e interessante para a comunidade escolar na qual estão inseridos. A intenção é propor uma sequência didática que seja interessante e cativante para cada estudante, mas que também possibilite que eles experimentem utilizar seus conhecimentos matemáticos para refletir sobre a sociedade e desenvolvam estratégias para agir sobre ela. Pois, para que o estudante torne-se capaz de utilizar as ferramentas matemáticas para interpretar fatos de forma crítica, é necessário que ele experimente como fazer isso. 
+
+Dan Meyer, pesquisador da área da educação matemática, defende que uma atividade será cativante e interessante para os estudantes se eles puderem propor suas próprias perguntas de investigação (MEYER, 2011). Ao mesmo tempo, Jo Boaler, outra pesquisadora da área, defende que o aprendizado é mais interessante e mais efetivo quando os estudantes podem trabalhar de forma investigativa, com problemas abertos que possibilitem o emprego da criatividade, do trabalho coletivo, das discussões de ideias e da diversidade das formas de se pensar e resolver problemas (BOALER, 2018).
+
+Já pesquisadores como Olé Skovsmose, Eric Gutstein, Bob Peterson e Marilyn Frankenstein entre outros, defendem que é necessário que parte do trabalho nas aulas de matemática seja dedicado a olhar e compreender os problemas da sociedade a partir das ferramentas que o aprendizado da matemática proporciona, ajudando o estudante a entender como utilizá-las em contextos da realidade individual de cada um (ou de cada comunidade escolar), para dar sentido ao mundo que o cerca (SKOVSMOSE, 2014; GUTSTEIN, 2013; FRANKENSTEIN, 2014).
+
+Uma inspiração para a elaboração dessa proposta são as atividades elaboradas pelo Programa Nossa Escola Pesquisa Sua Opinião (Nepso). Utilizando as pesquisas de opinião como ferramenta pedagógica, sua metodologia consiste na formação de grupos de trabalho que, independente da temática, são norteados pela construção da autonomia dos estudantes, pela compreensão de seu contexto e consequente engajamento (ANDRADE, 2014).
+
+A abordagem metodológica proposta neste capítulo pode ser enquadrada dentro do que é chamado de pelos pesquisadores da área de Metodologia de Investigação Matemática, que tem sido largamente debatida e incentivada, já a algumas décadas. Algumas referências do tema são PONTE, BROCARDO \& OLIVEIRA (2019) e D’AMBROSIO (1993). 
+
+\subsection{Habilidades da BNCC trabalhadas neste capítulo}
+
+\begin{habilities}{EM13MAT101}
+Interpretar criticamente situações econômicas, sociais e fatos relativos às Ciências da Natureza que envolvam a variação de grandezas, pela análise dos gráficos das funções representadas e das taxas de variação, com ou sem apoio de tecnologias digitais.
+
+\tcbsubtitle{EM13MAT102}
+Analisar tabelas, gráficos e amostras de pesquisas estatísticas apresentadas em relatórios divulgados por diferentes meios de comunicação, identificando, quando for o caso, inadequações que possam induzir a erros de interpretação, como escalas e amostras não apropriadas. 
+
+\tcbsubtitle{EM13MAT103}
+Interpretar e compreender textos científicos ou divulgados pelas mídias, que empregam unidades de medida de diferentes grandezas e as conversões possíveis entre elas, adotadas ou não pelo Sistema Internacional (SI), como as de armazenamento e velocidade de transferência de dados, ligadas aos avanços tecnológicos. 
+
+\tcbsubtitle{EM13MAT104}
+Interpretar taxas e índices de natureza socioeconômica (índice de desenvolvimento humano, taxas de inflação, entre outros), investigando os processos de cálculo desses números, para analisar criticamente a realidade e produzir argumentos.
+\end{habilities}
+
+\begin{habilities}{EM13MAT202}
+Planejar e executar pesquisa amostral sobre questões relevantes, usando dados coletados diretamente ou em diferentes fontes, e comunicar os resultados por meio de relatório contendo gráficos e interpretação das medidas de tendência central e das medidas de dispersão (amplitude e desvio padrão), utilizando ou não recursos tecnológicos.
+\end{habilities}
+
+Além das habilidades descritas, o capítulo trabalha a competência específica nº 2, da área de Matemática:
+
+“Propor ou participar de ações para investigar desafios do mundo contemporâneo e tomar decisões éticas e socialmente responsáveis, com base na análise de problemas sociais, como os voltados a situações de saúde, sustentabilidade, das implicações da tecnologia no mundo do trabalho, entre outros, mobilizando e articulando conceitos, procedimentos e linguagens próprios da Matemática.”
+
+A partir dele, também são desenvolvidas três competências gerais da educação básica, descritas na BNCC. São elas:
+
+\begin{habilities}{Competência geral 1}
+Valorizar e utilizar os conhecimentos historicamente construídos sobre o mundo físico, social, cultural e digital para entender e explicar a realidade, continuar aprendendo e colaborar para a construção de uma sociedade justa, democrática e inclusiva. 
+
+\tcbsubtitle{Competência geral 2}
+Exercitar a curiosidade intelectual e recorrer à abordagem própria das ciências, incluindo a investigação, a reflexão, a análise crítica, a imaginação e a criatividade, para investigar causas, elaborar e testar hipóteses, formular e resolver problemas e criar soluções (inclusive tecnológicas) com base nos conhecimentos das diferentes áreas.
+
+\tcbsubtitle{Competência geral 5}
+Compreender, utilizar e criar tecnologias digitais de informação e comunicação de forma crítica, significativa, reflexiva e ética nas diversas práticas sociais (incluindo as escolares) para se comunicar, acessar e disseminar informações, produzir conhecimentos, resolver problemas e exercer protagonismo e autoria na vida pessoal e coletiva.
+\end{habilities}
+
+\subsection{Proposta metodológica}
+A \hyperref[etapas-metodologicas]{proposta deste capítulo} está calcada em cinco pontos, cada um indicando um momento das atividades no ambiente escolar que levam do cotidiano à abstração, retornando em seguida ao cotidiano, então numa outra condição.
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\linewidth]{investigacao1.jpg}
+
+% \end{figure}
+
+A primeira etapa da metodologia está no \hyperref[etapa1]{\textcolor{session1}{\textbf{Explorando: Atividades disparadoras - Etapa 1}}}. Nela o educador deve oferecer materiais sobre a temática do projeto, ou instruir os estudantes sobre como obtê-las. Sua razão de ser está na intenção de que os estudantes se aproximem da temática a ser trabalhada. Em propostas de modelagem matemática, ela costuma ser a discussão de um problema da comunidade. Entretanto é possível partir de qualquer temática. Elas podem ser compostas por textos e/ou vídeos jornalísticos, por materiais artísticos (como poesia, contos, crônicas, apresentações, instalações, performances), por relatórios e artigos científicos, por depoimentos dos próprios estudantes ou de pessoas da comunidade escolar. Qualquer recurso é válido desde que as atividades disparadoras permitam o professor auxiliar os estudantes no exercício inicial de entendimento do contexto em que vivemos.
+
+Sobre o significado do termo "contexto em que vivemos"{}, cabe dizer que aqui ele não é entendido de forma estática, restrito aos limites da vida imediata. O contexto de vida de cada um se transforma na medida em que novas situações e ideias se apresentam e se incorporam à nossa práxis, ou seja, na relação dialética entre teoria e prática. Nesse sentido, é entendido que a escola tem o papel fundamental de ampliar os contextos com os estudantes, trazendo novas situações da realidade e, ao mesmo tempo, criando uma conexão com o cotidiano, gerando a necessidade de questionar e agir de forma crítica.
+
+Segue-se às atividades disparadoras a segunda etapa, que se encontra na seção \hyperref[etapa2]{\textcolor{session1}{\textbf{Explorando: Elaboração de questões - Etapa 2}}}. Nela, cabe ao professor auxiliar os estudantes na organização de suas atividades de trabalho. Dentro da perspectiva didática de sair do concreto ao abstrato, é preciso encontrar na dimensão cotidiana problemas que incitem a pesquisa. Elaborar questões, portanto, é imprescindível. Mas não se trata de qualquer tipo de questão. Considerando a familiaridade dos estudantes à prática científica, o tempo disponível à realização das atividades e a infraestrutura escolar ofertada, as questões devem respeitar alguns limites. Estes seriam:
+
+\begin{itemize}
+\item apresentar caráter quantitativo, dado que a proposta será realizada em aulas de matemática;
+
+\item exequíveis nas condições estabelecidas pelo ambiente escolar e pela dinâmica da disciplina;
+
+\item devem ser comparativas, restringindo o escopo de questões, mantendo-as menos abrangentes;
+
+\item interessantes, de forma que não sejam respondidas com uma busca simples na internet;
+
+\item simplicidade, isto é, apresentar pretensões modestas.
+\end{itemize}
+
+Após a elaboração das questões é hora de formar os grupos de trabalhos. Os componentes do grupo devem acordar sobre um único problema, ou seja, uma única questão a ser tratada, dividindo as tarefas necessárias para seu estudo e se atentando para a revisão daquilo que foi produzido por seus colegas.
+
+Escolhidas as questões por cada grupo, chega-se à terceira etapa que se encontra na seção \hyperref[etapa3]{\textcolor{session4}{\textbf{Organizando: Planejando a investigação - Etapa 3}}}. Aqui, a partir dos problemas colocados, os estudantes deverão se aprofundar nas ferramentas necessárias para a execução da pesquisa. Considerando as características limitadoras das questões, as possibilidades de aprofundamento deverão atinar sobre quais seriam os principais indicadores relacionados ao tema estudado. Devem também reconhecer quais os dados necessários para responder à questão e de onde será possível extraí-los. Nesse sentido, valerá a pena identificar quais as fontes de dados confiáveis. E, também, como proceder metodicamente sobre os dados a partir das ferramentas selecionadas, tal como um projeto de pesquisa acadêmica.
+
+Definido o projeto, torna-se possível partir para a seção \hyperref[etapa4]{\textcolor{session2}{\textbf{Praticando: Desenvolvendo a investigação - Etapa 4}}}. Nela, os estudantes efetivamente utilizarão os novos conhecimentos e provavelmente adquirirão mais alguns. É nesta fase do trabalho que os conceitos e categorias apreendidos no momento anterior serão realmente aplicados, ganhando profundidade. Cabe ao educador, nesta quarta etapa, abordar junto aos estudantes os conceitos como os tipos de gráfico e seus usos, como calcular taxas, razões e porcentagens, e demais ferramentas necessárias para a conclusão da pesquisa.
+
+É importante que você, educador ou educadora, oriente os estudantes desde o início do projeto sobre a necessidade de elaboração de um produto final. Nesta quinta e última etapa, que se encontra na seção \hyperref[etapa5]{\textcolor{session2}{\textbf{Praticando: Comunicando as descobertas - Etapa 5}}}, o estudante efetivará a pesquisa trabalho de análise matemática apresentando um produto final que compartilhe seus resultados com todos os colegas da comunidade escolar.
+
+Este produto pode apresentar variadas formas. Algumas possibilidades são:
+\begin{itemize}
+\item uma revista “científica” com os artigos dos grupos;
+\item um congresso com um seminário de cada “grupo de pesquisa”;
+\item uma série de podcasts, no qual cada grupo faz o seu programa;
+\item um telejornal ou um canal com vídeos de cada grupo;
+\item uma página de internet para cada grupo apresentar suas descobertas sobre o tema estudado;
+\item um fanzine ou uma história em quadrinhos (HQ);
+\item um panfleto ou um folder.
+\end{itemize}
+
+Lembre-se que o produto final permite uma verificação mais aprofundada sobre o processo de pesquisa científica do estudante desde que este saiba desde o início qual deve ser o seu objetivo. O produto, independente da forma materializada, orienta as ações no decorrer das atividades e, quando finalizado, permite o escrutínio das etapas percorridas.
+
+Ainda sobre os produtos conclusivos das pesquisas, é preciso destacar qual deve ser a força de suas considerações finais. Em outras palavras, o que se espera alcançar ao final, considerando o ponto de vista avaliativo. Ao estarem limitadas ao cotidiano dos estudantes, devem servir muito mais como um estímulo à pesquisa científica e ao exercício da intervenção prática sobre a realidade a partir de sua objetividade do que um grande aprofundamento abstracionista. Mais do que responder à questões especulativas, devem verificar problemas de qualquer natureza em seu contexto para, enfim, propor soluções. Indubitavelmente, o conhecimento socialmente produzido não pode ser ignorado. As considerações alcançadas pelos estudantes não podem deixar de ser confrontadas com aquilo que é realizado atualmente, de uma maneira muito mais vigorosa e consequente, dentro do ambiente acadêmico.
+
+Ao longo da proposta de montagem de um itinerário de pesquisa é apresentado a você, detalhadamente, como cada etapa pode ser elaborada. Existem aspectos indispensáveis a serem levados em consideração caso não se queira reproduzir a didática  conteudista comum nas disciplinas escolares.
+
+Todo esse percurso foi pensado para ser desenvolvido em um mês de atividades (com base em um curso de matemática com 5 aulas de 50 minutos por semana). Sugerimos a seguinte distribuição destas aulas: 
+
+\begin{itemize}
+\item 2-3 aulas para a atividade disparadora
+\item 2-3 aulas para a elaboração das questões de investigação
+\item 4-5 aulas para a elaboração do planejamento 
+\item 7-8 aulas para o desenvolvimento da investigação
+\item 4-5 aulas para a produção do produto final e compartilhamento
+\end{itemize}
+
+Ter mais ou menos tempo para dedicar a cada etapa define a complexidade e profundidade das questões investigativas e das análises que os estudantes podem propor.
+
+\subsection{Avaliação}
+
+Em qualquer processo avaliativo é muito importante ter em mente o que se quer avaliar. O principal objetivo deste capítulo é ensinar os estudantes a buscarem autonomamente respostas quantitativas sobre problemas de cunho econômico, social ou ambiental e interpretarem criticamente as informações obtidas por meio da análise dos processos de cálculo de taxas, índices e razões. Assim, é importante avaliar:
+
+\begin{itemize}
+\item o desenvolvimento da autonomia dos estudantes na busca por respostas de questões relativamente complexas;
+\item a compreensão do que são taxas, índices e razões;
+\item a apropriação da matemática envolvida nos cálculos de taxas, índices e razões;
+\item como esse conhecimento pode ser utilizado criticamente.
+\end{itemize}
+
+A avaliação aqui é compreendida como um processo formativo, que pode ser entendido como instrumento de caráter pedagógico, regulador (SANMARTÍ, 2009). Nesse entendimento, os instrumentos avaliativos têm o objetivo de identificar mudanças que necessitam ser introduzidas no processo de ensino, de forma a ajudar os estudantes em seu próprio processo de construção de conhecimento. 
+
+Toda a proposta deste capítulo tem a ver com os estudantes terem a oportunidade de buscarem caminhos próprios, individuais em alguma medida, de forma a tornarem-se mais autônomos, se verem como produtores de conhecimento e agentes de mudança da sociedade. É importante que o processo avaliativo reflita estas ideias e seja instrumento que ajude no desenvolvimento desta autonomia. 
+
+Dentro dessa perspectiva, é recomendável que o processo avaliativo seja realizado a partir dos materiais elaborados pelos próprios estudantes ao longo de todo o percurso do capítulo e de atividades de autoavaliação e reflexão sobre os percursos individualizados. 
+
+Os materiais produzidos pelos estudantes são: 
+\begin{itemize}
+\item As perguntas (na 2\super{a} etapa);
+\item Um planejamento em grupo, na 3\super{a} etapa, que mostrará a interpretação inicial dos estudantes sobre os índices e taxas, assim como uma hipótese a ser averiguada e uma proposta de operações e análises.
+\item Ao final da 4\super{a} etapa o estudante responderá individualmente uma série de questões que, ao serem comparadas com seu planejamento inicial, poderá mostrar uma evolução da compreensão sobre o emprego de taxas e índices na análise de situações do mundo real. Este material também possibilitará o educador a perceber o quanto o estudante se apropriou dos métodos utilizados pelo seu grupo para realizar as análises de dados. 
+\item O produto final, resultado da 5\super{a} etapa desta metodologia, é a concretização do uso social da matemática trabalhada durante todo o capítulo e também pode ser avaliado.
+\end{itemize}
+
+A avaliação formativa se dá na comparação dos instrumentos produzidos nas etapas 2 e 3 com aqueles produzidos nas etapas 4 e 5. A partir dessa comparação é possível avaliar a evolução do estudante quanto às estratégias utilizadas, aos sentidos dados para taxas, índices e razões, aos cálculos realizados e à utilização dessas informações para justificar opiniões e pensar em ações concretas para a mudança da realidade. 
+
+Já as autoavaliações têm papel fundamental no processo de desenvolvimento de autonomia e auto regulação para o estudo. Uma possibilidade é inserir atividades de autoavaliação no meio das etapas 3, 4 e 5 ou ao final delas. Alguns exemplos de autoavaliação estão no \hyperref[avaliacoes]{final deste capítulo}
+
+Se o educador sentir falta de um instrumento individual de avaliação, uma possibilidade é propor a produção de um relatório individual ao final da 4ª ou da 5ª etapa, com o objetivo de evidenciar os aprendizados individuais. Uma possibilidade de roteiro para um relatório individual também está presente no\hyperref[relatorio-individual]{final do capítulo}
+
+\subsection{Considerações finais}
+
+A metodologia proposta se apresenta como um guia para as atividades em sala de aula, sendo verificável apenas no momento de sua aplicação. Por isso, a equipe do Livro Aberto conseguirá ter melhores condições de avaliação da proposta a partir do retorno da sua atividade. Pedimos que entre em contato para compartilhar suas experiências e projetos realizados a partir do livro. Assim, será possível construir um inventário bastante volumoso de exemplos e práticas que apontam os limites e as possibilidades da utilização dessa metodologia.
+
+Por último, lembre-se que o desenvolvimento desta unidade é um convite a interdisciplinaridade. Compartilhe suas ideias com seus colegas de outras áreas e convide-os para construir o projeto com você.
+
+\subsection{Leituras de aprofundamento}
+
+Sobre as características de nosso período conjuntural, de expansão das tecnologias da informação e da comunicação a sua predominância na organização de nossas vidas, confira:
+
+CASTELLS, Manuel. A sociedade em rede [tradução de Roneide Venancio Majer] 6ª ed. atual. – São Paulo : Paz e Terra, 1999 (A era da informação: economia, sociedade e cultura; v1).
+
+Sobre o significado e o proceder da análise de conjuntura, confira:
+SOUZA, Herbert José de. Como se faz análise de conjuntura. - 32ª ed. - Petrópolis : Vozes, 2012.
+
+\end{apresentacao}
+
 \explore{Para começo de conversa}
 
 As análises sobre a realidade social precisam se atentar àquilo que os especialistas chamam de conjuntura (Você Sabia: O que é conjuntura?). Nossa conjuntura compreende o período que se inicia a partir da segunda metade do século XX. Em nossa época, ocorre a terceira revolução industrial, também chamada de revolução microeletrônica ou digital. Essa revolução é caracterizada pela passagem de processos mecânicos e analógicos para processos digitais.
@@ -102,6 +268,7 @@ A chave para quebrarmos a reprodução desse entendimento está em partirmos do 
 A proposta deste capítulo está calcada em cinco pontos, cada um indicando um momento das atividades no ambiente escolar que levam do cotidiano à abstração, retornando em seguida ao cotidiano, já numa nova condição
 
 \begin{figure}[H]
+\phantomsection\label{etapas-metodologicas}
 \centering
 \includegraphics[width=350bp]{investigacao1.jpg}
 
@@ -141,6 +308,52 @@ Portanto, quando nos referimos à conjuntura, estamos considerando uma forma de 
 
 \end{knowledge}
 
+\begin{paginatexto}
+\section{Atividades disparadoras - Etapa 1}
+(Tempo estimado 2-3 aulas)
+
+Vamos começar os trabalhos a partir dos temas disparadores. Como o próprio nome sugere, trata-se de atividades orientadas a partir de uma situação inicial propensa à problematização.
+
+O objetivo dessa etapa é estimular o pensamento dos estudantes para formulação de perguntas a partir de situações comuns ao seu cotidiano, interrompendo a leitura naturalizante de seu contexto. Um segundo objetivo é iniciar o contato dos estudantes com o conceito de indicadores. Assim, as atividades disparadoras já devem trazer alguns índices ligados ao tema escolhido para o projeto. 
+
+Os temas podem ser apresentados de variadas formas. Podem ser compilados na própria sala de aula, a partir de discussões regulares apresentadas pelos estudantes ao longo do ano letivo, como um acontecimento particular daquela turma. Podem ser também temas de repercussão em veículos de comunicação, como a situação política a nível institucional, a economia e seus desdobramentos no dia-a-dia da comunidade escolar, as questões ambientais mais importantes do momento ou a última moda cultural.
+
+Com o avanço das tecnologias da informação e da comunicação, vale se aprofundar também nas discussões alçadas por influenciadores digitais. Existem conteúdos produzidos com o intuito de avaliar a realidade social que são capazes de alcançar corações e mentes dos estudantes.
+
+Para exemplificar a metodologia foi escolhido um caso que seja vivenciado por um conjunto gigantesco de pessoas, mas de maneiras completamente diversas. Algo recorrente na história da humanidade, mas que sempre se apresenta sob novas formas: as crises civilizatórias.
+
+O mundo que comporta um trânsito intenso de informações é também um mundo marcado pela circulação massiva de pessoas e mercadorias. Tal qual o evento das grandes navegações na metade do milênio passado, a expansão das relações humanas representa uma nova configuração territorial. Novas cidades surgem, velhas cidades se modificam, pessoas separadas por milhares de quilômetros se integram numa mesma relação.
+
+Este conjunto de novas relações se desdobra em diversas consequências, capazes de erguer impérios como de derrubá-los. Do mesmo modo que a expansão da atividade econômica agrícola através da escravização consolidou o império romano, o expansão territorial desregrada e o contato de diversas culturas disseminou graves epidemias que contribuíram para a sua deterioração. Pois um dos pilares que sustentam qualquer formação social é a ideia de segurança sanitária não anormalidade na manutenção biológica da vida. Isso significa que toda a sociedade está em risco.
+
+De tempos em tempos a humanidade vivencia grandes crises sanitárias, que afetam diferentemente os diversos territórios ocupados. Considerando nossa capacidade científica, quais são os motivos que nos impedem de evitá-las?
+
+A pandemia causada pelo vírus SARS-CoV-2 pode exemplificar bem isso. Ela coloca em xeque o impacto do desenvolvimento urbano sobre a natureza e sobre a vida dos seres humanos. Também coloca em xeque a maneira como organizamos os nossos sistemas de saúde, para que possamos ter uma qualidade de vida para a população como um todo. E temos também uma crise de caráter da manutenção da produção e reprodução das condições de existência.
+
+Perceba que a pandemia atua como um tema disparador pois:
+
+\begin{itemize}
+\item para ser compreendido, é necessário analisar múltiplas dimensões da vida, como a da cultura, a da saúde, a da política, etc;
+\item enquanto tal, pode ser trabalhado em conjunto com outras disciplinas, aumentando o repertório intelectual dos estudantes;
+\item traz informações quantitativas para sua devida compreensão, que é nosso interesse particular na aula de matemática;
+\item mesmo sendo um fenômeno global, só pode ser alcançado adequadamente a partir da particularidade da vida dos estudantes.
+\end{itemize}
+
+Os textos disparadores foram elaborados por nós partir de dados retirados de matérias de jornais, divulgações de institutos de pesquisa e estudos científicos. No entanto, eles podem ser substituídos por outros recursos como textos e/ou vídeos jornalísticos, por materiais artísticos (como poesia, contos, crônicas, apresentações, instalações, performances), por relatórios e artigos científicos, por depoimentos dos estudantes, entre outros. Entretanto, é necessário que a atividade disparadora coloque o estudante em contato não apenas com o tema, mas também com os índices e taxas ligados a ele. Assim, é muito interessante que para além de vídeos, textos, músicas e notícias, haja momentos de revisar conteúdos matemáticos necessários para a compreensão e o cálculos destes indicadores, como taxas, razões, porcentagens, proporções, etc. 
+
+É possível também trabalhar de forma interdisciplinar conversando com professores de outras áreas para que auxiliem na discussão inicial. Uma ideia de atividade que achamos interessante para este momento é, após os estudantes realizarem uma exploração inicial a partir dos materiais sugeridos acima, o educador pode solicitar que eles produzam uma redação sobre o tema considerando as discussões realizadas até ali. Este trabalho pode ser feito em parceria com o professor de língua portuguesa, que orientaria os estudantes sobre os estilos de redação.
+
+Sobre os materiais e contextos apresentados como atividades disparadoras, consideramos importante que eles possuam as seguintes características:
+
+\begin{itemize}
+\item \textbf{Sejam multidimensionais}: os problemas da vida real usualmente estão inseridos em contextos que exigem a investigação de mais de uma dimensão da vida. A maior tarefa, neste caso, é tentar evidenciar essas dimensões para que os estudantes possam confrontá-las, percebendo a necessidade de integrá-las para realizar análises críticas e chegar à uma compreensão mais ampla dos problemas. Além disso, apresentar várias dimensões permite ampliar as possibilidades de que o estudante realmente se identifique com o contexto. É possível, por exemplo, trazer contextos que confrontem: o meio ambiente e as formas de trabalho; a qualidade de vida, a organização do trabalho, o desenvolvimento econômico e as desigualdades sociais; as mudanças climáticas, as enchentes em centros urbanos e as secas no semiárido nordestino;   etc.
+\item \textbf{Permitam análises quantitativas}: essa característica é necessária sobretudo por estarmos particularmente interessados em trabalhar com matemática. Assim, é importante o docente estudar e ter algumas ideias de análises quantitativas que podem ser empregadas no estudo do contexto. Caso o tema tenha um caráter amplo e órgãos oficiais já tenham calculado indicadores relacionados, o professor pode trazer atividades que apresentem alguns deles aos estudantes. Caso o tema tenha caráter mais local e careça de dados, o professor pode trazer atividades que estimulem a necessidade dos estudantes realizarem uma pesquisa com coleta de informações.
+\item \textbf{Aproximem o estudante}: sentir-se integrado no contexto é imperativo em qualquer processo educativo. Por isso, as atividades disparadoras devem permitir ao estudante fazer reflexões partir de sua realidade, propondo questões que posteriormente serão melhor formuladas para conduzir um processo de investigação científica. Assim, nenhuma atividade deve ser completamente fechada. Por outro lado, alguns direcionamentos geralmente são importantes para auxiliar o estudante a perceber que o contexto de fato se aproxima de sua realidade.
+\end{itemize}
+
+Desta forma, neste capítulo é entendido e reforçado o papel fundamental do educador como um profissional que precisa de tempo, de teoria e de uma prática que lhe permitam conhecer a realidade dos estudantes ao mesmo tempo em que possam estudar os problemas de forma crítica, auxiliando os estudantes nesse processo de construção de seus conhecimentos.
+
+\end{paginatexto}
 
 \explore{Atividades disparadoras - Etapa 1}
 \phantomsection\label{etapa1}
@@ -234,6 +447,80 @@ Em outros territórios, como o Vietnã, houve fechamento de fronteiras.
 
 Para além do continente asiático, o mundo apresentou formas replicadas das estratégias acima mencionadas, mas com resultados bastante diferentes.
 
+\clearpage
+\begin{objectives}{Calculando e interpretando dados da COVID-19 por região}
+{
+  Esta é uma que atividade que traz dados relacionados à pandemia e que tem dois objetivos específicos de aprendizagem:
+
+  \begin{itemize}
+  \item Lembrar conceitos matemáticos como percentuais, taxas e razões e entendê-los como uma forma útil para realizar comparações;
+  \item Reconhecer a importância de dados quantitativos para nos ajudar a compreender algumas dimensões de uma determinada realidade.
+  \end{itemize}
+
+  O professor deve ficar a vontade para criar atividades parecidas para os seus próprios temas disparadores, observando os objetivos específicos acima.
+}{1}{0}
+\end{objectives}
+\begin{answer}{Calculando e interpretando dados da COVID-19 por região}
+{
+  Neste exemplo específico, é importante que os estudantes saibam completar a tabela realizando corretamente os cálculos (com o auxílio de uma calculadora ou de uma planilha eletrônica). A resposta esperada do item \titem{a)} é a seguinte.
+
+
+\begin{table}[H]
+\resizebox{\linewidth}{!}
+{\centering
+\setlength\tabcolsep{4pt}
+\begin{tabu} to \textwidth{|c|r|r|r|r|r|r|}
+\hline
+\thead
+Região & População & Casos & Óbitos & \makecell{Coeficiente de \\ Incidência} & \makecell{Coeficiente de \\ Mortalidade} & \makecell{Taxa de \\ Letalidade} \\
+\hline
+Centro-Oeste & 16 297 074 & 5 090 & 129 & $31$ & $0{,}8$ & $2{,}5\%$ \\
+\hline
+Nordeste & 57 072 654 & 58 316 & 3 568 & $102$ & $6{,}3$ & $6{,}1\%$ \\
+\hline
+Norte & 18 430 980 & 30 900 & 2 190 & $168$ & $11{,}9$ & $11{,}9\%$\\
+\hline
+Sudeste & 88 371 433 & 74 727 & 6 216 & $85$ & $7{,}0$ & $7{,}1\%$\\
+\hline
+Sul & 29 975 984 & 8 556 & 297 & $29$ & $1{,}0$ & $3{,}5\%$\\
+\hline
+\end{tabu}}
+\caption{Fonte: \href{https://COVID.saude.gov.br/}{Ministério da Saúde} (Consulta em 12 de Maio de 2020)}
+\end{table}
+}{1}
+\end{answer}
+\begin{answer}{Calculando e interpretando dados da COVID-19 por região}
+{
+  No item \titem{b)} temos uma pergunta de caráter mais aberto, pois não há uma definição do significado de “região mais afetada”. A intenção é justamente gerar a discussão e mostrar a necessidade de criar um conceito que possa captar a ideia de “região mais afetada”.
+
+  Quando os estudantes se depararem com a pergunta, é possível que alguns interpretem a tabela e discutam os impactos considerando apenas os dados brutos, como o total de casos e de óbitos. Neste caso, poderão dizer que a região mais afetada era a Sudeste, com 74.727 casos e 6.216 mortes. Para expressar essa resposta, podemos sugerir que elaborem gráficos de setores.
+
+  \begin{figure}[H]
+  \centering
+
+  \includegraphics[width=.7\linewidth]{investigacao-professor1}
+
+  \includegraphics[width=.7\linewidth]{investigacao-professor2}
+  \end{figure}
+
+  No entanto, é importante que surja a questão dos dados relativos, e utilizem as demais colunas da tabela. Neste caso, o coeficiente de incidência e de mortalidade da região Norte eram os mais elevados, com 168 casos e 11,9 mortes a cada 100 mil habitantes. Para expressar essa resposta, poderão fazer um gráfico de colunas.
+
+  Uma ideia, para para comparar o número bruto com o relativo é usar gráficos com duas colunas por região, uma indicando o número total de óbitos da região (com marcação da escala no eixo esquerdo) e outro com o coeficiente de mortalidade (com marcação da escala no eixo direito).
+
+  \begin{figure}[H]
+  \centering
+
+  \includegraphics[width=\linewidth]{investigacao-professor3}
+  \end{figure}
+
+  Reforça-se a importância de evidenciar que a pergunta não está objetivamente bem formulada e que mesmo estas análises não respondem completamente a questão sobre qual era a região mais afetada, pois como já foi dito, essa ideia não foi conceituada. Para melhorar a análise, é preciso aprofundar-se em outros indicadores, de outras dimensões, montar algum critério quantitativo que capte o sentido de “região mais afetada” e ajude na comparação entre as regiões.
+
+  No item \titem{c)}, é esperado promover uma reflexão sobre as possibilidades que as informações proporcionais podem trazer para uma compreensão mais aprofundada sobre um fenômeno no qual é necessário comparar populações diferentes. A passagem do pensamento aditivo para o proporcional nem sempre é simples para os estudantes e ajudá-los a perceber suas vantagens é importante para que eles se interessem por este outro olhar.
+
+  No item \titem{d)}, o estudante pode apenas comparar duas regiões da tabela, mas espera-se que inicie uma discussão sobre outras formas de afeto. É esperado que nesta questão ele consiga realizar uma comparação um pouco mais complexa, analisando a situação escolhida para a comparação tanto pelo enfoque dos valores absolutos, quanto pelo dos valores proporcionais.  
+
+}{9}
+\end{answer}
 
 \begin{task}{Calculando e interpretando dados da COVID-19 por região}
 
@@ -313,6 +600,8 @@ No Brasil este indicador é produzido anualmente pelo IBGE, por meio da Pesquisa
 \centering
 
 \includegraphics[width=\linewidth]{investigacao7}
+\caption{Fonte: \href{https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18318-piramide-etaria.html}{IBGE - PNAD Contínua}}
+\label{}
 \end{figure}
 
 \know{Índice de atendimento total de esgoto}
@@ -372,8 +661,36 @@ Na tabela a seguir é possível encontrar os dados temporais de disponibilidades
 \includegraphics[width=.9\textwidth]{investigacao9}
 \end{figure}
 
-
 \know{Índice de vulnerabilidade social (IVS)}
+\clearmargin
+
+\begin{objectives}{}
+{
+  O objetivo específico desta atividade é ajudar os estudantes a compreenderem a necessidade de analisar os problemas da vida real a partir de várias dimensões e de seus indicadores.
+}{1}{0}
+\end{objectives}
+\begin{sugestions}{}
+{
+  O texto do exemplo 2 e a atividade pretendem provocar nos estudantes a necessidade de olhar para os problemas da realidade em suas diversas dimensões e indicar alguns caminhos para iniciar uma análise mais aprofundada delas. Em outras palavras, dão subsídio para que o estudante faça suas questões de forma mais fundamentada e objetiva.
+}{1}{0}
+\end{sugestions}
+\begin{answer}{}
+{
+Algumas respostas esperadas para o item \titem{a)}:
+
+\begin{itemize}[wide]
+\item \textbf{Pirâmide Etária}: não é exatamente um indicador na forma de um número, mas sim um indicador da distribuição da população. Há informações de que a Covid é mais letal em idosos. Assim, uma possibilidade de investigação seria verificar a mortalidade por faixa etária, e para isso precisaŕiamos utilizar a pirâmide etária da população estudada.
+
+\item \textbf{Leitos hospitalares por habitante}: Há uma preocupação sobre a possível falta de leitos para atendimentos da doença. Além disso, a distribuição de leitos por habitante não é homogênea. Assim, questões possíveis de serem investigadas dizem respeito a como é o atendimento médico em regiões diversas. Para isso, o número de leitos por habitante é um importante indicador.
+
+\item \textbf{Índice de atendimento total de esgoto}: O atendimento de esgoto é um indicador das condições sociais de uma região, além de estar diretamente relacionado às questões sanitárias. Talvez não seja um indicador tão importante para analisar as questões relacionadas à Covid.
+
+\item \textbf{Índice de Vulnerabilidade Social (IVS)}: Conforme expresso na atividade disparadora, há indicativos de que a Covid tem afetado populações distintas de formas distintas, e que isso teria relação com a condição social. Além disso, esse índice envolve mais de uma dimensão, como o trabalho. Pessoas que exercem trabalhos mais precarizados não conseguem realizar a quarentena de forma efetiva, e portanto estariam mais expostas à contaminação. Outra questão se refere ao acesso ao tratamento, que também é mais precário para pessoas de baixa condição social.
+\end{itemize}
+}{1}
+\end{answer}
+
+
 Este indicador é formado pela composição de vários outros, é o que se chama de indicador multidimensional. Sua intenção é resumir em um único valor múltiplos parâmetros relacionados ao bem estar de uma população. Estes parâmetros são uma composição de indicadores de três grandes grupos:
 
 \begin{itemize}
@@ -417,7 +734,7 @@ Para saber quais os indicadores que compõem cada um dos grupos do IVS e seus re
 
 \begin{task}{}
 
-O texto acima trouxe a ideia de que podemos utilizar informações quantitativas e indicadores para compreender algumas dimensões dos problemas causados pela pandemia.
+O texto anterior trouxe a ideia de que podemos utilizar informações quantitativas e indicadores para compreender algumas dimensões dos problemas causados pela pandemia.
 
 \begin{enumerate}
 \item A seguir apresentamos as definições de alguns indicadores. Escreva como você imagina que cada um deles pode estar relacionado com a pandemia.
@@ -457,9 +774,55 @@ O texto acima trouxe a ideia de que podemos utilizar informações quantitativas
 
 \end{task}
 
+\clearpage
+\def\currentcolor{session1}
+\begin{paginatexto}
+{
+\section{Elaboração de questões - Etapa 2}
+(Tempo estimado 2-3 aulas)
+
+Esta etapa tem como objetivos definir as perguntas de investigação, que orientarão todo o trabalho do capítulo daqui para frente, e os integrantes dos grupos de pesquisa. 
+
+Ela se inicia com a discussão sobre quais devem ser os critérios adotados para formular as perguntas de investigação e utiliza critérios para limitar o universo possível de investigação dos estudantes, de forma a facilitar o trabalho do educador e garantir os objetivos conceituais e metodológicos do capítulo. Desta forma, as perguntas de investigação formuladas pelos estudantes devem ser:
+
+\begin{itemize}
+\item \textbf{Quantitativas}
+
+A supressão deste critério traz o risco dos estudantes realizarem perguntas investigativas dentro do tema, mas que são respondidas por meio de análises nas quais a matemática tem pouco ou nenhum papel. Este critério tem a função de manter as investigações dentro dos objetivos pedagógicos e conceituais da disciplina de matemática. 
+
+\item \textbf{Exequíveis} 
+
+Lembre-se que este capítulo é pensado de forma a ser desenvolvido em um mês de atividades (com base em um curso de matemática com 5 aulas de 50 minutos por semana) e que foi pensado com seguinte distribuição de aulas: 
+2-3 aulas para a atividade disparadora
+2-3 aulas para a elaboração das perguntas de investigação
+4-5 aulas para a elaboração do planejamento 
+7-8 aulas para o desenvolvimento da investigação
+4-5 aulas para a produção do produto final e compartilhamento
+Ter mais ou menos tempo para dedicar a cada etapa define a complexidade e profundidade das questões investigativas e das análises que os estudantes podem propor.
+
+\item \textbf{Comparativas}
+
+Questões comparativas limitam o universo possível do estudante investigar. Esse é um critério de simples compreensão e exemplificação para os estudantes e bastante efetivo em limitar a complexidade das análises.
+interessantes e/ou sedutoras
+O engajamento é fundamental para o desenvolvimento da autonomia e da autorregulação para o estudo. Trabalhar com perguntas investigativas desinteressantes faz com que os estudantes se envolvam menos na proposta.
+
+\item \textbf{Simples}
+
+Este critério tem a função de reforçar a limitação do que é possível investigar no ambiente escolar, garantido que o projeto todo caiba em um período possível no planejamento da disciplina e seja concretizado apesar de possíveis limitações materiais.
+\end{itemize}
+
+O livro do estudante traz um exemplo de elaboração de pergunta investigativa, num processo que se inicia com uma questão que não atende os critérios propostos, mas que vai sendo re-elaborada até passar a atender todos eles. Estes critérios devem ser modulados de acordo com a realidade de cada escola. Por exemplo, em uma situação escolar na qual não é possível que os estudantes realizem pesquisas pela internet para coletar dados, é possível olhar para a própria comunidade e fazer a coleta em campo. Neste caso, as perguntas de investigação devem ser limitadas àquelas nas quais os educandos conseguem as informações para montar seus próprios indicadores a partir de entrevistas com a comunidade local.
+
+Ao mesmo tempo que é imprescindível definir critérios para a elaboração de perguntas para investigação no projeto, é igualmente importante possibilitar que os estudantes possam se dedicar a questões de interesse próprio. É a partir deste espaço que os estudantes podem significar sua experiência escolar e de aprendizagem de uma forma mais saudável, significativa e satisfatória. Relatos sobre experiências de aberturas curriculares para os estudantes podem ser encontrados em (SINGER, 2010; APPLETON, 2017; HECHT, 2016).
+Um cuidado: ter muitos estudantes investigando assuntos diferentes é um grande desafio. Assim, uma possibilidade bem interessante é organizá-los em grupos por tema de interesse. Para isso o educador pode classificar as perguntas investigativas propostas pelos alunos e alunas em diferentes subtemas e juntar os estudantes que propuseram investigações do mesmo subtema. O grupo (que idealmente deve conter por volta de 4 integrantes) deve chegar em uma pergunta única, que será investigada coletivamente.
+
+É interessante utilizar uma ficha para que os estudantes pratiquem a elaboração de perguntas investigativas que atendam todos os critérios. Estas fichas com as questões iniciais de cada estudante e a questão definida pelo grupo podem ser arquivadas conjuntamente, de forma a construir um portfólio do percurso dos estudantes e do grupo, ao ser alimentado com novos materiais a cada etapa da pesquisa. Um exemplo de ficha está ao \hyperref[elaboracao-questoes]{final do capítulo}
+
+}
+\end{paginatexto}
+
 \explore{Elaboração de Questões - etapa 2}
 \phantomsection\label{etapa2}
-
 \phantomsection\label{pergunta-cientifica}
 \vspace{-.5\baselineskip}
 \section{O que é uma boa pergunta científica?}
@@ -570,6 +933,47 @@ Isso não significa que você deva abandonar esse desejo. Ao contrário, nossa i
 
 \end{task}
 
+\clearpage
+\begin{paginatexto}
+
+\section{Planejando a Investigação - Etapa 3}
+(Tempo estimado 3-4 aulas)
+
+\subsection{Introdução}
+Ao desenvolver projetos abertos, dois grandes desafios são garantir os objetivos pedagógicos traçados pelo educador e que o projeto tenha início, meio e fim dentro do tempo proposto no cronograma. Neste sentido, o planejamento de como a investigação será executada é um importante aliado, pois permite direcionar o olhar e o trabalho dos estudantes sem obrigar todos a seguirem um mesmo caminho.
+
+Por outro lado, os estudantes do Ensino Médio precisam ainda de orientação para desenvolver um planejamento que seja completo e exequível.
+Desta forma, o objetivo específico desta seção é orientar os estudantes em como realizar um bom planejamento de pesquisa. Isso passa por aprofundar a compreensão sobre indicadores, de forma a conseguir avaliar quais são adequados para responder sua pergunta investigativa e como encontrar fontes confiáveis de informações. Os estudantes também devem compreender o conceito de hipótese e relembrar como gráficos diversos, diagramas e tabelas podem ser utilizados adequadamente para evidenciar informações quantitativas.
+
+Nesta etapa do projeto, que se inicia assim que os grupos estão montados, as perguntas têm papel fundamental: 
+
+\begin{enumerate}
+\item os grupos devem ter a sua pergunta de investigação definida e 
+ 
+\item as perguntas orientadoras, sugeridas na “Atividade: Roteiro de planejamento da investigação” desta seção, devem ser apresentadas. Entretanto ainda não deve haver a expectativa de responder a todas.
+ \end{enumerate} 
+
+Caso haja oportunidade, é interessante entregar uma ficha por grupo com todas as questões que devem ser respondidas no planejamento. Compreender as questões apresentadas nesta ficha de planejamento deve ser a primeira etapa deste processo. Ao formularem uma pergunta, é pouco provável que os estudantes já tenham um plano de como trabalhar para respondê-la. 
+É sugerido que após entregar o roteiro de planejamento aos estudantes, eles tenham um tempo (em seus grupos) para discutirem o que acham que já conseguem responder e quais questões necessitam de novas informações/aprofundamentos. O educador pode ir caminhando com os grupos todos meio juntos, fazendo pausas para discussões mais curtas ou mais longas (dependendo das demandas) de forma a irem preenchendo o planejamento ao longo das 3 ou 4 aulas reservadas para esta etapa do projeto.
+
+Uma outra vantagem de utilizar a ficha de planejamento, com todas as questões, é que ela pode ser utilizada como uma ferramenta avaliativa. Pois, ao finalizar a pesquisa é possível verificar os passos propostos, se eles foram seguidos, se as hipóteses foram discutidas na conclusão, etc. 
+
+A questão 1 do roteiro de planejamento dá espaço para a discussão sobre o conceito de hipótese, fundamental no modo de fazer da ciência. Já as questões 2 e 3 do mesmo roteiro, que são sobre os indicadores e perguntam sobre a relação destes com o tema do grupo, são um ótimo momento para fazer uma pausa no projeto e garantir que todos entendam a função dos indicadores e taxas para a compreensão mais aprofundada de um tema. Da mesma forma, a questão 4 traz a possibilidade de realizar uma discussão sobre fontes confiáveis de informações. E as questões 5 e 6 do roteiro abrem oportunidade para retomar estratégias para organizar os dados em gráficos e tabelas, relembrando os tipos de gráficos mais utilizados e seus principais usos. Cabe ao educador, em sala de aula, entender a necessidade de seus estudantes e planejar quais questões do roteiro necessitam de discussões longas e aprofundadas sobre determinados conteúdos e quais demandam discussão curta (apenas para relembrar algumas informações) ou ainda intervenções em grupos pontuais para sanar questões que eventualmente apareçam.
+
+\end{paginatexto}
+
+\def\currentcolor{session4}
+
+
+\begin{objectives}{Hipóteses}
+{
+Conceituar hipótese e ajudar os estudantes a identificarem suas hipóteses sobre sua pergunta de investigação. Este é um passo importante que guiará quais dados devem ser coletados e quais análises devem ser feitas, pois o trabalho de investigação tem como finalidade tentar verificar a hipótese inicial e portanto é imprescindível que as hipóteses dos estudantes sejam verificáveis. 
+
+Por exemplo, para responder a hipótese de como o emprego foi influenciado pela pandemia, é necessário definir qual será o grupo alvo do estudo e realizar uma busca por indicadores desse grupo ou, no caso proposto, realizar uma enquete com o alvo. É possível fazer uma discussão sobre quais grupos são mais adequados para a comparação. A hipótese que se quer verificar guia toda a investigação!
+}{1}{1}
+\end{objectives}
+
+
 
 \arrange{Planejando a investigação - etapa 3}
 \phantomsection\label{etapa3}
@@ -622,7 +1026,63 @@ Depois da elaboração das perguntas, a Priscila e o Thiago se juntaram ao Rodri
 
 \end{example}
 
+\clearmargin
+\begin{objectives}{Indicadores da força de trabalho}
+{
+  O objetivo desta atividade é mostrar ao estudante que os indicadores, apesar de ter uma matemática simples na maioria das vezes, é permeado de escolhas para representar questões específicas. Os quatro primeiros itens da atividade pedem para que os estudantes criem formas de cálculo para expressar a taxa de desemprego e a taxa de subutilização da força de trabalho. Já no item (e) o estudante deve pesquisar a metodologia utilizada pelo IBGE e comparar com a discussão que ele próprio fez.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Indicadores da força de trabalho}
+{
+  A seguir apresentamos as taxas que o IBGE calcula para que vocês, professores, tenham um conhecimento antecipado delas. Vocês verão que ao longo da discussão com os estudantes, eles mesmos irão propor o cálculo igual a uma ou outra taxa já estipulada pelo IBGE.
 
+  Segundo os relatórios da PNAD contínua do IBGE [1], são consideradas as seguintes taxas.
+
+  \begin{table}[H]
+  \centering
+  
+  \begin{tabu} to \textwidth{|d{.4\linewidth}|d{.5\linewidth}|}
+  \hline
+  \tmcol{1}{|c|}{Nome da Taxa} & \tmcol{1}{c|}{Cálculo} \\
+  \hline
+  Taxa de desocupação & \parbox{\linewidth}{Numerador: Desocupados \\ Denominador: Força de Trabalho} \\
+  \hline
+  Taxa combinada da desocupação e subocupação & \parbox{\linewidth}{Numerador: Subocupados + desocupados \\ Denominador: Força de trabalho} \\
+  \hline
+  Taxa combinada da desocupação da força de trabalho potencial & \parbox{\linewidth}{Numerador: Desocupados + Força de Trabalho Potencial  \\ Denominador: Força de Trabalho ampliada} \\
+  \hline
+  Taxa composta da subutilização da força de trabalho & \parbox{\linewidth}{Numerador: Subocupados + desocupados + força de trabalho potencial \\ Denominador: Força de Trabalho ampliada} \\
+  \hline
+  Taxa de desalento na força de trabalho ampliada & \parbox{\linewidth}{Numerador: Pessoas deslanetadas \\ Denominador: Força de Trabalho ampliada} \\
+  \hline
+  Percentual de desalentados na população fora da força de trabalho & \parbox{\linewidth}{Numerador: Pessoas desalentadas \\ Denominador: População fora da Força de Trabalho} \\
+  \hline
+  Percentual de desalentados na força de trabalho potencial & \parbox{\linewidth}{Numerador: Pessoas desalentadas \\ Denominador: Força de Trabalho potencial} \\
+  \hline
+  \end{tabu}
+  \end{table}
+
+  Professor, perceba as diferentes razões utilizadas pelo IBGE para calcular indicadores das características da força de trabalho. Quais delas deve ser utilizada para indicar o desemprego: a “taxa de desocupação”, ou a “taxa combinada da desocupação e da força de trabalho potencial”, ou alguma outra? Observe que a resposta depende dos objetivos. Se queremos a medida de desemprego apenas entre aqueles disponíveis para trabalhar, calculamos a “taxa de desocupação”. Se, por outro lado, consideramos as pessoas da força de trabalho potencial como desempregadas, calculamos a “taxa combinada”. Por outro lado ainda, poderíamos pensar em fragmentar a força de trabalho ampliada entre aqueles disponíveis para trabalhar e aqueles indisponíveis, considerando apenas os primeiros como desempregados, mesmo que não tenham buscado um emprego. Esperamos que com isso o professor possa encaminhar as discussões com os estudantes.
+
+  Uma discussão análoga deve acontecer propor medida de subutilização da força de trabalho.
+
+}{0}{9}
+\end{sugestions}
+
+\begin{answer}{Indicadores da força de trabalho}
+{
+  A seguir, indicamos algumas possibilidades que devem surgir das respostas dos estudantes.
+
+  No item \titem{a)} é provável que a maioria dos estudantes calcule a taxa de desemprego através da razão entre o número de pessoas ocupadas e o número de pessoas na força de trabalho (é o que o IBGE chama de “taxa de desocupação”). Se feita desta forma, no exemplo dado chegamos a uma taxa de $\dfrac{12.791}{96.138}=13,3\%$. Por outro lado, é possível que se considere como desempregadas as pessoas na força de trabalho potencial. Assim, deveríamos calcular a razão entre a soma do total de desocupados ($12.791$), com o total de pessoas na força de trabalho potencial ($13.542$), e o total de pessoas na força de trabalho ampliada, que é formada pelas pessoas na força de trabalho e mais as pessoas na força de trabalho potencial (é o que o IBGE chama de taxa combinada da desocupação e da força de trabalho potencial). Assim chegamos na taxa de $\dfrac{12.791+13.542}{96.138+13.542}=24\%$. A questão, no final das contas, é compreender o significado da taxa e qual a sua utilidade. Por exemplo, se buscamos compreender o desemprego apenas entre
+
+  No item \titem{b)} também devem aparecer formas distintas de se calcular a taxa. Uma das possibilidades seria calcular a proporção de subocupados dentre os ocupados. Neste caso temos uma taxa de $\dfrac{5.613}{83.347}=6,7\%$. Este cálculo pode ser feito se estamos interessado em compreender apenas quanto dos trabalhadores com alguma ocupação estão trabalhando menos do que poderiam. No entanto, calculada desta forma a taxa não expressa a subutilização mais ampla, pois não inclui os desocupados. Para incluí-los, poderíamos calcular a proporção de subocupados ou desocupados dentro da força de trabalho (é o que o IBGE chama de Taxa combinada da desocupação e subocupação). Neste caso chegamos a uma taxa de $\dfrac{5.613+12.791}{96.138}=19,1\%$. Novamente, esta taxa não considera como subutilizados os trabalhadores na força de trabalho potencial. No entanto, se entendemos que a força de trabalho potencial também é medida de subutilização, poderíamos calcular a razão entre a soma subocupados + desocupados + força de trabalho potencial e a força de trabalho ampliada (é o que o IBGE chama de taxa composta de subutilização). Neste caso chegamos na taxa $\dfrac{5.613+12.791+13.542}{109.680}=29,1\%$.
+
+  Na discussão do item \titem{c)} é necessário ficar atento ao fato de que propostas diferentes de cálculo indicam coisas diferentes. O mais importante aqui é se o método de cálculo corresponde ao fenômeno indicado.
+
+  No item \titem{d)} o professor pode apresentar as taxas calculadas pelo IBGE aos estudantes. Outra recomendação é buscar notícias em jornais e na internet e ver como elas se referem às taxas. Você pode propor uma discussão com os estudantes sobre a matéria, procurando perceber se a forma como se referem às taxas estão condizentes com o que elas realmente querem indicar. Uma sugestão de matéria é [2]. 
+
+}{0}
+\end{answer}
 \subsection{Uso de indicadores}
 
 As explicações que construímos sobre a realidade passam pelas ações de identificar e comparar. Percebemos a existência de diferenças e, em seguida, buscamos um jeito de compará-las, usando essas informações para então construir nossas explicações. Uma forma de fazer isso é através da utilização de indicadores. 
@@ -761,7 +1221,12 @@ Força de Trabalho Ampliada & 109.680 \\
 \item Consulte as taxas calculadas pelo IBGE e compare-os com os que foram criados por você e por seus colegas.
 \end{enumerate}
 
-\clearpage
+\clearpage\begin{objectives}{Fontes confiáveis}
+{
+  O objetivo desta subseção do Organizando é apresentar aos estudantes formas de busca e identificação de fontes de dados de pesquisa confiáveis. É possível ainda realizar uma discussão sobre fontes confiáveis, fake news e plágio, e sobre a objetividade do conhecimento científico a partir das seções “Para saber +” e “Para refletir”. Mas talvez a discussão sobre fontes confiáveis não faça sentido em uma situação na qual a proposta se dá com a coleta de dados em entrevistas com a comunidade.
+}{1}{1}
+\end{objectives}
+
 \begin{example}{Planejamento da investigação - COVID-19}
 Após compreender o que são indicadores e para que eles servem, o grupo de Thiago, Rodrigo e Priscila formulou as seguintes respostas para as questões \titem{2)} e \titem{3)} do roteiro de organização da investigação:
 
@@ -860,6 +1325,26 @@ Para a questão \titem{4)} do roteiro de organização da investigação, Rodrig
 \end{enumerate}
 \end{example}
 
+\clearpage
+
+\def\currentcolor{session1}
+\begin{texto}
+{
+  \section{Explorando: Gráficos e tabelas}
+  \subsection{Objetivos gerais}
+
+  O objetivo deste explorando é ressaltar para os estudantes quais os usos mais adequados de alguns tipos de gráfico e tabelas. Se houver tempos e for interessante para as investigações propostas pelos grupos, é possível também falar de fluxograma e diagramas, como o de Carroll e o de Venn.
+
+  Há outros capítulos do Livro Aberto que trazem discussões complementares sobre outros tipos de gráficos:
+
+  \begin{itemize}
+  \item O livro de Estatística e Probabilidade traz em seu \titem{primeira seção} discussões sobre leitura e uso de infográfico e histogramas, além de uma ótima análise sobre as diferenças entre histogramas e gráficos de colunas ou barras (a partir da página 9).
+    
+  \item Já o livro de Funções, também em sua \titem{seção introdutória}, apresenta uma discussão sobre a representação gráfica de funções (a partir da página 21).
+  \end{itemize}
+
+}
+\end{texto}
 \explore{Gráficos e tabelas}
 
 As tabelas e os gráficos são formas visuais de organizar informações quantitativas. Estes instrumentos são muito úteis para resumir informações e apresentá-las para uma leitura rápida. Entretanto, cada um desses instrumentos têm usos diferentes.
@@ -962,7 +1447,7 @@ Os \textbf{gráficos de setores} dão noção de parte e todo, e por isso muitas
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=300bp]{investigacao6}
+\includegraphics[width=290bp]{investigacao6}
 
 \end{figure}
 
@@ -970,7 +1455,29 @@ Os \textbf{gráficos de setores} dão noção de parte e todo, e por isso muitas
 Existem muitas outras formas de mostrar dados quantitativos de formas visuais. Se você quiser se aprofundar um pouco mais neste assunto pode buscar também sobre as discussões a leitura e o uso de \textbf{infográficos} e \textbf{histogramas}, no capítulo introdutório do Livro de Estatística e Probabilidade do Livro Aberto, ou ainda uma discussão sobre a \textbf{representação gráfica de funções}, no capítulo introdutório do Livro de Funções do Livro Aberto. 
 
 Com os programas de edição de imagem, hoje em dia até existe um profissional que é especializado em elaborar gráficos, tabelas e diagramas que ajudem os leitores a entenderem melhor as informações de uma certa notícia ou relatório. Para elaborar um bom gráfico é necessário conhecimento matemático, compreensão de qual informação quer-se enfatizar e muita criatividade!
+\clearmargin
+\def\currentcolor{session2}
+\begin{texto}
+{\vspace{-\baselineskip}
+\section{Desenvolvendo a Investigação - Etapa 4}
+(Tempo estimado 7-8 aulas)
 
+\textbf{Objetivo geral}: Aplicar as ferramentas matemáticas para análise de uma situação concreta.
+
+Esta é a etapa mais longa do projeto e por isso é necessária uma boa organização. Se os estudantes forem trabalhar com planilhas eletrônicas e arquivos compartilhados, é interessante criar um diretório para cada grupo, ao qual você tenha acesso à toda a produção deles. Se o trabalho for realizado sem computadores, uma boa solução é a utilização de um painel na sala para cada grupo ou simplesmente ir agrupando todas as fichas com planejamento, anotações e análises. É interessante que este material fique com o professor, para que se eventuais faltas não prejudiquem o trabalho coletivo. 
+
+Uma estratégia interessante para organizar os avanços e próximos passos de cada grupo é o desenvolvimento do diário de bordo, que pode ser uma ficha ou arquivo digital, preenchido coletivamente pelos integrantes do grupo. 
+
+É importante acompanhar o desenvolvimento dos grupos, para que eles não se percam. Uma estratégia válida é retomar periodicamente o documento de planejamento.
+
+Também é importante garantir que todos os grupos apresentem seus resultados de múltiplas formas, utilizando texto, gráficos tabelas, etc… Certamente haverá grupos que finalizarão as análises antes. Estes grupos podem, por exemplo, investigar outras formas gráficas (mais elaboradas) de representar seus resultados, melhorando a comunicação de suas descobertas. Ou ainda, podem aprofundar sua investigação por outras perguntas correlacionadas que certamente surgirão ao longo da investigação. 
+
+Haverá ainda grupos que não conseguirão chegar a um resultado final de sua investigação. Nesse caso é importante avaliar os motivos que fizeram com que o planejamento não funcionasse. Foi só uma questão de organização ou algum problema com os dados ou com a metodologia planejada para analisar os dados? Compreender o que não deu certo é uma boa forma de fazer com que o mesmo erro não se repita. Nesses casos, os resultados e as conclusões serão parciais. É possível que a conclusão seja simplesmente algo como “as análises e indicadores propostos não são uma boa forma de responder a pergunta escolhida”. Este tipo de conclusão também é válida, pois saber o que não funciona também é importante para responder uma pergunta. Por isso, esse tipo de resultado também deve ser valorizado.
+
+Entre a terceira e quinta aula desta etapa, é importante, caso ainda não o tenha feito, apresentar  qual será o produto final deste projeto. Esta apresentação tem a finalidade de ajudar os estudantes a se organizarem e já irem montando seus resultados e conclusões num formato adequado para o produto final. Desta forma, é muito interessante que o educador entregue aos grupos um roteiro de produção do produto final. Exemplos de roteiros serão discutidos na próxima seção.
+
+}
+\end{texto}
 \begin{example}{Planejamento da investigação - COVID-19}
 
 Para as questões \titem{5} e \titem{6} do roteiro de organização da investigação, Rodrigo, Priscila e Thiago elaboraram os seguintes registros:
@@ -1012,6 +1519,21 @@ Mão à obra!
 \item Por último, escreva suas conclusões. É o resumo do que você aprendeu e do que se pode saber através desta investigação. Pode ser apenas uma frase e algumas vezes pode haver mais de uma conclusão. É muito importante que na conclusão você analise a sua hipótese inicial. Ela estava correta? Se não estava, o que os dados mostraram de diferente das suas expectativas iniciais?
 \end{enumerate}
 
+\clearpage
+\begin{sugestions}{Exemplo: Realizando a investigação - COVID-19}
+{
+  O exemplo expressa uma simplificação da discussão que geralmente ocorre na sala de aula. Essas discussões, na realidade, são permeadas de dúvidas e de falas imprecisas. É saudável que as discussões sejam feitas em locais onde se possa consultar fontes, como em salas de informática, em biblioteca, ou que os próprios estudantes já tenham suas anotações e sínteses de pesquisas que já realizaram.
+
+  É importante que o professor acompanhe algumas dessas discussões para perceber se as dúvidas e as respostas dadas a elas estão claras e se é necessário algum tipo de intervenção didática.
+
+  Neste exemplo, é mostrada uma tabela que os estudantes conseguiram na plataforma Sidra, do IBGE. Esta plataforma contém informações de uma gama enorme de pesquisas do IBGE, e é interessante o professor dar uma olhada nela para poder orientar os estudantes sobre quais os dados pode obter por lá.
+
+  Outro ponto interessante deste exemplo é a elaboração do questionário. Veja que é um questionário bem simples e procura atender bem objetivamente à pergunta formulada pelos estudantes. Outras informações, como o sexo, tipo de trabalho, remuneração, etc, poderiam ser incluídas com a finalidade de análises além das perguntas formuladas, mas deve se tomar cuidado para não tornar o questionário demasiado longo ou então tirar o foco da pergunta principal.
+
+  Caso outras perguntas da turma tenham relação com esta, o questionário pode ser ampliado e as respostas podem ser aproveitadas por mais de um grupo. Por exemplo, se um grupo quiser investigar a inflação, a mudança dos salários e do poder de compra dos familiares de colegas, o questionário poderia ser ampliado com perguntas nesta direção.
+
+}{1}{0}
+\end{sugestions}
 \begin{example}{Realizando a investigação - COVID-19}
 
 Rodrigo, Priscila e Thiago acessaram o site do IBGE e buscaram os dados da PNAD Contínua\footnote{\url{https://www.ibge.gov.br/estatisticas/sociais/trabalho/9173-pesquisa-nacional-por-amostra-de-domicilios-continua-trimestral.html}}. Durante a pesquisa, perceberam que os relatórios apresentavam dados brutos e que poderiam, eles próprios, realizar os cálculos e fazer interpretações dos indicadores. Eles consultaram diversas tabelas no site do IBGE e chegaram na tabela 4092 do sistema SIDRA do IBGE\footnote{\url{https://sidra.ibge.gov.br/tabela/4092}}, onde fizeram alguns filtros e geraram a tabela a seguir.
@@ -1109,7 +1631,7 @@ Além disso, com base nesses estudos, o grupo elaborou um questionário (instrum
 	\item Estava desocupado e nem tinha a intenção de trabalhar.
 	\end{enumerate}
 	\item Em qual situação você se encontrava no 2$^{\circ}$ trimestre de 2020?
-	\begin{enumerate}
+	\begin{enumerate}[label=(\alph*)]
 	\item Estava ocupado
 	\item Estava desocupado, mas tinha a intenção de trabalhar.
 	\item Estava desocupado e nem tinha a intenção de trabalhar.
@@ -1125,6 +1647,51 @@ Além disso, com base nesses estudos, o grupo elaborou um questionário (instrum
 \end{center}
 \end{example}
 \clearpage
+\begin{paginatexto}
+\section{Comunicando as Descobertas - Etapa 5}
+(Tempo estimado 4-5 aulas)
+
+O objetivo específico desta seção é materializar todo o percurso desenvolvido e aprendizado adquirido pelo estudante durante a elaboração do projeto de investigação matemática. Dar concretude a este processo é importante pois, muitas vezes, ao trabalharmos com uma proposta aberta, com poucos momentos de sistematização e instrumentos conhecidos dos estudantes (como listas de exercícios e provas), os educandos têm dificuldade de perceber seu próprio aprendizado e precisam de um produto concreto para perceberem tudo o que evoluíram no processo. 
+Além disso, ver o produto final de sua pesquisa concretizado é um momento de satisfação e orgulho para muitos dos estudantes, e de se perceberem como produtores de conhecimento, gerando um aumento na autoestima e no engajamento destes jovens. 
+
+O produto final também é uma forma interessante de justificar e organizar o compartilhamento dos novos conhecimentos e descobertas que cada grupo fez durante o projeto de investigação. Este compartilhamento é de importância central, pois ajuda os estudantes a ampliarem seus repertórios e descobrirem os caminhos que os colegas tomaram para responderem suas próprias perguntas investigativas. E ainda, ajuda a criar uma atmosfera de comunidade, colaboração, troca de saberes na turma. Este processo é interessante porque ajuda a desconstruir a ideia de que o professor é o único detentor de conhecimento e, por isso, o único que precisa ser ouvido, possibilitando a construção de um espaço mais democrático no que tange à valorização das vozes na sala de aula. 
+
+Algumas possibilidades de produtos finais são:
+
+\begin{itemize}
+\item uma revista “científica” com os artigos dos grupos;
+\item um congresso com um seminário de cada “grupo de pesquisa”;
+\item uma série de podcasts, no qual cada grupo faz o seu programa;
+\item um telejornal ou um canal com vídeos de cada grupo;
+\item uma página de internet para cada grupo apresentar suas descobertas sobre o tema estudado;
+\item um fanzine ou uma história em quadrinhos (HQ);
+\item um panfleto ou um folder.
+\end{itemize}
+
+Entretanto, há uma infinidade de outras opções e o educador é livre para escolher o produto que mais sentido fizer para si, sua realidade e sua comunidade escolar. 
+
+A definição do tema de investigação e do produto final no qual a pesquisa se materializará estão intimamente relacionados e devem ser escolhidos de forma a se complementarem. Além disso, a definição tanto do tema, quanto do produto final, depende do contexto e inquietações da comunidade escolar. Dentro do contexto, para pensar o produto final, é importante levar em conta o s recursos físicos e tecnológicos da unidade escolar. Por exemplo, não é adequado pensar na produção de uma revista científica ou vídeos para um canal de Youtube em uma escola na qual os estudantes não têm acesso regular aos computadores. Mas para esses casos há inúmeras outras possibilidades, como fanzines, um congresso ou até mesmo uma ação comunitária com a comunidade da região na qual a escola está inserida. 
+
+Um ponto de atenção nesse processo é que o produto final não deve se focar apenas na resposta encontrada para a pergunta investigativa do grupo, mas também no caminho percorrido pelos estudantes para chegarem em sua resposta. Em outras palavras, o produto final deve contar tanto o “o quê aconteceu” como o “como aconteceu”.
+
+Como já explicitado anteriormente, a escolha do produto final deve ser feita antes do projeto se iniciar e um roteiro orientador para a produção do produto final deve ser entregue ainda no início da etapa de desenvolvimento da investigação. Estas informações ajudam o estudante a manter-se orientado, com foco em algo concreto. 
+
+Durante este processo é interessante que os estudantes percebam que a forma da comunicação muda de acordo com o produto. Isto é, um texto para ser publicado em uma revista científica é diferente de um texto de história em quadrinhos, que é diferente de um texto de fanzine. Uma possibilidade muito interessante é trabalhar o produto final em parceria com outra(s) disciplina(s). Em muitos casos as disciplinas de português e artes podem ser grandes aliadas nesse processo. 
+
+\subsection{Sugestões e Discussões: Refletindo sobre o produto final}
+
+As questões apresentadas aos estudantes nessa seção tem a finalidade de ajudá-lo a refletir sobre o que é importante para produzir um bom produto final. Para isso, ele deve pensar sobre quem é seu público alvo, qual é a linguagem mais adequada para esse público e para o tipo de produto final que ele irá fazer e quais as informações que não podem deixar de estar presentes neste produto final. Todas essas questões variam de acordo com o tipo de produto.
+
+Por exemplo, a revista científica é um tipo de comunicação que surgiu para que cientistas pudessem se comunicar entre si, com uma proposta de comunicar suas descobertas e validá-las com seus pares. Desta forma, em um produto final do tipo revista científica é necessário ter em mente que os leitores devem ser capazes de reproduzir os resultados obtidos pelo grupo. Assim, neste tipo de produto final, deve haver um texto extenso sobre os cálculos e análises realizados para se chegar nos resultados obtidos. Por outro lado, os fanzines são publicações de baixo custo, que surgiram com o movimento político atrelado ao punk. A proposta era difundir ideias de forma barata, aumentando sua abrangência. Sua produção pode ser feita a partir de uma matriz original toda a mão, que, quando pronta, é fotocopiada (xerocada) e distribuída. Neste tipo de produto final, há uma maior liberdade editorial e a proposta pode ser a de alertar a comunidade escolar para as descobertas obtidas pelos grupos, sem se preocupar em passar para os leitores o rigor metodológico. Uma terceira possibilidade poderia ser uma peça de teatro ou a composição de uma música com os resultados das investigações. Cada um desses exemplos de produtos finais demanda um tipo de linguagem diferente, que dá sentido a certas formas de expressão. 
+
+A reflexão sobre a forma de expressão e linguagem apropriada ao produto final deve ser realizada com os estudantes antes deles iniciarem o processo de produção de seus produtos finais. Assim, é interessante que, após ser realizada uma conversa inicial sobre as principais características do produto final escolhido e dos estudantes responderem as perguntas reflexivas (colocadas como atividades nesta seção do livro do estudante), seja retomado o roteiro orientador do produto final, entregue para os educandos no início da etapa anterior. Exemplos de um roteiro orientador para a produção de artigos científicos e outro para a produção de fanzines pode ser encontrada no \hyperref[roteiro-artigo]{final do capítulo}. 
+
+Perceba que os roteiros são bem diferentes e o trabalho para a produção de cada um desses textos também o é. No caso do artigo científico é recomendado que os estudantes possam escrever os artigos no computador e produzam gráficos em planilhas. Já no caso do fanzine, o ideal é fazer tudo a mão, num processo de colagem, com uma boa discussão sobre a ocupação do espaço da página. 
+
+O mais importante é que o produto final seja realmente uma boa forma de comunicação e compartilhamento das descobertas dos diferentes grupos. Por isso, a atividade de compartilhamento também se altera de acordo com o produto final. No caso de produtos na forma de revistas, como a revista científica e o fanzine, uma opção é fazer uma aula de leitura e discussão dos textos. Já no caso dos podcasts e vídeos, uma atividade de exibição com roda de discussão é uma ótima possibilidade. 
+\clearpage
+\end{paginatexto}
+
 \practice{Comunicando as descobertas - etapa 5}
 \phantomsection\label{etapa5}
 
@@ -1159,5 +1726,268 @@ Agora é hora de efetivamente dar vida ao produto final. Após ele ficar pronto 
 \item O que você sente que aprendeu durante todo esse processo de investigação?
 \item O que você achou de toda essa experiência?
 \end{itemize}
-
 \end{task}
+
+\ifnum\aluno=1
+\else
+\cleardoublepage
+\phantomsection\label{avaliacoes}
+\def\currentcolor{session1}
+\centering
+\textbf{\Large\color{\currentcolor} Roteiro de autoavaliação após etapa de planejamento}
+\justify
+A tabela a seguir é um guia para você pensar no percurso que você fez para planejar a sua investigação. Assinale as alternativas de acordo com sua participação individual nesta etapa do trabalho em grupo.
+
+\begin{table}[H]
+\centering
+\begin{tabu} to \textwidth{|>{\vspace{2.5pt}}m{.6\textwidth}<{\vspace{2.5pt}}|c|c|c|}
+\hline
+\thead
+& SIM & NÃO & EM PARTE \\
+\hline
+1. Eu estive presente nas aulas? & & & \\
+\hline
+2. Eu colaborei com ideias para o grupo? & & & \\
+\hline 
+3. Eu consegui ouvir as ideias do meu grupo? & & & \\
+\hline
+4. Eu colaborei para resolver conflitos e discordâncias no grupo? & & & \\
+\hline
+5. Eu ajudei na elaboração da hipótese inicial, de forma que ela represente meu pensamento? & & & \\
+\hline
+6. Eu ajudei a selecionar bons indicadores, fontes de informações seguras e tipos de gráficos adequados? & & & \\
+\hline
+7. Estou seguro quanto ao caminho que escolhemos para responder nossa pergunta e concordo com o planejamento do meu grupo. & & & \\
+\hline
+\end{tabu}
+\end{table}
+
+
+Levando em conta suas respostas na tabela anterior, avalie seu próprio desempenho (em inadequado, adequado e destaque) nos quesitos da tabela a seguir.  
+
+\begin{table}[H]
+\centering
+
+\begin{tabu} to \textwidth{|l|c|c|}
+\hline
+\thead
+& ESTUDANTE & PROFESSOR \\
+\hline
+Qualidade do planejamento & & \\
+\hline
+Colaboração com o grupo & & \\
+\hline
+\end{tabu}
+\end{table}
+
+Levando em conta tudo o que aconteceu nesta etapa, anote:
+\begin{itemize}[itemsep=4em]
+\item Uma coisa que aprendeu com seus colegas;
+\item Algo que você ainda não entendeu;
+\item Uma atitude que você pode melhorar para a próxima etapa.
+\end{itemize}
+\cleardoublepage
+
+\centering
+\textbf{\Large\color{\currentcolor} Ficha de reflexão para uma aula do praticando}\footnote{Ficha adaptada de BOALER (2018)}
+\justify
+
+Apesar de estarmos realizando um trabalho em grupo, é muito importante que cada estudante reflita sobre seu percurso e aprendizado individual. As questões a seguir têm o objetivo de te ajudar neste processo. Responda-as pensando bem sobre como a aula de hoje foi para você!
+
+{\noindent Qual foi a principal ideia que discuti com meu grupo na aula de hoje?
+\setlength\parskip{6em}
+
+\noindent O que aprendi hoje?
+
+\noindent Quais boas ideias tive hoje?
+
+\noindent Em que situações eu poderia usar o conhecimento que aprendi hoje?
+
+\noindent Que dúvidas tenho sobre o trabalho que fiz hoje com meu grupo?
+
+\noindent Sobre quais novas ideias a atividade de hoje me fez pensar?
+}
+
+\cleardoublepage
+
+\centering
+\textbf{\Large\color{\currentcolor} Avaliação --- Produto Final}
+\vspace{3em}
+
+\flushleft
+Nome:\makebox[20em]{\hrulefill}
+
+Data:\makebox[10em]{\hrulefill}
+
+\vspace{5em}
+\justify
+\begin{figure}[H]
+\centering
+
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[every node/.style={scale=.8}, scale=.75]
+\foreach \x in {1,...,4} \draw circle (\x);
+
+\foreach \x/\y/\z in {
+0/{Considero que o produto final tem qualidade}/right,
+45/{Colaborei na escrita do produto final}/above right,
+90/{Colaborei na escolha de informações para o produto final}/above,
+135/{Consegui colocar minhas ideias para o grupo}/above left,
+180/{Consegui ouvir as ideias do meu grupo}/left,
+225/{Entendo todo o processo que foi realizado, desde a elaboração da pergunta, até a produção do produto final}/below left,
+270/{Ajudei a responder as duvidas dos colegas no momento de compartilhamento}/below,
+315/{Compreendo a importância de adaptar a comunicação ao público alvo}/below right}
+\draw (0,0) -- (\x:5) node [pos=1,\z] {\parbox[.5cm]{4.5cm}{\y}};
+
+\end{tikzpicture}}
+\end{figure}
+
+
+\cleardoublepage
+\phantomsection\label{relatorio-individual}
+\centering
+\textbf{\Large\color{\currentcolor} Roteiro de redação de relatório individual}
+\justify
+
+Relatórios são importantes ferramentas de registro e divulgação de resultado e ideias. Neles, as etapas de desenvolvimento de uma ideia ou projeto são relatadas de forma organizada, muitas vezes evidenciando a visualização de resultados, retomada de procedimento e comparação de dados. 
+
+Nesse projeto, o relatório é importante para:
+
+\begin{itemize}
+\item Organizar o pensamento;
+\item Entender e análisar fenômenos;
+\item Sistematização do aprendizado;
+\item Instrumento de avaliação.
+\end{itemize}
+
+Um relatório  deve ser organizado em etapas, bem identificadas e detalhadas:
+\setlength\parskip{1.5em}
+
+\noindent\textbf{Identificação}: Todo relatório deve ser identificado com nome do autor (você), data e disciplina.
+
+\noindent\textbf{Título}: Todo relatório deve ter um título informativo. O título não pode ser “Relatório de matemática”, deve conter uma informação que identifique o assunto do qual o relatório trata.
+
+\noindent\textbf{Introdução}: É o momento em que é apresentado o tema e objetivo do projeto de uma forma geral. A introdução deve apresentar qual era a pergunta e as hipóteses do grupo. Pode ser escrito em um parágrafo.
+
+\noindent\textbf{Análise dos dados e resultados}:  É o passo a passo. Você deve explicar quais as técnicas que utilizou para analisar os dados que coletou. É importante prestar atenção, pois nessa etapa deve ser escrito o “como foi feito” e não “o que isso explica”. 
+
+\noindent\textbf{Explicação dos resultados ou Discussão dos resultados}: Aqui você deve explicar os resultados de suas análises. É o “o que isso explica”.  Não se esqueça de comparar seu resultado com sua hipótese inicial.
+
+\noindent\textbf{Conclusão}: É o resumo do que você aprendeu o do que se pode saber por meio  desta investigação. Pode ser apenas uma frase e algumas vezes pode haver mais de uma conclusão.
+
+\noindent\textbf{Referências bibliográficas}: Devem ser listadas todas as fontes (livros, revistas científicas, sites) consultadas e utilizadas na explicação dos resultados, introdução ou em outra parte do relatório. Para livros e revistas científicas você deve colocar o nome do livro/revista, ano de publicação, autor, editora e volume (se tiver). Em caso de sites o endereço deve ser escrito por inteiro e constar autor, título do artigo e a data de acesso.
+
+\noindent\textbf{O RELATÓRIO SEMPRE DEVE SER FEITO EM FOLHA SEPARADA E COM BOA APRESENTAÇÃO (LIMPO, NÃO AMASSADO E EM FOLHA DE MONOBLOCO).}
+
+\cleardoublepage
+
+\phantomsection\label{elaboracao-questoes}
+\centering
+\textbf{\Large\color{\currentcolor}Ficha de elaboração de questões}
+\justify
+
+Elabore três perguntas investigativas sobre aspectos do tema de investigação da turma. Tente seguir os critérios mencionados. Utilize as atividades disparadoras. Ao fazer as atividades propostas, quais curiosidades e questionamentos vêm à sua mente?
+
+Uma dica: Ao pensar em perguntas tente imaginar como você faria para respondê-las. Que tipo de dados, medidas ou observações seriam necessárias? Se você não souber por onde começar, provavelmente você pensou em uma pergunta é complexa.
+
+\setlength\parindent{0em}
+\parbox{\linewidth}
+{
+  1. \hrulefill\\
+
+  \hrulefill\\
+
+  \hrulefill\\
+}
+
+\parbox{\linewidth}
+{
+  2. \hrulefill\\
+
+  \hrulefill\\
+
+  \hrulefill\\
+}
+
+\parbox{\linewidth}
+{
+  3. \hrulefill\\
+
+  \hrulefill\\
+
+  \hrulefill\\
+}
+
+Agora é hora de definir qual será a sua pergunta de investigação.
+
+Escreva no quadro abaixo a pergunta na qual você irá se aprofundar. Lembre-se que ela tem que atender a todas as características discutidas no texto “O que é uma boa pergunta científica”.
+
+\newtcolorbox{stretchbox}[1][]{
+  height fill,
+  sharp corners,
+  colback=white,
+  colframe=black,
+  #1}
+
+  \begin{stretchbox}
+  \centering
+  \textbf{\Large Minha proposta de questão investigativa}
+  \end{stretchbox}
+
+  \cleardoublepage
+\phantomsection\label{roteiro-artigo}
+\centering
+\textbf{\Large\color{\currentcolor} Roteiro de redação do artigo científico}
+\justify
+\setlength\parindent{0em}
+
+Os artigos científicos devem conter:
+\setlength\parskip{1.5em}
+
+\noindent\textbf{Título}
+
+\noindent\textbf{Autores}
+
+\noindent\textbf{Instituição}
+
+\noindent\textbf{Resumo}: É um spoiler. A função do resumo é o leitor saber se aquele artigo tem o que ele procura. Então nesta seção deve estar contida a pergunta de investigação, o(s) índice(s) analisado(s) e as conclusões.
+
+\noindent\textbf{Palavras-chave}: São as \textit{hashtags}. O ideal é colocar entre 3 e 4 palavras ou termos chaves
+
+\noindent\textbf{Introdução}:  Nela devem estar contidas as seguintes informações:qual é a pergunta, por que ela é interessante, como ela se insere no conhecimento científico da área, quais as hipóteses iniciais que vocês tinham e como pretendem verificá-las.
+
+\textbf{Coleta e análise de dados}: Esta seção deve apresentar os procedimentos de coleta e dados utilizados, os procedimentos de análise dos dados, os  resultados obtidos e uma discussão dos resultados que dialoga com as hipóteses iniciais de vocês.
+
+\textbf{Conclusão}: Nela deve ser apresentado o resumo do que você aprendeu o do que se pode saber através desta investigação. Pode ser apenas uma frase e algumas vezes pode haver mais de uma conclusão. É muito importante que na conclusão você analise a sua hipótese inicial. 
+
+\textbf{Bibliografia}
+
+
+\cleardoublepage
+\centering
+\textbf{\Large\color{\currentcolor} Roteiro de redação do fanzine}
+\justify
+
+Cada grupo terá o espaço de duas páginas para comunicar os pontos mais relevantes de sua investigação. Neste texto deve haver:
+\setlength\parindent{0em}
+
+\textbf{Título}
+
+\textbf{Autores}
+
+\textbf{Dados}: Quais os dados que serão comunicados? Como eles vão aparecer? No texto? Em tabela? Em gráfico? Como serão explicados?
+
+\textbf{Texto}: O texto deve mostrar para o leitor por que esse tema é interessante e /ou relevante. Também deve conter a(s) principal(is) descoberta(s) do grupo e dar um significado mais concreto para ela(s).
+
+\textbf{Imagem}: Junto com o texto deve haver uma imagem que se conecte intimamente ao assunto texto. Pode ser um gráfico, uma foto, um desenhos… Lembre-se apenas de que ela será preto e branca.
+
+\textbf{Destaque}:
+Qual é a informação de destaque desse texto e como ela vai aparecer na página?
+
+\textbf{Layout}:
+Num fanzine é muito importante pensar no desenho da página, que chamamos de layout do texto. Para isso é importante pensar nas seguintes questões: Onde vai ficar a imagem? Quanto de espaço das páginas o texto ocupará? Onde ficará o título? As letras serão grandes ou pequenas?
+
+
+Dica: vocês podem fazer todas as partes em em uma folha,  recortá-las e ir montando (como um quebra cabeças) nas duas páginas do fanzine. Quando acharem o layout ideal, colem as partes. A matriz das páginas do grupo  estará pronta!
+
+\fi
