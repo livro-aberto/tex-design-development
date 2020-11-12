@@ -96,6 +96,14 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{siunitx}
 \RequirePackage{caption}
 \RequirePackage{pdfpages}
+\RequirePackage{layout}
+\RequirePackage{stackengine}
+\RequirePackage{changepage}
+\RequirePackage{graphicx}
+\RequirePackage{adjustbox}
+% \RequirePackage{scrlayer-notecolumn}
+\RequirePackage{marginfix}
+\RequirePackage{pdfpages}
 \RequirePackage{stmaryrd}
 % \RequirePackage{natbib}
 \RequirePackage{spverbatim}
@@ -114,6 +122,8 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{etex}
 \RequirePackage{blindtext}
 \RequirePackage{cleveref}
+\RequirePackage{multirow}
+
 
 \@ifclassloaded{memoir}{}{\RequirePackage{fancyhdr}}
 
@@ -140,8 +150,9 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \renewcommand{\bottomtitlespace}{0.25\textheight}
 %\pgfplotsset{compat=1.15}
 \renewcommand{\thead}{\rowfont{\bfseries \color{white}} \rowcolor{\currentcolor!80}}
-
 \newcommand{\tnumber}{\rowfont{\color{white}}\rowcolor{\currentcolor!80}}
+
+\newcommand{\tmat}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\bm{#1}}}
 \newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
 \newcommand{\tmcol}[3]{\multicolumn{#1}{#2}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#3}}}}
 \newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
@@ -153,6 +164,8 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
+\newcolumntype{f}{>{$}c<{$}}
+
 
 %Coloca listas de enumerate no padrão da seção de exercícios
 \newcommand\exerciselist
@@ -249,7 +262,7 @@ underlay boxed title={
 \newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{example}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
 title={
 %{\boxfont EXEMPLO}\hspace{3.5mm} 
-\textcolor{cor2}{\large\extitlefont\makefirstuc{#1}}
+\textcolor{cor2}{\large\extitlefont\makefirstuc{#1}\phantom{ç}}
 }, 
 boxed title style={empty, sharp corners}, 
 attach boxed title to top left={xshift=22mm , yshift=-7.5mm},
@@ -265,8 +278,8 @@ underlay boxed title ={
 % Filldraw the darker fancy in front of the rectangle and behind the Example. The coordinates should be better chosen.
 
 
-\fill[cor1] (frame.north west) -- ($(frame.north west)+(0,-1.4pt)+(0,-7mm)$) -- ++ (21mm,0mm) arc [start angle=-90, end angle=0, x radius = 2mm, y radius = 2mm] -- ($(frame.north west) + (23mm,0)$) --  cycle;
-\node [white] at ($(frame.north west) + (11.5mm,-3.5mm)$) {\boxfont EXEMPLO \thetcbcounter};
+\fill[cor1] (frame.north west) -- ($(frame.north west)+(0,-1.4pt)+(0,-7mm)$) -- ++ (22mm,0mm) arc [start angle=-90, end angle=0, x radius = 2mm, y radius = 2mm] -- ($(frame.north west) + (24mm,0)$) --  cycle;
+\node [white] at ($(frame.north west) + (12mm,-3.5mm)$) {\boxfont EXEMPLO \thetcbcounter};
 
 },
 before upper={\def\currentcolor{cor1}}

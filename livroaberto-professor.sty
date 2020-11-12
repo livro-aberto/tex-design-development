@@ -1,5 +1,5 @@
 \def\fileversion{v1.0}
-\def\filename{livroaberto}
+\def\filename{livroaberto-professor}
 \def\filetitle{Livro Aberto package}
 \def\filedate{2018/02/13}
 \def\docdate {2018/02/13}
@@ -107,6 +107,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{pdfpages}
 \RequirePackage{stmaryrd}
 % \RequirePackage{natbib}
+\RequirePackage{spverbatim}
 \RequirePackage{ulem}
 \RequirePackage{cancel}
 \RequirePackage{ifthen}
@@ -122,7 +123,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{xcolor}
 \RequirePackage{multicol}
 \RequirePackage{etex}
-
+\RequirePackage{multirow}
 %\RequirePackage[brazilian]{babel}
 \RequirePackage{blindtext}
 
@@ -159,6 +160,8 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 %\pgfplotsset{compat=1.15}
 \renewcommand{\thead}{\rowfont{\bfseries \color{white}} \rowcolor{\currentcolor!80}}
 \newcommand{\tnumber}{\rowfont{\color{white}}\rowcolor{\currentcolor!80}}
+
+\newcommand{\tmat}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\bm{#1}}}
 \newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
 \newcommand{\tmcol}[3]{\multicolumn{#1}{#2}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#3}}}}
 \newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
@@ -171,6 +174,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
+\newcolumntype{f}{>$c<$}
 
 
 %Coloca listas de enumerate no padrão da seção de exercícios
@@ -180,6 +184,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 	\setlist[enumerate,2]{label=\textit{\alph*)}}
 	\setlist[enumerate,3]{label=\textit{\roman*)}}
 }
+
 
 
 
@@ -280,7 +285,7 @@ underlay boxed title={
 \newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{example}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
 title={
 %{\boxfont EXEMPLO}\hspace{3.5mm} 
-\textcolor{cor2}{\large\extitlefont\makefirstuc{#1}}
+\textcolor{cor2}{\large\extitlefont\makefirstuc{#1}\phantom{ç}}
 }, 
 boxed title style={empty, sharp corners}, 
 attach boxed title to top left={xshift=22mm , yshift=-7.5mm},
@@ -296,8 +301,8 @@ underlay boxed title ={
 % Filldraw the darker fancy in front of the rectangle and behind the Example. The coordinates should be better chosen.
 
 
-\fill[cor1] (frame.north west) -- ($(frame.north west)+(0,-1.4pt)+(0,-7mm)$) -- ++ (21mm,0mm) arc [start angle=-90, end angle=0, x radius = 2mm, y radius = 2mm] -- ($(frame.north west) + (23mm,0)$) --  cycle;
-\node [white] at ($(frame.north west) + (11.5mm,-3.5mm)$) {\boxfont EXEMPLO \thetcbcounter};
+\fill[cor1] (frame.north west) -- ($(frame.north west)+(0,-1.4pt)+(0,-7mm)$) -- ++ (22mm,0mm) arc [start angle=-90, end angle=0, x radius = 2mm, y radius = 2mm] -- ($(frame.north west) + (24mm,0)$) --  cycle;
+\node [white] at ($(frame.north west) + (12mm,-3.5mm)$) {\boxfont EXEMPLO \thetcbcounter};
 
 },
 before upper={\def\currentcolor{cor1}}
@@ -580,8 +585,82 @@ underlay boxed title={
 \newcommand\chapterbecause{}
 
 % Formatação dos comandos \section e \subsection
+%Cor atual
 \titleformat{\section}{\color{\currentcolor}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}
+{0pt}{2mm}{1mm}
+
 \titleformat{\subsection}{\vspace{.3\baselineskip}\color{\currentcolor}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}
+{0pt}{1mm}{1mm}
+
+
+%Cor Explorando
+
+\titleclass{\scexplore}{straight}[\section]
+\titleformat{\scexplore}{\color{session1}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\scexplore}
+{0pt}{2mm}{1mm}
+\providecommand*{\toclevel@scexplore}{0}
+
+\titleclass{\subexplore}{straight}[\subsection]
+\titleformat{\subexplore}{\vspace{.3\baselineskip}\color{session1}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subexplore}
+{0pt}{1mm}{1mm}
+\providecommand*{\toclevel@subexplore}{0}
+
+
+% %Cor Organizando
+\titleclass{\scarrange}{straight}[\section]
+\titleformat{\scarrange}{\color{session4}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\scarrange}
+{0pt}{2mm}{1mm}
+\providecommand*{\toclevel@scarrange}{0}
+
+\titleclass{\subarrange}{straight}[\subsection]
+\titleformat{\subarrange}{\vspace{.3\baselineskip}\color{session4}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subarrange}
+{0pt}{1mm}{1mm}
+\providecommand*{\toclevel@subarrange}{0}
+
+%Cor Praticando
+\titleclass{\scpractice}{straight}[\section]
+\titleformat{\scpractice}{\color{session2}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\scpractice}
+{0pt}{2mm}{1mm}
+\providecommand*{\toclevel@scpractice}{0}
+
+\titleclass{\subpractice}{straight}[\subsection]
+\titleformat{\subpractice}{\vspace{.3\baselineskip}\color{session2}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subpractice}
+{0pt}{1mm}{1mm}
+\providecommand*{\toclevel@subpractice}{0}
+
+%Cor Para Saber Mais
+\titleclass{\scknow}{straight}[\section]
+\titleformat{\scknow}{\color{session3}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\scknow}
+{0pt}{2mm}{1mm}
+\providecommand*{\toclevel@scknow}{0}
+
+\titleclass{\subknow}{straight}[\subsection]
+\titleformat{\subknow}{\vspace{.3\baselineskip}\color{session3}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subknow}
+{0pt}{1mm}{1mm}
+\providecommand*{\toclevel@subknow}{0}
+
+%Cor Exercícios
+\titleclass{\scexercise}{straight}[\section]
+\titleformat{\scexercise}{\color{cor1}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\scexercise}
+{0pt}{2mm}{1mm}
+\providecommand*{\toclevel@scexercise}{0}
+
+\titleclass{\subexercise}{straight}[\subsection]
+\titleformat{\subexercise}{\vspace{.3\baselineskip}\color{cor1}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subexercise}
+{0pt}{1mm}{1mm}
+\providecommand*{\toclevel@subexercise}{0}
 
 % Create box shape
 \pgfdeclareshape{howbecausetextbox}{%
@@ -1557,7 +1636,7 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 
 \newenvironment{apresentacao}
 {\frontmatter\def\currentcolor{cor1}
-\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}\pagestyle{plain} \begin{multicols}{3}}
+\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}\pagestyle{plain}\setlist[enumerate]{wide, label=\titem{\alph*)}}\setlist[itemize]{wide} \begin{multicols}{3}}
 {\clearpage\end{multicols}\pagebreak\restoregeometry 
 \mainmatter\def\currentcolor{session1}}
 
@@ -1577,7 +1656,7 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
   %\pagenumbering{arabic}% Don't reset
 }\clearpage\setcounter{mypagecount}{\value{page}}
 \cleardoublepage\setcounter{mypagecount}{\value{page}}\def\currentcolor{session1}
-\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}\thispagestyle{empty}\pagestyle{empty} \begin{multicols}{3}}
+\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}\thispagestyle{empty}\pagestyle{empty}\setlist[enumerate]{wide}\setlist[itemize]{wide} \begin{multicols}{3}}
 {\clearpage\end{multicols}\def\currentcolor{session1}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
 }
 
@@ -1818,7 +1897,7 @@ before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \else
 {\ifnum #4=9
 
-\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}\vspace{.05em}}
 
 \endnotetext{
 {\vspace{-2\baselineskip}
@@ -1946,6 +2025,16 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,
 \fi}
 \fi
 }
+
+\newcommand\notas[1]{
+	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
+	\endnotetext
+	{#1}}
+\newcommand\mnotas[1]{
+	\marginpar{
+	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
+	\endnotetext
+	{#1}}}
 
 %%%%%%%%%%%%% CAIXA DE HABILIDADES
 \newtcolorbox{habilities}[1]{ breakable,colback=penaqua!20!white,colbacktitle=penaqua!20!white,

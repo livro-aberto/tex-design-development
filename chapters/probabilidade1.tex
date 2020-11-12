@@ -102,23 +102,24 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 
 
 \explore{conceitos básicos}\label{conceitosbasicos}
-Neste capítulo iremos explorar a noção de probabilidade para, em seguida,  apresentar uma teoria matemática útil para calcular probabilidades de \index{eventos}eventos associados a \index{experimentos aleatórios}experimentos aleatórios ou fenômenos aleatórios, isto é, experimentos cujos resultados finais são conhecidos somente após a realização dos mesmos.
-Por exemplo,
+Neste capítulo iremos explorar a noção de probabilidade para, em seguida, apresentar uma teoria matemática útil para calcular probabilidades de eventos associados a experimentos aleatórios ou fenômenos aleatórios, isto é, experimentos cujos resultados finais são conhecidos somente após a realização dos mesmos. Por exemplo,
+
 \begin{enumerate}
 \item {} 
-o número de \emph{likes} que você irá receber no período de 24h após a sua postagem em uma rede social;
+o número de \textit{likes} que você irá receber no período de 24h após a sua postagem em uma rede social;
 
 \item {} 
-a quantidade de metros cúbicos de gás consumida na sua residência no primeiro semestre do próximo ano ;
+a quantidade de metros cúbicos de gás consumida na sua residência no primeiro semestre do próximo ano;
 
 \item {} 
 o tempo, contado a partir de hoje, que a lâmpada do seu quarto levará para queimar;
 
 \item {} 
 o número de quilowatts consumidos na sua residência no próximo mês.
-
+\end{enumerate}
 Em contraposição aos fenômenos aleatórios existem os \index{fenômenos determinísticos}fenômenos determinísticos, quando é possível determinar seu resultado mesmo antes de realizá-lo, conhecendo-se determinadas condições. Na natureza existem muitos exemplos de experimentos determinísticos. Por exemplo, na Física há vários modelos determinísticos, como
 
+\begin{enumerate}\setcounter{enumi}{4}
 \item {} 
 a primeira lei de Newton que estabelece a força, conhecendo-se massa e aceleração;
 
@@ -135,10 +136,9 @@ a lei da gravitação universal em que é possível calcular o tempo de queda de
 
 Tais modelos da Física são chamados modelos matemáticos determinísticos, uma vez que é possível determinar quantidades de interesse, conhecendo-se certas condições, mesmo sem a realização do experimento.
 
-Para explicar fenômenos aleatórios como exemplificados nos itens a) a d), usamos modelos matemáticos não determinísticos chamados modelos probabilísticos. Neste caso, mesmo conhecendo algumas condições, não é possível determinar qual será o resultado antes da realização do experimento.
+Para explicar fenômenos aleatórios como exemplificados nos itens \titem{a)} a \titem{d)}, usamos modelos matemáticos não determinísticos chamados modelos probabilísticos. Neste caso, mesmo conhecendo algumas condições, não é possível determinar qual será o resultado antes da realização do experimento.
 
-
-\subsection{Um pouco de história da Probabilidade}
+\section{Um pouco de história da Probabilidade}
 
 Antes de começar o estudo um pouco mais formal de probabilidade, apresentaremos um breve resumo sobre a história da probabilidade.
 
@@ -149,7 +149,7 @@ A noção de acaso e ocorrências de fenômenos aleatórios foram percebidas   s
 \centering
 \capstart
 
-\noindent\includegraphics[width=150bp]{{astragalos}.png}
+\noindent\includegraphics[trim=1.2mm 0 1.75mm .2mm, clip, height=110bp]{{astragalos}.png}
 \caption{Astrágalos}\label{astragalos}\end{figure}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
@@ -157,7 +157,7 @@ A noção de acaso e ocorrências de fenômenos aleatórios foram percebidas   s
 \centering
 \capstart
 
-\noindent\includegraphics[width=150bp]{{dadosegipcios}.png}
+\noindent\includegraphics[height=110bp]{{dadosegipcios}.png}
 \caption{Dados egípcios}\label{dadosegipcios}\end{figure}
 \end{minipage}
 
@@ -169,10 +169,10 @@ Por isso, foi preciso esperar os séculos XVI e XVII para que matemáticos como 
 \centering
 \capstart
 
-\noindent\includegraphics[width=200bp]{{rostos_historia}.png}
+\noindent\includegraphics[height=300bp]{{rostos_historia}.png}
 \caption{Alguns matemáticos que originaram a discussão do conceito de acaso}\label{rostos_historia}\end{figure}{}
 
-No entanto, poderíamos dizer que a ideia fundamental por trás da matematização do acaso reside essencialmente na Estatística, quando esta re{}conhece, pela sua{} própria natureza, que fenômenos aleatórios, embora sem explicação determinística, tendem a demonstrar uma certa taxa regular de ocorrência conforme são realizados vários experimentos similares ao longo do tempo. A busca de um modelo que explique tais regularidades de ocorrência do fenômeno em estudo é a ideia central da Teoria das Probabilidades e sua utilidade hoje em vários campos científicos, como Economia, Medicina, Robótica, Engenharia, Computação, Biologia, etc, demonstra como a teoria está mais perto da Estatística do que da abordagem feita por meio do diálogo com a Análise Combinatória durante os Séculos das Luzes.
+No entanto, poderíamos dizer que a ideia fundamental por trás da matematização do acaso reside essencialmente na Estatística, quando esta reconhece, pela sua própria natureza, que fenômenos aleatórios, embora sem explicação determinística, tendem a demonstrar uma certa taxa regular de ocorrência conforme são realizados vários experimentos similares ao longo do tempo. A busca de um modelo que explique tais regularidades de ocorrência do fenômeno em estudo é a ideia central da Teoria das Probabilidades e sua utilidade hoje em vários campos científicos, como Economia, Medicina, Robótica, Engenharia, Computação, Biologia, etc, demonstra como a teoria está mais perto da Estatística do que da abordagem feita por meio do diálogo com a Análise Combinatória durante os Séculos das Luzes.
 
 É somente na primeira metade do século XX que a teoria das probabilidades vai adquirir uma base axiomática rigorosa por meio da construção teórica estabelecida pelo matemático russo Kolmogorov (\hyperref[kolmogorov]{figura \ref{kolmogorov}}). Desde então a teoria das probabilidades tem sido vista como uma das áreas mais promissoras da Matemática e a ferramenta por excelência para modelar e explicar os mais variados fenômenos aleatórios presentes no mundo contemporâneo.
 
@@ -180,14 +180,16 @@ No entanto, poderíamos dizer que a ideia fundamental por trás da matematizaç�
 \centering
 \capstart
 
-\noindent\includegraphics[width=150bp]{{kolmogorov}.png}
-\caption{Andrei Kolmogorov}\label{kolmogorov}\end{figure}
+\noindent\includegraphics[trim = 0 10mm 0 0, clip, width=150bp]{{kolmogorov}.png}
+\caption{Andrei Kolmogorov (\(\star\)\(1903\) — \(\dagger\)\(1987\))}\label{kolmogorov}\end{figure}
 
 Veja na \hyperref[linhadotempo]{figura \ref{linhadotempo}} uma linha do tempo destacando acontecimentos importantes no desenvolvimento da teoria das probabilidades.
 
 \begin{figure}[H]
 \centering
 \capstart
+\resizebox{\linewidth}{!}
+{
 \begin{tikzpicture}[scale=.4, every node/.style={scale=.7}]
      \tikzstyle{quadro}=[rectangle,draw, minimum width=1cm, minimum height=0.5, align=left]
          \tikzstyle{circulo}=[circle, draw, minimum size=0.05cm, fill=red]
@@ -220,11 +222,12 @@ Veja na \hyperref[linhadotempo]{figura \ref{linhadotempo}} uma linha do tempo de
          (Bayes) edge (qBayes)
          (Kolmogorov) edge (qKolmogorov);
 \end{tikzpicture}
+}
 \caption{Linha do tempo}\label{linhadotempo}
 \end{figure}
 
-Nos capítulos \textbf{A Natureza da Estatística} e \textbf{Medidas de Posição e Dispersão}, vimos como resumir a informação de dados aleatórios amostrais com o objetivo de  entender estruturas úteis para uma tomada de decisão sob incerteza. Neste capítulo, analisaremos as características extraídas dos dados aleatórios amostrais a fim de revelar como a Estatística nos auxilia a descrever as regularidades de ocorrências de determinados eventos aleatórios.
-\pagebreak
+Nos capítulos \hyperref[est1-chap]{\textbf{A Natureza da Estatística}} e \hyperref[est2-chap]{\textbf{Medidas de Posição e Dispersão}}, vimos como resumir a informação de dados aleatórios amostrais com o objetivo de  entender estruturas úteis para uma tomada de decisão sob incerteza. Neste capítulo, analisaremos as características extraídas dos dados aleatórios amostrais a fim de revelar como a Estatística nos auxilia a descrever as regularidades de ocorrências de determinados eventos aleatórios.
+\clearpage
 
 \begin{task}{não determinístico (aleatório) ou determinístico?}
 
@@ -233,45 +236,48 @@ Classifique cada experimento a seguir em aleatório ou determinístico.
 Deseja-se observar:
 \begin{enumerate}[rightmargin=3mm]
 \item 
-o valor constante de cada prestação quando se financia um eletrodoméstico, estabelecendo-se a taxa de juros efetiva ao mês, a quantidade de meses do financiamento e o pagamento da primeira prestação no ato da compra.
+O valor constante de cada prestação quando se financia um eletrodoméstico, estabelecendo-se a taxa de juros efetiva ao mês, a quantidade de meses do financiamento e o pagamento da primeira prestação no ato da compra.
 
 \item 
-a distância percorrida por um objeto em movimento, conhecendo-se a velocidade e o tempo transcorrido.
+A quantidade de metros cúbicos de água consumida em sua residência no primeiro semestre do próximo ano.
+
 
 \item 
-a quantidade de metros cúbicos de água consumida em sua residência no primeiro semestre do próximo ano.
+A distância percorrida por um objeto em movimento, conhecendo-se a velocidade e o tempo transcorrido.
 
 \item 
-o valor a ser pago na conta de luz da sua residência no próximo mês.
+O valor a ser pago na conta de luz da sua residência no próximo mês.
 
 \item 
-a sua média final em Matemática desse ano.
+A sua média final em Matemática desse ano.
 
 \end{enumerate}
 \end{task}
 \begin{task}{interpretando medida de incerteza}
 
 
-Responda os itens a seguir.
+Responda aos itens a seguir.
 \begin{enumerate}
 \item {} 
-A probabilidade de ocorrer cara quando lançamos uma moeda honesta é 0,5. Isso significa que toda vez que lançarmos essa moeda 100 vezes, ocorrerão 50 caras? Por quê?
+A probabilidade de ocorrer cara quando lançamos uma moeda honesta é $0{,}5$. Isso significa que toda vez que lançarmos essa moeda $100$ vezes, ocorrerão $50$ caras? Por quê?
 
 \item {} 
-Foi publicada a previsão do tempo, indicando que a probabilidade de chover amanhã na região onde você mora e estuda é de 30{}`\%{}`. Que decisão você tomaria com base nessa previsão: levar ou não um guarda-chuva para a escola? Por quê? Como você interpreta essa previsão?
+Foi publicada a previsão do tempo, indicando que a probabilidade de chover amanhã na região onde você mora e estuda é de $30\%$. Que decisão você tomaria com base nessa previsão: levar ou não um guarda-chuva para a escola? Por quê? Como você interpreta essa previsão?
 
 \item {} 
-Um estudo na área de Saúde indicou que a probabilidade de uma pessoa vir a ter o Diabetes é 10{}`\%{}`. Isso significa que ao acompanhar um grupo de 500 pessoas, 50 delas terão Diabetes? Por quê?
+Um estudo na área de Saúde indicou que a probabilidade de uma pessoa vir a ter o Diabetes é $10\%$. Isso significa que ao acompanhar um grupo de $500$ pessoas, $50$ delas terão Diabetes? Por quê?
 
 \end{enumerate}
 \end{task}
+\clearpage
 \begin{task}{avaliando probabilidades}
+\label{avaliando-probabilidades}
 
 
 Bloco I - Probabilidade clássica
 \begin{enumerate}
 \item {} 
-De um grupo de 10 estudantes, um será sorteado para ser o representante de turma. Como são 4 meninas e seis meninos, decidiu-se, para fazer o sorteio,  representar as meninas por cartões ilustrados com triângulos e os meninos por cartões ilustrados com círculos. Os cartões foram colocados numa caixa e um será sorteado (\hyperref[cartoesilustrados]{figura \ref{cartoesilustrados}}).
+De um grupo de 10 estudantes, um será sorteado para ser o representante de turma. Como são 4 meninas e seis meninos, decidiu-se, para fazer o sorteio, representar as meninas por cartões ilustrados com triângulos e os meninos por cartões ilustrados com círculos. Os cartões foram colocados numa caixa e um será sorteado (\hyperref[cartoesilustrados]{figura \ref{cartoesilustrados}}).
 
 \begin{figure}[H]
 \centering
@@ -295,8 +301,8 @@ De um grupo de 10 estudantes, um será sorteado para ser o representante de turm
        \draw [color=primario, fill=primario] (3,2.5) circle (12pt);
        \draw [color=primario, fill=primario] (5,2.5) circle (12pt);
        \draw [color=primario, fill=primario] (9,2.5) circle (12pt);
-       \draw [color=atento, fill=atento, rounded corners=1pt, -] (3,8) -- (3.5,7) -- (2.5,7) -- (3,8) --  cycle;
-       \draw [color=atento, fill=atento, rounded corners=1pt, -] (9,8) -- (9.5,7) -- (8.5,7) -- (9,8) --  cycle;
+       \draw [color=atento, fill=atento] (3,8) -- (3.5,7) -- (2.5,7) -- (3,8) --  cycle;
+       \draw [color=atento, fill=atento] (9,8) -- (9.5,7) -- (8.5,7) -- (9,8) --  cycle;
 \draw [color=atento, fill=atento, ] (1,3) -- (1.5,2) -- (.5,2) -- (1,3) --  cycle;
        \draw [color=atento, fill=atento] (7,3) -- (7.5,2) -- (6.5,2) -- (7,3) --  cycle;
 \end{tikzpicture}
@@ -307,53 +313,51 @@ De um grupo de 10 estudantes, um será sorteado para ser o representante de turm
 Qual é a probabilidade (chance) de ser escolhida uma menina como representante de turma? Por quê?
 
 \item {} 
-Numa rua há 10 casas. O número de moradores por casa está representado na \hyperref[moradorescasa]{figura \ref{moradorescasa}}. Suponha que você irá escolher ao acaso uma casa desta rua.
+Numa rua há $10$ casas. O número de moradores por casa está representado na \hyperref[moradorescasa]{figura \ref{moradorescasa}}. Suponha que você irá escolher ao acaso uma casa desta rua.
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
-\begin{scope}[scale=.6]
-\draw  [color = terciario, fill =terciario](0.25,6.5) rectangle (1.25,8.5);
-\draw [color = terciario, fill =terciario](2.25,6.5) rectangle (3.25,8.5);
-\draw [color = terciario, fill =terciario](4.25,6.5) rectangle (5.25,8.5);
-\draw [color = terciario, fill =terciario](6.25,6.5) rectangle (7.25,8.5);
-\draw [color = terciario, fill =terciario](8.25,6.5) rectangle (9.25,8.5);
-\draw [fill = destacado!50, color=destacado!50,-] (1.4,8.5) -- (.05,8.5) -- (.73,9.5) -- cycle;
-\draw [fill = destacado!50, color=destacado!50,-] (3.4,8.5) -- (2.05,8.5) -- (2.73,9.5) -- cycle;
-\draw [fill = destacado!50, color=destacado!50,-] (5.4,8.5) -- (4.05,8.5) -- (4.73,9.5) -- cycle;
-\draw [fill = destacado!50, color=destacado!50,-] (7.4,8.5) -- (6.05,8.5) -- (6.73,9.5) -- cycle;
-\draw [fill = destacado!50, color=destacado!50,-] (9.4,8.5) -- (8.05,8.5) -- (8.73,9.5) -- cycle;
-\draw [color = terciario, fill =terciario](0.25,1.5) rectangle (1.25,3.5);
-\draw [color = terciario, fill =terciario](2.25,1.5) rectangle (3.25,3.5);
-\draw [color = terciario, fill =terciario](4.25,1.5) rectangle (5.25,3.5);
-\draw [color = terciario, fill =terciario](6.25,1.5) rectangle (7.25,3.5);
-\draw [color = terciario, fill =terciario](8.25,1.5) rectangle (9.25,3.5);
-\draw [fill = destacado!50, color=destacado!50,-] (1.4,3.5) -- (.05,3.5) -- (.73,4.5) -- cycle;
-\draw [fill = destacado!50, color=destacado!50,-] (3.4,3.5) -- (2.05,3.5) -- (2.73,4.5) -- cycle;
-\draw [fill = destacado!50, color=destacado!50,-] (5.4,3.5) -- (4.05,3.5) -- (4.73,4.5) -- cycle;
-\draw [fill = destacado!50, color=destacado!50,-] (7.4,3.5) -- (6.05,3.5) -- (6.73,4.5) -- cycle;
-\draw [fill = destacado!50, color=destacado!50,-] (9.4,3.5) -- (8.05,3.5) -- (8.73,4.5) -- cycle;
-\node at (.75,2.5) {1};
-\node at (2.75,2.5) {1};
-\node at (4.75,2.5) {3};
-\node at (6.75,2.5) {2};
-\node at (8.75,2.5) {6};
-\node at (.75,7.5) {5};
-\node at (2.75,7.5) {4};
-\node at (4.75,7.5) {8};
-\node at (6.75,7.5) {8};
-\node at (8.75,7.5) {4};
-\end{scope}
+\begin{tikzpicture}[triangle/.style = {fill=session3!80, shape=isosceles triangle, node distance=.75cm, minimum width=1.5cm, minimum height=.75cm, rotate=90,isosceles triangle stretches, draw=black},
+casa/.style={fill, draw, primario, rectangle, minimum height=1cm, minimum width=1.25cm, node distance=2cm, text={white}, font=\bfseries,draw=black}]
+
+
+\node (a) [casa] {5};
+\node (b) [casa, right of=a] {4};
+\node (c) [casa, right of=b] {8};
+\node (d) [casa, right of=c] {8};
+\node (e) [casa, right of=d] {4};
+
+\node [above of=a, triangle] {};
+\node [above of=b, triangle] {};
+\node [above of=c, triangle] {};
+\node [above of=d, triangle] {};
+\node [above of=e, triangle] {};
+
+\node (f) [casa, below of=a, node distance=2.5cm] {1};
+\node (g) [casa, right of=f] {1};
+\node (h) [casa, right of=g] {3};
+\node (i) [casa, right of=h] {2};
+\node (j) [casa, right of=i] {6};
+
+\node [above of=f, triangle] {};
+\node [above of=g, triangle] {};
+\node [above of=h, triangle] {};
+\node [above of=i, triangle] {};
+\node [above of=j, triangle] {};
+
+
 \end{tikzpicture}
 \caption{Ilustração dos números de moradores por casa}
 \label{moradorescasa}
 \end{figure}
 
-\item {} 
-Qual é a probabilidade de que a casa escolhida tenha exatamente 4 moradores? Por quê?
+\begin{enumerate}
+\item
+Qual é a probabilidade de que a casa escolhida tenha exatamente $4$ moradores? Por quê?
 
 \item {} 
-Qual é a probabilidade de que a casa escolhida tenha mais de 4 moradores? Por quê?
+Qual é a probabilidade de que a casa escolhida tenha mais de $4$ moradores? Por quê?
+\end{enumerate}
 
 \item {} 
 Suponha que você vá girar a roleta ilustrada na \hyperref[roleta]{figura \ref{roleta}}.
@@ -361,7 +365,7 @@ Suponha que você vá girar a roleta ilustrada na \hyperref[roleta]{figura \ref{
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}  
+\begin{tikzpicture}[scale=.75] 
 
   
   \draw[fill=\currentcolor!70, smooth] (0,0) -- +(90:3) arc (90:180:3cm);
@@ -381,18 +385,18 @@ Suponha que você vá girar a roleta ilustrada na \hyperref[roleta]{figura \ref{
 
 \end{enumerate}
 
-Qual é a probabilidade de que a seta pare na região pintada de cinza? Por quê?
+Qual é a probabilidade de que a seta pare na região pintada de azul? Por quê?
 
 Bloco II - Probabilidade frequentista
 \begin{enumerate}
 \item {} 
-Suponha que você tenha lançado uma moeda 20 vezes e que tenha observado a face “cara” 19 vezes e a face “coroa” uma vez. Se você lançar esta moeda mais uma vez, qual é a probabilidade (chance) de a face voltada para cima resultar em “cara”? Por quê?
+Suponha que você tenha lançado uma moeda $20$ vezes e que tenha observado a face “cara” 19 vezes e a face “coroa” uma vez. Se você lançar esta moeda mais uma vez, qual é a probabilidade (chance) de a face voltada para cima resultar em “cara”? Por quê?
 
 \item {} 
 Suponha que um bebê tenha nascido na maternidade mais próxima de sua casa na manhã de hoje. Qual é a probabilidade de que este bebê seja um menino? Por quê?
 
 \item {} 
-A pesquisa TIC Educação 2016, do Centro de Estudos sobre as Tecnologias da Informação e da Comunicação (Cetic), coletou dados de cerca de 11 mil estudantes do segundo segmento do Ensino Fundamental e do Ensino Médio. Entre várias informações, verificou-se que cerca de 8.500 estudantes usam smartphones como seu principal meio de acesso à internet. A pesquisa aconteceu entre agosto e dezembro de 2016.” (\href{https://g1.globo.com/educacao/noticia/52-das-instituicoes-de-educacao-basica-usam-celular-em-atividades-escolares-aponta-estudo-da-cetic.ghtml}{Leia a reportagem} publicada no G1.com.br).
+A pesquisa TIC Educação 2016, do Centro de Estudos sobre as Tecnologias da Informação e da Comunicação (Cetic), coletou dados de cerca de $11$ mil estudantes do segundo segmento do Ensino Fundamental e do Ensino Médio. Entre várias informações, verificou-se que cerca de $8.500$ estudantes usam smartphones como seu principal meio de acesso à internet. A pesquisa aconteceu entre agosto e dezembro de 2016.” (\href{https://g1.globo.com/educacao/noticia/52-das-instituicoes-de-educacao-basica-usam-celular-em-atividades-escolares-aponta-estudo-da-cetic.ghtml}{Leia a reportagem} publicada no G1.com.br).
 
 \end{enumerate}
 
@@ -415,7 +419,7 @@ Qual é a probabilidade de que você esteja casado(a) aos 25 anos?
 
 \arrange{conceitos básicos}
 \label{organizandoconceitosbasicos}
-Como você fez para determinar as probabilidades no bloco I da Atividade \emph{avaliando probabilidades}? E no bloco II? E no bloco III? Você deve ter percebido que, dependendo da situação, nem sempre é possível atribuir probabilidades a um evento, usando o mesmo tipo de raciocínio.
+Como você fez para determinar as probabilidades no bloco I da atividade \hyperref[avaliando-probabilidades]{Avaliando probabilidades}? E no bloco II? E no bloco III? Você deve ter percebido que, dependendo da situação, nem sempre é possível atribuir probabilidades a um evento, usando o mesmo tipo de raciocínio.
 
 Por exemplo, considere o experimento “observar se um corpo celeste cairá sobre a casa onde você mora dentro de uma hora”.
 
@@ -433,7 +437,9 @@ Certamente não, pois sabemos que a situação “cair” é um evento raríssim
 
 Neste caso, não faz sentido atribuir probabilidades iguais para os dois resultados possíveis. Uma probabilidade razoável para o resultado “cair” seria bem pequena, próxima de zero e não igual a probabilidade do resultado “não cair”.
 
-Antes de apresentarmos diferentes interpretações de probabilidade, vamos começar definindo os termos \index{espaço amostral}espaço amostral e \index{evento}evento.
+Antes de apresentarmos diferentes interpretações de probabilidade, vamos começar definindo os termos espaço amostral e evento.
+
+
 \begin{description}
 \item[{Espaço amostral \index{Espaço amostral: conjunto que compreende todos os resultados possíveis de um experimento aleatório.|textbf}}]
 Conjunto que compreende todos os resultados possíveis de um experimento aleatório.
@@ -441,7 +447,8 @@ Conjunto que compreende todos os resultados possíveis de um experimento aleató
 
 Usaremos a letra maiúscula \(S\) para denotar espaço amostral.
 
-Por exemplo, no item (b), do bloco I da Atividade \emph{avaliando probabilidades}, um espaço amostral pode ser representado por \(S=\{1,2,3,4,5,6,8\}\), pois este conjunto compreende todos os números possíveis de serem obtidos, quando sorteamos uma casa do bairro. Observe novamente que, neste caso, também não é razoável atribuir probabilidades iguais aos elementos deste espaço amostral, pois na rua há duas casas com exatamente 1 morador, duas casas com exatamente 4 moradores e duas casas com exatamente 8 moradores, enquanto que há apenas uma casa com exatamente 2 moradores, uma casa com  exatamente 3 moradores, uma casa com exatamente 5 moradores e uma casa com exatamente 6 moradores.
+Por exemplo, no item \titem{b)}, do bloco I da atividade \hyperref[avaliando-probabilidades]{Avaliando probabilidades}, um espaço amostral pode ser representado por \(S=\{1,2,3,4,5,6,8\}\), pois este conjunto compreende todos os números possíveis de serem obtidos, quando sorteamos uma casa do bairro. Observe novamente que, neste caso, também não é razoável atribuir probabilidades iguais aos elementos deste espaço amostral, pois na rua há duas casas com exatamente 1 morador, duas casas com exatamente 4 moradores e duas casas com exatamente 8 moradores, enquanto que há apenas uma casa com exatamente 2 moradores, uma casa com exatamente 3 moradores, uma casa com exatamente 5 moradores e uma casa com exatamente 6 moradores.
+
 \begin{description}
 \item[{Evento \index{Evento: é qualquer subconjunto  do espaço amostral  para o qual faz sentido atribuir uma probabilidade.|textbf}}]
 É qualquer subconjunto \(A\) do espaço amostral \(S\) para o qual faz sentido atribuir uma probabilidade.
@@ -456,14 +463,14 @@ Veja, na \hyperref[diagramavenn1]{figura \ref{diagramavenn1}}, uma representaç�
 [scale=0.6]
 \draw [,rounded corners=8pt, -] (0,-0) -- (0,5) -- (8,5) -- (8,0) -- cycle;
 \draw (4,2.5) ellipse (2.5cm and 2cm);
-\node [] at (7.5,4) {$A$};
+\node [] at (6.25,4) {$A$};
 \node [] at (8,5.25) {$S$};
 \end{tikzpicture}
 \caption{Representação de conjuntos no diagrama de Venn}
 \label{diagramavenn1}
 \end{figure}
 
-Ao realizar um experimento aleatório, dizemos que um evento \(A\) ocorreu, se o resultado tiver sido um elemento de \(A\). Por exemplo, se ao lançarmos um dado com as faces numeradas de 1 a 6, tiver ocorrido face 2 e \(A\) é o evento “a face voltada para cima corresponde a um número par”, isto é, \(A=\{2,4,6\}\), dizemos que o evento \(A\) ocorreu.
+Ao realizar um experimento aleatório, dizemos que um evento \(A\) ocorreu, se o resultado tiver sido um elemento de \(A\). Por exemplo, se ao lançarmos um dado com as faces numeradas de $1$ a $6$, tiver ocorrido face $2$ e \(A\) é o evento “a face voltada para cima corresponde a um número par”, isto é, \(A=\{2,4,6\}\), dizemos que o evento \(A\) ocorreu.
 
 \begin{figure}[H]
 \centering
@@ -479,14 +486,14 @@ Subconjunto unitário do espaço amostral \(S\); ou, equivalentemente, subconjun
 
 Por exemplo, no lançamento de um dado, podemos representar o espaço amostral por \(S=\{1,2,3,4,5,6\}\). Nesse caso, os eventos elementares são os conjuntos unitários:
 \begin{equation*}
-\begin{split}\{1\}, \{2\}, \{3\}, \{4\}, \{5\} \textsf{ e } \{6\}.\end{split}
+\begin{split}\{1\}, \{2\}, \{3\}, \{4\}, \{5\} \text{ e } \{6\}.\end{split}
 \end{equation*}
-\textbf{Operações de união, interseção e complementariedade}
+\subsection{Operações de união, interseção e complementariedade}
 
 Faremos agora uma rápida revisão sobre operações entre conjuntos (união, interseção e complementariedade), pois eventos são conjuntos e nós estamos interessados em calcular probabilidades de eventos.
 
 \begin{description}
-  \item[{União}] O conjunto \(A\cup B\) (lê-se \(A\)  união \(B\)) corresponde à reunião de todos os elementos de \(A\) e {}` de \(B\). Veja na \hyperref[aub]{figura \ref{aub}}, uma representação de \(A\cup B\), usando diagrama de Venn, em que o conjunto \(A\cup B\) corresponde à região pintada.
+  \item[{União}] O conjunto \(A\cup B\) (lê-se \(A\)  união \(B\)) corresponde à reunião de todos os elementos de \(A\) e de \(B\). Veja na \hyperref[aub]{figura \ref{aub}}, uma representação de \(A\cup B\), usando diagrama de Venn, em que o conjunto \(A\cup B\) corresponde à região pintada.
 
 \begin{figure}[H]
 \centering
@@ -536,7 +543,7 @@ O conjunto \(A\cap B\) (lê-se \(A\) interseção \(B\)) corresponde à coleçã
 \end{figure}
 
 
-Dizemos que o evento \(A \cap B\) ocoreu, se os eventos \(A\) e \(B\) tiverem ocorrido simultaneamente.
+Dizemos que o evento \(A \cap B\) ocorreu, se os eventos \(A\) e \(B\) tiverem ocorrido simultaneamente.
 \end{description}
 \begin{description}
 \item [{Complementariedade}]
@@ -579,7 +586,7 @@ $A\cap B=\emptyset$, ou seja, se \(A\) e \(B\) não tiverem elementos em comum.
 
 Dado qualquer espaço amostral \(S\), os conjuntos \(S\) e \(\emptyset\) (conjunto vazio) são considerados eventos especiais e chamados de \textbf{evento certo} e \textbf{evento impossível}, respectivamente.
 
-Para o evento certo (\(S\)) atribui-se probabilidade 1 e, para o evento impossível (\(\emptyset\)), atribui-se probabilidade zero. Para qualquer outro evento, a probabilidade deverá ser um número real no intervalo {[}0,1{]}.
+Para o evento certo (\(S\)) atribui-se probabilidade $1$ e, para o evento impossível (\(\emptyset\)), atribui-se probabilidade zero. Para qualquer outro evento, a probabilidade deverá ser um número real no intervalo $[0,1]$.
 
 Para concluir essa breve revisão de operações com conjuntos, vamos apresentar a propriedade distributiva da operação de interseção com a união de dois eventos, a saber,
 
@@ -587,7 +594,7 @@ Para concluir essa breve revisão de operações com conjuntos, vamos apresentar
 \begin{split}(A\cup B)\cap C=(A\cap C)\cup (B\cap C)\end{split}
 \end{equation*}
 
-Para visualizar melhor essa propriedade, considere A, B e C eventos em um espaço amostral S, representados nos diagramas de Venn da \hyperref[diagramasvenn2]{figura \ref{diagramasvenn2}}, lembrando que as interseções nesses diagramas podem ser conjuntos vazios.
+Para visualizar melhor essa propriedade, considere $A$, $B$ e $C$ eventos em um espaço amostral $S$, representados nos diagramas de Venn da \hyperref[diagramasvenn2]{figura \ref{diagramasvenn2}}, lembrando que as interseções nesses diagramas podem ser conjuntos vazios.
 
 \begin{figure}[H]
 \centering
@@ -625,27 +632,24 @@ Para visualizar melhor essa propriedade, considere A, B e C eventos em um espaç
 \end{figure}
 
 
-
-
 No primeiro diagrama, pinte de uma cor \(A\cup B\) e com outra cor, pinte o conjunto \(C\), destacando a região que foi pintada pelas duas cores. No segundo diagrama, pinte o conjunto \(A\cap C\) e, com a mesma cor,  o conjunto \(B\cap C\). A região pintadada corresponde ao conjunto dado no lado direito da igualdade. Finalmente, verifique que as regiões destacadas correspondem ao mesmo conjunto.
 
 A seguir, serão apresentadas três interpretações da probabilidade.
 
 
-\subsection{Interpretação clássica de probabilidade}
+\section{Interpretação clássica de probabilidade}
 
-Na \index{interpretação clássica de probabilidade}interpretação clássica de probabilidade todos os eventos elementares são considerados igualmente prováveis (equiprováveis).
+Na interpretação clássica de probabilidade todos os eventos elementares são considerados igualmente prováveis (equiprováveis).
 
-Esta interpretação costuma ser usada em problemas envolvendo lançamento de dados,  sorteios de cartas de um baralho e outros jogos. De fato, os primeiros trabalhos teóricos publicados envolvendo probabilidades no século XVII, fazem uso desta interpretação e envolvem cálculos de probabilidades de eventos em jogos de azar.
+Esta interpretação costuma ser usada em problemas envolvendo lançamento de dados, sorteios de cartas de um baralho e outros jogos. De fato, os primeiros trabalhos teóricos publicados envolvendo probabilidades no século XVII, fazem uso desta interpretação e envolvem cálculos de probabilidades de eventos em jogos de azar.
 
 No entanto, nem sempre a interpretação clássica será adequada: lembre-se do exemplo da queda de um corpo celeste.
 
 Um outro problema com esta interpretação é a circularidade do conceito de probabilidade para definir a própria probabilidade, pois considera em sua definição “resultados igualmente prováveis” que depende do conceito de probabilidade.
 
+\section{Interpretação frequentista de probabilidade}
 
-\subsection{Interpretação frequentista de probabilidade}
-
-Na \index{interpretação frequentista de probabilidade}interpretação frequentista de probabilidade, a probabilidade de um evento é definida como a frequência relativa de ocorrência deste evento, se o experimento for repetido, sob as mesmas condições, um grande número de vezes.
+Na interpretação frequentista de probabilidade, a probabilidade de um evento é definida como a frequência relativa de ocorrência deste evento, se o experimento for repetido, sob as mesmas condições, um grande número de vezes.
 
 Problemas com esta definição envolvem falta de clareza: o que siginificam
 \begin{itemize}
@@ -659,17 +663,17 @@ Problemas com esta definição envolvem falta de clareza: o que siginificam
 
 Além disso, existem fenômenos únicos para os quais não é possível realizar repetições, por exemplo, o experimento que envolve verificar se daqui a 8 anos seu nível de instrução será superior completo ou não.
 
-No entanto, esta interpretação é muito útil e amplamente usada em modelagens probabilísticas. De fato, a interpretação frequentista de probabilidade tem suas origens com a Lei dos Grandes Números, importante resultado da teoria das probabilidades estabelecido pelo matemático suíço Jakob Bernoulli (1654 - 1705). Bernoulli levou mais de vinte anos para provar a fórmula matemática, que foi publicada em seu livro “A Arte da Conjectura” (Ars Conjectandi) por seu sobrinho Nicolau Bernoulli em 1713. Bernoulli afirmou que quanto maior o número de tentativas (repetições do experimento), mais a proporção de tentativas bem-sucedidas (frequência relativa de ocorrência do evento de interesse) se aproxima de \(p\) (probabilidade do evento de interesse ocorrer).
+No entanto, esta interpretação é muito útil e amplamente usada em modelagens probabilísticas. De fato, a interpretação frequentista de probabilidade tem suas origens com a Lei dos Grandes Números, importante resultado da teoria das probabilidades estabelecido pelo matemático suíço Jakob Bernoulli (\(\star\)\(1654\) — \(\dagger\)\(1705\)). Bernoulli levou mais de vinte anos para provar a fórmula matemática, que foi publicada em seu livro “A Arte da Conjectura” (Ars Conjectandi) por seu sobrinho Nicolau Bernoulli em 1713. Bernoulli afirmou que quanto maior o número de tentativas (repetições do experimento), mais a proporção de tentativas bem-sucedidas (frequência relativa de ocorrência do evento de interesse) se aproxima de \(p\) (probabilidade do evento de interesse ocorrer).
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{jakob_bernoulli}.png}
+\noindent\includegraphics[width=125bp]{{jakob_bernoulli}.png}
 \caption{Jakob Bernoulli (1654-1705)}
 \end{figure}
 
 
-Veja na \hyperref[1000_lancamentos2]{figura \ref{1000_lancamentos2}} uma ilustração da Lei dos Grandes Números na qual mostra-se uma \index{simulação}simulação do lançamento de uma moeda honesta (probabilidades iguais de cara e coroa) 1000 vezes. Os gráficos  ilustram a frequência relativa de caras, ou seja, número de caras obtidas sobre o número de lançamentos da moeda (eixo vertical) em função do número de lançamentos da moeda (eixo horizontal). A linha horizontal indica o valor \(\frac{1}{2}=0,5\), a probabilidade teórica de ocorrer cara para uma moeda honesta. Observe como rapidamente a frequência relativa se aproxima do valor \(\frac{1}{2}\).
+Veja na \hyperref[1000_lancamentos2]{figura \ref{1000_lancamentos2}} uma ilustração da Lei dos Grandes Números na qual mostra-se uma \index{simulação}simulação do lançamento de uma moeda honesta (probabilidades iguais de cara e coroa) $1000$ vezes. Os gráficos ilustram a frequência relativa de caras, ou seja, número de caras obtidas sobre o número de lançamentos da moeda (eixo vertical) em função do número de lançamentos da moeda (eixo horizontal). A linha horizontal indica o valor \(\frac{1}{2}=0{,}5\), a probabilidade teórica de ocorrer cara para uma moeda honesta. Observe como rapidamente a frequência relativa se aproxima do valor \(\frac{1}{2}\).
 
 \begin{figure}[H]
 \centering
@@ -699,11 +703,12 @@ Veja na \hyperref[1000_lancamentos2]{figura \ref{1000_lancamentos2}} uma ilustra
 \end{figure}
 
 
-Observe que nesta simulação ocorreu cara no primeiro lançamento da moeda de tal modo que a frequência relativa de caras inicial é 1.  Além disso, nota-se que nas repetições iniciais a frequência relativa de caras oscila muito mais, no entanto, rapidamente ela se aproxima de 0,5 com uma oscilação desprezível.
+Observe que nesta simulação ocorreu cara no primeiro lançamento da moeda de tal modo que a frequência relativa de caras inicial é $1$. Além disso, nota-se que nas repetições iniciais a frequência relativa de caras oscila muito mais, no entanto, rapidamente ela se aproxima de $0{,}5$ com uma oscilação desprezível.
+
 
 Observando a \hyperref[10_lancamentos2]{figura \ref{10_lancamentos2}}, o que você diria que ocorreu (cara ou coroa), no terceiro lançamento da moeda? Por quê?
 
-\subsection{Interpretação subjetiva de probabilidade}
+\section{Interpretação subjetiva de probabilidade}
 
 Na \index{interpretação subjetiva de probabilidade}interpretação subjetiva de probabilidade, probabilidades de eventos são designadas de acordo com a experiência que o pesquisador tem sobre o fenômeno em investigação. No primeiro exemplo desta seção (queda de um corpo celeste) pode-se dizer que adotou-se a interpretação subjetiva quando atribui-se uma probabilidade pequena, próxima de zero, para o evento “não cair”.
 
@@ -711,11 +716,11 @@ Uma crítica a esta interpretação é a de que pessoas diferentes podem atribui
 
 O importante, quando adota-se a interpretação subjetiva, é ter coerência. Por exemplo se sabemos que um evento \(A\) ocorre com frequência quatro vezes maior do que um evento \(B\), então \(P(A)=4\cdot P(B)\).
 
-Se temos a percepção de que é mais provável que certo evento ocorra do que ele não ocorra, atribuímos a ele uma probabilidade maior do que 0,5. Por outro lado, se temos a percepção de que é menos provável que certo evento ocorra do que ele não ocorra, atribuímos a ele uma probabilidade inferior a 0,5. Se temos a percepção de que não existe favorecimento entre a ocorrência ou não de certo evento, ou mesmo se não sabemos nada sobre ele, atribuímos a ele uma probabilidade de 0,5. A razão pela qual usamos o valor 0,5 como referência se dá pelo fato de que 0,5 é exatamente o centro da escala da probabilidade que varia de 0 a 1 (0 a 100\%) como será formalizado na Seção \hyperref[regrasbasicaspropriedades]{Organizando: Probabilidade - regras básicas e propriedades}.
-
+Se temos a percepção de que é mais provável que certo evento ocorra do que ele não ocorra, atribuímos a ele uma probabilidade maior do que 0,5. Por outro lado, se temos a percepção de que é menos provável que certo evento ocorra do que ele não ocorra, atribuímos a ele uma probabilidade inferior a 0,5. Se temos a percepção de que não existe favorecimento entre a ocorrência ou não de certo evento, ou mesmo se não sabemos nada sobre ele, atribuímos a ele uma probabilidade de 0,5. A razão pela qual usamos o valor 0,5 como referência se dá pelo fato de que 0,5 é exatamente o centro da escala da probabilidade que varia de 0 a 1 (0 a 100\%) como será formalizado na seção \hyperref[regrasbasicaspropriedades]{Organizando: Probabilidade - regras básicas e propriedades}.
 
 \practice{conceitos básicos}
 \begin{task}{espaço amostral não é único!}
+\label{espaço-nao-unico}
 
 
 Considere as famílias com três filhos no bairro onde você mora. Suponha que deseja-se calcular probabilidades do tipo: “qual a probabilidade de que uma dessas famílias com três filhos tenha dois meninos e uma menina?”.
@@ -732,40 +737,41 @@ Construa um outro espaço amostral, considerando a quantidade de meninas em cada
 \begin{task}{avaliando probabilidades a partir de um histograma}
 
 
-No capítulo Medidas de posição e dispersão foram trabalhados os dados sobre os 100 melhores tempos atingidos na Maratona de Nova Iorque (2017) para as categorias homens e mulheres. Na \hyperref[maratona]{figura \ref{maratona}}, apresenta-se um histograma construído para os 100 melhores tempos na maratona de Nova Iorque (2017) para a categoria homens, após a conversão destes tempos para minutos.
+No capítulo \hyperref[est2-chap]{\textbf{Medidas de posição e dispersão}} foram trabalhados os dados sobre os 100 melhores tempos atingidos na Maratona de Nova Iorque (2017) para as categorias homens e mulheres. Na \hyperref[maratona-homens-prob]{figura \ref{maratona-homens-prob}}, apresenta-se um histograma construído para os 100 melhores tempos na maratona de Nova Iorque (2017) para a categoria homens, após a conversão destes tempos para minutos.
 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[xscale=0.5, scale=0.5, every node/.style={scale=.5}]
+\begin{tikzpicture}[xscale=0.5,yscale=.8, scale=0.35]
 
 \draw (-0.2,0) -- (33.5,0);
 \draw (0,0) -- (0,25);
 
-\foreach \x in {0,5,10,15,20,25}  \draw (0,\x) -- (-0.5,\x) node [above, rotate=90, scale=2] at (-0.3,\x) {\x}  
+\foreach \x in {0,5,10,15,20,25}  \draw (0,\x) -- (-0.5,\x) node [above, rotate=90] at (-0.3,\x) {\x}  
 ;
 
 
-\foreach \x/\y in {3/7,6/4,9/1,12/2,15/4,18/4,21/14,24/21,27/24,30/19} \draw [fill=\currentcolor!80] (\x,0) rectangle (\x+3,\y) node [above, scale= 1.5, xshift=-1.2 em] {(\y)};
+\foreach \x/\y in {3/7,6/4,9/1,12/2,15/4,18/4,21/14,24/21,27/24,30/19}{ \draw [fill=\currentcolor!80] (\x,0) rectangle (\x+3,\y);
+\node [above, align=center, scale=.9] at (\x+1.5,\y) {$(\y)$};}
 
-\foreach \x/\y in {3/130,6/\quad,9/136,12/\quad,15/142,18/\quad,21/148,24/\quad,27/153,30/\quad,33/160} \draw (\x,0) -- (\x,-0.25) node [below,scale=2] {\y};
+\foreach \x/\y in {3/130,6/\quad,9/136,12/\quad,15/142,18/\quad,21/148,24/\quad,27/153,30/\quad,33/160} \draw (\x,0) -- (\x,-0.25) node [below] {\y};
 
 \foreach \x in {0,5,10,15,20,25}  \draw [dashed] (0,\x) -- (33.5,\x)
 ;
 
-\node [rotate=90,scale=2.3] at (-4,12.5) {frequencia absoluta};
-\node [scale=2.3] at (16.5,-2) {tempos em minutos};
-\node [scale=2.7, align=center] at (15.6, 27) {Histograma dos 100 melhores tempos na categoria \\ Maratona de Nova Iorque - 2017};
+\node [rotate=90] at (-4,12.5) {frequência absoluta};
+\node  at (16.5,-3) {tempos em minutos};
+\node [align=center] at (15.6, 27.5) {Histograma dos 100 melhores tempos na categoria \\ Maratona de Nova Iorque - 2017};
 
 
 \end{tikzpicture}
-\caption{Histograma dos 100 melhores tempos para homens na Maratona de Nova Iorque (2017), destacando a frequ\textasciitilde{}encia absoluta de cada intervalo de classe.}
-\label{maratona}
+\caption{Histograma dos 100 melhores tempos para homens na Maratona de Nova Iorque (2017), destacando a frequência absoluta de cada intervalo de classe.}
+\label{maratona-homens-prob}
 \end{figure}
 
 
 Na \hyperref[maratonatabela]{
-tabela \ref{maratonatabela}} são apresentados os intervalos de classe e suas respectivas frequências, usados na construção do histograma da \hyperref[maratona]{figura \ref{maratona}}. Os intervalos considerados são fechados à esquerda e abertos à direita.
+tabela \ref{maratonatabela}} são apresentados os intervalos de classe e suas respectivas frequências, usados na construção do histograma da \hyperref[maratona-homens-prob]{figura \ref{maratona-homens-prob}}. Os intervalos considerados são fechados à esquerda e abertos à direita.
 
 \begin{table}[H]
 \centering
@@ -774,46 +780,46 @@ tabela \ref{maratonatabela}} são apresentados os intervalos de classe e suas re
 \thead
 \parbox[c][1cm]{3.5cm}{\centering Intervalo de classe} & \parbox[c][1cm]{3.5cm}{\centering Frequência Absoluta} & \parbox[c][1cm]{3.5cm}{\centering Frequência Relativa} \\
 \hline\relax
-[130,0;133,0[ & 7 & 0.07 \\
+$[130,0;133,0[$ & $7$ & $0{,}07$ \\
 \hline
-[133,0;136,0[ & 4 & 0,04 \\
+$[133,0;136,0[$ & $4$ & $0{,}04$ \\
 \hline
-[136,0;139,0[ & 1 & 0,01 \\
+$[136,0;139,0[$ & $1$ & $0{,}01$ \\
 \hline
-[139,0;142,0[ & 2 & 0,02 \\
+$[139,0;142,0[$ & $2$ & $0{,}02$ \\
 \hline
-[142,0;145,0[ & 4 & 0,04 \\
+$[142,0;145,0[$ & $4$ & $0{,}04$ \\
 \hline
-[145,0;148,0[ & 4 & 0,04 \\
+$[145,0;148,0[$ & $4$ & $0{,}04$ \\
 \hline
-[148,0;151,0[ & 14 & 0,14 \\
+$[148,0;151,0[$ & $14$ & $0{,}14$ \\
 \hline
-[151,0;154,0[ & 21 & 0,21 \\
+$[151,0;154,0[$ & $21$ & $0{,}21$ \\
 \hline
-[154,0;157,0[ & 24 & 0,24 \\
+$[154,0;157,0[$ & $24$ & $0{,}24$ \\
 \hline
-[157,0;160,0[ & 19 & 0,19 \\
+$[157,0;160,0[$ & $19$ & $0{,}19$ \\
 \hline
 \end{tabu}
 \caption{Distribuição de frequências dos 100 melhores tempos na categoria homens da maratona de Nova Iorque (2017)}
 \label{maratonatabela}
 \end{table}
 
-Suponha que o comportamento dos 100 melhores tempos para homens na Maratona de Nova Iorque (2017) represente bem os 100 melhores tempos para homens em qualquer Maratona de Nova Iorque
+Suponha que o comportamento dos 100 melhores tempos para homens na Maratona de Nova Iorque (2017) represente bem os 100 melhores tempos para homens em qualquer Maratona de Nova Iorque.
 
 Com base nessa suposição, estime a probabilidade de que na próxima maratona de Nova Iorque o tempo de conclusão da corrida, entre os 100 melhores na categoria homens,
 \begin{enumerate}
 \item {} 
-ocorra entre 157,0 e 160,0 minutos;
+ocorra entre $157{,}0$ e $160{,}0$ minutos;
 
 \item {} 
-seja inferior a 154,0 minutos;
+seja inferior a $154{,}0$ minutos;
 
 \item {} 
-seja superior a 152,5 minutos;
+seja superior a $152{,}5$ minutos;
 
 \item {} 
-caia entre 152,5 e 158 minutos.
+caia entre $152{,}5$ e $158$ minutos.
 
 Observação: Para responder os dois últimos itens, suponha, em cada intervalo, que as frequências obervadas são proporcionais aos comprimentos dos intervalos, para poder avaliar frequências em subintervalos.
 
@@ -879,7 +885,7 @@ Verifique, usando os diagramas de Venn na \hyperref[diagramavenn3]{figura \ref{d
 
 \explore{regras básicas e propriedades}
 
-No início do século XX, o matemático russo Kolmogorov, como já comentado na Seção \hyperref[conceitosbasicos]{Explorando: Probabilidade \textendash{} conceitos básicos}, estabeleceu regras básicas para a probabilidade que independem da interpretação adotada, possibilitando assim, a construção de uma teoria matemática de probabilidade.
+No início do século XX, o matemático russo Kolmogorov, como já comentado na seção \hyperref[conceitosbasicos]{Explorando: Probabilidade \textendash{} conceitos básicos}, estabeleceu regras básicas para a probabilidade que independem da interpretação adotada, possibilitando assim, a construção de uma teoria matemática de probabilidade.
 
 De maneira simplificada, essas regras básicas serão apresentadas a seguir.
 
@@ -889,7 +895,7 @@ Seja \(S\) um espaço amostral. Uma probabilidade é uma função \(P\) que asso
 ela é sempre um número não negativo,
 
 \item {} 
-a probabilidade do evento certo é igual a 1 e,
+a probabilidade do evento certo é igual a $1$ e,
 
 \item {} 
 dados dois eventos disjuntos, a probabilidade da união dos dois é dada pela soma das probabilidades individuais.
@@ -902,21 +908,21 @@ Em símbolos, essas regras podem ser apresentadas da seguinte forma:
 \(P(A)\geq 0\) qualquer que seja \(A\subset S\), ou seja, a probabilidade de qualquer evento \(A\) é um número não-negativo.
 
 \item {} 
-\(P(S)=1\), ou seja, a probabilidade do evento certo é igual a 1.
+\(P(S)=1\), ou seja, a probabilidade do evento certo é igual a $1$.
 
 \item {} 
 Se \(A,B\subset S\) com \(A\) e \(B\) eventos disjuntos (\(A\cap B=\emptyset\)), então \(P(A\cup B)=P(A)+P(B)\).
 
 \end{enumerate}
 \begin{task}{censo Educação Física}
+\label{censo-educacao-fisica}
 
-
-Em uma escola de Ensino Médio há dois turnos: manhã e tarde. No turno da manhã há 450 alunos e, no turno da tarde, 350 alunos. Os professores de Educação Física realizaram um censo para saber se os alunos da escola praticavam algum tipo de atividade física regular fora do período escolar. A pergunta principal do questionário da pesquisa foi:
+Em uma escola de Ensino Médio há dois turnos: manhã e tarde. No turno da manhã há $450$ alunos e, no turno da tarde, $350$ alunos. Os professores de Educação Física realizaram um censo para saber se os alunos da escola praticavam algum tipo de atividade física regular fora do período escolar. A pergunta principal do questionário da pesquisa foi:
 
 \textbf{Qual é a sua atividade física principal fora do período escolar? Marque apenas uma opção.}
 
 
-\begin{center}\textbf{(  ) Não pratica  (   ) Futebol (  ) Outra}\end{center}
+\begin{center}\textbf{({ }) Não pratica  ({ }) Futebol ({ }) Outra}\end{center}
 
 Na \hyperref[frequenciaatividade]{tabela \ref{frequenciaatividade}} estão os resultados obtidos.
 \begin{quote}
@@ -930,15 +936,15 @@ Na \hyperref[frequenciaatividade]{tabela \ref{frequenciaatividade}} estão os re
 \thead
 Atividade Física & Manhã & Tarde & Total \\
 \hline
-Não pratica & 140 & 130 & 270 \\
+Não pratica & $140$ & $130$ & $270$ \\
 \hline
-Futebol & 160 & 80 & 240 \\
+Futebol & $160$ & $80$ & $240$ \\
 \hline
-Natação & 80 & 70 & 150 \\
+Natação & $80$ & $70$ & $150$ \\
 \hline
-Outra atividade & 70 & 70 & 140 \\
+Outra atividade & $70$ & $70$ & $140$ \\
 \hline
-Total & 450 & 350 & 800 \\
+Total & $450$ & $350$ & $800$ \\
 \hline
 \end{tabu}
 \caption{Distribuição de frequências por atividade, segundo o turno.}
@@ -948,7 +954,7 @@ Total & 450 & 350 & 800 \\
 Um aluno desta escola será escolhido ao acaso.
 \begin{enumerate}
 \item {} 
-Considere os eventos \(A\):  ” o aluno escolhido não pratica atividade física”, \(B\): ” o aluno escolhido pratica Futebol como atividade física principal”, \(C\): ” o aluno escolhido pratica natação” e \(D:\): “o aluno pratica outro tipo de atividade física principal”. Determine a probabilidade de cada um desses eventos.
+Considere os eventos  \(A\):{}”o aluno escolhido não pratica atividade física”, \(B\):”{} o aluno escolhido pratica Futebol como atividade física principal”, \(C\): ”o aluno escolhido pratica natação”{} e \(D:\):“o aluno pratica outro tipo de atividade física principal”. Determine a probabilidade de cada um desses eventos.
 
 \item {} 
 Observe que o espaço amostral nesse experimento corresponde à união dos eventos considerados no item anterior. Calcule a soma das probabilidades determinadas no item anterior. O resultado obtido é compatível com a segunda regra básica, a saber, \(P(S)=1\)? Por quê?
@@ -974,10 +980,10 @@ Suponha três eventos \(A\), \(B\) e \(C\) disjuntos 2 a 2, ou seja, \(A\cap B=A
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=0.8]
+\begin{tikzpicture}[scale=0.5]
 
 \draw [,rounded corners=8pt, -] (0,0) -- (0,8) -- (10,8) -- (10,0) -- cycle;
-\node at (9,8.25) {$S$};
+\node at (9,8.5) {$S$};
 \draw [fill=\currentcolor!80](2.5,2.2) circle (2cm);
 \node  at (.75,.5) {$B$};
 \draw [fill=\currentcolor!80](7.5,2.2) circle (2cm);
@@ -990,21 +996,20 @@ Suponha três eventos \(A\), \(B\) e \(C\) disjuntos 2 a 2, ou seja, \(A\cap B=A
 
 \end{figure}
 
-A propriedade de aditividade da probabilidade para eventos disjuntos vale para qualquer coleção de eventos disjuntos 2 a 2.
+A propriedade de aditividade da probabilidade para eventos disjuntos vale para qualquer coleção de eventos disjuntos $2$ a $2$.
 
 
-\subsection{Interpretações da probabilidade e as regras básicas}
+\section{Interpretações da probabilidade e as regras básicas}
 
-Como determinar probabilidades sob cada uma das interpretações apresentadas na Seção \hyperref[organizandoconceitosbasicos]{Organizando as ideias: Probabilidade \textendash{} conceitos básicos}, considerando as regras básicas?
+Como determinar probabilidades sob cada uma das interpretações apresentadas na seção \hyperref[organizandoconceitosbasicos]{Organizando as ideias: Probabilidade \textendash{} conceitos básicos}, considerando as regras básicas?
 
-\textbf{1. Interpretação clássica}
+\subsection{Interpretação clássica}
 
 \begin{example}{}
 
 Considere o lançamento de um dado honesto (todas as faces ocorrem com probabilidades iguais). Neste caso o espaço amostral é dado por
 
 \(S=\{ 1,2,3,4,5,6\}\) e, os eventos elementares, são dados por
-
 $$A_1=\{1\}, A_2=\{2\}, A_3=\{3\}, A_4=\{4\}, A_5=\{5\} \text{ e } A_6=\{6\}.$$
 
 Faça \(P(A_i)=k\), \(i=1,2,3,4,5,6\).
@@ -1012,19 +1017,18 @@ Faça \(P(A_i)=k\), \(i=1,2,3,4,5,6\).
 Observe que \(S=A_1\cup A_2\cup A_3\cup A_4\cup A_5 \cup A_6\) e que os eventos \(A_1\), \(A_2\), \(A_3\), \(A_4\) , \(A_5\) e \(A_6\) são disjuntos.
 
 Usando as regras básicas, tem-se
-
 $$1=P(S)=P(A_1\cup A_2\cup A_3\cup A_4\cup A_5 \cup A_6)=P(A_1)+P(A_2)+\cdots +P(A_6)=6\cdot k$$
 
-Logo, \(k=\frac{1}{6}\).
+Logo, \(k=\dfrac{1}{6}\).
 \end{example}
 
-De modo mais geral, sob a interpretação clássica na qual o espaço amostral \(S\) é finito e todos os eventos elementares são equiprováveis, se o número de elementos do conjunto \(S\) é \(n\), \(n\in \mathbb{N}\), então a probabilidade de um evento elementar é dada por \(\frac{1}{n}\).
+De modo mais geral, sob a interpretação clássica na qual o espaço amostral \(S\) é finito e todos os eventos elementares são equiprováveis, se o número de elementos do conjunto \(S\) é \(n\), \(n\in \mathbb{N}\), então a probabilidade de um evento elementar é dada por \(\dfrac{1}{n}\).
 
 Nesse caso, se \(A\subset S\) tem-se $\displaystyle{P(A)=\frac{\#(A)}{n}}$, em que a notação \(\#(A)\) representa o número de elementos do conjunto \(A\).
 
 \begin{observation}{ }
 
-\textbf{Observação} Usando a interpretação clássica, na qual o espaço amostral \(S\) é um conjunto finito e todos os eventos elementares são equiprováveis, tem-se que \(P(A)=\frac{\#(A)}{\#(S)}\).
+\textbf{Observação} Usando a interpretação clássica, na qual o espaço amostral \(S\) é um conjunto finito e todos os eventos elementares são equiprováveis, tem-se \(P(A)=\frac{\#(A)}{\#(S)}\).
 
 Observe que as regras básicas são satisfeitas, pois
 \begin{enumerate}
@@ -1039,19 +1043,19 @@ se \(A\cap B=\emptyset\), tem-se que \(\#(A\cup B)=\#(A)+\#(B)\) tal que \(P(A\c
 
 \end{enumerate}
 
-\textbf{Atenção:} Antes de sair usando essa interpretação, é necessário verificar se a suposição de eventos elementares equiprováveis é adequada. Por exemplo, vimos no item b) da Atividade \emph{o espaço amostral não é único}, que \(S=\{0,1,2,3\}\) com quatro elementos. No entanto, esses elementos não são igualmente prováveis, pois os eventos elementares \(\{1\}\) e \(\{ 2\}\) são três vezes mais prováveis de ocorrer comparados aos eventos elementares \(\{0\}\) e \(\{3\}\).
+\textbf{Atenção:} Antes de sair usando essa interpretação, é necessário verificar se a suposição de eventos elementares equiprováveis é adequada. Por exemplo, vimos no item \titem{b)} da atividade \hyperref[espaço-nao-unico]{Espaço amostral não é único}, que \(S=\{0,1,2,3\}\) com quatro elementos. No entanto, esses elementos não são igualmente prováveis, pois os eventos elementares \(\{1\}\) e \(\{ 2\}\) são três vezes mais prováveis de ocorrer comparados aos eventos elementares \(\{0\}\) e \(\{3\}\).
 \end{observation}
 
-\textbf{2. Interpretação frequentista}
+\subsection{Interpretação frequentista}
 
 Na interpretação frequentista atribuem-se probabilidades, usando-se as frequências relativas de ocorrência do evento depois de observar o mesmo experimento um grande número de vezes. Também podemos perceber com esta interpretação, que as regras da probabilidade valem, pois uma frequência relativa é sempre um número não-negativo. Se considerarmos o evento certo, é claro que sua frequência relativa de ocorrência será sempre 1, independente até da quantidade de vezes na qual o experimento é repetido. Finalmente, dados dois eventos disjuntos, a frequência relativa de ocorrência da união dos dois será dada pela soma das frequências relativas dos dois.
 
-\textbf{3. Interpretação subjetiva}
+\subsection{Interpretação subjetiva}
 
-A validade das regras básicas na interpretação subjetiva de probabilidade depende de coerência com as regras básicas, quando se atribuem probabilidades. Por exemplo, para um espaço amostral \(S\) finito, as probabilidades atribuídas aos eventos elementares não devem ser valores fora do intervalo \([0,1]\). Além disso, a soma das probabilidades dos eventos elementares deverá ser igual a 1.
+A validade das regras básicas na interpretação subjetiva de probabilidade depende de coerência com as regras básicas, quando se atribuem probabilidades. Por exemplo, para um espaço amostral \(S\) finito, as probabilidades atribuídas aos eventos elementares não devem ser valores fora do intervalo \([0,1]\). Além disso, a soma das probabilidades dos eventos elementares deverá ser igual a $1$.
 
 
-\subsection{Propriedades da probabilidade}
+\section{Propriedades da probabilidade}
 
 A seguir, serão enumeradas algumas propriedades úteis no cálculo de probabilidades. Estas propriedades são consequências das regras básicas da probabilidade.
 
@@ -1067,18 +1071,18 @@ Observe que de fato é natural que a probabilidade do evento vazio seja zero, po
 \item[Propriedade 2] A probabilidade de um evento \(A\) pode ser calculada por \(P({A})= 1-P(\overline{A})\).
 \end{description}
 
-Muitas vezes pode ser complicado calcular diretamente a probabilidade de um evento. Uma possível simplificação será calcular a probabilidade do evento complementar. Um exemplo comum, é o problema dos aniversários que será apresentado na seção \hyperref[regrasbasicaspropriedades]{Praticando: Probabilidade - regras básicas e propriedades}. Uma aplicação desta propriedade está ilustrada no item (c) da atividade \emph{censo Educação Física}.
+Muitas vezes pode ser complicado calcular diretamente a probabilidade de um evento. Uma possível simplificação será calcular a probabilidade do evento complementar. Um exemplo comum, é o problema dos aniversários que será apresentado na seção \hyperref[regrasbasicaspropriedades]{Praticando: Probabilidade - regras básicas e propriedades}. Uma aplicação desta propriedade está ilustrada no item \titem{c)} da atividade \hyperref[censo-educacao-fisica]{Censo Educação Física}.
 
 \begin{description}
-\item[Propriedade 3] Dados \(A\) e \(B\) eventos em um espaço amostral \(S`tais que `A\subset B\) (\(A\) está contido em \(B\)), então \(P(A)\leq P(B)\).
+\item[Propriedade 3] Dados \(A\) e \(B\) eventos em um espaço amostral \(S\) tais que \(A\subset B\) (\(A\) está contido em \(B\)), então \(P(A)\leq P(B)\).
 \end{description}
 
-Essa propriedade, ilustrada no item d) da atividade \emph{censo Educação Física}, pode ser obtida a partir das regras básicas:
+Essa propriedade, ilustrada no item \titem{d)} da atividade \hyperref[censo-educacao-fisica]{Censo Educação Física}, pode ser obtida a partir das regras básicas:
 como \(A\subset B\), podemos escrever o evento \(B\) como a união de dois eventos disjuntos, a saber,  \(B=A\cup (B\cap \overline{A})\). Veja uma ilustração na \hyperref[eventosdijuntos]{figura \ref{eventosdijuntos}}.
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.75]
 
 \draw [,rounded corners=8pt, -] (0,0) -- (0,7) -- (7,7) -- (7,0) -- cycle;
 \node  at (6,7.3) {$S$};
@@ -1099,7 +1103,7 @@ Assim, usando a regra de que toda probabilidade é um número não-negativo e a 
 \end{equation*}
 \textbf{Propriedade 4} \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\), quaisquer que sejam os eventos \(A\) e \(B\) de um espaço amostral \(S\).
 
-Essa propriedade, utilizada no item (e) da Atividade \emph{censo Educação Física}, pode ser obtida, escrevendo-se o evento \(A\cup B\) como a união de dois eventos disjuntos, a saber, \(A\cup B=A\cup (\overline{A}\cap B)\).
+Essa propriedade, utilizada no item \titem{e)} da atividade \hyperref[censo-educacao-fisica]{Censo Educação Física}, pode ser obtida, escrevendo-se o evento \(A\cup B\) como a união de dois eventos disjuntos, a saber, \(A\cup B=A\cup (\overline{A}\cap B)\).
 
 Veja uma ilustração na \hyperref[eventosdijuntos2]{figura \ref{eventosdijuntos2}}.
 \begin{figure}[H]
@@ -1150,6 +1154,7 @@ Logo, podemos escrever \(P(\overline{A}\cap B)=P(B)-P(A\cap B)\) tal que
 \end{equation*}
 
 
+\clearpage
 \practice{regras básicas e propriedades}
 \label{regrasbasicaspropriedades}\begin{task}{o problema dos bodes}
 
@@ -1172,7 +1177,7 @@ Qual deve ser a melhor estratégia para o candidato (trocar ou não trocar de po
 
 
 
-No jogo de dardos o vencedor é quem zera os seus pontos mais rapidamente. Você começa, por exemplo, com um total de 200 pontos. A cada lançamento do dardo, dependendo do local atingido, você ganha uma certa pontuação que é descontada do seu total. Se você for o primeiro a zerar, será o vencedor do jogo.
+No jogo de dardos o vencedor é quem zera os seus pontos mais rapidamente. Você começa, por exemplo, com um total de $200$ pontos. A cada lançamento do dardo, dependendo do local atingido, você ganha uma certa pontuação que é descontada do seu total. Se você for o primeiro a zerar, será o vencedor do jogo.
 
 Quanto mais próximo do centro do tabuleiro de dardos (um tabuleiro circular conforme a \hyperref[dardos]{figura \ref{dardos}}), mais pontos você ganha.
 
@@ -1207,34 +1212,34 @@ Suponha que você seja suficentemente experiente de modo que todos os seus lanç
 \label{dardos}
 \end{figure}
 
-Suponha que a medida do raio do tabuleiro de dardos seja 20 cm e que a medida do menor raio (círculo em verde no centro do tabuleiro) seja 5 cm, e que os acréscimos de comprimento do raio nas faixas branca, verde e branca do tabuleiro sejam iguais a 5 cm. A moldura em preto não faz parte do alvo. Suponha também que atingindo o
+Suponha que a medida do raio do tabuleiro de dardos seja $20$cm e que a medida do menor raio (círculo em verde no centro do tabuleiro) seja $5$cm, e que os acréscimos de comprimento do raio nas faixas branca, verde e branca do tabuleiro sejam iguais a $5$cm. A moldura em preto não faz parte do alvo. Suponha também que atingindo o
 \begin{enumerate}
 \item {} 
-círculo de raio 5 cm (em verde), você ganha 100 pontos;
+círculo de raio $5$cm (em verde), você ganha $100$ pontos;
 
 \item {} 
-o anel cicular mais próximo ao centro (em branco), você ganha 50 pontos;
+o anel cicular mais próximo ao centro (em branco), você ganha $50$ pontos;
 
 \item {} 
-o anel circular em verde subsequente, você ganha 20 pontos e
+o anel circular em verde subsequente, você ganha $20$ pontos e
 
 \item {} 
-a anel circular mais externo (em branco), você ganha 10 pontos.
+a anel circular mais externo (em branco), você ganha $10$ pontos.
 
 \end{enumerate}
 
 
-Observe que, neste caso, não é possível usar a interpretação clássica de probabilidade, pois existem infinitos eventos elementares. No entanto, é razoável supor uniformidade de probabilidades se, de fato, o jogador acerte em qualquer ponto do tabuleiro de dardos ao acaso.  Neste espaço amostral, o círculo de raio 20 cm, se os pontos são obtidos ao acaso, ao considerar regiões de mesma área, contidas no círculo, as probabilidades de se obter pontos nestas regiões devem ser iguais.
+Observe que, neste caso, não é possível usar a interpretação clássica de probabilidade, pois existem infinitos eventos elementares. No entanto, é razoável supor uniformidade de probabilidades se, de fato, o jogador acerte em qualquer ponto do tabuleiro de dardos ao acaso. Neste espaço amostral, o círculo de raio $20$cm, se os pontos são obtidos ao acaso, ao considerar regiões de mesma área, contidas no círculo, as probabilidades de se obter pontos nestas regiões devem ser iguais.
 
 Assim, calcula-se a probabilidade do dardo cair numa região dentro do círculo como o quociente entre a medida da área da região sobre a medida da área do círculo (espaço amostral), isto é, se
 \begin{equation*}
-\begin{split}A\subset S \textsf{, então } P(A)=\displaystyle{\frac{\textsf{Área de }A}{\textsf{Área de }S}}\end{split}
+\begin{split}A\subset S \text{, então } P(A)=\displaystyle{\frac{\text{Área de }A}{\text{Área de }S}}\end{split}
 \end{equation*}
 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=0.75]  
+\begin{tikzpicture}[scale=0.6]  
 
 \draw [thick] (0,0) circle (5cm);
 \draw [fill = \currentcolor!50, thick]  (1.5,1.5) circle (2cm);
@@ -1253,23 +1258,23 @@ Observações:
 Nesta situação, a probabilidade do dardo atingir um ponto fixado no círculo será sempre zero, pois a medida de área correspondente a um ponto é nula.
 
 \item {} 
-Esta forma de calcular probabilidades costuma ser denominada como \emph{probabilidade geométrica} e pode ser considerada como uma extensão da interpretação clássica de probabilidade para espaços amostrais representados por uma região do plano com área definida. Esta mesma noção poderá ser usada para espaços amostrais representados por intervalos da reta limitados de comprimento definido, neste caso, calculando-se probabilidades como uma razão de comprimentos de intervalos.
+Esta forma de calcular probabilidades costuma ser denominada como \textit{probabilidade geométrica} e pode ser considerada como uma extensão da interpretação clássica de probabilidade para espaços amostrais representados por uma região do plano com área definida. Esta mesma noção poderá ser usada para espaços amostrais representados por intervalos da reta limitados de comprimento definido, neste caso, calculando-se probabilidades como uma razão de comprimentos de intervalos.
 
 \end{enumerate}
 
 Calcule a probabilidade de que em um lançamento você ganhe
 \begin{enumerate}
 \item {} 
-exatamente 100 pontos;
+exatamente $100$ pontos;
 
 \item {} 
-exatamente 20 pontos;
+exatamente $20$ pontos;
 
 \item {} 
-no máximo 50 pontos.
+no máximo $50$ pontos.
 
 \item {} 
-Suponha também que pode ser combinado, antes do início do jogo, conceder um bônus adicional de 10\% da pontuação, se o dardo atingir o semicírculo, destacado na \hyperref[dardos]{figura \ref{dardos}}. Calcule a probabilidade de que em um lançamento você atinja
+Suponha também que pode ser combinado, antes do início do jogo, conceder um bônus adicional de $10\%$ da pontuação, se o dardo atingir o semicírculo, destacado na \hyperref[dardos]{figura \ref{dardos}}. Calcule a probabilidade de que em um lançamento você atinja
 \begin{enumerate}
 \item {} 
 o semicírculo destacado ou uma faixa de exatamente 50 pontos;
@@ -1285,7 +1290,7 @@ o semicírculo destacado e uma faixa de pelo menos 20 pontos.
 \begin{task}{o problema dos aniversários}
 
 
-Numa turma de seu colégio há 35 alunos. Calcule a probabilidade de que haja pelo menos uma coincidência de datas de aniversário (dia e mês) entre os alunos dessa turma. Considere apenas anos não bissextos e suponha que todos os 365 dias do ano são igualmente prováveis como datas de aniversário.
+Numa turma de seu colégio há $35$ alunos. Calcule a probabilidade de que haja pelo menos uma coincidência de datas de aniversário (dia e mês) entre os alunos dessa turma. Considere apenas anos não bissextos e suponha que todos os $365$ dias do ano são igualmente prováveis como datas de aniversário.
 
 \begin{figure}[H]
 \centering
@@ -1299,7 +1304,7 @@ Numa turma de seu colégio há 35 alunos. Calcule a probabilidade de que haja pe
 
 
 \begin{task}{uso de óculos e sexo de estudandes}
-
+\label{uso-oculos}
 
 Na tabela a seguir estão os dados de uma turma de segundo ano do Ensino Médio com 40 alunos quanto ao gênero e se ele usa ou não óculos.
 
@@ -1310,11 +1315,11 @@ Na tabela a seguir estão os dados de uma turma de segundo ano do Ensino Médio 
 \thead
 gênero & usa óculos & não usa óculos & total \\
 \hline
-feminino & 6 & 16 & 22 \\ 
+feminino & $6$ & $16$ & $22$ \\ 
 \hline
-masculino & 5 & 13 & 18 \\
+masculino & $5$ & $13$ & $18$ \\
 \hline
-total & 11 & 29 & 40 \\
+total & $11$ & $29$ & $40$ \\
 \hline
 \end{tabu}
 \end{table}
@@ -1351,7 +1356,7 @@ Analisando os dados da tabela e as respostas obtidas, há razões para supor que
 
 \subsection{Definição de probabilidade condicional}
 
-Em Ciência,  “informação disponível”  é certamente uma matéria-prima preciosa, pois através dela é possível construir modelos mais realísticos para descrever  fenômenos tanto determinísticos quanto aleatórios e obter resultados mais fidedignos de um ponto de vista da aplicação. Assim, quanto mais informação dispomos sobre determinados fenômenos, mais acurados serão potencialmente nossos modelos. É nesse sentido que surge historicamente o conceito de probabilidade condicional, tema dessa seção.
+Em Ciência, “informação disponível”{}é certamente uma matéria-prima preciosa, pois através dela é possível construir modelos mais realísticos para descrever fenômenos tanto determinísticos quanto aleatórios e obter resultados mais fidedignos de um ponto de vista da aplicação. Assim, quanto mais informação dispomos sobre determinados fenômenos, mais acurados serão potencialmente nossos modelos. É nesse sentido que surge historicamente o conceito de probabilidade condicional, tema dessa seção.
 
 A ideia central da probabilidade condicional é estabelecer uma estrutura matemática para reavaliar a probabilidade de um evento à luz de uma informação disponível relacionada a este. Por exemplo, um geólogo, ao examinar uma bacia, avaliará a probabilidade de potencial petrolífero de forma diferente a depender de informações disponíveis, tais como porosidade da rocha, estruturas sísmicas, etc. Quanto mais informação ele tenha, tanto mais próxima da realidade será potencialmente sua avaliação da probabilidade de encontrar óleo na região.
 
@@ -1362,8 +1367,6 @@ A ideia central da probabilidade condicional é estabelecer uma estrutura matem�
 
 \caption{Bacias de petróleo na costa brasileira}
 \end{figure}
-
-
 
 O mesmo se dá em avaliações médicas: a partir da anamnese do paciente, um médico melhorará sua avaliação sobre a probabilidade de um paciente ter ou não determinada patologia.
 
@@ -1376,7 +1379,7 @@ O mesmo se dá em avaliações médicas: a partir da anamnese do paciente, um m�
 \end{figure}
 
 
-A questão que se coloca é: como incorporar matematicamente a informação de que um evento B ocorreu para se reavaliar a ocorrência de um evento de interesse A?
+A questão que se coloca é: como incorporar matematicamente a informação de que um evento $B$ ocorreu para se reavaliar a ocorrência de um evento de interesse $A$?
 
 A definição de probabilidade condicional é a resposta para essa questão.
 
@@ -1388,11 +1391,11 @@ A probabibilidade condicional de o evento \(A\) ocorrer, dado que sabemos que o 
 \begin{split}P(A|B)=\frac{P(A\cap B)}{P(B)}, \quad P(B)>0\end{split}
 \end{equation*}\end{description}
 
-Retomando a a Atividade \emph{uso de óculos e sexo de estudantes}, a probabilidade de o aluno sorteado usar óculos, sabendo que ele é do gênero masculino foi calculada pela razão do número de estudantes que usam óculos e são do gênero masculino e o número de estudantes do gênero masculino, a saber, \(\frac{5}{18}\approx 0,278\).
+Retomando a a atividade \hyperref[uso-oculos]{uso de óculos e sexo de estudantes}, a probabilidade de o aluno sorteado usar óculos, sabendo que ele é do gênero masculino foi calculada pela razão do número de estudantes que usam óculos e são do gênero masculino e o número de estudantes do gênero masculino, a saber, \(\frac{5}{18}\approx 0{,}278\).
 
-Observe que esse quociente, pode ser também obtido a partir da definição de probabilidade condicional, calculando-se o quociente da probabilidade de “usar óculos e ser do gênero masculino” (5/40=0,125) e da probabilidade de ser do gênero masculino (18/40=0,45), obtendo-se \(\displaystyle{\frac{0,125}{0,45}=\frac{5}{18}\approx 0,278}\).
+Observe que esse quociente, pode ser também obtido a partir da definição de probabilidade condicional, calculando-se o quociente da probabilidade de “usar óculos e ser do gênero masculino” $(5/40=0{,}125)$ e da probabilidade de ser do gênero masculino $(18/40=0{,}45)$, obtendo-se \(\displaystyle{\frac{0,125}{0,45}=\frac{5}{18}\approx 0{,}278}\).
 
-Repita essa verificação para as demais probabilidades condicionais calculadas na Atividade \emph{uso de óculos e sexo de estudantes}.
+Repita essa verificação para as demais probabilidades condicionais calculadas na atividade \hyperref[uso-oculos]{uso de óculos e sexo de estudantes}.
 
 \begin{example} {A probabilidade condicional é uma probabilidade?}
 
@@ -1458,17 +1461,17 @@ Como são apenas dois candidatos, vamos chamar de \(A_1\) o evento “a primeira
 
 Observe que \(E=(A_1\cap \overline{A_2})\cup (\overline{A_1}\cap A_2)\)  e que os dois eventos do lado direito são disjuntos de modo que podemos calcular \(P(E)\) como a soma \(P(A_2\cap \overline{A_1})+P(\overline{A_2}\cap A_1)\). Observe que cada uma dessas duas probabilidades envolve a ocorrência simultânea de dois eventos, de modo que podemos usar a regra da multiplicação:
 
-$$P(A_1\cap \overline{A_2})=P({A_1})\cdot \underbrace{P(\overline{A_2}|{A_1})}_{\mathclap{\substack{\textsf{prob. da 2a. pessoa não votar em ABC,} \\ \textsf{dado que a primeira vota em ABC}}}}=\frac{8}{12}\cdot\frac{4}{11}=\frac{8}{33}$$
+$$P(A_1\cap \overline{A_2})=P({A_1})\cdot \underbrace{P(\overline{A_2}|{A_1})}_{\mathclap{\substack{\text{prob. da 2a. pessoa não votar em ABC,} \\ \text{dado que a primeira vota em ABC}}}}=\frac{8}{12}\cdot\frac{4}{11}=\frac{8}{33}$$
 
-$$P(\overline{A_1}\cap {A_2})=P(\overline{A_1})\cdot \underbrace{P({A_2}|\overline{A_1})}_{\mathclap{\substack{\textsf{prob. da 2a. pessoa votar em ABC,} \\ \textsf{dado que a primeira não vota em ABC}}}}=\frac{4}{12}\cdot\frac{8}{11}=\frac{8}{33}$$
+$$P(\overline{A_1}\cap {A_2})=P(\overline{A_1})\cdot \underbrace{P({A_2}|\overline{A_1})}_{\mathclap{\substack{\text{prob. da 2a. pessoa votar em ABC,} \\ \text{dado que a primeira não vota em ABC}}}}=\frac{4}{12}\cdot\frac{8}{11}=\frac{8}{33}$$
 
 Logo, \(\displaystyle{P(E)=\frac{8}{33}+\frac{8}{33}=\frac{16}{33}\approx 0,485}\)
 
-\textbf{Solução via diagrama de árvore:} Cada ponto de ramificação da árvore  desdobra-se nas possibilidades. Observe que nesse exemplo há apenas duas, de modo que do primeiro ponto partem duas possibilidades e a partir de cada possibilidade, partirão mais duas possibilidades, como no esquema a seguir.
+\textbf{Solução via diagrama de árvore:} Cada ponto de ramificação da árvore desdobra-se nas possibilidades. Observe que nesse exemplo há apenas duas, de modo que do primeiro ponto partem duas possibilidades e a partir de cada possibilidade, partirão mais duas possibilidades, como no esquema a seguir.
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.9, every node/.style={scale=.8}]
 
 \draw (0,0) -- (30:3) node [right] {$A_1$} node [above, midway, rotate=30, scale=0.7] {};
 \draw (0,0) -- (-30:3) node [right] {$\overline{A_1}$} node [below, midway, rotate=-30, scale=0.7] {};
@@ -1486,7 +1489,7 @@ Em cada ramificação, assinalamos a respectiva probabilidade. Veja na \hyperref
 \centering
 
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.9, every node/.style={scale=.8}]
 
 \draw (0,0) -- (30:3) node [right] {$A_1$} node [above, midway, rotate=30] {$8/12$};
 \draw (0,0) -- (-30:3) node [right, ] {$\overline{A_1}$} node [below, midway, rotate=-30] {$4/12$};
@@ -1503,7 +1506,7 @@ Na \hyperref[arvore3]{figura \ref{arvore3}}, destacam-se as quatro configuraçõ
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.9, every node/.style={scale=.8}]
 
 \draw (0,0) -- (30:3) node [right,] {$A_1$} node [above, midway, rotate=30, ] {$8/12$};
 \draw (0,0) -- (-30:3) node [right, ] {$\overline{A_1}$} node [below, midway, rotate=-30, ] {$4/12$};
@@ -1526,7 +1529,7 @@ Logo, pela árvore, \(\displaystyle P(E)=\frac{8}{33}+\frac{8}{33}=\frac{16}{33}
 
 \subsection{Eventos Independentes}
 
-Na Atividade \emph{usio de óculos e sexo de estudantes}, concluímos que uso de óculos independe de gênero, pois  comparando as probabilidades incondicionais de ser do gênero feminino $(0,55)$ e de ser do gênero masculino $(0,45)$ com as probabilidades condicionais de ser do gênero feminino $(0,545)$ e do gênero masculino $(0,455)$ dado que usa óculos, percebe-se que elas são aproximadamente iguais. Na teoria, para que os eventos sejam independentes, essas probabilidades deveriam ser iguais. Na prática esse tipo de análise é usado em Estatística para avaliar a hipótese de independência entre dois eventos.
+Na atividade \hyperref[uso-oculos]{uso de óculos e sexo de estudantes}, concluímos que uso de óculos independe de gênero, pois  comparando as probabilidades incondicionais de ser do gênero feminino $(0{,}55)$ e de ser do gênero masculino $(0{,}45)$ com as probabilidades condicionais de ser do gênero feminino $(0{,}545)$ e do gênero masculino $(0{,}455)$ dado que usa óculos, percebe-se que elas são aproximadamente iguais. Na teoria, para que os eventos sejam independentes, essas probabilidades deveriam ser iguais. Na prática esse tipo de análise é usado em Estatística para avaliar a hipótese de independência entre dois eventos.
 \begin{description}
 \item[{Dois eventos \(A\) e \(B\) são ditos independentes\index{Dois eventos  e  são ditos independentes se a ocorrência de um deles não muda a incerteza sobre a ocorrência do outro.|textbf}}] se a ocorrência de um deles não muda a incerteza sobre a ocorrência do outro.
 \end{description}
@@ -1564,12 +1567,12 @@ Observe que estamos lidando com um experimento sequencial de modo que os resulta
 
 Embora seja comum pensar que os eventos \(A\) e \(B\) são disjuntos, depois de descrever os elementos do espaço amostral é fácil perceber que $A$ e  $B$ não são disjuntos (\(A\cap B\neq \emptyset\)). De fato,
 \begin{align*}
-A&=\{(2,ca),(2,co),(4,ca),(4,co),(6,ca),(6,co)\}\text{, tal que } &P(A)&=\frac{6}{12}=0,5\\
-B&=\{(1,ca),(2,ca),(3,ca),(4,ca),(5,ca),(6,ca)\} \text{, tal que } &P(B)&=\frac{6}{12}==0,5\\
-A\cap B&=\{(2,ca),(4,ca),(6,ca)\} \text{, tal que }&P(A\cap B)&=\frac{3}{12}=\frac{1}{4}=0,25\\
+A&=\{(2,ca),(2,co),(4,ca),(4,co),(6,ca),(6,co)\}\text{, tal que } &P(A)&=\frac{6}{12}=0{,}5\\
+B&=\{(1,ca),(2,ca),(3,ca),(4,ca),(5,ca),(6,ca)\} \text{, tal que } &P(B)&=\frac{6}{12}=0{,}5\\
+A\cap B&=\{(2,ca),(4,ca),(6,ca)\} \text{, tal que }&P(A\cap B)&=\frac{3}{12}=\frac{1}{4}=0{,}25\\
 \end{align*}
 
-É natural pensarmos que os lançamentos do dado e da moeda sejam independentes, pois o resultado de um não interfere no resultado de outro. Podemos confirmar esse raciocínio, observando que \(P(A\cap B)=0,25\) é igual ao produto das probabilidades incondicionais de \(A\) e de \(B\)  ambas iguais a $0,5$.
+É natural pensarmos que os lançamentos do dado e da moeda sejam independentes, pois o resultado de um não interfere no resultado de outro. Podemos confirmar esse raciocínio, observando que \(P(A\cap B)=0{,}25\) é igual ao produto das probabilidades incondicionais de \(A\) e de \(B\)  ambas iguais a $0{,}5$.
 \end{example}
 
 Do exemplo anterior vale destacar que, dados dois eventos com probabilidade positiva, não será possível que eles sejam ao mesmo tempo disjuntos e independentes.
@@ -1605,7 +1608,7 @@ Considere um dado em forma de tetraedro regular cujos números de suas faces sã
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{tetraedro_dado}.png}
+\noindent\includegraphics[width=125bp]{{tetraedro_dado}.png}
 
 \caption{Dado em forma de tetraedro com a face 2 oculta}
 \end{figure}
@@ -1635,8 +1638,11 @@ P(A\cap B)&=P(A)\cdot P(B)=\frac{1}{2}\cdot\frac{1}{2}=\frac{1}{4}\\
 P(A\cap C)&=P(A) \cdot P(C)=\frac{1}{2}\cdot\frac{1}{2}=\frac{1}{4} \\
 P(B\cap C)&=P(B)\cdot P(C)=\frac{1}{2}\cdot\frac{1}{2}=\frac{1}{4}\\
 \end{align*}
-
-Mas, \(\displaystyle P(A|B\cup C)=\frac{P(A\cap (BUC))}{P(B\cup C)}=\frac{P((A\cap B)\cup (A\cap C))}{P(B\cup C)}=\frac{1/4}{3/4}=\frac{1}{3}\neq P(A)\) e, portanto, \(A\) e \(B\cup C\)  não são independentes apesar de \(A\) e \(B\) serem independentes e de \(A\) e \(C\) serem indepedentes.
+Mas 
+\begin{equation*}
+\displaystyle P(A|B\cup C)=\frac{P(A\cap (BUC))}{P(B\cup C)}=\frac{P((A\cap B)\cup (A\cap C))}{P(B\cup C)}=\frac{\frac{1}{4}}{\frac{3}{4}}=\frac{1}{3}\neq P(A),
+\end{equation*}
+e portanto, \(A\) e \(B\cup C\)  não são independentes apesar de \(A\) e \(B\) serem independentes e de \(A\) e \(C\) serem indepedentes.
 
 Portanto, se temos três eventos dois a dois independentes, isso não implicará que os três eventos sejam independentes.
 \end{example}
@@ -1674,7 +1680,7 @@ a pessoa NÃO TEM a doença e o resultado do teste é NEGATIVO.
 
 \end{enumerate}
 
-Observe que nas situações (b) e (c), o teste falha, pois deveria ser positivo quando a pessoa tem a doença e, negativo, quando a pessoa não tem a doença. Já nas situações (a) e (d) o teste acerta o diagnóstico.
+Observe que nas situações \titem{b)} e \titem{c)}, o teste falha, pois deveria ser positivo quando a pessoa tem a doença e, negativo, quando a pessoa não tem a doença. Já nas situações \titem{a)} e \titem{d)} o teste acerta o diagnóstico.
 
 Dois índices de desempenho para avaliação de um teste diagnóstico costumam ser usados: a sensibilidade e especificidade.
 
@@ -1843,27 +1849,27 @@ Uma simulação de um experimento é um processo que tem o mesmo comportamento d
 
 As atividades a seguir consistirão em simulações de fenômenos aleatórios simples. Para sua realização será necessário o uso de tecnologia. A seguir, duas possibilidades serão detalhadas: as planilhas do  \href{https://pt-br.libreoffice.org/}{LibreOffice} e do \href{https://wiki.geogebra.org/en/Reference:GeoGebra\_Installation}{GeoGebra}.
 
-A função \emph{=ALEATÓRIOENTRE(1;N)} do LibreOffice, com \(N\) um número natural, produz um número do conjunto \(\{1,2,3,,\cdots, N\}\) de tal modo que a probabilidade de cada um dos números é dada por \(\frac{1}{N}\). Assim, ao usarmos \emph{=ALEATÓRIOENTRE(1;2)}, o resultado será equivalente a sortear um número do conjunto \(\{1,2\}\) cada um com probabilidade igual a \(\frac{1}{2}\). Veja na \hyperref[simulacao1]{figura \ref{simulacao1}} uma simulação de 20 números com essa propriedade, usando o LibreOffice.
+A função \textit{=ALEATÓRIOENTRE(1;N)} do LibreOffice, com \(N\) um número natural, produz um número do conjunto \(\{1,2,3,,\cdots, N\}\) de tal modo que a probabilidade de cada um dos números é dada por \(\frac{1}{N}\). Assim, ao usarmos \textit{=ALEATÓRIOENTRE(1;2)}, o resultado será equivalente a sortear um número do conjunto \(\{1,2\}\) cada um com probabilidade igual a \(\frac{1}{2}\). Veja na \hyperref[simulacao1]{figura \ref{simulacao1}} uma simulação de 20 números com essa propriedade, usando o LibreOffice.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{libreoffice1}.png}
+\noindent\includegraphics[width=370bp]{{libreoffice1}.png}
 
 \caption{Vinte simulações do sorteio dos números 1 e 2 com probabilidades iguais, usando o LibreOffice}
 \label{simulacao1}
 \end{figure}
  
 
-Para simular os 20 números, basta digitar na célula A1 \emph{=aleatórioentre(1;2)} e apertar a tecla \emph{Enter}. Depois, posicione o cursor no canto esquerdo inferior da célula e arraste para baixo até a linha 20. Os 20 números gerados neste exemplo estão na coluna A da planilha. É possível gerar rapidamente, muito mais do que apenas 20 números.
+Para simular os 20 números, basta digitar na célula A1 \textit{=aleatórioentre(1;2)} e apertar a tecla \textit{Enter}. Depois, posicione o cursor no canto esquerdo inferior da célula e arraste para baixo até a linha 20. Os 20 números gerados neste exemplo estão na coluna A da planilha. É possível gerar rapidamente, muito mais do que apenas 20 números.
 
-Essa função, \emph{aleatórioentre(1;2)} pode ser usada para simular o lançamento de uma moeda honesta, associando, por exemplo, o número 1 para a ocorrência de “cara” e, o número 2 para a ocorrência de  “coroa”, pois o modelo probabilístico da função \emph{=aleatórioentre(1;2)} é tal que os dois números são gerados com probabilidades iguais. Assim, espera-se, em média, que as quantidades de números 1 (1’s) e de números 2 (2’s) sejam aproximadamente iguais.
+Essa função, \textit{aleatórioentre(1;2)} pode ser usada para simular o lançamento de uma moeda honesta, associando, por exemplo, o número 1 para a ocorrência de “cara” e, o número 2 para a ocorrência de  “coroa”, pois o modelo probabilístico da função \textit{=aleatórioentre(1;2)} é tal que os dois números são gerados com probabilidades iguais. Assim, espera-se, em média, que as quantidades de números 1 (1’s) e de números 2 (2’s) sejam aproximadamente iguais.
 
 Como fazer para obter de forma rápida essas quantidades, sem ter que contar um a um?
 
-No LibreOffice a função \emph{=cont.se(lista de células; número pesquisado)} faz essa contagem.
+No LibreOffice a função \textit{=cont.se(lista de células; número pesquisado)} faz essa contagem.
 
-No exemplo anterior, a função \emph{=cont.se(A1:A20;1)} irá retornar o número de 1’s encontrados nas células da coluna A das linhas 1 a 20. Já a  a função \emph{=cont.se(A1:A20;2)} irá retornar o número de 2’s encontrados nas células da coluna A das linhas 1 a 20. Veja uma ilustração do uso da função na \hyperref[simulacao2]{figura \ref{simulacao2}}. Nessa figura, vemos que na simulação foram gerados doze (12) números 1 (caras) e oito (8) números 2 (coroas).
+No exemplo anterior, a função \textit{=cont.se(A1:A20;1)} irá retornar o número de 1’s encontrados nas células da coluna A das linhas 1 a 20. Já a  a função \textit{=cont.se(A1:A20;2)} irá retornar o número de 2’s encontrados nas células da coluna A das linhas 1 a 20. Veja uma ilustração do uso da função na \hyperref[simulacao2]{figura \ref{simulacao2}}. Nessa figura, vemos que na simulação foram gerados doze (12) números 1 (caras) e oito (8) números 2 (coroas).
 
 \begin{figure}[H]
 \centering
@@ -1876,7 +1882,7 @@ No exemplo anterior, a função \emph{=cont.se(A1:A20;1)} irá retornar o númer
 
  
 
-No Geogebra as funções para realizar as mesmas tarefas são similares às utilizadas no LibreOffice. Veja na \hyperref[simulacao3]{figura \ref{simulacao3}} a simulação do lançamento de uma moeda honesta 20 vezes, usando a função \emph{=NúmeroAleatório(1,2)} do GeoGebra.
+No Geogebra as funções para realizar as mesmas tarefas são similares às utilizadas no LibreOffice. Veja na \hyperref[simulacao3]{figura \ref{simulacao3}} a simulação do lançamento de uma moeda honesta 20 vezes, usando a função \textit{=NúmeroAleatório(1,2)} do GeoGebra.
 
 \begin{figure}[H]
 \centering
@@ -1887,16 +1893,16 @@ No Geogebra as funções para realizar as mesmas tarefas são similares às util
 \end{figure}
 
 
-Para a realização da contagem de caras e coroas, a função correspondente no GeoGebra é a função \emph{ContarSe(números, células)}.
+Para a realização da contagem de caras e coroas, a função correspondente no GeoGebra é a função \textit{ContarSe(números, células)}.
 
-A quantidade de 1’s na coluna A das linhas 1 a 20 é dada por \emph{=ContarSe(0\textless{}x\textless{}2,A1:A20)} que produzirá a quantidade de números inteiros no intervalo aberto {]}0,2{[} que ocorrem nas celas da coluna A das linhas 1 a 20 (A1:A20). Observe que o único número inteiro no intervalo aberto {]}0,2{[} é o número 1. Para contar a quantidade de 2’s na coluna A, devemos digitar \emph{=ContarSe(1\textless{}x\textless{}3,A1:A20)}, lembrando que o único número inteiro no intervalo aberto {]}1,3{[} é o número 2.
+A quantidade de 1’s na coluna A das linhas 1 a 20 é dada por \textit{=ContarSe(0\textless{}x\textless{}2,A1:A20)} que produzirá a quantidade de números inteiros no intervalo aberto {]}0,2{[} que ocorrem nas celas da coluna A das linhas 1 a 20 (A1:A20). Observe que o único número inteiro no intervalo aberto {]}0,2{[} é o número 1. Para contar a quantidade de 2’s na coluna A, devemos digitar \textit{=ContarSe(1\textless{}x\textless{}3,A1:A20)}, lembrando que o único número inteiro no intervalo aberto {]}1,3{[} é o número 2.
 
 \begin{figure}[H]
 \centering
 
 \noindent\includegraphics[width=400bp]{{GeoGebra2_1}.png}
 
-\caption{Geogebra: exemplo de uso da função \emph{ContarSe}}
+\caption{Geogebra: exemplo de uso da função \textit{ContarSe}}
 \end{figure}
 
 
@@ -1906,9 +1912,9 @@ Observe que na simulação realizada com o GeoGebra também foram obtidos doze n
 
 Suponha que o espaço amostral \(S\) é dado por \(\{ 1,2,3,4,5,6,7,8,9,10,11,12\}\) e que os eventos elementares são equiprováveis.
 
-A função do LibreOffice \emph{=AleatórioEntre(1;12)} retornará com probabilidade \(\frac{1}{12}\) um dos elementos de \(S\).
+A função do LibreOffice \textit{=AleatórioEntre(1;12)} retornará com probabilidade \(\frac{1}{12}\) um dos elementos de \(S\).
 
-A função do GeoGebra \emph{=NúmeroAleatório(1,12)} retornará com probabilidade \(\frac{1}{12}\) um dos elementos de \(S\).
+A função do GeoGebra \textit{=NúmeroAleatório(1,12)} retornará com probabilidade \(\frac{1}{12}\) um dos elementos de \(S\).
 
 \begin{figure}[H]
 \centering
@@ -1928,7 +1934,7 @@ Deseja-se simular o lançamento de uma moeda honesta uma grande quantidade de ve
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=150bp]{moeda.jpg}
+\noindent\includegraphics[width=125bp]{moeda.jpg}
 \end{figure}
 \begin{enumerate}
 \item {} 
@@ -1972,7 +1978,7 @@ Deseja-se simular o lançamento de um dado honesto uma grande quantidade de veze
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{lancamento_dado}.png}
+\noindent\includegraphics[width=225bp]{{lancamento_dado}.png}
 \end{figure}
 \begin{enumerate}
 \item {} 
@@ -2087,7 +2093,7 @@ Número de Observações & Frequência relativa de 2 \\
 \end{tabu}
 \end{table}
 \end{task}
-
+\clearpage
 \begin{observation}{Teorema: Lei dos Grandes Números}
 
 À medida que um experimento é repetido várias vezes, a probabilidade dada pela frequência relativa de um evento tende a se aproximar da probabilidade teórica.
@@ -2110,7 +2116,7 @@ Assim \(P(A) \approx 1- 0,48=0,52\).
 
 Vamos estimar essa probabilidade, usando a Lei dos Grandes Números com o auxílio do GeoGebra.
 
-Para simular o experimento podemos usar a função \emph{=Número Aleatório(1,6)} nas céluas A1 até A4.
+Para simular o experimento podemos usar a função \textit{=Número Aleatório(1,6)} nas céluas A1 até A4.
 
 \begin{figure}[H]
 \centering
@@ -2122,7 +2128,7 @@ Para simular o experimento podemos usar a função \emph{=Número Aleatório(1,6
 
 \hyperref[geogebra2]{figura \ref{geogebra2}}: Simulação de quatro lançamento de um dado com o GeoGebra
 
-Na cela B4 usaremos a função \emph{=ContarSe(5\textless{}x\textless{}7,A1:A4)} para obter o número de faces 6 obtidas.
+Na cela B4 usaremos a função \textit{=ContarSe(5\textless{}x\textless{}7,A1:A4)} para obter o número de faces 6 obtidas.
 
 \begin{figure}[H]
 \centering
@@ -2144,7 +2150,7 @@ Depois, marque as células A1:B4 e arraste-as até a linha 400, de modo a repeti
 \end{figure}
 
 
-Vamos então usar a função \emph{ContarSe(-1\textless{}x\textless{}1,B1:B400)} para obter a quantidade de zeros, ou seja, o número de repetições do experimento em que a face 6 não ocorreu.
+Vamos então usar a função \textit{ContarSe(-1\textless{}x\textless{}1,B1:B400)} para obter a quantidade de zeros, ou seja, o número de repetições do experimento em que a face 6 não ocorreu.
 
 \begin{figure}[H]
 \centering
@@ -2180,7 +2186,7 @@ Duplicando o número de repetições do experimento, espera-se obter uma estimat
 Qual das sentenças a seguir reflete o significado da afirmação feita pelo geólogo?
 \begin{enumerate}
 \item {} 
-Como \(\frac{2}{3}\cdot 20\approx 13,3\); entre 13 e 14 anos a partir de agora, ocorrerá um terremoto na cidade de Zed.
+Como \(\frac{2}{3}\cdot 20\approx 13{,}3\); entre 13 e 14 anos a partir de agora, ocorrerá um terremoto na cidade de Zed.
 
 \item {} 
 Como \(\frac{2}{3}\) é maior do que \(\frac{1}{2}\), temos certeza de que ocorrerá um terremoto na cidade de Zed em algum momento nos próximos 20 anos.
@@ -2193,39 +2199,40 @@ Não se pode dizer sobre o que irá acontecer, pois ninguém sabe quando um terr
 
 \end{enumerate}
 
-\item (Pisa) Para dado dia, a previsão do tempo afirma que, das 12h às 18h, a chance de ocorrência de chuva é de 30\%.
+\item (Pisa) Para dado dia, a previsão do tempo afirma que, das 12h às 18h, a chance de ocorrência de chuva é de $30\%$.
 
 Assinale a alternativa que corresponde à melhor interpretação dessa previsão do tempo.
 \begin{enumerate}
 \item {} 
-Em 30\% da área à qual a previsão se refere haverá chuva.
+Em $30\%$ da área à qual a previsão se refere haverá chuva.
 
 \item {} 
-em 30\% de 6 horas, ou seja, durante o total de 108 minutos, haverá chuva.
+em $30\%$ de $6$ horas, ou seja, durante o total de $108$ minutos, haverá chuva.
 
 \item {} 
-Em relação às pessoas da área à qual a previsão se refere, pode-se afirmar que 30 a cada 100 pessoas pegarão chuva.
+Em relação às pessoas da área à qual a previsão se refere, pode-se afirmar que $30$ a cada $100$ pessoas pegarão chuva.
 
 \item {} 
-Se a mesma previsão fosse dada para 100 dias, em cerca de 30 desses 100 dias haveria chuva.
+Se a mesma previsão fosse dada para $100$ dias, em cerca de $30$ desses $100$ dias haveria chuva.
 
 \item {} 
-A quantidade de chuva será 30\% da intensidade de uma forte precipitação (medida como “chuva por unidade de tempo”).
+A quantidade de chuva será $30\%$ da intensidade de uma forte precipitação (medida como “chuva por unidade de tempo”).
 
 \end{enumerate}
 
 \item Sabe-se que a probabilidade de que um casal com três filhos tenha duas meninas é \(\frac{3}{8}\). Com base nessa afirmação, responda:
 \begin{enumerate}
 \item {} 
-Observando-se ao acaso 160 casais com três filhos, quantos casais você espera que tenham duas meninas?
+Observando-se ao acaso $160$ casais com três filhos, quantos casais você espera que tenham duas meninas?
 
 \item {} 
 E em 400 casais com três filhos?
 
 \item {} 
-É correto afirmar que se observarmos 80 casais com três filhos, exatamente 30 casais terão duas meninas? Por quê?
+É correto afirmar que se observarmos $80$ casais com três filhos, exatamente 30 casais terão duas meninas? Por quê?
 
 \end{enumerate}
+
 
 \item Nas situações a seguir indique a interpretação de probabilidade, entre as interpretações clássica, frequentista e subjetiva, que melhor se encaixa para a designação de probabilidades.
 \begin{enumerate}
@@ -2233,10 +2240,10 @@ E em 400 casais com três filhos?
 Um dado honesto é lançado três vezes, deseja-se calcular a probabilidade de se obter pelo menos duas faces pares.
 
 \item {} 
-Um gerente de banco deseja avaliar a probabilidade de um cliente esperar mais de 30 minutos para ser atendido em um dia comum.
+Um gerente de banco deseja avaliar a probabilidade de um cliente esperar mais de $30$ minutos para ser atendido em um dia comum.
 
 \item {} 
-Deseja-se avaliar a probabilidade de você se tornar um \emph{Youtuber} de sucesso no próximo ano.
+Deseja-se avaliar a probabilidade de você se tornar um \textit{Youtuber} de sucesso no próximo ano.
 
 \end{enumerate}
 
@@ -2256,7 +2263,7 @@ Deseja-se avaliar a probabilidade de você se tornar um \emph{Youtuber} de suces
 
 \end{enumerate}
 
-\item É sorteado um aluno de uma turma de um curso de Inglês na qual há somente alunos de 15 anos, 16 anos e 17 anos completos. Sabe-se que a  probabilidade de o aluno selecionado ter 15 anos é igual a 0,3 e ter 17 anos é igual a 0,2.
+\item É sorteado um aluno de uma turma de um curso de Inglês na qual há somente alunos de 15 anos, 16 anos e 17 anos completos. Sabe-se que a  probabilidade de o aluno selecionado ter 15 anos é igual a $0,{,}$ e ter 17 anos é igual a $0{,}2$.
 Determine a probabilidade de o aluno sorteado
 \begin{enumerate}
 \item {} 
@@ -2273,7 +2280,7 @@ ter 15 ou 16 anos.
 
 \end{enumerate}
 
-\item Um posto de coleta de sangue fez um lavantamento das fichas de 500 doadores, obtendo as seguintes frequências relativas por tipo sanguíneor e fator Rh.
+\item Um posto de coleta de sangue fez um lavantamento das fichas de $500$ doadores, obtendo as seguintes frequências relativas por tipo sanguíneor e fator Rh.
 
 \begin{table}[H]
 \centering
@@ -2282,15 +2289,15 @@ ter 15 ou 16 anos.
 \thead
 tipo & Rh+ & Rh- & total \\
 \hline
-O & 0,32 & 0,08 & 0,40 \\
+O & $0{,}32$ & $0{,}08$ & $0{,}40$ \\
 \hline
-A & 0,20 & 0,10 & 0,30 \\
+A & $0{,}20$ & $0{,}10$ & $0{,}30$ \\
 \hline
-AB & 0,16 & 0,04 & 0,20 \\
+AB & $0{,}16$ & $0{,}04$ & $0{,}20$ \\
 \hline
-B & 0,07 & 0,03 & 0,10 \\
+B & $0{,}07$ & $0{,}03$ & $0{,}10$ \\
 \hline
-total & 0,75 & 0,25 & 1,00 \\
+Total & $0{,}75$ & $0{,}25$ & $1{,}00$ \\
 \hline
 \end{tabu}
 \end{table}
@@ -2318,59 +2325,61 @@ não tenha sangue tipo O, sabendo que tem fator Rh-.
 
 \end{enumerate}
 
+\clearpage
+
 \item (UERJ-EQ1-2011) Uma fábrica produz sucos com os seguintes sabores: uva, pêssego e laranja. Considere uma caixa com 12 garrafas desses sucos, sendo quatro de cada sabor. Retirando-se ao acaso duas garrafas dessa caixa, a probabilidade de que ambas as garrafas contenham suco com o mesmo saber equivale a:
 \begin{enumerate}
 \item {} 
-9,1\%
+$9{,}1\%$
 
 \item {} 
-18,2\%
+$18{,}2\%$
 
 \item {} 
-27,3\%
+$27{,}3\%$
 
 \item {} 
-36,4\%
+$36{,}4\%$
 
 \end{enumerate}
 
 \item (UERJ-EQ1-2012-adaptada) Três modelos de aparelhos de ar condicionado I, II e III, de diferentes potências são produzidos por determinado fabricante. Uma consulta sobre intenção de troca de modelo foi realizada com 1000 usuários desses produtos. No quadro a seguir estão indicados os tipos de modelos que os usuários possuem e se eles pretendem mudar para outro modelo ou não.
 
-Dos 400 que possuem o modelo I, 50 não pretendem mudar de modelo, 150 pretendem mudar para o II e 250 para o III. Dos 400 que possuem o modelo II, 100 não pretendem mudar e 300 pretendem mudar para o III. E, dos 200 que possuem o modelo III, nenhum deles tem intenção de mudar.
+Dos 400 que possuem o modelo I, $50$ não pretendem mudar de modelo, $150$ pretendem mudar para o II e $250$ para o III. Dos 400 que possuem o modelo II, 100 não pretendem mudar e $300$ pretendem mudar para o III. E, dos $200$ que possuem o modelo III, nenhum deles tem intenção de mudar.
 
 Escolhendo-se aleatoriamente um dos usuários consultados, a probabilidade de que ele não pretenda trocar seu modelo de ar condicionado é:
 \begin{enumerate}
 \item {} 
-20\%
+$20\%$
 
 \item {} 
-35\%
+$35\%$
 
 \item {} 
-40\%
+$40\%$
 
 \item {} 
-65\%
+$65\%$
 
 \end{enumerate}
 
-\item (UERJ-EQ2-2013) Em uma escola, 20\% dos alunos de uma turma marcaram a opção correta de uma questão de múltipla escolha que possui quatro alternativas de resposta. Ode demais alunos marcaram uma das quatro opções ao acaso. Verificando-se as respostas de dois alunos quaisquer dessa turma, a probabilidade de que exatamente um tenha marcado a opção correta é:
+\item (UERJ-EQ2-2013) Em uma escola, $20\%$ dos alunos de uma turma marcaram a opção correta de uma questão de múltipla escolha que possui quatro alternativas de resposta. Ode demais alunos marcaram uma das quatro opções ao acaso. Verificando-se as respostas de dois alunos quaisquer dessa turma, a probabilidade de que exatamente um tenha marcado a opção correta é:
 \begin{enumerate}
 \item {} 
-0,48
+$0{,}48$
 
 \item {} 
-0,40
+$0{,}40$
 
 \item {} 
-0,36
+$0{,}36$
 
 \item {} 
-0,25
+$0{,}25$
 
 \end{enumerate}
 
-\item (ENEM) Um aluno de determinada escola será escolhido por sorteio para representa-la em certa atividade. A escola tem dois turnos. No diurno há 300 alunos, distribuídos em 10 turmas de 30 alunos cada. No noturno há 240 alunos, distribuídos em 6 turmas de 40 alunos cada. Em vez do sorteio direto, envolvendo os 540 alunos, foram propostos dois outros métodos de sorteio.
+\item (ENEM) Um aluno de determinada escola será escolhido por sorteio para representa-la em certa atividade. A escola tem dois turnos. No diurno há 300 alunos, distribuídos em $10$ turmas de $30$ alunos cada. No noturno há 240 alunos, distribuídos em $6$ turmas de $40$ alunos cada. Em vez do sorteio direto, envolvendo os $540$ alunos, foram propostos dois outros métodos de sorteio.
 MÉTODO I: Escolher ao acaso um dos turnos e, a seguir, sortear um dos alunos do turno escolhido.
 MÉTODO II: Escolher ao acaso uma das 16 turmas e, a seguir, sortear um dos alunos dessa turma.
 Sobre os métodos I e II é correto afirmar:
@@ -2392,7 +2401,7 @@ Em ambos os métodos, a chance de um aluno do diurno ser sorteado é maior do qu
 
 \end{enumerate}
 
-\item (ENEM) Um município de 628 km2 é atendido por duas emissoras de rádio cujas antenas A e B alcançam um raio de 10 km do município, conforme mostra a \hyperref[municipio]{figura \ref{municipio}}:
+\item (ENEM) Um município de $628$km$^2$ é atendido por duas emissoras de rádio cujas antenas A e B alcançam um raio de 10 km do município, conforme mostra a \hyperref[municipio]{figura \ref{municipio}}:
 \begin{figure}[H]
 \centering
 
@@ -2438,24 +2447,24 @@ Para orçar um contrato publicitário, uma agência precisa avaliar a probabilid
 
 \end{enumerate}
 
-\item (ENEM - 2017) Um morador de uma região metropolitana tem 50\% de probabilidade de atrasar-se para o trabalho quando chove na região; caso não chova, sua probabilidade de atraso é de 25\%. Para um determinado dia, o serviço de meteorologia estima em 30\% a probabilidade da ocorrência de chuva nessa região.
+\item (ENEM - 2017) Um morador de uma região metropolitana tem $50\%$ de probabilidade de atrasar-se para o trabalho quando chove na região; caso não chova, sua probabilidade de atraso é de $25\%$. Para um determinado dia, o serviço de meteorologia estima em $30\%$ a probabilidade da ocorrência de chuva nessa região.
 
 Qual é probabilidade de esse morador se atrasar para o serviço no dia para o qual foi dada a estimativa de chuva?
 \begin{enumerate}
 \item {} 
-0,075
+$0{,}075$
 
 \item {} 
-0,150
+$0{,}150$
 
 \item {} 
-0,325
+$0{,}325$
 
 \item {} 
-0,600
+$0{,}600$
 
 \item {} 
-0,800
+$0{,}800$
 
 \end{enumerate}
 
@@ -2480,26 +2489,26 @@ Qual é a probabilidade de que esta pessoa tenha observado exatamente um sinal n
 
 \end{enumerate}
 
-\item (UFPR) Durante um surto de gripe, 25\% dos funcionários de uma empresa contraíram essa doença. Dentre os que contraíram gripe, 80\% apresentaram febre. Constatou-se também que 8\% dos funcionários apresentaram febre por outros motivos naquele período. Qual a probabilidade de que um funcionário dessa empresa, selecionado ao acaso, tenha apresentado febre durante o surto de gripe?
+\item (UFPR) Durante um surto de gripe, $25\%$ dos funcionários de uma empresa contraíram essa doença. Dentre os que contraíram gripe, $80\%$ apresentaram febre. Constatou-se também que $8\%$ dos funcionários apresentaram febre por outros motivos naquele período. Qual a probabilidade de que um funcionário dessa empresa, selecionado ao acaso, tenha apresentado febre durante o surto de gripe?
 \begin{enumerate}
 \item {} 
-20\%
+$20\%$
 
 \item {} 
-26\%
+$26\%$
 
 \item {} 
-28\%
+$28\%$
 
 \item {} 
-33\%
+$33\%$
 
 \item {} 
-35\%
+$35\%$
 
 \end{enumerate}
 
-\item (ENEM) Numa escola com 1200 alunos foi realizada uma pesquisa sobre o conhecimento desses em duas línguas estrangeiras: inglês e espanhol. Nessa pesquisa, constatou-se que 600 alunos falam inglês, 500 falam espanhol e 300 não falam qualquer um desses idiomas.
+\item (ENEM) Numa escola com $1200$ alunos foi realizada uma pesquisa sobre o conhecimento desses em duas línguas estrangeiras: inglês e espanhol. Nessa pesquisa, constatou-se que $600$ alunos falam inglês, $500$ falam espanhol e $300$ não falam qualquer um desses idiomas.
 
 Escolhendo-se um aluno dessa escola ao acaso e sabendo-se que ele não fala inglês, qual a probabilidade de que esse aluno fale espanhol?
 \begin{enumerate}
@@ -2520,26 +2529,26 @@ Escolhendo-se um aluno dessa escola ao acaso e sabendo-se que ele não fala ingl
 
 \end{enumerate}
 
-\item (ENEM) O psicólogo de uma empresa aplica um teste para analisar a aptidão de um candidato a determinado cargo. O teste consiste em uma série de perguntas cujas respostas devem ser verdadeiro ou falso e termina quando o psicólogo fizer a décima pergunta ou quando o candidato der a segunda resposta errada, Com base em testes anteriores, o psicólogo sabe que a probabilidade de o candidato errar qualquer uma das respostas é 0,2. A probabilidade do teste terminar na quinta pergunta é:
+\item (ENEM) O psicólogo de uma empresa aplica um teste para analisar a aptidão de um candidato a determinado cargo. O teste consiste em uma série de perguntas cujas respostas devem ser verdadeiro ou falso e termina quando o psicólogo fizer a décima pergunta ou quando o candidato der a segunda resposta errada, Com base em testes anteriores, o psicólogo sabe que a probabilidade de o candidato errar qualquer uma das respostas é $0{,}2$. A probabilidade do teste terminar na quinta pergunta é:
 \begin{enumerate}
 \item {} 
-0,02048
+$0{,}02048$
 
 \item {} 
-0,08192
+$0{,}08192$
 
 \item {} 
-0,24000
+$0{,}24000$
 
 \item {} 
-0,40960
+$0{,}40960$
 
 \item {} 
-0,49152
+$0{,}49152$
 
 \end{enumerate}
 
-\item De um lote contendo 20 lâmpadas das quais 5 são defeituosas, deseja-se extrair duas lâmpadas e testá-las sequencialmente.
+\item De um lote contendo $20$ lâmpadas das quais $5$ são defeituosas, deseja-se extrair duas lâmpadas e testá-las sequencialmente.
 \begin{enumerate}
 \item {} 
 Se as lâmpadas são extraídas sem reposição ao lote, responda:
