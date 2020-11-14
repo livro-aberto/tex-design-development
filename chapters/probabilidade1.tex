@@ -1,24 +1,19 @@
 \renewcommand\chapterillustration{abertura-probabilidade}
 \renewcommand\chapterwhat{Reconhecimento de fenômenos determinís-
-ticos e aleatórios. Interpretações de proba-
-bilidade: clássica, frequentista e subjetiva.
-
-Conceitos básicos. Definição matemática de
-
-probabilidade. Propriedades da probabili-
-dade. Probabilidade condicional. Indepen-
-dência.}
-\renewcommand\chapterbecause{Porque grande parte das decisões científi-
-cas de nossa era se dá em ambiente de in-
-certeza e a Teoria das Probabilidades é a
-
-área da matemática que fornece estrutu-
-ras para a quantificação da aleatoriedade
-
-associada a determinados fenômenos de in-
-teresse, para uma tomada de decisão ade-
-quada sob incerteza.}
+ticos e aleatórios. Interpretações de probabilidade: clássica, frequentista e subjetiva.Conceitos básicos. Definição matemática deprobabilidade. Propriedades da probabilidade. Probabilidade condicional. Independência.}
+\renewcommand\chapterbecause{Porque grande parte das decisões científicas de nossa era se dá em ambiente de incerteza e a Teoria das Probabilidades é a área da matemática que fornece estruturas para a quantificação da aleatoriedade associada a determinados fenômenos de interesse, para uma tomada de decisão adequada sob incerteza.}
 \chapter{Probabilidade}
+
+\ifdefined\estchapum
+\else
+\label{est1-chap}
+\fi
+
+\ifdefined\estchapdois
+\else
+\label{est2-chap}
+\fi
+
 
 \mbox{}\thispagestyle{empty}\clearpage
 
@@ -100,7 +95,202 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 
 \mainmatter
 
+\begin{apresentacao}\raggedcolumns
+\section{Probabilidade}
+Previsão de de alunas necessárias: 8 a 10 tempos de aula\
 
+\subsection{Habilidades da BNCC}
+\begin{habilities}{EM13MAT311}
+Identificar e descrever o espaço amostral de eventos aleatórios, realizando contagem das possibilidades, para resolver e elaborar problemas que envolvem o cálculo da probabilidade.
+
+\tcbsubtitle{EM13MAT312}
+Resolver e elaborar problemas que envolvem o cálculo de probabilidade de eventos em experimentos aleatórios sucessivos.
+
+\tcbsubtitle{EM13MAT511}
+Reconhecer a existência de diferentes tipos de espaços amostrais, discretos ou não, e de eventos, equiprováveis ou não, e investigar implicações no cálculo de probabilidades.
+\end{habilities}
+
+\section{Objetivo Geral}
+Apresentar a noção de probabilidade sob os pontos de vista clássico, frequentista e subjetivo. (A noção frequentista de probabilidade está prevista para o Ensino Fundamental pela BNCC.) Apresentar regras básicas (axiomas) da probabilidade independentes da interpretação adotada, introduzindo uma teoria matemática da probabilidade e, como consequência, trabalhar propriedades decorrentes das regras básicas, definir probabilidade condicional e independência entre dois eventos. Finalmente, trabalhar com o cálculo de probabilidades de eventos em experimentos sucessivos, usando a regra da multiplicação, obtida a partir da definição de probabilidade condicional.
+
+Ao longo do capítulo serão propostas atividades nas quais o aluno deverá propor como especificar probabilidades para determinados eventos em situações nas quais não se aplica a definição clássica de probabilidade.
+
+\subsection{Por que estudar o assunto?}
+“A Probabilidade fornece uma maneira única de se envolver, pensar e interagir com uma gama diversa de situações do mundo real, no qual aleatoriedade e incerteza estão onipresentes.”{} (Pfannkuch e outros, 2016)
+
+\subsection{Desfios do capítulo}
+Apresentar o conteúdo de Probabilidade antes do conteúdo de Análise Combinatória, relacionando-o mais à Estatística do que à noção clássica de probabilidade.
+
+\subsection{Conteúdos abordados}
+\begin{enumerate}
+\item Interpretações clássica, frequentista e subjetiva da probabilidade.
+\item Lei dos Grandes Números.
+\item Definição axiomática da probabilidade. (Regras básicas da Probabilidade)
+\item Propriedades da probabilidade.
+\item Probabilidade condicional, Regra da Multiplicação, Eventos Independentes.
+\item Aplicações da Lei dos Grandes Números, usando simulações no GeoGebra.(Para saber mais)
+\end{enumerate}
+
+\subsection{Pré-requisitos}
+\begin{habilities}{EF09MA19}
+Reconhecer, em experimentos aleatórios, eventos independentes e dependentes, e calcular a probabilidade de sua ocorrência nos dois casos.
+
+\tcbsubtitle{EF08MA19}
+Calcular a probabilidade de eventos com base na construção do espaço amostral, utilizando o princípio multiplicativo, e reconhecer que a soma das probabilidades de todos os elementos do espaço amostral é igual a 1.
+
+\tcbsubtitle{EF07MA28}
+Planejar e realizar experimentos aleatórios ou simulações que envolvem cálculo de probabilidades ou estimativas por meio de frequência de ocorrências.
+\end{habilities}
+
+\textbf{Observação}: Como a BNCC ainda não entrou em vigor, os pré-requisitos acima, não necessariamente foram contemplados no Ensino Fundamental. Por essa razão, eles serão abordados neste capítulo.
+
+\columnbreak
+\subsection{Desdobramentos imediatos}
+
+\begin{habilities}{EM13CNT205}
+Utilizar noções de probabilidade e incerteza para interpretar previsões sobre atividades experimentais, fenômenos naturais e processos tecnológicos, reconhecendo os limites explicativos das ciências.
+
+\tcbsubtitle{EM13MAT106}
+Identificar situações da vida cotidiana nas quais seja necessário fazer escolhas levando-se em conta os riscos probabilísticos (usar este ou aquele método contraceptivo, optar por um tratamento médico em detrimento de outro etc.)
+
+\tcbsubtitle{EM13MAT203}
+Aplicar conceitos matemáticos no planejamento, na execução e na análise de ações envolvendo a utilização de aplicativos e a criação de planilhas (para o controle de orçamento familiar, simuladores de cálculos de juros simples e compostos, entre outros), para tomar decisões.
+\end{habilities}
+
+\section{Abordagem do capítulo}
+Neste capítulo serão apresentadas várias atividades iniciais, solicitando ao aluno determinar a probabilidade de ocorrer um certo evento, para posterior discussão e introdução a diferentes tipos de interpretação de Probabilidade. Na discussão sobre a “definição”{} de probabilidade pretende-se deixar claro que a expressão $P(A)=\frac{\#(A)}{\#(S)}$ em que $A$ é um evento, $S$ é o espaço amostral, $\#(A)$ é o número de elementos do evento $A$ e $\#(S)$ é o número de elementos do espaço amostral $S$, é restrita a um contexto particular e que as noções frequentista e subjetiva levam a designações da probabilidade de um evento $A$ ocorrer que não fazem uso desta expressão.
+
+A partir desta discussão, as regras básicas (axiomas) da probabilidade são apresentadas para introduzir uma teoria matemática da probabilidade que independe da interpretação adotada nas designações de probabilidade.
+
+Na BNCC do Ensino Fundamental, a noção frequentista de probabilidade está prevista.
+
+Na sequência serão propostas atividades que demandarão o uso das propriedades da probabilidade tais como a probabilidade de um evento complementar, a verificação de que a probabilidade é uma função não-decrescente no sentido de que se $A\subset B$, então $P(A)\leq P(B)$ e a probabilidade da união de dois eventos quaisquer.
+
+Para trabalhar a probabilidade de eventos em experimentos sucessivos (\textbf{EM13MAT312}), primeiro será proposta uma atividade para calcular probabilidades condicionais e explorar a noção de independência entre eventos. Em seguida, a definição de probabilidade condicional será apresentada, levando à regra da multiplicação, a ser explorada em atividades da seção praticando subsequente.
+
+\subsection{Diferencial do capítulo}
+Dar menos ênfase à noção clássica de Probabilidade, apresentando situações nas quais esta noção não se aplica.
+
+\subsection{Dificuldades típicas dos estudantes (distratores)}
+\begin{enumerate}
+\item Dificuldade de interpretar “probabilidade”.
+\item Existe forte inclinação dos estudantes a assumir que os resultados em um espaço amostral são equiprováveis mesmo quando não é apropriado fazer esta suposição (Albert., J. H. 2003)
+\item Confusão entre os conceitos de eventos independentes e eventos disjuntos (Rodrigues, F. W., 1984)
+\end{enumerate}
+
+\subsection{Estratégia pedagógica}
+Pretende-se ao longo do capítulo propor atividades em variados contextos que estimulem
+
+\begin{enumerate}
+\item a compreensão do pensamento probabilístico;
+\item a interpretação de resultados de pesquisas estatísticas baseadas em amostras aleatórias;
+\item a necessidade de propor um modelo para explicar um fenômeno aleatório.
+\end{enumerate}
+
+\section{Estrutura}
+Como nos demais capítulos do livro, todas as seçções são compostas pelas subseções explorando (atividades), organizando as ideias (apresentação do conteúdo tratado nas atividades) e praticando (atividades de exploração dos conteúdos trabalhados na seção).
+
+\columnbreak
+\subsection{Seção 1: Conceitos básicos}
+Nesta seção incluem-se
+\begin{enumerate}
+\item breve histórico do desenvolvimento da teoria das probabilidades,
+\item os conceitos de fenômenos determinísticos e não determinísticos (aleatórios),
+\item a interpretação de uma medida de incerteza,
+\item conceitos básicos como espaço amostral e evento;
+\item revisão de operações entre conjuntos (união, interseção e complementariedade),
+\item interpretações clássica, frequentista e subjetiva da probabilidade.
+\end{enumerate}
+
+\textbf{Objetivos específicos da seção 1:}
+\begin{OES}
+\item Aleatoriedade - Reconhecer fenômenos aleatórios, distinguindo-os de fenômenos determinísticos.
+\item Probabilidade - Reconhecer os conceitos de espaço amostral e evento.
+\item Medida de incerteza - Reconhecer que toda probabilidade se traduz como uma taxa de ocorrência de um evento.
+\item Interpretações da probabilidade - Reconhecer diferentes interpretações da probabilidade (clássica, frequentista e subjetiva).
+\item Álgebra de conjuntos - Aplicar as operações de união, interseção e complementariedade da teoria de conjuntos para descrever eventos compostos.
+\end{OES}
+
+\subsection{Seção 2: Regras básicas e propriedades da probabilidade}
+
+Nesta seção incluem-se
+\begin{enumerate}
+\item os axiomas da probabilidade, chamados no livro de regras básicas da probabilidade,
+\item uma discussão sobre a validade das regras básicas sob cada interpretação,
+\item propriedades da probabilidade decorrentes das regras básicas,
+\item a definição de probabilidade geométrica.
+\end{enumerate}
+
+\textbf{Objetivos específicos da seção 2:}
+\begin{OES}\setcounter{enumi}{5}
+\item Definição axiomática - Aplicar as regras básicas da probabilidade nas diferentes interpretações de probabilidade.
+\item  Ddefinição axiomática - Aplicar as regras básicas da probabilidade para obter as regras da probabilidade do evento complementar e a probabilidade da união de dois eventos (propriedades da probabilidade).
+\item  Modelagem probabilística - Avaliar, ainda que de forma incipiente, modelos para fenômenos aleatórios.
+\item  Aplicação - Aplicar as regras básicas da probabilidade em espaços amostrais contínuos (probabilidade geométrica).
+\end{OES}
+
+\subsection{Seção 3: Probabilidade condicional e independência}
+Nesta seção incluem-se
+\begin{enumerate}
+\item a definição de probabilidade condicional;
+\item a regra da multiplicação para a probabilidade da ocorr~encia simultânea de dois eventos;
+\item a extensão da regra da multiplicação para a ocorrência simultânea de mais de dois eventos;
+\item a definição de independência entre dois eventos e sua extensão para mais de dois eventos.
+\end{enumerate}
+
+\textbf{Objetivos específicos da seção 3:}
+\begin{OES}\setcounter{enumi}{9}
+\item Probabilidade condicional - Reconhecer que a probabilidade de um evento pode ser alterar dada a ocorrência prévia de outro evento
+\item Independência de eventos - Aplicar a definição de probabilidade condicional para reconhecer eventos independentes e eventos dependentes.
+\item Independência de eventos - Aplicar a definição de probabilidade condicional no cálculo da probabilidade da interseção de dois eventos quaisquer.
+\item Eventos sequenciais - Entender que a probabilidade da ocorrência simultânea de um número finito de eventos pode ser calculada como o produto de probabilidades adequadas.
+\end{OES}
+
+\subsection{Para saber mais}
+Simulações de experimentos simples usando o GeoGebra. Ilustrações da Lei dos Grandes Números.
+
+\subsection{Exercícios}
+Serão propostos exercícios do ENEM, Vestibulares entre outros abordando os conteúdos deste capítulo. Nos exercícios serão tratados os distratores.
+
+\end{apresentacao}
+
+\def\currentcolor{session1}
+\begin{texto}
+{\section{Seção 1 - Conceitos Básicos}
+
+  Como na nossa vida quase tudo é incerto, o conhecimento sobre a quantidade de incerteza associada a certos eventos (probabilidade) é fundamental para tomar decisões adequadas.
+
+  A abordagem tradicional restringe o ensino de probabilidade à interpretação clássica de probabilidade, definindo-a como a razão de número de casos favoráveis sobre número de casos possíveis, pois nesta interpretação eventos elementares (subconjuntos unitários) do espaço amostral (conjunto de todos os resultados possíveis em um experimento aleatório). Um experimento aleatório é um processo cujo resultado final só é conhecido após a sua realização) são considerados equiprováveis. No entanto, a maior parte dos problemas que envolvem modelagem de fenômenos aleatórios não se encaixa na interpretação clássica. Por exemplo,
+
+  problemas nos quais o espaço amostral é finito, mas os eventos elementares não são equiprováveis, por exemplo, uma moeda é viciada de tal modo que a probabilidade de resultar em “cara”{} é $0{,}7$ e de resultar em “coroa”{} é $0{,}3$. Se essa moeda for lançada e estamos interessados na face da moeda voltada para cima, o espaço amostral terá dois elementos, a saber, “cara”{} e “coroa”. No entanto, nesse caso, não é adequado atribuir probabilidades iguais para os dois tipos de face.
+
+  problemas nos quais o espaço amostral não é finito. Considere o experimento que consiste em observar o tempo de vida de uma lâmpada. Nesse caso o espaço amostral está contido na semirreta não-negativa, $[0,\infty)$.
+
+  Apesar de a Análise Combinatória ser muito relacionada à Probabilidade, de fato, ela é meramente uma ferramenta útil no cálculo de probabilidades em contextos nos quais a interpretação clássica de probabilidade se encaixa. Por essa razão optamos por não incluí-la como pré-requisito na abordagem de probabilidade dessa unidade temática. É claro que, quando for se trabalhar com a Análise Combinatória, é importante reforçá-la em problemas que envolvam cálculo de probabilidades. Acreditamos que a estratégia adotada nesta unidade para abordar a Probabilidade será útil para desmistificá-la como um tópico da Matemática muito difícil.
+
+  Na unidade temática de probabilidade pretende-se reforçar a importância da probabilidade à estatística. Na estatística, em geral, adotam-se as interpretações frequentista e subjetiva de probabilidade. Por isso o objetivo principal desta seção inicial da unidade é a compreensão das interpretações de probabilidade mais utilizadas, a saber, clássica, frequentista e subjetiva.
+}
+\end{texto}
+\clearmargin
+\begin{texto}
+{
+  Outro objetivo nesta seção é a interpretação de uma medida de incerteza (probabilidade) como uma taxa de ocorrência de um evento, ou seja, como uma média de ocorrências desse evento, quando repetimos o experimento um grande número de vezes. Por exemplo, uma probabilidade $0{,}95$ para a ocorrência de um evento, não implica necessariamente que esse evento ocorrerá. Essa probabilidade é interpretada da seguinte forma: se o experimento for repetido $100$ vezes sob as mesmas condições, espera-se que em $95$ delas o evento ocorra.
+
+  Nesta seção serão apresentados os conceitos básicos de espaço amostral e evento, adequados para esse nível do ensino, ou seja, o espaço amostral como a coleção contendo todos os resultados possíveis e o evento como um subconjunto do espaço amostral. A seção é encerrada apresentando-se uma breve revisão de operações com conjuntos (união, interseção e complementariedade), pois como a probabilidade é uma função na qual seu domínio é um conjunto cujos elementos são conjuntos (eventos), conhecer as operações básicas de união, interseção e complementariedade entre conjuntos (eventos) serão necessárias. (Entendemos que a definição formal de medida de probabilidade não é necessária para esse nível do ensino de modo que considerações sobre sigmas-álgebras, necessárias para essa definição formal, não serão consideradas. Sugerimos o texto de Marcos N. Magalhães, Probabilidade e Variáveis Aleatórias, da EDUSP e o texto do Barry James, Probabilidade: um curso em nível intermediário, Projeto Euclides, IMPA, para maiores detalhes.)
+
+  São objetivos específicos da seção 1:
+
+  \begin{OES}
+  \item Aleatoriedade - Reconhecer fenômenos aleatórios, distinguindo-os de fenômenos determinísticos.
+  \item Probabilidade - Reconhecer os conceitos de espaço amostral e evento.
+  \item Medida de incerteza - Reconhecer que toda probabilidade se traduz como uma taxa de ocorrência de um evento.
+  \item Interpretações da probabilidade] - Reconhecer diferentes interpretações da probabilidade (clássica, frequentista e subjetiva).
+  \item Álgebra de conjuntos - Aplicar as operações de união, interseção e complementariedade da teoria de conjuntos para descrever eventos compostos.
+  \end{OES}
+
+  \textbf{Observação}: Embora esta seção seja mais conceitual, a atividade que envolve a introdução de diferentes interpretações de probabilidade demanda calcular probabilidades. No entanto, trata-se de uma atividade cujas respostas, algumas delas abertas, não são o mais importante. Pretende-se nesta atividade apresentar situações que levam às diferentes interpretações de probabilidade. Lembramos que a noção de probabilidade é intuitiva e já é trabalhada no Ensino Fundamental II. Com a implantação da BNCC do Ensino Fundamental, probabilidade será trabalhada desde os anos iniciais do Ensino Fundamental.
+}
+\end{texto}
 \explore{conceitos básicos}\label{conceitosbasicos}
 Neste capítulo iremos explorar a noção de probabilidade para, em seguida, apresentar uma teoria matemática útil para calcular probabilidades de eventos associados a experimentos aleatórios ou fenômenos aleatórios, isto é, experimentos cujos resultados finais são conhecidos somente após a realização dos mesmos. Por exemplo,
 
@@ -228,6 +418,85 @@ Veja na \hyperref[linhadotempo]{figura \ref{linhadotempo}} uma linha do tempo de
 
 Nos capítulos \hyperref[est1-chap]{\textbf{A Natureza da Estatística}} e \hyperref[est2-chap]{\textbf{Medidas de Posição e Dispersão}}, vimos como resumir a informação de dados aleatórios amostrais com o objetivo de  entender estruturas úteis para uma tomada de decisão sob incerteza. Neste capítulo, analisaremos as características extraídas dos dados aleatórios amostrais a fim de revelar como a Estatística nos auxilia a descrever as regularidades de ocorrências de determinados eventos aleatórios.
 \clearpage
+\begin{objectives}{Não determinístico (aleatório) ou determinístico?}
+{
+Reconhecer fenômenos aleatórios, distinguindo-os de fenômenos determinísticos.
+}{1}{1}
+\end{objectives}
+
+\begin{answer}{Não determinístico (aleatório) ou determinístico?}
+{
+\begin{enumerate}
+\item determinísitco
+\item Dleatório
+\item Determinísitico
+\item Aleatório
+\item Aleatório
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Interpretando medida de incerteza}
+{
+Reconhecer que toda probabilidade se traduz como uma taxa de ocorrência de um evento.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Interpretando medida de incerteza}
+{
+Algumas afirmações envolvendo uma probabilidade serão apresentadas para depois explorar a interpretação dessa informação.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Interpretando medida de incerteza}
+{
+\begin{enumerate}
+\item Não. A probabilidade $0{,}5$ indica uma taxa de ocorrência de modo que se, de fato, a probabilidade é $0{,}5$ de ocorrer cara, isso significa que se lançarmos a moeda muitas vezes ($N$), esperamos observar um número de caras que seja próximo de $0{,}5\cdot N$ ($50\%$ do número de lançamentos). Assim, se a moeda é lançada $100$ vezes, espera-se observar um número de caras próximo a $50$, mas não necessariamente igual a $50$. Vocês podem rapidamente fazer uma experiência, reunindo-se em $10$ grupos de cerca de $4$ alunos e cada grupo deverá lançar uma moeda $10$ vezes e registrar o número de caras. Depois, a informação dos $10$ grupos deverá ser reunida, totalizando $100$ lançamentos. Quantas caras foram observadas?
+\item Se a probabilidade de chover amanhã é de $30\%$, isso significa que para cada $10$ dias com as mesmas características, espera-se que em $3$ deles chova e em $7$ não. Se é muito trabalhosos carregar um guarda-chuva, talvez a melhor decisão seja a de não levar o guarda chuva, dado que a probabilidade é inferior a $50\%$. Por outro lado, se você está resfriado e quer evitar de todo o modo o risco de se molhar, carregar o guarda-chuva, mesmo que ele venha a não ser útil, pode ser a melhor decisão. O importante aqui, é que não há como não correr riscos, qualquer que seja a sua decisão, mas a informação da probabilidade de chover é útil para tomarmos uma decisão com base nas nossas necessidades e expectativas.
+\item Não. Aqui podemos usar a mesma ideia da moeda: como a probabilidade é de $10\%$, espera-se que ao observar um grande número de pessoas ($N$), cerca de $0{,}1\cdot N$ ($10\%)$ delas irão apresentar o Diabetes. Em $500$ pessoas, espera-se que $10\%$ de $500=50$ pessoas irão ter o Diabetes. Observe também que nesse último caso, a introdução de políticas públicas na área da saúde e de campanhas sobre hábitos saudáveis, poderia reduzir essa probabilidade.
+\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Avaliando probabilidades}
+{
+Reconhecer diferentes interpretações da probabilidade (clássica, frequentista e subjetiva).
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Avaliando probabilidades}
+{
+Nesta atividade serão apresentados três blocos de três itens cada. Em cada item será solicitada a probabilidade de um determinado evento. No bloco I será adequado adotar a interpretação clássica da probabilidade, de modo que as respostas deverão surgir de forma natural e sem problemas. É importante discutir com os alunos como foram obtidas as respostas do bloco I. No bloco II, a interpretação adequada de probabilidade será a frequentista. Neste bloco, não existe a resposta certa. O objetivo neste caso é fazer o aluno pensar, pois tratam-se de situações aleatórias para as quais faz sentido atribuir uma probabilidade (chance). No bloco III, a interpretação adequada de probabilidade é a subjetiva e, portanto, também não haverá a resposta certa. O objetivo principal é levar o aluno a pensar em como atribuir probabilidades para eventos aleatórios. Esta atividade serve como estímulo à discussão do conceito de probabilidade. No item b, do bloco II, discuta com seus alunos sobre como investigar a proporção de nascimentos de meninos e meninas.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Avaliando probabilidades}
+{No primeiro bloco de itens pode-se pensar que cada resultado possível tenha a mesma chance de ocorrer. Assim temos,
+\begin{enumerate}
+\item $\frac{1}{4}=0{,}4-40\%$, pois são $10$ cartões e quatro deles apresentam "triângulos"{} que representam meninas.
+\item Novamente,
+\begin{enumerate}
+\item $\frac{2}{10}=0{,}2=20\%$, pois são $10$ casas e duas delas têm exatamente $4$ moradores.
+\item $\frac{4}{10}=0{,}4=40\%$, pois são $10$ casas e quatro delas têm mais de $4$ moreadores
+\end{enumerate}
+\item $\frac{1}{4}=0{,}25=40\%$, pois a área da região pintada corresponde a um quarto da área do círculo, isto é, a um setor circular de ângulo reto.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Avaliando probabilidades}
+{
+  No segundo bloco de itens o objetivo é determinar probabilidades, usando o enfoque frequentista de probabilidade, atribuindo como resposta a frequência relativa de ocorrência do evento.
+  \begin{enumerate}
+  \item $\frac{19}{20}=0{,}95$ que corresponde à frequência relativa de caras obtidas nos $20$ lançamentos. Outras respostas podem ser consideradas neste item, por exemplo, $0,50$, supondo-se, apesar das evidências em contrário, que a moeda é honesta; ou $0{,}725$, calculando-se uma média entre a frequência de caras observadas e a frequência esperada, supondo que a moeda é honesta ($\frac{0{,}95+0{,}5}{2}$).
+  \item Uma resposta possível é $\frac{1}{2}=0{,}5$, pois da experiência é possível verificar que meninas e meninos nascem na mesma proporção.
+  \item $\frac{8500}{11000}\approx0{,}77$, pois $8500$ estudantes de $11$ mil responderam que esse é o seu principal meio de acesso à internet na pesquisa realizada e supondo que a pesquisa represente bem o comportamento na população de todos os estudantes de Ensino Fundamental II e Médio.
+  \end{enumerate}
+
+  No terceiro bloco de itens o objetivo é determinar probabilidades, usando o enfoque subjetivo da probabilidade. Certos eventos são únicos e não podem ser reproduzidos, mas por serem aleatórios, faz sentido atribuir a eles probabilidades. As respostas aqui dependerão da experiência e objetivos de cada um. As perguntas neste bloco têm o objetivo de estimular a discussão sobre o conceito de probabilidade.
+  \begin{enumerate}
+  \item Uma resposta possível é maior do que $0,5$ ($50\%$), pois o Brasil, além de ser o único país a ter participado de todas as Copas do Mundo até a Copa de 2018, classificou-se na fase de grupos nas últimas $9$ edições desse campeonato.
+  \item A resposta dependerá de cada aluno. Por exemplo, se for um um bom aluno do Ensino Médio que pretende cursar Engenharia, curso que dura cinco anos, uma resposta possível seria uma probabilidade maior do que $0{,}5$ ($50\%$). Por outro lado, se for um aluno que tem outros planos e não pretende cursar o nível superior, uma resposta possível seria uma probabilidade menor do que $0{,}5$ ($50\%$).
+  \end{enumerate}
+
+  \textbf{Observação}: A razão pela qual usamos $0{,}5$ ($50\%$) como valor de comparação para avaliar probabilidades se dá pelo fato de ser exatamente o centro da escala da probabilidade que varia de $0$ a $1$ ($0$ a $100\%$). Assim, se temos a percepção de que é mais provável que certo evento ocorra do que ele não ocorra, atribuímos a ele uma probabilidade maior do que $0{,}5$ ($50\%$). Por outro lado, se temos a percepção de que é menos provável que certo evento ocorra do que ele não ocorra, atribuímos a ele uma probabilidade inferior a $0{,}5$ ($50\%$). Se temos a percepção de que não existe favorecimento entre a ocorrência ou não de certo evento, ou mesmo se não sabemos nada sobre ele, atribuímos a ele uma probabilidade $0{,}5$ ($50\%$).
+}{1}
+\end{answer}
 
 \begin{task}{não determinístico (aleatório) ou determinístico?}
 
@@ -390,13 +659,13 @@ Qual é a probabilidade de que a seta pare na região pintada de azul? Por quê?
 Bloco II - Probabilidade frequentista
 \begin{enumerate}
 \item {} 
-Suponha que você tenha lançado uma moeda $20$ vezes e que tenha observado a face “cara” 19 vezes e a face “coroa” uma vez. Se você lançar esta moeda mais uma vez, qual é a probabilidade (chance) de a face voltada para cima resultar em “cara”? Por quê?
+Suponha que você tenha lançado uma moeda $20$ vezes e que tenha observado a face “cara”{} 19 vezes e a face “coroa”{} uma vez. Se você lançar esta moeda mais uma vez, qual é a probabilidade (chance) de a face voltada para cima resultar em “cara”? Por quê?
 
 \item {} 
 Suponha que um bebê tenha nascido na maternidade mais próxima de sua casa na manhã de hoje. Qual é a probabilidade de que este bebê seja um menino? Por quê?
 
 \item {} 
-A pesquisa TIC Educação 2016, do Centro de Estudos sobre as Tecnologias da Informação e da Comunicação (Cetic), coletou dados de cerca de $11$ mil estudantes do segundo segmento do Ensino Fundamental e do Ensino Médio. Entre várias informações, verificou-se que cerca de $8.500$ estudantes usam smartphones como seu principal meio de acesso à internet. A pesquisa aconteceu entre agosto e dezembro de 2016.” (\href{https://g1.globo.com/educacao/noticia/52-das-instituicoes-de-educacao-basica-usam-celular-em-atividades-escolares-aponta-estudo-da-cetic.ghtml}{Leia a reportagem} publicada no G1.com.br).
+A pesquisa TIC Educação 2016, do Centro de Estudos sobre as Tecnologias da Informação e da Comunicação (Cetic), coletou dados de cerca de $11$ mil estudantes do segundo segmento do Ensino Fundamental e do Ensino Médio. Entre várias informações, verificou-se que cerca de $8.500$ estudantes usam smartphones como seu principal meio de acesso à internet. A pesquisa aconteceu entre agosto e dezembro de 2016.”{} (Leia a reportagem publicada no \href{https://g1.globo.com/educacao/noticia/52-das-instituicoes-de-educacao-basica-usam-celular-em-atividades-escolares-aponta-estudo-da-cetic.ghtml}{G1.com.br}).
 
 \end{enumerate}
 
@@ -433,9 +702,9 @@ Por exemplo, considere o experimento “observar se um corpo celeste cairá sobr
 
 Há dois resultados possíveis: cair ou não cair. Você acha que é razoável atribuir probabilidades iguais a estes dois resultados?
 
-Certamente não, pois sabemos que a situação “cair” é um evento raríssimo. Em toda a sua vida, você já observou um evento deste tipo?
+Certamente não, pois sabemos que a situação “cair”{} é um evento raríssimo. Em toda a sua vida, você já observou um evento deste tipo?
 
-Neste caso, não faz sentido atribuir probabilidades iguais para os dois resultados possíveis. Uma probabilidade razoável para o resultado “cair” seria bem pequena, próxima de zero e não igual a probabilidade do resultado “não cair”.
+Neste caso, não faz sentido atribuir probabilidades iguais para os dois resultados possíveis. Uma probabilidade razoável para o resultado “cair”{} seria bem pequena, próxima de zero e não igual a probabilidade do resultado “não cair”.
 
 Antes de apresentarmos diferentes interpretações de probabilidade, vamos começar definindo os termos espaço amostral e evento.
 
@@ -645,7 +914,7 @@ Esta interpretação costuma ser usada em problemas envolvendo lançamento de da
 
 No entanto, nem sempre a interpretação clássica será adequada: lembre-se do exemplo da queda de um corpo celeste.
 
-Um outro problema com esta interpretação é a circularidade do conceito de probabilidade para definir a própria probabilidade, pois considera em sua definição “resultados igualmente prováveis” que depende do conceito de probabilidade.
+Um outro problema com esta interpretação é a circularidade do conceito de probabilidade para definir a própria probabilidade, pois considera em sua definição “resultados igualmente prováveis”{} que depende do conceito de probabilidade.
 
 \section{Interpretação frequentista de probabilidade}
 
@@ -663,7 +932,7 @@ Problemas com esta definição envolvem falta de clareza: o que siginificam
 
 Além disso, existem fenômenos únicos para os quais não é possível realizar repetições, por exemplo, o experimento que envolve verificar se daqui a 8 anos seu nível de instrução será superior completo ou não.
 
-No entanto, esta interpretação é muito útil e amplamente usada em modelagens probabilísticas. De fato, a interpretação frequentista de probabilidade tem suas origens com a Lei dos Grandes Números, importante resultado da teoria das probabilidades estabelecido pelo matemático suíço Jakob Bernoulli (\(\star\)\(1654\) — \(\dagger\)\(1705\)). Bernoulli levou mais de vinte anos para provar a fórmula matemática, que foi publicada em seu livro “A Arte da Conjectura” (Ars Conjectandi) por seu sobrinho Nicolau Bernoulli em 1713. Bernoulli afirmou que quanto maior o número de tentativas (repetições do experimento), mais a proporção de tentativas bem-sucedidas (frequência relativa de ocorrência do evento de interesse) se aproxima de \(p\) (probabilidade do evento de interesse ocorrer).
+No entanto, esta interpretação é muito útil e amplamente usada em modelagens probabilísticas. De fato, a interpretação frequentista de probabilidade tem suas origens com a Lei dos Grandes Números, importante resultado da teoria das probabilidades estabelecido pelo matemático suíço Jakob Bernoulli (\(\star\)\(1654\) — \(\dagger\)\(1705\)). Bernoulli levou mais de vinte anos para provar a fórmula matemática, que foi publicada em seu livro “A Arte da Conjectura”{} (Ars Conjectandi) por seu sobrinho Nicolau Bernoulli em 1713. Bernoulli afirmou que quanto maior o número de tentativas (repetições do experimento), mais a proporção de tentativas bem-sucedidas (frequência relativa de ocorrência do evento de interesse) se aproxima de \(p\) (probabilidade do evento de interesse ocorrer).
 
 \begin{figure}[H]
 \centering
@@ -718,6 +987,117 @@ O importante, quando adota-se a interpretação subjetiva, é ter coerência. Po
 
 Se temos a percepção de que é mais provável que certo evento ocorra do que ele não ocorra, atribuímos a ele uma probabilidade maior do que 0,5. Por outro lado, se temos a percepção de que é menos provável que certo evento ocorra do que ele não ocorra, atribuímos a ele uma probabilidade inferior a 0,5. Se temos a percepção de que não existe favorecimento entre a ocorrência ou não de certo evento, ou mesmo se não sabemos nada sobre ele, atribuímos a ele uma probabilidade de 0,5. A razão pela qual usamos o valor 0,5 como referência se dá pelo fato de que 0,5 é exatamente o centro da escala da probabilidade que varia de 0 a 1 (0 a 100\%) como será formalizado na seção \hyperref[regrasbasicaspropriedades]{Organizando: Probabilidade - regras básicas e propriedades}.
 
+\clearpage
+\def\currentcolor{session2}
+\begin{objectives}{Espaço amostral não é único!}
+{
+Reconhecer a não unicidade do espaço amostral.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Espaço amostral não é único!}
+{
+Nesta atividade pretende-se discutir com o aluno a não unicidade do espaço amostral. Esta discussão é importante, pois dependendo da forma como o espaço amostral é especificado, pode-se ter eventos elementares que são equiprováveis ou não. Além disso, algumas representações do espaço amostral de um experimento poderão responder a mais perguntas do que outras. Por exemplo, no primeiro item, a discriminação de todas as sequências possíveis de ordem de nascimentos permite responder perguntas sobre o sexo do filho mais velho, etc. Já no segundo item, perguntas deste tipo nem sempre podem ser respondidas.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Espaço amostral não é único!}
+{
+\begin{enumerate}
+\item Usando $a$ para menina e $o$ para menino, pode-se identificar todas as possibilidades, construindo-se o seguinte diagrama, chamado diagrama de árvore.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1, every node/.style={scale=.9}]
+
+\draw (0,0) -- (30:3) node [right] {$a$} node [above, midway, rotate=30, scale=0.7] {};
+\draw (0,0) -- (-30:3) node [right] {$o$} node [below, midway, rotate=-30, scale=0.7] {};
+\draw (3.159807,1.5) -- ++(20:3) node [right] {$a$} node [above, midway, rotate=20, scale=0.7] {};
+\draw (3.159807,1.5) -- ++(-20:3) node [right] {$o$} node [below, midway, rotate=-20, scale=0.7] {};
+\draw (3.159807,-1.5) -- ++(20:3) node [right] {$a$} node [above, midway, rotate=20, scale=0.7] {};
+\draw (3.159807,-1.5) -- ++(-20:3) node [right] {$o$} node [below, midway, rotate=-20, scale=0.7] {};
+\end{tikzpicture}
+\caption{Diagrama de árvore: representação das oito possibilidades de nascimentos de três filhos}
+\end{figure}
+
+{\small$S=\{(a,a,a), (a,a,o), (a,o,a), (a,o,o), (o,a,a), (o,a,o), (o,o,a), (o,o,o)\}$} com, por exemplo, $(a,o,a)$ indicando que dos três filhos, o primeiro foi uma menina, o segundo foi um menino e, o terceiro, uma menina. Observe que neste caso, $\#(S)=8$ e, se as probabilidades de nascer um menino e de nascer uma menina são iguais, é natural usar a interpretação clássica de probabilidade, atribuindo probabilidades iguais a cada um dos 8 eventos elementares deste espaço amostral. Lembre que eventos elementares são os subconjuntos unitários do espaço amostral.
+
+\item Se formos pensar na quantidade de meninas do casal tem-se $S=\{0,1,2,3\}$. Observe que neste caso $\#(S)=4$, mas neste caso não será adequado atribuir probabilidades iguais aos eventos elmentares $\{0\}, \{1\}, \{2\}$ e $\{3\}$, pois claramente, os eventos $\{1\}$ e $\{2\}$ ocorrem com maior frequência e, portanto, com maior probabilidade. Veja as oito situações possíveis no item anterior e quantas delas correspondem a estes dois eventos elementares.
+\end{enumerate}
+}{0}
+\end{answer}
+\begin{objectives}{Avaliando probabilidades a partir de um histograma}
+{
+Avaliar probabilidades de eventos usando dados quantitativos coletados, representados em um histograma e em uma tabela de frequências.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Avaliando probabilidades a partir de um histograma}
+{
+A partir de dados coletados e representados por meio de um histograma, os alunos deverão responder perguntas referentes a probabilidades de certos eventos e para isso deverão usar a noção frequentista de probabilidade.
+}{1}{2}
+\end{sugestions}
+\clearmargin
+\marginpar{\vspace{.5em}}
+\begin{answer}{Avaliando probabilidades a partir de um histograma}
+{
+Para responder as questões desta atividade será usada a interpretação frequentista de probabilidade.
+
+\begin{enumerate}
+\item Pela tabela de frequências observa-se que $19$ tempos de chegada dos $100$ melhores estão no intervalo dado, portanto, a probabilidade será $\frac{19}{100}=0{,}19$.
+
+\item Pela tabela de frequências observa-se que há $100−24−19=57$ tempos de chegada entre os $100$ melhores que são inferiores a $154{,}0$ minutos. Portanto a probabilidade será $\frac{57}{100}=0{,}57$. A resposta poderia ser obtida também, somando-se as frequências dos intervalos de classe do início até o intervalo $[151{,}0 ; 154{,}0[$: $7+4+1+2+4+4+14+21=57$, obtendo-se $0{,}57$ como probabilidade.
+
+\item Pela tabela, vemos que $152{,}5$ minutos não é extremo de intervalo na construção apresentada, desse modo podemos concluir que a probabilidade solicitada será um número no intervalo $]0{,}43 ; 0{,}64[$. Observe que $152{,}5$ está no intervalo $[151{,}0 ; 154{,}0[$ de comprimento 3, cuja frequência absoluta é $21$. Observe também que o subintervalo $[152{,}5; 154{,}0[$ de $[151{,}0 ; 154{,}0[$ tem comprimento $1{,}5$. Usando a suposição de proporcionalidade da frequência em cada intervalo por unidade de comprimento do intervalo, podemos a aproximar a frequência do subintervalo por $21\times\frac{1{,}5}{3}=10{,}5$. Logo, a probabilidade será obtida por $\frac{10{,}5+24+19}{100}=\frac{53{,}5}{100}=0{,}535$ que de fato é um número no intervalo inicialmente obtido.
+
+\item Pela tabela, nem $152,5$ nem $158,0$ são extremos de intervalo, porém podemos obter um limite superior para a probabilidade solicitada, que neste caso será um número menor do que $0,64$ $\big(\frac{21+24+19}{100}\big)$. Para um valor pontual, serão necessárias duas aproximações de frequências. A primeira no intervalo $[152{,}5; 154{,}0[$ já realizada no item anterior que foi aproximada para $10{,}5$. A frequência do intervalo $[154{,}0 ; 157{,}0 [$ é $24$. Para o intervalo $[157{,}0 ; 158{,}0[$ calcularemos uma frequência aproximada, usando o argumento da proporcionalidade. O intervalo $[157{,}0 ; 160{,}0[$ tem comprimento $3$ com frequência $10$, então, uma aproximação para o subintervalo $[157{,}0 ; 158{,}0[$ de $[157{,}0 ; 160{,}0[$ de comprimento $1$ é dada por $19\times\frac{1}{3}\approx6{,}3$. Assim, a probabilidade será $\frac{10{,}5+24+6{,}3}{100}=\frac{40{,}8}{100}=0{,}408$.
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Leis de De Morgan}
+{
+Reconhecer propriedades importantes de operações com conjuntos, envolvendo união, interseção e complementação.
+}{1}{1}
+\end{objectives}
+\begin{answer}{Leis de De Morgan}
+{
+Veja a figura a seguir. No primeiro diagrama foi pintada a região correspondente ao complementar da interseção de $A$ e $B$. No segundo diagrama foi realçada em listras vermelhas a região que corresponde ao evento $\overline{A}$ e em listras azuis a região que corresponde ao evento $\overline{B}$. Depois, em cinza foi destacada a região correspondendo à união dos dois. Verifique que correspondem à mesma região.
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{demorgan1.png}
+
+\includegraphics[width=\linewidth]{demorgan2.png}
+\caption{As leis de De Morgan podem ser enunciadas da seguinte forma:}
+\label{}
+\end{figure}
+
+\begin{enumerate}
+\item O complementar da interseção de dois eventos é igual a união dos complementares desses dois eventos.
+\item O complementar da união de dois eventos é igual a interseção dos complementares desses dois eventos.
+\end{enumerate}
+}{0}
+\end{answer}
+\begin{objectives}{Distributividade}
+{
+Verificar a propriedade distribuitiva da operação de interseção de conjuntos com a operação de união de conjuntos.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Distributividade}
+{
+Dois diagramas de venn são apresentados. A ideia é realizar a verificação pintando os diagramas conforme a operação à esquerda e à direita da igualdade, para concluir que se referem ao mesmo conjunto.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Distributividade}
+{
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{distributividade.png}
+\caption{Diagramas de Venn: $(A\cap B)\cup C=(A\cup C)\cap(B\cup C)$}
+\label{}
+\end{figure}
+
+No diagrama da esquerda tem-se em amarelo a região indicada pela expressão à esquerda na igualdade a ser verificada. No diagrama da direita tem-se $A\cup C$ em listras vermelhas, $B\cup C$ em listras azuis. A região da interseção dos dois é a que contêm listras azuis e vermelhas e está destacada na cor cinza. Observe que é a mesma região em amarelo do diagrama da esquerda.
+}{1}
+\end{answer}
 \practice{conceitos básicos}
 \begin{task}{espaço amostral não é único!}
 \label{espaço-nao-unico}
@@ -742,7 +1122,7 @@ No capítulo \hyperref[est2-chap]{\textbf{Medidas de posição e dispersão}} fo
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[xscale=0.5,yscale=.8, scale=0.35]
+\begin{tikzpicture}[xscale=0.5,yscale=.8, scale=0.3]
 
 \draw (-0.2,0) -- (33.5,0);
 \draw (0,0) -- (0,25);
@@ -883,6 +1263,74 @@ Verifique, usando os diagramas de Venn na \hyperref[diagramavenn3]{figura \ref{d
 \end{figure}
 \end{task}
 
+\clearpage
+\def\currentcolor{session1}
+\begin{paginatexto}
+{\section{Regras Básicas e Propriedades}
+
+Esta seção da unidade temática de Probabilidade tem como objetivo principal apresentar uma definição matemática de probabilidade, independente das interpretações apresentadas na seção 1, conhecida como definição axiomática da probabilidade. Os axiomas dessa definição serão, no livro, chamados de regras básicas da probabilidade, a saber,
+
+\begin{enumerate}
+\item a probabilidade de um evento é um número não-negativo,
+
+\item a probabilidade do evento certo (espaço amostral) é $1$ (Dizemos que um evento ocorreu, se o resultado observado for um dos elementos do evento. Observe que sempre ocorrerá um elemento do espaço amostral que contém todos os resultados possíveis, por essa razão, ele costuma ser chamado de evento certo. Lembre-se que todo conjunto é subconjunto de si próprio e, portanto, o espaço amostral pode ser considerado como um evento, assim como o conjunto vazio.),
+
+\item dados dois eventos disjuntos $A$ e $B$ ($A\cap B=\emptyset$), a probabilidade da união dos dois é dada pela soma das probabilidades $P(A)+P(B)$. De fato, na definição formal de medida de probabilidade, este terceiro axioma deve incluir uma coleção enumerável de eventos dois a dois disjuntos tal que a probabilidade da união enumerável desses eventos é dada pela soma enumerável das probabilidades de cada um deles. Este axioma é chamado axioma da sigma-aditividade da probabilidade. No entanto, entendemos que nesse nível de ensino, não será necessário apresentar a definição axiomática completa. Este último axioma, será estendido para uniões disjuntas (uniões de eventos disjuntos) de um número finito de eventos disjuntos dois a dois.
+\end{enumerate}
+
+A introdução da definição axiomática da probabilidade, a mesma será considerada sob cada uma das interpretações trabalhadas na seção inicial da unidade, de modo que na interpretação clássica, obteremos a probabilidade de um evento como a razão do número de elementos do evento sobre número de elementos do espaço amostral; na interpretação frequentista, obteremos a probabilidade de um evento como a frequência relativa de ocorrência desse evento quando repetimos o experimento um grande número de vezes sob as mesmas condições e na interpretação subjetiva destacaremos a importância de sermos coerentes com os axiomas, no sentido de não atribuir probabilidades maiores que 1 ou negativas, lembrando também do axioma 3. O mais importante nessa discussão é perceber que em qualquer uma delas valerão os três axiomas.
+
+Em seguida trabalharemos com propriedades derivadas dos axiomas, a saber, 
+\begin{enumerate}
+\item a probabilidade do evento vazio ($P(\emptyset)=0$),
+\item a probabilidade do evento complementar $(P(\overline{A})=1-P(A))$, 
+\item se $A\subset B$, então $P(A)\leq P(B)$ e 
+\item a probabilidade da união de dois eventos quaisquer $(P(A\cup B)=P(A)+P(B)-P(A\cap B))$.
+\end{enumerate}
+
+Nesta seção, será introduzida, embora de forma superficial, a questão da modelagem probabilística de um fenômeno, a partir de levantamento de dados. O intuito é mostrar como podemos usar dados de pesquisas para avaliar probabilidades. Basicamente, uma distribuição de frequências será usada para calcular probabilidades. Reforça-se a importância de, em tais situações, sempre destacar a suposição de que os dados observados refletem bem o comportamento da população cujas probabilidades ou estimativas serão calculadas a partir dos dados observados.
+
+A seção é encerrada trabalhando-se com a noção de probabilidade geométrica para espaços amostrais contínuos. Nesse caso específico é importante frisar que estamos considerando como espaços amostrais contínuos conjuntos infinitos não-enumeráveis para os quais estão definidas medidas de comprimento ou área ou volume. Além disso, também estamos considerando que o modelo uniforme de probabilidade (função de densidade de probabilidade constante) é adequado para esses espaços. É claro que para o aluno, bastará mencionar que um ponto desse espaço será escolhido ao acaso de modo que subconjuntos de igual comprimento ou área ou volume do espaço amostral são equiprováveis. Nesses casos, dependendo da dimensão do espaço amostral (1, 2 ou 3), probabilidades serão calculadas como razão de comprimentos ou áreas ou volumes, respectivamente, observando-se a validade das regras básicas da probabilidade apresentadas no início da seção. É importante explorar nesse contexto as situações de eventos com infinitos elementos, mas cuja probabilidade é zero. Por exemplo, se o espaço amostral é um círculo de raio R, a probabilidade de sortearmos um ponto de um diâmetro fixado será zero, pois a medida da área definida pelo diâmetro é nula.
+
+São objetivos específicos da seção 2:
+
+\begin{OES}\setcounter{enumi}{5}
+\item Definição axiomática - Aplicar as regras básicas da probabilidade nas diferentes interpretações de probabilidade.
+\item Definição axiomática - Aplicar as regras básicas da probabilidade para obter as regras da probabilidade do evento complementar e a probabilidade da união de dois eventos (propriedades da probabilidade).
+\item Modelagem probabilística - Avaliar, ainda que de forma incipiente, modelos para fenômenos aleatórios.
+\item Aplicação - Aplicar as regras básicas da probabilidade em espaços amostrais contínuos (probabilidade geométrica).
+\end{OES}
+}
+\end{paginatexto}
+\begin{objectives}{Censo Educação Física}
+{
+Aplicar as regras básicas da probabilidade, usando a interpretação frequentista de probabilidade.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Censo Educação Física}
+{
+Aplicar as regras básicas da probabilidade para obter as regras da probabilidade do evento complementar e da probabilidade da união de dois eventos quaisquer.
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Censo Educação Física}
+{
+\begin{enumerate}
+\item $P(A)=\dfrac{270}{800}=0{,}3375, P(B)=\dfrac{240}{800}=0{,}3, P(C)=\dfrac{150}{800}=0{,}1875$ e $P(D)=\dfrac{140}{800}=0{,}175$.
+
+\item De fato, $S=A\cup B\cup C\cup D$, com $A, B, C $ e $D$ dois a dois disjuntos. $1=P(S)=P(A\cup B\cup C \cup D)=P(A)+P(B)+P(C)+P(D)=0{,}3375$, o que era de se esperar em função das regras básicas da probabilidade.
+
+\item Observe que podemos usar a interpretação clássica de probabilidade, considerando cada aluno da escola igualmente provável de ser escolhido. Como queremos a probabilidade de que o aluno pratique algum tipo de atividade física regular fora do período escolar, devemos contar quantos são estes alunos. Uma maneira mais simples de contar estes alunos é calcular a diferença entre o total de alunos ($800$) e o número de alunos que \textbf{não} praticam atividade física ($270$), obtendo-se $530$. Logo, a probabilidade solicitada é dada por $\frac{530}{800}=0{,}6625$. É claro que também poderíamos somar os números de alunos que praticam cada um dos tipos de atividade física: $240+150+140=530$. Mas, observe que a contagem obtida pelo cálculo da diferença entre o total e o número de alunos que não praticam atividade física foi mais simples: $800−270=530$.
+
+\item  Sejam os eventos $B$: “jogar futebol”{} e $M$: “ser do turno da manhã”. Observe que $B\cap M\subset B$ tal que o número de elementos da interseção é menor ou igual ao número de elementos de $B$ de modo que o evento $B$ parece ser mais provável do que o evento $B\cap M$. Olhando os dados, temos que a probabilidade de que o aluno jogue futebol é dada por $P(B)=\frac{240}{800}=0{,}3$ e a probabilidade de jogar futebol e ser do turno da manhã é $P(B\cap M)=\frac{160}{800}=0{,}2$. Logo, é mais provável escolher um aluno que jogue futebol do que escolher um aluno do turna da manhã que jogue futebol. Essa é uma propriedade importante da probabilidade: se $A\subset B$, então $P(A)\leq P(B)$.
+
+\item Chamando de $E$ o evento “praticar outra atividade diferente de futebol”{} e $T$ o evento “ser do turno da tarde”, queremos calcular $P(E\cup T)$. Da tabela de dados temos que o total de alunos que praticam outra atividade diferente de futebol é $150+140=290$ e o total dos alunos do turno da tarde é $350$. No entanto, a soma $290+350=640$ é superior ao número de alunos que tem pelo menos uma dessas duas características. Isso ocorre pois nos dois totais considerados, estamos contando os alunos que têm simultaneamente as duas características. Logo, devemos subtrair de $640$ o valor $70+70=140$ que representa o total de alunos que pratica outra atividade e é ao mesmo tempo do turno da tarde. Portanto, podemos escrever que
+\begin{equation*}
+P(E\cup T)=P(E)+P(T)-P(E\cap T)=\frac{290}{800}+\frac{350}{800}-\frac{140}{800}=\frac{500}{800}=0{,}625
+\end{equation*}
+\end{enumerate}
+}{1}
+\end{answer}
 \explore{regras básicas e propriedades}
 
 No início do século XX, o matemático russo Kolmogorov, como já comentado na seção \hyperref[conceitosbasicos]{Explorando: Probabilidade \textendash{} conceitos básicos}, estabeleceu regras básicas para a probabilidade que independem da interpretação adotada, possibilitando assim, a construção de uma teoria matemática de probabilidade.
@@ -890,7 +1338,7 @@ No início do século XX, o matemático russo Kolmogorov, como já comentado na 
 De maneira simplificada, essas regras básicas serão apresentadas a seguir.
 
 Seja \(S\) um espaço amostral. Uma probabilidade é uma função \(P\) que associa a cada subconjunto de \(S\) (evento)  um número real, tal que
-\begin{enumerate}
+\begin{itemize}
 \item {} 
 ela é sempre um número não negativo,
 
@@ -900,10 +1348,10 @@ a probabilidade do evento certo é igual a $1$ e,
 \item {} 
 dados dois eventos disjuntos, a probabilidade da união dos dois é dada pela soma das probabilidades individuais.
 
-\end{enumerate}
+\end{itemize}
 
 Em símbolos, essas regras podem ser apresentadas da seguinte forma:
-\begin{enumerate}
+\begin{itemize}
 \item {} 
 \(P(A)\geq 0\) qualquer que seja \(A\subset S\), ou seja, a probabilidade de qualquer evento \(A\) é um número não-negativo.
 
@@ -913,7 +1361,7 @@ Em símbolos, essas regras podem ser apresentadas da seguinte forma:
 \item {} 
 Se \(A,B\subset S\) com \(A\) e \(B\) eventos disjuntos (\(A\cap B=\emptyset\)), então \(P(A\cup B)=P(A)+P(B)\).
 
-\end{enumerate}
+\end{itemize}
 \begin{task}{censo Educação Física}
 \label{censo-educacao-fisica}
 
@@ -1155,6 +1603,138 @@ Logo, podemos escrever \(P(\overline{A}\cap B)=P(B)-P(A\cap B)\) tal que
 
 
 \clearpage
+\def\currentcolor{session2}
+\begin{objectives}{O problema dos bodes}
+{
+Calcular a probabilidade de um evento considerando duas estratégias distintas.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{O problema dos bodes}
+{
+Nesta atividades as interpretações clássica e frequentista podem ser usadas. De fato, a noção frequentista de probabilidade é usada muitas vezes para validar a suposição de equiprobabilidade de eventos elementares. Este problema gerou muita polêmica nos anos 1990 do século XX e é conhecido como problema de Monty Hall (incluir referência). Neste link é possível visualizar uma simulação do problema. (incluir link)
+
+Uma sugestão para lidar com esta atividade é realizar a simulação do programa de televisão em sala de aula. Peça a turma para se dividir em dois grupos: um que adotará a estratégia de nunca trocar a escolha inicial e, o outro, de sempre trocar. A cada simulação do jogo deverá ser registrado, em dada grupo, se houve vitória ou derrota. Esta simulação pode ser feita com três cartas de versos idênticos, por exemplo. Sugere-se repetir a simulação pelo menos 30 vezes em cada grupo. No final compare com os alunos a frequência de vitórias em cada grupo e depois discuta sobre a melhor estratégia.
+
+Caso esteja disponível internet e projetor, neste \href{https://www.geogebra.org/m/Ec9xubPJ}{link} será possível simular várias partidas do jogo e ir registrando os resultados em cada equipe.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{O problema dos bodes}
+{
+A melhor estratégia será trocar de porta. Observe que inicialmente, o candidato tem probabilidade $1/3$ de escolher a porta com o carro e $2/3$ de escolher uma porta com um bode. Assim, se a estratégia do candidato for manter a escolha inicial, sua chance de ganhar o carro será $1/3$.
+
+Por outro lado, se a estratégia do candidato for trocar de porta, sua chance de ganhar o carro será $\frac{2}{3}$: se ele escolher a porta que tem o carro (com probabilidade $\frac{1}{3}$) e trocar de porta ele não ganhará. No entanto se ele escolher uma porta com bode (cuja probabilidade é $\frac{2}{3}$) e trocar de porta, ele ganhará. Logo, sob a estratégia “trocar de porta”, a probabilidade de ganhar o carro é $\frac{2}{3}$.
+
+Veja neste \href{https://www.geogebra.org/m/Ec9xubPJ}{link} uma simulação deste problema
+}{1}
+\end{answer}
+\begin{objectives}{Jogo de dardos}
+{
+Calcular probabilidades de eventos em situações cujo espaço amostral é uma região do plano, estendendo a noção clássica de probabilidade para um espaço amostral não discreto.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Jogo de dardos}
+{
+O objetivo desta atividade é estender a noção de probabilidade para uma situação envolvendo um espaço amostral não discreto e induzir à noção de probabilidade geométrica como razão de áreas em que uma região de área bem definida e finita do plano é fixada como o espaço amostral e, os eventos são tomados como sub-regiões de área bem definida do espaço amostral. A situação a ser tratada aqui é bem restrita, pois usará a noção clássica de probabilidade, adotando a suposição de sub-regiões do espaço amostral de áreas iguais têm probabilidades iguais.
+
+Note que a frase “Suponha que você seja suficientemente experiente de modo que sempre atinja o tabuleiro de darodos”{} especifica que o espaço amostral resume-se ao tabuleiro de dardos.
+}{1}{2}
+\end{sugestions}
+\clearmargin
+\marginpar{\vspace{.5em}}
+\begin{answer}{Jogo de dardos}
+{
+\begin{enumerate}
+\item Para ganhar $100$ pontos o dardo deve cair no círculo menor de raio $5$cm (em verde). Logo, 
+$$P(A)=\dfrac{\pi\cdot5^2}{\pi\cdot20^2}=\dfrac{1}{16}=0{,}0625$$.
+\item Para ganhar $20$ pontos o dardo deve cair no anel circular verde mais externo. Logo, usando a definição 
+\begin{equation*}
+P(B)=\frac{\text{área de $B$}}{\text{área de $S$}}=\frac{\pi(15^2-10^2)}{\pi\cdot20^2}=\frac{125}{400}=0{,}3125
+\end{equation*}
+\item Para ganhar no máximo $50$ pontos, o dardo deve cair em qualquer ponto exceto no círculo menor em verde onde se ganha $100$ pontos. Logo, usando a propriedade que explicita a probabilidade do evento complementar, \begin{equation*}
+P(C)=P(\overline{A})=1-P(A)=1-0{,}0625\approx0{,}9375
+\end{equation*}.
+\item Considerando o semicírculo destacado na \hyperref[dardos]{figura \ref{dardos}}:\begin{enumerate}
+\item A região que determina o evento de interesse é a reunião de duas regiões, a saber, o semicírculo $(A)$ e o anel circular correspondente a faixa de $50$ pontos $(B)$. Logo, usando a propriedade da probabilidade da união de dois eventos tem-se 
+
+\begin{align*}
+P(A\cup B)&=P(A)+P(B)-P(A\cap B)\\
+&=\frac{1}{2}+\frac{\pi\cdot(10^2-5^2)}{\pi\cdot20^2}-\frac{(\pi/2)\cdot(10^2-5^2)}{\pi\cdot20^2}\\
+&=\frac{1}{2}+\frac{75}{400}-\frac{75}{800}\approx0{,}59.
+\end{align*}
+
+\item A região que determina o evento de interesse $(D)$ corresponde a um semicírculo de raio $15$cm. $P(D)=\dfrac{1}{2}\cdot\dfrac{\pi\cdot15^2}{\pi\cdot20^2}=\dfrac{9}{32}\approx0{,}28$.
+\end{enumerate}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{O problema dos aniversários}
+{
+Calcular a probabilidade de um evento usando a propriedade do evento complementar.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{O problema dos aniversários}
+{
+Para resolver esse problema será necessário fazer algumas suposições: 
+\begin{itemize}
+\item considerar apenas anos não bissextos; 
+\item supor que os $365$ dias do ano são igualmente prováveis como datas de aniversário. Com essas suposições, será adotada a interpretação clássica de probabilidade para resolver o problema.
+\end{itemize}
+
+Faça uma enquete perguntando quem são os nascidos em janeiro, fevereiro, etc., até obter uma coincidência (ou não) de aniversários. Se a sua turma tem $35$ ou mais alunos, é muito mais provável que exista uma coincidência de aniversários do que não exista. A explicação para isso envolve o fato de que com $35$ pessoas pode-se formar $595$ pares de datas de aniversário de duas pessoas diferentes, ao passo que no ano há $365$ dias como possíveis datas de aniversário. Para calcular a probabilidade também será necessária pelo menos uma calculadora científica básica.
+
+É importante destacar que a escolha do número $35$ alunos deveu-se à restrição numérica nas calculadoras científicas básicas. Para números maiores do que $35$, as calculadoras apontam “Erro matemático”{} por conta da magnitude de valores manipulados no cálculo da probabilidade, que superam a capacidade de uma calculadora simples. No entanto, usando programação tais probabilidades podem ser facilmente obtidas para números maiores do que $4$. No link há uma ilustração sobre o comportamento dessa probabilidade em função do tamanho do grupo.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{O problema dos aniversários}
+{
+Calcular diretamente essa probabilidade é muito complicado, pois existem várias configurações possíveis de coincidências de aniversários. Por outro lado, podemos pensar no evento complementar ao evento cuja probabilidade queremos calcular. O evento complementar corresponde ao evento “todos os alunos da turma nasceram em dias diferentes”. Vamos usar a interpretação clássica de probabilidade supondo que todas as configurações possíveis de aniversário para as 40 pessoas são igualmente prováveis e, assim, 
+\begin{equation*}
+P(\overline{A})=\frac{\#(\overline{A})}{\#(S)}
+\end{equation*}. 
+
+Observe que para cada pessoa existem $365$ possibilidades de datas. Como são 35 pessoas, tem-se $\#(S)=365^35$. Agora o número de elementos do evento $\overline{A}$, que corresponde a todos terem nascido em dias diferentes, pode ser calculado, usando o princípio multiplicativo, da seguinte forma: há $365$ possibilidades para o aluno número $1$ da chamada, logo há $(365-1)=364$ possibilidades para o aluno número $2$ da chamada. Continuando, há $(365-2)=363$ possibilidades para o aluno número $3$ da chamada, até $(365-34)=331$ possibilidades para o aluno de número 35 da chamada. Assim, 
+\begin{equation*}
+\#(\overline{A})=365\cdot364\cdot363\cdots331=\frac{365!}{(365-34)!}.
+\end{equation*}
+
+Com uma calculadora científica básica, é possível obter o valor de 
+\begin{equation*}
+P(\overline{A})=\frac{365!}{(365−35)!}{365^35}
+\end{equation*}
+que é, aproximadamente, $0{,}814$. A título de informação veja na tabela a seguir as probabilidades de coincidência em função do tamanho do grupo $k$.
+
+\begin{table}[H]
+\centering
+
+\setlength\tabcolsep{7.5pt}
+\begin{tabular}{|f|f|}
+\hline
+\tmat{k} & \tmat{P(A)} \\
+\hline
+5 & 0{,}027 \\
+\hline
+10 & 0{,}117 \\
+\hline
+20 & 0{,}411 \\
+\hline
+22 & 0{,}476 \\
+\hline
+23 & 0{,}507 \\
+\hline
+30 & 0{,}569 \\
+\hline
+40 & 0{,}891 \\
+\hline
+50 & 0{,}970 \\
+\hline
+60 & 0{,}994 \\
+\hline
+\end{tabular}
+\end{table}
+}{0}
+\end{answer}
+
 \practice{regras básicas e propriedades}
 \label{regrasbasicaspropriedades}\begin{task}{o problema dos bodes}
 
@@ -1213,7 +1793,7 @@ Suponha que você seja suficentemente experiente de modo que todos os seus lanç
 \end{figure}
 
 Suponha que a medida do raio do tabuleiro de dardos seja $20$cm e que a medida do menor raio (círculo em verde no centro do tabuleiro) seja $5$cm, e que os acréscimos de comprimento do raio nas faixas branca, verde e branca do tabuleiro sejam iguais a $5$cm. A moldura em preto não faz parte do alvo. Suponha também que atingindo o
-\begin{enumerate}
+\begin{itemize}
 \item {} 
 círculo de raio $5$cm (em verde), você ganha $100$ pontos;
 
@@ -1226,7 +1806,7 @@ o anel circular em verde subsequente, você ganha $20$ pontos e
 \item {} 
 a anel circular mais externo (em branco), você ganha $10$ pontos.
 
-\end{enumerate}
+\end{itemize}
 
 
 Observe que, neste caso, não é possível usar a interpretação clássica de probabilidade, pois existem infinitos eventos elementares. No entanto, é razoável supor uniformidade de probabilidades se, de fato, o jogador acerte em qualquer ponto do tabuleiro de dardos ao acaso. Neste espaço amostral, o círculo de raio $20$cm, se os pontos são obtidos ao acaso, ao considerar regiões de mesma área, contidas no círculo, as probabilidades de se obter pontos nestas regiões devem ser iguais.
@@ -1253,14 +1833,14 @@ Assim, calcula-se a probabilidade do dardo cair numa região dentro do círculo 
 \end{figure}
 
 Observações:
-\begin{enumerate}
+\begin{itemize}
 \item {} 
 Nesta situação, a probabilidade do dardo atingir um ponto fixado no círculo será sempre zero, pois a medida de área correspondente a um ponto é nula.
 
 \item {} 
 Esta forma de calcular probabilidades costuma ser denominada como \textit{probabilidade geométrica} e pode ser considerada como uma extensão da interpretação clássica de probabilidade para espaços amostrais representados por uma região do plano com área definida. Esta mesma noção poderá ser usada para espaços amostrais representados por intervalos da reta limitados de comprimento definido, neste caso, calculando-se probabilidades como uma razão de comprimentos de intervalos.
 
-\end{enumerate}
+\end{itemize}
 
 Calcule a probabilidade de que em um lançamento você ganhe
 \begin{enumerate}
@@ -1299,7 +1879,120 @@ Numa turma de seu colégio há $35$ alunos. Calcule a probabilidade de que haja 
 \end{figure}
 \end{task}
 
+\clearpage
+\begin{paginatexto}
+\section{Probabilidade Condicional}
 
+Nesta seção da unidade de probabilidade todas as regras e propriedades da probabilidade trabalhadas na seção anterior serão retomadas, porém em um contexto de revisão da probabilidade de um evento, sabendo-se que algum outro evento tenha ocorrido. Após explorar uma situação que envolva essa revisão, apresentaremos definição de probabilidade condicional que sirva para todas as interpretações trabalhadas dada por $P(A|E)=\dfrac{P(A\cap E)}{P(E)},  P(E)>0.$
+
+É importante verificar que, de fato, essa definição, satisfaz a definição axiomática de probabilidade $(P(A|E)\geq0$, para todo evento $A\subset S$, $P(S|E)=1$, se $A\cap B=\emptyset$, $P(A\cup B|E)=P(A|E)+P(B|E))$. Assim, a partir de tal verificação, será possível concluir que as propriedades (evento vazio, evento complementar e união de dois eventos quaisquer) serão válidas para a probabilidade condicional fixado o evento ocorrido tal que ($P(\emptyset|E)=0$, $P(\overline{A}|)=1−P(A|E)$, se $A\subset B$, então $P(A|E)\leq P(B|E)$ e $P(A\cup B|E)=P(A|E)+P(B|E)−P(A\cap B|E$)).
+
+Na discussão sobre probabilidade condicional será importante mostrar para o aluno que a probabilidade de um evento $A$ condicionada a um evento $E$ poderá não se alterar ou se alterar, aumentando ou diminuindo, ou $P(A|E)=P(A)$ ou $P(A|E)>P(A)$ ou $P(A|E)<P(A)$. Essa discussão será usada para definir eventos independentes e dependentes. Se a probabilidade de $A$ não se altera dado que E ocorreu $[P(A|E)=P(A)]$, dizemos que os eventos $A$ e $E$ são independentes, pois a ocorrência de $E$ não interfere na incerteza a cerca do evento $A$. É importante explorar a simetria dessa definição, ou seja, se $P(A|E)=P(A)$, então $P(E|A)=P(E)$ tal que se a ocorrência de $E$ não altera a probabilidade de ocorrência de $A$, os eventos $E$ e $A$ são ditos eventos independentes.
+
+Se $P(A|E)<P(A)$, dizemos que o evento $E$ é desfavorável a ocorrência de $A$, pois $P(A|E)<P(A)$ (Observe que essa relação também é simétrica, pois se $E$ é desfavorável ao evento $A$, então $A$ é desfavorável ao evento $E$.)
+
+Se $P(A|E)>P(A)$, dizemos que o evento E é favorável a ocorrência de $A$, pois $P(A|E)>P(A)$. (Observe que essa relação também é simétrica, pois se E é favorável ao evento $A$, então $A$ é favorável ao evento $E$.)
+
+Da definição de probabilidade condicional, podemos obter a regra da multiplicação para calcular a probabilidade da ocorrência simultânea de dois eventos quaisquer, a saber, $P(A\cap B)=P(B)\cdot P(A|B)$.
+
+Para explorar essa regra, recomenda-se fortemente o uso de diagramas de árvore. Por exemplo, suponha o sorteio, sem reposição, de dois alunos de uma turma na qual $5$ são meninas e $11$ são meninos. Deseja-se calcular a probabilidade de que o primeiro aluno sorteado seja uma menina e, que o segundo, seja um menino.
+
+Defina os eventos $A_1$: “menina no primeiro sorteio”, $A_2$: “menina no segundo sorteio”, $B_1$: “menino no primeiro sorteio”{} e $B_2$: “menino no segundo sorteio”.
+
+Defina os eventos $A_1$: “menina no primeiro sorteio”, $A_2$: “menina no segundo sorteio”, $B_1$: “menino no primeiro sorteio”{} e $B_2$: “menino no segundo sorteio”.
+
+Pela regra da multiplicação, $P(A_1\cap B_2)=P(A_1)\cdot P(B_2|A_1)=\frac{5}{16}\cdot\frac{11}{15}=\frac{11}{48}$.
+
+Na \hyperref[exemploarvore1]{figura \ref{exemploarvore1}} 1, há uma iluistração desse problema, usando o diagrama de árvore.
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{exemploarvore1.png}
+\caption{Exemplo do uso do diagrama de árvore para resolver um problema de probabilidade}
+\label{exemploarvore1}
+\end{figure}
+
+Observe que as probabilidades envolvendo as ramificações a partir de um ponto no diagrama da árvore sempre somam $1$ (axioma $2$ da probabilidade). No primeiro sorteio, a probabilidade de ser uma menina é $5/16$ e de ser um menino é $11/16$. Para o segundo sorteio, consideram-se as probabilidades condicionais, dado o ocorrido no primeiro sorteio:
+
+\begin{itemize}
+\item se foi menina, sobraram $15$ alunos, sendo $4$ meninas e $11$ meninos.
+\item se foi menino, sobraram $15$ alunos, sendo $5$ meninas e $10$ meninos.
+\end{itemize}
+
+Nesse exemplo, podemos perguntar aos alunos se os eventos $A_1$ e $B_2$ são independentes. Observe que $P(A_1)=\frac{5}{16}$ e $P(B_2)=P(A_1\cap B_2)+P(B_1\cap B_2)=\frac{5}{16}\cdot \frac{11}{15}+\frac{11}{16}\cdot\frac{10}{15}=\frac{11}{16}$ (de fato, a probabilidade incondicional de ser um menino no segundo sorteio é dada pela proporção de meninos na turma) e $P(A_1\cap B_2)=\frac{11}{48} $tal que $P(B_2|A_1)=\frac{11/48}{5/16}=\frac{11}{15}\neq P(B_2)=\frac{11}{16}$. Logo, conclui-se que os eventos $A_1$ e $B_2$ não são independentes.
+
+Esse exemplo é importante, para mostrar que a regra da multiplicação vale para quaisquer dois eventos. Se, no entanto, os eventos são independentes, então teremos o caso especial em que $P(A\cap B)=P(A)\cdot P(B)$. Deve-se ter cuidado com esta última expressão, adequada apenas para dois eventos independentes. A regra da multiplicação é dada por $P(A\cap B)=P(B)\cdot P(A|B)$ . (Usar como regra geral que $P(A\cap B)=P(A)\cdot P(B)$ é um distrator, possivelmente causado pela forma como os textos costumam apresentar o conceito de independência, priorizando essa expressão, sem olhar a regra geral, derivada da definição de probabilidade condicional.)
+
+No encerramento desta seção, apresenta-se extensão da regra da multiplicação para mais de dois eventos quaisquer.
+
+É possível, por indução, generalizar a regra da multiplicação para uma coleção de n eventos $(A_1,A_2,...,A_n)$ tais que $P(A_1\cap A_2\cap \cdots A_n)>0$, n∈N. Existem formas diferentes de apresentar a regra, mas utilizaremos aqui a sequência crescente de índices dos eventos
+
+{\small
+\begin{align*}
+&P(A_1\cap A_2\cap \cdots\cap An)=P(A_1)\cdot P(A_2|A_1)\cdot P(A_3|A_1\cap A_2)\\
+&\cdots P(A_n|A_1\cap A_2\cap\cdots\cap A_n−1)
+\end{align*}}
+
+Veja na \hyperref[exemploarvore2]{figura \ref{exemploarvore2}} o diagrama de árvore correspondente.
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{exemploarvore2.png}
+\caption{Exemplo do uso do diagrama de árvore para calcular probabilidades conjuntas}
+\label{exemploarvore2}
+\end{figure}
+
+A extensão da regra da multiplicação para uma coleção finita de eventos pode ser simplificada para o caso especial de uma coleção de eventos independentes. Nesse caso, tem-se a expressão $P(A_1\cap A_2\cap\cdots\cap A+n)=P(A_1)\cdots P(A_2)\cdots P(A_n)$, útil para calcular probabilidades de experimentos repetidos independentemente, como, por exemplo, o lançamento de uma moeda honesta $10$ vezes consecutivas.
+
+São objetivos específicos da seção 3:
+
+\begin{OES}
+\item Probabilidade condicional - Reconhecer que a probabilidade de um evento pode ser alterar dada a ocorrência prévia de outro evento
+\item Independência de eventos - Aplicar a definição de probabilidade condicional para reconhecer eventos independentes e eventos dependentes.
+\item Independência de eventos - Aplicar a definição de probabilidade condicional no cálculo da probabilidade da interseção de dois eventos quaisquer.
+\item Eventos sequenciais - Entender que a probabilidade da ocorrência simultânea de um número finito de eventos pode ser calculada como o produto de probabilidades adequadas.
+\end{OES}
+\end{paginatexto}
+
+
+\def\currentcolor{session1}
+\begin{objectives}{Uso de óculos e sexo de estudandes}
+{
+\begin{itemize}
+\item Reconhecer que a probabilidade de um evento pode se alterar, conhecendo-se uma informação parcial do fenômeno sob investigação.
+\item Aplicar a definição de probabilidade condicional para reconhecer eventos independentes e eventos dependentes.
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Uso de óculos e sexo de estudandes}
+{
+Nesta atividade uma tabela de dupla entrada será fornecida para verificar uma possível relação entre usar óculos e sexo de um estudante do Ensino Médio. Recomenda-se construir esta mesma tabela com os dados dos alunos de sua turma e responder aos itens, usando esses dados.
+
+Como sugestão de discussão, sugere-se uma pesquisa na internet para investigar a proporção de jovens que usa óculos. Por exemplo, em 21 de maio de 2018, foi publicada a seguinte reportagem "\href{https://www.dn.pt/sociedade/interior/miopia-aumenta-nos-jovens-e-a-culpa-e-da-falta-de-sol-e-dos-computadores-5656709.html}{Miopia aumenta nos jovens e a culpa é da falta de sol e dos computadores}”
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Uso de óculos e sexo de estudandes}
+{
+Defina os seguintes eventos
+
+\begin{itemize}
+\item $M$: “estudante do gênero masculino”, 
+\item $F$: “estudante do sexo feminino”,
+\item $O$: “estudante usa óculos”{} e 
+\item $\overline{O}$: “estudante não usa óculos”.
+\end{itemize}
+
+\begin{enumerate}
+\item $P(O)=\frac{11}{40}=0{,}275$
+\item Há $22$ alunos do gênero feminino e 6 usam óculos. Assim, a probabilidade é $\frac{6}{22}\approx0{,}273$.
+\item Há $18$ alunos do gênero masculino e $5$ usam óculos. Assim, a probabilidade é $\frac{5}{18}\approx0{,}278$.
+\item $P(F)=\frac{22}{40}=0{,}55$
+\item Há $11$ alunos que usam óculos e 6 são do gênero feminino. Assim, a probabilidade é $\frac{6}{11}\approx0{,}545$.
+\item Há $29$ alunos que não usam óculos e $16$ são do gênero feminino. Assim, a probabilidade é $\frac{16}{29}\approx0{,}552$.
+\item Sem discriminar por gênero, a probabilidade de usar óculos é $0{,}275$. Discriminando por sexo, observa-se que a probabilidade de uma menina usar óculos é $0{,}272$ e de um menino usar óculos é $0{,}278$. Sem discriminar por uso de óculos, a probabilidade de ser uma menina é $0{,}55$. Discriminando por uso de óculos, observa-se que a probabilidade de ser uma menina entre os alunos que usam óculos é $0{,}545$ e a probabilidade de ser uma menina entre os que não usam óculos é $0{,}552$, ou seja, ambas aproximadamente iguais a probabilidade de ser uma menina sem levar em conta o uso de óculos. Portanto, independentemente, de sexo, a probabilidade de usar óculos é aproximadamente $0{,}275$ e independentemente de uso de óculos, a probabilidade de ser uma menina é aproximadamente $0{,}55$. Como estamos lidando com uma amostra da população, probabilidades gerais, por exemplo “uso de óculos”{} e probabilidades parciais “uso de óculos segundo o sexo”{} aproximadamente iguais revelam a independência no sentido estatístico dos eventos considerados.
+\end{enumerate}
+}{0}
+\end{answer}
 \explore{ Probabilidade Condicional}
 
 
@@ -1393,7 +2086,7 @@ A probabibilidade condicional de o evento \(A\) ocorrer, dado que sabemos que o 
 
 Retomando a a atividade \hyperref[uso-oculos]{uso de óculos e sexo de estudantes}, a probabilidade de o aluno sorteado usar óculos, sabendo que ele é do gênero masculino foi calculada pela razão do número de estudantes que usam óculos e são do gênero masculino e o número de estudantes do gênero masculino, a saber, \(\frac{5}{18}\approx 0{,}278\).
 
-Observe que esse quociente, pode ser também obtido a partir da definição de probabilidade condicional, calculando-se o quociente da probabilidade de “usar óculos e ser do gênero masculino” $(5/40=0{,}125)$ e da probabilidade de ser do gênero masculino $(18/40=0{,}45)$, obtendo-se \(\displaystyle{\frac{0,125}{0,45}=\frac{5}{18}\approx 0{,}278}\).
+Observe que esse quociente, pode ser também obtido a partir da definição de probabilidade condicional, calculando-se o quociente da probabilidade de “usar óculos e ser do gênero masculino”{} $(5/40=0{,}125)$ e da probabilidade de ser do gênero masculino $(18/40=0{,}45)$, obtendo-se \(\displaystyle{\frac{0,125}{0,45}=\frac{5}{18}\approx 0{,}278}\).
 
 Repita essa verificação para as demais probabilidades condicionais calculadas na atividade \hyperref[uso-oculos]{uso de óculos e sexo de estudantes}.
 
@@ -1405,7 +2098,7 @@ A primeira regra básica é a de que toda probabilidade é um número não negat
 \begin{equation*}
 \begin{split}P(A|B)=\frac{\overbrace{P(A\cap B)}^{\geq 0}}{\underbrace{P(B)}_{>0}}\geq 0\end{split}
 \end{equation*}
-Além disso, a segunda propriedade básica \(P(S)=1\) pode ser adaptada.  Observe que dado que o evento \(B\) ocorreu, o natural é passar a considerá-lo como o “novo” espaço amostral à luz dessa informação. Assim,
+Além disso, a segunda propriedade básica \(P(S)=1\) pode ser adaptada.  Observe que dado que o evento \(B\) ocorreu, o natural é passar a considerá-lo como o “novo”{} espaço amostral à luz dessa informação. Assim,
 \begin{equation*}
 \begin{split}P(B|B)=\frac{P(B)}{P(B)}=1\end{split}
 \end{equation*}
@@ -1457,7 +2150,7 @@ Em um grupo de 12 pessoas, sabe-se que 8 delas votarão no candidato à prefeito
 
 Primeiro vamos apresentar uma solução analítica desse problema, para em seguida mostrar a solução, muito mais simples, usando diagrama de árvore. A solução analítica será útil para compreender melhor os elementos da árvore e quando usar multiplicação e adição de probabilidades.
 
-Como são apenas dois candidatos, vamos chamar de \(A_1\) o evento “a primeira pessoa sorteada votará em \(ABC\) ” e, assim, \(\overline{A_1}\) corresponderá ao evento “a primeira pessoa sorteada votará em \(XYZ\) “. Similarmente, vamos chamar de \(A_2\) o evento “a segunda pessoa sorteada votará em \(ABC\) ” e, assim, \(\overline{A_2}\) corresponderá ao evento “a segunda pessoa sorteada votará em \(XYZ\) “. O evento cuja probabilidade queremos calcular é \(E\): “as duas pessoas sorteadas votarão em candidatos distintos.”
+Como são apenas dois candidatos, vamos chamar de \(A_1\) o evento “a primeira pessoa sorteada votará em \(ABC\) ”{} e, assim, \(\overline{A_1}\) corresponderá ao evento “a primeira pessoa sorteada votará em \(XYZ\) “. Similarmente, vamos chamar de \(A_2\) o evento “a segunda pessoa sorteada votará em \(ABC\) ”{} e, assim, \(\overline{A_2}\) corresponderá ao evento “a segunda pessoa sorteada votará em \(XYZ\) “. O evento cuja probabilidade queremos calcular é \(E\): “as duas pessoas sorteadas votarão em candidatos distintos.”
 
 Observe que \(E=(A_1\cap \overline{A_2})\cup (\overline{A_1}\cap A_2)\)  e que os dois eventos do lado direito são disjuntos de modo que podemos calcular \(P(E)\) como a soma \(P(A_2\cap \overline{A_1})+P(\overline{A_2}\cap A_1)\). Observe que cada uma dessas duas probabilidades envolve a ocorrência simultânea de dois eventos, de modo que podemos usar a regra da multiplicação:
 
@@ -1551,7 +2244,7 @@ De fato, se \(P(A|B)=P(A)\), segue que \(P(A\cap B)=P(A) \cdot P(B)\) e, assim,
 \end{equation*}
 \begin{example}{Eventos independentes versus eventos disjuntos}
 
-Considere o experimento que consiste em lançar um dado honesto e, em seguida, lançar uma moeda honesta. Defina os eventos \(A:\) “ocorre uma face par” e \(B:\) “ocorre uma cara”.
+Considere o experimento que consiste em lançar um dado honesto e, em seguida, lançar uma moeda honesta. Defina os eventos \(A:\) “ocorre uma face par”{} e \(B:\) “ocorre uma cara”.
 \begin{enumerate}
 \item {} 
 \(A\) e \(B\) são eventos disjuntos?
@@ -1647,6 +2340,211 @@ e portanto, \(A\) e \(B\cup C\)  não são independentes apesar de \(A\) e \(B\)
 Portanto, se temos três eventos dois a dois independentes, isso não implicará que os três eventos sejam independentes.
 \end{example}
 
+\clearpage
+\def\currentcolor{session2}
+\begin{objectives}{Desempenho de exames diagnósticos}
+{
+Reconhecer uma probabilidade condicional.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Desempenho de exames diagnósticos}
+{
+Essa atividade envolve uma adaptação de uma questão do ENEM (2014).
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Desempenho de exames diagnósticos}
+{
+Defina 
+\begin{itemize}
+\item $A$: o evento "a pessoa sorteada tem a doença $X$"{} e 
+\item $B$: o evento "o resultado do teste da pessoa sorteada foi positivo".
+\end{itemize}
+
+\begin{enumerate}
+\item Entre os duzentos indivíduos, $100$ têm a doença $X$, logo $P(A)=\frac{100}{200}=0{,}5$.
+\item $P(\overline{A})=1-0,5=0,5$.
+\item $P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{95}{110}\approx0{,}864$.
+\item $P(A|\overline{B})=\frac{5}{90}\approx0,056$.
+\item Entre as $100$ pessoas doentes, $95$ resultados foram positivos, logo $P(B|A)=0{,}95$.
+\item Entre as $100$ pessoas sadias, 85 resultados foram negativos, logo $P(\overline{B}|\overline{A})=0,85$.
+\item $0{,}95$ e $0{,}85$, respectivamente, conforme os itens \titem{c)} e \titem{d)}.
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Produção de peças}
+{
+Aplicar a definição de probabilidade condicional para reconhecer eventos independentes e eventos dependentes.
+}{1}{2}
+\end{objectives}
+\begin{answer}{Produção de peças}
+{
+Defina os eventos $A$: “peça produzida pela máquina $I”$ e $B$: “peça defeituosa”. Observe que os respectivos eventos complementares são $\overline{A}$: “peça produzida pela máquina $II$”, pois são apenas duas máquinas e $\overline{B}$: “peça boa”, pois são apenas duas classificações das peças (boas ou defituosas).
+
+Se os eventos são independentes, deve-se ter $P(B|A)=P(B)$, por exemplo. Tem-se que $P(A)=\frac{200}{200+600}=0{,}25$, $P(B)=\frac{20}{800}=0{,}025$ e $P(B|A)=P(A\cap B)P(A)=\frac{5/800}{200/800}=\frac{1}{40}=0{,}025$. Logo, conlui-se que a produção de defeituosas é independente do tipo de máquina, pois $P(B|A)=P(B)$.
+
+Observe que tanto faz a escolha dos eventos máquina $I$ ou máquina $II$ e peça defeituosa ou peça boa. Por exemplo,
+
+$P(\overline{A})=\frac{3}{4}=0{,}75, P(B)=\frac{20}{800}=0{,}025$ e $P(\overline{B})=0{,}975$. Além disso, $P(\overline|B)=0{,}75=P(\overline{A}), P(A|\overline{B})=0{,}25=P(A), P(\overline{A}|\overline{B})=0{,}75=P(\overline{A})$.
+
+De fato, essa propriedade não é um caso específico desse problema e ela é explorada na próxima atividade.
+}{1}
+\end{answer}
+\begin{objectives}{Independência e complementariedade}
+{
+Aplicar o conceito de independência entre dois eventos para entender que o respectivos eventos complementares herdam essa a condição de eventos independentes.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Independência e complementariedade}
+{
+Essa atividade é um exercício teórico de dedução muito simples que revela uma propriedade importante entre eventos independentes: dada uma coleção de eventos independentes, se para alguns eventos (ou todos) considerarmos os seus complementares em vez do próprio, a coleção continua independente. Com fins de simplificação e não tornar o processo complicado, consideraremos nesta atividade apenas o caso para dois eventos independentes. Mas, de fato, o resultado vale para quaisquer coleções de eventos independentes.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Independência e complementariedade}
+{
+\begin{enumerate}
+\item Por hipótese temos que $P(A\cap B)=P(A)\cdot P(B)$, pois $A$ e $B$ são independentes. Queremos provar que $\overline{A}$ e $\overline{B}$ também são independentes, ou equivalentemente, que $P(\overline{A}\cap \overline{B})=P(\overline{A})\cdot P(\overline{B})$.
+Pelas Leis de De Morgan trabalhadas em atividade anterior, sabemos que $\overline{A}\cap \overline{B}=(\overline{A\cup B})$. Portanto, usando a propriedade do evento complementar, podemos escrever $P(\overline{A}\cap \overline{B})=1−P(A\cup B)$.
+
+Mas, 
+\begin{equation*}
+P(A\cup B)=P(A)+P(B)-P(A\cap B)=P(A)+P(B)-P(A)\cdot P(B)
+\end{equation*}
+ela independência entre $A$ e $B$. Assim,
+\begin{align*}
+P(\overline{A}\cap \overline{B})&=1-P(A)-P(B)+P(A)\cdot P(B)\\ 
+&=1-P(A)-P(B)\cdot(1−P(A))\\
+&=(1−P(A))\cdot(1-P(B))\\
+&=P(\overline{A})\cdot P(\overline{B})
+\end{align*}.
+Portanto, se $A$ e $B$ são independentes, então $\overline{A}$ e $\overline{B}$ também são independentes.
+
+\item Por hipótese temos que $P(A\cap B)=P(A)\cdot P(B)$, pois $A$ e $B$ são independentes. Queremos provar que $A$ e $\overline{B}$ também são independentes, ou equivalentemente, que $P(A\cap \overline{B})=P(A)\cdot P(\overline{B})$. Observe que podemos escrever $A=(A\cap B)\cup (A\cap\overline{B})$ com os dois eventos do lado direito sendo disjuntos. Assim, $P(A)=P(A\cap B)+P(A\cap \overline{B})$ implicando que $P(A\cap \overline{B})=P(A)-P(A\cap B)=P(A)-P(A)\cdot P(B)$ pela independedência de $A$ e $B$. Logo, $P(A\cap \overline{B})=P(A)\cdot(1−P(B))=P(A)\cdot P(\overline{B})$ e, portanto, se $A$ e $B$ são independentes, então $A$ e $\overline{B}$ também são.
+\item Idem ao item anterior, bastando trocar de posição as letras $A$ e $B$.
+\end{enumerate}
+}{0}
+\end{answer}
+\begin{objectives}{Escolha da chave correta}
+{
+Estender a regra da multiplicação para o caso de mais de dois eventos.
+}{1}{1}
+\end{objectives}
+\begin{answer}{Escolha da chave correta}
+{
+\begin{enumerate}
+\item Sejam os eventos $A_i$: “o cadeado é aberto na $i$-ésima tentativa”, $i=1,2,3$. Queremos calcular $P(\overline{A_1}\cap \overline{A_2}\cap A_3)$ , pois por hipótese o cadeado não foi aberto nem na primeira nem na segunda tentetiva.
+
+$P(\overline{A_1}∩\overline{A_2}\cap A_3)=P(\overline{A_1})\cdot P(\overline{A_2}|\overline{A_1})\cdot P(A_3|\overline{A_1}\cap \overline{A_2})=\frac{4}{5}\cdot\frac{4}{5}\cdot\frac{1}{5}=\frac{16}{125}=0{,}128$. Essa solução pode ser visualizada por meio do diagrama de árvore, ilustrado na figura a seguir.
+\begin{figure}[H]
+\centering
+
+\resizebox{.95\linewidth}{!}
+{
+\begin{tikzpicture}[every node/.style={scale=3}]
+\draw (0,0) -- (30:3) node [right, scale=0.28] {$A_1$} node [above, midway, rotate=30, scale=0.28] {1/5};
+\draw (0,0) -- (-30:3) node [right, scale=0.28] {$\overline{A_1}$} node [below, midway, rotate=-30, scale=0.28] {4/5};
+
+\draw [->] (3.159807,1.5) -- ++(0:0.7) node [right, scale=0.28] {Abre na Primeira $\quad P(A_1) = \dfrac{1}{5}$} ;
+
+\draw (3.159807,-1.5) -- ++(30:3) node [right, scale=0.28] {$A_2$} node [above, midway, rotate=20, scale=0.28] {1/5};
+\draw (3.159807,-1.5) -- ++(-30:3) node [right, scale=0.28] {$\overline{A_2}$} node [below, midway, rotate=-20, scale=0.28] {1/5};
+
+\draw [->] (6.319614,0) -- ++(0:0.7) node [right, scale=0.28] {Abre na Segunda $\quad P(A_1 \cap A_2) = \dfrac{4}{5} \cdot \dfrac{1}{5}$} ;
+
+
+\draw (6.319614,-3) -- ++(30:3) node [right, scale=0.28] {$A_3$} node [above, midway, rotate=20, scale=0.28] {1/5};
+\draw (6.319614,-3) -- ++(-30:3) node [right, scale=0.28] {$\overline{A_3}$} node [below, midway, rotate=-20, scale=0.28] {1/5};
+
+\draw [->, align=left] (9.479421,-1.5) -- ++(0:0.28) node [ right, scale=0.28] {Abre na Segunda \\ $P(A_1 \cap A_2 \cap A_3) = \dfrac{4}{5} \cdot \dfrac{4}{5} \cdot \dfrac{1}{5}$} ;
+
+\end{tikzpicture}
+}
+\item 
+\end{figure}
+\item Considerando agora o caso sem reposição tem-se
+$P(\overline{A_1}\cap \overline{A_2}\cap A_3)=P(\overline{A_1})\cdot P(\overline{A_2}|\overline{A_1})\cdot P(A_3|\overline{A_1}\cap\overline{A_2})=\frac{4}{5}\cdot\frac{3}{4}\cdot\frac{1}{3}=\frac{1}{5}=0{,}2$. Essa solução pode ser visualizada por meio do diagrama de árvore, ilustrado na figura a seguir.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[every node/.style={scale=3}]
+
+\draw (0,0) -- (30:3) node [right, scale=0.28] {$A_1$} node [above, midway, rotate=30, scale=0.28] {1/5};
+\draw (0,0) -- (-30:3) node [right, scale=0.28] {$\overline{A_1}$} node [below, midway, rotate=-30, scale=0.28] {4/5};
+
+\draw [->] (3.159807,1.5) -- ++(0:0.7) node [right,  scale=0.28] {Abre na Primeira $\quad P(A_1) = \dfrac{1}{5}$} ;
+
+\draw (3.159807,-1.5) -- ++(30:3) node [right, scale=0.28] {$A_2$} node [above, midway, rotate=20, scale=0.28] {1/4};
+\draw (3.159807,-1.5) -- ++(-30:3) node [right, scale=0.28] {$\overline{A_2}$} node [below, midway, rotate=-20, scale=0.28] {3/4};
+
+\draw [->] (6.319614,0) -- ++(0:0.7) node [right, scale=0.28] {Abre na Segunda $\quad P(A_1 \cap A_2) = \dfrac{4}{5} \cdot \dfrac{3}{4}$} ;
+
+
+\draw (6.319614,-3) -- ++(30:3) node [right, scale=0.28] {$A_3$} node [above, midway, rotate=20, scale=0.28] {1/3};
+\draw (6.319614,-3) -- ++(-30:3) node [right, scale=0.28] {$\overline{A_3}$} node [below, midway, rotate=-20, scale=0.28] {2/3};
+
+\draw [->, align=left] (9.479421,-1.5) -- ++(0:0.7) node [ right, scale=0.28] {Abre na Segunda \\ $P(A_1 \cap A_2 \cap A_3) = \dfrac{4}{5} \cdot \dfrac{3}{4} \cdot \dfrac{1}{3}$} ;
+\end{tikzpicture}
+\end{figure}
+\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Probabilidade totalProbabilidade total}
+{
+Aplicar a definição de probabilidade condicional e propriedades da probabilidade para resolver um problema cuja solução faz uso do teorema de Bayes.
+
+
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Probabilidade total}
+{
+Com o material apresentado até aqui é possível resolver problemas cuja solução faz uso do teorema de Bayes. No entanto, optou-se nesse livro, a não apresentar a fórmula do teorema de Bayes, que só traz dificuldade para o aluno e, no entanto, é muito simples de ser deduzida na prática.
+
+Teorema de Bayes: Sejam $A_1,A_2,\cdot,A_n$ eventos tais que $A_1\cup A_2\cup\cdots\cup A_n=S$ que são dois a dois disjuntos, ou seja, $A_i\cap A_j=\emptyset$ sempre que $i,j\in\{1,2,3,\cdots,n\}$ com $i\neq j$. Seja $B\subset S$. Então,
+\begin{equation*}
+P(A_k|B)=\dfrac{P(A_k)\cdot P(B|A_k)}{\displaystyle\sum^n_{i=1}P(A_i)\cdot P(B|A_i)}, k=1,2,...,n.
+\end{equation*}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Probabilidade total}
+{
+\begin{enumerate}
+\item Defina os seguintes eventos:
+\begin{itemize}
+\item $A_1$: "bloco I é sorteaco",
+\item $A_2$: "bloco II é sorteado" e
+\item $A_3$: "bloco III é sorteado".
+\end{itemize}
+Defina també o evento 
+\begin{itemize}
+\item B: "um menor de até 12 anos é sorteado". Observe que os eventos $A_1,A_2$ e $A_3$ são disjuntos e que um menor sorteado pode ser de um, e somente um, dos três blocos. Logo, podemos escrever
+\begin{equation*}
+B=(A_1\cap B)\cup(A_2\cap B)\cup(A_3\cap B).
+\end{equation*}
+Como os eventos do lado direito da equação acima são disjuntos, tem-se\begin{equation*}
+P(B)=(A_1\cap B)+P(A_2\cap B)+P(A_3\cap B)
+\end{equation*}
+Usando-se a regra da multiplicação, tem-se
+\begin{align*}
+P(B)&=P(A_1)\cdot P(B|A_1)+P(A_2)\cdot P(B|A_2)+P(A_3)\cdot P(B|A_3)\\
+&=\frac{1}{3}+\frac{27}{180}+\frac{1}{3}\cdot\frac{36}{200}+\frac{1}{3}\cdot\frac{24}{100}\\
+&=\frac{1}{20}+\frac{3}{50}+\frac{1}{15}\\
+&=\frac{15+18+20}{300}\\
+&=\frac{53}{300}\approx0{,}177.
+\end{align*}
+
+Nesse item, deseja-se calcular a probabilidade condicional de ter ocorrido o evento $A_2$, dado que ocorreu o evento $B$, ou seja, $P(A_2|B)$. Usando a definição de probabilidade condicional tem-se
+\begin{align*}
+P(A_2|B)&=\frac{P(A_2\cap B)}{P(B)}\\
+&=\frac{P(A_2)\cdot P(B|A_2)}{53/300}\\
+&=\frac{3}{50}\cdot\frac{300}{53}\\
+&=\frac{18}{53}\approx0{,}34.
+\end{align*}
+\end{itemize}
+\end{enumerate}
+}{0}
+\end{answer}
 
 \practice{ Probabilidade Condicional}
 \begin{task}{desempenho de exames diagnósticos}
@@ -1758,14 +2656,14 @@ Defeituosas
 Boas
 \\
 \hline
-I
+$I$
 &
 5
 &
 195
 \\
 \hline
-II
+$II$
 &
 15
 &
@@ -1797,7 +2695,7 @@ Sejam \(A\) e \(B\) dois eventos independentes.  Mostre que os pares de eventos 
 \end{task}
 
 \begin{task}{escolha da chave correta}
-
+Numa caixa há 5 chaves das quais apenas uma abre um cadeado.
 
 \begin{figure}[H]
 \centering
@@ -1863,7 +2761,7 @@ A função \textit{=ALEATÓRIOENTRE(1;N)} do LibreOffice, com \(N\) um número n
 
 Para simular os 20 números, basta digitar na célula A1 \textit{=aleatórioentre(1;2)} e apertar a tecla \textit{Enter}. Depois, posicione o cursor no canto esquerdo inferior da célula e arraste para baixo até a linha 20. Os 20 números gerados neste exemplo estão na coluna A da planilha. É possível gerar rapidamente, muito mais do que apenas 20 números.
 
-Essa função, \textit{aleatórioentre(1;2)} pode ser usada para simular o lançamento de uma moeda honesta, associando, por exemplo, o número 1 para a ocorrência de “cara” e, o número 2 para a ocorrência de  “coroa”, pois o modelo probabilístico da função \textit{=aleatórioentre(1;2)} é tal que os dois números são gerados com probabilidades iguais. Assim, espera-se, em média, que as quantidades de números 1 (1’s) e de números 2 (2’s) sejam aproximadamente iguais.
+Essa função, \textit{aleatórioentre(1;2)} pode ser usada para simular o lançamento de uma moeda honesta, associando, por exemplo, o número 1 para a ocorrência de “cara”{} e, o número 2 para a ocorrência de  “coroa”, pois o modelo probabilístico da função \textit{=aleatórioentre(1;2)} é tal que os dois números são gerados com probabilidades iguais. Assim, espera-se, em média, que as quantidades de números 1 (1’s) e de números 2 (2’s) sejam aproximadamente iguais.
 
 Como fazer para obter de forma rápida essas quantidades, sem ter que contar um a um?
 
@@ -1907,6 +2805,159 @@ A quantidade de 1’s na coluna A das linhas 1 a 20 é dada por \textit{=ContarS
 
 
 Observe que na simulação realizada com o GeoGebra também foram obtidos doze números 1 (caras) e oito (8) números 2 (coroas). De fato, trata-se de mera coincidência, pois espera-se que, em média sejam produzidos a cada simulação, 10 caras.
+\clearmargin
+\begin{objectives}{Simulação do lançamento de uma moeda honesta}
+{
+Aplicar o modelo probabilístico equiprovável e usar tecnologia para realizar simulações de um fenômeno aleatório.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Simulação do lançamento de uma moeda honesta}
+{
+Essa atividade demanda o uso de tenologia. Sugere-se realizá-la em laboratório de informática. Sugere-se também que os alunos trabalhem em pequenos grupos de dois ou três alunos para cada computador disponível. As atividades poderão ser adaptadas de acordo com o conhecimento prévio dos estudantes. Nesssa atividade poderá ser usado o exemplo dado anteriormente, atribuindo um dos dois números para “cara”{} e, o outro, para “coroa”.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Simulação do lançamento de uma moeda honesta}
+{
+\begin{enumerate}
+\item Você pode realizar a simulação usando a planilha do Geogebra e a função \textit{=NúmeroAleatório(1,2)} que irá gerar com probabilidades iguais ou o número $1$ ou o número $2$. Escolha um dos números para representar a ocorrência de cara e, o outro, para a ocorrência de coroa. Depois, arraste, copiando esta função para mais $19$ células, obtendo as $20$ simulações. Veja exemplo no início dessa seção. No GeoGebra ocorreram doze $1$’s (caras) e oito $2$’s (coroas) tal que a frequência relativa de caras observadas nessas 20 simulações foi $\frac{12}{20}=0{,}6$. É claro que as respostas irão variar, dependendo da simulação. Mas, espera-se que o número de $1$’s (caras) obtidos oscile em torno de $10$, pois a função produz os dois números com probabilidades iguais e geramos $20$ números.
+
+\item Idem ao item anterior, só que agora os números de células a serem considerados na planilha são $50$, $100$, $250$ e $1000$, respectivamente.
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Simulação do lançamento de uma moeda honesta}
+{
+\begin{enumerate}\setcounter{enumi}{2}
+\item No preenchimento da tabela você deverá perceber que a medida que o número de simulações é maior, a frequência relativa de caras se aproxima da probabilidade teórica de obter uma cara $(0{,}5)$. Se de fato o gerador de números aleatórios do programa que você está usando é bom, esse é o resultado esperado. Por exemplo, em uma simulação com o Geogebra foram observadas as seguintes frequências relativas de caras conforme o número de lançamentos:
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|f|f|}
+\hline
+$\tcolor{Número de Observações}$ & $\tcolor{Frequência relativa de 6}$ \\
+\hline
+20 & 0{,}45 \\
+\hline
+50 & 0{,}58 \\
+\hline
+100 & 0{,}51 \\
+\hline
+250 & 0{,}52 \\
+\hline
+1000 & 0{,}49 \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{objectives}{Simulação de um dado honesto}
+{
+Aplicar o modelo probabilístico equiprovável e usar tecnologia para realizar simulações de um fenômeno aleatório.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Simulação de um dado honesto}
+{
+Essa atividade demanda o uso de tenologia. Sugere-se realizá-la em laboratório de informática. Sugere-se também que os alunos trabalhem em pequenos grupos de dois ou três alunos para cada computador disponível. As atividades poderão ser adaptadas de acordo com o conhecimento prévio dos estudantes. Nesssa atividade poderá ser usado exemplo dado anteriormente, gerando-se um número aleatório entre $1$ e $6$ e, depois, contando as quantidades obtidas de cada face.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Simulação de um dado honesto}
+{
+\begin{enumerate}
+\item Você pode realizar a simulação usando a planilha do GeoGebra e a função \textit{=NúmeroAleatório(1,6)} na célula A1. Essa função retornará, com probabilidades iguais, um entre os números 1,2,3,4,5 e 6. Depois, arraste, copiando esta função para mais 29 células A2 até A30, obtendo as 30 simulações. Veja exemplo no início dessa seção. Depois use a função \textit{=ContarSe(5<x<7,A1:A30)}. É claro que as respostas irão variar, dependendo da simulação. Mas, espera-se que o número de faces “6” obtidas oscile em torno de 5, pois a função gera o número $6$ com probabilidade $\frac{1}{6}$ e assim, em média espera-se obter $30\cdot16=5$ dígitos $6$.
+
+\item Idem ao item anterior, só que agora o número de células a ser considerado na planilha será $60$, $120$, $300$ e $1500$.
+
+\item No preenchimento da tabela você deverá perceber que a medida que o número de simulações é maior, a frequência relativa de faces 6 se aproxima da probabilidade teórica de obter uma face 6 ($\approx0{,}167$). Se de fato o gerador de números aleatórios do programa que você está usando é bom, esse é o resultado esperado. Por exemplo, em uma simulação com o GeoGebra foram observadas as seguintes frequências relativas de faces 6 conforme o número de lançamentos:
+
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|f|f|}
+\hline
+$\tcolor{Número de Observações}$ & $\tcolor{Frequência relativa de 6's}$ \\
+\hline
+30 & 0{,}17 \\
+\hline
+60 & 0{,}18 \\
+\hline
+120 & 0{,}18 \\
+\hline
+300 & 0{,}16 \\
+\hline
+1500 & 0{,}17 \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+}{0}
+\end{answer}
+\clearmargin
+\begin{objectives}{Simulação do lançamento de um dado desequilibrado}
+{
+Aplicar modelo probabilístico não equiprovável e usar tecnologia para realizar simulações de um fenômeno aleatório.
+}{1}{1}
+\end{objectives}
+
+\begin{sugestions}{Simulação do lançamento de um dado desequilibrado}
+{
+Nessa atividade será proposta a simulação de um dado desequilibrado de tal modo que as faces não ocorrem com probabilidades iguais. Inicialmente será necessária uma discussão sobre com os alunos desequilibrados. Em particular, nessa atividade será suposto que a probabilidade da face é proporcional ao número da face. Assim, a primeira pergunta envolverá obter as probabilidades de cada face. Fazendo $P({i})=k\cdot i$ em que $i=1,2,3,4,5,6$ e $k$ é a constante de proporcionalidade, lembre com os alunos a segunda regra básica de que $P(S)=1$ e que $\{1\}\cup\{2\}\cup\cdots\cup\{6\}=S$. Além disso, como os eventos elementares são disjuntos segue que $1=P(\{1\})+P(\{2\})+\cdots+P(\{6\})=k+2k+3k+4k+5k+6k=21k$ tal que $k=121$. Depois dessa dedução será necessária uma discussão sobre como usar o gerador de números aleatórios para simular os resultados desse dado, para finalmente realizar a simulação de um número aleatório entre $1$ e $21$ e atribuido o $1$ à face $1$, depois o $2$ e o $3$ à face $2$, o $4$, o $5$ e o $6$ à face $3$, o $7$, o $8$, o $9$ e o $10$ à face $4$, o $11$, o $12$, o $13$, o $14$ e o $15$ à face $5$ e, finalmente, o $16$, o $17$, o $18$, o $19$, o $20$ e o $21$ à face $6$. Leve o aluno a observar que desse modo estaremos respeitando as probabilidades desiguais, a saber, $1/21$ para a face $1$, $2/21$ para a face $2,..., 6/21$ para a face $6$.
+}{0}{1}
+\end{sugestions}
+\begin{answer}{Simulação do lançamento de um dado desequilibrado}
+{
+\begin{enumerate}
+\item Você pode realizar a simulação usando a planilha do Geogebra e a função \textit{=NúmeroAleatório(1,21)} na célula A1. Essa função retornará, com probabilidades iguais, um entre os números 1,2,3,4,5, …,21. Depois, arraste, copiando esta função para mais 41 células A2 até A42, obtendo as 42 simulações. Observe que nesse caso, você deverá usar apenas um número para atribuir à ocorrência da face 1, dois números para a face 2, e assim por diante, com seis números para a face 6. Se consideraros os seis últimos, a saber, $21$, $20$, $19$, $18$, $17$ e $16$, use a função \textit{=ContarSe(15<x<22,A1:A42)}, para obter a quantidade de faces 6 obtidas nos $42$ lançamentos. É claro que as respostas irão variar de um para outro. Mas, espera-se que o número de faces $“6”$ obtidas oscile em torno de $12$, pois a probabilidade de gerar uma face $“6”$ com esse procedimento é $\frac{6}{21}\approx0{,}286$ e estamos simulando $42$ lançamentos.
+
+\item Idem ao item anterior, só que agora o número de células a ser considerado na planilha será $210$, $630$, $840$ e $160$.
+
+\item No preenchimento da tabela você deverá perceber que a medida que o número de simulações é maior, a frequência relativa de faces $6$ se aproxima da probabilidade teórica de obter uma face $6$ ($\approx0,286$). Se de fato o gerador de números aleatórios do programa que você está usando é bom, esse é o resultado esperado. Por exemplo, em uma simulação com o GeoGebra foram obserdas as seguintes frequências relativas de faces 6 conforme o número de lançamentos:
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|f|f|}
+\hline
+$\tcolor{Número de Observações}$ & $\tcolor{Frequência relativa de 6}$ \\
+\hline
+42 & 0{,}29 \\
+\hline
+84 & 0{,}31 \\
+\hline 
+210 & 0{,}30 \\
+\hline
+630 & 0{,}28 \\
+\hline
+840 & 0{,}29 \\
+\hline
+1680 & 0{,}29 \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+}{0}
+\end{answer}
+\begin{objectives}{Simulação do lançamento de um dado diferente}
+{
+Aplicar modelo probabilístico e usar tecnologia para realizar simulações de um fenômeno aleatório.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Simulação do lançamento de um dado diferente}
+{
+Nessa atividade será proposta a simulação de um dado diferente. Apesar das faces ocorrerem com probabilidades iguais, esse dados tem registrado em suas faces o número 1 em uma delas, o núermo 2 em duas delas e o número 3 em três delas. Discuta com seus alunos como adaptar a função de geração de números aleatórios para simular resultados de lançamentos desse dado. É fácil perceber, da atividade anterior que a probabilidade de 3 é 3/6, de 2 é 2/6 e, de 1, 1/6
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Simulação do lançamento de um dado diferente}
+{
+\begin{enumerate}
+\item A probabilidade de obter face 1 é dada por 16, de obter face 2 é dada por 26 e, de obter face 3 é dada por 36, pois o dado é equilibrado, mas há uma face 1, duas faces 2 e três faces 3.
+Você pode realizar a simulação usando a planilha do Geogebra e a função =NúmeroAleatório(1,6) na célula A1. Essa função retornará, com probabilidades iguais, um entre os números 1,2,3,4,5,6. Depois, arraste, copiando esta função para mais 29 células A2 até A30, obtendo as 30 simulações. Observe que nesse caso, você deverá atribuir apenas um número para a ocorrência da face 1, dois números para a face 2 e três números para a face 3. Se considerarmos os números 2 e 3 para a ocorrência de face 2, use a função =ContarSe(1<x<4,A1:A30). É claro que as respostas irão variar, dependendo da simulação. Mas, espera-se que o número de faces “2” obtidas oscile em torno de 10, pois a probabilidade de obter uma face “2” é 2/6 e estamos simulando 30 lançamentos.
+
+\item Idem ao item anterior, só que agora o número de células a ser considerado na planilha será 300, 600, 900 e 1800.
+
+\item No preenchimento da tabela você deverá perceber que a medida que o número de simulações é maior, a frequência relativa de faces 2 se aproxima da probabilidade teórica de obter uma face 2 (≈0,333). Se de fato o gerador de números aleatórios do programa que você está usando é bom, esse é o resultado esperado. Por exemplo, em uma simulação com o GeoGebra foram observadas as seguintes frequências relativas de faces 2 conforme o número de lançamentos
+\end{enumerate}
+}{0}
+\end{answer}
 
 \begin{example}{experimento cujo espaço amostral é equiprovável.}
 
@@ -1943,6 +2994,7 @@ Usando o GeoGebra ou algum outro recurso tecnológico, simule 20 lançamentos da
 \item {} 
 Repita a simulação para 50, 100, 250 e 1000 lançamentos da moeda.
 
+\clearpage
 \item {} 
 Complete o quadro a seguir e comente sobre os resultados obtidos.
 
@@ -1973,7 +3025,7 @@ Número de Observações & Frequência relativa de caras \\
 \begin{task}{simulação do lançamento de um dado honesto}
 
 
-Deseja-se simular o lançamento de um dado honesto uma grande quantidade de vezes e comparar a frequência relativa de faces “6” com a probabilidade teórica \(\frac{1}{6}\approx 0,167\) de obter uma face “6” quando o dado é honesto.
+Deseja-se simular o lançamento de um dado honesto uma grande quantidade de vezes e comparar a frequência relativa de faces “6”{} com a probabilidade teórica \(\frac{1}{6}\approx 0,167\) de obter uma face “6”{} quando o dado é honesto.
 
 \begin{figure}[H]
 \centering
@@ -1982,7 +3034,7 @@ Deseja-se simular o lançamento de um dado honesto uma grande quantidade de veze
 \end{figure}
 \begin{enumerate}
 \item {} 
-Usando o GeoGebra ou algum outro recurso tecnológico, simule 30 lançamentos do dado e observe a quantidade de faces “6” obtidas, calculando a frequência relativa.
+Usando o GeoGebra ou algum outro recurso tecnológico, simule 30 lançamentos do dado e observe a quantidade de faces “6”{} obtidas, calculando a frequência relativa.
 
 \item {} 
 Repita a simulação para 60, 120, 300 e 1500 lançamentos do dado.
@@ -2012,7 +3064,7 @@ Número de Observações & Frequência relativa de 6 \\
 \end{tabu}
 \end{table}
 \end{task}
-
+\clearpage
 \begin{task}{simulação do lançamento de um dado desequilibrado}
 
 
@@ -2133,7 +3185,7 @@ Na cela B4 usaremos a função \textit{=ContarSe(5\textless{}x\textless{}7,A1:A4
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=370bp]{{GeoGebra_e2}.png}
+\noindent\includegraphics[width=325bp]{{GeoGebra_e2}.png}
 \caption{Contagem do número de faces 6 obtidas, usando o GeoGebra}
 \label{geogebra2}
 \end{figure}
@@ -2144,7 +3196,7 @@ Depois, marque as células A1:B4 e arraste-as até a linha 400, de modo a repeti
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=370bp]{{GeoGebra_e3_1}.png}
+\noindent\includegraphics[width=330bp]{{GeoGebra_e3_1}.png}
 
 \caption{Simulação de 100 experimentos (lançar um dado 4 vezes), usando o GeoGebra}
 \end{figure}
@@ -2155,7 +3207,7 @@ Vamos então usar a função \textit{ContarSe(-1\textless{}x\textless{}1,B1:B400
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{GeoGebra_e4_1}.png}
+\noindent\includegraphics[width=\linewidth]{{GeoGebra_e4_1}.png}
 
 \caption{Contagem do número de ocorrências do evento “nenhuma face 6”}
 \end{figure}
@@ -2168,7 +3220,7 @@ Duplicando o número de repetições do experimento, espera-se obter uma estimat
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{GeoGebra_e5}.png}
+\noindent\includegraphics[width=\linewidth]{{GeoGebra_e5}.png}
 
 \caption{Simulação de 200 experimentos (lançar um dado 4 vezes), usando o GeoGebra}
 \label{geogebra5}
@@ -2176,8 +3228,368 @@ Duplicando o número de repetições do experimento, espera-se obter uma estimat
 
 \end{example}
 
+\clearpage
+\def\currentcolor{cor1}
+
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}
+\item A sentença \textit{c)} é a única correta. Se a probabilidade de ocorrer um terremoto nos próximos $20$ anos é $\frac{2}{3}$, então a probabilidade de não ocorrer um terremoto nos próximos $20$ anos é $1-\frac{2}{3}=\frac{1}{3}$ (regra do evento complementar) tal que é duas vezes mais provável ele ocorrer do que não ocorrer nos próximos $20$ anos. A alternativa \textit{d)} não faz sentido, pois considera a fração $\frac{2}{3}$ de $20$ anos, quando a interpretação correta da probabilidade é a de que se pudessemos observar 60 períodos similares de $20$ anos na cidade de Zed, em cerca de 40 desses perídos haveria um terremoto. A alternativa \textit{b)} também está errada, pois uma medida de probabilidade maior que zero e menor que $1$ não nos fornece “certeza”. A alternativa \textit{d)} també está incorrreta, pois sabe-se que há maior chance de ocorrer um terremoto do que não ocorrer, apesar de não sermos capazes de afirtmar se ele irá ocorrer ou não e quando ele irá ocorrer.
+
+\item A alternativa que melhor corresponde à afirmação é \textit{d)}. A probabilidade indica uma taxa de ocorrência do evento, caso ele seja repetido um grande número de vezes. Assim, se observarmos $100$ dias similares, em cerca de $30$ desses dias irá chover. Observe que esse número de fato pode não ser exatamente $30$, apenas espera-se que ele seja próximo de $30$. Lembre-se que se você lançar uma moeda honesta $20$ vezes, não necessariamente irá observar $10$ caras, mesmo sabendo que a probabilidade de ocorrer cara em cada lançamento é $50\%$.
+
+\item Se a probabilidade de um casal com três filhos ter duas meninas é $\frac{3}{8}$,
+\begin{enumerate}
+\item espera-se que entre $160$ casais com três filhos cerca de $160\cdot\frac{3}{8}=60$ casais tenham duas meninas.
+
+\item espera-se que entre $400$ casais com três filhos cerca de $400\cdot\frac{3}{8}=150$ casais tenham duas meninas.
+
+\item Não, pois espera-se que entre $80$ casais com três filhos cerca de $80\cdot\frac{3}{8}=30$ casais tenham duas meninas, podendo ocorrer um número de casais dferente de $30$.
+\end{enumerate}
+\item As interpretações mais adequadas são
+
+\begin{enumerate}
+\item clássica, pois sendo o dado honesto atribuem-se probabiliades iguais para cada uma das $6$ faces possíveis, a saber, $\frac{1}{6}$.
+\item frequentista. Nesse caso, a partir da observação de um grande número de tempos de espera, o gerente poderá usar a frequência relativa de ocorrência dos tempos de espera de mais de 30 minutos como a probabilidade do evento “esperar mais de $30$ inutos para ser atendido”.
+\item subjetiva.
+\end{enumerate}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+
+%Pagina 2
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{4}
+\item Observe que os eventos complementares são $\overline{A}$: “ser do turno da tarde” e $\overline{B}$: “não pratica atividade física fora do horário escolar”. Descrições
+
+\begin{enumerate}
+\item Ocorre pelo menos um dos eventos entre “ser do turno da manhã” ou “praticar atividade física fora do horário escolar”, podendo ocorrer apenas um dos dois ou os dois simultaneamente.
+\item Ocorrem os dois eventos “ser do turno da manhã” e “praticar atividade física fora do horário escolar” simultaneamente.
+\item Ocorrem os dois eventos “ser do turno da tarde” e “não praticar atividade física fora do horário escolar” simultaneamente.
+\item Observe que pelas Leis de De Morgan $\overline{A\cap B}=\overline{A}\cup \overline{B}$ tal que uma descrição para esse evento é Ocorre pelo menos um dos eventos entre “ser do turno da tarde” ou “não praticar atividade física fora do horário escolar”, podendo ocorrer apenas um dos dois ou os dois simultaneamente.
+\end{enumerate}
+
+\item Sejam os eventos $A$: “ter 15 anos”; $B$: “ter 16 anos” e $C$: “ter 17 anos”. Como só há essas três idades, segue que $S=A\cup B\cup C$ e como $A$, $B$ e $C$ são disjuntos, tem-se $1=P(S)=P(A)+P(B)+P(C)$. Sabe-se que $P(A)=0{,}3$ e $P(C)=0{,}2$, logo $P(B)=1-0{,}3-0{,}2=0{,}5$.
+\begin{enumerate}
+\item $P(C)=0{,}2$.
+\item $P(B)=0{,}5$.
+\item $P(S)=1$.
+\item Como $A$ e $B$ são disjuntos, tem-se $P(A\cup B)=P(A)+P(B)=0{,}3+0{,}5=0{,}8$.
+\end{enumerate}
+\item Definindo o evento $R$: “ter Rh+” tal que $\overline{R}$: “ter Rh-” e usando os símbolos do tipo de sangue, tem-se
+\begin{enumerate}[wide]
+\item Como $P(R)=0{,}75$, segue que o número esperado de pessoas com fator Rh+ é $1.000.000\cdot 0{,}75=750.000$
+\item Como $P(A)=0{,}30$, segue que o número esperado de pessoas sangue tipo A é $300$ mil.
+\item Como $P(AB\cap R)=0{,}16$, o número esperado de pessoas com tipo AB é 160 mil.
+\item Como $P(\overline{O})=1-0{,}40=0{,}60$, o número esperado de pessoas que não têm tipo O é $600$ mil.
+\item Como $P(\overline{O}|R)=\frac{0{,}75-0{,}32}{0{,}75}\approx0{,}57$, o número de esperado de pessoas com fator Rh+ que têm sangue tipo O é $0{,}57\cdot750.000=427.500$.
+\item Como $P(\overline{O}|\overline{R})=0{,}25-0{,}080{,}25=0{,}68$, o número esperado de pessoas que não têm sangue tipo O entre as pessoas com fator Rh− é $0{,}68\cdot250.000=170.000$.
+\end{enumerate}
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+
+%Pagina 3
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{7}
+\item Opção correta: \textit{c)}
+
+Defina os eventos $U1$ e $U2$ para suco de uva na primeira seleção e suco de uva na segunda seleção. Similarmente, defina os eventos $L1$ e $L2$ e $P1$ e $P2$ para os sabores laranja e pêssego, respectivamente. Deseja-se calcular a probabilidade de que os dois sucos selecionados sejam do mesmo sabor, $P\big[(U1\cap U2)\cup (L1\cap L2)\cup (P1\cap P2)\big]=P(U1\cap U2)+P(L1\cap L2)+P(P1\cap P2)$, pois os eventos são disjuntos. Usando a regra da multiplicação tem-se que $P(U1\cap U2)=P(U1)\cdot P(U2|U1)=412\cdot 311=111$. Como as quantidades de sucos dos tr~es sabores são iguais, segue que a resposta é $3\cdot 111=311\approx0{,}273=27{,}3$.
+
+Essa solução é facilmente visualisada, usando-se o diagrama de árvore ilustrado na \hyperref[arvore-suco]{figura \ref{arvore-suco}}.
+
+\notas{\begin{figure}[H]
+\centering
+
+\resizebox{.85\linewidth}{!}
+{
+\begin{tikzpicture}[scale=.5]
+\draw (0,0) -- (45:3) node [right, scale=0.3 ] {Uva} node [midway, above, scale=0.3, rotate=45] {4/12};
+\draw (0,0) -- (-45:3) node [right, scale=0.3] {Pêssego} node [midway, below, scale=0.3, rotate=-45] {4/12};
+\draw (0,0) -- (2.12132,0) node [right, scale = 0.3] {Laranja} node [midway, above, scale=0.3] {4/12};
+
+\draw (3.12132,2.12132) -- ++(20:2) node [right, scale=0.3 ] {Uva} node [near end, above, scale=0.2, rotate=20] {3/11};
+\draw (3.12132,2.12132) -- ++(0:1.8793) node [right, scale = 0.3]  {Laranja} node [near end, above, scale=0.2] {4/11};
+\draw (3.12132,2.12132) -- ++(-20:2) node [right, scale=0.3] {Pêssego} node [near end, below, scale=0.2, rotate=-20] {4/11};
+
+\draw (3.12132,0) -- ++(20:2) node [right, scale=0.3 ] {Uva} node [near end, above, scale=0.2, rotate=20] {4/11};
+\draw (3.12132,0) -- ++(0:1.8793) node [right, scale = 0.3] {Laranja} node [near end, above, scale=0.2] {3/11};
+\draw (3.12132,0) -- ++(-20:2) node [right, scale=0.3] {Pêssego} node [near end, below, scale=0.2, rotate=-20] {4/11};
+
+
+\draw (3.12132,-2.12132) -- ++(20:2) node [right, scale=0.3 ] {Uva} node [near end, above, scale=0.2, rotate=20] {4/11};
+\draw (3.12132,-2.12132) -- ++(0:1.8793) node [right, scale = 0.3] {Laranja}  node [near end, above, scale=0.2] {4/11};
+\draw (3.12132,-2.12132) -- ++(-20:2) node [right, scale=0.3] {Pêssego} node [near end, below, scale=0.2, rotate=-20] {3/11};
+
+\draw [->] (6.250062,0) -- ++(0:2) node [above, midway, align=center,scale=0.3] {sabores\\iguais} node [right, scale=0.5] {$\frac{4}{12} \cdot \frac{3}{11}$};
+
+\draw [->] (6.250062,2.8053) -- ++(0:2) node [above, midway, align=center,scale=0.3] {sabores\\iguais} node [right, scale=0.5] {$\frac{4}{12} \cdot \frac{3}{11}$};
+
+\draw [->] (6.250062,-2.8053) -- ++(0:2) node [above, midway, align=center,scale=0.3] {sabores\\iguais} node [right, scale=0.5] {$\frac{4}{12} \cdot \frac{3}{11}$};
+\end{tikzpicture}
+}
+
+\caption{Solução do exercício 8}
+\label{arvore-suco}
+\end{figure}}
+
+\item Opção correta: \textit{b)}
+
+Basta verificar que dos $1000$ consumidores pesquisados $50+100+200=350$ não pretendem mudar de modelo.
+
+\item Opção correta: \textit{a)}
+
+Primeiro será necessário calcular a probabilidade de um aluno qualquer dessa turma acertar a questão. Temos que $20\%$ dos alunos a acertam com probabilidade $1$, mas $80\%$ chutam, acertando com probabilidade $14$, pois há quatro opções de resposta. Assim, a probabilidade de um aluno dessa turma acertar a questão é dada por $0{,}2\cdot1+0{,}8\cdot\frac{1}{4}=0{,}4$.
+
+Usando o diagrama de árvore na \hyperref[prova-aluno]{figura \ref{prova-aluno}}, podemos escrever para os dois alunos selecionados:
+
+\begin{figure}[H]
+\centering
+
+\resizebox{.95\linewidth}{!}
+{
+\begin{tikzpicture}[scale=0.4, ever node/.style=scale{2}]
+
+         \draw (0,0) -- (30:3) node [right, scale=0.28] {Acerta} node [above, midway, rotate=30, scale=0.28] {0,3};
+         \draw (0,0) -- (-30:3) node [right, scale=0.28] {Erra} node [below, midway, rotate=-30, scale=0.28] {0,7};
+         
+         \draw (4.159807,1.5) -- ++(20:3) node [right, scale=0.28] {Acerta} node [above, midway, rotate=20, scale=0.28] {0,5};
+         \draw (4.159807,1.5) -- ++(-20:3) node [right, scale=0.28] {Erra} node [below, midway, rotate=-20, scale=0.28] {0,5};
+         
+         \draw (4.159807,-1.5) -- ++(20:3) node [right, scale=0.28] {Acerta} node [above, midway, rotate=20, scale=0.28] {0,25};
+         \draw (4.159807,-1.5) -- ++(-20:3) node [right, scale=0.28] {Erra} node [below, midway, rotate=-20, scale=0.28] {0,75};
+         
+         \node [right, scale=0.28] at (5.77888,3.5260) {Aluno 2}; 
+         \node [right, scale=0.28] at (1.27888,3.5260) {Aluno 1}; 
+                     
+         \node [right, scale=0.28] at (8.77888,3.5260) {Situação}; 
+         \node [right, scale=0.28] at (8.77888,2.5260) {Dois Acertos}; 
+         \node [right, scale=0.28] at (8.77888,0.4739) {Um Acerto}; 
+         \node [right, scale=0.28] at (8.77888,-0.4739) {Um Acerto}; 
+         \node [right, scale=0.28] at (8.77888,-2.5260) {Dois Erros}; 
+         
+         \node [right, scale=0.28] at (10.77888,3.5260) {Probabilidade};
+         \node [right, scale=0.28] at (10.77888,2.5260) {$0,4 \cdot 0,4=0,16$}; 
+         \node [right, scale=0.28] at (10.77888,0.4739) {$0,4 \cdot 0,6=0,24$}; 
+         \node [right, scale=0.28] at (10.77888,-0.4739) {$0,6 \cdot 0,4=0,24$}; 
+         \node [right, scale=0.28] at (10.77888,-2.5260) {$0,6 \cdot 0,6=0,36$};
+\end{tikzpicture}
+}
+\caption{Solução do exercício 10}
+\label{prova-aluno}
+\end{figure}
+Logo, a probabilidade de que exatamente um aluno tenha marcado a opção correta é dada por $0{,}24+0{,}24=0{,}48$.
+
+\end{enumerate}
+}{1}
+\end{answer}
+
+%Pagina 4
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{10}
+\item Opção correta: \textit{d)}
+
+No método I, a probabilidade de selecionar um aluno do diurno será dada pela probabilidade de selecionar o turno diurno ($\frac{1}{3}$) vezes a probabilidade de selelcionar um aluno do diurno ($\frac{1}{300}$), ou seja, será dada por $\frac{1}{600}$. Já a probabilidade de selecionar um aluno do noturno será dada por $\frac{1}{2}\cdot\frac{1}{240}=\frac{1}{480}$. Assim, no método I, a probabilidade de selecionar um aluno do noturno é maior do que a probabilidade de selecionar um aluno do diurno. Portanto, as alternativas \textit{a)}, \textit{b)}, \textit{c)} e \textit{d)} são falsas.
+
+No método II, a probabilidade de selecionar um aluno do diurno é dada por $\frac{10}{16}\cdot\frac{1}{30}=\frac{1}{48}=\frac{20}{960}$. Já a probabilidade de selecionar um aluno do noturno é $\frac{6}{16}\cdot\frac{1}{40}=\frac{3}{320}=\frac{9}{960}$. Assim, no método II, a probabilidade de selecionar um aluno do noturno é menor do que a probabilidade de selecionar um aluno do diurno. Portanto, a alternativa \textit{d)} está correta.
+
+\item Opcão correta: \textit{b)}
+
+Para calcular a soma das áreas dos setores circulares na figura dada é necessário conhecer os respectivos ângulos centrais. No entanto, basta conhecer a soma dos ângulos centrais, que pela figura do trapézio implica que ela é $180$ graus tal que os dois setores juntos podem formar a semi-circunferência de raio $10$ km. Logo, a probabilidade é dada por $\frac{10^2\pi/2}{628}\approx\frac{314}{2\cdot628}=0{,}25$.
+
+\item Opção correta: \textit{c)}
+
+Usando o diagrama de árvore ilustrado na \hyperref[chuva-atraso]{figura \ref{chuva-atraso}} tem-se que a probabilidade de atraso é dada por $0{,}15+0{,}175=0{,}325$.\textbf{}
+
+\notas
+{
+\begin{figure}[H]
+\centering
+
+\resizebox{\linewidth}{!}
+{
+\begin{tikzpicture}[scale=0.5]
+         \draw (0,0) -- (30:3) node [right, scale=0.35] {Chove} node [above, midway, rotate=30, scale=0.35] {0,3};
+         \draw (0,0) -- (-30:3) node [right, scale=0.35] {Não Chove} node [below, midway, rotate=-30, scale=0.35] {0,35};
+         
+         \draw (4.159807,1.5) -- ++(20:3) node [right, scale=0.35] {Atrasa} node [above, midway, rotate=20, scale=0.35] {0,5};
+         \draw (4.159807,1.5) -- ++(-20:3) node [right, scale=0.35] {Não Atrasa} node [below, midway, rotate=-20, scale=0.35] {0,5};
+         
+         \draw (4.159807,-1.5) -- ++(20:3) node [right, scale=0.35] {Atrasa} node [above, midway, rotate=20, scale=0.35] {0,25};
+         \draw (4.159807,-1.5) -- ++(-20:3) node [right, scale=0.35] {Não Atrasa} node [below, midway, rotate=-20, scale=0.35] {0,75};
+         
+         \node [right, scale=0.35] at (8.77888,2.5260) {prob.: 0,15}; 
+         \node [right, scale=0.35] at (8.77888,0.4739) {prob.: 0,15}; 
+         \node [right, scale=0.35] at (8.77888,-0.4739) {prob.: 0,175}; 
+         \node [right, scale=0.35] at (8.77888,-2.5260) {prob.: 0,525}; 
+\end{tikzpicture}
+}
+\caption{Solução do exercício 13}
+\label{chuva-atraso}
+\end{figure}
+}
+
+
+Alternativamente, definindo A como o evento se atrasar e C como o evento chover, deseja-se calcular $P(A)$. Mas, $A=(A\cap C)\cup(A\cap\overline{C})$ com os dois eventos do lado esquerdo da igualdade disjuntos. Logo, 
+\begin{align*}
+P(A)&=P(A\cap C)+P(A\cap\overline{C})\\
+&=P(C)\cdot P(A|C)+P(\overline{C})⋅P(A|\overline{C})\\
+&=0{,}3\cdot 0{,}5+0{,}7\cdot 0{,}25\\
+&=0{,}325
+\end{align*}.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+
+%Pagina 5
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{13}
+\item Opção correta: \textit{a)}
+
+Primeiro observe que existem $10$ eventos possíveis que levam a observar apenas um semáforo verde, a saber, pode ser o primeiro ou o segundo, ou o terceiro e assim por diante até o décimo. Em seguida, observe que esses eventos são disjuntos de modo que a probabilidade desejada pode ser calculada pela soma das probabilidades desses $10$ eventos ou, como elas são iguais, pelo produto da probabilidade de apenas a primeira ser verde por $10$. Finalmente, pela independência, observe que qualquer que seja o evento a probabilidade é dada por $\frac{2}{3}\cdot\frac{1}{3}\cdots\frac{1}{3}=\frac{2}{3}\cdot\big(\frac{1}{3}\big)^9=\frac{2}{3^10}$. Assim a probabilidade solicitada é $\frac{10\cdot2}{3^10}$.
+
+\item Opção correta: \textit{c)}
+Observe o diagramma de Venn a seguir com as informações do enunciado. Lembre que $80\%$ de $25\%$ corresponde a $20\%$.
+
+\begin{figure}[H]
+\centering
+
+\resizebox{.4\linewidth}{!}
+{
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=1.25}]
+         \node [scale=0.5] at (7,5.25) {S};
+         \draw [ thick,rounded corners=8pt, -] (0,-0) -- (0,5) -- (8,5) -- (8,0) -- cycle;
+         \node [scale=0.5] at (6.6,4) {Febre};
+         \node [scale=0.5] at (1,4) {Gripe};
+         \draw  (4.5,2.5) circle (2cm);
+         \node [scale=0.5] at (5.75,2.5) {0,08};
+         \node [scale=0.5] at (6.8,0.5) {0,67};
+         \clip [draw]  (3,2.5) circle (2cm) ; 
+         \draw [] (4.5,2.5) circle (2cm);
+         \node [scale=0.5] at (3.75,2.5) {0,20};
+         \node [scale=0.5] at (1.75,2.5) {0,05};
+         \node [scale=0.5] at (6.8,0.5) {909};
+\end{tikzpicture}
+}
+\end{figure}
+
+Logo, a probabilidade de ter tido febre durante o surto é dada por $0{,}20+0{,}08=0{,}28$.
+\begin{equation*}
+P(E|\overline{I})=\frac{P(E\cap \overline{I})}{P(\overline{I})}=\frac{300/1200}{600/1200}=\frac{1}{2}.
+\end{equation*}
+
+\item Opção correta: \textit{a)}
+
+Observe o diagramma de Venn a seguir com as informações do enunciado.
+
+\begin{figure}[H]
+\centering
+
+\resizebox{.4\linewidth}{!}
+{
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=1.25}]
+         \node [scale=0.5] at (7,5.25) {S};
+         \draw [ thick,rounded corners=8pt, -] (0,-0) -- (0,5) -- (8,5) -- (8,0) -- cycle;
+         \node [scale=0.5] at (6.6,4) {Febre};
+         \node [scale=0.5] at (1,4) {Gripe};
+         \draw  (4.5,2.5) circle (2cm);
+         \node [scale=0.5] at (5.75,2.5) {0,08};
+         \node [scale=0.5] at (6.8,0.5) {0,67};
+         \clip [draw]  (3,2.5) circle (2cm) ; 
+         \draw [] (4.5,2.5) circle (2cm);
+         \node [scale=0.5] at (3.75,2.5) {0,20};
+         \node [scale=0.5] at (1.75,2.5) {0,05};
+         \node [scale=0.5] at (6.8,0.5) {909};
+\end{tikzpicture}
+}
+\end{figure}
+
+Logo, a probabilidade de falar espanhol dado que não fala inglês é dada por
+
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+
+%Pagina 6
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{16}
+\item Opção correta: \textit{b)}
+
+Observe que o teste terminará na quinta questão se o segundo erro do candidato ocorrer nessa questão. Portanto, para o primeiro erro haverá quatro eventos possíveis, a saber, na primeira ou na segunda ou na terceira ou na quarta questão. Como esses eventos são disjuntos, a probabilidade desejada será dada pela soma das probabilidades desses $4$ eventos. Observe também que cada um desses eventos, usando a independência entre questões, ocorre com probabilidade, $0{,}2^2\cdot0{,}8^3=0{,}02048$, correspondendo a dois erros e três acertos. Portanto, a resposta é $4\cdot0{,}02048=0,08192$.
+
+
+\item 
+\begin{enumerate}
+\item Para as seleções sem reposição tem-se o seguinte diagrama de árvore
+
+\begin{figure}[H]
+\centering
+
+\resizebox{.5\linewidth}{!}
+{
+\begin{tikzpicture}[scale=0.5]
+         \draw (0,0) -- (30:3) node [right, scale=0.35] {D} node [above, midway, rotate=30, scale=0.35] {5/20};
+         \draw (0,0) -- (-30:3) node [right, scale=0.35] {B} node [below, midway, rotate=-30, scale=0.35] {15/20};
+         
+         \draw (3.159807,1.5) -- ++(20:3) node [right, scale=0.35] {D} node [above, midway, rotate=20, scale=0.35] {4/19};
+         \draw (3.159807,1.5) -- ++(-20:3) node [right, scale=0.35] {B} node [below, midway, rotate=-20, scale=0.35] {15/19};
+         
+         \draw (3.159807,-1.5) -- ++(20:3) node [right, scale=0.35] {D} node [above, midway, rotate=20, scale=0.35] {5/19};
+         \draw (3.159807,-1.5) -- ++(-20:3) node [right, scale=0.35] {B} node [below, midway, rotate=-20, scale=0.35] {14/19};
+
+\end{tikzpicture}
+}
+\end{figure}
+  Assim as respostas são i) $ \frac{2}{38}$ ii) $\frac{21}{38}$ iii) $\frac{5}{20}\cdot\frac{15}{19}+\frac{15}{20}\cdot\frac{5}{19}=\frac{15}{38}$.
+
+
+
+
+
+\item Para as seleções com reposição tem-se o seguinte diagrama de árvore com D o evento "peça defeituosa e B peça não defeituosa".
+
+\begin{figure}[H]
+\centering
+
+\resizebox{.5\linewidth}{!}
+{
+\begin{tikzpicture}[scale=0.5]
+         \draw (0,0) -- (30:3) node [right, scale=0.35] {D} node [above, midway, rotate=30, scale=0.35] {5/20};
+         \draw (0,0) -- (-30:3) node [right, scale=0.35] {B} node [below, midway, rotate=-30, scale=0.35] {15/20};
+         
+         \draw (3.159807,1.5) -- ++(20:3) node [right, scale=0.35] {D} node [above, midway, rotate=20, scale=0.35] {5/20};
+         \draw (3.159807,1.5) -- ++(-20:3) node [right, scale=0.35] {B} node [below, midway, rotate=-20, scale=0.35] {15/20};
+         
+         \draw (3.159807,-1.5) -- ++(20:3) node [right, scale=0.35] {D} node [above, midway, rotate=20, scale=0.35] {5/20};
+         \draw (3.159807,-1.5) -- ++(-20:3) node [right, scale=0.35] {B} node [below, midway, rotate=-20, scale=0.35] {15/20};
+
+\end{tikzpicture}
+}
+\end{figure}
+
+Assim, as respostas são i) $\frac{2}{38}$ ii) $\frac{21}{38}$ iii) $\frac{5}{20}\cdot\frac{15}{20}+\frac{15}{20}\cdot\frac{5}{20}=\frac{6}{16}$.
+
+
+\end{enumerate}
+
+
+\end{enumerate}
+}{1}
+\end{answer}
 
 \exercise
+% \vspace{-2em}
 
 \begin{enumerate}
 
@@ -2247,7 +3659,7 @@ Deseja-se avaliar a probabilidade de você se tornar um \textit{Youtuber} de suc
 
 \end{enumerate}
 
-\item Em uma escola de Ensino Médio há dois turnos: manhã e tarde. Nesta escola há alunos que praticam atividade física fora do horário escolar e alunos que não praticam. Um aluno dessa escola será sorteado. Defina os seguintes eventos \(A:\) “o aluno sorteado é do turno da manhã” e \(B:\) “o aluno sorteado pratica atividade física fora do horário escolar”. Descreva em palavras os eventos
+\item Em uma escola de Ensino Médio há dois turnos: manhã e tarde. Nesta escola há alunos que praticam atividade física fora do horário escolar e alunos que não praticam. Um aluno dessa escola será sorteado. Defina os seguintes eventos \(A:\) “o aluno sorteado é do turno da manhã”{} e \(B:\) “o aluno sorteado pratica atividade física fora do horário escolar”. Descreva em palavras os eventos
 \begin{enumerate}
 \item {} 
 \(A\cup B\)
@@ -2383,6 +3795,7 @@ $0{,}25$
 MÉTODO I: Escolher ao acaso um dos turnos e, a seguir, sortear um dos alunos do turno escolhido.
 MÉTODO II: Escolher ao acaso uma das 16 turmas e, a seguir, sortear um dos alunos dessa turma.
 Sobre os métodos I e II é correto afirmar:
+\clearpage
 \begin{enumerate}
 \item {} 
 Em ambos os métodos, todos os alunos têm a mesma chance de serem sorteados.
@@ -2405,7 +3818,7 @@ Em ambos os métodos, a chance de um aluno do diurno ser sorteado é maior do qu
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.9]
 
 \draw [color=secundario!70, fill=primario!70] (2,3) -- (3,3) -- (3.55,2.16);
 \draw [dashed, ] (0,0) -- (0,3);
@@ -2529,6 +3942,7 @@ Escolhendo-se um aluno dessa escola ao acaso e sabendo-se que ele não fala ingl
 
 \end{enumerate}
 
+\clearpage
 \item (ENEM) O psicólogo de uma empresa aplica um teste para analisar a aptidão de um candidato a determinado cargo. O teste consiste em uma série de perguntas cujas respostas devem ser verdadeiro ou falso e termina quando o psicólogo fizer a décima pergunta ou quando o candidato der a segunda resposta errada, Com base em testes anteriores, o psicólogo sabe que a probabilidade de o candidato errar qualquer uma das respostas é $0{,}2$. A probabilidade do teste terminar na quinta pergunta é:
 \begin{enumerate}
 \item {} 

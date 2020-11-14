@@ -63,6 +63,7 @@
 \RequirePackage{ifthen}
 \RequirePackage[export]{adjustbox}
 \RequirePackage{xparse}% For RenewDocumentEnvironment
+\RequirePackage{expl3}
 \RequirePackage{tcolorbox} %Allow those nice environments
 \tcbuselibrary{theorems, listings, breakable, most, skins}
 \RequirePackage{titling} % needed to manage with the title
@@ -128,9 +129,10 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{blindtext}
 
 \RequirePackage{cleveref}
-
-
-
+\RequirePackage{collcell}
+\RequirePackage{datatool}
+\RequirePackage{environ}
+\RequirePackage{xstring}
 
 \tcbuselibrary{skins,breakable}
 \RequirePackage{graphicx}
@@ -1636,8 +1638,13 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 
 \newenvironment{apresentacao}
 {\frontmatter\def\currentcolor{cor1}
-\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}\pagestyle{plain}\setlist[enumerate]{wide, label=\titem{\alph*)}}\setlist[itemize]{wide} \begin{multicols}{3}}
-{\clearpage\end{multicols}\pagebreak\restoregeometry 
+\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}
+\pagestyle{plain}
+\setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
+\setlist[itemize]{wide} 
+\begin{multicols}{3}}
+{\clearpage\end{multicols}
+\pagebreak\restoregeometry 
 \mainmatter\def\currentcolor{session1}}
 
 \newcounter{mypagecount}
@@ -1656,7 +1663,11 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
   %\pagenumbering{arabic}% Don't reset
 }\clearpage\setcounter{mypagecount}{\value{page}}
 \cleardoublepage\setcounter{mypagecount}{\value{page}}\def\currentcolor{session1}
-\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}\thispagestyle{empty}\pagestyle{empty}\setlist[enumerate]{wide}\setlist[itemize]{wide} \begin{multicols}{3}}
+\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}
+\thispagestyle{empty}\pagestyle{empty}
+\setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
+\setlist[itemize]{wide}
+\begin{multicols}{3}}
 {\clearpage\end{multicols}\def\currentcolor{session1}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
 }
 
@@ -2041,7 +2052,7 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,
 colframe=penaqua!20!white, left =2mm, right=2mm, boxrule=0pt, top=1mm, arc=3mm, toptitle=2mm, coltitle=black, fonttitle=\bfseries, arc is angular = northwest, sharp corners = northeast, sharp corners = southwest, arc is angular = southeast, subtitle style={coltitle=black,fonttitle=\bfseries},
 title=#1}
 
-
+\newenvironment{OES}{\begin{enumerate}[label=\titem{OE \arabic*} -, topsep=2.5pt,itemsep=0pt]}{\end{enumerate}}
 
 %%%%%%%%%%%%%%% NOTA DE RODAPÉ
 \newcommand{\notarodape}[1]{\footnotemark\footnotetext{\belowbaseline[-\ht\strutbox]{\begin{tcolorbox}[colback=grafite!90!white,colbacktitle=grafite!90!white,
@@ -2051,6 +2062,7 @@ colframe=grafite!90!white,colupper=white, left=0pt, right=0pt,top=-2pt,bottom=-2
 \geometry{reset, paperwidth=950pt,paperheight=782pt,textwidth=450pt,
 marginparsep=30pt,headsep=19pt,top=45pt,inner=50pt,outer=440pt,
 marginparwidth=350pt,textheight=686pt}
+
 
 
 \endinput
