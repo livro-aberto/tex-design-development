@@ -1,6 +1,8 @@
-\renewcommand\chapterillustration{abertura-probabilidade}
-\renewcommand\chapterwhat{Reconhecimento de fenômenos determinís-
-ticos e aleatórios. Interpretações de probabilidade: clássica, frequentista e subjetiva.Conceitos básicos. Definição matemática deprobabilidade. Propriedades da probabilidade. Probabilidade condicional. Independência.}
+\ifnum \aluno=1
+\renewcommand\chapterillustration{abertura-probabilidade.jpg}
+\else
+\renewcommand\chapterillustration{abertura-probabilidade-professor}
+\fi
 \renewcommand\chapterbecause{Porque grande parte das decisões científicas de nossa era se dá em ambiente de incerteza e a Teoria das Probabilidades é a área da matemática que fornece estruturas para a quantificação da aleatoriedade associada a determinados fenômenos de interesse, para uma tomada de decisão adequada sob incerteza.}
 \chapter{Probabilidade}
 
@@ -42,7 +44,7 @@ Versão digital do capítulo:
 \begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
 Título: & Probabilidade\\
 \\
-Ano/ Versão: & 2020 / versão 1.0 de 24 de março de 2020\\
+Ano/ Versão: & 2020 / versão 1.2 de 17 de novembro de 2020\\
 \\
 Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
 \\
@@ -3996,4 +3998,7 @@ Qual a probabilidade de se extrair uma boa e uma defeituosa em qualquer ordem?
 \end{enumerate}
 
 
-
+\ifnum\aluno=0
+\notasfinais
+\else
+\fi

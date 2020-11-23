@@ -28,7 +28,9 @@
 \RequirePackage{varwidth}
 \RequirePackage{array}
 \RequirePackage{colortbl}
+\RequirePackage{bookmark}
 \RequirePackage{hyperref}
+\PassOptionsToPackage{bookmarks=false}{hyperref}
 \hypersetup{colorlinks=true, colorlinks=true, linkcolor=linkscolor, filecolor=linkscolor, urlcolor=linkscolor,citecolor=linkscolor}
 \RequirePackage{float}
 \RequirePackage{tkz-euclide}
@@ -62,6 +64,7 @@
 \RequirePackage{ifthen}
 \RequirePackage[export]{adjustbox}
 \RequirePackage{xparse}% For RenewDocumentEnvironment
+\RequirePackage{expl3}
 \RequirePackage{tcolorbox} %Allow those nice environments
 \tcbuselibrary{theorems, listings, breakable, most, skins}
 \RequirePackage{titling} % needed to manage with the title
@@ -105,26 +108,44 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{marginfix}
 \RequirePackage{pdfpages}
 \RequirePackage{stmaryrd}
-% \RequirePackage{natbib}
+\RequirePackage{lscape}
+
+\RequirePackage[sectionbib]{natbib}
+\RequirePackage{chapterbib}
+\patchcmd{\thebibliography}{%
+  \chapter*{\bibname}\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}}{%
+  \clearpage
+  \bibliographytitle*{Bibliografia}}{}{}
+
 \RequirePackage{spverbatim}
-\RequirePackage{ulem}
+% \RequirePackage{ulem}
 \RequirePackage{cancel}
 \RequirePackage{ifthen}
 \RequirePackage{booktabs}
+\RequirePackage{listofitems}
 \RequirePackage{url}
 \RequirePackage{graphicx}
+%\RequirePackage[usenames,dvipsnames]{color}
 \RequirePackage{forloop}
 \RequirePackage{lipsum}
 \RequirePackage{suffix}
 \RequirePackage{refcount}
+% \RequirePackage[hidelinks]{hypreref}
 \RequirePackage{xcolor}
 \RequirePackage{multicol}
 \RequirePackage{etex}
-\RequirePackage{blindtext}
-\RequirePackage{cleveref}
 \RequirePackage{multirow}
+%\RequirePackage[brazilian]{babel}
+\RequirePackage{blindtext}
 
+\RequirePackage{cleveref}
+\RequirePackage{collcell}
+\RequirePackage{datatool}
+\RequirePackage{environ}
+\RequirePackage{xstring}
 
+\tcbuselibrary{skins,breakable}
+\RequirePackage{graphicx}
 \@ifclassloaded{memoir}{}{\RequirePackage{fancyhdr}}
 
 \DeclareMathOperator{\sen}{sen}
@@ -156,6 +177,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
 \newcommand{\tmcol}[3]{\multicolumn{#1}{#2}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#3}}}}
 \newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
+
 \newcommand{\tikzcolor}{\currentcolor!80}
 \newcommand{\sub}{\textsubscript}
 \newcommand{\super}{\textsuperscript}
@@ -164,7 +186,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
-\newcolumntype{f}{>{$}c<{$}}
+\newcolumntype{f}{>$c<$}
 
 
 %Coloca listas de enumerate no padrão da seção de exercícios
@@ -253,9 +275,11 @@ underlay boxed title={
 
 % Observation Box
 
+\newtcolorbox{observationtitle}[1]{
+parbox=false, enhanced, breakable, left=3mm, right=3mm,bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\bfseries\textcolor{\currentcolor}{ #1}}, boxed title style ={empty},top=8mm, attach boxed title to top center={xshift=0mm, yshift=-7.5mm}
+}
+
 \newtcolorbox{observation}[1]{parbox=false, enhanced, breakable, left=3mm, right=3mm, top=3mm, bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\bfseries\textcolor{\currentcolor}{ #1}}, attach boxed title to top center={xshift=0mm, yshift=-5.5mm}, boxed title style ={empty}}	 
-
-
 
 
 
@@ -542,8 +566,38 @@ underlay boxed title={
 {0pt}{1mm}{1mm}
 
 % Formatação dos comandos \section e \subsection
+%Cor atual
 \titleformat{\section}{\color{\currentcolor}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}
+{0pt}{2mm}{1mm}
+% \providecommand*{\toclevel@section}{2}
+
+
 \titleformat{\subsection}{\vspace{.3\baselineskip}\color{\currentcolor}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}
+{0pt}{1mm}{1mm}
+\providecommand*{\toclevel@subsection}{3}
+\providecommand*{\toclevel@explore}{1}
+
+
+\titleformat{\bibliographytitle}{\vspace{.3\baselineskip}\color{\currentcolor}\normalfont\huge\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}
+{0pt}{1mm}{1mm}
+
+%Cor Explorando
+
+\newcommand{\scexplore}[1]{\hypersetup{linkcolor=session1}\paragraph{\color{session1}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+\newcommand{\scarrange}[1]{\hypersetup{linkcolor=session4}\paragraph{\color{session4}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+\newcommand{\scpractice}[1]{\hypersetup{linkcolor=session2}\paragraph{\color{session2}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+\newcommand{\scknow}[1]{\hypersetup{linkcolor=session2}\paragraph{\color{session3}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+\newcommand{\scexercise}[1]{\hypersetup{linkcolor=cor1}\paragraph{\color{cor1}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+
+
+\newcommand{\subexplore}[1]{\paragraph{\color{session1}\normalfont\Large\bfseries#1}}
+\newcommand{\subarrange}[1]{\paragraph{\color{session4}\normalfont\Large\bfseries#1}}
+\newcommand{\subpractice}[1]{\paragraph{\color{session2}\normalfont\Large\bfseries#1}}
+\newcommand{\subknow}[1]{\paragraph{\color{session3}\normalfont\Large\bfseries#1}}
+\newcommand{\subexercise}[1]{\paragraph{\color{cor1}\normalfont\Large\bfseries#1}}
 
 % Create box shape
 \pgfdeclareshape{howbecausetextbox}{%

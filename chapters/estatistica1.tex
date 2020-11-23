@@ -43,7 +43,7 @@ Versão digital do capítulo:
 \begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
 Título: & A Natureza da Estatística\\
 \\
-Ano/ Versão: & 2020 / versão 1.1 de 17 de setembro de 2020\\
+Ano/ Versão: & 2020 / versão 1.2 de 17 de novembro de 2020\\
 \\
 Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
 \\
@@ -1215,7 +1215,7 @@ Suponha o exemplo com os dados de tipos sanguíneos dos 40 alunos de uma turma. 
 Distribuições de frequências de tipo sanguíneo
 \vspace{2em}
 
-\begin{tikzpicture}[scale=.15]
+\begin{tikzpicture}[scale=.14]
 
   \draw (0,0) -- (0,60);
   \foreach \x in {0,10,...,60}
@@ -1234,7 +1234,7 @@ Distribuições de frequências de tipo sanguíneo
 \node [below] at (15,-5) {(40 observações)};
 \node [above, rotate=90] at (-5,30) {porcentagem};
 \end{tikzpicture}\hspace{1em}
-\begin{tikzpicture}[scale=.15]
+\begin{tikzpicture}[scale=.14]
 
   \draw (0,0) -- (0,60);
   \foreach \x in {0,10,...,60}
@@ -1265,7 +1265,7 @@ Porém, os gráficos construídos, usando a escala da porcentagem, não parecem 
 Distribuições de frequências de tipo sanguíneo
 \vspace{2em}
 
-\begin{tikzpicture}[scale=.15]
+\begin{tikzpicture}[scale=.14]
 
   \draw (0,0) -- (0,50);
   \foreach \x in {0,10,...,50}
@@ -1284,7 +1284,7 @@ Distribuições de frequências de tipo sanguíneo
 \node [below] at (15,-5) {(40 observações)};
 \node [above, rotate=90] at (-5,30) {frequência absoluta};
 \end{tikzpicture}\hspace{1em}
-\begin{tikzpicture}[scale=.15]
+\begin{tikzpicture}[scale=.14]
 
   \draw (0,0) -- (0,50);
   \foreach \x in {0,10,...,50}
@@ -1381,12 +1381,12 @@ Também, quando deseja-se fazer comparações múltiplas o gráfico de setores n
 \begin{itemize}
 \item Construir gráficos de distribuições de frequências para variáveis qualitativas.
 \end{itemize}
-}{1}{2}
+}{1}{1}
 \end{objectives}
 \begin{sugestions}{Construção de gráficos para variáveis qualitativas}
 {
 Embora os gráficos solicitados nesta atividade sejam simples, recomenda-se sugerir aos alunos usar algum recurso tecnológico para a construção dos mesmos, tais como, uma planilha ou o GeoGebra.
-}{1}{2}
+}{1}{1}
 \end{sugestions}
 \begin{answer}{Construção de gráficos para variáveis qualitativas}
 {
@@ -1437,12 +1437,12 @@ Embora os gráficos solicitados nesta atividade sejam simples, recomenda-se suge
 \begin{itemize}
 \item Mostrar que podem existir diversas formas de usar barras para representar algum tipo de dado, mas que nem todos os gráficos que usam barras são gráficos de barras no sentido da representação de uma distribuição de frequências.
 \end{itemize}
-}{1}{2}
+}{1}{1}
 \end{objectives}
 \begin{sugestions}{Análise de gráfico}
 {
 O gráfico desse exemplo é “um gráfico de barras”, mas as barras representam o valor da inflação da alimentação acumulado nos últimos 12 meses em função do tempo: de agosto de 2016 até agosto de 2017. Na seção “Explorando 2”, veremos que, para esse tipo de informação - valores de uma variável quantitativa ao longo do tempo -, é mais comum usar um gráfico de linhas unindo por segmentos os pontos consecutivos dados (tempo, valor da variável).
-}{1}{2}
+}{1}{1}
 \end{sugestions}
 \begin{answer}{Análise de gráfico}
 {
@@ -3741,3 +3741,8 @@ os dois gráficos são incomparáveis, pois usam escalas diferentes.
 
 \item As fichas dos 800 funcionários de uma empresa estão catalogadas por ordem alfabética no setor de recursos humanos. Como você faria para obter uma amostra sistemática de tamanho 50 dos funcionários dessa empresa?
 \end{enumerate}
+
+\ifnum\aluno=0
+\notasfinais
+\else
+\fi

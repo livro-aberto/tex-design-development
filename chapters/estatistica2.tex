@@ -51,7 +51,7 @@ Versão digital do capítulo:
 \begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
 Título: & Medidas de Posição e Dispersão\\
 \\
-Ano/ Versão: & 2020 / versão 0.10 de 24 de junho de 2020\\
+Ano/ Versão: & 2020 / versão 1.2 de 17 de novembro de 2020\\
 \\
 Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
 \\
@@ -385,7 +385,7 @@ Sugere-se como atividade interdisciplinar, a realização de corridas com os est
 \begin{answer}{A maratona}
 {
 \begin{enumerate}
-\item Atabela com as frequências por intervalo e o histograma ficam de seguinte forma:
+\item A tabela com as frequências por intervalo e o histograma ficam de seguinte forma:
 
 \begin{minipage}{.4\linewidth}
 \begin{table}[H]
@@ -468,14 +468,14 @@ $[182{,}0 ; 186{,}0 [$ & $16$ \\
 
 	\item Percebe-se uma estrutura com assimetria à esquerda, isto é, frequências baixas (menores ou iguais a 8) nos tempos iniciais ($7$ primeiros intervalos) e grande concentração (frequências altas - maiores ou iguais a $16$) nos três intervalos finais. Esse tipo de estrutura resulta na média inferior ao tempo localizado na posição do meio ($50$ nesse exemplo).
 
-	\item A \hyperref[boxplot-sem-sinalizacao]{figura} construída é chamada boxplot sem a sinalização de valores discrepantes (vamos chamar de boxplot simplificado). A construção do boxplot com sinalização de valores discrepantes será trabalhada na seção de medidas de dispersão. Veja como fica o boxplot simplificado, adotando-se oreintação horizontal.
+	\item A \hyperref[boxplot-sem-sinalizacao]{figura \ref{boxplot-sem-sinalizacao}} construída é chamada boxplot sem a sinalização de valores discrepantes (vamos chamar de boxplot simplificado). A construção do boxplot com sinalização de valores discrepantes será trabalhada na seção de medidas de dispersão. Veja como fica o boxplot simplificado, adotando-se oreintação horizontal.
 
 	\notas
 	{\setcounter{figure}{2}
 		\begin{figure}[H]
 		\centering
 		
-		\includegraphics[width=\linewidth]{bpxplot_Mulheres_maratona_svd.png}
+		\includegraphics[trim= 0 0 4cm 0, clip,width=.75\linewidth]{bpxplot_Mulheres_maratona_svd.png}
 		\caption{Boxplot (sem sinalização de valores discrepantes) dos 100 melhores tempos para a categoria mulheres}
 		\label{boxplot-sem-sinalizacao}
 		\end{figure}
@@ -1936,7 +1936,7 @@ As perguntas não têm respostas fechadas, têm o intuito de gerar uma discussã
 \clearmargin
 \begin{answer}{Comparação das diferentes categorias na maratona}
 {
-\begin{enumerate}
+\begin{enumerate}\setcounter{enumi}{4}
 \item Não é possível, a informação apenas da média é insuficiente para caracterizar a forma do histograma. Outras informações são necessárias para isto.
 \item O triciclo de mão apresenta maior dispersão, considerando a amplitude.
 \item Na figura a seguir veja uma cosntrução dos boxplots sem sinalização dos valores discrepantes.
@@ -2089,7 +2089,7 @@ Como poderiam ser utilizados os quartis para comparar duas distribuições de da
 \needspace{.25\textheight}
 \begin{task}{Comparação das diferentes categorias na maratona}
 
-Observe os histogramas da \hyperref[\detokenize{PE104-2:id1}]{figura \ref{\detokenize{PE104-2:id1}}} 8.26 referentes aos tempos de chegada das categorias “cadeira de rodas”{} e “triciclo de mão”{} na Maratona de Nova Iorque em 2017. Nesse caso, os tempos de chegada foram convertidos para horas e referem-se ao total de participantes que completaram a prova: $51$ na categoria cadeira de rodas e $69$ na categoria triciclo de mão.
+Observe os histogramas da \hyperref[\detokenize{PE104-2:id1}]{figura \ref{\detokenize{PE104-2:id1}}} referentes aos tempos de chegada das categorias “cadeira de rodas”{} e “triciclo de mão”{} na Maratona de Nova Iorque em 2017. Nesse caso, os tempos de chegada foram convertidos para horas e referem-se ao total de participantes que completaram a prova: $51$ na categoria cadeira de rodas e $69$ na categoria triciclo de mão.
 
 \begin{figure}[H]
 \centering
@@ -2206,7 +2206,6 @@ Para investir na bolsa de valores compramos ações de empresas por intermédio 
 
 \begin{figure}[H]
 \centering
-\capstart
 
 \noindent\includegraphics[width=300bp]{{resized001}.png}
 \caption{Esquema simplificado de investimento na bolsa de valores}\label{\detokenize{PE104-3:fig-ativ-bolsa-de-valores}}\label{\detokenize{PE104-3:id1}}\end{figure}
@@ -2215,7 +2214,6 @@ Suponha que você tenha a oportunidade de investir um capital, comprando ações
 
 \begin{figure}[H]
 \centering
-\capstart
 
 \begin{tikzpicture}[xscale=1.5,scale=.5, every node/.style={scale=.9}]
 
@@ -3161,7 +3159,7 @@ Avaliar o efeito no coeficiente de variação de um conjunto de dados quando rea
 \marginpar{\vspace{-2em}}
 \begin{sugestions}{Comparação das bonificações nas Notas de Artes}
 {
-Nesta atividade pretende-se retornar ao item \titem{e)} da ativ-Notas-de-Artes quando foi perguntado ao estudante o que ele achava melhor: ganhar um ponto ou um acréscimo de $20\%$ em sua nota. A ideia será propor a mesma pergunta de um ponto de vista do professor, que prefere que a distribuição das notas apresente o menor coeficiente de variação.
+Nesta atividade pretende-se retornar ao item \titem{e)} da \hyperref[\detokenize{PE104-0:ativ-notas-de-artes}]{Notas de Arte} quando foi perguntado ao estudante o que ele achava melhor: ganhar um ponto ou um acréscimo de $20\%$ em sua nota. A ideia será propor a mesma pergunta de um ponto de vista do professor, que prefere que a distribuição das notas apresente o menor coeficiente de variação.
 }{1}{1}
 \end{sugestions}
 \begin{answer}{Comparação das bonificações nas Notas de Artes}
@@ -3375,41 +3373,32 @@ Idem para estimar o valor do desvio padrão amostral dos dados da atividade \hyp
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|f|f|}
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Estatística}}}}\\
+\tcolor{} & $\tcolor{Homens}$ & $\tcolor{Mulheres}$ \\
 \hline
-$n$ & 100 \\
+$n$ & 100 & 100 \\
 \hline
-Média & 2,8697 \\
+Média & 150{,}6942 & 171{,}9166 \\
 \hline
-$\sigma$ & 0,1857 \\
+$\sigma$ & 7{,}6617 & 11{,}075 \\
 \hline
-$s$ & 0,1866 \\
+$s$ &  7{,}7003 & 11{,}1308 \\
 \hline
-$\Sigma x$ & 286,971 \\
+Min &  130{,}88 & 146{,}88 \\
 \hline
-$\Sigma x^2$ & 826,9708 \\
+$Q_1$ &  148{,}37 & 166{,}31 \\
 \hline
-Min & 2,448 \\
+Mediana & 152{,}995 & 175{,}625 \\
 \hline
-$Q_1$ & 2,7715 \\
+$Q_3$ & 156{,}66 & 158{,}33 \\
 \hline
-Mediana & 2,949 \\
-\hline
-$Q_3$ & 2,9985 \\
-\hline
-Max & 3,085 \\
+Max & 158{,}33 & 185{,}15 \\
 \hline
 \end{tabular}
-\caption{Estatísticas resumo dos 100 melhores tempos para mulheres - Maratona de Nova Iorque/2017}\label{\detokenize{PE104-5:fig-summarymaratonamulheres}}\label{\detokenize{PE104-5:id3}}
+\caption{Estatísticas resumo dos 100 melhores tempos para homens e mulheres - Maratona de Nova Iorque/2017}\label{\detokenize{PE104-5:fig-summarymaratonamulheres}}\label{\detokenize{PE104-5:id3}}
 \end{table}
-% \begin{figure}[H]
-% \centering
-% \capstart
 
-% \noindent\includegraphics[width=100bp]{{summary_MaratonaNYMulheres}.png}
-% \caption{Estatísticas resumo dos 100 melhores tempos para mulheres - Maratona de Nova Iorque/2017}\label{\detokenize{PE104-5:fig-summarymaratonamulheres}}\label{\detokenize{PE104-5:id3}}\end{figure}
 \begin{enumerate}
 \setcounter{enumi}{2}
 \item {} 
@@ -5082,3 +5071,7 @@ Finalmente, é possível construir o boxplot na mesma área gráfica para que o 
 \caption{\href{https://ggbm.at/KbYqnQ6Q}{Aplicativo interativo em Geogebra para a visualização de medidas de posição e dispersão de uma distribuição}}\label{\detokenize{PE104-E:fig-aplicativo-medidas}}\label{\detokenize{PE104-E:id17}}\end{figure}
 
 
+\ifnum\aluno=0
+\notasfinais
+\else
+\fi
