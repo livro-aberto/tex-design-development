@@ -2,7 +2,22 @@
 \renewcommand\chapterillustration{./abertura-financeira}
 \else
 \renewcommand\chapterillustration{./abertura-financeira-professor}
+\makeatletter
+
+\renewcommand*{\toclevel@section}{1}
+\renewcommand*{\toclevel@subsection}{4}
+\renewcommand*{\toclevel@paragraph}{5}
+\renewcommand*{\toclevel@subparagraph}{6}
+
+\renewcommand*{\toclevel@exploresec}{1}
+\renewcommand*{\toclevel@practicesec}{1}
+\renewcommand*{\toclevel@arrangesec}{1}
+\renewcommand*{\toclevel@knowsec}{1}
+\renewcommand*{\toclevel@exercisesec}{1}
+
+\makeatother
 \fi
+
 
 
 
@@ -139,20 +154,7 @@ Paula Dantas de Souza, André Monteiro Novaes, Daniela Presotti, Danielle Angél
 
 \mainmatter
 
-\begin{apresentacao}
-\section*{Entendento a ideia do livro: por que Educação Financeira e não Matemática Financeira?}
-
-\section*{Objetivo geral}
-
-Apresentar os principais objetivos, os temas abordados e a concepção de Educação Financeira que fundamenta todo o capítulo.
-
-\textbf{Conceitos abordados}: Educação Financeira em contextos escolares (EFCE ou EFE) e Situações Econômico-Financeiras (SEF)
-
-\begin{habilities}{EM13MAT104}
-Interpretar taxas e índices de natureza socioeconômica, tais como índice de desenvolvimento humano, taxas de inflação, entre outros, investigando os processos de cálculo desses números.
-\end{habilities}
-
-\section{Recomendações para o professor}
+\begin{apresentacao}{Entendento a ideia do livro: por que Educação Financeira e não Matemática Financeira?}
 
 Gostaríamos de apresentar para você, professor (a), algumas concepções muito importantes para entender esse capítulo de Educação Financeira em Contextos Escolares (EFCE). 
 
@@ -355,7 +357,6 @@ Mas o objetivo desse livro é mostrar alguns princípios e caminhos. Foi mostrar
 \begin{enumerate}[label=Atividade \arabic* --, wide]\setcounter{enumi}{35}
 \item \hyperref[fin-ativ-36]{Tributação do IR nos investimentos}
 \end{enumerate}
-\vspace{1em}
 
 \scexplore{\hyperref[fin-exp-9]{Explorando 9 --- Consumo, cultura, comportamento e sustentabilidade}}
 \begin{enumerate}[label=Atividade \arabic* --, wide]\setcounter{enumi}{36}
@@ -407,7 +408,18 @@ Mas o objetivo desse livro é mostrar alguns princípios e caminhos. Foi mostrar
 \def\currentcolor{session1}
 \begin{texto}
 {
-  \scexplore{Explorando: Em que terreno estamos pisando?}
+  \subsection*{Objetivo geral}
+
+  Apresentar os principais objetivos, os temas abordados e a concepção de Educação Financeira que fundamenta todo o capítulo.
+
+  \textbf{Conceitos abordados}: Educação Financeira em contextos escolares (EFCE ou EFE) e Situações Econômico-Financeiras (SEF)
+
+  \begin{habilities}{EM13MAT104}
+  Interpretar taxas e índices de natureza socioeconômica, tais como índice de desenvolvimento humano, taxas de inflação, entre outros, investigando os processos de cálculo desses números.
+  \end{habilities}
+
+  \subsection{Recomendações para o professor}
+
   Nessa primeira seção vamos dar um panorama da nossa concepção de Educação Financeira. Basicamente é mostrar que usaremos aspectos matemáticos e não matemáticos, como já explicado antes, para investigar situações, resolver os problemas que forem aparecendo, avaliar cenários possíveis decisões e suas consequências. Temos como objetivo também abordar as noções de taxas de crescimento e fatores de atualização, que são abordados no Ensino Fundamental e em especial no Ensino Médio, tanto em funções como em progressões. 
 
   Apresentaremos um texto inicial seguido de uma série de situações financeiras que mostram a diversidade de temas relacionados com Educação Financeira que podem ser tratados nas aulas de matemática do Ensino Médio (e alguns deles no Ensino Fundamental também).
@@ -424,25 +436,29 @@ Mas o objetivo desse livro é mostrar alguns princípios e caminhos. Foi mostrar
   \item Consumo, sustentabilidade e atitude
   \end{itemize}
 
-  Essas onze SEF iniciais não são atividades para serem feitas imediatamente. Elas serão exploradas ao longo das seções deste capítulo do Livro Aberto. Algumas delas requerem a construção de conceitos matemáticos mais complexos, como as séries uniformes, por exemplo. Outras até podem ser abordadas imediatamente, conforme a avaliação do professor sobre suas turmas e condições, como as envolvendo planejamento financeiro e comportamento do consumidor. O importante nessa primeira seção é mostrar a diversidade dos temas, sem perder de vista as conexões entre os aspectos matemáticos e não matemáticos existentes nessas SEF.
-
-  Queremos dar um pontapé inicial. É convidar o aluno a perceber a diversidade de situações financeiras que serão tratadas, e como aspectos matemáticos e não matemáticos estarão conectados na análise dessas situações.
-
 }
 \end{texto}
 \clearmargin
 \begin{texto}
 {
-  \subsection{Organização em sala de aula} Peça aos seus alunos para darem exemplos de situações financeiras e econômicas (SEF) que eles já experimentaram. Em seguida, apresente as onze situações financeiras apresentadas nessa seção, tentando ampliar a visão de como tais situações são mais frequentes na vida das pessoas do que eles geralmente pensam, e da importância de se analisar bem para tomar decisões críticas (no sentido de testar a validade, avaliar a viabilidade, e escolher considerando possíveis consequências) e fundamentadas. Convidar os estudantes a pesquisarem informações envolvendo SEF em sites, blogs, jornais, portais, revistas econômicas sobre situações envolvendo inflação, antes de abordar o tema, também pode ampliar o escopo de coisas a partir das quais poderão produzir significados. Convide seus alunos a pesquisarem diferentes estratégias de educação financeira (por exemplo: comparando a do Banco Central com a da sua escola) implementadas em sua região pode ser de bom alvitre. Convide seus alunos a criar a cultura de investigar os fundamentos e a razoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
+  Essas onze SEF iniciais não são atividades para serem feitas imediatamente. Elas serão exploradas ao longo das seções deste capítulo do Livro Aberto. Algumas delas requerem a construção de conceitos matemáticos mais complexos, como as séries uniformes, por exemplo. Outras até podem ser abordadas imediatamente, conforme a avaliação do professor sobre suas turmas e condições, como as envolvendo planejamento financeiro e comportamento do consumidor. O importante nessa primeira seção é mostrar a diversidade dos temas, sem perder de vista as conexões entre os aspectos matemáticos e não matemáticos existentes nessas SEF.
 
-  \subsection{Dificuldades previstas} Esse tema faz um sucesso enorme nas aulas de matemática. Os alunos gostam de conversar sobre SEF pois faz parte da vida deles. Estimule a participação, e procure aproveitar o interesse para trabalhar os conceitos matemáticos. O uso de calculadora pode ajudar, e muito, pois alguns cálculos são simples, mas temos também alguns bem mais complexos. 
+  Queremos dar um pontapé inicial. É convidar o aluno a perceber a diversidade de situações financeiras que serão tratadas, e como aspectos matemáticos e não matemáticos estarão conectados na análise dessas situações.
 
+  \paragraph{Organização em sala de aula} Peça aos seus alunos para darem exemplos de situações financeiras e econômicas (SEF) que eles já experimentaram. Em seguida, apresente as onze situações financeiras apresentadas nessa seção, tentando ampliar a visão de como tais situações são mais frequentes na vida das pessoas do que eles geralmente pensam, e da importância de se analisar bem para tomar decisões críticas (no sentido de testar a validade, avaliar a viabilidade, e escolher considerando possíveis consequências) e fundamentadas. Convidar os estudantes a pesquisarem informações envolvendo SEF em sites, blogs, jornais, portais, revistas econômicas sobre situações envolvendo inflação, antes de abordar o tema, também pode ampliar o escopo de coisas a partir das quais poderão produzir significados. Convide seus alunos a pesquisarem diferentes estratégias de educação financeira (por exemplo: comparando a do Banco Central com a da sua escola) implementadas em sua região pode ser de bom alvitre. Convide seus alunos a criar a cultura de investigar os fundamentos e a razoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
+
+  \paragraph{Dificuldades previstas} Esse tema faz um sucesso enorme nas aulas de matemática. Os alunos gostam de conversar sobre SEF pois faz parte da vida deles. Estimule a participação, e procure aproveitar o interesse para trabalhar os conceitos matemáticos. O uso de calculadora pode ajudar, e muito, pois alguns cálculos são simples, mas temos também alguns bem mais complexos. 
+}
+\end{texto}
+\clearmargin
+\begin{texto}
+{
   \subsection{Sugestões gerais} Lembre-se que você pode abordar os temas de educação financeira (EFE) tais como: planejamento e orçamento financeiro pessoal e familiar, consumo, sustentabilidade, juros, inflação, tributos, previdência, investimentos, dentre outros, por meio de aulas especificas de educação financeira, caso sua escola as ofereça, ou abordar temas a partir dos conceitos e habilidades dentro do teu planejamento nas aulas de matemática. Aborde Educação Financeira para ensinar matemática. Ensine matemática para a reflexão e tomada de decisão em situações financeiras.
 }
 \end{texto}
 
-\explore{Em que terreno estamos pisando?}
-\phantomsection\label{fin-exp-1}
+\explore{Em que Terreno Estamos Pisando?}
+\label{fin-exp-1}
 No Brasil, as últimas décadas têm sido de grandes transformações sociais, econômicas, tecnológicas e demográficas. Por exemplo, entre 2002 e 2007, a classe média aumentou de 32\% para 47\% da população total, incorporando mais 23,5 milhões de pessoas. A pobreza extrema passou de 12\% para 5\% no período de 1992 a 2007. Segundo o Instituto de Pesquisa Econômica e Aplicada (IPEA), a desigualdade de renda, medida pelo índice de Gini, foi reduzida de $0{,}604$ para $0{,}556$.
 
 Temos também que a expectativa de vida aumentou de 51 anos em 1950 para quase 73 em 2008. Se os acréscimos na longevidade continuarem nesse ritmo, a expectativa de vida dos Brasileiros será em breve de 81 anos. Da mesma forma, a população com 40 anos ou mais aumentou significativamente ($4,2\%$) em relação a 2006, e houve um decréscimo de $0,7\%$ dos jovens (de 0 a 14 anos) no mesmo período. 
@@ -621,13 +637,13 @@ A solução comentada será apresentada no próprio texto, dentro do tópico Org
 }{1}
 \end{answer}
 \begin{task}{negociando reajustes}
-\phantomsection\label{fin-ativ-1}
+\label{fin-ativ-1}
 
 A inflação em um país foi de 8\% em 2017 e de 10\% em 2018. Os funcionários de uma empresa receberam uma proposta de aumento de 18\% para corrigir essas perdas. Ela realmente corrige as perdas acumuladas pela inflação nos dois anos? Você aceitaria essa proposta? Se você não aceitasse essa proposta, qual a contraproposta que você apresentaria, e como argumentaria para defendê-la?
 \end{task}
 
 \begin{task}{cobertor curto}
-\phantomsection\label{fin-ativ-2}
+\label{fin-ativ-2}
 
 A família Silva identificou que está gastando mais do que ganha, e para isso está usando o cheque especial, que custa 10\% ao mês, sobre o saldo devedor. O orçamento doméstico simplificado da família em Janeiro e fevereiro desse ano estão representados na tabela a seguir.
 
@@ -673,8 +689,8 @@ Total & 4.000{,}00 & Total & 4.500{,}00\\
 \end{task}
 
 
-\arrange{uma concepção de educação financeira}
-\phantomsection\label{fin-arg-1}
+\arrange{Uma Concepção de Educação Financeira}
+\label{fin-arg-1}
 
 Observe que na primeira atividade, somos inclinados a pensar que a inflação acumulada nos dois anos é a soma das inflações em cada ano. A ideia mais simples e usual é recorrer ao processo aditivo. Nosso cérebro adora atalhos e gosta de dar respostas rápidas a problemas numéricos \citep{kahneman2012}. Nesse caso, esse atalho nos leva a um engano, podendo ter como consequência aceitar um reajuste que não repõe a inflação acumulada, ou seja, que não mantém o poder de compra desse salário. Assim, não compreender os aspectos matemáticos dessa situação pode levar a uma redução do poder de compra de uma família. Quantas pessoas você conhece que realmente acham que os 18\% de reajuste corrigiriam a inflação acumulada nos dois anos? Mas, por que não corrige?
 
@@ -687,7 +703,7 @@ Consideremos um produto que custava 100 reais no início no final de 2017, e que
 
 \node (A) {100{,}00};
 \node (B) [right of=A] {108{,}00};
-\node (C) [right of=B] {118,8};
+\node (C) [right of=B] {118,80};
 
 \path
 (A) edge [color=\currentcolor, very thick] node [above, black] {2017} node [black,below]  {8\%} (B)
@@ -731,7 +747,7 @@ Já na \textbf{segunda atividade}, é muito comum pensar que a economia a ser re
 
 Qual a economia a ser realizada no mês seguinte ao apresentado? Qual o valor máximo que eles podem gastar para equilibrar o orçamento a família no mês seguinte? 
 
-A resposta é de aproximadamente $1.025$ reais. Isso mesmo! Pois eles precisam economizar os $500$ reais do mês anterior mais os $500$ reais do mês em questão, pois o orçamento está desequilibrado em $500$ reais, e ainda pagar os juros de $25$ reais. Ou seja, ao invés de terem os 4000 reais a disposição, terão apenas $4.000{,}00 - 1.025{,}00 = 2.950{,}00$ reais. Um preço que se paga por gastar mais do que se ganha.
+A resposta é de aproximadamente R\$ $1.025$. Isso mesmo! Pois eles precisam economizar os $500$ reais do mês anterior mais os $500$ reais do mês em questão, pois o orçamento está desequilibrado em $500$ reais, e ainda pagar os juros de $25$ reais. Ou seja, ao invés de terem os 4000 reais a disposição, terão apenas $4.000{,}00 - 1.025{,}00 = 2.975{,}00$ reais. Um preço que se paga por gastar mais do que se ganha.
 
 Isso vai demandar um esforço dos integrantes da família, exigindo sacrifícios durante algum tempo. Essa família precisará redefinir prioridades, estabelecer metas claras, mudar comportamentos, e ter uma atitude que costuma ser considerada bem desafiadora: manter a disciplina para cumprir o que foi planejado. Além dos aspectos matemáticos, nos quais a família precisa se apoiar para equilibrar o orçamento, há aspectos comportamentais que estarão presentes nesse processo.
 
@@ -747,7 +763,7 @@ A partir de agora, vamos então chamar de \textbf{Educação Financeira em Conte
 
 Abordaremos temas como renda e trabalho, planejamento, orçamento e gestão financeira, consumo, cultura e sustentabilidade; o valor do dinheiro no tempo e suas causas: inflação, câmbio, juros e investimentos; equivalência de capitais e de taxas; tributos e contribuições; previdência e proteção, buscando produzir conexões didáticas com a Educação Básica por meio do ensino de matemática, convidando os estudantes a refletirem sobre possíveis consequências de suas decisões e atitudes frente às suas demandas, necessidades, projetos e realizações em sua vida pessoal, familiar e da sociedade em que vivem.
 
-Com esse livro, queremos contribuir para que você seja educado financeiramente, isto é, que seja capazes de:
+Com esse livro, queremos contribuir para que você seja educado financeiramente, isto é, que seja capaz de:
 
 \begin{enumerate}[label=\arabic*.]
 
@@ -900,11 +916,11 @@ t&\cong19{,}12\text{ semanas}
 }{9}
 \end{answer}
 
-\practice{Ampliando a visão sobre EF}
-\phantomsection\label{fin-prac-1}
+\practice{Ampliando a Visão Sobre EF}
+\label{fin-prac-1}
 
 \begin{task}{Armadilha ou oportunidade?}
-\phantomsection\label{fin-ativ-3}
+\label{fin-ativ-3}
 Observe a seguinte bolsa sendo divulgada em duas lojas diferentes:
 
 \begin{figure}[H]
@@ -937,6 +953,7 @@ Em 2013, o desemprego atingia $15{,}7$\% dos jovens de 14 a 24 anos no Brasil. E
 
 \flushright Fonte: \href{https://noticias.uol.com.br/colunas/jamil-chade/2020/03/09/um-a-cada-quatro-jovens-no-brasil-nem-trabalha-e-nem-estuda.htm}{UOL Notícias}
 \end{quote}
+
 \begin{enumerate}
   \item O título da matéria aponta para um problema social. Qual o principal problema e por que ele acontece no Brasil?
   \item Qual foi o aumento, em pontos percentuais, da taxa de desemprego entre os jovens de 2013 para 2019? E qual foi o aumento percentual dessa taxa de 2013 para 2019? Considere que a população total de jovens seja a mesma nos dois anos.
@@ -945,7 +962,7 @@ Em 2013, o desemprego atingia $15{,}7$\% dos jovens de 14 a 24 anos no Brasil. E
 \end{task}
 
 \begin{task}{A Pandemia dos preços}
-\phantomsection\label{fin-ativ-5}
+\label{fin-ativ-5}
 Durante a pandemia, em 2020, observamos um aumento significativo no preço de vários alimentos e de alguns produtos importados. Isso impactou a vida de pessoas de diferentes classes sociais. Leia atentamente as informações a seguir.
 
 \begin{figure}[H]
@@ -966,10 +983,9 @@ Durante a pandemia, em 2020, observamos um aumento significativo no preço de v�
 \end{task}
 
 
-\begin{paginatexto}
-\section*{Explorando: Orçamento e planejamento financeiro}
+\begin{paginatexto}{Orçamento e planejamento financeiro}
 
-\section*{Objetivo geral}
+\subsection*{Objetivo geral}
 
 \begin{itemize}
 \item Abordar noções de orçamento e planejamento financeiro, em nível pessoal e familiar
@@ -986,13 +1002,13 @@ Planejar e executar ações envolvendo a criação e a utilização de aplicativ
 
 \end{habilities}
 
-\section*{Recomendações para o professor}
+\subsection*{Recomendações para o professor}
 
-\subsection{Organização em sala de aula} esse á um tema que pode ser trabalhado em turmas do Ensino Fundamental e do Médio. Começar com a pergunta: quanto você custa mensalmente? Pode ser um caminho interessante, porque convida o aluno a pensar nas mais variadas categorias de despesas, no valor do trabalho, na adequação da renda às despesas. Coletar informações sobre o orçamento das famílias exige cuidado para não causar constrangimentos, mas precisa ser discutida de forma responsável e adquada à idade.
+\paragraph{Organização em sala de aula} esse á um tema que pode ser trabalhado em turmas do Ensino Fundamental e do Médio. Começar com a pergunta: quanto você custa mensalmente? Pode ser um caminho interessante, porque convida o aluno a pensar nas mais variadas categorias de despesas, no valor do trabalho, na adequação da renda às despesas. Coletar informações sobre o orçamento das famílias exige cuidado para não causar constrangimentos, mas precisa ser discutida de forma responsável e adquada à idade.
 
-\subsection{Dificuldadade previstas} em relação aos aspectos matemáticos, os conceitos são simples, não havendo complexidades significativas, pois envolve as quatros operações elementares com números racionais e porcentagem. O uso da calculadora pode ajudar e muito nessa abordagem.
+\paragraph{Dificuldadade previstas} em relação aos aspectos matemáticos, os conceitos são simples, não havendo complexidades significativas, pois envolve as quatros operações elementares com números racionais e porcentagem. O uso da calculadora pode ajudar e muito nessa abordagem.
 
-\subsection{Sugestões gerais} uma possibilidade para se abordar esse tema é, quando estiver trabalhando conceitos como porcentagem, números racionais ou ainda conceitos de estatística, o professor pode aproveitar sua programação para trabalhar com orçamento e planejamento financeiro em qualquer série ou cicle, conforme a sua disponibilidade e vontade.
+\paragraph{Sugestões gerais} uma possibilidade para se abordar esse tema é, quando estiver trabalhando conceitos como porcentagem, números racionais ou ainda conceitos de estatística, o professor pode aproveitar sua programação para trabalhar com orçamento e planejamento financeiro em qualquer série ou cicle, conforme a sua disponibilidade e vontade.
 
 As atividades aqui do livro aberto sobre o tema são ricas e variadas, e muitas delas podem ser aplicadas diretamente já no Ensino Fundamental. Cabe ao professor avaliar e/ou adaptar para a sua realidade.
 
@@ -1000,7 +1016,7 @@ Leve em consideração, sempre que puder, o contexto sócio-econômico dos estud
 
 A parte de estatística que pode ser (não necessariamente tem que ser) trabalhada, tais como média, média móvel, série histórica (despesas com luz, gás, telefone), pode ser um ponto de dificuldade. Todavia, tem enorme potencial de aplicação e de compreensão das regularidades e sazonalidades das receitas e despesas pessoais e familiares.
 
-\section*{Enriquecimento da discussão}
+\subsection*{Enriquecimento da discussão}
 
 Esse é u'm ótimo tema para se usar ferramentas digitais para organizar e analisar dados, dentre eles destacamos as planilhas eletrônicas. Sugerimos que a inserção no mundo das planilhas pode ser feita por meio da abordagem desse tema. Temos uma excelente oportunidade de usar planilha para aprender noções de planejamento e orámento, e ao mesmo tempo, investigar situações financeiras para aprender ou reforçar noções matemáticas e desenvolver habilidades de construção de planilhas eletrônicas.
 
@@ -1010,8 +1026,8 @@ Por fim, sugerimos o livro \textit{Preciso me planejar} de \cite{zentgraf2015}, 
 
 \end{paginatexto}
 
-\explore{orçamento e planejamento financeiro}
-\phantomsection\label{fin-exp-2}
+\explore{Orçamento e Planejamento Financeiro}
+\label{fin-exp-2}
 
 Quantos cursos você planeja fazer esse ano? Quantos livros pretende ler? Onde quer estar profissionalmente daqui a 5 anos? Qual a sua meta pessoal para melhorar a saúde? Quantas horas de estudo serão necessárias para ingressar na graduação daquela Universidade Pública que você tanto deseja? Quantas pessoas quer influenciar e ajudar na próxima semana? Participará de algum projeto ou ação social, de maneira voluntária, doando seu tempo e sua atenção a alguém que ama, ou simplesmente não conhece, mas que precisa? Para onde vai viajar, e como vai conseguir fazer isso? Quanto de dinheiro vai precisar para realizar seus desejos? 
 
@@ -1074,7 +1090,7 @@ Resposta pessoa. Pergunta aberta.
 \end{answer}
 
 \begin{task}{Como gasto o meu dinheiro?}
-\phantomsection\label{fin-ativ-6}
+\label{fin-ativ-6}
 
 Analise a charge a seguir, publicada em 06/10/2019, na Folha de São Paulo.
 
@@ -1097,13 +1113,13 @@ Na atividade anterior, o gráfico apresentou várias informações a respeito do
 
 
 \begin{task}{Crise à vista: hora de apertar o cinto!}
-\phantomsection\label{fin-ativ-7}
+\label{fin-ativ-7}
 
 Com a crise econômica existente no país e também no Estado do Rio de Janeiro, muitas pessoas ficaram desempregadas. Imagine que sua família tivesse uma renda de $5.000$, e devido à crise diminuísse para $3.000$ reais. O que você sugeriria para seus responsáveis em relação a essa nova realidade?
 \end{task}
 
-\arrange{DIAGNÓSTICO E PLANO DE AÇÃO}
-\phantomsection\label{fin-arg-2}
+\arrange{Diagnóstico e Plano de Ação}
+\label{fin-arg-2}
 
 Veja que um \textbf{orçamento financeiro pessoal} é como um diagnóstico, ou seja, um detalhamento das receitas e despesas de uma ou mais pessoas, em um determinado intervalo de tempo (geralmente mensal), para se identificar de onde vem e para onde vai o dinheiro da família. Da família. Mesmo que você não ganhe, com certeza você gasta. Por isso deve ter responsabilidades e deveres nessa história. E aprender a pensar nisso desde cedo, e aos poucos.
 
@@ -1126,7 +1142,7 @@ Planejamento financeiro não é uma mágica. Muito menos para enriquecer. Na pr�
 
 Assim temos duas ideias que se complementam, que podem e devem ser postas em ação numa relação praticamente simbiótica, e que entendemos ser muito importante na vida financeira das pessoas, uma vez que um diagnóstico pode ajudar o indivíduo, e/ou sua família, a entender o movimento do dinheiro, contribuindo para identificar possíveis desperdícios, reavaliar prioridades, identificar os candidatos a cortes, ampliar as receitas, estimar o tempo necessário para se atingir determinadas metas, dentre outras ações.
 
-\section{Mas como montar um orçamento financeiro? Por onde começar?}
+\subsection{Mas como montar um orçamento financeiro? Por onde começar?}
 
 A primeira etapa é o \textbf{registro}, onde deve-se coletar os extratos, boletos pagos, cupons fiscais, contracheque, faturas, recibos de aluguel e outros documentos que comprovem o que foi gasto ou recebido naquele mês.
 
@@ -1175,7 +1191,7 @@ Nessa atividade convidamos o aluno a pensar no orçamento da própria família. 
 }{1}
 \end{answer}
 \begin{task}{O enigma das despesas invisíveis}
-\phantomsection\label{fin-ativ-8}
+\label{fin-ativ-8}
 
 Douglas é um estudante da 2ª série do Ensino Médio de um Colégio Estadual no Rio de Janeiro. 
 
@@ -1259,7 +1275,7 @@ O problema envolve duas partes. Na primeira parte temos uma investigação busca
 }{1}
 \end{answer}
 \begin{task}{Bola de neve}
-\phantomsection\label{fin-ativ-9}
+\label{fin-ativ-9}
 
 Mariana é uma adolescente muito estudiosa que mora com seu pai, sua mãe e um irmão mais novo de 10 anos. Essa família tem uma renda mensal fixa de 3.500 reais. Para melhorar as finanças da família, eles resolveram elaborar um orçamento doméstico. Para isso, registraram todos os gastos da família nos meses de janeiro, fevereiro e março de 2019. O resultado está apresentado nos quadros a seguir, com os valores em reais. 
 
@@ -1362,11 +1378,11 @@ A análise de vários meses permite ter uma fotografia sobre hábitos de consumo
 }{1}
 \end{answer}
 
-\practice{Orçamento e planejamento financeiro}
-\phantomsection\label{fin-prac-2}
+\practice{Orçamento e Planejamento Financeiro}
+\label{fin-prac-2}
 
 \begin{task}{Sonhos de uma bolsista}
-\phantomsection\label{fin-ativ-10}
+\label{fin-ativ-10}
 
 Adrieny tem 15 anos e é aluna da 1ª série do Ensino Médio em uma escola pública no Rio de Janeiro. Ela participa de um programa de iniciação científica nessa escola, e por isso ganha uma bolsa de iniciação científica júnior no valor de R\$100{,}00, durante 8 meses, se cumprir satisfatoriamente todas as tarefas solicitadas, ao longo desse tempo. Considerando que a aluna não paga passagem e nem alimentação no período em que está na escola, responda aos itens abaixo.
 
@@ -1377,7 +1393,7 @@ Adrieny tem 15 anos e é aluna da 1ª série do Ensino Médio em uma escola púb
 \end{task}
 
 \begin{task}{Vivendo a vida no \textit{Slackline}}
-\phantomsection\label{fin-ativ-11}
+\label{fin-ativ-11}
 \textit{Adaptado de \cite{santana2019}}
 
 O esquema abaixo representa o registro de uma pessoa, sem filhos,  que recebe um salário de $1.502$ reais por mês.
@@ -1463,10 +1479,9 @@ Outros Gastos & -R\$  \\
 
 
 
-\begin{paginatexto}\raggedcolumns
-\section*{O valor do dinheiro no tempo}
+\begin{paginatexto}{O valor do dinheiro no tempo}\raggedcolumns
 
-\section*{Objetivo geral}
+\subsection*{Objetivo geral}
 
 \begin{itemize}
 \item Abordar fatores que transformam o dinheiro no tempo, tais como juros, inflação e câmbio, e a principal forma de transformação.
@@ -1488,16 +1503,16 @@ Identificar e associar sequências numéricas (PA) a funções afins de domínio
 Identificar e associar sequências numéricas (PG) a funções exponenciais de domínios discretos para análise de propriedades, incluindo dedução de algumas fórmulas e resolução de problemas.
 \end{habilities}
 
-\section*{Sugestões e Recomendações}
-\subsection{Organização em sala de aula} Sugerimos que o professor comece sempre perguntando aos alunos o que podem dizer sobre o valor do dinheiro e sobre o que eles desejam hoje e no futuro. As situações econômicas e financeiras apresentadas logo no início da seção são exemplos que podem ser usados também para motivar a discussão inicial. Convidar os estudantes a pesquisarem informações envolvendo SEF em sites, blogs, jornais, portais, revistas econômicas sobre situações envolvendo SER em sites; blogs; jornais; portais; revistas econômicas; revistas econômicas sobre situações envolvendo inflação; antes de abordar o tema, pode ampliar o escopo de coisas a partir das quais poderão produzir significados. Convide seus alunos a criar a cultura de investigar os fundamentos e a razoabilidade das informações veiculadas nas mídias socias de sociais de forma fundamentada.
+\subsection*{Sugestões e Recomendações}
+\paragraph{Organização em sala de aula} Sugerimos que o professor comece sempre perguntando aos alunos o que podem dizer sobre o valor do dinheiro e sobre o que eles desejam hoje e no futuro. As situações econômicas e financeiras apresentadas logo no início da seção são exemplos que podem ser usados também para motivar a discussão inicial. Convidar os estudantes a pesquisarem informações envolvendo SEF em sites, blogs, jornais, portais, revistas econômicas sobre situações envolvendo SER em sites; blogs; jornais; portais; revistas econômicas; revistas econômicas sobre situações envolvendo inflação; antes de abordar o tema, pode ampliar o escopo de coisas a partir das quais poderão produzir significados. Convide seus alunos a criar a cultura de investigar os fundamentos e a razoabilidade das informações veiculadas nas mídias socias de sociais de forma fundamentada.
 
-\subsection{Dificuldades previstas} Vamos lidar com exponenciais; progressões geométricas; em algum momento logarítmos; raízes de índices variados. O uso da calculadora é indispensável. Diante de dificuldades nos conceitos, vale a pena parar e explicar, ou fazer algum tipo de revisão antes.
+\paragraph{Dificuldades previstas} Vamos lidar com exponenciais; progressões geométricas; em algum momento logarítmos; raízes de índices variados. O uso da calculadora é indispensável. Diante de dificuldades nos conceitos, vale a pena parar e explicar, ou fazer algum tipo de revisão antes.
 
-\subsection{Sugestões gerais} Nessa seção, abordaremos um dos conceitos mais importantes em finanças, o valor do dinheiro no tempo. Basicamente, estamos interessados e sbar o porquê de uma quantia hoje pode valer mais (ter mais poder de compra, por exemplo) ou menos no futuro. Analisaremos situações financeiras envolvendo uma das formas de se transformar o dinheiro no tempo: os juros compostos. Lembre-se que vamos considerar os aspectos matemáticos, juntamente com os aspectos não matemáticos, para discutir transformações do dinheiro no tempo, juntamente com possíveis impactos e consequências na vida das pessoas.
+\paragraph{Sugestões gerais} Nessa seção, abordaremos um dos conceitos mais importantes em finanças, o valor do dinheiro no tempo. Basicamente, estamos interessados e sbar o porquê de uma quantia hoje pode valer mais (ter mais poder de compra, por exemplo) ou menos no futuro. Analisaremos situações financeiras envolvendo uma das formas de se transformar o dinheiro no tempo: os juros compostos. Lembre-se que vamos considerar os aspectos matemáticos, juntamente com os aspectos não matemáticos, para discutir transformações do dinheiro no tempo, juntamente com possíveis impactos e consequências na vida das pessoas.
 
 Assim, a matemática financeira será uma das ferramentas para se construir educação financeira, e ao mesmo tempo, a investigação de situações financeiras em sala de aula pode gerar boas oportunidades para se aprender matemática, incluindo a matemática financeira.
 
-\section*{Enriquecimento da discussão}
+\subsection*{Enriquecimento da discussão}
 
 Por que o dinheiro se transforma no tempo? Como o dinheiro se transforma no tempo? 
 
@@ -1519,14 +1534,14 @@ Perceba que juros são apenas um dos fatores que influenciam na transformação 
 
 \begin{texto}
 {\def\currentcolor{session1}
-\section{Objetivos específicos}
+\subsection{Objetivos específicos}
 \begin{itemize}
 \item Identificar diferentes fatores que influenciam o valor do dinheiro no tempo, tais como juros, inflação, câmbio, investimentos e percepção de utilidade.
 \item Resolver problemas relacionados a juros simples ou compostos
 \item Analisar e tomar decisões em situações econômico-financeiras que envolvam o valor do dinheiro no tempo, considerando aspectos matemáticos e não matemáticos.
 \end{itemize}
 
-\section{Sugestões e discussões}
+\subsection{Sugestões e discussões}
 
 Aqui apresentamos três atividades que formam um conjunto de situações para iniciarmos a exploração da noção de valor do dinheiro no tempo e suas formas de transformação.
 Recomendamos ao professor (a) que leia as orientações no início dessa seção para ampliar a visão sobre o valor do dinheiro no tempo, os diferentes fatores que o influenciam, bem como para não se limitar a achar que abordar o valor do dinheiro no tempo significa ensinar juros simples e juros compostos. 
@@ -1541,8 +1556,8 @@ Finalmente na terceira temos uma discussão sobre pagamento de juros no contexto
 A solução comentada será apresentada no próprio texto, dentro do tópico "Organizando as ideias"
 }
 \end{texto}
-\explore{o valor do dinheiro no tempo}
-\phantomsection\label{fin-exp-3}
+\explore{O Valor do Dinheiro no Tempo}
+\label{fin-exp-3}
 Quando tomamos decisões financeiras, nos mais variados ciclos da vida – da juventude à velhice, passando pela vida adulta – nos deparamos com escolhas intertemporais, ou seja, escolhas relacionadas ao binômio: Sacrifícios $\times$ Benefícios, que acontecem em momentos diferentes no tempo. Desfrutar o momento ou cuidar do amanhã? Assim, trocas intertemporais \citep{fonseca2005} são situações envolvendo escolhas em que valores ou benefícios usufruídos mais cedo acarretam algum tipo de ônus ou custo a ser pago mais à frente. Vejamos alguns exemplos práticos
 
 \begin{itemize}
@@ -1551,7 +1566,7 @@ Quando tomamos decisões financeiras, nos mais variados ciclos da vida – da ju
   \item Comprar um celular novo hoje ou usar o dinheiro para fazer um curso de informática nos próximos seis meses?
   \item Poupar dinheiro no presente para realizar algum sonho ou projeto no futuro (quando isso é possível ou quando o nosso sistema límbico nos permite) ou comprar agora e viver um dia de cada vez sem pensar muito no futuro?
   \item Comprar a passagem agora ou esperar correndo o risco que o preço aumente?
-  \item Paagar à vista ou pagar parcelado?
+  \item Pagar à vista ou pagar parcelado?
   \item Aproveitar a promoção de produtos de primeira necessidade agora, e ter que se apertar um pouco agora, ou comprar mais caro depois, para não se primvar do que está acostumado?
   \item Investir parte da renda para realizar sonhos a médio ou longo prazos ou viver e gastar sem se preocupar com o futuro?
   \item Investir durante um determinado período da vida para constituir um fundo de reserva para a aposentadoria ou para situações de imprevisto, considerando fatores como aumento da expectativa de vida, a redução da capacidade de trabalho na velhice e os riscos a longo prazo ou ignorar completamente esses aspectos e viver a vida intensamente sem se preocupar com tais questões?
@@ -1562,7 +1577,7 @@ Esses são apenas alguns exemplos de trocas intertemporais. Em cada uma dessas s
 
 \clearpage
 \begin{task}{Iguais podem ser diferentes?}
-\phantomsection\label{fin-ativ-12}
+\label{fin-ativ-12}
 
 Você tem duas possibilidades de fazer uma poupança:
 
@@ -1588,7 +1603,7 @@ Considere que o dinheiro renda $1$\% ao mês, rendendo sempre sobre o saldo acum
 \end{task}
 
 \begin{task}{Inflação: o que eu tenho a ver com isso?}
-\phantomsection\label{fin-ativ-13}
+\label{fin-ativ-13}
 
 Leia atentamente as chamadas de algumas matérias veiculadas na internet sobre o impacto da inflação na vida das pessoas?
 
@@ -1612,7 +1627,7 @@ Leia atentamente as chamadas de algumas matérias veiculadas na internet sobre o
 \end{task}
 \needspace{.1\textheight}
 \begin{task}{Passou do vencimento: e agora?}
-\phantomsection\label{fin-ativ-14}
+\label{fin-ativ-14}
 
 José tinha uma conta para pagar no valor de R\$ $1.328{,}78$ com vencimento para 15/06/2019. Entretanto, ele só conseguiu pagar a conta no dia 21/06/2019
 
@@ -1647,8 +1662,8 @@ Em todo sistema monetário forte, é preciso uma moeda que seja confiável, impr
 
 \end{knowledge}
 
-\arrange{Valor presente e valor futuro}
-\phantomsection\label{fin-arg-3}
+\arrange{Valor Presente e Valor Futuro}
+\label{fin-arg-3}
 
 Antes de começarmos a pensar em valor presente e valor futuro, é importante entender o que é juro. O juro é o quanto se paga para usar o dinheiro que não se tem. É uma espécie de aluguel do dinheiro.
 
@@ -1658,7 +1673,7 @@ Na segunda atividade, podemos dizer que a variação cambial intervere no valor 
 
 Na terceira, os juros e o valor após o vencimento são calculados da mesma forma que seriam calculados os juros da primeira atividade?
 
-Convidamos você a investigar, nas próximas páginas, que é possível determinar a melhor estratégia usando um conceito muito importante: o valor do dinheiro no tempo. E também como analisar o impacto da inflação e da variação cambial na transformação do dinheiro no tempo.
+Convidamos você a investigar, nas próximas páginas, que é possível determinar a melhor estratégia, do ponto de vista financeiro, usando usando um conceito muito importante: o valor do dinheiro no tempo. E também como analisar o impacto da inflação e da variação cambial na transformação do dinheiro no tempo.
 
 Na \textbf{primeira situação}, apesar do total de dinheiro investido ser o mesmo (ou seja, os valores nominais investidos são iguais: $400 \times 120 = 200 \times 240$), eles serão depositados em momentos diferentes. E isso vai gerar valores acumulados em uma mesma data, também diferentes. Depositar quantias maiores antes produz mais dinheiro no futuro do que depositar quantias menores, considerando um mesmo intervalo de tempo total. E isso tem impactos a longo prazo importantes, e tem relação com aspectos prevideciários relevantes para uma população que está vivendo, em média, mais tempo.
 
@@ -1783,7 +1798,7 @@ A situação referente ao investimento de Humberto é uma troca intertemporal, p
 
 Na \textbf{segunda atividade} temos duas situações envolvendo o aumento de preços produzido pela alta do dólar. Uma foi no preço do pão; a outra no preço de produtos eletrônicos. Mas por que isso acontece?
 
-Isso acontece porque vários produtos, dentre eles a farinha de trigo para a produção do pão, e dos componentes eletrônicos no caso de produtos eletroeletrônicos (celulares, smartphones, televisores, caixas de som, geladeiras, computadores, tablets, fones, dentre outros) têm seus preços atrlados ao dólar. As empresas nos vendem os produtos em reais, mas compram trigo e eletrônicos dos fornecedores pagando em dólares. E a quantidade de reais necessários para comprar um dólar pode variar no tempo. Eis o dinheiro se transformando no tempo, e isso não tem nada a ver com juros.
+Isso acontece porque vários produtos, dentre eles a farinha de trigo para a produção do pão, e dos componentes eletrônicos no caso de produtos eletroeletrônicos (celulares, smartphones, televisores, caixas de som, geladeiras, computadores, tablets, fones, dentre outros) têm seus preços atrelados ao dólar. As empresas nos vendem os produtos em reais, mas compram trigo e eletrônicos dos fornecedores pagando em dólares. E a quantidade de reais necessários para comprar um dólar pode variar no tempo. Eis o dinheiro se transformando no tempo, e isso não tem nada a ver com juros.
 
 Por exemplo, se 1 dólar custava 4 reais em janeiro e 5 reais em maio, isso significa que os preços em reais provavelmente vão mudar. Para comprar um produto que custava 1000 dólares no primeiro semestre de 2020, a empresa compradora precisará de 4.000 reais em janeiro e de 5.000 reais em maio. Observe que o preço de 1.000 dólares não mudou, mas em reais o preço aumentou.
 
@@ -1861,14 +1876,16 @@ As pessoas atribuem valor às coisas tendo ou não consciência disso. E esse va
 
 Quando falamos de valor do dinheiro no tempo, estamos discutindo apenas uma visão, dentre muitas, sobre qual é o valor que o dinheiro realmente possui. E mesmo assim, muitas interpretações podem surgir.
 
+
 Por exemplo, qual o valor de uma cesta básica de 150 reais para uma família carente e para uma família abastada? $1.000$ reais para um jovem da perifeira no início de carreira tem o mesmo valor que $1.000$ reais para um jovem rico? O que tem mais valor: possuir uma casa própria e ficar pagando 30 anos, ou morar de aluguel e usar o dinheiro dos juros para pagar o aluguel e com a sobra viajar e conhecer diversos lugares no mundo?
+
+O que pode ter muito valor para você, pode não ter para o seu irmão e amigo. O que pode ter muito valor para você hoje, pode não ter para você daqui a 15 anos. O que pode ter pouco valor para a sociedade hoje, pode ter muito valor em alguns meses no futuro. Por exemplo, qual o valor que a sociedade brasileira dava ao álcool em gel em janeiro de 2020? E em abril de 2020?
+\clearpage
 
 \begin{wrapfigure}[12]{r}{.275\textwidth}
 \vspace{-1.1em}
 \includegraphics[width=.275\textwidth]{financeira8}
 \end{wrapfigure}
-O que pode ter muito valor para você, pode não ter para o seu irmão e amigo. O que pode ter muito valor para você hoje, pode não ter para você daqui a 15 anos. O que pode ter pouco valor para a sociedade hoje, pode ter muito valor em alguns meses no futuro. Por exemplo, qual o valor que a sociedade brasileira dava ao álcool em gel em janeiro de 2020? E em abril de 2020?
-
 Haj Patel, economista e professor da universidade de Berkeley, nos diz que vivemos uma era em que é muito comum associar a ideia de "valor das coisas"{} ao preço que elas custam. Para ele, um dos problemas dessa associação entre valor e preço é o fato de que o preço pode ser distorcido e o valor também. O valor da etiqueta não se resume ao custo de produção somado à margem de lucro. Custos ambientais (emissão de CO$_{\text{2}}$, poluição de rios, degradação da terra na extração de minerais), de saúde (alimentos associados a cardiopatias e obesidade), e sociais (trabalho escravo, subempregos, geração de conflitos locais) estão embutidos no preço dos produtos.
 
 Além disso, frases como: se é caro deve ser bom, ou ainda, tem que custar caro porque é muito bom, fazem parte da opinião de muita gente que conhecemos, e são bem frequentes na sociedade predominantemente capitalista que experimentamos. Como Oscar Wilde escreveu a mais de um século: "hoje em dia, as pessoas sabem o preço de tudo e o valor de nada".
@@ -1980,11 +1997,11 @@ Finalmente, levamos em consideração o custo de oportunidade de Vanessa, ou sej
 }{0}
 \end{answer}
 
-\practice{Valor presente e valor futuro}
-\phantomsection\label{fin-prac-3}
+\practice{Valor Presente e Valor Futuro}
+\label{fin-prac-3}
 
 \begin{task}{O rapaz que editava vídeos}
-\phantomsection\label{fin-ativ-15}
+\label{fin-ativ-15}
 
 Fábio é um rapaz apaixonado por futebol, e tem se aperfeiçoado em editar vídeos. Mesmo tendo apenas 16 anos, ele ajuda seu pai e sua mãe na venda de bolos e doces pela internet. Para conciliar essas duas atividades com suas aulas na escola pela manhã, com curso de inglês à tarde e com o futebol dos amigos nos finais de semana, ele precisa de planejamento e disciplina. Um dos frutos de tudo isso é que ao longo desse ano ele conseguiu juntar uma quantia de R\$ $2.000{,}00$. Ele decidiu gastar R\$ $1.000{,}00$ com ele, comprando roupas e fazer um novo surso sobre artes digitais roupas digitais e fazendo um novo curso sobre artes digitais, e guardar os outros R\$ $1.000{,}00$. Mas onde vai guardar esse dinheiro? Ele considera três opções:
 \begin{itemize}
@@ -2004,7 +2021,7 @@ Considere que, durante os 12 meses seguintes, a aplicação de Fábio na poupan�
 
 \clearpage
 \begin{task}{O valor do amanhã}
-\phantomsection\label{fin-ativ-16}
+\label{fin-ativ-16}
 
 Pensando no longo prazo, Fabio fez uma simulação em outro título, investindo os 1.000 reais em 01/ago/2020, e retirando o acumulado na data do vencimento em 01/ja/2026. O resultado da simulação está apresentado a seguir, onde os investimentos simulados no primeiro quadro estão representados no gráfico a seguir.
 
@@ -2025,7 +2042,7 @@ Olhando para as simulações, responda:
 
 
 \begin{task}{Tomando decisões diante das emergências}
-\phantomsection\label{fin-ativ-17}
+\label{fin-ativ-17}
 
 Vanessa teve uma emergência e precisa de $10.000$ reais para daqui a dois dias. Ela pode usar o cheque especial para fazer um empréstimo pelo bankline, ou buscar uma alternativa mais barata. Pensando um pouco, ela lembra que tem $10.000$ reais na poupança, guardados por ela mesmo para alguma emergência. Considere que esse dinheiro na poupança renda $0{,}5$\% ao mês para Vanessa, enquanto que as taxas do cheque especial cobradas pelos principais bancos brasileiros estão apresentadas no quadro a seguir. Ela precisa decidir se tira o dinheiro da poupança ou se pega dinheiro com o banco usando o cheque especial.
 
@@ -2073,11 +2090,9 @@ BCO SANTANDER (BRASIL) S.A. & 7,95 & 150,36 \\
 \end{task}
 
 
-\begin{paginatexto}
+\begin{paginatexto}{O valor do dinheiro no tempo: capitais equivalentes}
 
-\section*{O valor do dinheiro no tempo: capitais equivalentes}
-
-\section*{Objetivos gerais}
+\subsection*{Objetivos gerais}
 
 \begin{itemize}
 \item Investigar situações financeiras que envolvem o valor do dinheiro no tempo, considerando o conceito de capitais equivalentes 
@@ -2104,18 +2119,18 @@ Identificar e associar sequências numéricas (PA) a funções afins de domínio
 Identificar e associar sequências numéricas (PG) a funções exponenciais de domínios discretos para análise de propriedades, incluindo dedução de algumas fórmulas e resolução de problemas.
 \end{habilities}
 
-\section*{Recomendações para o professor}
+\subsection*{Recomendações para o professor}
 
-\subsection{Organização em sala de aula} Essa seção pode ser vista como uma extensão da anterior. Vamos investigar situações financeiras em que podemos ter um ou mais capitais se transformando em um ou mais capitais ao longo do tempo. A primeira atividade aponta para isso, e pode ser ralizada em grupos de quatro alunos, geranto interação entre os estudantes e identificação com os personagens da atividade. Convide seus alunos a criar a cultura de investigar os fundamentos e razoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
+\paragraph{Organização em sala de aula} Essa seção pode ser vista como uma extensão da anterior. Vamos investigar situações financeiras em que podemos ter um ou mais capitais se transformando em um ou mais capitais ao longo do tempo. A primeira atividade aponta para isso, e pode ser ralizada em grupos de quatro alunos, geranto interação entre os estudantes e identificação com os personagens da atividade. Convide seus alunos a criar a cultura de investigar os fundamentos e razoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
 
-\subsection{Dificuldades previstas} Os cálculos agora são um pouco mais complexos, e podem demandar maior manipulaçõa algébrica enolvendo equações fracionárias. Começar de exemplos com poucos valores, e estruturar o problema usando a representação temporal que privilegia o presente para o futuro para o futuro pode ajudar na abordagem do tema.
+\paragraph{Dificuldades previstas} Os cálculos agora são um pouco mais complexos, e podem demandar maior manipulaçõa algébrica enolvendo equações fracionárias. Começar de exemplos com poucos valores, e estruturar o problema usando a representação temporal que privilegia o presente para o futuro para o futuro pode ajudar na abordagem do tema.
 
-\subsection{Sugestões gerais}
+\paragraph{Sugestões gerais}
 Falar sobre capitais equivalentes é falar sobre trocas intertemporais, tendo ou não consciência disso. Reforçamos que nessa seção vamos investigar situações em que podemos ter um ou mais capitais se transformando em um ou mais capitais ao longo do tempo.
 
 Primeira sugestão: Ir do presente para o futuro é mais intuitivo e costuma ser melhor recebido pelos alunos segundo algumas pesquisas, tais como \cite{campos2013}, \cite{muniz2016b}, \cite{santana2019}. Então sugerimos fortemente iniciar com abordagens em que o dinheiro se transforme do presente para o futuro. A seções organizando mostra de, de forma bem clara, um exemplo disso. Comparar os valores em cada data, ainda que se faça isso mais de uma vez, costuma ser melhor, segundo os estudos de \citeauthor{muniz2016a} (\citeyear{muniz2016b}), do que simplesmente trazer todos os valores do futuro para o presente. Entenda bem, sinda que a equivalência de capitais nos forneça que não importa a data de comparação de capitais, o que importa é que seja a mesma. Trabalhar representações do presente para o futuro se alinha com a nossa percepção de tempo, e isso costuma ser muito bem recebido e utilizado pelos alunos.
 
-\section{Enriquecimento da discussão}
+\subsection*{Enriquecimento da discussão}
 
 Para abordar capitais equivalentes, sugerimos fortemente a leitura completa de dois artigos, sendo o primeiro sobre a noção de trocas temporais e o segundo sobre o conceito de representações temporais. Cuidado, pois são coisas bem diferentes, ainda que o conceito de representação temporal tenha sido criado pelo autor, em sua tese de doutorado, para a descrição e abordagem didática de situações financeiras envolvendo trocas intertemporais.
 
@@ -2178,15 +2193,15 @@ Reforçamos que dois ou mais capitais são equivalentes, a uma mesma taxa, quant
 A Atividade será detalhadamente investigada no próximo organizando as ideias.
 }{1}
 \end{answer}
-\explore{capitais equivalentes}
-\phantomsection\label{fin-exp-4}
+\explore{Capitais Equivalentes}
+\label{fin-exp-4}
 
 Nas situações anteriores, tínhamos uma quantia se transformando em outra ao longo do tempo, ou seja, um valor presente se transformando em um valor futuro. Convidamos você a investigar e refletir com a gente situações em que podemos ter um ou mais capitais se transformando em um ou mais capitais ao longo do tempo.
 
 
 
 \begin{task}{e o tempo levou!}
-\phantomsection\label{fin-ativ-18}
+\label{fin-ativ-18}
 
 Considere que quatro estuandtes da última série do Ensino Médio combinaram poupar trezentos reais cada um para comprarem um presente de formatura no final de 2019. As estratégias de poupança usadas por eles foram todas diferentes entre si, conforme mostra o quadro a seguir.
 
@@ -2197,13 +2212,13 @@ Considere que quatro estuandtes da última série do Ensino Médio combinaram po
 \hline
 \tcolor{} & \tcolor{jul/19} & \tcolor{ago/19} & \tcolor{set/19} & \tcolor{out/19} & \tcolor{nov/19} & \tcolor{dez/19} \\
 \hline
-\tcolor{Giovana} & $100$ & $100$ & $100$ & & & \\
+{Giovana} & $100$ & $100$ & $100$ & & & \\
 \hline
-\tcolor{Polyana} & $300$ & & & & & \\
+{Polyana} & $300$ & & & & & \\
 \hline
-\tcolor{Juliana} & $150$ & $150$ & & & & \\
+{Juliana} & $150$ & $150$ & & & & \\
 \hline
-\tcolor{Luiz Felipe} & & & $300$ & & & \\
+{Luiz Felipe} & & & $300$ & & & \\
 \hline
 \end{tabular}
 \end{table}
@@ -2216,8 +2231,8 @@ Considere que quatro estuandtes da última série do Ensino Médio combinaram po
 \end{enumerate}
 \end{task}
 
-\arrange{capitais equivalentes}
-\phantomsection\label{fin-arg-4}
+\arrange{Capitais Equivalentes}
+\label{fin-arg-4}
 
 Vamos analisar a transformação do dinheiro no tempo para cada um dos quatro estudantes. 
 
@@ -2437,11 +2452,11 @@ Como nosso intuito foi focar na discussão sobre a taxa de juro embutida, essa s
 
 Um erro muito comum é tentar obter o valor acumulado na primeira estratégia, somando as três parcelas de 100 reais, para depois calcular o valor futuro, usando 3 meses como tempo de aplicação por exemplo. Isso não gera o Valor Futuro correto, pois cada parcela teve um tempo de aplicação diferente. Assim, se o dinheiro se transforma no tempo, então só podemos somar quantias se elas estiverem referidas à uma mesma data.
 
-\practice{Capitais equivalentes}
-\phantomsection\label{fin-prac-4}
+\practice{Capitais Equivalentes}
+\label{fin-prac-4}
 
 \begin{task}{Demissão na pandemia}
-\phantomsection\label{fin-ativ-19}
+\label{fin-ativ-19}
 
 Uma empresa demite 10 funcionários em abril de 2020, em função da pandemia, gerando um custo com indenizações totalmente de 100 mil reais. Lamentavelmente, a empresa, mesmo dispondo dos recursos para pagar todas as indenizações, decide pagar dentro do prazo legal (maio de 2020) somente as indenizações de 5 desses funcionários, que totalizaram 40 mil reais, deixando para pagar as outras 5 indenizações, no valor total de 60 mil reais, 3 meses após essa primeira leva, ou seja, em agosta de 2020.
 \begin{enumerate}
@@ -2453,7 +2468,7 @@ Uma empresa demite 10 funcionários em abril de 2020, em função da pandemia, g
 
 
 \begin{task}{O enigma das taxas de juros invisíveis}
-\phantomsection\label{fin-ativ-20}
+\label{fin-ativ-20}
 
 Calinka comprou um equipamento para sua empresa que reduz a emissão de CO$_2$ na atmosfera, cujo preço de tabela era de 10.000 reais. O vendedor lhe ofereceu $5$\% de desconto na compra à vista. Alternativamente, ela poderia pagar em duas vezes, sendo $40$\% do preço de tabela, um mês após a compra, e $60$\% deste preço dois meses após a compra.
 \begin{enumerate}
@@ -2462,10 +2477,9 @@ Calinka comprou um equipamento para sua empresa que reduz a emissão de CO$_2$ n
 \end{enumerate}
 \end{task}
 
-\begin{paginatexto}
-\section*{O valor do dinheiro no tempo: Séries uniformes}
+\begin{paginatexto}{O valor do dinheiro no tempo: Séries uniformes}
 
-\section*{Objetivo geral}
+\subsection*{Objetivo geral}
 \begin{itemize}
 \item Investigar situações financeira que envolvem o valor do dinheiro no tempo, considerando as série uniformes.
 
@@ -2486,13 +2500,13 @@ Identificar e associar sequências numéricas (PA) a funções afins de domínio
 Identificar e associar sequências numéricas (PG) a funções exponenciais de domínios discretos para análise de propriedades, incluindo dedução de algumas fórmulas e resolução de problemas.
 \end{habilities}
 
-\section*{Recomendações para o professor}
+\subsection*{Recomendações para o professor}
 \vspace{-1em}
-\subsection{Organização em sala de aula} Essa seção pode ser vista como uma extensão e amplicação das duas anteriores. Vamos investigar situações financeiras em que podemos ter um captial se transformando em uma série uniformes, ou seja, uma série de valores iguais, igualmente distribuídos no tempo. A primeira atividade aponta para isso, e pode ser realizada em grupos de quatro alunos, gerando interação entre os estudantes. Convide seus alunos a criar a cultura de investigar os fundamentos e arazoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
+\paragraph{Organização em sala de aula} Essa seção pode ser vista como uma extensão e amplicação das duas anteriores. Vamos investigar situações financeiras em que podemos ter um captial se transformando em uma série uniformes, ou seja, uma série de valores iguais, igualmente distribuídos no tempo. A primeira atividade aponta para isso, e pode ser realizada em grupos de quatro alunos, gerando interação entre os estudantes. Convide seus alunos a criar a cultura de investigar os fundamentos e arazoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
 
-\subsection{Dificuldades previstas} Os cálculos agora são bem mais complexos, e podem demandar maior manipulação algébrica envolvendo equações fracionárias. Começar de exmplos com poucos valores, e estruturar o problema usando a representação temporal que priviligeia o presente para o futuro, pode djudar na abordagem do tema.
+\paragraph{Dificuldades previstas} Os cálculos agora são bem mais complexos, e podem demandar maior manipulação algébrica envolvendo equações fracionárias. Começar de exmplos com poucos valores, e estruturar o problema usando a representação temporal que priviligeia o presente para o futuro, pode djudar na abordagem do tema.
 
-\subsection{Sugestões gerais}
+\paragraph{Sugestões gerais}
 
 Falar sobre capitais equivalentes é falar sobre trocas intertemporais, tendo ou não consciência disso. Reforçamos que nessa seção vamos investigar situações em que podemos ter um ou mais capitais se transformando em ou mais capitais ao longo do tempo.
 
@@ -2502,15 +2516,15 @@ Segunda sugestão: comparar os valores em cada data, ainda que se faça isso mai
 
 Terceira sugestão: entenda bem, ainda que a equivalência de capitais nos forneça que não nos forneção que não importa a data de comparação de capitais, mas o que importa é que seja a mesma, trabalhar representações temporais do presente para o futuro se alinha com a nossa percepção de tempo, e isso costuma ser muito bem recebido e utilizado pelos alunos.
 
-\section{Enriquecimento da discussão}
+\paragraph{Enriquecimento da discussão}
 
 É muito comum vermos produtos e serviços sendo oferecidos com opções de pagamento em prestações mensais e iguais. Esse tipo de situação é a forma mais comum de crédito no Brasil. Temos também situações financeiras em que pessoas depositam mensalmente uma mesma quantia para gerar um acumulado no futuro, que para aposentadoria, quer para a compra de um carro, um consórcio ou outro bem, sendo cobradas delas juros ou não na operação.
 
 Mas não são apenas situações de consumos de bens ou serviços. Há investimentos que nos fornecem a opção de recebermos quantias iguais periodicamente, tais como os títulos que pagam juros semestrais, conforme ilustrado na figura a seguir.
 \end{paginatexto}
 
-\explore{Séries uniformes}
-\phantomsection\label{fin-exp-5}
+\explore{Séries Uniformes}
+\label{fin-exp-5}
 
 É muito comum vermos produtos e serviços sendo oferecidos com opções de pagamento em prestações mensais e iguais. Ou ainda, situações em que pessoas depositam mensalmente uma quantia para gerar um acumulado, quer seja para aposentadoria, quer seja para a compra de um carro, um consórcio, ou outro bem, sendo cobradas delas juros ou não na operação. Você verá que as trocas intertemporais atacam novamente. A figura a seguir é um exemplo desse tipo de situação.
 
@@ -2554,7 +2568,7 @@ A Atividade será detalhadamente investigada no próximo organizando as ideias.
 \end{answer}
 
 \begin{task}{disciplina e paciência: nascidas uma para a outra!}
-\phantomsection\label{fin-ativ-21}
+\label{fin-ativ-21}
 
 Considere que Isabel começou a planejar uma boa poupança para realizar alguns sonhos. Para isso resolveu que, a partir de janeiro do próximo ano, aplicará mensalmente 300 reais em um investimento com rentabilidade média de 1\% ao mês. 
 
@@ -2565,8 +2579,8 @@ Considere que Isabel começou a planejar uma boa poupança para realizar alguns 
 
 \end{task}
 
-\arrange{séries uniformes}
-\phantomsection\label{fin-arg-5}
+\arrange{Séries Uniformes}
+\label{fin-arg-5}
 
 Vamos analisar a situação financeira proposta anteriormente, que envolve uma série de depósitos mensais e iguais, denominada de série uniforme. São as famosas prestações mensais e iguais, muito comuns em financiamentos dos mais variados tipos de produtos e serviços, de eletrodomésticos, carros, a pacote de férias e seguros. Essa é a última situação que analisaremos antes de passarmos uma investigação da atividade inicialmente apresentada na seção.
 
@@ -2649,7 +2663,7 @@ Assim, usando essa expressão que fornece a soma dos termos de uma progressão g
 Um dos benefícios de se usar a soma dos termos de uma P.G., é poder usar um mesmo modelo matemático independente do prazo, ou seja, para qualquer quantidade de depósitos ou pagamentos. De fato, usando a mesma lógica nessa operação, o $\mathit{VF}$ para um prazo igual a 12 meses, ou seja, o $\mathit{VF}$ imediatamente após o 12º depósito, é igual a
 
 \begin{align*}
-\mathit{VF}_{12}&=\frac{300(10{,}1^{12}-1)}{1{,}01-1}\\
+\mathit{VF}_{12}&=\frac{300(1{,}01^{12}-1)}{1{,}01-1}\\
 \mathit{VF}_{12}&=3.804{,}75
 \end{align*}
 
@@ -2957,7 +2971,7 @@ Com essa expressão, podemos analisar diversas situações envolvendo as séries
 
 
 \begin{task}{O dilema de caber no bolso - parcelas mensais e iguais}
-\phantomsection\label{fin-ativ-22}
+\label{fin-ativ-22}
 
 O Sr. Muniz resolveu comprar uma bike de presente para seu filho Arthur. Mas não vai conseguir pagar à vista dessa vez, como costuma fazer. Ele se planejou para pagar no máximo 100 reais de prestação, em um prazo máximo de um ano. A figura abaixo representa o valor da bike e as condições de parcelamento na compra a prazo.
 
@@ -3131,11 +3145,11 @@ Por fim, procuramos trazer para essa atividade uma discussão sobre o impacto da
 }{9}
 \end{answer}
 
-\practice{Séries uniformes e previdência}
-\phantomsection\label{fin-prac-5}
+\practice{Séries Uniformes e Previdência}
+\label{fin-prac-5}
 
 \begin{task}{O que será o amanhã?}
-\phantomsection\label{fin-ativ-23}
+\label{fin-ativ-23}
 
 Suponha que uma pessoa vai completar 25 anos em janeiro 2021 e planeje a partir dessa data investir mensalmente uma quantia fixa, de modo a assegurar uma aposentadoria complementar de 20 mil reais durante 15 anos, sendo o primeiro depósito em jan/2021 e o último em dez/2060. Considerando uma taxa média de retorno desses investimentos de $0{,}5$\% a.m., uma expectativa de vida de 80 anos, e que o primeiro benefício seja recebido em jan/2061 e o último em dez/2075, determine:
 \begin{enumerate}
@@ -3146,9 +3160,10 @@ Suponha que uma pessoa vai completar 25 anos em janeiro 2021 e planeje a partir 
 \end{enumerate}
 \end{task}
 
-\begin{paginatexto}\raggedcolumns
-\section*{Velozes e furiozas: taxas de juros no cenário brasileiro}
-\section*{Objetivos gerais}
+\begin{paginatexto}{Velozes e furiosas: taxas de juros no cenário brasileiro}
+
+\raggedcolumns
+\subsection*{Objetivos gerais}
 
 \begin{itemize}
 \item Investigar situações financeiras que envolvem o valor do dinheiro no tempo, considerando taxas equivalentes.
@@ -3169,15 +3184,15 @@ Planejar e executar ações envolvendo a criação e a utilização de aplicativ
 
 \end{habilities}
 
-\section*{Recomendações para o professor}
+\subsection*{Recomendações para o professor}
 
-\subsection{Organização em sala de aula} essa seção trata de taxas de juros. As taxas de juros do crédito no Brasil são exorbitantes, quando comparadas ao cenário mundial. As do cartão de crédito entre as cinco maiores do mundo. Convidar os estudantes a refletirem sobre essa situação econômica brasileira pode ser um excelente ponto de partida, considerando a realidade econômica dos estudantes. Convide os estudantes a pesquisarem informação em sites, blogs, jornais, portais, revistas econômicas sobre essa situação econômica dos estudantes. Convide os estudantes a pesquisarem informações em sites, blogs, jornais, portais, revistas econômicas sobre situações envolvendo inflação antes de abordar o tema. Convide seus alunos a criar a cultura de investigar os fundamentos e a razoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
+\paragraph{Organização em sala de aula} essa seção trata de taxas de juros. As taxas de juros do crédito no Brasil são exorbitantes, quando comparadas ao cenário mundial. As do cartão de crédito entre as cinco maiores do mundo. Convidar os estudantes a refletirem sobre essa situação econômica brasileira pode ser um excelente ponto de partida, considerando a realidade econômica dos estudantes. Convide os estudantes a pesquisarem informação em sites, blogs, jornais, portais, revistas econômicas sobre essa situação econômica dos estudantes. Convide os estudantes a pesquisarem informações em sites, blogs, jornais, portais, revistas econômicas sobre situações envolvendo inflação antes de abordar o tema. Convide seus alunos a criar a cultura de investigar os fundamentos e a razoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
 
-\subsection{Dificuldades previstas} na abordagem das taxas de juros, os aumentos sucessivos geram produtos com números decimais, e em alguns casos, cálculos envolvendo exponenciais, incluindo as com expoentes fracionários. Essas operações costumam ser consideradas complexas pelos alunos de Ensino Médio, sendo dificuldades previstas na abordagem. Trabalha com o auxílio de tecnologia pode ajudar a superar tais dificuldades.
+\paragraph{Dificuldades previstas} na abordagem das taxas de juros, os aumentos sucessivos geram produtos com números decimais, e em alguns casos, cálculos envolvendo exponenciais, incluindo as com expoentes fracionários. Essas operações costumam ser consideradas complexas pelos alunos de Ensino Médio, sendo dificuldades previstas na abordagem. Trabalha com o auxílio de tecnologia pode ajudar a superar tais dificuldades.
 
-\subsection{Sugestões gerais} Trabalhar com o auxílio de tecnologia pode ajudar a superar tais dificuldades. Os juros compostos e os capitais equivalentes são naturalmente retornados, pois as taxas são equivalentes.
+\paragraph{Sugestões gerais} Trabalhar com o auxílio de tecnologia pode ajudar a superar tais dificuldades. Os juros compostos e os capitais equivalentes são naturalmente retornados, pois as taxas são equivalentes.
 
-\section*{Enriquecimento da discussão}
+\subsection*{Enriquecimento da discussão}
 
 Existem diferentes taxas de juros no Brasil. Temos taxas como a taxa básica de juros da Economia Brasileira, que está em queda desde 2016, que é usada para definir uma série de outras taxas de juros cobradas ou pagas, tais como a poupança, títulso públicos, dentre outros. Ela atingiu agora em agosto de 2020 o menor patamar desde que foi criada, conforme mostra a imagem a seguir.
 
@@ -3240,8 +3255,8 @@ Indo além, o professor pode ter um papel muito importante para ensinar o seu al
 
 
 
-\explore{taxas de juros no cenário brasileiro}
-\phantomsection\label{fin-exp-6}
+\explore{Taxas de Juros no Cenário Brasileiro}
+\label{fin-exp-6}
 
 Quando o assunto é taxa de juro, o cenário brasileiro, em  especial, aquel que pagamos quando pegamos emprestado para a realização de algum sonho de médio a longo prazo ou para empreender em algum negócio, bem como nos ajudar em alguma emergência, o cenário brasileiro ainda é extremamente desafiador. As taxas cobradas, em diversas modalidades de crédito, são exorbitantes quando comparadas aos países da América Latina, da Europa e de outros lugares do mundo. A imagem a seguir apresenta apenas um exemplo dessa catástrofe econômica brasileira.
 
@@ -3293,7 +3308,7 @@ A atividade será discutida e resolvida na próxima seção.
 \end{answer}
 
 \begin{task}{Velozes e Furiosos! Uma conversa sobre taxas equivalentes}
-\phantomsection\label{fin-ativ-24}
+\label{fin-ativ-24}
 
 \begin{table}[H]
 \centering
@@ -3345,8 +3360,8 @@ Quanto tempo leva para uma pessoa ter sua dívida duplicada, se ela ficar devend
 E quanto tempo leva para uma pessoa dobrar um capital, se ela investir na poupança? (6\% ao ano aproximadamente)
 \end{task}
 
-\arrange{TAXAS de juro NO CENÁRIO BRASIILEIRO}
-\phantomsection\label{fin-arg-6}
+\arrange{Taxas de Juros no Cenário Brasileiro}
+\label{fin-arg-6}
 
 Duas taxas são equivalentes quando, aplicadas a uma mesma quantia, produzem o mesmo valor futuro em um mesmo período.
 
@@ -3373,7 +3388,7 @@ Para finalizar, é importante entender duas coisas em relação às taxas de jur
 
 Vamos começar pensando nas oportunidades. Por exemplo, aumentar a taxa de retorno de seus investimentos para a aposentadoria de $0{,}5$\% para $0{,}7$\% aos mês, por exemplo, pode gerar, no longo prazo, uma grande diferença. Em 20 anos, por exemplo, na primeira taxa ter-se-ia um retorno de $231$\% e para a segunda taxa $433$\%. No longo prazo, essa diferença de $0{,}2$\% produzirá uma grande diferença entre as rentabilidades totais. Se uma pessoa aplicou 10.000 reais, terá 33.100 na primeira e 53.000 reais na segunda. Mas se a aplicação for de 100 reals, passamoss de 331 mil reais para 533 mil reais. 
 
-\textbf{Mas se a aplicação for de $100$ mil reais, passamos de $331$ mil reais para $533$ mil reais. Veja que $0{,}2$\% pode gerar uma diferença bem significativa entre of valores acumulados.}
+\textbf{Isso mesmo! Se a aplicação for de $100$ mil reais, passamos de $331$ mil reais para $533$ mil reais. Veja que $0{,}2$\% pode gerar uma diferença bem significativa entre os valores acumulados.}
 
 O quadro a seguir mostra uma simulação para algumas taxas mensais de retorno, considerando um intervalo discreto de 10 a 30 anos, com variação de 5 anos.
 
@@ -3614,11 +3629,11 @@ Entender o custo do dinheiro fácil, e como pode ser difícil e doloroso pagar p
 }{1}
 \end{answer}
 
-\practice{capitais e taxas equivalentes}
-\phantomsection\label{fin-prac-6}
+\practice{Capitais e Taxas Equivalentes}
+\label{fin-prac-6}
 
 \begin{task}{Imprevistos e Cheque especial: uma dupla explosiva}
-\phantomsection\label{fin-ativ-25}
+\label{fin-ativ-25}
 
 Claudia, cliente do Banco do Brasil, teve uma emergência e precisa de 5.000 reais para daqui a dois dias. Ela pode usar o cheque especial para fazer um empréstimo nesse valor ou buscar uma alternativa mais barata. Pensando um pouco, ela lembra que tem 5.000 reais na poupança, guardados por ela mesma para alguma emergência. Considere que esse dinheiro na poupança renda 0,6\% ao mês. 
 
@@ -3629,7 +3644,7 @@ Claudia, cliente do Banco do Brasil, teve uma emergência e precisa de 5.000 rea
 \end{task}
 
 \begin{task}{Reduzindo taxas e ampliando oportunidades}
-\phantomsection\label{fin-ativ-26}
+\label{fin-ativ-26}
 
 O Banco Central do Brasil reduziu, em setembro de 2019, a taxa base da Economia (taxa Selic) de 6,0\% ao ano, para 5,5\% ao ano. A figura mostra como alguns Bancos públicos e privados modificaram algumas de suas taxas devido a essa redução da Selic. 
 
@@ -3644,7 +3659,7 @@ Considere conforme mostrado na figura que a Caixa Econômica Federal passasse os
 
 
 \begin{task}{Velozes e Furiosos 2 - As taxas atacam novamente}
-\phantomsection\label{fin-ativ-27}
+\label{fin-ativ-27}
 
 Leia atentamente os dados a seguir:
 
@@ -3682,7 +3697,7 @@ Leia atentamente os dados a seguir:
 
 
 \begin{task}{Crédito pessoal é sinônimo de dívida?}
-\phantomsection\label{fin-ativ-28}
+\label{fin-ativ-28}
 \textit{(Texto adaptado do \href{http://www.blogtecnisa.com.br/mercado/credito-pessoal-e-sinonimo-de-divida/}{Blog Tecnisa}) Acesso em Maio de 2014.}
 
 "Nas últimas semanas surgiram ótimas notícias sobre a redução dos juros, promovidos pelo Banco do Brasil e Caixa Econômica Federal que na sequência também foi adotado – em partes – por outros bancos. Mas a redução dos juros não significa que eles ficaram realmente baratos ou que é seja uma sinalização para o consumo sem planejamento.
@@ -3751,9 +3766,8 @@ Posição & \multicolumn{1}{c|}{Instituição} & \% a.m. & \% a.a\\
 \end{task}
 
 
-\begin{paginatexto}
-\section*{Inflação e poder de compra}
-\section*{Objetivo geral}
+\begin{paginatexto}{Inflação e poder de compra}
+\subsection*{Objetivo geral}
 Investigar situações financeiras que envolvem a noção de inflação, alguns tipos de fatores que a influenciam e possíveis impactos na vida da população.
 
 \textbf{Conceitos abordados}: taxas e fatores; médias; progressão geométrica; inflação (IPCA, IPC IGPM); Efeito Fisher (relação entre inflação e poder de compra), através das habilidades:
@@ -3771,15 +3785,15 @@ Planejar e executar ações envolvendo a criação e a utilização de aplicativ
 
 \end{habilities}
 
-\section*{Recomendações para o professor}
+\subsection*{Recomendações para o professor}
 
-\subsection{Organização em sala de aula} Essa seção trata de índices de inflação, que na história do Brasil é algo extremamente importante, pois está diretamente ligado à realização de sonhos e à desigualdade social. Então, convide os estudantes a pesquisarem informações em sites, blogs, jornais, portais, revistas econômicas, sobre situações envolvendo inflação. Convide-os a pesquisar os preços de seu bairro, a identificar a cesta de produtos que consomem, e a criar a cultura de investigar os fundamentos e a razoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
+\paragraph{Organização em sala de aula} Essa seção trata de índices de inflação, que na história do Brasil é algo extremamente importante, pois está diretamente ligado à realização de sonhos e à desigualdade social. Então, convide os estudantes a pesquisarem informações em sites, blogs, jornais, portais, revistas econômicas, sobre situações envolvendo inflação. Convide-os a pesquisar os preços de seu bairro, a identificar a cesta de produtos que consomem, e a criar a cultura de investigar os fundamentos e a razoabilidade das informações veiculadas nas mídias sociais de forma fundamentada.
 
-\subsection{Dificuldades previstas} Na abordagem dos índices de inflação, geralmente aparecem aumentos sucessivos que geram produtos com números decimais, em especial aqueles que aparecem na média geométrica, e em alguns casos, cálculos envolvendo exponenciais, incluindo as com expoentes fracionários. Essas operações costumam ser consideradas complexas pelos alunos de Ensino Médio, sendo dificuldades previstas na abordagem. Trabalhar com o auxílio de tecnologia pode ajudar a superar tais dificuldades. A variedade de índices de inflação também pode ser pontos de dificuldades e gerar alguns obstáculos iniciais na compreensão das atividades.
+\paragraph{Dificuldades previstas} Na abordagem dos índices de inflação, geralmente aparecem aumentos sucessivos que geram produtos com números decimais, em especial aqueles que aparecem na média geométrica, e em alguns casos, cálculos envolvendo exponenciais, incluindo as com expoentes fracionários. Essas operações costumam ser consideradas complexas pelos alunos de Ensino Médio, sendo dificuldades previstas na abordagem. Trabalhar com o auxílio de tecnologia pode ajudar a superar tais dificuldades. A variedade de índices de inflação também pode ser pontos de dificuldades e gerar alguns obstáculos iniciais na compreensão das atividades.
 
-\subsection{Sugestões gerais} Trabalhar com o auxílio de tecnologia pode ajudar a superar tais dificuldades, e acessar o site do Banco Central e do IBGE são ótimas oportunidade para fazer uma imersão no tema. A ideia de inflação pode ser abordada no Ensino Fundamental II, quando se abordam aplicações de porcentagem, por exemplo. Analisar índices sócio-econômicos também faz parte do conjunto de habilidades da BNCC.
+\paragraph{Sugestões gerais} Trabalhar com o auxílio de tecnologia pode ajudar a superar tais dificuldades, e acessar o site do Banco Central e do IBGE são ótimas oportunidade para fazer uma imersão no tema. A ideia de inflação pode ser abordada no Ensino Fundamental II, quando se abordam aplicações de porcentagem, por exemplo. Analisar índices sócio-econômicos também faz parte do conjunto de habilidades da BNCC.
 
-\section*{Enriquecimento da discussão}
+\subsection*{Enriquecimento da discussão}
 
 Existem diferentes índices de inflação no Brasil. Abordaremos aqui o Índice de Preços ao Consumidor Amplo (IPCA) e o Índice Geral de preços do Mercado (IGPM). Atualmente, a definição mais comum entre os especialisatas para o termo \textit{inflação de preços} é o aumento continuado e generalizado dos bens e serviços \citep{ecb2017}. Assim, a inflação tem como principal impacto o aumento/redução do poder de compra para o consumidor e para as empresas.
 
@@ -3790,8 +3804,6 @@ Sugerimos a leitura de pesquisas sobre a abordagem de inflação na Educação B
 \def\currentcolor{session1}
 \begin{texto}
 {
-  \section{Explorando: Inflação e poder de compra}
-
   Os objetivos e as discussões seguintes são para o conjunto das quatro atividades desta seção.
 
   \subsection{Objetivo específicos}
@@ -3831,8 +3843,8 @@ Sugerimos a leitura de pesquisas sobre a abordagem de inflação na Educação B
 
 }{1}
 \end{answer}
-\explore{inflação e poder de compra}
-\phantomsection\label{fin-exp-7}
+\explore{Inflação e Poder de Compra}
+\label{fin-exp-7}
 
 Outra situação envolvendo a transformação do dinheiro no tempo se refere à relação entre \textbf{inflação} e \textbf{poder aquisitivo (ou poder de compra)}. O aumento de preços de produtos e serviços interfere diretamente no poder de compra das famílias e na realização de projetos e sonhos das pessoas.
 
@@ -3851,7 +3863,7 @@ Mas o que é inflação? Como é medida? Quais seus impactos no poder de compra 
 Vamos tentar responder a essas perguntas, a partir de quatro atividades.
 
 \begin{task}{Cadê o meu dinheiro?}
-\phantomsection\label{fin-ativ-29}
+\label{fin-ativ-29}
 Observe atentamente a imagem a seguir
 
 \begin{figure}[H]
@@ -3874,20 +3886,20 @@ Observe atentamente a imagem a seguir
 \end{task}
 
 \begin{task}{Sua inflação é igual à minha inflação?}
-\phantomsection\label{fin-ativ-30}
+\label{fin-ativ-30}
 Considere uma família cuja renda mensal, em janeiro de 2019, seja de R\$ $5.000{,}00$. Vamos supor que a inflação para essa família tenha sido de $10$\% durante esse ano. Isso significa que, em média, os produtos que a família consumia aumentaram $10$\% em um ano. Por outro lado, vamos admitir que a renda da família, em janeiro de 2020, seja $15$\% maior, e que a inflação oficial anunciada tenha sido de $5\%$ ao ano.
 
 Qual foi o aumento do poder de compra dessa família nesse período, considerando a inflação oficial? E considerando a inflação que de fato aconteceu para essa família?
 \end{task}
 
 \begin{task}{Inflação e investimento}
-\phantomsection\label{fin-ativ-31}
+\label{fin-ativ-31}
 Maria ganhou um aumento de $10$\% em um ano, mas sua inflação foi de $6$\% ao ano. Benedita ganhou um aumento de $5\%$ mas sua inflação foi de $1$\% ao ano. Qual das duas teve o maior ganho real?
 \end{task}
 
 \begin{task}{Por que o meu aluguel aumentou desse jeito?}
 \label{fin-ativ-32}
-\phantomsection\label{fin-ativ-32}
+\label{fin-ativ-32}
 
 Josimar alugou um apartamento, em fevereiro de 2019, por R\$ $2.400{,}00$, ficando acordado no contrato que a cada 12 meses o valor seria reajustado pelo índice geral de pre''cos do mercado (IGPM) acumulado nos últimos 12 meses. A tabela abaixo mostra o índice acumulado nos primeiros seis meses de 2020.
 
@@ -3934,8 +3946,8 @@ Em março de 2020, ele percebeu que o aluguel passou de R\$ $2.400{,}00$ para R\
 Vamos refletir sobre essas situações econômico-financeiras, investigando cada atividade nopróximo tópico do \textit{Organizando as ideias}
 
 \clearpage
-\arrange{índices de inflação e seus impactos}
-\phantomsection\label{fin-arg-7}
+\arrange{Índices de Inflação e Seus Impactos}
+\label{fin-arg-7}
 
 Essas atividade ilustram, um pouco, como a inflação pode interferir profundamente na vida das pessoas. 
 
@@ -4157,17 +4169,17 @@ Nos itens \titem{d)}, \titem{e)}, \titem{f)}, abordamos a correção dos salári
 }{0}
 \end{answer}
 
-\practice{inflação e poder de compra}
-\phantomsection\label{fin-prac-7}
+\practice{Inflação e Poder de Compra}
+\label{fin-prac-7}
 
 \begin{task}{inflação e investimento: impactos nos projetos de longo prazo}
-\phantomsection\label{fin-ativ-33}
+\label{fin-ativ-33}
 
 Sergio pretende depositar 1.000 reais mensalmente durante 30 anos, a começar de hoje, a uma taxa de $0{,}5$\% ao mês. Se ele conseguir manter a disciplina e as condições permitirem, ele terá acumulado ao finald do período aproximadamente 1 milhão de reais. Se a inflação média nesse período for de $4$\% ao ano, qual será o poder de compra desses 1 milhão de reais daqui a 30 anos, na comparação com os dias atuais?
 \end{task}
 
 \begin{task}{de quanto é a inflação anual no Brasil?}
-\phantomsection\label{fin-ativ-34}
+\label{fin-ativ-34}
 
 Considere o gráfico a seguir.
 
@@ -4196,9 +4208,10 @@ Considere o gráfico a seguir.
 \end{task}
 
 
-\begin{paginatexto}\raggedcolumns
-\section*{Tributação e futuro}
-\section*{Objetivos específicos}
+\begin{paginatexto}{Tributação e futuro}
+
+\raggedcolumns
+\subsection*{Objetivos específicos}
 \begin{itemize}
 \item Abordar noções de tributos e contribuiçlões, suas finalidades e consequências de suas boas aplicações em áreas estratégias para o país.
 
@@ -4209,7 +4222,7 @@ Considere o gráfico a seguir.
 \item Aspectos não matemáticos: tributos, contribuições, políticas publicas, previdência, proteção de longo prazo.
 \end{itemize}
 
-\subsection{Habilidades da BNCC}
+\paragraph{Habilidades da BNCC}
 
 \begin{habilities}{EM13MAT101}
  Interpretar situações econômicas, sociais e das Ciências da Natureza
@@ -4226,13 +4239,13 @@ Planejar e executar ações envolvendo a criação e a utilização de aplicativ
 Reconhecer funções definidas por uma ou mais sentenças (como a tabela do Imposto de Renda, contas de luz, água, gás etc.), em suas epresentações algébrica e gráfica, convertendo essas representações de uma para outra e identificando domínios de validade, imagem, crescimento e decrescimento.
 \end{habilities}
 
-\section*{Recomendações para o professor}
+\subsection*{Recomendações para o professor}
 
-\subsection{Organização em sala de aula} esse é um tema que pode ser trabalhado em turmas do Ensino Fundamental e do Médio. Trabalhar em grupos será ótimo se o professor optar por pesquisas sobre quantos impostos temos; para onde vai o dinheiro; quais os tributos municipais; os avós continuam trabalhando. A pesquisa individual e coletiva devem ser complementares.
+\paragraph{Organização em sala de aula} esse é um tema que pode ser trabalhado em turmas do Ensino Fundamental e do Médio. Trabalhar em grupos será ótimo se o professor optar por pesquisas sobre quantos impostos temos; para onde vai o dinheiro; quais os tributos municipais; os avós continuam trabalhando. A pesquisa individual e coletiva devem ser complementares.
 
-\subsection{Dificuldades previstas} as habilidades de leitura e interpretação podem ser um ponto de dificuldade dos alunos. A identificação e uso das médias também. No IPCA temos uma média aritmética ponderada em relação a cestas de produtos, mast emos uma média geométrica quando queremos descobrir a taxa média mensal, dadas taxas mensais reais em um ano, por exemplo. Tanto no cálculo do novo INSS quanto do IR temos tabelas progressiva que costumam dar trabalho mental até para os professores de matemáticos, pois os modelos matemáticos envolvem funções definidas por várias afins. O uso da calculadora pode ser importantíssimo para reduzir tais desafios cognitivos, e as planilhas eletrônicas podem ajudar na construção dos modelos funcionais de cálculos de alguns impostos.
+\paragraph{Dificuldades previstas} as habilidades de leitura e interpretação podem ser um ponto de dificuldade dos alunos. A identificação e uso das médias também. No IPCA temos uma média aritmética ponderada em relação a cestas de produtos, mast emos uma média geométrica quando queremos descobrir a taxa média mensal, dadas taxas mensais reais em um ano, por exemplo. Tanto no cálculo do novo INSS quanto do IR temos tabelas progressiva que costumam dar trabalho mental até para os professores de matemáticos, pois os modelos matemáticos envolvem funções definidas por várias afins. O uso da calculadora pode ser importantíssimo para reduzir tais desafios cognitivos, e as planilhas eletrônicas podem ajudar na construção dos modelos funcionais de cálculos de alguns impostos.
 
-\subsection{Sugestões gerais} uma possibilidade para se abordar esse tema é quando estiver trabalhando conceitos como porcentagem, números racionais, ou ainda conceitos de estatística. O professor pode aproveitar sua programação de conteúdos e habilidades para trabalhar tributos e contribuições que dependam de tais conteúdos e habilidades.
+\paragraph{Sugestões gerais} uma possibilidade para se abordar esse tema é quando estiver trabalhando conceitos como porcentagem, números racionais, ou ainda conceitos de estatística. O professor pode aproveitar sua programação de conteúdos e habilidades para trabalhar tributos e contribuições que dependam de tais conteúdos e habilidades.
 
 As atividades qui do livro aberto sobre o tema são ricas e variadas, e muitas delas podem ser aplicadas diretamente já no Ensino fundamental. Cabe ao professor avaliar e/ou adaptar para a sua realidade. 
 
@@ -4240,7 +4253,7 @@ Leve em consideração, sempre que puder, o contexto sócio-econômico dos estud
 
 A parte da estatística que pode ser (não necessariamente tem que ser) trabalhado, tais como média móvel, série histórica (despesas com luz, gás, telefone), pode ser um ponto de dificuldade, todavia, tem enorme potencial de de aplicação e de compreensão das regularidades e sazonalidades das receitas e despesas pessoais e familiares.
 
-\section*{Enriquecimento da discussão}
+\subsection*{Enriquecimento da discussão}
 
 Recomendamos o trabalho de \cite{dias2018} sobre a educação fiscal e educação financeira na Educação Básica para servir de apio para o professor na abordagem do assunto desta seção.
 
@@ -4251,8 +4264,8 @@ Temos uma excelente oportunidade de usar planilhas par aprender noções de plan
 As operações são geralmente simples, e a estrutura tabular, jutamente com a lógica dos comandos básicos, podem ajudar na construção de orçamentos e a investigar problemas e soluções.
 \end{paginatexto}
 % \setcounter{page}{76}
-\explore{tributação e futuro}
-\phantomsection\label{fin-exp-8}
+\explore{Tributação e Futuro}
+\label{fin-exp-8}
 
 Você já parou para pensar que você paga imposto em praticamente tudo o que você consome? Praticamente todos os bens e serviços que usamos e consumimos são tributados, da água que sai da torneira das nossas casas ao combustível do veículo ou do sapato que nos leva para a escola, a cadeia de tributos e impostos está sempre ao nosso lado.
 
@@ -4263,7 +4276,7 @@ Entendemos que pensar em tributos não significa apenas saber o quanto se paga, 
 Para tentar responder a essas e outras perguntas, convidamos você a uma pequena viagem nesse mundo tributário, que alguns chamam de educação fiscal, mas que aqui também vamos chamar de educação financeira.
 
 \begin{task}{Investimento em educação pública no Brasil}
-\phantomsection\label{fin-ativ-35}
+\label{fin-ativ-35}
 
 
 Leia atentamente as informações abaixo, extraídas do Portal da transparência em julho de 2020.
@@ -4287,8 +4300,8 @@ No Brasil, temos uma \textbf{grande variedade} de tributos. São tributos dos ma
 Aida nos podem ser cobradas aproximadamente 28 tipos de taxas -- como Taxa de Coleta de Lixo, Taxa de Conservação e Limpeza Pública, Taxa de Emissão de Documentos, Taxa de Licenciamento Anual de Veículo --; 37 contribuíções -- como INSS, PIS, COFINS, CPMF, Contribuição sindical, Patronal, Contribuições de melhoria (podendo estas serem implementadas pelo município, pelo estado e pela União).
 \end{knowledge}
 
-\arrange{Imposto, Taxa e contribuição no Brasil}
-\phantomsection\label{fin-arg-8}
+\arrange{Imposto, Taxa e Contribuição no Brasil}
+\label{fin-arg-8}
 
 Impostos, taxas e contribuições fazem parte da vida da grande maioria da população mundial. É função do governo prover serviços básicos para a população, como saúde, educação, saneamento básico e segurança. A arrecadação de tributos é responsável pela maioria da receita pública que mantém a administração governamental de recursos financeiros para a realização de seus fins (LIMA, 2009).
 
@@ -4323,7 +4336,7 @@ Mas quem ganha mais, passa a pagar mais por faixas. As sim,ulações abaixo ilus
 
 Esse novo sistema permitiu que as pessoas que ganham próximo a um salário mínimo pagassem menos INSS, e quem ganha mais, pagasse mais do que no sistema anterior.
 
-Por exemplo, uma pessoa que ganhava \$$6.000{,}00$ mensais, antes da mudança, pagaria R\$ $660{,}00$ de INSS. Agora, como o novo sistema, pagará aproximadamente R\$ $700{,}00$ mensais de INSS. A simulação abaixo ajuda a entender como esse cálculo é realizado, que considera o salário mínimo de R\$ $1.045{,}00$, com um pequeno acréscimo vindo da câmara dos deputados, ampliando o que o governo queria.
+Por exemplo, uma pessoa que ganhava R\$ $6.000{,}00$ mensais, antes da mudança, pagaria R\$ $660{,}00$ de INSS. Agora, como o novo sistema, pagará aproximadamente R\$ $700{,}00$ mensais de INSS. A simulação abaixo ajuda a entender como esse cálculo é realizado, que considera o salário mínimo de R\$ $1.045{,}00$, com um pequeno acréscimo vindo da câmara dos deputados, ampliando o que o governo queria.
 
 \begin{figure}[H]
 \centering
@@ -4347,7 +4360,7 @@ Mas se as pessoas quiserem manter o seu padrão de vida, devem se organizar para
 
 Na próxima seção, vamos falar de outro imposto importante: o imposto de Renda. Diante da grande quantidade de tributos que temos no Brasil e do escopo desse livro abero, optamos por abordar alguns aspectos do IR, que é um dos principais impostos no Brasil, tanto o aplicado especificamente sobre os investimentos, como o aplicado sobre a renda de uma maneira geral, incluindo salários, alugueis ou outros redimentos tributáveis.
 
-\section*{O imposto de renda}
+\subsection*{O imposto de renda}
 
 No Brasil, um dos tributos mais importantes, e uma das  maiores fontes de receita para o governo poder investir em saúde, educação, segurança e infraestrutura é o Imposto de Renda. A tributação do Imposto de rendda, incluindo salários e aluguéis, diferentemente da tributação específica sobre os investimentos, é progressiva e vai sendo aplicada por faixas de renda.
 
@@ -4367,7 +4380,7 @@ Até $1.903{,}98$ & - & - \\
 \hline
 De $1.903{,}99$ até $2.826{,}65$ & 7,5 & $142{,}80$ \\
 \hline
-De 2$.825{,}55$ até $3.751{,}05$ & 15 & $354{,}80$ \\
+De 2$.825{,}55$ até $3.751{,}05$ & 15{,}0 & $354{,}80$ \\
 \hline
 $3.751{,}06$ até $4.664{,}68$ & 22,5 & $636{,}13$ \\
 \hline
@@ -4500,15 +4513,15 @@ No item \titem{c)}, a resposta é pessoal.
 }{9}
 \end{answer}
 
-\practice{tributação nos investimentos}
-\phantomsection\label{fin-prac-8}
+\practice{Tributação nos Investimentos}
+\label{fin-prac-8}
 
 No Brasil, há uma grande variedade de investimentos, sendo que alguns são tributados e outros não. A poupança, por exemplo, é isenta de tributação, assim como os investimentos em fundos imobiliários. Já o mercado de ações, o tesouro direto, dentre outros, são tributados de forma escalonada.
 
 Vejamos um exemplo com esse tipo de tributação regressiva.
 
 \begin{task}{Tributação do IR nos investimentos}
-\phantomsection\label{fin-ativ-36}
+\label{fin-ativ-36}
 
 Suponha que você tem 200 mil reais e como não tem planos para gastar essa grana nos próximos 3 anos, precisa decidir onde vai aplicar esse dinheiro. Inicialmente, você tem duas opções:
 
@@ -4543,9 +4556,9 @@ Olhando para as duas simulações, podemos concluir que a incidência do IR sobr
 \end{task}
 
 
-\begin{paginatexto}\raggedcolumns
-\section*{Consumo, cultura, comportamento e sustentabilidade}
-\section*{Objetivo geral}
+\begin{paginatexto}{Consumo, cultura, comportamento e sustentabilidade}
+\raggedcolumns
+\subsection*{Objetivo geral}
 
 \begin{itemize}
 \item Convidar os estudantes a refletirem sobre a tomada de decisões de consumo, envolvendo cultura, comportamento e sustentabilidade, em especial sobre aàs heurísticas e vieses presentes nas ações de consumo e suas possíveis consequências.
@@ -4556,7 +4569,7 @@ Aspectos matemáticos: razão; proporcão; média (aritmética simples, ponderad
 Aspectos não matemáticos: ancoragem, enquadramento, teoria da perspectiva, desperdício e sustentabilidade.
 \end{itemize}
 
-\subsection{Habilidades da BNCC envolvidas}
+\paragraph{Habilidades da BNCC envolvidas}
 
 \begin{habilities}{EM13MAT101}
  Interpretar situações econômicas, sociais e das Ciências da Natureza
@@ -4567,16 +4580,16 @@ que envolvem a variação de duas grandezas, pela análise dos gráficos das fun
 Interpretar taxas e índices de natureza socioeconômica, tais como índice de desenvolvimento humano, taxas de inflação, entre outros, investigando os processos de cálculo desses números.
 \end{habilities}
 
-\section*{Recomendações para o professor}
+\subsection*{Recomendações para o professor}
 
-\subsection{Organização em sala de aula}
+\paragraph{Organização em sala de aula}
 
 Esse é um tema super bem aceito pelos estudantes. O professor pode, inclusive, começar um curso de educação financeira para o Ensino Mécio por ele. Pedir aos alunos para relatarem suas preferências de consumo, como tomam decisões, se já se sentiram enganados ou influenciados por uma propragada podem ser ótimos pontos de partida. Refletir sobre consumo e usar matemática para avaliar opções pode ser uma descoberta incrível. Convide-os a criar a cultura de investigar os fundamentos e a razoabilidade das informações veiculadas nas mícias socias de forma fundamentada.
 
-\subsection{Dificuldade previstas}
+\paragraph{Dificuldade previstas}
 As habilidades de leitura e iterpretação de gráficos podem ser um um ponto de dificuldade dos alunos, mas em geral, as dificuldades vão depender da quantidade de informações que estarão disponíveis para a análise e tomada de decisão.
 
-\subsection{Sugestões gerais}
+\paragraph{Sugestões gerais}
 Uma possibilidade para se abordar esse tema é quando estiver trabalhando conceitos como porcentagem, numer racionais, ou ainda conceitos de estatística. O professor pode aproveitar sua programação de conteúdos e habilidades para trabalhar questões de consumo e sustentabilidade que dependam de tais conteúdos e habilidades.
 
 Um trabalho interdisciplinar com professores da filosofia e sociologia podem contribuir e muito para ampliar a visão sobre o consumo e avaliar diferentes pontos de vista sobre as escolhas e as consequêncisas dessas atitudes.
@@ -4585,20 +4598,20 @@ Leve em consideração, smpre que puder, o contexto sócio-econômico dos estuda
 
 Nesta seção, temos uma oportunidade de convidar os estudantes a pesquisarem sobre direitos e deveres do consumidor. Lutar por seus direitos é uma característica dos adolescentes. Explore esse momento deles para convidá-los a saber mais sobre seus direitos e deveres, tanto como consumidores, mas principalmente como cidadãos. A cidadania sem direitos e deveres não pode ser exercida de maneira plena e democrática. O professor pode usar um guia do PROCON RM para saber mais sobre o assunto, o qual está disponível em \url{http://www.procon.rj.gov.br/index.php/publicacao/listar/3/1}.
 
-\section*{Enriquecimento da discussão}
+\subsection*{Enriquecimento da discussão}
 
 Esse tema é muito amplo. Talvez seja um dos temas mais estudados no mundo em relação ao comércio de bens e serviços, pois entender como as preferências das pessoa é um negócio bilionário. A matemática dessa seç ão é em geral bem simples, mas alguns cuidados precisam ser tomados:
 
 
-\subsection{Cuidado 1. Não esqueça do nosso público alvo}. Nosso público alvo é formado por estudantes de Ensino Médio na faixa de 16 a 19 ano, pertencentes a uma fase da vida em que geralmente não ganham seu próprio dinheiro, e por isso, o nível de interferência e participação na tomada de decisão dos gastos varia muito, principalmente com o poder aquisitivo, perfil socio-econômico e hábitos culutrais da família que integra. Nessa fase da vida escolar, adolescentes ou jovens tão têm, geralmente, a mesma liberdade de uma pessoa que ganha o seu próprio salário. Além disso, a adolescência é uma fase em que os humanos costumam ser impulsivos \citep{fonseca2005} e preocupados com sua posição, espaço, pertinência e aparência em algum tipo de grupo, o que pode influenciar um consumo além de suas possibilidades financeiras, consumo desenfreado e muitas vezes desnecessário, por exemplo, a necessidade de troca de celular de seis e dseis meses para não ficar "para trás"{}dos amigos).
+\paragraph{Cuidado 1. Não esqueça do nosso público alvo}. Nosso público alvo é formado por estudantes de Ensino Médio na faixa de 16 a 19 ano, pertencentes a uma fase da vida em que geralmente não ganham seu próprio dinheiro, e por isso, o nível de interferência e participação na tomada de decisão dos gastos varia muito, principalmente com o poder aquisitivo, perfil socio-econômico e hábitos culutrais da família que integra. Nessa fase da vida escolar, adolescentes ou jovens tão têm, geralmente, a mesma liberdade de uma pessoa que ganha o seu próprio salário. Além disso, a adolescência é uma fase em que os humanos costumam ser impulsivos \citep{fonseca2005} e preocupados com sua posição, espaço, pertinência e aparência em algum tipo de grupo, o que pode influenciar um consumo além de suas possibilidades financeiras, consumo desenfreado e muitas vezes desnecessário, por exemplo, a necessidade de troca de celular de seis e dseis meses para não ficar "para trás"{}dos amigos).
 
 
-\subsection{Cuidado 2. Cuidado com a expressão consumo compulsivo}
+\paragraph{Cuidado 2. Cuidado com a expressão consumo compulsivo}
 
 Gostamos da definição de compra por impulso, apresentada nos estudos de \cite{BEATTY1998}. Para eles, compra por impulso ocorre sem intenções prévias de adquirir algum produto ou de efetuar alguma tarefa de compra, não se constituindo em aquisição de um item lembrado no ambiente de loja. Extraído do artigo disponível em: \url{www.scielo.br/pdf/rae/v43n4/v43n4a04.pdf}
 
 
-\subsection{Cuidado 3. Cuidado com a expressão consumo consciente} Essa expressão está super na moda, mas ela tem múltiplos signifi cados, e tem sido usada, em nossa opinião, de maneira totalmente equivocada.
+\paragraph{Cuidado 3. Cuidado com a expressão consumo consciente} Essa expressão está super na moda, mas ela tem múltiplos signifi cados, e tem sido usada, em nossa opinião, de maneira totalmente equivocada.
 
 Primeiro, precisamos entender que não há pensamento sem uma base emocional \citep{ferreira2008}. Temos vários estudos que mostram isso. O neurocientista Antônio Damásio descobriu que pessoas com lesão na parte do cérebro dedicadas à emoção não conseguem tomar decisões, ainda que consigam realizar cálculos matemáticos. As emoções surgiram no homem muito antes da razão, e ainda hoje podem ter muito mais poder sobre nós do que o nosso lado lógico e racional, que'é mais recente. Por questão de energia, nós só pensamos e mobilizamos o que Daniel Kahneman chama de sistema 2 quando realmente precisamos muito.
 
@@ -4696,8 +4709,8 @@ A atividade será resolvida e analisa no próximo tópico organizando as ideias.
 }{1}
 \end{answer}
 
-\explore{Consumo, cultura e sustentabilidade}
-\phantomsection\label{fin-exp-9}
+\explore{Consumo, Cultura e Sustentabilidade}
+\label{fin-exp-9}
 
 Para atender às nossas necessidades, quer sejam elas fisiológicas, como sede e fome; quer sejam de natureza estética (ficar mais bonito); formativa educacional (cursos, livros, programas); profissional (especializações, formações); que podem ou não estar relacionadas ao pertencimento de grupo; construção da identidade; nossa mente usa um poderoso agente: o desejo.
 
@@ -4708,7 +4721,7 @@ As necessidades podem ser induzidas. As necessidades podem ser manipuladas. As n
 Nessa seção convidamos você a pensar em uma série de situações de consumo e sustentabilidade, envolvendo aspectos matemáticos e não matemáticos, dentre eles os culturais, comportamentais e sociais.
 
 \begin{task}{Liberdade e consumo}
-\phantomsection\label{fin-ativ-37}
+\label{fin-ativ-37}
 
 
 Letícia está sentindo a necessidade de mudar seu pacote de dados para acesso à internet, e para isso resolveu acessar o site de uma determinada empresa. A figura abaixo apresenta duas opções de plano de dados dessa empresa, assim que se acessa o site.
@@ -4801,8 +4814,8 @@ Agora considere duas outras possibilidades.
 \end{enumerate}
 \end{task}
 
-\arrange{Heurísticas e vieses}
-\phantomsection\label{fin-arg-9}
+\arrange{Heurísticas e Vieses}
+\label{fin-arg-9}
 
 Para analisar a primeira situação, envolvendo a escolha do pacote de dados que melhor nos atende ou que mais se adequa ao seu orçamento, as pessoas podem levar em consideração, tendo ou não consciência disso, tanto alguns \textbf{aspectos matemáticos}, dentre eles o preço; o volume de dados; as suas condições financeiras; incluindo o orçamento pessoal/e/ou familiar; o quanto de dinheiro tem disponível para gastar com esse serviço, como alguns \textbf{aspectos não matemáticos}, tais como a aqualidade do serviço da empresa; a opinião dos amigos que são clientes; a estabilidade do sinal para assistir aos vídeos que gosta; a área de cobertura; o status que ser cliente dessa empresa pode te dar; o quanto acha que o serviço vale (avaliação subjetiva de valor), dentre outros. 
 
@@ -4925,8 +4938,8 @@ Veja também que podemos enxergar aqui duas Âncoras, tanto a que ele tem da out
 }{0}{1}
 \end{sugestions}
 
-\practice{comportamento e consumo}
-\phantomsection\label{fin-prac-9}
+\practice{Comportamento e Consumo}
+\label{fin-prac-9}
 
 \begin{task}{desconto progressivo: oportunidade ou enganação ancorada?}
 \label{fin-ativ-40}

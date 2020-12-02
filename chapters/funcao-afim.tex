@@ -1,11 +1,10 @@
-\renewcommand\chapterillustration{abertura-afim}
 \ifnum \aluno=1
 \renewcommand\chapterillustration{abertura-afim}
 \else
 \renewcommand\chapterillustration{abertura-afim-professor}
 \fi
 \renewcommand\chapterwhat{Funções linear e afim e suas representações algébrica e gráfica, taxa de variação, proporcionalidade direta, funções afins de domínio discreto (Progressões Aritméticas), Aplicações.}
-\renewcommand\chapterbecause{O modelo de variação constante é um dos modelos mais presentes em observações científicas e até mesmo em nosso cotidiano. Ele pode ser identificado por exemplo, em relações que modelam a compra/consumo e venda, o esvaziamento de um recipiente por um ralo em função do tempo ou na relação entre distância e tempo do “movimento uniforme” estudado pela Cinemática, entre tantos outros. Um caso particularmente importante é aquele em que há proporcionalidade entre as grandezas envolvidas na modelagem. As ideias desenvolvidas neste capítulo servem como base para aplicações em diversas áreas.}
+\renewcommand\chapterbecause{O modelo de variação constante é um dos modelos mais presentes em observações científicas e até mesmo em nosso cotidiano. Ele pode ser identificado por exemplo, em relações que modelam a compra/consumo e venda, o esvaziamento de um recipiente por um ralo em função do tempo ou na relação entre distância e tempo do “movimento uniforme” estudado pela Cinemática, entre tantos outros. Um caso particularmente importante é aquele em que há proporcionalidade entre as grandezas envolvidas na modelagem. As ide ias desenvolvidas neste capítulo servem como base para aplicações em diversas áreas.}
 \chapter{Função afim}
 
 
@@ -34,7 +33,7 @@ Versão digital do capítulo:
 \begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
 Título: & Função Afim\\
 \\
-Ano/ Versão: & 2020 / versão 1.1 de 17 de setembro de 2020\\
+Ano/ Versão: & 2020 / versão 1.2 de 27 de novembro de 2020\\
 \\
 Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
 \\
@@ -90,8 +89,8 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 
 \mainmatter
 
-\begin{apresentacao}
-\section{Função Afim}
+\begin{apresentacao}{Introdução}
+
 \subsection{Habilidades e pré-requsitos}
 
 Neste capítulo contemplam-se as seguintes habilidades da segunda versão da \href{http://historiadabncc.mec.gov.br/documentos/bncc-2versao.revista.pdf}{Base Nacional Comum Curricular (BNCC):}
@@ -119,6 +118,7 @@ Além disso há outras habilidades que se relacionam com os conceitos abordados 
 \end{habilities}
 
 Prezado colega, o presente capítulo foi concebido a partir de uma abordagem de função afim não usual. Deixamos a cargo do aluno levantar conjecturas a respeito dos conceitos, definições e propriedades da função afim. Essas conjecturas ou indagações são provocadas por meio de atividades que abordam os conceitos a serem trabalhados.
+\columnbreak
 
 Iniciamos o capítulo resgatando a ideia de grandezas proporcionais e relacionando-a com o conceito de função linear. É comum que a noção de proporcionalidade, mais especificamente a de proporcionalidade direta, amplamente vinculada à “regra de três”, seja associada pelos estudantes a qualquer variação entre grandezas. Ainda que, de fato, a proporcionalidade tenha um papel de destaque em modelos da física e da química, nem toda variação entre grandezas é um modelo desse tipo. Portanto acreditamos que, na condução das atividades seja natural para o professor (e recomendamos que o faça) chamar a atenção dos estudantes para o fato que existem grandezas cuja relação não é de proporcionalidade.
 
@@ -129,6 +129,7 @@ Vale ressaltar alguns pontos:
 \item {} 
 Boa parte das atividades tem como objetivo apontar para os estudantes a importância da análise da taxa de variação para inferirmos se uma função é afim ou não. Neste capítulo, resolvemos não fazer uso do termo \textbf{coeficiente angular} da reta. Essa decisão se pauta em dois aspectos: (i) Dependendo da escolha da unidade para as grandezas envolvidas, a imagem da representação gráfica pode sugerir um ângulo cuja a tangente não correspnde ao coeficiente angular da reta determinada pela função, e assim levar ao equívoco. (ii) Além disso, acreditamos que a compreensão de taxa de variação pode ser mais fácil se dotada de significado. Assim, por exemplo, é mais fácil compreender a taxa de variação entre temperatura e altitude ou entre velocidade e tempo do que associar essa ideia a um conceito essencialmente numérico, que é o caso do coeficiente angular de uma reta. O ângulo tem apelo visual independente das escalas escolhidas para os eixos, e assim, chamar a taxa de variação de coeficiente angular pode trazer confusão. Portanto, neste texto, optamos por destacar a especificidade de cada conceito associando o termo taxa de variação à função afim e coeficiente angular a retas (desde que estejam em um sistema de coordenadas cujos eixos apresentam-se na mesma escala).
 
+\clearpage
 \item {} 
 Também não achamos adequado o termo \emph{coeficiente linear} para o \(b\) em \(f(x)=ax+b\). Primeiramente porque, quando ele é não nulo a função deixa de ser “linear”, então ele funciona mais como uma medida da “não-linearidade” da função. Em alguns livros ele também é chamado de \emph{intercepto}. Também optamos por não utilizar essa nomenclatura por ela ser restringir apenas aos casos em que os eixos estão na posição tradicional (isto é, se cruzando no \((0,0)\)) e além disso, \(0\) deve pertencer ao domínio da função em questão. Por essas razões, resolvemos não dar um nome para o “\(b\)”, apenas lhe dar um significado geométrico que serve em qualquer situação: a medida da translação vertical que se faz no gráfico da função linear \(\ell(x)=ax\) para se obter o gráfico da função \(f(x)=ax+b\).
 
@@ -152,13 +153,13 @@ As habilidades que estão listadas como pré-requisitos são retomadas pelas ati
 \textbf{Alguns distratores} (apontados pela literatura de pesquisa)
 \begin{itemize}
 \item {} 
-A repetida confirmação da validade da proporcionalidade - juntamente com o status intuitivo que o conceito recebe gradualmente - pode conduzir a uma ideia errada: se houver uma relação entre duas variáveis, essa relação provavelmente é proporcional. Estudos mostram que existe uma tendência generalizada entre os estudantes americanos com idade de \(12\) a \(16\) anos de que, se uma figura aumentar de \(k\) vezes, a área e o volume dessa figura serão ampliados também de \(k\) vezes. \cite{Dooren-et-al-2005}
+A repetida confirmação da validade da proporcionalidade - juntamente com o status intuitivo que o conceito recebe gradualmente - pode conduzir a uma ideia errada: se houver uma relação entre duas variáveis, essa relação provavelmente é proporcional. Estudos mostram que existe uma tendência generalizada entre os estudantes americanos com idade de \(12\) a \(16\) anos de que, se uma figura aumentar de \(k\) vezes, a área e o volume dessa figura serão ampliados também de \(k\) vezes. \citep{Dooren-et-al-2005}
 
 \item {} 
-A pesquisa tem documentado dificuldades dos estudantes com o conceito de inclinação. Há confusões associadas ao cálculo da inclinação e à interpretação de funções lineares e seus gráficos. Os estudantes também apresentam dificuldades em relacionar gráficos a equações lineares e à noção de taxa de variação. Eles têm dificuldade em perceber a inclinação como uma razão e conectar tal razão ao modelo físico. \cite{Stump-1999}
+A pesquisa tem documentado dificuldades dos estudantes com o conceito de inclinação. Há confusões associadas ao cálculo da inclinação e à interpretação de funções lineares e seus gráficos. Os estudantes também apresentam dificuldades em relacionar gráficos a equações lineares e à noção de taxa de variação. Eles têm dificuldade em perceber a inclinação como uma razão e conectar tal razão ao modelo físico. \citep{Stump-1999}
 
 \item {} 
-Nem toda razão pode ser expressa por números racionais, o que vincula, por meio da proporcionalidade, a apresentação dos números irracionais. Isso sinaliza que nem todas as situações podem ser resolvidas recorrendo-se apenas aos números racionais. \cite{Silva-et-al-2013}
+Nem toda razão pode ser expressa por números racionais, o que vincula, por meio da proporcionalidade, a apresentação dos números irracionais. Isso sinaliza que nem todas as situações podem ser resolvidas recorrendo-se apenas aos números racionais. \citep{Silva-et-al-2013}
 
 \end{itemize}
 \end{apresentacao}
@@ -260,7 +261,7 @@ k\cdot 1 \quad &\overline{\quad \quad \quad}& \quad k\cdot 200
   Este é um convite à uma primeira reflexão sobre as propriedades geométricas de pontos colineares e sua relação com grandezas proporcionais. Conduza os seus estudantes a fazerem conjecturas sobre como deve ser a representação gráfica de grandezas diretamente proporcionais.
 }{1}{1}
 \end{sugestions}
-\explore{função linear}\label{funcaolinear}
+\explore{Função Linear}\label{funcaolinear}
 No capítulo de Funções, você foi apresentado ao conceito de função, uma relação entre duas grandezas que atende determinadas condições. Neste capítulo, pretendemos colocá-lo em contato com um dos modelos mais presentes em observações científicas e até mesmo em nosso cotidiano, o modelo de variação constante, aqui representado pelo conceito de função afim. Este modelo pode ser identificado por exemplo, em relações que modelam a compra/consumo e venda, o esvaziamento de um recipiente por um ralo em função do tempo ou na relação entre distância e tempo do “movimento uniforme” estudado pela Cinemática, entre tantos outros. Antes de estudarmos a função afim propriamente dita, vamos entender um de seus casos particulares, a função linear.
 
 Comecemos analisando os seguintes problemas:
@@ -372,7 +373,7 @@ Suponha que os dados numéricos fossem omitidos dos eixos nos dois gráficos. Ai
 }{1}{2}
 \end{sugestions}
 
-\arrange{ função linear}
+\arrange{Função Linear}
 \label{\detokenize{AF107-1::doc}}\label{\detokenize{AF107-1:organizando-as-ideias-funcao-linear}}
 Considere duas grandezas diretamente proporcionais que podem assumir quaisquer valores reais e vamos representá-las pelas letras \(x\) e \(y\). Então, sempre que multiplicarmos \(x\) por qualquer número real \(k\), o valor correspondente da grandeza \(y\) também fica multiplicado pelo mesmo valor. Isto é
 \[\begin{array}{ccc}
@@ -530,7 +531,7 @@ Podemos afirmar também que \(x\) é uma função linear de \(y\)?
 }{1}
 \end{answer}
 
-\practice{função linear}
+\practice{Função Linear}
 \label{\detokenize{AF107-1:praticando}}
 
 \begin{task}{Taxa de câmbio}
@@ -960,7 +961,7 @@ Em uma circunferência, podemos relacionar a área \(A\) e o raio \(r\) por meio
 \end{enumerate}
 }{1}
 \end{answer}
-\clearmargin
+\cleardoublepage
 \begin{objectives}{Câmara frigorífica}
 {
 \begin{enumerate}
@@ -1087,10 +1088,13 @@ $t$(min) & Porcentagem de recarga \\
 }{0}
 \end{answer}
 
-\explore{ taxa de variação média}
-\label{\detokenize{AF107-2:explorando-taxa-de-variacao-media}}\label{\detokenize{AF107-2::doc}}
+\clearpage
+\explore{Taxa de Variação Média}
+% \label{\detokenize{AF107-2:explorando-taxa-de-variacao-media}}\label{\detokenize{AF107-2::doc}}
+\phantom{M}
+\vspace{-1em}
+\vspace{-2\parskip}
 \begin{task}{Teor de álcool sanguíneo}
-
 \label{ativ-alcool}
 
 De acordo com o site \href{https://pt.wikihow.com/Calcular-o-N\%C3\%ADvel-de-\%C3\%81lcool-no-Sangue}{wikiHow} o Teor Alcoólico Sanguíneo, ou TAS, é a medida da proporção de álcool no sangue de uma pessoa. Um TAS de \(0{,}08\) indica que há \(80\) mg de álcool por \(100\) ml de sangue. O álcool é absorvido de forma diferente pelos homens e pelas mulheres. O corpo masculino geralmente tem mais água (\(61\%\) \emph{versus} \(52\%\)) e, portanto, dilui melhor o álcool, gerando TAS mais baixos.
@@ -1242,7 +1246,7 @@ Qual é a taxa de carregamento desse modelo de telefone celular.
   Essa ideia será trabalhada mais adiante na seção dedicada a função afim. Por enquanto, deixe que criem suas próprias jutificativas e contra-exemplos
 }{1}{2}
 \end{sugestions}
-\arrange{taxa de variação média}
+\arrange{Taxa de Variação Média}
 \label{\detokenize{AF107-2:organizando-as-ideias-taxa-de-variacao-media}}
 No capítulo de Taxa de variação, você aprendeu a calcular a taxa de variação média de uma função em um determinado intervalo. É um número expresso em forma de uma razão que fornece diversas informações sobre o comportamento da função no intervalo considerado.
 
@@ -1578,7 +1582,7 @@ Concluímos, assim, que toda reta não vertical que contém a origem é o gráfi
 }{1}
 \end{answer}
 
-\practice{taxa de variação média}
+\practice{Taxa de Variação Média}
 \label{\detokenize{AF107-3::doc}}\label{\detokenize{AF107-3:praticando}}
 
 \begin{task}{Quando trocar o filtro do purificador?}
@@ -1725,7 +1729,7 @@ Pressão nominal & \multicolumn{5}{c|}{0,196MPa (30 metros de coluna de água)} 
 \end{enumerate}
 }{1}
 \end{answer}
-\explore{ função afim}
+\explore{Função Afim}
 \label{\detokenize{AF107-4:sec-funcao-afim}}\label{\detokenize{AF107-4::doc}}\label{\detokenize{AF107-4:explorando-funcao-afim}}
 
 \begin{task}{distância x tempo}
@@ -1806,7 +1810,7 @@ Sugerimos o uso da construção GeoGebra disponível no endereço \url{https://w
 }{1}{2}
 \end{sugestions}
 
-\arrange{ função afim}
+\arrange{Função Afim}
 \label{\detokenize{AF107-4:organizando-as-ideias-funcao-afim}}
 O gráfico da atividade \hyperref[ativ-dist-tempo]{distância x tempo} apresenta a distância até o ponto de referência como uma função do tempo. Como a ação acontece no intervalo de tempo de \(0\) a \(4\) segundos, podemos modelar essa relação com uma função \(f\) cujo domínio é o intervalo \([0,4]\), isto é, \(f:[0,4] \to \mathbb{R}\). Vamos juntos determinar uma expressão para \(f\)?
 
@@ -1960,7 +1964,7 @@ O número $ a $ é a \textbf{taxa de variação média} da função afim $ f $ (
 \caption{Exemplos: \(\ell(x)=-x\), \(f(x)=-x-2\) e \(g(x)=-x+6\)}\label{\detokenize{AF107-4:id2}}\end{figure}
 \end{example}
 
-\section{A inclinação de uma reta e a taxa de variação média}
+\subsection{A inclinação de uma reta e a taxa de variação média}
 
 \begin{figure}[H]
 \centering
@@ -2297,7 +2301,7 @@ Valor a pagar (R\$) & 3.750 & 3.500 & 3.250 & 3.000 \\
 }{1}
 \end{answer}
 
-\practice{função afim}
+\practice{Função Afim}
 \label{\detokenize{AF107-6::doc}}\label{\detokenize{AF107-6:praticando}}
 
 \begin{task}{Antecipando o pagamento de uma dívida}
@@ -2553,7 +2557,7 @@ forma de lista.
 }{1}
 \end{answer}
 
-\explore{domínios discretos}
+\explore{Domínios Discretos}
 
 \begin{task}{quadros na parede}
 Caso tenha disponibilidade, sugerimos o uso da versão digital desta atividade disponível neste \href{https://teacher.desmos.com/activitybuilder/custom/5e7ba1a876309d7f9879af12}{link}
@@ -2650,7 +2654,7 @@ Quem das duas se expressou corretamente? Por quê? Como cada uma delas pode ter 
 
 \end{task}
 
-\arrange{domínios discretos}
+\arrange{Domínios Discretos}
 
 Neste capítulo estamos trabalhando com funções afins e, como você deve ter percebido, na atividade anterior a relação entre as variáveis disância e posição do gancho na fila também estavam relacionadas por uma função afim. O que queremos destacar nesta seção é uma outra maneira de representar a \textbf{função afim} quando seu domínio é um \textbf{conjunto discreto} - em que é possível contar ou enumerar seus elementos, dizer quem é o primeiro, o segundo, o terceiro e assim por diante. Em muitos casos e atividades anteriores, de fato, nos ativemos apenas a um conjunto finito de elementos do domínio, e para esses casos é possível traduzi-los para essa nova notação.
 
@@ -2927,7 +2931,7 @@ Modelo 4 & 16 & 16 \\
 }{0}
 \end{answer}
 
-\practice{domínios discretos}
+\practice{Domínios Discretos}
 
 \begin{task}{termo geral de uma P.A.}
 A função afim que relaciona um termo genérico de uma progressão aritmética com o primeiro termo e a razão é comumente chamada de \textbf{fórmula do termo geral} da progressão. Ou seja, para a P.A. $(a_1,a_2,a_3,...)$ de razão $r$ a fórmula do termo geral é
@@ -3298,7 +3302,7 @@ p(x)&=10x+15, \text{ se }x\in(10,15]
 }{2}
 \end{answer}
 
-\know{ função afim por partes}
+\know{Função Afim por Partes}
 \label{\detokenize{AF107-A::doc}}\label{\detokenize{AF107-A:para-saber-mais-funcao-afim-por-partes}}
 \begin{task}{Afim de um passeio}
 
@@ -3334,6 +3338,7 @@ Trace a curva que representa a função \(p\) no plano cartesiano. Utilize a esc
 
 \exercise
 % %Pagina 1
+
 \begin{answer}{Exercícios}
 {\exerciselist
 \begin{enumerate}
@@ -3341,15 +3346,18 @@ Trace a curva que representa a função \(p\) no plano cartesiano. Utilize a esc
 
 De outro modo, poderíamos achar os R\$ $90{,}00$ de outras maneiras, uma delas utiliza o fato que toda função afim possui taxa de variação constante, logo: $a=\Delta x\Delta y=\dfrac{1950-750}{x-100}=\dfrac{50-150}{30-5}=-4$, o que resulta em $x=90$
 
-\item \begin{enumerate}
+\item 
+\begin{enumerate}
 \item Entre $0$ e $50$kWh.
 
-\item Temos os pontos $A=(100,750)$ e $B=(200,2250)$ , a reta que passa por esses pontos pode ser representada pela função afim: $f(x)=15x-750$ , queremos obter o valor de x tal que, f(x)=1950 que é dado por: $1950=15x-750$, que resulta em $x=180$kWh.
+\item Temos os pontos $A=(100,750)$ e $B=(200,2250)$ , a reta que passa por esses pontos pode ser representada pela função afim: $f(x)=15x-750$ , queremos obter o valor de $x$ tal que, $f(x)=1950$ que é dado por: $1950=15x-750$, que resulta em $x=180$ kWh.
 \end{enumerate}
 
 \end{enumerate}
 }{1}
 \end{answer}
+
+
 \clearmargin
 %Pagina 2
 \begin{answer}{Exercícios}
@@ -3952,3 +3960,14 @@ Os canais \(200\) e \(285\) são reservados para uso exclusivo das rádios comun
 Determine você também este valor.
 
 \end{enumerate}
+
+\ifnum\aluno=1
+\clearpage
+\else
+\notasfinais
+\fi
+
+\bibliographystyle{apalike-pt}
+\bibliography{../Bibliografia/funcao-afim_bibliografia.bib}
+
+\nocite{*}
