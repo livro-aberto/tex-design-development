@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: trigonometrica.aux
 The style file: apalike-pt.bst
 Database file #1: ../Bibliografia/trigonometrica_bibliografia.bib
-You've used 11 entries,
+You've used 13 entries,
             1935 wiz_defined-function locations,
-            548 strings with 5908 characters,
-and the built_in function-call counts, 3354 in all, are:
-= -- 343
-> -- 94
-< -- 10
-+ -- 32
-- -- 28
-* -- 246
-:= -- 637
-add.period$ -- 34
-call.type$ -- 11
-change.case$ -- 67
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 140
-empty$ -- 238
-format.name$ -- 39
-if$ -- 636
+            562 strings with 6240 characters,
+and the built_in function-call counts, 4024 in all, are:
+= -- 407
+> -- 124
+< -- 12
++ -- 44
+- -- 38
+* -- 304
+:= -- 763
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 82
+chr.to.int$ -- 13
+cite$ -- 13
+duplicate$ -- 166
+empty$ -- 279
+format.name$ -- 51
+if$ -- 761
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 4
-newline$ -- 58
-num.names$ -- 34
-pop$ -- 41
+missing$ -- 6
+newline$ -- 68
+num.names$ -- 40
+pop$ -- 53
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 84
 quote$ -- 0
-skip$ -- 112
+skip$ -- 131
 stack$ -- 0
-substring$ -- 204
-swap$ -- 8
-text.length$ -- 0
+substring$ -- 230
+swap$ -- 11
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
+type$ -- 76
 warning$ -- 0
-while$ -- 27
+while$ -- 31
 width$ -- 0
-write$ -- 152
+write$ -- 181

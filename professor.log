@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.7.27)  30 NOV 2020 10:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.7.27)  7 DEC 2020 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -880,16 +880,109 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 File: bkm-dvipdfm.def 2019/12/03 v1.28 bookmark driver for dvipdfm (HO)
 \BKM@id=\count333
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 35.
-Package hyperref Info: Option `colorlinks' set `true' on input line 35.
+(x:/texlive/2020/texmf-dist/tex/latex/cellspace/cellspace.sty
+Package: cellspace 2019/03/11 v1.8.1 Spacing table cells (JN)
+
+(x:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(x:/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count334
+\calc@Bcount=\count335
+\calc@Adimen=\dimen297
+\calc@Bdimen=\dimen298
+\calc@Askip=\skip193
+\calc@Bskip=\skip194
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count336
+\calc@Cskip=\skip195
+)
+(x:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(x:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(x:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks38
+\XKV@tempa@toks=\toks39
+)
+\XKV@depth=\count337
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\cellspacetoplimit=\dimen299
+\cellspacebottomlimit=\dimen300
+\cellspace@firstht=\dimen301
+\cellspace@lastdp=\dimen302
+
+(x:/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip256
+
+For additional information on amsmath, use the `?' option.
+(x:/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(x:/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks40
+\ex@=\dimen303
+))
+(x:/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen304
+)
+(x:/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count338
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count339
+\leftroot@=\count340
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count341
+\DOTSCASE@=\count342
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box75
+\strutbox@=\box76
+\big@size=\dimen305
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count343
+\c@MaxMatrixCols=\count344
+\dotsspace@=\muskip17
+\c@parentequation=\count345
+\dspbrk@lvl=\count346
+\tag@help=\toks41
+\row@=\count347
+\column@=\count348
+\maxfields@=\count349
+\andhelp@=\toks42
+\eqnshift@=\dimen306
+\alignsep@=\dimen307
+\tagshift@=\dimen308
+\tagwidth@=\dimen309
+\totwidth@=\dimen310
+\lineht@=\dimen311
+\@envbody=\toks43
+\multlinegap=\skip257
+\multlinetaggap=\skip258
+\mathdisplay@stack=\toks44
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
 
 (x:/texlive/2020/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count334
-\float@exts=\toks38
-\float@box=\box75
-\@float@everytoks=\toks39
-\@floatcapt=\box76
+\c@float@type=\count350
+\float@exts=\toks45
+\float@box=\box77
+\@float@everytoks=\toks46
+\@floatcapt=\box78
 )
 (x:/texlive/2020/texmf-dist/tex/latex/tkz-euclide/tkz-euclide.sty
 2020/03/18 3.06c tkz-euclide.sty
@@ -908,15 +1001,15 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen297
+\arrowsize=\dimen312
 ))
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.cod
 e.tex
 File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowinset=\dimen298
-\pgfarrowlength=\dimen299
-\pgfarrowwidth=\dimen300
-\pgfarrowlinewidth=\dimen301
+\pgfarrowinset=\dimen313
+\pgfarrowlength=\dimen314
+\pgfarrowwidth=\dimen315
+\pgfarrowlinewidth=\dimen316
 )
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarybabel.code.tex
@@ -930,16 +1023,16 @@ File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 brarydecorations.code.tex
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
 ex
-\pgfdecoratedcompleteddistance=\dimen302
-\pgfdecoratedremainingdistance=\dimen303
-\pgfdecoratedinputsegmentcompleteddistance=\dimen304
-\pgfdecoratedinputsegmentremainingdistance=\dimen305
-\pgf@decorate@distancetomove=\dimen306
-\pgf@decorate@repeatstate=\count335
-\pgfdecorationsegmentamplitude=\dimen307
-\pgfdecorationsegmentlength=\dimen308
+\pgfdecoratedcompleteddistance=\dimen317
+\pgfdecoratedremainingdistance=\dimen318
+\pgfdecoratedinputsegmentcompleteddistance=\dimen319
+\pgfdecoratedinputsegmentremainingdistance=\dimen320
+\pgf@decorate@distancetomove=\dimen321
+\pgf@decorate@repeatstate=\count351
+\pgfdecorationsegmentamplitude=\dimen322
+\pgfdecorationsegmentlength=\dimen323
 )
-\tikz@lib@dec@box=\box77
+\tikz@lib@dec@box=\box79
 )
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarydecorations.markings.code.tex
@@ -957,9 +1050,9 @@ orations.shapes.code.tex))
 brarydecorations.text.code.tex
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
 orations.text.code.tex
-\pgf@lib@dec@text@box=\box78
+\pgf@lib@dec@text@box=\box80
 )
-\tikz@lib@dec@te@box=\box79
+\tikz@lib@dec@te@box=\box81
 )
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarydecorations.pathmorphing.code.tex
@@ -970,7 +1063,7 @@ braryintersections.code.tex
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.c
 ode.tex
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
-\pgf@intersect@solutions=\count336
+\pgf@intersect@solutions=\count352
 ))
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarypatterns.code.tex
@@ -1022,23 +1115,23 @@ File: tikzlibrarythrough.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (x:/texlive/2020/texmf-dist/tex/latex/numprint/numprint.sty
 Package: numprint 2012/08/20 v1.39 Print numbers (HH)
-\c@nprt@mantissa@digitsbefore=\count337
-\c@nprt@mantissa@digitsafter=\count338
-\c@nprt@exponent@digitsbefore=\count339
-\c@nprt@exponent@digitsafter=\count340
-\nprt@digitwidth=\skip193
-\nprt@sepwidth=\skip194
-\nprt@decimalwidth=\skip195
-\nprt@blockwidth=\skip256
-\nprt@digittoks=\toks40
-\nprt@pretoks=\toks41
-\nprt@posttoks=\toks42
-\nprt@thisdigit=\count341
-\nprt@curpos=\count342
-\nprt@rndpos=\count343
-\c@nprt@digitsfirstblock=\count344
-\c@nprt@blockcnt=\count345
-\c@nprt@cntprint=\count346
+\c@nprt@mantissa@digitsbefore=\count353
+\c@nprt@mantissa@digitsafter=\count354
+\c@nprt@exponent@digitsbefore=\count355
+\c@nprt@exponent@digitsafter=\count356
+\nprt@digitwidth=\skip259
+\nprt@sepwidth=\skip260
+\nprt@decimalwidth=\skip261
+\nprt@blockwidth=\skip262
+\nprt@digittoks=\toks47
+\nprt@pretoks=\toks48
+\nprt@posttoks=\toks49
+\nprt@thisdigit=\count357
+\nprt@curpos=\count358
+\nprt@rndpos=\count359
+\c@nprt@digitsfirstblock=\count360
+\c@nprt@blockcnt=\count361
+\c@nprt@cntprint=\count362
 
 No configuration file `numprint.cfg' found.)
 (x:/texlive/2020/texmf-dist/tex/latex/l3packages/xfp/xfp.sty
@@ -1047,19 +1140,19 @@ Package: expl3 2020-07-17 L3 programming layer (loader)
 
 (x:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
 File: l3backend-xdvipdfmx.def 2020-06-29 L3 backend support: xdvipdfmx
-\g__graphics_track_int=\count347
-\l__pdf_internal_box=\box80
-\g__pdf_backend_object_int=\count348
-\g__pdf_backend_annotation_int=\count349
+\g__graphics_track_int=\count363
+\l__pdf_internal_box=\box82
+\g__pdf_backend_object_int=\count364
+\g__pdf_backend_annotation_int=\count365
 ))
 (x:/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2020-05-15 L3 Experimental document command parser
 
 (x:/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex
-\l__xparse_current_arg_int=\count350
-\g__xparse_grabber_int=\count351
-\l__xparse_m_args_int=\count352
-\l__xparse_v_nesting_int=\count353
+\l__xparse_current_arg_int=\count366
+\g__xparse_grabber_int=\count367
+\l__xparse_m_args_int=\count368
+\l__xparse_v_nesting_int=\count369
 ))
 Package: xfp 2020-05-15 L3 Floating point unit
 )
@@ -1069,19 +1162,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (x:/texlive/2020/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count354
+\actioncount=\count370
 )
 (x:/texlive/2020/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count355
-\FP@xia=\count356
-\FP@xib=\count357
-\FP@xfa=\count358
-\FP@xfb=\count359
-\FP@rega=\count360
-\FP@regb=\count361
-\FP@regs=\count362
-\FP@times=\count363
+\FP@xs=\count371
+\FP@xia=\count372
+\FP@xib=\count373
+\FP@xfa=\count374
+\FP@xfb=\count375
+\FP@rega=\count376
+\FP@regb=\count377
+\FP@regs=\count378
+\FP@times=\count379
 )
 (x:/texlive/2020/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -1100,7 +1193,7 @@ Package: fp-pas 1994/08/29
 )
 (x:/texlive/2020/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count364
+\FPseed=\count380
 )
 (x:/texlive/2020/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -1111,26 +1204,26 @@ Package: fp-upn 1996/10/21
 (x:/texlive/2020/texmf-dist/tex/latex/fp/fp-eval.sty
 Package: fp-eval 1995/04/03
 ))
-\tkzRadius=\dimen309
-\tkzLength=\dimen310
-\tkz@radi=\dimen311
-\tkz@ax=\dimen312
-\tkz@ay=\dimen313
-\tkz@bx=\dimen314
-\tkz@by=\dimen315
-\tkz@cx=\dimen316
-\tkz@cy=\dimen317
-\tkz@dx=\dimen318
-\tkz@dy=\dimen319
-\tkz@tax=\dimen320
-\tkz@tay=\dimen321
-\tkz@tbx=\dimen322
-\tkz@tby=\dimen323
-\tkz@tcx=\dimen324
-\tkz@tcy=\dimen325
-\tkz@tdx=\dimen326
-\tkz@tdy=\dimen327
-\tkz@cntmk=\count365
+\tkzRadius=\dimen324
+\tkzLength=\dimen325
+\tkz@radi=\dimen326
+\tkz@ax=\dimen327
+\tkz@ay=\dimen328
+\tkz@bx=\dimen329
+\tkz@by=\dimen330
+\tkz@cx=\dimen331
+\tkz@cy=\dimen332
+\tkz@dx=\dimen333
+\tkz@dy=\dimen334
+\tkz@tax=\dimen335
+\tkz@tay=\dimen336
+\tkz@tbx=\dimen337
+\tkz@tby=\dimen338
+\tkz@tcx=\dimen339
+\tkz@tcy=\dimen340
+\tkz@tdx=\dimen341
+\tkz@tdy=\dimen342
+\tkz@cntmk=\count381
 
 Local configuration file tkz-base.cfg found and used
 (x:/texlive/2020/texmf-dist/tex/latex/tkz-base/tkz-base.cfg
@@ -1173,8 +1266,8 @@ File: tkz-tool-arith.tex tkz-tool-arith 3.02 c
 2020/03/18 3.06c tkz-tools-angles.tex
 ) (x:/texlive/2020/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-angles.tex
 2020/03/18 3.06c tkz-tool-eu-angles.tex
-\tkz@arcsize=\dimen328
-\tkz@fillsize=\dimen329
+\tkz@arcsize=\dimen343
+\tkz@fillsize=\dimen344
 ) (x:/texlive/2020/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-arcs.tex
 2020/03/23 3.06c tkz-obj-eu-arcs.tex
 ) (x:/texlive/2020/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-compass.tex
@@ -1210,65 +1303,7 @@ File: tkz-tool-arith.tex tkz-tool-arith 3.02 c
 2020/03/18 3.06c tkz-obj-eu-show.tex
 ) (x:/texlive/2020/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-triangles.tex
 2020/03/18 3.06c tkz-obj-eu-triangles.tex
-)) (x:/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip257
-
-For additional information on amsmath, use the `?' option.
-(x:/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
-
-(x:/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks43
-\ex@=\dimen330
-))
-(x:/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen331
-)
-(x:/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
-)
-\inf@bad=\count366
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count367
-\leftroot@=\count368
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count369
-\DOTSCASE@=\count370
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box81
-\strutbox@=\box82
-\big@size=\dimen332
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count371
-\c@MaxMatrixCols=\count372
-\dotsspace@=\muskip17
-\c@parentequation=\count373
-\dspbrk@lvl=\count374
-\tag@help=\toks44
-\row@=\count375
-\column@=\count376
-\maxfields@=\count377
-\andhelp@=\toks45
-\eqnshift@=\dimen333
-\alignsep@=\dimen334
-\tagshift@=\dimen335
-\tagwidth@=\dimen336
-\totwidth@=\dimen337
-\lineht@=\dimen338
-\@envbody=\toks46
-\multlinegap=\skip258
-\multlinetaggap=\skip259
-\mathdisplay@stack=\toks47
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
-)
-(x:/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)) (x:/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (x:/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -1284,15 +1319,15 @@ Package: babel 2020/07/13 3.47 The Babel package
 
 (x:/texlive/2020/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/07/13 3.47 Babel common definitions
-\babel@savecnt=\count378
-\U@D=\dimen339
+\babel@savecnt=\count382
+\U@D=\dimen345
 \l@babelnohyphens=\language86
 
 (x:/texlive/2020/texmf-dist/tex/generic/babel/xebabel.def
 (x:/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def))
 \bbl@readstream=\read4
 )
-\bbl@dirlevel=\count379
+\bbl@dirlevel=\count383
 
 (x:/texlive/2020/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2020/05/04 v1.2r Portuguese support from the babel system
@@ -1305,11 +1340,11 @@ Package: times 2020/03/25 PSNFSS-v9.3 (SPQR)
 )
 (x:/texlive/2020/texmf-dist/tex/latex/tabulary/tabulary.sty
 Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
-\TY@count=\count380
-\TY@linewidth=\dimen340
-\tymin=\dimen341
-\tymax=\dimen342
-\TY@tablewidth=\dimen343
+\TY@count=\count384
+\TY@linewidth=\dimen346
+\tymin=\dimen347
+\tymax=\dimen348
+\TY@tablewidth=\dimen349
 )
 (x:/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -1317,18 +1352,18 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (x:/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count381
-\Gm@cntv=\count382
-\c@Gm@tempcnt=\count383
-\Gm@bindingoffset=\dimen344
-\Gm@wd@mp=\dimen345
-\Gm@odd@mp=\dimen346
-\Gm@even@mp=\dimen347
-\Gm@layoutwidth=\dimen348
-\Gm@layoutheight=\dimen349
-\Gm@layouthoffset=\dimen350
-\Gm@layoutvoffset=\dimen351
-\Gm@dimlist=\toks48
+\Gm@cnth=\count385
+\Gm@cntv=\count386
+\c@Gm@tempcnt=\count387
+\Gm@bindingoffset=\dimen350
+\Gm@wd@mp=\dimen351
+\Gm@odd@mp=\dimen352
+\Gm@even@mp=\dimen353
+\Gm@layoutwidth=\dimen354
+\Gm@layoutheight=\dimen355
+\Gm@layouthoffset=\dimen356
+\Gm@layoutvoffset=\dimen357
+\Gm@dimlist=\toks50
 )
 (x:/texlive/2020/texmf-dist/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
@@ -1343,63 +1378,46 @@ Package: xurl 2020/01/24 v 0.09 modify URL breaks
 )
 (x:/texlive/2020/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks49
-\thm@bodyfont=\toks50
-\thm@headfont=\toks51
-\thm@notefont=\toks52
-\thm@headpunct=\toks53
-\thm@preskip=\skip260
-\thm@postskip=\skip261
-\thm@headsep=\skip262
-\dth@everypar=\toks54
+\thm@style=\toks51
+\thm@bodyfont=\toks52
+\thm@headfont=\toks53
+\thm@notefont=\toks54
+\thm@headpunct=\toks55
+\thm@preskip=\skip263
+\thm@postskip=\skip264
+\thm@headsep=\skip265
+\dth@everypar=\toks56
 )
 (x:/texlive/2020/texmf-dist/tex/latex/tabu/tabu.sty
 Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
-\c@taburow=\count384
-\tabu@nbcols=\count385
-\tabu@cnt=\count386
-\tabu@Xcol=\count387
-\tabu@alloc=\count388
-\tabu@nested=\count389
-\tabu@target=\dimen352
-\tabu@spreadtarget=\dimen353
-\tabu@naturalX=\dimen354
-\tabucolX=\dimen355
-\tabu@Xsum=\dimen356
-\extrarowdepth=\dimen357
-\abovetabulinesep=\dimen358
-\belowtabulinesep=\dimen359
-\tabustrutrule=\dimen360
-\tabu@thebody=\toks55
-\tabu@footnotes=\toks56
+\c@taburow=\count388
+\tabu@nbcols=\count389
+\tabu@cnt=\count390
+\tabu@Xcol=\count391
+\tabu@alloc=\count392
+\tabu@nested=\count393
+\tabu@target=\dimen358
+\tabu@spreadtarget=\dimen359
+\tabu@naturalX=\dimen360
+\tabucolX=\dimen361
+\tabu@Xsum=\dimen362
+\extrarowdepth=\dimen363
+\abovetabulinesep=\dimen364
+\belowtabulinesep=\dimen365
+\tabustrutrule=\dimen366
+\tabu@thebody=\toks57
+\tabu@footnotes=\toks58
 \tabu@box=\box83
 \tabu@arstrutbox=\box84
 \tabu@hleads=\box85
 \tabu@vleads=\box86
-\tabu@cellskip=\skip263
+\tabu@cellskip=\skip266
 )
 (x:/texlive/2020/texmf-dist/tex/latex/tools/hhline.sty
 Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
 )
 (x:/texlive/2020/texmf-dist/tex/latex/pbox/pbox.sty
 Package: pbox 2011/12/07 v1.2 Dynamic parboxes
-
-(x:/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count390
-\calc@Bcount=\count391
-\calc@Adimen=\dimen361
-\calc@Bdimen=\dimen362
-\calc@Askip=\skip264
-\calc@Bskip=\skip265
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count392
-\calc@Cskip=\skip266
-)
-(x:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
 \pb@xlen=\skip267
 )
 (x:/texlive/2020/texmf-dist/tex/latex/ragged2e/ragged2e.sty
@@ -1425,12 +1443,12 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 (x:/texlive/2020/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
-\MT@toks=\toks57
-\MT@count=\count393
+\MT@toks=\toks59
+\MT@count=\count394
 LaTeX Info: Redefining \textls on input line 790.
-\MT@outer@kern=\dimen363
+\MT@outer@kern=\dimen367
 LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count394
+\MT@listname@count=\count395
 
 (x:/texlive/2020/texmf-dist/tex/latex/microtype/microtype-xetex.def
 File: microtype-xetex.def 2019/11/18 v2.7d Definitions specific to xetex (RS)
@@ -1443,9 +1461,9 @@ File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
 ))
 (x:/texlive/2020/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen364
-\c@nlinenum=\count395
-\TeXr@lab=\toks58
+\rotheadsize=\dimen368
+\c@nlinenum=\count396
+\TeXr@lab=\toks60
 )
 (x:/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
@@ -1453,24 +1471,24 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip283
 \LTpre=\skip284
 \LTpost=\skip285
-\LTchunksize=\count396
-\LTcapwidth=\dimen365
+\LTchunksize=\count397
+\LTcapwidth=\dimen369
 \LT@head=\box87
 \LT@firsthead=\box88
 \LT@foot=\box89
 \LT@lastfoot=\box90
-\LT@cols=\count397
-\LT@rows=\count398
-\c@LT@tables=\count399
-\c@LT@chunks=\count400
-\LT@p@ftn=\toks59
+\LT@cols=\count398
+\LT@rows=\count399
+\c@LT@tables=\count400
+\c@LT@chunks=\count401
+\LT@p@ftn=\toks61
 )
 (x:/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen366
-\WF@size=\dimen367
-\c@WF@wrappedlines=\count401
+\wrapoverhang=\dimen370
+\WF@size=\dimen371
+\c@WF@wrappedlines=\count402
 \WF@box=\box91
-\WF@everypar=\toks60
+\WF@everypar=\toks62
 Package: wrapfig 2003/01/31  v 3.6
 )
 (x:/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
@@ -1494,12 +1512,12 @@ Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
 
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks61
-\t@pgfplots@tokb=\toks62
-\t@pgfplots@tokc=\toks63
-\pgfplots@tmpa=\dimen368
-\c@pgfplots@coordindex=\count402
-\c@pgfplots@scanlineindex=\count403
+\t@pgfplots@toka=\toks63
+\t@pgfplots@tokb=\toks64
+\t@pgfplots@tokc=\toks65
+\pgfplots@tmpa=\dimen372
+\c@pgfplots@coordindex=\count403
+\c@pgfplots@scanlineindex=\count404
 
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.te
 x))
@@ -1514,14 +1532,14 @@ cture.code.tex)
 ctureext.code.tex)
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.co
 de.tex
-\c@pgfplotsarray@tmp=\count404
+\c@pgfplotsarray@tmp=\count405
 )
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.c
 ode.tex)
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.c
 ode.tex
-\c@pgfplotstable@counta=\count405
-\t@pgfplotstable@a=\toks64
+\c@pgfplotstable@counta=\count406
+\t@pgfplotstable@a=\toks66
 )
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.co
 de.tex)
@@ -1532,13 +1550,13 @@ tex))
 x)
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfsh
 ading.code.tex
-\c@pgfplotslibrarysurf@no=\count406
+\c@pgfplotslibrarysurf@no=\count407
 
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
 ding.pgfsys-xetex.def
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
 ding.pgfsys-dvipdfmx.def
-\c@pgfplotslibrarysurf@streamlen=\count407
+\c@pgfplotslibrarysurf@streamlen=\count408
 ))))
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
@@ -1555,20 +1573,20 @@ ex)
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
 (x:/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
-\pgfplots@numplots=\count408
-\pgfplots@xmin@reg=\dimen369
-\pgfplots@xmax@reg=\dimen370
-\pgfplots@ymin@reg=\dimen371
-\pgfplots@ymax@reg=\dimen372
-\pgfplots@zmin@reg=\dimen373
-\pgfplots@zmax@reg=\dimen374
+\pgfplots@numplots=\count409
+\pgfplots@xmin@reg=\dimen373
+\pgfplots@xmax@reg=\dimen374
+\pgfplots@ymin@reg=\dimen375
+\pgfplots@ymax@reg=\dimen376
+\pgfplots@zmin@reg=\dimen377
+\pgfplots@zmax@reg=\dimen378
 ))
 (x:/texlive/2020/texmf-dist/tex/latex/asymptote/asymptote.sty
 Package: asymptote 2020/01/12 v1.35 Asymptote style file for LaTeX
  (./professor.pre)
 \ASYbox=\box92
-\ASYdimen=\dimen375
-\c@asy=\count409
+\ASYdimen=\dimen379
+\c@asy=\count410
 \AsyStream=\write8
 \AsyPreStream=\write9
 (x:/texlive/2020/texmf-dist/tex/generic/iftex/ifpdf.sty
@@ -1592,7 +1610,7 @@ Package: attachfile2 2019/11/26 v2.11 Attach files into PDF (HO)
 (x:/texlive/2020/texmf-dist/tex/latex/attachfile2/atfi-dvipdfmx.def
 File: atfi-dvipdfmx.def 2019/11/26 v2.11 attachfile2 driver for dvipdfmx/XeTeX 
 (HO)
-\c@atfi@obj=\count410
+\c@atfi@obj=\count411
 )
 (./professor.atfi)
 \atfi@stream=\write10
@@ -1602,7 +1620,7 @@ File: atfi-dvipdfmx.def 2019/11/26 v2.11 attachfile2 driver for dvipdfmx/XeTeX
 \atfi@appearanceheight=\skip287
 \atfi@appearancedepth=\skip288
 \atfi@appearancebox=\box93
-\c@atfi@flags=\count411
+\c@atfi@flags=\count412
 ) (x:/texlive/2020/texmf-dist/tex/latex/vwcol/vwcol.sty
 Package: vwcol 2015/02/10 v0.2 Variable-width multicolumn text
 \vwcol@sep=\skip289
@@ -1610,10 +1628,10 @@ Package: vwcol 2015/02/10 v0.2 Variable-width multicolumn text
 \vwcol@totalwidth=\skip291
 \vwcol@averagewidth=\skip292
 \vwcol@parindent=\skip293
-\vwcol@last=\count412
-\vwcol@Ncols=\count413
-\vwcol@Nlines=\count414
-\vwcol@maxrecursion=\count415
+\vwcol@last=\count413
+\vwcol@Ncols=\count414
+\vwcol@Nlines=\count415
+\vwcol@maxrecursion=\count416
 \vwcol@box=\box94
 \vwcol@plainbox=\box95
 \vwcol@outputbox=\box96
@@ -1621,17 +1639,6 @@ Package: vwcol 2015/02/10 v0.2 Variable-width multicolumn text
 (x:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
 
-(x:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(x:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(x:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks65
-\XKV@tempa@toks=\toks66
-)
-\XKV@depth=\count416
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
 (x:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
@@ -1643,23 +1650,23 @@ Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box97
 )
-\tc@llx=\dimen376
-\tc@lly=\dimen377
-\tc@urx=\dimen378
-\tc@ury=\dimen379
+\tc@llx=\dimen380
+\tc@lly=\dimen381
+\tc@urx=\dimen382
+\tc@ury=\dimen383
 Package trimclip Info: Using driver 'tc-xetex.def'.
 
 (x:/texlive/2020/texmf-dist/tex/latex/adjustbox/tc-xetex.def
 File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 ))
-\adjbox@Width=\dimen380
-\adjbox@Height=\dimen381
-\adjbox@Depth=\dimen382
-\adjbox@Totalheight=\dimen383
-\adjbox@pwidth=\dimen384
-\adjbox@pheight=\dimen385
-\adjbox@pdepth=\dimen386
-\adjbox@ptotalheight=\dimen387
+\adjbox@Width=\dimen384
+\adjbox@Height=\dimen385
+\adjbox@Depth=\dimen386
+\adjbox@Totalheight=\dimen387
+\adjbox@pwidth=\dimen388
+\adjbox@pheight=\dimen389
+\adjbox@pdepth=\dimen390
+\adjbox@ptotalheight=\dimen391
 
 (x:/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
@@ -1675,14 +1682,14 @@ Library (tcolorbox): 'tcblistings.code.tex' version '4.30'
 \lst@gtempboxa=\box98
 \lst@token=\toks67
 \lst@length=\count419
-\lst@currlwidth=\dimen388
+\lst@currlwidth=\dimen392
 \lst@column=\count420
 \lst@pos=\count421
-\lst@lostspace=\dimen389
-\lst@width=\dimen390
+\lst@lostspace=\dimen393
+\lst@width=\dimen394
 \lst@newlines=\count422
 \lst@lineno=\count423
-\lst@maxwidth=\dimen391
+\lst@maxwidth=\dimen395
 
 (x:/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
@@ -1714,9 +1721,9 @@ Library (tcolorbox): 'tcbraster.code.tex' version '4.30'
 Library (tcolorbox): 'tcbhooks.code.tex' version '4.30'
 ) (x:/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '4.30'
-\tcbfitdim=\dimen392
-\tcb@lowerfitdim=\dimen393
-\tcb@upperfitdim=\dimen394
+\tcbfitdim=\dimen396
+\tcb@lowerfitdim=\dimen397
+\tcb@upperfitdim=\dimen398
 \tcb@cur@hbadness=\count430
 ) (x:/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
 Library (tcolorbox): 'tcbxparse.code.tex' version '4.30'
@@ -1820,7 +1827,7 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
 (x:/texlive/2020/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2019/10/16 v2.13 TOC entries
-\ttl@leftsep=\dimen395
+\ttl@leftsep=\dimen399
 )
 (x:/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
@@ -1852,16 +1859,16 @@ LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \g_MT_multlinerow_int=\count436
-\l_MT_multwidth_dim=\dimen396
+\l_MT_multwidth_dim=\dimen400
 \origjot=\skip294
-\l_MT_shortvdotswithinadjustabove_dim=\dimen397
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen398
-\l_MT_above_intertext_sep=\dimen399
-\l_MT_below_intertext_sep=\dimen400
-\l_MT_above_shortintertext_sep=\dimen401
-\l_MT_below_shortintertext_sep=\dimen402
+\l_MT_shortvdotswithinadjustabove_dim=\dimen401
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen402
+\l_MT_above_intertext_sep=\dimen403
+\l_MT_below_intertext_sep=\dimen404
+\l_MT_above_shortintertext_sep=\dimen405
+\l_MT_below_shortintertext_sep=\dimen406
 \xmathstrut@box=\box123
-\xmathstrut@dim=\dimen403
+\xmathstrut@dim=\dimen407
 ) (./sphinx.sty
 Package: sphinx 2019/06/04 v2.1.1 LaTeX package (Sphinx markup)
 
@@ -1870,27 +1877,27 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box124
 \beforetitleunit=\skip295
 \aftertitleunit=\skip296
-\ttl@plus=\dimen404
-\ttl@minus=\dimen405
+\ttl@plus=\dimen408
+\ttl@minus=\dimen409
 \ttl@toksa=\toks68
-\titlewidth=\dimen406
-\titlewidthlast=\dimen407
-\titlewidthfirst=\dimen408
+\titlewidth=\dimen410
+\titlewidthlast=\dimen411
+\titlewidthfirst=\dimen412
 )
 (x:/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip297
-\fb@frw=\dimen409
-\fb@frh=\dimen410
+\fb@frw=\dimen413
+\fb@frh=\dimen414
 )
-\sphinxverbatimsep=\dimen411
-\sphinxverbatimborder=\dimen412
-\sphinxshadowsep=\dimen413
-\sphinxshadowsize=\dimen414
-\sphinxshadowrule=\dimen415
-\spx@notice@border=\dimen416
-\spx@image@maxheight=\dimen417
-\spx@image@box=\dimen418
+\sphinxverbatimsep=\dimen415
+\sphinxverbatimborder=\dimen416
+\sphinxshadowsep=\dimen417
+\sphinxshadowsize=\dimen418
+\sphinxshadowrule=\dimen419
+\spx@notice@border=\dimen420
+\spx@image@maxheight=\dimen421
+\spx@image@box=\dimen422
 \c@literalblock=\count437
 \sphinxcontinuationbox=\box125
 \sphinxvisiblespacebox=\box126
@@ -1906,7 +1913,7 @@ Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
 Package: l3keys2e 2020-05-15 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box128
-\l__siunitx_tmp_dim=\dimen419
+\l__siunitx_tmp_dim=\dimen423
 \l__siunitx_tmp_int=\count438
 \l__siunitx_number_mantissa_length_int=\count439
 \l__siunitx_number_uncert_length_int=\count440
@@ -1919,8 +1926,8 @@ Package: l3keys2e 2020-05-15 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_group_min_int=\count447
 \l__siunitx_angle_marker_box=\box129
 \l__siunitx_angle_unit_box=\box130
-\l__siunitx_angle_marker_dim=\dimen420
-\l__siunitx_angle_unit_dim=\dimen421
+\l__siunitx_angle_marker_dim=\dimen424
+\l__siunitx_angle_unit_dim=\dimen425
 \l__siunitx_unit_int=\count448
 \l__siunitx_unit_denominator_int=\count449
 \l__siunitx_unit_numerator_int=\count450
@@ -1930,15 +1937,15 @@ Package: l3keys2e 2020-05-15 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_number_product_int=\count454
 \c__siunitx_one_fill_skip=\skip301
 \l__siunitx_table_unit_align_skip=\skip302
-\l__siunitx_table_exponent_dim=\dimen422
-\l__siunitx_table_integer_dim=\dimen423
-\l__siunitx_table_mantissa_dim=\dimen424
-\l__siunitx_table_marker_dim=\dimen425
-\l__siunitx_table_result_dim=\dimen426
-\l__siunitx_table_uncert_dim=\dimen427
-\l__siunitx_table_fill_pre_dim=\dimen428
-\l__siunitx_table_fill_post_dim=\dimen429
-\l__siunitx_table_fill_mid_dim=\dimen430
+\l__siunitx_table_exponent_dim=\dimen426
+\l__siunitx_table_integer_dim=\dimen427
+\l__siunitx_table_mantissa_dim=\dimen428
+\l__siunitx_table_marker_dim=\dimen429
+\l__siunitx_table_result_dim=\dimen430
+\l__siunitx_table_uncert_dim=\dimen431
+\l__siunitx_table_fill_pre_dim=\dimen432
+\l__siunitx_table_fill_post_dim=\dimen433
+\l__siunitx_table_fill_mid_dim=\dimen434
 \l__siunitx_table_pre_box=\box131
 \l__siunitx_table_post_box=\box132
 \l__siunitx_table_mantissa_box=\box133
@@ -1961,20 +1968,20 @@ Package: caption 2020/05/30 v3.4k Customizing captions (AR)
 (x:/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/07/20 v1.12b caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen431
-\captionmargin@=\dimen432
-\captionwidth=\dimen433
-\caption@tempdima=\dimen434
-\caption@indent=\dimen435
-\caption@parindent=\dimen436
-\caption@hangindent=\dimen437
+\captionmargin=\dimen435
+\captionmargin@=\dimen436
+\captionwidth=\dimen437
+\caption@tempdima=\dimen438
+\caption@indent=\dimen439
+\caption@parindent=\dimen440
+\caption@hangindent=\dimen441
 Package caption Info: memoir document class detected.
 )
 \c@caption@flags=\count455
 \c@continuedfloat=\count456
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen438
-\caption@adjustwidth@linewidth=\dimen439
+\caption@adjustwidth@hsize=\dimen442
+\caption@adjustwidth@linewidth=\dimen443
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: hypcap package is loaded.
@@ -1988,8 +1995,8 @@ Package caption Info: wrapfig package is loaded.
 )
 (x:/texlive/2020/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
-\AM@pagewidth=\dimen440
-\AM@pageheight=\dimen441
+\AM@pagewidth=\dimen444
+\AM@pageheight=\dimen445
 
 (x:/texlive/2020/texmf-dist/tex/latex/pdfpages/ppxetex.def
 File: ppxetex.def 2020/01/28 v0.5q Pdfpages driver for XeTeX (AM)
@@ -2173,16 +2180,16 @@ Package: ifnextok 2011/06/27 v0.3 test next token (UL)
 Package: marginfix 2020/05/06 v1.2 Fix Margin Paragraphs
 \Mfx@inject@insert=\insert251
 \Mfx@marginbox=\box141
-\Mfx@marginpos@min=\dimen442
-\Mfx@marginpos@max=\dimen443
-\Mfx@marginspace=\dimen444
-\Mfx@marginheight=\dimen445
+\Mfx@marginpos@min=\dimen446
+\Mfx@marginpos@max=\dimen447
+\Mfx@marginspace=\dimen448
+\Mfx@marginheight=\dimen449
 \Mfx@piece@content=\box142
 \Mfx@piece@count=\count499
-\Mfx@mparshift=\dimen446
-\marginheightadjustment=\dimen447
-\marginposadjustment=\dimen448
-\Mfx@strutheight=\dimen449
+\Mfx@mparshift=\dimen450
+\marginheightadjustment=\dimen451
+\marginposadjustment=\dimen452
+\Mfx@strutheight=\dimen453
 )
 (x:/texlive/2020/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
@@ -2229,21 +2236,21 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \c@tracingmulticols=\count502
 \mult@box=\box143
-\multicol@leftmargin=\dimen450
+\multicol@leftmargin=\dimen454
 \c@unbalance=\count503
 \c@collectmore=\count504
 \doublecol@number=\count505
 \multicoltolerance=\count506
 \multicolpretolerance=\count507
-\full@width=\dimen451
-\page@free=\dimen452
-\premulticols=\dimen453
-\postmulticols=\dimen454
+\full@width=\dimen455
+\page@free=\dimen456
+\premulticols=\dimen457
+\postmulticols=\dimen458
 \multicolsep=\skip311
 \multicolbaselineskip=\skip312
 \partial@page=\box144
 \last@line=\box145
-\maxbalancingoverflow=\dimen455
+\maxbalancingoverflow=\dimen459
 \mult@rightbox=\box146
 \mult@grightbox=\box147
 \mult@gfirstbox=\box148
@@ -2288,9 +2295,9 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \c@minrows=\count508
 \c@columnbadness=\count509
 \c@finalcolumnbadness=\count510
-\last@try=\dimen456
-\multicolovershoot=\dimen457
-\multicolundershoot=\dimen458
+\last@try=\dimen460
+\multicolovershoot=\dimen461
+\multicolundershoot=\dimen462
 \mult@nat@firstbox=\box187
 \colbreak@box=\box188
 \mc@col@check@num=\count511
@@ -2310,7 +2317,7 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip313
 \multirow@cntb=\count512
 \multirow@dima=\skip314
-\bigstrutjot=\dimen459
+\bigstrutjot=\dimen463
 )
 (x:/texlive/2020/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
@@ -2563,6 +2570,8 @@ Invalid UTF-8 byte or sequence at line 1006 replaced by U+FFFD.
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
+Package extrarowdepth Info: \extrarowdepth added to the array package on input 
+line 216.
 Package: livroaberto-professor 
 
 Package: `Livro Aberto package livroaberto-professor 3.6    <2020/05/03>'
@@ -2604,9 +2613,9 @@ X
 \l__fontspec_emdef_int=\count565
 \l__fontspec_strong_int=\count566
 \l__fontspec_strongdef_int=\count567
-\l__fontspec_tmpa_dim=\dimen460
-\l__fontspec_tmpb_dim=\dimen461
-\l__fontspec_tmpc_dim=\dimen462
+\l__fontspec_tmpa_dim=\dimen464
+\l__fontspec_tmpb_dim=\dimen465
+\l__fontspec_tmpc_dim=\dimen466
 
 (x:/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
@@ -2816,7 +2825,7 @@ page
 (x:/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip317
-\enit@outerparindent=\dimen463
+\enit@outerparindent=\dimen467
 \enit@toks=\toks94
 \enit@inbox=\box189
 \enit@count@id=\count573
@@ -2864,10 +2873,10 @@ brarymatrix.code.tex
 File: tikzlibrarymatrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (x:/texlive/2020/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
-\l__sn_x_dim=\dimen464
-\l__sn_y_dim=\dimen465
-\l__sn_xa_dim=\dimen466
-\l__sn_ya_dim=\dimen467
+\l__sn_x_dim=\dimen468
+\l__sn_y_dim=\dimen469
+\l__sn_xa_dim=\dimen470
+\l__sn_ya_dim=\dimen471
 )
 (x:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/datavi
 sualization/tikzlibrarydatavisualization.code.tex
@@ -2902,9 +2911,9 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@buffer=\toks99
 \SOUL@token=\toks100
 \SOUL@spaceskip=\skip318
-\SOUL@ttwidth=\dimen468
-\SOUL@uldp=\dimen469
-\SOUL@ulht=\dimen470
+\SOUL@ttwidth=\dimen472
+\SOUL@uldp=\dimen473
+\SOUL@ulht=\dimen474
 )
 \srotate@axis=\skip319
 \srotate@width=\skip320
@@ -2916,7 +2925,7 @@ Invalid UTF-8 byte or sequence at line 121 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 121 replaced by U+FFFD.
 Package: endnotes 2020-01-02 endnotes package
 \c@endnote=\count581
-\endnotesep=\dimen471
+\endnotesep=\dimen475
 \@enotes=\write14
 )
 \c@Hendnote=\count582
@@ -2927,18 +2936,18 @@ Package: endnotes 2020-01-02 endnotes package
 Package geometry Warning: Over-specification in `h'-direction.
     `width' (450.0pt) is ignored.
 
-) (./professor.aux (./chapters/logaritmos.aux
+) (./professor.aux (./chapters/funcao-afim.aux
 
-LaTeX Warning: Label `teo_mud_base' multiply defined.
-
-
-LaTeX Warning: Label `teo_mud_base@cref' multiply defined.
+LaTeX Warning: Label `AF107-4:fig-tempo-distancia' multiply defined.
 
 
-LaTeX Warning: Label `Reguas' multiply defined.
+LaTeX Warning: Label `AF107-4:fig-tempo-distancia@cref' multiply defined.
 
 
-LaTeX Warning: Label `Reguas@cref' multiply defined.
+LaTeX Warning: Label `AF107-E:fig-charge' multiply defined.
+
+
+LaTeX Warning: Label `AF107-E:fig-charge@cref' multiply defined.
 
 ))
 \openout1 = `professor.aux'.
@@ -3021,6 +3030,13 @@ LaTeX Info: Redefining \nameref on input line 6.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+
+Package tabu Warning: Package cellspace has some limitations 
+(tabu)                And redefines some macros of array.sty. 
+(tabu)                Please use \tabulinesep to control 
+(tabu)                vertical spacing of lines inside tabu environnement on in
+put line 6.
+
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 6.
 LaTeX Info: Redefining \microtypecontext on input line 6.
@@ -3042,6 +3058,9 @@ your preamble.
 
 \c@lstlisting=\count586
 
+Package siunitx Warning: Column type for cellspace package moved to 'C'.
+
+
 (x:/texlive/2020/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
 glish.dict
 Dictionary: translator-basic-dictionary, Language: English 
@@ -3057,6 +3076,7 @@ Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
 )
+\@temprowdepth=\skip321
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
 .
 
@@ -3131,9 +3151,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\openout2 = `chapters/logaritmos.aux'.
+\openout2 = `chapters/funcao-afim.aux'.
 
- (./chapters/logaritmos.tex
+
+(./chapters/funcao-afim.tex
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `orbitron-medium.otf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -3210,13 +3231,13 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/orbitron-medium.otf(0)/b/n/25'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Calculating math sizes for size <25> on input line 33.
+LaTeX Font Info:    Calculating math sizes for size <25> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <25> on input line 33.
+(Font)              <25> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.49992> on input line 33.
+(Font)              <17.49992> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12.5> on input line 33.
+(Font)              <12.5> on input line 8.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -3257,8 +3278,9 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/orbitron-medium.otf(0)/b/n/13'.
 (microtype)             Ignoring protrusion settings for this character.
-File: Figuras/abertura-log-prof.jpg Graphic file (type bmp)
-<Figuras/abertura-log-prof.jpg>
+File: Figuras/abertura-afim-professor.png Graphic file (type bmp)
+<Figuras/abertura-afim-professor.png>
+
 (x:/texlive/2020/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
@@ -3282,8 +3304,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-File: Figuras/cc-by-nc-sa.png Graphic file (type bmp)
-<Figuras/cc-by-nc-sa.png>
+File: Figuras/cc-by-sa1.png Graphic file (type bmp)
+<Figuras/cc-by-sa1.png>
 File: Figuras/logo-associacao.jpg Graphic file (type bmp)
 <Figuras/logo-associacao.jpg>
 File: Figuras/itau.jpg Graphic file (type bmp)
@@ -3326,36 +3348,17 @@ File: Figuras/itau.jpg Graphic file (type bmp)
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 122.
+(Font)              <10> on input line 129.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 122.
+(Font)              <7> on input line 129.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 131.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 131.
+(Font)              <5> on input line 129.
+ [1
 
 
-Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page i might be wrong on input line 175.
-
-
-[1
-
-
-]
-
-Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page ii might be wrong on input line 215
-.
-
-[2] [3] [4]
-Underfull \hbox (badness 6910) in paragraph at lines 318--318
-\TU/Exo2-Light.otf(0)/m/n/10.95 envolvam juros simples com as que envolvem juro
-s compostos
- []
-
-\openout14 = `professor.ent'.
-
+] [2]
+Missing character: There is no ⋅ in font [Fontes/Exo2-Light.otf]/OT:script=latn
+;language=dflt;mapping=tex-text;!
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Exo2-Bold.otf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -3400,35 +3403,8 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `Exo2-Regular.otf' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 512.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11> on input line 512.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.69997> on input line 512.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.5> on input line 512.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
+File: Figuras/naoprop.png Graphic file (type bmp)
+<Figuras/naoprop.png>
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `orbitron-bold.otf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -3491,165 +3467,126 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Orbitron-Regular.ttf(0)/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
-[1
+ [1
 
 
 
 ]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Exo2-Regular.otf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+ [2] [3] [4
+
+]
+\openout14 = `professor.ent'.
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 542.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 556.
+(Font)              <11> on input line 542.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 556.
+(Font)              <7.69997> on input line 542.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 556.
+(Font)              <5.5> on input line 542.
+ [5]
+File: Figuras/codigo.png Graphic file (type bmp)
+<Figuras/codigo.png>
+ [6] [7] [8] [9
+
+
+
+]
+File: Figuras/celular.jpg Graphic file (type bmp)
+<Figuras/celular.jpg>
+ [10] [11] [12
+
+] [13]
+File: Figuras/codigo2_2.png Graphic file (type bmp)
+<Figuras/codigo2_2.png>
+
+[14] [15] [16] [17
+
+] [18]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 1660.
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+ [19
+
+]
+File: Figuras/codigo3_3.png Graphic file (type bmp)
+<Figuras/codigo3_3.png>
+ [20
+
+]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Exo2-SemiBold.otf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [21]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Roboto-Regular.ttf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [2] [3
-
-]
-File: Figuras/AelevadoB.png Graphic file (type bmp)
-<Figuras/AelevadoB.png>
-File: Figuras/QRcode_AelevadoB.png Graphic file (type bmp)
-<Figuras/QRcode_AelevadoB.png>
- [4]
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
- [5
-
-] [6] [7
-
-
-] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 1345--1347
-\TU/Exo2-Light.otf(0)/m/n/10.95 assim, a ordem de grandeza do Mol é $\OT1/lmr/m
-/n/10.95 23$\TU/Exo2-Light.otf(0)/m/n/10.95 , que é a parte inteira de
- []
-
-File: Figuras/interrogacao.png Graphic file (type bmp)
-<Figuras/interrogacao.png>
-[10] [11]
-Overfull \hbox (6.40076pt too wide) detected at line 1451
-[]
- []
-
-[12
-
-] [13] [14
-
-]
-File: Figuras/totalcasescovid19.png Graphic file (type bmp)
-<Figuras/totalcasescovid19.png>
- [15] [16] [17
-
-] [18
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 1919--1919
- []\TU/Exo2-Light.otf(0)/m/n/10.95 Tabela 1.4: |[]Níveis sonoros e intensidades
- sonoras 
- []
-
-[19
-
-]
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 1995.
-
-[20] [21]
-File: Figuras/graficos_varias_funcoes.png Graphic file (type bmp)
-<Figuras/graficos_varias_funcoes.png>
  [22]
-File: Figuras/mortes_franca.png Graphic file (type bmp)
-<Figuras/mortes_franca.png>
-File: Figuras/Brasil_Inglaterra_mortes.png Graphic file (type bmp)
-<Figuras/Brasil_Inglaterra_mortes.png>
- [23
-
-] [24]
-File: Figuras/Fun_Exp_Log.png Graphic file (type bmp)
-<Figuras/Fun_Exp_Log.png>
-File: Figuras/QRcode_exp_log.png Graphic file (type bmp)
-<Figuras/QRcode_exp_log.png>
-File: Figuras/lupa.png Graphic file (type bmp)
-<Figuras/lupa.png>
- [25
-
-]
-File: Figuras/QRcode_mult_constante.png Graphic file (type bmp)
-<Figuras/QRcode_mult_constante.png>
- [26]
-File: Figuras/Graficos_logs.png Graphic file (type bmp)
-<Figuras/Graficos_logs.png>
- [27]
-File: Figuras/Tempo_montante.png Graphic file (type bmp)
-<Figuras/Tempo_montante.png>
- [28
-
-] [29] [30] [31
+File: Figuras/1024px-Planalto_Palace_ramp_and_parlatorium.jpg Graphic file (typ
+e bmp)
+<Figuras/1024px-Planalto_Palace_ramp_and_parlatorium.jpg>
+File: Figuras/rampa.png Graphic file (type bmp)
+<Figuras/rampa.png>
+ [23] [24] [25]
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+ [26
 
 ]
-File: Figuras/interrogacao.png Graphic file (type bmp)
-<Figuras/interrogacao.png>
-File: Figuras/Primatas_linear.png Graphic file (type bmp)
-<Figuras/Primatas_linear.png>
-File: Figuras/Primatas_log.png Graphic file (type bmp)
-<Figuras/Primatas_log.png>
- [32] [33
+File: Figuras/frio-aviao.png Graphic file (type bmp)
+<Figuras/frio-aviao.png>
+ [27] [28]
+[29] [30
 
 ]
-File: Figuras/Bitcoin_linear.png Graphic file (type bmp)
-<Figuras/Bitcoin_linear.png>
-File: Figuras/Bitcoin_log.png Graphic file (type bmp)
-<Figuras/Bitcoin_log.png>
- [34]
-[35] [36
+File: Figuras/qr_code_quadros.png Graphic file (type bmp)
+<Figuras/qr_code_quadros.png>
+File: Figuras/quadros_na_parede1.png Graphic file (type bmp)
+<Figuras/quadros_na_parede1.png>
+File: Figuras/quadros_na_parede2.png Graphic file (type bmp)
+<Figuras/quadros_na_parede2.png>
+ [31
+
+] [32] [33] [34] [35
+
+] [36] [37
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 3004.
- [37] [38] [39] [40
-
-]
-File: Figuras/Sismografo.png Graphic file (type bmp)
-<Figuras/Sismografo.png>
- [41] [42] [43]
-Overfull \hbox (33.02888pt too wide) in paragraph at lines 3376--3376
-[]\TU/Exo2-Light.otf(0)/m/n/10.95 II-  [] 
- []
-
-File: Figuras/Massa.png Graphic file (type bmp)
-<Figuras/Massa.png>
-File: Figuras/World_linear.png Graphic file (type bmp)
-<Figuras/World_linear.png>
-[44]
-File: Figuras/World_log.png Graphic file (type bmp)
-<Figuras/World_log.png>
- [45] [46] [47] [48
-
-] [49]
 Package microtype Info: Character `\quotesinglbase ' is missing
 (microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3668,59 +3605,80 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/orbitron-medium.otf(0)/m/n/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
-File: Figuras/Logarithmorum_Chilias_Prima_page_0-67.jpg Graphic file (type bmp)
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/orbitron-bold.otf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
 
-<Figuras/Logarithmorum_Chilias_Prima_page_0-67.jpg>
- [50
+Underfull \hbox (badness 7944) in paragraph at lines 3419--3419
+[]\TU/Exo2-Light.otf(0)/m/n/10.95 O padrão de crescimento adotado caracteriza a
+ sequência:
+ []
 
-] [51] [52
+Missing character: There is no – in font rm-lmr10!
+Missing character: There is no Q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ã in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no 1 in font nullfont!
+[38
 
-] [53
+] [39]
+Missing character: There is no Q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ã in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+ [40]
+Missing character: There is no º in font lmmi10!
+Missing character: There is no Q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ã in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no d in font nullfont!
+ [41] [42]
+File: Figuras/charge.png Graphic file (type bmp)
+<Figuras/charge.png>
+ [43
 
-]
-File: Figuras/Reguadecalculo.jpg Graphic file (type bmp)
-<Figuras/Reguadecalculo.jpg>
- [54]
-File: Figuras/Ruler1.pdf Graphic file (type pdf)
-<use Figuras/Ruler1.pdf>
-File: Figuras/Ruler2.pdf Graphic file (type pdf)
-<use Figuras/Ruler2.pdf>
- [55] [56]
-File: Figuras/Caderneta.png Graphic file (type bmp)
-<Figuras/Caderneta.png>
-File: Figuras/QRcode_ajuste_curvas.png Graphic file (type bmp)
-<Figuras/QRcode_ajuste_curvas.png>
- [57
-
-]
-File: Figuras/interrogacao.png Graphic file (type bmp)
-<Figuras/interrogacao.png>
- [58]
-[59
-
-] [60
-
-] [61] [62
-
-]
-File: Figuras/Ruler.pdf Graphic file (type pdf)
-<use Figuras/Ruler.pdf>
-File: Figuras/Ruler.pdf Graphic file (type pdf)
-<use Figuras/Ruler.pdf>
-File: Figuras/Ruler.pdf Graphic file (type pdf)
-<use Figuras/Ruler.pdf, page 1>
-File: Figuras/Ruler.pdf Graphic file (type pdf)
-<use Figuras/Ruler.pdf, page 1>
- [63
-
-]
-File: Figuras/Ruler.pdf Graphic file (type pdf)
-<use Figuras/Ruler.pdf, page 1>
-File: Figuras/Ruler.pdf Graphic file (type pdf)
-<use Figuras/Ruler.pdf, page 1>
-File: Figuras/Ruler.pdf Graphic file (type pdf)
-<use Figuras/Ruler.pdf, page 1>
- [64]
+] [44]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: custom
@@ -3754,89 +3712,123 @@ File: Figuras/Ruler.pdf Graphic file (type pdf)
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
  (./professor.ent
-Overfull \hbox (22.18472pt too wide) in paragraph at lines 2--352
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 2--245
  [][][] 
  []
 
 
-Overfull \hbox (22.18472pt too wide) in paragraph at lines 355--712
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 248--518
  [][][] 
  []
 
 
-Overfull \hbox (22.18472pt too wide) in paragraph at lines 715--871
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 521--789
  [][][] 
  []
 
-[65
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 792--1286
+ [][][] 
+ []
+
+[45
 
 ]
-Overfull \hbox (22.18472pt too wide) in paragraph at lines 874--1068
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 1289--1558
+ [][][] 
+ []
+
+[46]
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+Missing character: There is no − in font rm-lmr10!
+
+Overfull \hbox (19.71002pt too wide) in paragraph at lines 1944--1944
+ [][] 
+ []
+
+
+Overfull \hbox (19.71002pt too wide) in paragraph at lines 1944--1944
+ [][] 
+ []
+
+
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 1947--2143
  [][][] 
  []
 
 
-Overfull \hbox (22.18472pt too wide) in paragraph at lines 1071--1274
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 2146--2269
  [][][] 
  []
 
 
-Overfull \hbox (22.18472pt too wide) in paragraph at lines 1277--1525
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 2272--2470
+ [][][] 
+ []
+
+[47]
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 2473--2787
  [][][] 
  []
 
 
-Overfull \hbox (22.18472pt too wide) in paragraph at lines 1528--1699
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 2790--2989
  [][][] 
  []
 
 
-Overfull \hbox (22.18472pt too wide) in paragraph at lines 1702--2164
+Overfull \hbox (22.18472pt too wide) in paragraph at lines 2992--3321
  [][][] 
  []
 
-[66]
-Overfull \hbox (22.18472pt too wide) in paragraph at lines 2167--2315
- [][][] 
- []
+) [48] (./chapters/funcao-afim.bbl)) [49
 
-) [67] (./chapters/logaritmos.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 100--105
-[]\TU/Exo2-Light.otf(0)/m/n/10.95 Pedrosa, R. E. M. e Adames, M. R. (2018).  \T
-U/Exo2-Light.otf(0)/m/it/10.95 Logaritmos e a régua de cálculo:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--105
-\TU/Exo2-Light.otf(0)/m/it/10.95 Uma proposta de ensino\TU/Exo2-Light.otf(0)/m/
-n/10.95 .  Edição do autor, Curitiba, Brasil.  Disponível em:
- []
-
-[68
-
-])) [69]
+]
 \openout14 = `professor.ent'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
- (./professor.aux (./chapters/logaritmos.aux))
+ (./professor.aux
+(./chapters/funcao-afim.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 55.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 55.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 73314 strings out of 479712
- 1666466 string characters out of 5892708
- 2692410 words of memory out of 5000000
- 88993 multiletter control sequences out of 15000+600000
- 729742 words of font info for 310 fonts, out of 8000000 for 9000
+ 72663 strings out of 479712
+ 1653175 string characters out of 5892708
+ 2668982 words of memory out of 5000000
+ 88371 multiletter control sequences out of 15000+600000
+ 697474 words of font info for 276 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
- 74i,22n,103p,1428b,1723s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,27n,103p,1364b,1724s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on professor.pdf (77 pages).
+Output written on professor.pdf (55 pages).

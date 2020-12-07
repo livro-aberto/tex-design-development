@@ -1,4 +1,8 @@
-\renewcommand\chapterillustration{./abertura-funcoes}
+\ifnum \aluno=1
+\renewcommand\chapterillustration{abertura-funcoes}
+\else
+\renewcommand\chapterillustration{abertura-funcoes-professor}
+\fi
 \renewcommand\chapterwhat{Funções e suas diferentes representações (numérica, algébrica e gráfica); domínio, contradomínio e imagem; aplicações em situações envolvendo a análise, interpretação e resolução de problemas em contextos diversos.}
 \renewcommand\chapterbecause{Funções são objetos matemáticos que nos permitem compreender como a variação de uma grandeza influencia na variação de outra. Por isso elas são ferramentas essencias para a compreensão, análise e tomada de decisão em diversas situações do nosso dia a dia.
 O estudo de funções nos permite, por exemplo, relacionar a área de um polígono com o comprimento de seus lados, a distância percorrida por um objeto com o intervalo de tempo gasto no percurso e o valor da conta de energia elétrica com o consumo de energia.
@@ -159,7 +163,7 @@ Além disso, para que os alunos não fiquem com a ideia restrita de relação, i
 \end{apresentacao}
 
 
-\explore{conceito de Função}
+\explore{Conceito de Função}
 
 \clearmargin
 \begin{objectives}{Pluviometria do Sistema Cantareira}
@@ -552,7 +556,7 @@ Realize uma pesquisa na internet e descubra o maior arranha-céu brasileiro atua
 
 
 
-\arrange{ conceito de função}
+\arrange{Conceito de Função}
 \label{\detokenize{AF106-1:sec-funcao-organizando-ideias-conceito}}\label{\detokenize{AF106-1::doc}}\label{\detokenize{AF106-1:organizando-as-ideias-conceito-de-funcao}}
 Vamos identificar juntos quais são as características comuns presentes em cada uma das situações anteriores. Em todas elas há pelo menos dois conjuntos bem determinados cujos elementos estão sendo relacionados. Nessa relacão, \textbf{cada} elemento de um desses conjuntos está associado a um \textbf{único} elemento do outro conjunto.
 
@@ -888,7 +892,7 @@ Um exemplo não númerico: a relação associa cada livro ao seu autor
 \end{answer}
 
 
-\practice{Conceito do função}
+\practice{Conceito do Função}
 \vspace{-2\parskip}
 \begin{task}{ colorindo o mapa}
 \label{\detokenize{AF106-2:atividade-colorindo-o-mapa}}\label{\detokenize{AF106-2:ativ-funcoes-colorindo-o-mapa}}
@@ -2204,7 +2208,7 @@ Quantos números entre \(1\) e \(10000\) nos levam ao resultado \(3\)?
 }{1}
 \end{answer}
 
-\explore{ gráficos}
+\explore{Gráficos}
 Segundo informações do \href{http://www.bigdatabusiness.com.br/visualizacao-de-dados-por-que-transformar-big-data-em-graficos/}{Big Data Business}, as palavras estimulam o lado esquerdo do cérebro e são um recurso essencial para a manutenção da memória. No entanto, as imagens são ainda mais eficazes, porque elas conseguem ativar os dois lados do cérebro simultaneamente e, assim, permitem o resgate de ideias e informações com maior precisão e agilidade. Especialmente quando se quer analisar grande quantidade de dados, apresentá-los em uma imagem ou em um gráfico, pode favorecer a comunicação.
 
 \begin{figure}[H]
@@ -2351,7 +2355,7 @@ Escolha um conjunto de pontos que possa representar a jornada de um outro estuda
 \end{enumerate}
 \end{task}
 
-\arrange{ gráficos}
+\arrange{Gráficos}
 \label{\detokenize{AF106-5:sec-organizando-graficos}}\label{\detokenize{AF106-5:organizando-as-ideias-graficos}}\label{\detokenize{AF106-5::doc}}
 É hora de organizar as ideias sobre representação gráfica de uma função. Vimos que, para representar graficamente as funções, os pares ordenados são fundamentais. Cada par identifica as grandezas ou variáveis relacionadas e a ordem no par distingue o papel de cada uma delas: elemento do domínio, abscissa, e imagem, ordenada. Sendo assim, a representação gráfica de uma função exige: a identificação das variáveis do problema e a identificação da relação estabelecida entre as variáveis.
 
@@ -2712,7 +2716,7 @@ C & $22{,}5\%$ (quarto intervalo) & R\$ $4000{,}00$\\
 \end{enumerate}
 }{1}
 \end{answer}
-\practice{gráficos}
+\practice{Gráficos}
 \phantom{M}
 \vspace{-1em}
 %\label{\detokenize{AF106-5:sec-praticando-grafico}}\label{\detokenize{AF106-5:praticando}}

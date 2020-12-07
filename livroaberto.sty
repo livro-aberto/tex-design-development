@@ -29,7 +29,7 @@
 \RequirePackage{array}
 \RequirePackage{colortbl}
 \RequirePackage{bookmark}
-
+\RequirePackage[math]{cellspace}
 \RequirePackage{float}
 \RequirePackage{tkz-euclide}
 \RequirePackage{amsmath,amssymb}
@@ -198,6 +198,29 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcolumntype{f}{>$c<$}
 
 
+% Prevent a clash with tabu, or other packages that also define \extrarowdepth.
+\AtBeginDocument{%
+  \ifdefdimen\extrarowdepth{} % \extrarowdepth already defined as a length
+  {\ifdef\extrarowdepth % if it is defined but not a length, we have an error
+    {\PackageError{extrarowdepth}{Cannot define length \string\extrarowdepth}
+      {There is already a \string\extrarowdepth\space and it is not a length parameter.}}
+    {\newlength\extrarowdepth\setlength\extrarowdepth{0pt}}}%
+  \newlength\@temprowdepth}
+
+\RequirePackage{array}
+\RequirePackage{etoolbox}
+
+\patchcmd{\@array}{\setbox \@arstrutbox \hbox{\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \dp \strutbox \@width \z@}}
+{\@temprowdepth  \dp \strutbox \advance \@temprowdepth by\extrarowdepth \setbox \@arstrutbox \hbox{\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \@temprowdepth \@width \z@}}
+{\PackageInfo{extrarowdepth}{\string\extrarowdepth\space added to the array package}}
+{\PackageWarning{extrarowdepth}{Failed to include \string\extrarowdepth\space in the array package}}
+\let\@@array\@array
+
+\newcommand\tablinesep[1]{
+	\setlength{\extrarowheigth}{#1}
+	\setlength{\extrarowdepth}{#1}
+}
+
 %Coloca listas de enumerate no padrão da seção de exercícios
 \newcommand\exerciselist
 {	
@@ -244,7 +267,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 
 
 
-\newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{task}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=0.3mm, right=0.8mm, top=5mm, bottom=3mm, colback=white, colframe=cor2!70, width=162mm, 
+\newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{task}[1]{parbox=false, blanker, enhanced, breakable, before skip = 8mm, after skip = 5mm, left=0.3mm, right=0.8mm, top=5mm, bottom=3mm, colback=white, colframe=cor2!70, width=162mm, 
 %borderline west={3mm}{0pt}{white}, 
   toprule=0pt,
   bottomrule=0.5pt,
@@ -577,7 +600,7 @@ underlay boxed title={
 
 % Formatação dos comandos \section e \subsection
 %Cor atual
-\titleformat{\section}{\color{\currentcolor}\normalfont\semihuge\bfseries}{\thesection}{1em}{#1}
+\titleformat{\section}{\color{\currentcolor}\normalfont\semihuge\bfseries}{\thesection}{1em}{#1 \phantomsection}
 \titlespacing*{\section}
 {0pt}{2mm}{1mm}
 % \providecommand*{\toclevel@section}{2}
@@ -1493,6 +1516,7 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 \newcommand{\notarodape}[1]{\footnotemark\footnotetext{\belowbaseline[-\ht\strutbox]{\begin{tcolorbox}[colback=grafite!90!white,colbacktitle=grafite!90!white,
 colframe=grafite!90!white,colupper=white, left=0pt, right=0pt,top=-2pt,bottom=-2pt, hbox, sharp corners = northeast, sharp corners = southwest]
 {\textbf{#1}}\end{tcolorbox}}}}
+
 
 
 

@@ -2,21 +2,26 @@
 \renewcommand\chapterillustration{./abertura-financeira}
 \else
 \renewcommand\chapterillustration{./abertura-financeira-professor}
-\makeatletter
+\fi
 
+\makeatletter
+\ifnum\aluno=1
+\else
 \renewcommand*{\toclevel@section}{1}
 \renewcommand*{\toclevel@subsection}{4}
 \renewcommand*{\toclevel@paragraph}{5}
 \renewcommand*{\toclevel@subparagraph}{6}
 
-\renewcommand*{\toclevel@exploresec}{1}
-\renewcommand*{\toclevel@practicesec}{1}
-\renewcommand*{\toclevel@arrangesec}{1}
+\renewcommand*{\toclevel@exploresec}{2}
+\renewcommand*{\toclevel@practicesec}{2}
+\renewcommand*{\toclevel@arrangesec}{2}
 \renewcommand*{\toclevel@knowsec}{1}
 \renewcommand*{\toclevel@exercisesec}{1}
 
-\makeatother
+\setcounter{tocdepth}{2}
 \fi
+\makeatother
+
 
 
 
@@ -239,10 +244,10 @@ Mas o objetivo desse livro é mostrar alguns princípios e caminhos. Foi mostrar
 
 \scarrange{\hyperref[fin-arg-1]{Organizando 1 --- Uma concepção de Educação Financeira para a Escola}}
 
-\scpractice{\hyperref[fin-prac-1]{Praticando --- Ampliando a visão sobre Educação Financeira}}
+\scpractice{\hyperref[fin-prac-1]{Praticando 1 --- Ampliando a visão sobre Educação Financeira}}
 \begin{enumerate}[label=Atividade \arabic* --, wide]\setcounter{enumi}{2}
 \item \hyperref[fin-ativ-3]{Armadilha ou oportunidade}?
-\item \hyperref[fin-ativ-4]{O desemprego entre os jovens no Brasil}
+\item \hyperref[fin-ativ-400]{O desemprego entre os jovens no Brasil}
 \item \hyperref[fin-ativ-5]{A pandemia dos preços}
 \end{enumerate}
 \vspace{1cm}
@@ -347,6 +352,7 @@ Mas o objetivo desse livro é mostrar alguns princípios e caminhos. Foi mostrar
 \end{enumerate}
 \vspace{1em}
 
+\columnbreak
 \scexplore{\hyperref[fin-exp-8]{Explorando 8 --- Tributação e futuro}}
 \begin{enumerate}[label=Atividade \arabic* --, wide]\setcounter{enumi}{34}
 \item \hyperref[fin-ativ-35]{Investimento em educação pública no Brasil}
@@ -372,12 +378,12 @@ Mas o objetivo desse livro é mostrar alguns princípios e caminhos. Foi mostrar
 \item \hyperref[fin-ativ-41]{Indenizações e ancoragem}
 \end{enumerate}
 
-\scexercise{\hyperref[fin-exercise]{Exercícios, atividades investigativas e problemas}}
+\scexercise{\hyperref[fin-exercises]{Exercícios, atividades investigativas e problemas}}
 \begin{itemize}
-\item Total de 41 atividades
+\item Total de 29 atividades
 \end{itemize}
 
-\textbf{Total do capítulo = 73 atividades.}
+\textbf{Total do capítulo = 70 atividades.}
 
 % \relax
 % \includegraphics[width=\linewidth]{financeira-professor2}
@@ -937,7 +943,9 @@ Observe a seguinte bolsa sendo divulgada em duas lojas diferentes:
 
 
 \begin{task}{O desemprego entre os jovens no Brasil}
-\label{fin-ativ-4}
+
+\label{fin-ativ-400}
+
 \begin{figure}[H]
 \centering
 
@@ -5520,7 +5528,7 @@ Espero que nossa conversa tenha sido proveitosa e com muito aprendizado. Que ela
 }{1}
 \end{answer}
 \exercise
-\label{fin-exercise}
+\label{fin-exercises}
 
 
 \begin{enumerate}

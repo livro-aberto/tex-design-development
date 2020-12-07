@@ -1,4 +1,4 @@
-\ifnum \aluno=1
+\ifnum\aluno=1
 \renewcommand\chapterillustration{abertura-probabilidade.jpg}
 \else
 \renewcommand\chapterillustration{abertura-probabilidade-professor}
@@ -97,13 +97,18 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 
 \mainmatter
 
-\begin{apresentacao}\raggedcolumns
-\section{Probabilidade}
-Previsão de de alunas necessárias: 8 a 10 tempos de aula\
+\begin{apresentacao}{Probabilidade}
+Previsão de de alunas necessárias: 8 a 10 tempos de aula
 
-\subsection{Habilidades da BNCC}
+\subsection{Objetivo Geral}
+Apresentar a noção de probabilidade sob os pontos de vista clássico, frequentista e subjetivo. (A noção frequentista de probabilidade está prevista para o Ensino Fundamental pela BNCC.) Apresentar regras básicas (axiomas) da probabilidade independentes da interpretação adotada, introduzindo uma teoria matemática da probabilidade e, como consequência, trabalhar propriedades decorrentes das regras básicas, definir probabilidade condicional e independência entre dois eventos. Finalmente, trabalhar com o cálculo de probabilidades de eventos em experimentos sucessivos, usando a regra da multiplicação, obtida a partir da definição de probabilidade condicional.
+
+Ao longo do capítulo serão propostas atividades nas quais o aluno deverá propor como especificar probabilidades para determinados eventos em situações nas quais não se aplica a definição clássica de probabilidade.
+
+\paragraph{Habilidades da BNCC}
 \begin{habilities}{EM13MAT311}
 Identificar e descrever o espaço amostral de eventos aleatórios, realizando contagem das possibilidades, para resolver e elaborar problemas que envolvem o cálculo da probabilidade.
+\columnbreak
 
 \tcbsubtitle{EM13MAT312}
 Resolver e elaborar problemas que envolvem o cálculo de probabilidade de eventos em experimentos aleatórios sucessivos.
@@ -112,18 +117,13 @@ Resolver e elaborar problemas que envolvem o cálculo de probabilidade de evento
 Reconhecer a existência de diferentes tipos de espaços amostrais, discretos ou não, e de eventos, equiprováveis ou não, e investigar implicações no cálculo de probabilidades.
 \end{habilities}
 
-\section{Objetivo Geral}
-Apresentar a noção de probabilidade sob os pontos de vista clássico, frequentista e subjetivo. (A noção frequentista de probabilidade está prevista para o Ensino Fundamental pela BNCC.) Apresentar regras básicas (axiomas) da probabilidade independentes da interpretação adotada, introduzindo uma teoria matemática da probabilidade e, como consequência, trabalhar propriedades decorrentes das regras básicas, definir probabilidade condicional e independência entre dois eventos. Finalmente, trabalhar com o cálculo de probabilidades de eventos em experimentos sucessivos, usando a regra da multiplicação, obtida a partir da definição de probabilidade condicional.
-
-Ao longo do capítulo serão propostas atividades nas quais o aluno deverá propor como especificar probabilidades para determinados eventos em situações nas quais não se aplica a definição clássica de probabilidade.
-
-\subsection{Por que estudar o assunto?}
+\paragraph{Por que estudar o assunto?}
 “A Probabilidade fornece uma maneira única de se envolver, pensar e interagir com uma gama diversa de situações do mundo real, no qual aleatoriedade e incerteza estão onipresentes.”{} (Pfannkuch e outros, 2016)
 
-\subsection{Desfios do capítulo}
+\paragraph{Desfios do capítulo}
 Apresentar o conteúdo de Probabilidade antes do conteúdo de Análise Combinatória, relacionando-o mais à Estatística do que à noção clássica de probabilidade.
 
-\subsection{Conteúdos abordados}
+\paragraph{Conteúdos abordados}
 \begin{enumerate}
 \item Interpretações clássica, frequentista e subjetiva da probabilidade.
 \item Lei dos Grandes Números.
@@ -133,7 +133,9 @@ Apresentar o conteúdo de Probabilidade antes do conteúdo de Análise Combinat�
 \item Aplicações da Lei dos Grandes Números, usando simulações no GeoGebra.(Para saber mais)
 \end{enumerate}
 
-\subsection{Pré-requisitos}
+
+
+\paragraph{Pré-requisitos}
 \begin{habilities}{EF09MA19}
 Reconhecer, em experimentos aleatórios, eventos independentes e dependentes, e calcular a probabilidade de sua ocorrência nos dois casos.
 
@@ -146,8 +148,7 @@ Planejar e realizar experimentos aleatórios ou simulações que envolvem cálcu
 
 \textbf{Observação}: Como a BNCC ainda não entrou em vigor, os pré-requisitos acima, não necessariamente foram contemplados no Ensino Fundamental. Por essa razão, eles serão abordados neste capítulo.
 
-\columnbreak
-\subsection{Desdobramentos imediatos}
+\paragraph{Desdobramentos imediatos}
 
 \begin{habilities}{EM13CNT205}
 Utilizar noções de probabilidade e incerteza para interpretar previsões sobre atividades experimentais, fenômenos naturais e processos tecnológicos, reconhecendo os limites explicativos das ciências.
@@ -159,7 +160,7 @@ Identificar situações da vida cotidiana nas quais seja necessário fazer escol
 Aplicar conceitos matemáticos no planejamento, na execução e na análise de ações envolvendo a utilização de aplicativos e a criação de planilhas (para o controle de orçamento familiar, simuladores de cálculos de juros simples e compostos, entre outros), para tomar decisões.
 \end{habilities}
 
-\section{Abordagem do capítulo}
+\subsection{Abordagem do capítulo}
 Neste capítulo serão apresentadas várias atividades iniciais, solicitando ao aluno determinar a probabilidade de ocorrer um certo evento, para posterior discussão e introdução a diferentes tipos de interpretação de Probabilidade. Na discussão sobre a “definição”{} de probabilidade pretende-se deixar claro que a expressão $P(A)=\frac{\#(A)}{\#(S)}$ em que $A$ é um evento, $S$ é o espaço amostral, $\#(A)$ é o número de elementos do evento $A$ e $\#(S)$ é o número de elementos do espaço amostral $S$, é restrita a um contexto particular e que as noções frequentista e subjetiva levam a designações da probabilidade de um evento $A$ ocorrer que não fazem uso desta expressão.
 
 A partir desta discussão, as regras básicas (axiomas) da probabilidade são apresentadas para introduzir uma teoria matemática da probabilidade que independe da interpretação adotada nas designações de probabilidade.
@@ -170,17 +171,17 @@ Na sequência serão propostas atividades que demandarão o uso das propriedades
 
 Para trabalhar a probabilidade de eventos em experimentos sucessivos (\textbf{EM13MAT312}), primeiro será proposta uma atividade para calcular probabilidades condicionais e explorar a noção de independência entre eventos. Em seguida, a definição de probabilidade condicional será apresentada, levando à regra da multiplicação, a ser explorada em atividades da seção praticando subsequente.
 
-\subsection{Diferencial do capítulo}
+\paragraph{Diferencial do capítulo}
 Dar menos ênfase à noção clássica de Probabilidade, apresentando situações nas quais esta noção não se aplica.
 
-\subsection{Dificuldades típicas dos estudantes (distratores)}
+\paragraph{Dificuldades típicas dos estudantes (distratores)}
 \begin{enumerate}
 \item Dificuldade de interpretar “probabilidade”.
 \item Existe forte inclinação dos estudantes a assumir que os resultados em um espaço amostral são equiprováveis mesmo quando não é apropriado fazer esta suposição (Albert., J. H. 2003)
 \item Confusão entre os conceitos de eventos independentes e eventos disjuntos (Rodrigues, F. W., 1984)
 \end{enumerate}
 
-\subsection{Estratégia pedagógica}
+\paragraph{Estratégia pedagógica}
 Pretende-se ao longo do capítulo propor atividades em variados contextos que estimulem
 
 \begin{enumerate}
@@ -189,11 +190,10 @@ Pretende-se ao longo do capítulo propor atividades em variados contextos que es
 \item a necessidade de propor um modelo para explicar um fenômeno aleatório.
 \end{enumerate}
 
-\section{Estrutura}
+\subsection{Estrutura}
 Como nos demais capítulos do livro, todas as seçções são compostas pelas subseções explorando (atividades), organizando as ideias (apresentação do conteúdo tratado nas atividades) e praticando (atividades de exploração dos conteúdos trabalhados na seção).
 
-\columnbreak
-\subsection{Seção 1: Conceitos básicos}
+\paragraph{Seção 1: Conceitos básicos}
 Nesta seção incluem-se
 \begin{enumerate}
 \item breve histórico do desenvolvimento da teoria das probabilidades,
@@ -213,7 +213,7 @@ Nesta seção incluem-se
 \item Álgebra de conjuntos - Aplicar as operações de união, interseção e complementariedade da teoria de conjuntos para descrever eventos compostos.
 \end{OES}
 
-\subsection{Seção 2: Regras básicas e propriedades da probabilidade}
+\paragraph{Seção 2: Regras básicas e propriedades da probabilidade}
 
 Nesta seção incluem-se
 \begin{enumerate}
@@ -231,7 +231,7 @@ Nesta seção incluem-se
 \item  Aplicação - Aplicar as regras básicas da probabilidade em espaços amostrais contínuos (probabilidade geométrica).
 \end{OES}
 
-\subsection{Seção 3: Probabilidade condicional e independência}
+\paragraph{Seção 3: Probabilidade condicional e independência}
 Nesta seção incluem-se
 \begin{enumerate}
 \item a definição de probabilidade condicional;
@@ -248,17 +248,16 @@ Nesta seção incluem-se
 \item Eventos sequenciais - Entender que a probabilidade da ocorrência simultânea de um número finito de eventos pode ser calculada como o produto de probabilidades adequadas.
 \end{OES}
 
-\subsection{Para saber mais}
+\paragraph{Para saber mais}
 Simulações de experimentos simples usando o GeoGebra. Ilustrações da Lei dos Grandes Números.
 
-\subsection{Exercícios}
+\paragraph{Exercícios}
 Serão propostos exercícios do ENEM, Vestibulares entre outros abordando os conteúdos deste capítulo. Nos exercícios serão tratados os distratores.
 
 \end{apresentacao}
 
 \def\currentcolor{session1}
-\begin{texto}
-{\section{Seção 1 - Conceitos Básicos}
+\begin{paginatexto}{Conceitos Básicos}{
 
   Como na nossa vida quase tudo é incerto, o conhecimento sobre a quantidade de incerteza associada a certos eventos (probabilidade) é fundamental para tomar decisões adequadas.
 
@@ -271,11 +270,7 @@ Serão propostos exercícios do ENEM, Vestibulares entre outros abordando os con
   Apesar de a Análise Combinatória ser muito relacionada à Probabilidade, de fato, ela é meramente uma ferramenta útil no cálculo de probabilidades em contextos nos quais a interpretação clássica de probabilidade se encaixa. Por essa razão optamos por não incluí-la como pré-requisito na abordagem de probabilidade dessa unidade temática. É claro que, quando for se trabalhar com a Análise Combinatória, é importante reforçá-la em problemas que envolvam cálculo de probabilidades. Acreditamos que a estratégia adotada nesta unidade para abordar a Probabilidade será útil para desmistificá-la como um tópico da Matemática muito difícil.
 
   Na unidade temática de probabilidade pretende-se reforçar a importância da probabilidade à estatística. Na estatística, em geral, adotam-se as interpretações frequentista e subjetiva de probabilidade. Por isso o objetivo principal desta seção inicial da unidade é a compreensão das interpretações de probabilidade mais utilizadas, a saber, clássica, frequentista e subjetiva.
-}
-\end{texto}
-\clearmargin
-\begin{texto}
-{
+
   Outro objetivo nesta seção é a interpretação de uma medida de incerteza (probabilidade) como uma taxa de ocorrência de um evento, ou seja, como uma média de ocorrências desse evento, quando repetimos o experimento um grande número de vezes. Por exemplo, uma probabilidade $0{,}95$ para a ocorrência de um evento, não implica necessariamente que esse evento ocorrerá. Essa probabilidade é interpretada da seguinte forma: se o experimento for repetido $100$ vezes sob as mesmas condições, espera-se que em $95$ delas o evento ocorra.
 
   Nesta seção serão apresentados os conceitos básicos de espaço amostral e evento, adequados para esse nível do ensino, ou seja, o espaço amostral como a coleção contendo todos os resultados possíveis e o evento como um subconjunto do espaço amostral. A seção é encerrada apresentando-se uma breve revisão de operações com conjuntos (união, interseção e complementariedade), pois como a probabilidade é uma função na qual seu domínio é um conjunto cujos elementos são conjuntos (eventos), conhecer as operações básicas de união, interseção e complementariedade entre conjuntos (eventos) serão necessárias. (Entendemos que a definição formal de medida de probabilidade não é necessária para esse nível do ensino de modo que considerações sobre sigmas-álgebras, necessárias para essa definição formal, não serão consideradas. Sugerimos o texto de Marcos N. Magalhães, Probabilidade e Variáveis Aleatórias, da EDUSP e o texto do Barry James, Probabilidade: um curso em nível intermediário, Projeto Euclides, IMPA, para maiores detalhes.)
@@ -292,7 +287,7 @@ Serão propostos exercícios do ENEM, Vestibulares entre outros abordando os con
 
   \textbf{Observação}: Embora esta seção seja mais conceitual, a atividade que envolve a introdução de diferentes interpretações de probabilidade demanda calcular probabilidades. No entanto, trata-se de uma atividade cujas respostas, algumas delas abertas, não são o mais importante. Pretende-se nesta atividade apresentar situações que levam às diferentes interpretações de probabilidade. Lembramos que a noção de probabilidade é intuitiva e já é trabalhada no Ensino Fundamental II. Com a implantação da BNCC do Ensino Fundamental, probabilidade será trabalhada desde os anos iniciais do Ensino Fundamental.
 }
-\end{texto}
+\end{paginatexto}
 \explore{conceitos básicos}\label{conceitosbasicos}
 Neste capítulo iremos explorar a noção de probabilidade para, em seguida, apresentar uma teoria matemática útil para calcular probabilidades de eventos associados a experimentos aleatórios ou fenômenos aleatórios, isto é, experimentos cujos resultados finais são conhecidos somente após a realização dos mesmos. Por exemplo,
 
@@ -330,7 +325,7 @@ Tais modelos da Física são chamados modelos matemáticos determinísticos, uma
 
 Para explicar fenômenos aleatórios como exemplificados nos itens \titem{a)} a \titem{d)}, usamos modelos matemáticos não determinísticos chamados modelos probabilísticos. Neste caso, mesmo conhecendo algumas condições, não é possível determinar qual será o resultado antes da realização do experimento.
 
-\section{Um pouco de história da Probabilidade}
+\subsection{Um pouco de história da Probabilidade}
 
 Antes de começar o estudo um pouco mais formal de probabilidade, apresentaremos um breve resumo sobre a história da probabilidade.
 
@@ -711,19 +706,17 @@ Neste caso, não faz sentido atribuir probabilidades iguais para os dois resulta
 Antes de apresentarmos diferentes interpretações de probabilidade, vamos começar definindo os termos espaço amostral e evento.
 
 
-\begin{description}
-\item[{Espaço amostral \index{Espaço amostral: conjunto que compreende todos os resultados possíveis de um experimento aleatório.|textbf}}]
+\begin{observationtitle}{Espaço amostral}
 Conjunto que compreende todos os resultados possíveis de um experimento aleatório.
-\end{description}
+\end{observationtitle}
 
 Usaremos a letra maiúscula \(S\) para denotar espaço amostral.
 
 Por exemplo, no item \titem{b)}, do bloco I da atividade \hyperref[avaliando-probabilidades]{Avaliando probabilidades}, um espaço amostral pode ser representado por \(S=\{1,2,3,4,5,6,8\}\), pois este conjunto compreende todos os números possíveis de serem obtidos, quando sorteamos uma casa do bairro. Observe novamente que, neste caso, também não é razoável atribuir probabilidades iguais aos elementos deste espaço amostral, pois na rua há duas casas com exatamente 1 morador, duas casas com exatamente 4 moradores e duas casas com exatamente 8 moradores, enquanto que há apenas uma casa com exatamente 2 moradores, uma casa com exatamente 3 moradores, uma casa com exatamente 5 moradores e uma casa com exatamente 6 moradores.
 
-\begin{description}
-\item[{Evento \index{Evento: é qualquer subconjunto  do espaço amostral  para o qual faz sentido atribuir uma probabilidade.|textbf}}]
+\begin{observationtitle}{Evento}
 É qualquer subconjunto \(A\) do espaço amostral \(S\) para o qual faz sentido atribuir uma probabilidade.
-\end{description}
+\end{observationtitle}
 
 Veja, na \hyperref[diagramavenn1]{figura \ref{diagramavenn1}}, uma representação de um evento (conjunto) \(A\) em um espaço amostral \(S\) (conjunto universo), usando diagrama de Venn.
 \begin{figure}[H]
@@ -750,28 +743,25 @@ Ao realizar um experimento aleatório, dizemos que um evento \(A\) ocorreu, se o
 \caption{Dados comuns de seis faces numeradas de 1 a 6}
 \end{figure}
 
-\begin{description}
-\item[{Evento elementar\index{Evento elementar: subconjunto unitário do espaço amostral !ou, equivalentemente, subconjunto do espaço amostral  no qual há apenas um resultado possível.|textbf}}]
+\begin{observationtitle}{Evento elementar}
 Subconjunto unitário do espaço amostral \(S\); ou, equivalentemente, subconjunto do espaço amostral \(S\) no qual há apenas um resultado possível.
-\end{description}
+\end{observationtitle}
 
 Por exemplo, no lançamento de um dado, podemos representar o espaço amostral por \(S=\{1,2,3,4,5,6\}\). Nesse caso, os eventos elementares são os conjuntos unitários:
 \begin{equation*}
 \begin{split}\{1\}, \{2\}, \{3\}, \{4\}, \{5\} \text{ e } \{6\}.\end{split}
 \end{equation*}
-\subsection{Operações de união, interseção e complementariedade}
+\paragraph{Operações de união, interseção e complementariedade}
 
 Faremos agora uma rápida revisão sobre operações entre conjuntos (união, interseção e complementariedade), pois eventos são conjuntos e nós estamos interessados em calcular probabilidades de eventos.
 
-\begin{description}
-  \item[{União}] O conjunto \(A\cup B\) (lê-se \(A\)  união \(B\)) corresponde à reunião de todos os elementos de \(A\) e de \(B\). Veja na \hyperref[aub]{figura \ref{aub}}, uma representação de \(A\cup B\), usando diagrama de Venn, em que o conjunto \(A\cup B\) corresponde à região pintada.
+\begin{observationtitle}{União}
+O conjunto \(A\cup B\) (lê-se \(A\)  união \(B\)) corresponde à reunião de todos os elementos de \(A\) e de \(B\). Veja na \hyperref[aub]{figura \ref{aub}}, uma representação de \(A\cup B\), usando diagrama de Venn, em que o conjunto \(A\cup B\) corresponde à região pintada.
 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}  
-
-[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=0.9]
 \draw [rounded corners=8pt, -] (0,-0) -- (0,5) -- (8,5) -- (8,0) -- cycle;
 
 \node at (7,4) {$B$};
@@ -791,16 +781,14 @@ Faremos agora uma rápida revisão sobre operações entre conjuntos (união, in
 
 
 Dizemos que o evento \(A\cup B\) ocorreu se pelo menos um dos dois eventos, \(A\) ou \(B\), tiver ocorrido.
-\end{description}
-\begin{description}
-\item [{Interseção}] 
+\end{observationtitle}
+
+\begin{observationtitle}{Interseção}
 O conjunto \(A\cap B\) (lê-se \(A\) interseção \(B\)) corresponde à coleção de todos os elementos que pertencem simultaneamente ao conjunto \(A\) e ao conjunto \(B\). Veja na \hyperref[intersecao]{figura \ref{intersecao}} uma representação de \(A\cap B\), usando diagrama de Venn, em que o conjunto \(A\cap B\) corresponde à região pintada.
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
-
-[scale=0.6]
+\begin{tikzpicture}[scale=0.9]
 \draw [,rounded corners=8pt, -] (0,-0) -- (0,5) -- (8,5) -- (8,0) -- cycle;
 \node at (7,4) {$B$};
 \node at (.5,4) {$A$};
@@ -815,9 +803,11 @@ O conjunto \(A\cap B\) (lê-se \(A\) interseção \(B\)) corresponde à coleçã
 
 
 Dizemos que o evento \(A \cap B\) ocorreu, se os eventos \(A\) e \(B\) tiverem ocorrido simultaneamente.
-\end{description}
-\begin{description}
-\item [{Complementariedade}]
+\end{observationtitle}
+
+
+\begin{observationtitle}{Complementariedade}
+
 O conjunto \(\overline{A}\) (lê-se \(A\) complementar) corresponde à coleção de todos os elementos do conjunto universo (espaço amostral \(S\)) que não pertencem ao conjunto \(A\). Veja na \hyperref[complementar]{figura \ref{complementar}} uma representação de \(\overline{A}\), usando diagrama de Venn, em que o conjunto \(\overline{A}\) corresponde à região pintada.
 
 \begin{figure}[H]
@@ -835,7 +825,7 @@ O conjunto \(\overline{A}\) (lê-se \(A\) complementar) corresponde à coleção
 \end{figure}
 
 Dizemos que o evento \(\overline{A}\) ocorreu, se o evento \(A\) não tiver ocorrido.
-\end{description}
+\end{observationtitle}
 
 Pela definição das operações de união, interseção e complementareidade dizemos que
 \begin{itemize}
@@ -850,10 +840,9 @@ o evento \(\overline{A}\) ocorreu se, e somente se, o evento \(A\) \textbf{não}
 
 \end{itemize}
 
-\begin{description}
-\item[{Dois eventos \(A\)  e \(B\) são ditos eventos disjuntos se\index{Dois eventos   e  são ditos (eventos) disjuntos se , ou seja, se  e  não tiverem elementos em comum.|textbf}}]
-$A\cap B=\emptyset$, ou seja, se \(A\) e \(B\) não tiverem elementos em comum.
-\end{description}
+\begin{observation}{}
+Dois eventos \(A\)  e \(B\) são ditos eventos disjuntos se $A\cap B=\emptyset$, ou seja, se \(A\) e \(B\) não tiverem elementos em comum.
+\end{observation}
 
 Dado qualquer espaço amostral \(S\), os conjuntos \(S\) e \(\emptyset\) (conjunto vazio) são considerados eventos especiais e chamados de \textbf{evento certo} e \textbf{evento impossível}, respectivamente.
 
@@ -908,7 +897,7 @@ No primeiro diagrama, pinte de uma cor \(A\cup B\) e com outra cor, pinte o conj
 A seguir, serão apresentadas três interpretações da probabilidade.
 
 
-\section{Interpretação clássica de probabilidade}
+\subsection{Interpretação clássica de probabilidade}
 
 Na interpretação clássica de probabilidade todos os eventos elementares são considerados igualmente prováveis (equiprováveis).
 
@@ -918,7 +907,7 @@ No entanto, nem sempre a interpretação clássica será adequada: lembre-se do 
 
 Um outro problema com esta interpretação é a circularidade do conceito de probabilidade para definir a própria probabilidade, pois considera em sua definição “resultados igualmente prováveis”{} que depende do conceito de probabilidade.
 
-\section{Interpretação frequentista de probabilidade}
+\subsection{Interpretação frequentista de probabilidade}
 
 Na interpretação frequentista de probabilidade, a probabilidade de um evento é definida como a frequência relativa de ocorrência deste evento, se o experimento for repetido, sob as mesmas condições, um grande número de vezes.
 
@@ -959,7 +948,7 @@ Veja na \hyperref[1000_lancamentos2]{figura \ref{1000_lancamentos2}} uma ilustra
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=250bp]{{100_lancamentos2}.png}
+\noindent\includegraphics[width=245bp]{{100_lancamentos2}.png}
 \caption{100 primeiros lançamentos da moeda com destaque para os 10 primeiros lançamentos
 }
 \end{figure}
@@ -968,7 +957,7 @@ Veja na \hyperref[1000_lancamentos2]{figura \ref{1000_lancamentos2}} uma ilustra
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=250bp]{{10_lancamentos2}.png}
+\noindent\includegraphics[width=245bp]{{10_lancamentos2}.png}
 \caption{10 primeiros lançamentos da moeda}
 \label{10_lancamentos2}
 \end{figure}
@@ -979,7 +968,7 @@ Observe que nesta simulação ocorreu cara no primeiro lançamento da moeda de t
 
 Observando a \hyperref[10_lancamentos2]{figura \ref{10_lancamentos2}}, o que você diria que ocorreu (cara ou coroa), no terceiro lançamento da moeda? Por quê?
 
-\section{Interpretação subjetiva de probabilidade}
+\subsection{Interpretação subjetiva de probabilidade}
 
 Na \index{interpretação subjetiva de probabilidade}interpretação subjetiva de probabilidade, probabilidades de eventos são designadas de acordo com a experiência que o pesquisador tem sobre o fenômeno em investigação. No primeiro exemplo desta seção (queda de um corpo celeste) pode-se dizer que adotou-se a interpretação subjetiva quando atribui-se uma probabilidade pequena, próxima de zero, para o evento “não cair”.
 
@@ -1267,8 +1256,7 @@ Verifique, usando os diagramas de Venn na \hyperref[diagramavenn3]{figura \ref{d
 
 \clearpage
 \def\currentcolor{session1}
-\begin{paginatexto}
-{\section{Regras Básicas e Propriedades}
+\begin{paginatexto}{Regras Básicas e Propriedades}{
 
 Esta seção da unidade temática de Probabilidade tem como objetivo principal apresentar uma definição matemática de probabilidade, independente das interpretações apresentadas na seção 1, conhecida como definição axiomática da probabilidade. Os axiomas dessa definição serão, no livro, chamados de regras básicas da probabilidade, a saber,
 
@@ -1449,11 +1437,11 @@ Suponha três eventos \(A\), \(B\) e \(C\) disjuntos 2 a 2, ou seja, \(A\cap B=A
 A propriedade de aditividade da probabilidade para eventos disjuntos vale para qualquer coleção de eventos disjuntos $2$ a $2$.
 
 
-\section{Interpretações da probabilidade e as regras básicas}
+\subsection{Interpretações da probabilidade e as regras básicas}
 
 Como determinar probabilidades sob cada uma das interpretações apresentadas na seção \hyperref[organizandoconceitosbasicos]{Organizando as ideias: Probabilidade \textendash{} conceitos básicos}, considerando as regras básicas?
 
-\subsection{Interpretação clássica}
+\paragraph{Interpretação clássica}
 
 \begin{example}{}
 
@@ -1496,36 +1484,34 @@ se \(A\cap B=\emptyset\), tem-se que \(\#(A\cup B)=\#(A)+\#(B)\) tal que \(P(A\c
 \textbf{Atenção:} Antes de sair usando essa interpretação, é necessário verificar se a suposição de eventos elementares equiprováveis é adequada. Por exemplo, vimos no item \titem{b)} da atividade \hyperref[espaço-nao-unico]{Espaço amostral não é único}, que \(S=\{0,1,2,3\}\) com quatro elementos. No entanto, esses elementos não são igualmente prováveis, pois os eventos elementares \(\{1\}\) e \(\{ 2\}\) são três vezes mais prováveis de ocorrer comparados aos eventos elementares \(\{0\}\) e \(\{3\}\).
 \end{observation}
 
-\subsection{Interpretação frequentista}
+\paragraph{Interpretação frequentista}
 
 Na interpretação frequentista atribuem-se probabilidades, usando-se as frequências relativas de ocorrência do evento depois de observar o mesmo experimento um grande número de vezes. Também podemos perceber com esta interpretação, que as regras da probabilidade valem, pois uma frequência relativa é sempre um número não-negativo. Se considerarmos o evento certo, é claro que sua frequência relativa de ocorrência será sempre 1, independente até da quantidade de vezes na qual o experimento é repetido. Finalmente, dados dois eventos disjuntos, a frequência relativa de ocorrência da união dos dois será dada pela soma das frequências relativas dos dois.
 
-\subsection{Interpretação subjetiva}
+\paragraph{Interpretação subjetiva}
 
 A validade das regras básicas na interpretação subjetiva de probabilidade depende de coerência com as regras básicas, quando se atribuem probabilidades. Por exemplo, para um espaço amostral \(S\) finito, as probabilidades atribuídas aos eventos elementares não devem ser valores fora do intervalo \([0,1]\). Além disso, a soma das probabilidades dos eventos elementares deverá ser igual a $1$.
 
 
-\section{Propriedades da probabilidade}
+\subsection{Propriedades da probabilidade}
 
 A seguir, serão enumeradas algumas propriedades úteis no cálculo de probabilidades. Estas propriedades são consequências das regras básicas da probabilidade.
 
-\begin{description}
-\item[Propriedade 1] A probabilidade do evento vazio (\(\emptyset\)) é zero.
-\end{description}
+\begin{observationtitle}{Propriedade 1}
+A probabilidade do evento vazio (\(\emptyset\)) é zero.
+\end{observationtitle}
 
 Esta propriedade é obtida das regras básicas \(P(S)=1\) e aditividade da probabilidade para eventos disjuntos, lembrando que \(S\cup \emptyset =S\) e \(S\cap \emptyset =\emptyset\).
 
 Observe que de fato é natural que a probabilidade do evento vazio seja zero, pois um evento vazio nunca irá ocorrer.
 
-\begin{description}
-\item[Propriedade 2] A probabilidade de um evento \(A\) pode ser calculada por \(P({A})= 1-P(\overline{A})\).
-\end{description}
+\begin{observationtitle}{Propriedade 2} A probabilidade de um evento \(A\) pode ser calculada por \(P({A})= 1-P(\overline{A})\).
+\end{observationtitle}
 
 Muitas vezes pode ser complicado calcular diretamente a probabilidade de um evento. Uma possível simplificação será calcular a probabilidade do evento complementar. Um exemplo comum, é o problema dos aniversários que será apresentado na seção \hyperref[regrasbasicaspropriedades]{Praticando: Probabilidade - regras básicas e propriedades}. Uma aplicação desta propriedade está ilustrada no item \titem{c)} da atividade \hyperref[censo-educacao-fisica]{Censo Educação Física}.
 
-\begin{description}
-\item[Propriedade 3] Dados \(A\) e \(B\) eventos em um espaço amostral \(S\) tais que \(A\subset B\) (\(A\) está contido em \(B\)), então \(P(A)\leq P(B)\).
-\end{description}
+\begin{observationtitle}{Propriedade 3} Dados \(A\) e \(B\) eventos em um espaço amostral \(S\) tais que \(A\subset B\) (\(A\) está contido em \(B\)), então \(P(A)\leq P(B)\).
+\end{observationtitle}
 
 Essa propriedade, ilustrada no item \titem{d)} da atividade \hyperref[censo-educacao-fisica]{Censo Educação Física}, pode ser obtida a partir das regras básicas:
 como \(A\subset B\), podemos escrever o evento \(B\) como a união de dois eventos disjuntos, a saber,  \(B=A\cup (B\cap \overline{A})\). Veja uma ilustração na \hyperref[eventosdijuntos]{figura \ref{eventosdijuntos}}.
@@ -1546,12 +1532,15 @@ como \(A\subset B\), podemos escrever o evento \(B\) como a união de dois event
 \label{eventosdijuntos}
 \end{figure}
 
+\clearpage
 
 Assim, usando a regra de que toda probabilidade é um número não-negativo e a regra básica de aditividade da probabilidade, tem-se
 \begin{equation*}
 \begin{split}P(B)=P(A\cup(\overline{A}\cap B))=P(A)+\underbrace{P(\overline{A}\cap B)}_{\geq 0}\geq P(A)\end{split}
 \end{equation*}
-\textbf{Propriedade 4} \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\), quaisquer que sejam os eventos \(A\) e \(B\) de um espaço amostral \(S\).
+\begin{observationtitle}{Propriedade 4}
+\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\), quaisquer que sejam os eventos \(A\) e \(B\) de um espaço amostral \(S\).
+\end{observationtitle}
 
 Essa propriedade, utilizada no item \titem{e)} da atividade \hyperref[censo-educacao-fisica]{Censo Educação Física}, pode ser obtida, escrevendo-se o evento \(A\cup B\) como a união de dois eventos disjuntos, a saber, \(A\cup B=A\cup (\overline{A}\cap B)\).
 
@@ -1559,7 +1548,7 @@ Veja uma ilustração na \hyperref[eventosdijuntos2]{figura \ref{eventosdijuntos
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.85]
 \node at (7,5.3) {$S$};
 \draw [=,rounded corners=8pt, -] (0,-0) -- (0,5) -- (8,5) -- (8,0) -- cycle;
 \node at (7,4) {$B$};
@@ -1582,7 +1571,7 @@ Mas, como \(B=(A\cap B) \cup (\overline{A}\cap B)\) e os eventos \(A\cap B\) e \
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.85]
 
 \node at (7,5.3) {$S$};
 \draw [ ,rounded corners=8pt, -] (0,-0) -- (0,5) -- (8,5) -- (8,0) -- cycle;
@@ -1882,8 +1871,7 @@ Numa turma de seu colégio há $35$ alunos. Calcule a probabilidade de que haja 
 \end{task}
 
 \clearpage
-\begin{paginatexto}
-\section{Probabilidade Condicional}
+\begin{paginatexto}{Probabilidade Condicional}
 
 Nesta seção da unidade de probabilidade todas as regras e propriedades da probabilidade trabalhadas na seção anterior serão retomadas, porém em um contexto de revisão da probabilidade de um evento, sabendo-se que algum outro evento tenha ocorrido. Após explorar uma situação que envolva essa revisão, apresentaremos definição de probabilidade condicional que sirva para todas as interpretações trabalhadas dada por $P(A|E)=\dfrac{P(A\cap E)}{P(E)},  P(E)>0.$
 
@@ -1909,7 +1897,7 @@ Na \hyperref[exemploarvore1]{figura \ref{exemploarvore1}} 1, há uma iluistraç�
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=\linewidth]{exemploarvore1.png}
+\includegraphics[width=.8\linewidth]{exemploarvore1.png}
 \caption{Exemplo do uso do diagrama de árvore para resolver um problema de probabilidade}
 \label{exemploarvore1}
 \end{figure}
@@ -1939,7 +1927,7 @@ Veja na \hyperref[exemploarvore2]{figura \ref{exemploarvore2}} o diagrama de ár
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=\linewidth]{exemploarvore2.png}
+\includegraphics[width=.75\linewidth]{exemploarvore2.png}
 \caption{Exemplo do uso do diagrama de árvore para calcular probabilidades conjuntas}
 \label{exemploarvore2}
 \end{figure}
@@ -2049,7 +2037,7 @@ Analisando os dados da tabela e as respostas obtidas, há razões para supor que
 \arrange{ Probabilidade Condicional}
 
 
-\subsection{Definição de probabilidade condicional}
+\paragraph{Definição de probabilidade condicional}
 
 Em Ciência, “informação disponível”{}é certamente uma matéria-prima preciosa, pois através dela é possível construir modelos mais realísticos para descrever fenômenos tanto determinísticos quanto aleatórios e obter resultados mais fidedignos de um ponto de vista da aplicação. Assim, quanto mais informação dispomos sobre determinados fenômenos, mais acurados serão potencialmente nossos modelos. É nesse sentido que surge historicamente o conceito de probabilidade condicional, tema dessa seção.
 
@@ -2078,13 +2066,12 @@ A questão que se coloca é: como incorporar matematicamente a informação de q
 
 A definição de probabilidade condicional é a resposta para essa questão.
 
-\begin{description}
-\item[Definição]
-
+\begin{observation}{}
 A probabibilidade condicional de o evento \(A\) ocorrer, dado que sabemos que o evento \(B\)  ocorreu, denotada por \(P(A|B)\),  é definida por
 \begin{equation*}
 \begin{split}P(A|B)=\frac{P(A\cap B)}{P(B)}, \quad P(B)>0\end{split}
-\end{equation*}\end{description}
+\end{equation*}
+\end{observation}
 
 Retomando a a atividade \hyperref[uso-oculos]{uso de óculos e sexo de estudantes}, a probabilidade de o aluno sorteado usar óculos, sabendo que ele é do gênero masculino foi calculada pela razão do número de estudantes que usam óculos e são do gênero masculino e o número de estudantes do gênero masculino, a saber, \(\frac{5}{18}\approx 0{,}278\).
 
@@ -2136,7 +2123,7 @@ Se \(A_1\subset A_2\),  então \(P(A_1|B)\leq P(A_2|B)\).
 \end{example}
 
 
-\subsection{Regra da Multiplicação}
+\paragraph{Regra da Multiplicação}
 
 A partir da definição de probabilidade condicional é possível obter uma regra para calcular a probabilidade da ocorrência simultânea de dois eventos \(A\)  e \(B\). Como \(\displaystyle{P(A|B)=\frac{P(A\cap B)}{P(B)}}\), segue que
 \begin{quote}
@@ -2222,12 +2209,12 @@ Logo, pela árvore, \(\displaystyle P(E)=\frac{8}{33}+\frac{8}{33}=\frac{16}{33}
 \end{example}
 
 
-\subsection{Eventos Independentes}
+\paragraph{Eventos Independentes}
 
 Na atividade \hyperref[uso-oculos]{uso de óculos e sexo de estudantes}, concluímos que uso de óculos independe de gênero, pois  comparando as probabilidades incondicionais de ser do gênero feminino $(0{,}55)$ e de ser do gênero masculino $(0{,}45)$ com as probabilidades condicionais de ser do gênero feminino $(0{,}545)$ e do gênero masculino $(0{,}455)$ dado que usa óculos, percebe-se que elas são aproximadamente iguais. Na teoria, para que os eventos sejam independentes, essas probabilidades deveriam ser iguais. Na prática esse tipo de análise é usado em Estatística para avaliar a hipótese de independência entre dois eventos.
-\begin{description}
-\item[{Dois eventos \(A\) e \(B\) são ditos independentes\index{Dois eventos  e  são ditos independentes se a ocorrência de um deles não muda a incerteza sobre a ocorrência do outro.|textbf}}] se a ocorrência de um deles não muda a incerteza sobre a ocorrência do outro.
-\end{description}
+\begin{observation}{}
+Dois eventos \(A\) e \(B\) são ditos independentes se a ocorrência de um deles não muda a incerteza sobre a ocorrência do outro.
+\end{observation}
 
 Em símbolos, \(A\) e \(B\)  são ditos eventos independentes se \(P(A|B)=P(A)\), ou equivalentemente, se \(P(B|A)=P(B)\).
 
@@ -2291,10 +2278,10 @@ Se \(A\) e \(B\) são independentes, então \(P(A\cap B)=P(A)\cdot P(B)>0\)o que
 Observe que a única situação em que se pode ter \(A\)  e \(B\)  simultaneamente disjuntos e independentes ocorre se um dos eventos \(A\) ou \(B\) tiver probabilidade nula.
 \end{example}
 
-\begin{description}
+\begin{observation}{}
 
-\item[Três eventos \(A\), \(B\)  e  \(C\) são independentes] se, e somente se, eles são dois a dois independentes e \(P(A\cap B\cap C)=P(A)\cdot P(B)\cdot P(C)\).
-\end{description}
+Três eventos \(A\), \(B\)  e  \(C\) são independentes se, e somente se, eles são dois a dois independentes e \(P(A\cap B\cap C)=P(A)\cdot P(B)\cdot P(C)\).
+\end{observation}
 
 \begin{example} {eventos dois a dois independentes não independentes}
 
@@ -2347,12 +2334,12 @@ Portanto, se temos três eventos dois a dois independentes, isso não implicará
 \begin{objectives}{Desempenho de exames diagnósticos}
 {
 Reconhecer uma probabilidade condicional.
-}{1}{1}
+}{1}{2}
 \end{objectives}
 \begin{sugestions}{Desempenho de exames diagnósticos}
 {
 Essa atividade envolve uma adaptação de uma questão do ENEM (2014).
-}{1}{1}
+}{1}{2}
 \end{sugestions}
 \clearmargin
 \begin{answer}{Desempenho de exames diagnósticos}
@@ -2377,7 +2364,7 @@ Defina
 \begin{objectives}{Produção de peças}
 {
 Aplicar a definição de probabilidade condicional para reconhecer eventos independentes e eventos dependentes.
-}{1}{2}
+}{1}{1}
 \end{objectives}
 \begin{answer}{Produção de peças}
 {
@@ -2395,12 +2382,12 @@ De fato, essa propriedade não é um caso específico desse problema e ela é ex
 \begin{objectives}{Independência e complementariedade}
 {
 Aplicar o conceito de independência entre dois eventos para entender que o respectivos eventos complementares herdam essa a condição de eventos independentes.
-}{1}{1}
+}{1}{2}
 \end{objectives}
 \begin{sugestions}{Independência e complementariedade}
 {
 Essa atividade é um exercício teórico de dedução muito simples que revela uma propriedade importante entre eventos independentes: dada uma coleção de eventos independentes, se para alguns eventos (ou todos) considerarmos os seus complementares em vez do próprio, a coleção continua independente. Com fins de simplificação e não tornar o processo complicado, consideraremos nesta atividade apenas o caso para dois eventos independentes. Mas, de fato, o resultado vale para quaisquer coleções de eventos independentes.
-}{1}{1}
+}{1}{2}
 \end{sugestions}
 \begin{answer}{Independência e complementariedade}
 {
@@ -2429,7 +2416,7 @@ Portanto, se $A$ e $B$ são independentes, então $\overline{A}$ e $\overline{B}
 \begin{objectives}{Escolha da chave correta}
 {
 Estender a regra da multiplicação para o caso de mais de dois eventos.
-}{1}{1}
+}{1}{2}
 \end{objectives}
 \begin{answer}{Escolha da chave correta}
 {
@@ -2492,12 +2479,11 @@ $P(\overline{A_1}\cap \overline{A_2}\cap A_3)=P(\overline{A_1})\cdot P(\overline
 }{0}
 \end{answer}
 \clearmargin
-\begin{objectives}{Probabilidade totalProbabilidade total}
+\begin{objectives}{Probabilidade total}
 {
 Aplicar a definição de probabilidade condicional e propriedades da probabilidade para resolver um problema cuja solução faz uso do teorema de Bayes.
 
-
-}{1}{2}
+}{2}{2}
 \end{objectives}
 \begin{sugestions}{Probabilidade total}
 {
@@ -2507,7 +2493,7 @@ Teorema de Bayes: Sejam $A_1,A_2,\cdot,A_n$ eventos tais que $A_1\cup A_2\cup\cd
 \begin{equation*}
 P(A_k|B)=\dfrac{P(A_k)\cdot P(B|A_k)}{\displaystyle\sum^n_{i=1}P(A_i)\cdot P(B|A_i)}, k=1,2,...,n.
 \end{equation*}
-}{1}{2}
+}{2}{2}
 \end{sugestions}
 \begin{answer}{Probabilidade total}
 {
@@ -2637,7 +2623,7 @@ Determine uma estimativa da sensibilidade e da especificidade desse teste, usand
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{maquinas}
+\noindent\includegraphics[width=375bp]{maquinas}
 
 \caption{Produção de peças}
 \end{figure}
@@ -2701,7 +2687,7 @@ Numa caixa há 5 chaves das quais apenas uma abre um cadeado.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=200bp]{cadeado}
+\includegraphics[width=175bp]{cadeado}
 
 \caption{Chaves e cadeado}
 \label{}
@@ -2731,7 +2717,7 @@ a probabilidade de ter sido sorteado o bloco II, sabendo que a pessoa sorteada �
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{5.jpg}
+\noindent\includegraphics[width=\linewidth]{5.jpg}
 
 \caption{Condomínio com três blocos}
 \end{figure}
@@ -2811,12 +2797,12 @@ Observe que na simulação realizada com o GeoGebra também foram obtidos doze n
 \begin{objectives}{Simulação do lançamento de uma moeda honesta}
 {
 Aplicar o modelo probabilístico equiprovável e usar tecnologia para realizar simulações de um fenômeno aleatório.
-}{1}{1}
+}{1}{2}
 \end{objectives}
 \begin{sugestions}{Simulação do lançamento de uma moeda honesta}
 {
 Essa atividade demanda o uso de tenologia. Sugere-se realizá-la em laboratório de informática. Sugere-se também que os alunos trabalhem em pequenos grupos de dois ou três alunos para cada computador disponível. As atividades poderão ser adaptadas de acordo com o conhecimento prévio dos estudantes. Nesssa atividade poderá ser usado o exemplo dado anteriormente, atribuindo um dos dois números para “cara”{} e, o outro, para “coroa”.
-}{1}{1}
+}{1}{2}
 \end{sugestions}
 \begin{answer}{Simulação do lançamento de uma moeda honesta}
 {
@@ -2853,15 +2839,15 @@ $\tcolor{Número de Observações}$ & $\tcolor{Frequência relativa de 6}$ \\
 \end{enumerate}
 }{1}
 \end{answer}
-\begin{objectives}{Simulação de um dado honesto}
+\begin{objectives}{Simulação do lançamento de um dado honesto}
 {
 Aplicar o modelo probabilístico equiprovável e usar tecnologia para realizar simulações de um fenômeno aleatório.
-}{1}{2}
+}{1}{1}
 \end{objectives}
-\begin{sugestions}{Simulação de um dado honesto}
+\begin{sugestions}{Simulação do lançamento de um dado honesto}
 {
 Essa atividade demanda o uso de tenologia. Sugere-se realizá-la em laboratório de informática. Sugere-se também que os alunos trabalhem em pequenos grupos de dois ou três alunos para cada computador disponível. As atividades poderão ser adaptadas de acordo com o conhecimento prévio dos estudantes. Nesssa atividade poderá ser usado exemplo dado anteriormente, gerando-se um número aleatório entre $1$ e $6$ e, depois, contando as quantidades obtidas de cada face.
-}{1}{2}
+}{1}{1}
 \end{sugestions}
 \begin{answer}{Simulação de um dado honesto}
 {
@@ -2898,13 +2884,13 @@ $\tcolor{Número de Observações}$ & $\tcolor{Frequência relativa de 6's}$ \\
 \begin{objectives}{Simulação do lançamento de um dado desequilibrado}
 {
 Aplicar modelo probabilístico não equiprovável e usar tecnologia para realizar simulações de um fenômeno aleatório.
-}{1}{1}
+}{1}{2}
 \end{objectives}
 
 \begin{sugestions}{Simulação do lançamento de um dado desequilibrado}
 {
 Nessa atividade será proposta a simulação de um dado desequilibrado de tal modo que as faces não ocorrem com probabilidades iguais. Inicialmente será necessária uma discussão sobre com os alunos desequilibrados. Em particular, nessa atividade será suposto que a probabilidade da face é proporcional ao número da face. Assim, a primeira pergunta envolverá obter as probabilidades de cada face. Fazendo $P({i})=k\cdot i$ em que $i=1,2,3,4,5,6$ e $k$ é a constante de proporcionalidade, lembre com os alunos a segunda regra básica de que $P(S)=1$ e que $\{1\}\cup\{2\}\cup\cdots\cup\{6\}=S$. Além disso, como os eventos elementares são disjuntos segue que $1=P(\{1\})+P(\{2\})+\cdots+P(\{6\})=k+2k+3k+4k+5k+6k=21k$ tal que $k=121$. Depois dessa dedução será necessária uma discussão sobre como usar o gerador de números aleatórios para simular os resultados desse dado, para finalmente realizar a simulação de um número aleatório entre $1$ e $21$ e atribuido o $1$ à face $1$, depois o $2$ e o $3$ à face $2$, o $4$, o $5$ e o $6$ à face $3$, o $7$, o $8$, o $9$ e o $10$ à face $4$, o $11$, o $12$, o $13$, o $14$ e o $15$ à face $5$ e, finalmente, o $16$, o $17$, o $18$, o $19$, o $20$ e o $21$ à face $6$. Leve o aluno a observar que desse modo estaremos respeitando as probabilidades desiguais, a saber, $1/21$ para a face $1$, $2/21$ para a face $2,..., 6/21$ para a face $6$.
-}{0}{1}
+}{0}{2}
 \end{sugestions}
 \begin{answer}{Simulação do lançamento de um dado desequilibrado}
 {
@@ -2941,12 +2927,12 @@ $\tcolor{Número de Observações}$ & $\tcolor{Frequência relativa de 6}$ \\
 \begin{objectives}{Simulação do lançamento de um dado diferente}
 {
 Aplicar modelo probabilístico e usar tecnologia para realizar simulações de um fenômeno aleatório.
-}{1}{1}
+}{1}{2}
 \end{objectives}
 \begin{sugestions}{Simulação do lançamento de um dado diferente}
 {
 Nessa atividade será proposta a simulação de um dado diferente. Apesar das faces ocorrerem com probabilidades iguais, esse dados tem registrado em suas faces o número 1 em uma delas, o núermo 2 em duas delas e o número 3 em três delas. Discuta com seus alunos como adaptar a função de geração de números aleatórios para simular resultados de lançamentos desse dado. É fácil perceber, da atividade anterior que a probabilidade de 3 é 3/6, de 2 é 2/6 e, de 1, 1/6
-}{1}{1}
+}{1}{2}
 \end{sugestions}
 \begin{answer}{Simulação do lançamento de um dado diferente}
 {
@@ -3148,10 +3134,10 @@ Número de Observações & Frequência relativa de 2 \\
 \end{table}
 \end{task}
 \clearpage
-\begin{observation}{Teorema: Lei dos Grandes Números}
+\begin{observationtitle}{Teorema: Lei dos Grandes Números}
 
 À medida que um experimento é repetido várias vezes, a probabilidade dada pela frequência relativa de um evento tende a se aproximar da probabilidade teórica.
-\end{observation}
+\end{observationtitle}
 
 A lei dos grandes números nos diz que as estimativas da probabilidade de um evento dadas pelas frequências relativas tendem a ficar melhores com mais observações. Esse resultado, como já comentado anteriormente, é a base teórica para a interpretação frequentista de probabilidade. Veja na \hyperref[1000_lancamentos2]{figura \ref{1000_lancamentos2}}, uma ilustração da Lei dos Grandes Números.
 

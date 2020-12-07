@@ -85,9 +85,9 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 
 \mainmatter
 
-\begin{apresentacao}
-\section{Função Exponencial}
+\begin{apresentacao}{Função Exponencial}
 
+\subsection{Introdução}
 As ideias que envolvem as funções exponenciais (e logarítmicas) estão entre as mais comuns na ciência e ao mesmo tempo são as que oferecem os maiores desafios aos professores e estudantes, especialmente na Educação Básica. São ideias impregnadas de sutilezas conceituais e epistemológicas e que, para quase a totalidade dos docentes, passam despercebidas, fazendo com que o ensino desse tópico acabe por ficar reduzido a memorizações e procedimentos mecânicos. Como se trata de um assunto desafiador para ambos estudantes e professores, torna-se mais difícil antecipar as dificuldades dos estudantes e como consequência não há espaço para refletir sobre que ações tomar para superar tais dificuldades. \citep{Davis2009}; \citep{Weber2002}
 
 Durante os anos do Ensino Fundamental o estudante aprende a lidar com a potenciação considerando-a como uma nova operação/notação para indicar a multiplicação repetida (potências que envolvem expoentes naturais). No Ensino Médio, entretanto, ele deve ser capaz de extrapolar esse conceito e generalizá-lo de duas maneiras não triviais: (1) fazer a transição da multiplicação repetida $(2^{3}=2 \times 2 \times 2 )$ para a correspondência ou função cujo domínio é o conjunto dos números naturais $(n \longrightarrow 2^{n})$ estender para expoentes inteiros, racionais e irracionais, de maneira a dar significado para essas extensões. Infelizmente, como documentam diversas pesquisas relacionadas a este tema, esse objetivo raramente é atingido com sucesso.  Davis (2009) aponta que a perspectiva de multiplicação repetida impõe dificuldades aos estudantes quando se deparam com expoentes não inteiros.
@@ -103,7 +103,7 @@ f(x)=c\cdot a^x = a^{\log_a c} \cdot a^x = a^{x + \log_a c}=a^{x+k}
 \]
 Uma outra observação importante é que por conta das aplicações, consideramos para a função exponencial apenas os casos em que $c>0$. Isso também evita algumas confusões em relação ao crescimento e decrescimento das funções: note que para $c<0$, a função $f(x)=c\cdot a^x$ é crescente se, somente se, $0<a<1$.
 
-\section*{Objetivos Gerais}
+\subsection*{Objetivos Gerais}
 
 \begin{itemize}
 \item {} Diferenciar situações de crescimento e decaimento exponenciais;
@@ -117,7 +117,7 @@ Uma outra observação importante é que por conta das aplicações, consideramo
 \item {} Apresentar o número $e$.
 \end{itemize}
 
-\section*{Habilidades da BNCC}
+\subsection*{Habilidades da BNCC}
 
 \begin{habilities}{EM13MAT304} 
 Resolver e elaborar problemas com funções exponenciais nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como o da Matemática Financeira, entre outros.
@@ -129,7 +129,7 @@ Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, ent
 Identificar e associar progressões geométricas (PG) a funções exponenciais de domínios discretos, para análise de propriedades, dedução de algumas fórmulas e resolução de problemas.
 \end{habilities}
 
-\section*{Pré-requisitos}
+\subsection*{Pré-requisitos}
 
 \begin{habilities}{EF08MA01} 
 Efetuar cálculos com potências de expoentes inteiros e aplicar esse conhecimento na representação de números em notação científica. Potenciação e radiciação.
@@ -137,6 +137,7 @@ Efetuar cálculos com potências de expoentes inteiros e aplicar esse conhecimen
 \tcbsubtitle{EF08MA02} 
 Resolver e elaborar problemas usando a relação entre potenciação e radiciação, para representar uma raiz como potência de expoente fracionário.
 
+\clearpage
 \tcbsubtitle{EF09MA02} 
 Reconhecer um número irracional como um número real cuja representação decimal é infinita e não periódica, e estimar a localização de alguns deles na reta numérica.
 
@@ -144,7 +145,7 @@ Reconhecer um número irracional como um número real cuja representação decim
 Efetuar cálculos com números reais, inclusive potências com expoentes fracionários.
 \end{habilities}
 
-\section*{Distratores}
+\subsection*{Distratores}
 
 \begin{itemize}
 
@@ -175,7 +176,6 @@ A última seção é dedicada ao estudo das Progressões Geométricas e como ela
 \def\currentcolor{session1}
 \begin{texto}
 {	
-	\section{Explorando: Crescimento e Decaimento Exponenciais}
 	Nesta seção iremos explorar as ideias de crescimento e decaimento exponenciais, apresentando alguns contextos onde esse tipo de variação aparece naturalmente.
 
 	Por enquanto, vamos nos restringir a expoentes inteiros positivos, aproveitando a oportunidade para revisar algumas propriedades operatórias das potências. Outros expoentes serão tratados mais adiante, na seção (retornar e informar a seção).
@@ -206,7 +206,7 @@ A última seção é dedicada ao estudo das Progressões Geométricas e como ela
 	\item Escolha um estudante para ser o pesquisador e anotar os dados no quadro.
 	\item Ao final de cada rodada pergunte à turma como evoluiria o total de infectados nas próximas rodadas caso houvesse mais alunos na turma.
 	\item Para responder o item (e) você pode consultar a população da sua cidade e estado neste link (\url{https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html?=&t=resultados})
-	\item Adaptado de BUSH, S., GIBBONS, K., KARP, K., DILLON, F. Epidemics, exponential function and modelling, Mathematics Teaching in the Middle School, Vol. 21, No. 2, pp. 90-97, 2015.
+	\item Adaptado de \citep{Bush2015}.
 	\end{itemize}
 }{1}{2}
 \end{sugestions}
@@ -375,12 +375,12 @@ Vamos simular três situações de epidemia. O professor irá distribuir envelop
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=300bp]{epidemia.png}
+\includegraphics[width=275bp]{epidemia.png}
 %\caption{https://youtu.be/s-lgS-4Xqy0}
 \end{figure}
 
 
-\subsection{Epidemia 1}
+\paragraph{Epidemia 1}
 
 \begin{itemize}
 
@@ -396,7 +396,7 @@ Vamos simular três situações de epidemia. O professor irá distribuir envelop
 
 % 
 
-\subsection{Epidemia 2}
+\paragraph{Epidemia 2}
 
 \begin{itemize}
 
@@ -404,7 +404,7 @@ Vamos simular três situações de epidemia. O professor irá distribuir envelop
 
 \end{itemize}
 
-\subsection{Epidemia 3}
+\paragraph{Epidemia 3}
 \begin{itemize}
 
 \item Apenas um infectado na rodada 0 e cada infectado agora escolhe dois números para infectar a cada rodada.
@@ -481,6 +481,8 @@ Observando os dados da tabela é possível conjecturar que eles obedecem a algum
 Acrescente uma terceira coluna à tabela contendo os quocientes entre as quantidades de um lançamento pela quantidade do lançamento anterior.
 
 \begin{center}
+\scalebox{.9}
+{
 \begin{tabular}{|c|c|c|}
 \hline
 \tcolor{Lançamento} & \tcolor{\# verdes} & \tcolor{quocientes} \\ 
@@ -502,6 +504,7 @@ Acrescente uma terceira coluna à tabela contendo os quocientes entre as quantid
 7 & $0$ & \\ 
 \hline
 \end{tabular}
+}
 \end{center}
 
 \item {}
@@ -982,7 +985,7 @@ Fonte: CEPA}
 \clearpage
 \def\currentcolor{session1}
 \begin{texto}
-{	\section{Explorando: Variação Percentual}
+{	
 	Em situações reais é muito comum que a taxa de crescimento seja dada em forma de porcentagem, em que a variação é expressa como fração da quantidade anterior. Nesses casos a variável independente é tomada em intervalos fixos e o foco recai sobre a fração que a variação representa do valor anterior. O caso mais emblemático é o caso dos juros compostos: normalmente se escolhe uma unidade de tempo para a capitalização (meses, anos, trimestres, etc) e se expressa o crescimento/decaimento como uma taxa percentual.
 
 	É importante ressaltar a diferença entre a taxa percentual e a taxa de variação da função. A taxa de variação, como definimos no capítulo sobre Taxa de Variação deste livro, é a razão entre as variações das duas variáveis que estão relacionadas pela função: variação de $y$ por unidades da variável $x$, isto é, $\left( \dfrac{\Delta{y}}{\Delta{x}}\right)$. Para a taxa percentual o $\Delta x$ é fixado e estamos interessados no quociente $\dfrac{y(n+1)-y(n)}{y(n)}$. As atividades aqui nesta seção vão na direção de relacionar a taxa percentual com o fator de crescimento/decaimento. Se uma determinada grandeza cresce (respectivamente diminui) a uma taxa percentual de $20\%$ ao mês, o fator de crescimento (respectivamente decaimento) é o número que multiplicamos o valor atual para obter o valor no próximo mês, a saber $1+0,2$ (respectivamente $1-0,2$). Assim, as funções exponenciais terão a forma $f(x)=c(1+r)^{x}$ (crescimento) ou $f(x)=c(1-r)^{x}$ (decaimento), em que $r$ é a taxa expressa como fração sobre $100$ (ou na forma decimal).
@@ -1143,7 +1146,7 @@ Fonte: CEPA}
 \begin{sugestions}{Juros}
 {
 \begin{itemize}
-\item Reforce com os estudantes a relação entre a taxa percentual e o fator de multiplicação. 
+\item Reforce com os estudantes a relação entre a taxa percentual e o fator de multiplicação.
 \end{itemize}
 }{1}{2}
 \end{sugestions}
@@ -1195,27 +1198,6 @@ Analise cada uma das situações abaixo e em seguida responda as perguntas para 
  \textbf{(B)} Um laboratório está pesquisando a eficácia de um antibiótico e uma equipe de biomédicos o adiciona em uma colônia de bactérias com uma população de $950.000$ indivíduos. As células então começam a morrer de maneira que ao final de 12 horas, os pesquisadores afirmam que população da colônia diminuiu a uma taxa percentual de $10\%$ a cada hora.
 
 \begin{enumerate}
-%\item{}
-%Elabore uma tabela e um gráfico com os possíveis dados observados por eles.
-%
-%\item{}
-%Para a situação (A) qual a taxa percentual de crescimento do início até o terceiro período de tempo? E entre o terceiro e o sexto períodos? Por que não são iguais ao triplo da taxa percentual para um período?
-%
-%\item{}
-%Para a situação (B) qual dos modelos a seguir melhor descreveria os dados?
-%
-%(    ) linear \quad (    ) exponencial.
-%
-%Explique sua escolha.
-%
-%\item{}
-%No caso do crescimento exponencial, qual a relação do fator de crescimento/decaimento com a taxa percentual?
-%
-%\item{}
-%Escreva uma expressão matemática para cada uma das situações que relacione o números de indivíduos nas colônias com o número de meses (ou horas) decorridos desde o início das observações.
-%
-%\item{}
-%Denotando por $C$ o valor inicial e por $r$ a taxa percentual observada, generalize as expressões obtidas no item anterior.
 
 \item{}
 Elabore uma tabela com os possíveis dados observados pelos pesquisadores em cada uma das situações.
@@ -1234,15 +1216,6 @@ Denotando por $P(t)$ a população no tempo $t$, $P_0$ seu valor inicial e $r$ a
 \end{enumerate}
 
 \end{task}
-
-%\begin{table}[]
-%	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-%		\hline
-%		t (meses)   & 0   & 1   & 2   & 3   & 4   & 5   & 6   & 7   & 8   & 9   & 10  & 11  & 12  \\ \hline
-%		C (coelhos) & 100 & 106 & 112 & 119 & 126 & 133 & 141 & 150 & 159 & 169 & 179 & 190 & 201 \\ \hline
-%	\end{tabular}
-%\end{table}
-
 
 
 
@@ -1685,8 +1658,7 @@ Qual das opções gera um valor maior ao final de 1 ano: aplicar um capital de $
 
 \end{task}
 
-\begin{paginatexto}
-\section{Explorando: Propriedades Aritméticas}
+\begin{paginatexto}{Propriedades Aritméticas}
 
 Até esse momento espera-se que o estudante tenha o entendimento da exponenciação como processo (e não apenas somente como ação de multiplicações repetidas), enxergando $2^{3}$ como um produto de três fatores $2$, sem ter que necessariamente ``fazer a conta'', ou ainda como uma função de domínio discreto (finito ou enumerável). O objetivo dessa seção é avançar na direção de dar sentido aos expoentes não naturais: negativos, racionais e irracionais, e com isso entender a função exponencial definida para todo o conjunto dos números reais. 
 
@@ -1861,7 +1833,7 @@ Alguns outros exemplos: $(2^{2})^{3}=2^{2\times3}=2^6$,\quad $(2^{8})^{5}=2^{8\t
 \end{answer}
 \begin{answer}{Expoentes racionais}
 {
-\begin{enumerate}
+\begin{enumerate}\setcounter{enumi}{1}
 \item As expressões serão representadas por:
 
 \begin{figure}[H]
@@ -2370,8 +2342,8 @@ Uma epidemia causada por um vírus está se espalhando na cidade. Os cientistas,
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=5cm]{grafico_afim.png}
-\includegraphics[width=5cm]{grafico_exp.png}
+\includegraphics[width=6cm]{grafico_afim.png}\hspace{2em}
+\includegraphics[width=6cm]{grafico_exp.png}
 \end{figure}
 
 \begin{enumerate}
@@ -2384,7 +2356,7 @@ Uma epidemia causada por um vírus está se espalhando na cidade. Os cientistas,
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=170bp]{pontos.png}
+\includegraphics[width=200bp]{pontos.png}
 \end{figure}
 
 \end{enumerate}
@@ -2534,16 +2506,30 @@ INDOMETACINA VO: 2h
 \end{sugestions}
 \begin{answer}{Várias curvas}
 {
-\begin{itemize}
+\begin{enumerate}
 
-\item (1) $y=6^x$ ; (2)$y=3{,}5^x$ ; (3)$y=2^x$ ;(4)$y=0{,}25^x$.
+\item \begin{enumerate}[label=(\arabic*)]
+\item $y=6^x$; 
+\item $y=3{,}5^x$;
+\item $y=2^x$;
+\item $y=0{,}25^x$.
+\end{enumerate}
 
-\item (1) $y=16 \cdot 0{,}5^x$ ; (2)$y=6\cdot \left(\frac 43\right)^x$ ; (3)$y=2\cdot 4^x$ ; (4)$y=8^x$.
+\item \begin{enumerate}[label=(\arabic*)]
+\item $y=16 \cdot 0{,}5^x$; 
+\item $y=6\cdot \left(\frac 43\right)^x$; 
+\item $y=2\cdot 4^x$; 
+\item $y=8^x$.
+\end{enumerate}
 
-\item (1) $y=\left(\frac 13\right)^x=3^{-x}$; (2) $y=\left(\frac 23\right)^x=1.5^{-x}$; (3) $y=2^x$.
+\item \begin{enumerate}[label=(\arabic*)]
+\item $y=\left(\frac 13\right)^x=3^{-x}$; 
+\item $y=\left(\frac 23\right)^x=1.5^{-x}$; 
+\item $y=2^x$.
+\end{enumerate}
 
 
-\end{itemize}
+\end{enumerate}
 }{1}
 \end{answer}
 
@@ -2730,11 +2716,11 @@ Essa Lei pode ser traduzida matematicamente pela função exponencial $D(t)=D_{0
 
 \begin{answer}{Próximo valor}
 {
-AFIM: 9,12,15, 18,21.
+Afim: 9,12,15, 18,21.
 
-QUADRÁTICA: infinitas respostas (as diferenças devem ser PAs de segunda ordem).
+Quadrática: infinitas respostas (as diferenças devem ser PAs de segunda ordem).
 
-EXPONENCIAL: 12, 24, 48, 56, 112.
+Exponencial: 12, 24, 48, 56, 112.
 
 \begin{enumerate}
 
@@ -2779,6 +2765,8 @@ Complete a tabela com os próximos valores de acordo com cada modelo especificad
 \begin{table}[H]
 \centering
 
+\scalebox{.9}
+{
 \begin{tabu} to \textwidth{|c|c|c|c|}
 \hline
 \thead
@@ -2799,6 +2787,7 @@ $5$ & & & \\
 $6$ & & & \\
 \hline
 \end{tabu}
+}
 \end{table}
 
 \begin{enumerate}
@@ -2975,7 +2964,6 @@ As conjecturas acima são todas verdadeiras e as demonstrações poderão ser vi
 \def\currentcolor{session1}
 \begin{texto}
 {
-\section{Explorando: Progressões Geométricas}
 Nesta seção iremos explorar a relação entre função exponencial e progressões geométricas. Neste ponto os estudantes já tiveram contato com muitas atividades que exploraram o comportamento de crescimento e decaimento exponencial, bem como funções exponenciais em domínios discretos, e portanto, já desenvolveram algumas das ideias centrais de progressão geométrica. Além de traduzir essas ideias já construídas para a linguagem e notação de sequências - dando ênfase à ideia de recursão - levamos o estudante a deduzir e reconhecer a expressão do termo geral de uma progressão geométrica, bem como a determinar a soma dos seus termos, tanto no caso finito quanto no infinito (decrescente), sem entretanto, se apegar às diversas fórmulas que são tradicionais no ensino deste tema.
 
 Conforme você deverá notar, em alguns momentos do texto repetimos o processo que leva à dedução de certas expressões, como por exemplo aquela usada para determinar a soma dos termos de uma progressão geométrica, essa "repetição" foi intencional e tem como objetivo retirar o foco na memorização de fórmulas. Na parte final desta seção ressaltamos a relação entre progressões geométricas e geometria, e exploramos algumas das características geométricas do triângulo de Sierpinski, isto é, que sua área é zero e seu perímetro é infinito.
@@ -3103,7 +3091,7 @@ $n$ & $q(d+dq+\cdots+dq^{n-1})$ & $d$ & $q(d+dq+\cdots+dq^n)$ \\
 }{0}
 \end{answer}
 \clearmargin
-\begin{objectives}{Escala Infinita}
+\begin{objectives}{Escada Infinita}
 {
 \begin{itemize}
 \item Deduzir uma expressão para a soma dos termos de uma PG infinita.
@@ -3111,15 +3099,15 @@ $n$ & $q(d+dq+\cdots+dq^{n-1})$ & $d$ & $q(d+dq+\cdots+dq^n)$ \\
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\begin{sugestions}{Escala Infinita}
+\begin{sugestions}{Escada Infinita}
 {
 \begin{itemize}
-\item O item (f) envolve uma demonstração. Caso os estudantes encontrem alguma dificuldade, considere fazer a discussão dos itens anteriores e resolva este último item juntamente com eles, conectando com ideias que eles desenvolveram.
+\item O item \titem{f)} envolve uma demonstração. Caso os estudantes encontrem alguma dificuldade, considere fazer a discussão dos itens anteriores e resolva este último item juntamente com eles, conectando com ideias que eles desenvolveram.
 
 \end{itemize}
 }{1}{1}
 \end{sugestions}
-\begin{answer}{Escala Infinita}
+\begin{answer}{Escada Infinita}
 {
 \begin{enumerate}
 \item $DE=EF=q^2$, $FG=GH=q^3$, $HI=q^4$
@@ -4018,7 +4006,7 @@ Utilize a expressão para a área esburacada que você encontrou no item anterio
 \fi
 
 \bibliographystyle{apalike-pt}
-\bibliography{../Bibliografia/financeira_bibliografia.bib}
+\bibliography{../Bibliografia/exponencial_bibliografia.bib}
 
 \nocite{*}
 
