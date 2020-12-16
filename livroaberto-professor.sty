@@ -118,11 +118,11 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage[sectionbib]{natbib}
 \RequirePackage{chapterbib}
 \patchcmd{\thebibliography}{%
-  \def\currentcolor{cor1}
-  \chapter*{\bibname}\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}}{%
+  \chapter*{\textcolor{cor1}{\bibname}}\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}}{%
   \clearpage
   \bibliographytitle*{Bibliografia}}{}{}
 
+\RequirePackage{usebib}
 \RequirePackage{spverbatim}
 % \RequirePackage{ulem}
 \RequirePackage{cancel}
@@ -171,6 +171,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \renewcommand{\Im}{\operatorname{Im}}
 \DeclareMathOperator{\D}{D}
 \DeclareMathOperator{\CD}{CD}
+\DeclareMathOperator{\area}{\text{Area}\,}
 
 
 \newcommand{\R}{\mathbb{R}}
@@ -194,6 +195,19 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcommand{\super}{\textsuperscript}
 
 \newcommand{\newparallel}{\mathrel{\mkern-5mu\clipbox{0 0.75ex 0 0}{${\sslash}$}\!}}
+
+\renewcommand{\mspace}[1]{\marginpar{\vspace{#1}}}
+
+\def\fle{\longrightarrow}
+\def\entao{\Longrightarrow}
+\def\ssi{\Longleftrightarrow}
+\def\ri{\rightarrow}
+\def\bbullet{\noindent{\cor $\bullet$ }}
+\newcommand{\no}{\noindent}
+\newcommand{\fra}[2]{\text{\small$\dfrac{#1}{#2}$}}
+\newcommand{\ve}[1]{{\overrightarrow{#1\,\,}}}
+\newcommand{\ol}[1]{{\overline{#1}}}
+\newcommand{\interno}[2]{{\langle{#1},{#2}\rangle}}
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
@@ -236,6 +250,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \renewcommand{\tref}[1]{\hyperref[#1]{tabela \ref{#1}}}
 \newcommand{\Tref}[1]{\hyperref[#1]{Tabela \ref{#1}}}
 
+\newcommand\citetitle[1]{\usebibentry{#1}{title}}
 
 %Seção 1 - Livro Aberto Boxes
 %***************************************************************************************
@@ -646,10 +661,13 @@ underlay boxed title={
 \titlespacing*{\subsection}
 {0pt}{2mm}{1mm}
 
-\titleformat{\paragraph}{\vspace{.3\baselineskip}\color{\currentcolor}\normalfont\large\bfseries}{\thesubsection}{1em}{#1}
+\titleformat{\paragraph}{\color{\currentcolor}\normalfont\large\bfseries}{\thesubsection}{1em}{#1}
 \titlespacing*{\paragraph}
 {0pt}{1mm}{1mm}
 
+\titleformat{\paragraph}{\color{\currentcolor}\normalfont\normalsize\bfseries}{\thesubsection}{1em}{#1}
+\titlespacing*{\paragraph}
+{0pt}{1mm}{1mm}
 
 
 \renewcommand*{\toclevel@section}{1}
@@ -2248,7 +2266,6 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,
 
 
 \newcommand\notas[1]{
-	\setcounter{Hendnote}{0}
 	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
 	\endnotetext
 	{#1}}
@@ -2256,7 +2273,7 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,
 	\marginpar{
 	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
 	\endnotetext
-	{#1}}}
+	{\adjustbox{valign=t}{#1}}}}
 
 
 \newcommand\notasfinais{	
@@ -2266,6 +2283,7 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,
 	\section{\huge Notas}
 	\setlength{\columnsep}{1cm}
 	\begin{multicols}{2}\raggedcolumns
+  \setcounter{endnote}{0}
 	\theendnotes
 	\clearpage
 	\end{multicols}

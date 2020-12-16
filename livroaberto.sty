@@ -76,7 +76,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{textcomp}% "warn" option issued from template
 % \RequirePackage[explicit]{titlesec}
 \PassOptionsToPackage{explicit}{titlesec}
-
+\RequirePackage{zref-savepos}
 \RequirePackage{longtable}
 \RequirePackage{makeidx}
 \RequirePackage{fancyvrb}
@@ -115,7 +115,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \patchcmd{\thebibliography}{%
   \def\currentcolor{cor1}
   \phantomsection
-  \section*{\bibname}\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}}{%
+  \chapter*{\textcolor{cor1}{\bibname}}\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}}{%
   \bibliographytitle*{Bibliografia}}{}{}
 
 \RequirePackage{spverbatim}
@@ -170,6 +170,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \renewcommand{\Im}{\operatorname{Im}}
 \DeclareMathOperator{\D}{D}
 \DeclareMathOperator{\CD}{CD}
+\DeclareMathOperator{\area}{\text{Area}\,}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -192,6 +193,20 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcommand{\super}{\textsuperscript}
 
 \newcommand{\newparallel}{\mathrel{\mkern-5mu\clipbox{0 0.75ex 0 0}{${\sslash}$}\!}}
+
+\renewcommand{\mspace}[1]{}
+
+\def\fle{\longrightarrow}
+\def\entao{\Longrightarrow}
+\def\ssi{\Longleftrightarrow}
+\def\ri{\rightarrow}
+\def\bbullet{\noindent{\cor $\bullet$ }}
+\newcommand{\no}{\noindent}
+\newcommand{\fra}[2]{\text{\small$\dfrac{#1}{#2}$}}
+\newcommand{\ve}[1]{{\overrightarrow{#1\,\,}}}
+\newcommand{\ol}[1]{{\overline{#1}}}
+\newcommand{\interno}[2]{{\langle{#1},{#2}\rangle}}
+
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
@@ -220,6 +235,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 	\setlength{\extrarowheigth}{#1}
 	\setlength{\extrarowdepth}{#1}
 }
+
 
 %Coloca listas de enumerate no padrão da seção de exercícios
 \newcommand\exerciselist
