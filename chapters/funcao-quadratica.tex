@@ -217,6 +217,7 @@ Distrator trabalhado em: \hyperref[\detokenize{AF209-0:ativ-funcao-quadratica-la
 }{1}{1}
 \end{sugestions}
 \clearmargin
+\marginpar{\vspace{.5em}}
 \begin{answer}{Lançando objetos das nuvens em Dubai}
 {
 \begin{enumerate}
@@ -978,8 +979,7 @@ Agora serão apresentados alguns gráficos e, para cada um deles, você deve afi
   \node [below] at (3,0) {3};
   \node [below] at (4,0) {4};
   \node [below] at (5,0) {5};
-  \draw [very thick, domain=0:6] plot (\x,{sqrt(16*\x)});
-  \draw [very thick, domain=-6:0] plot (\x,{sqrt(-16*\x)});
+  \foreach \x/\y in {0/0,1/1,2/4,3/9,-1/1,-2/4,-3/9} \fill (\x,\y) circle (5pt);
 
 \end{tikzpicture}
 \caption{Gráfico 2}
@@ -3340,7 +3340,7 @@ Ou seja, para que uma parábola seja o gráfico de uma função quadrática de \
 
 \clearpage
 \def\currentcolor{session2}
-\begin{objectives}{Invisibilidade}
+\begin{objectives}{Fugindo pela parábola}
 {
 \begin{itemize}
 \item Construir estratégia de resolução que dependa da identificação do que não é solução antes da conclusão.
@@ -3351,7 +3351,7 @@ Aplicar a definição geométrica de parábola numa situação prática;
 }{1}{1}
 \end{objectives}
 \marginpar{\vspace{-2em}}
-\begin{sugestions}{Invisibilidade}
+\begin{sugestions}{Fugindo pela parábola}
 {
 Problemas geométricos que envolvem distâncias de um ponto a outro são, em geral, tratados com o recurso das circunferências e suas propriedades. Aqui desejamos ampliar as ferramentas de solução de problemas desse tipo, ajudando o estudante a incorporar como método de solução de problemas de distâncias, a parábola.
 \begin{itemize}
@@ -3371,7 +3371,7 @@ Questione se existe uma região onde a resposta seria: “Tanto faz”! Estimule
 }{1}{1}
 \end{sugestions}
 \marginpar{\vspace{-1em}}
-\begin{answer}{Invisibilidade}
+\begin{answer}{Fugindo pela parábola}
 {
 Traçando uma reta no limite da região ‘H’ e usando o ponto ‘Q’, pode-se traçar os pontos do salão que equidistam de ‘H’ ou ‘Q’, que é a parábola. Assim, as melhores chances de fuga se dão para:
 \begin{figure}[H]
@@ -3446,7 +3446,7 @@ Traçando uma reta no limite da região ‘H’ e usando o ponto ‘Q’, pode-s
 \vspace{-1em}
 \vspace{-3\parskip}
 
-\begin{task}{Invisibilidade}
+\begin{task}{Fugindo pela parábola}
 Num jogo eletrônico em que você controla um oficial militar infiltrado. Dentre as fases de treinamento tático há uma que exibe um salão vigiado por câmeras.
 
 \begin{figure}[H]

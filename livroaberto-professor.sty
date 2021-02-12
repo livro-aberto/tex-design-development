@@ -114,6 +114,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{pdfpages}
 \RequirePackage{stmaryrd}
 \RequirePackage{lscape}
+\RequirePackage{svg}
 
 \RequirePackage[sectionbib]{natbib}
 \RequirePackage{chapterbib}
@@ -816,7 +817,7 @@ underlay boxed title={
         \node[font=\chapnumfont, text=cor2] at (a) {\chapnamefont\thechapter};
 
         \coordinate (b) at ($(c1)!0.5!(c2)$);
-        \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {\begin{varwidth}{12cm}\baselineskip=1cm #1\end{varwidth}};
+        \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {\begin{varwidth}{15cm}\baselineskip=1cm #1\end{varwidth}};
         % solution to the box O QUE and POR QUE?
         \node [right] at ($(current page.north)+(-15mm,-150mm)$) %
         {\begin{openningbox}
@@ -1011,13 +1012,6 @@ underlay boxed title={
 
 % Draw Headings
 
-
-
-
-
-
-%% Exploring Headins
-
 %% Explorando
 
 \titleclass{\exploresec}{straight}[\section]
@@ -1144,6 +1138,7 @@ underlay boxed title={
 	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
 }
 
+%Exercícios
 
 \titleclass{\exercisesec}{straight}[\chapter]
 \newcounter{exercisesec}

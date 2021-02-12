@@ -6,7 +6,7 @@
 
 \renewcommand\chapterwhat{A partir de situações do cotidiano, mesmo que uma superfície não seja plana, entender o conceito de área de modo que possa diferenciá-lo de outras grandezas, e identificar suas propriedades. Estabelecer métodos de medição da grandeza “área” e interpretá-los em contextos reais. }
 \renewcommand\chapterbecause{É fundamental saber identificar e determinar áreas de figuras planas ou espaciais visto que, em atividades cotidianas, temos a necessidade de realizar medições de áreas para resolver problemas. Para poder explorar os problemas práticos, é fundamental conhecer o conceito de área de uma figura, como um tópico que permite compreender as expressões que trabalham os elementos determinantes do conceito de área, e os procedimentos que as aplicações práticas demandam.}
-\chapter{Áreas de superfície}
+\chapter{Áreas de Superfície}
 \label{est1-chap}
 
 \mbox{}\thispagestyle{empty}\clearpage
@@ -47,14 +47,9 @@ Produção:& Associação Livro Aberto\\
 Coordenação: & Fabio Simas, \\
              & Augusto Teixeira (livroaberto@impa.br)\\
 \\
-  Autores: & Flávia Landim (coordenadora da equipe - UFRJ),\\
-        & José Ezequiel Soto Sanches,\\
-        & Nei Rocha (UFRJ),\\
-             & Vanessa Matos (SEduc Angras dos Reis e Mesquita).\\
-             & Letícia Rangel (Colégio de Aplicação da UFRJ)\\
+  Autores: & Simone Reis \\
 \\
-Revisão: &  Cydara Ripoll  \\
-		 &  Letícia Rangel
+Revisão: & Yuriko Baldin \\
 \\
 Design: & Andreza Moreira (Tangentes Design) \\
 \\
@@ -62,8 +57,8 @@ Design: & Andreza Moreira (Tangentes Design) \\
 \\
 Gráficos: & ---\\
 \\
-  Capa: & Foto de Chuttersnap no Unsplash \\
-        & https://unsplash.com/photos/8I423fRMwjM \\
+  Capa: & Foto de Robert Metz no Unsplash \\
+        & https://unsplash.com/photos/VoHwwGH0sOw \\
 
 \end{tabular}
 
@@ -94,8 +89,8 @@ Gráficos: & ---\\
 
 \mainmatter
 
-\begin{apresentacao}
-\section{Objetivos Gerais}
+\begin{apresentacao}{Introdução}
+\subsection{Objetivos Gerais}
 \begin{itemize}
 \item Reconhecer o conceito de área como grandeza, estimando e/ou determinando a área de superfície em formas variadas.
 \item Analisar e resolver problemas que envolvem o conceito de área e conseguir aplicá-lo em situações diversas, com domínio de técniocas geométricas de algébricas.
@@ -114,27 +109,21 @@ Empregar diferentes métodos para a obtenção da medida da área de uma superf�
 
 Um dos principais objetivos deste capítulo é que o aluno reconheça a área como uma grandeza associada a figuras geométricas e saiba diferenciá-la de outras grandezas fundamentais, tais como comprimento e volume. 
 
-Conforme Brasil (2019) a matemática do Ensino Médio deve propor a consolidação, a ampliação e o aprofundamento das aprendizagens essenciais desenvolvidas no Ensino Fundamental. Ao estruturar a matemática em cinco unidades temáticas: Números, Álgebra, Geometria, Grandezas e Medidas e Probabilidade e Estatística, objetiva-se na temática Geometria envolver o estudo de um amplo conjunto de conceitos e procedimentos necessários para resolver problemas do mundo físico e de diferentes áreas do conhecimento (BRASIL, 2019).
+Conforme \citet{BNCC2019} a matemática do Ensino Médio deve propor a consolidação, a ampliação e o aprofundamento das aprendizagens essenciais desenvolvidas no Ensino Fundamental. Ao estruturar a matemática em cinco unidades temáticas: Números, Álgebra, Geometria, Grandezas e Medidas e Probabilidade e Estatística, objetiva-se na temática Geometria envolver o estudo de um amplo conjunto de conceitos e procedimentos necessários para resolver problemas do mundo físico e de diferentes áreas do conhecimento \cite{BNCC2019}.
 
 Para a temática Grandezas e Medidas, ao considerar que as medidas quantificam grandezas do mundo físico e são fundamentais para a compreensão da realidade, é proposto o estudo das medidas e de suas relações, de modo que favoreça a integração da Matemática a outras áreas de conhecimento.
 
 Para o Ensino Fundamental -- Anos Iniciais temos que,
   \begin{quote}
-  os alunos reconheçam que medir é comparar uma grandeza com uma unidade e expressar o resultado da comparação por meio de um número. Além disso, devem resolver problemas oriundos de situações cotidianas que envolvem grandezas como comprimento, massa, tempo, temperatura, área (de triângulos e retângulos) e capacidade e volume (de sólidos formados por blocos retangulares), sem uso de fórmulas, recorrendo, quando necessário, a transformações entre unidades de medida padronizadas mais usuais.
-  \flushright
-  
-  (Brasil, 2019, p. 273)
+  os alunos reconheçam que medir é comparar uma grandeza com uma unidade e expressar o resultado da comparação por meio de um número. Além disso, devem resolver problemas oriundos de situações cotidianas que envolvem grandezas como comprimento, massa, tempo, temperatura, área (de triângulos e retângulos) e capacidade e volume (de sólidos formados por blocos retangulares), sem uso de fórmulas, recorrendo, quando necessário, a transformações entre unidades de medida padronizadas mais usuais. \citep[p. 273]{BNCC2019}
   \end{quote}
 
 E para o Ensino Fundamental --  Anos Finais,
   \begin{quote}
-  que os alunos reconheçam comprimento, área, volume e abertura de ângulo como grandezas associadas a figuras geométricas e que consigam resolver problemas envolvendo essas grandezas com o uso de unidades de medida padronizadas mais usuais. Além disso, espera-se que estabeleçam e utilizem relações entre essas grandezas e entre elas e grandezas não geométricas, para estudar grandezas derivadas como densidade, velocidade, energia, potência, entre outras. Nessa fase da escolaridade, os alunos devem determinar expressões de cálculo de áreas de quadriláteros, triângulos e círculos, e as de volumes de prismas e de cilindros 
-  \flushright
-
-  (BRASIL, 2019, p. 273).
+  que os alunos reconheçam comprimento, área, volume e abertura de ângulo como grandezas associadas a figuras geométricas e que consigam resolver problemas envolvendo essas grandezas com o uso de unidades de medida padronizadas mais usuais. Além disso, espera-se que estabeleçam e utilizem relações entre essas grandezas e entre elas e grandezas não geométricas, para estudar grandezas derivadas como densidade, velocidade, energia, potência, entre outras. Nessa fase da escolaridade, os alunos devem determinar expressões de cálculo de áreas de quadriláteros, triângulos e círculos, e as de volumes de prismas e de cilindros \citep[p. 273]{BNCC2019}
   \end{quote}
 
-  Desta forma, sugerimos aos colegas verificarem os conhecimentos prévios de seus alunos quanto ao conceito de áreas. Segundo Ausubel (1968) apud Moreira (2011), a aprendizagem é uma organização e integração de ideias na estrutura cognitiva.
+  Desta forma, sugerimos aos colegas verificarem os conhecimentos prévios de seus alunos quanto ao conceito de áreas. Segundo  \citealp*[Ausubel (1968) apud][]{moreira2011}, a aprendizagem é uma organização e integração de ideias na estrutura cognitiva. 
   \begin{quote}
   Novas idéias e informações podem ser aprendidas e retidas na medida em que conceitos relevantes e inclusivos estejam adequadamente claros e disponíveis na estrutura cognitiva do indivíduo e funcionem, dessa forma, como ponto de ancoragem para as novas idéias e conceitos 
 
@@ -150,7 +139,7 @@ E para o Ensino Fundamental --  Anos Finais,
   (MOREIRA, 2010, p. 4).
   \end{quote}
 
-  Conforme Facco (2003), professores de Matemática, apoiados em livros didáticos, introduzem o conceito de área como um número associado a uma superfície e, rapidamente passam ao cálculo da área utilizando fórmulas. Desta forma este capítulo é estruturado em seções, sendo que em cada seção temos um \textit{Explorando, Organizando e um Praticando}. A fim de contemplar a habilidade desenvolvida, apresentamos 3 seções: \textit{O que é área?; Área de figura planas; Cálculo de área por composição e decomposição, planificação e curvas. }
+  Conforme \citet{facco2003}, professores de Matemática, apoiados em livros didáticos, introduzem o conceito de área como um número associado a uma superfície e, rapidamente passam ao cálculo da área utilizando fórmulas. Desta forma este capítulo é estruturado em seções, sendo que em cada seção temos um \textit{Explorando, Organizando e um Praticando}. A fim de contemplar a habilidade desenvolvida, apresentamos 3 seções: \textit{O que é área?; Área de figura planas; Cálculo de área por composição e decomposição, planificação e curvas. }
 
   Já o objetivo deste material é desenvolver o conceito de área como grandeza, permitindo ao aluno fazer as relações necessárias, a fim de aplicá-lo nas diversas situações da realidade. Para isso, no \textit{Explorando} apresentamos atividades que promovam questionamentos que tragam à tona as principais ideias apresentadas no capítulo, para que no \textit{Organizando} seja feito um fechamento do que foi desenvolvido nas atividades exploratórias e a conceituação necessária. Mas também, espera-se que os estudantes passem a usar os conceitos construídos visando fixação, aprofundamentos e desdobramentos essenciais, o que esperamos apresentar no \textit{Praticando}.
 
@@ -158,11 +147,11 @@ E para o Ensino Fundamental --  Anos Finais,
 
   Sugerimos aos colegas verificarem os conhecimentos prévios dos alunos, pois acreditamos que só podemos promover uma aprendizagem significativa quando ensinamos a partir do que os alunos já sabem. Para isso, vamos sugerir os mapas conceituais como uma ferramenta muito útil para essa abordagem. 
 
-  Os mapas conceituais tem como objetivo representar relações significativas entre conceitos na forma de proposições (NOVAK, 1984).  Eles também servem para investigar, tanto no início quanto no final de uma atividade didática, o que realmente foi aprendido, pois podem ser utilizados como um resumo esquemático.
+  Os mapas conceituais tem como objetivo representar relações significativas entre conceitos na forma de proposições \citep{novak1985}.  Eles também servem para investigar, tanto no início quanto no final de uma atividade didática, o que realmente foi aprendido, pois podem ser utilizados como um resumo esquemático.
 
-  Novak (1984) afirma que os mapas conceituais servem para tornar claro, tanto para professores quanto para os alunos, as ideias chaves que eles devem focar para uma tarefa de aprendizagem específica. Ele também afirma que, uma vez que a aprendizagem significativa se produz facilmente quando novos conceitos são englobados sob outros conceitos mais amplos, os mapas devem apresentar os conceitos mais gerais de forma hierárquica.
+  \citet{novak1985} afirma que os mapas conceituais servem para tornar claro, tanto para professores quanto para os alunos, as ideias chaves que eles devem focar para uma tarefa de aprendizagem específica. Ele também afirma que, uma vez que a aprendizagem significativa se produz facilmente quando novos conceitos são englobados sob outros conceitos mais amplos, os mapas devem apresentar os conceitos mais gerais de forma hierárquica.
 
-  Segundo Ribeiro (2015) os mapas conceituais são uma ferramenta para auxiliar os estudantes e também os professores na busca de ideias chaves que representem um conjunto de significados numa estrutura de proposições no qual se inclui o conceito a ser adquirido.  O autor destaca que podem ser utilizados de diversas formas no processo de ensino e aprendizagem, incluindo: como instrumento didático de ensino e aprendizagem, para o planejamento curricular, em avaliação, como organizador prévio dos conteúdos, para diagnóstico prévio, como resumo de determinado tema e como forma de aprimorar a recordação sobre um tema.
+  Segundo \citet{ribeiro2015} os mapas conceituais são uma ferramenta para auxiliar { }os estudantes e também os professores na busca de ideias chaves que representem um conjunto de significados numa estrutura de proposições no qual se inclui o conceito a ser adquirido.  O autor destaca que podem ser utilizados de diversas formas no processo de ensino e aprendizagem, incluindo: como instrumento didático de ensino e aprendizagem, para o planejamento curricular, em avaliação, como organizador prévio dos conteúdos, para diagnóstico prévio, como resumo de determinado tema e como forma de aprimorar a recordação sobre um tema.
 
   \begin{figure}[H]
   \centering
@@ -171,31 +160,28 @@ E para o Ensino Fundamental --  Anos Finais,
   \end{figure}
   \columnbreak
 
-  Segundo Moreira (2011) não existe um mapa “certo” ou “errado”, pois os mapas conceituais construídos pelos alunos têm componentes idiossincráticos. Porém apresentam evidências do nível conceitual do aluno, bem como sua evolução ao compararmos um mapa inicial, isto é, para detectar conhecimentos prévios, com um mapa final, construído após a organização de conceitos apresentados.
+  Segundo \citet{moreira2011} não existe um mapa “certo” ou “errado”, pois os mapas conceituais construídos pelos alunos têm componentes idiossincráticos. Porém apresentam evidências do nível conceitual do aluno, bem como sua evolução ao compararmos um mapa inicial, isto é, para detectar conhecimentos prévios, com um mapa final, construído após a organização de conceitos apresentados.
 
   Os mapas conceituais podem ser construídos no papel, quando a atividade for individual ou em pequenos grupos, na lousa para uma atividade em grande grupo (por exemplo, ao final de uma socialização onde é necessário fazer uma formalização das discussões) ou ainda com o auxílio do software \textit{Cmap Tools 6.04} (\url{https://cmaptools.br.uptodown.com/windows}). Deixaremos nas referências alguns vídeos e textos que abordam os mapas conceituais como ferramentas essenciais no ensino, caso o colega tenha interesse.
 
   \section{Sugestões de metodologias}
 
-  Conforme Brasil (2019), resolver e elaborar problemas amplia e aprofunda o significado dado à resolução de problemas: a elaboração pressupõe que os estudantes investiguem outros problemas que envolvem os conceitos tratados; sua finalidade é também promover a reflexão e o questionamento sobre o que ocorreria se algum dado fosse alterado ou se alguma condição fosse acrescentada ou retirada.
+  Conforme \citet{BNCC2019}, resolver e elaborar problemas amplia e aprofunda o significado dado à resolução de problemas: a elaboração pressupõe que os estudantes investiguem outros problemas que envolvem os conceitos tratados; sua finalidade é também promover a reflexão e o questionamento sobre o que ocorreria se algum dado fosse alterado ou se alguma condição fosse acrescentada ou retirada.
 
-  Para D’Ambrósio (1989) a típica aula de matemática na educação básica, ainda nos dias de hoje, consiste em professores como papel principal, na exposição de conteúdos por eles julgados importantes, enquanto que os alunos tentam resolver exercícios de aplicação, que nada mais são do que uma repetição na aplicação de um modelo de solução apresentado pelo professor.
+  Para \citet{dambrosio1989}',' a típica aula de matemática na educação básica, ainda nos dias de hoje, consiste em professores como papel principal, na exposição de conteúdos por eles julgados importantes, enquanto que os alunos tentam resolver exercícios de aplicação, que nada mais são do que uma repetição na aplicação de um modelo de solução apresentado pelo professor.
 
-  Já Skovsmose (2014) afirma que quando trabalhamos com questões previamente formuladas, as atividades em sala de aula podem ser reduzidas ao certo ou errado. Desta forma o autor propõe os cenários para investigação, que são situações sobre a qual as atividades de ensino e aprendizagem acontecem.
+  Já \citet{skovsmose2014} afirma que quando trabalhamos com questões previamente formuladas, as atividades em sala de aula podem ser reduzidas ao certo ou errado. Desta forma o autor propõe os cenários para investigação, que são situações sobre a qual as atividades de ensino e aprendizagem acontecem.
 
   O autor ainda destaca que ao criar um cenário para investigação o professor deve pensar a respeito da matemática que pode ser explorada por meio dele. Porém estas propostas de cenários para investigação devem ser significativas para os alunos.
   \columnbreak
   \begin{quote}
-  A experiência da significação depende de os alunos trazerem suas intencionalidades para as atividades de aprendizagem. Investigar e explorar são atos conscientes, eles não acontecem como atividades forçadas.
-
-  \flushright
-  (SKOVSMOSE, 2014, p. 60).
+  A experiência da significação depende de os alunos trazerem suas intencionalidades para as atividades de aprendizagem. Investigar e explorar são atos conscientes, eles não acontecem como atividades forçadas. \citep[p. 60]{skovsmose2014}.
   \end{quote}
   Desta forma, o que sugerimos ao colega professor é uma reflexão sobre suas concepções quanto ao ensino de Matemática. Os cenários para investigação propostos neste capítulo devem ser analisados e adaptados (se assim forem necessários) a realidade e contexto que sua sala de aula necessita.
 
-  Entendemos que esse não seja um processo rápido, porém não impossível. A competência na qual está inserida a habilidade deste capítulo pressupõe utilizar estratégias, conceitos, definições e procedimentos matemáticos para interpretar, construir modelos e resolver problemas em diversos contextos, analisando a plausibilidade dos resultados e a adequação das soluções propostas, de modo a construir argumentação consistente (BRASIL, 2019, p. 535).
+  Entendemos que esse não seja um processo rápido, porém não impossível. A competência na qual está inserida a habilidade deste capítulo pressupõe utilizar estratégias, conceitos, definições e procedimentos matemáticos para interpretar, construir modelos e resolver problemas em diversos contextos, analisando a plausibilidade dos resultados e a adequação das soluções propostas, de modo a construir argumentação consistente \citep[p. 535]{BNCC2019}
 
-  Segundo Barbosa (2001) a modelagem é um ambiente de aprendizagem no qual os alunos são convidados a indagar e/ou investigar, por meio da matemática, situações oriundas de outras áreas da realidade. O autor ainda propõe, a partir de sua pesquisa em nível nacional e internacional, três casos para a modelagem, mas reitera que em todos eles o professor é mediador do processo de ensino e aprendizagem.
+  Segundo \citet{barbosa2001}, a modelagem é um ambiente de aprendizagem no qual os alunos são convidados a indagar e/ou investigar, por meio da matemática, situações oriundas de outras áreas da realidade. O autor ainda propõe, a partir de sua pesquisa em nível nacional e internacional, três casos para a modelagem, mas reitera que em todos eles o professor é mediador do processo de ensino e aprendizagem.
 
   \begin{enumerate}[label=\titem{\arabic*)}]
   \item Caso 1. O professor apresenta a descrição de uma situação-problema, com as informações necessárias à sua resolução e o problema formulado, cabendo aos alunos o processo de resolução. 
@@ -206,9 +192,7 @@ E para o Ensino Fundamental --  Anos Finais,
   Estamos apenas instigando uma reflexão e pesquisa por parte de você, professor! Deixaremos mais referências para sua análise e reflexão.
 \end{apresentacao}
 
-\begin{paginatexto}
-\section{Explorando: O que é área?}
-
+\begin{paginatexto}{O que é área?}
 \subsection{Objetivos Gerais}
 
 \begin{itemize}
@@ -220,48 +204,36 @@ E para o Ensino Fundamental --  Anos Finais,
 \textbf{Quantidade de aulas previstas para a primeira seção}: 6 horas/aula.
 Enriquecimento da discussão:
 
-Conforme Brasil (2019) os estudantes do Ensino Médio devem construir e ampliar a noção de medida, pelo estudo de diferentes grandezas, a fim de obter expressões para o cálculo da medida da área de superfícies planas e da medida do volume de alguns sólidos geométricos. O documento ainda destaca a necessidade de construir uma visão integrada da Matemática, aplicada à realidade, em diferentes contextos.
+Conforme \citet{BNCC2019} os estudantes do Ensino Médio devem construir e ampliar a noção de medida, pelo estudo de diferentes grandezas, a fim de obter expressões para o cálculo da medida da área de superfícies planas e da medida do volume de alguns sólidos geométricos. O documento ainda destaca a necessidade de construir uma visão integrada da Matemática, aplicada à realidade, em diferentes contextos.
 
 \begin{quote}
-Consequentemente, quando a realidade é a referência, é preciso levar em conta as vivências cotidianas dos estudantes do Ensino Médio – impactados de diferentes maneiras pelos avanços tecnológicos, pelas exigências do mercado de trabalho, pelos projetos de bem viver dos seus povos, pela potencialidade das mídias sociais, entre outros 
-
-\flushright
-(BRASIL, 2019, p. 528).
+Consequentemente, quando a realidade é a referência, é preciso levar em conta as vivências cotidianas dos estudantes do Ensino Médio – impactados de diferentes maneiras pelos avanços tecnológicos, pelas exigências do mercado de trabalho, pelos projetos de bem viver dos seus povos, pela potencialidade das mídias sociais, entre outros \citep[p. 528]{BNCC2019}
 \end{quote}
 
 Desse modo, a Matemática deve se responsabilizar a 
 
 \begin{quote}
-Desenvolver habilidades relativas aos processos de investigação, de construção de modelos e de resolução de problemas. Para tanto, eles devem mobilizar seu modo próprio de raciocinar, representar, comunicar, argumentar e, com base em discussões e validações conjuntas, aprender conceitos e desenvolver representações e procedimentos cada vez mais sofisticados.
-
-\flushright
-(BRASIL, 2019, p. 529).
+Desenvolver habilidades relativas aos processos de investigação, de construção de modelos e de resolução de problemas. Para tanto, eles devem mobilizar seu modo próprio de raciocinar, representar, comunicar, argumentar e, com base em discussões e validações conjuntas, aprender conceitos e desenvolver representações e procedimentos cada vez mais sofisticados.\citep[p. 529]{BNCC2019}.
 \end{quote}
 
-Conforme Santos (2014) para auxiliar os alunos a formularem o conceito de área, é necessário que o professor tenha domínio dos conceitos de superfície, área e medida da área. Neste capítulo, trabalhamos “superfície” como um conceito geométrico, a “área associada a uma porção da superfície” como uma grandeza que pode ser medida, e que a “medida da área de uma porção de superfície” pode ser expressa em números, assim como em fórmulas algébricas. Segundo Lima (2013), o ato de medir uma grandeza é uma comparação com uma grandeza fixada de mesma natureza, usada como “unidade de referência”, quando essa comparação produz um resultado numérico tanto pela contagem desta unidade dentro da grandeza inicial, como pelo valor numérico resultante das operações com a “medida numérica da unidade de referência”.
+Conforme \citet{santos2014} para auxiliar os alunos a formularem o conceito de área, é necessário que o professor tenha domínio dos conceitos de superfície, área e medida da área. Neste capítulo, trabalhamos “superfície” como um conceito geométrico, a “área associada a uma porção da superfície” como uma grandeza que pode ser medida, e que a “medida da área de uma porção de superfície” pode ser expressa em números, assim como em fórmulas algébricas. Segundo \citet{lima2013}, o ato de medir uma grandeza é uma comparação com uma grandeza fixada de mesma natureza, usada como “unidade de referência”, quando essa comparação produz um resultado numérico tanto pela contagem desta unidade dentro da grandeza inicial, como pelo valor numérico resultante das operações com a “medida numérica da unidade de referência”.
 
-De acordo com Lima (2013), 
+De acordo com \citet{lima2013}, 
 
 \begin{quote}
-Para encontrar a área de uma figura F, devemos comparar sua superfície (a porção do plano que ele ocupa) com a de uma outra figura tomada como unidade. O resultado dessa comparação será um número que deverá exprimir quantas vezes a figura F contém a unidade de área 
-
-\flushright
-(LIMA, 2013, Temas e Problemas Elementares, Coleção PROFMAT, p. 92).
+Para encontrar a área de uma figura F, devemos comparar sua superfície (a porção do plano que ele ocupa) com a de uma outra figura tomada como unidade. O resultado dessa comparação será um número que deverá exprimir quantas vezes a figura F contém a unidade de área \citep[p. 92]{lima2013}.
 \end{quote}
 
 Para figuras planas, adotamos, em geral, como unidade de área o quadrado cujo lado mede uma unidade de comprimento, que chamamos de \textit{quadrado unitário}. Assim, se o lado do quadrado for de $1$cm, a unidade de área será chamada de \textit{centímetro quadrado} e representada por $1$\textit{cm}$^2$. Desse modo, para cada unidade de comprimento existe uma unidade de área correspondente. Todavia, para determinar a área de uma figura qualquer, tudo o que podemos conhecer sobre sua área são aproximações. Como podemos comparar a superfície de uma figura qualquer com o quadrado unitário? Quanto mais preciso forem nossos métodos mais precisas serão nossas aproximações.
 
-Para Brasil (2019) desenvolver a competência de raciocinar requer a interação dos alunos com colegas e professores, investigação, explicação e justificativa das soluções apresentadas para os problemas, com ênfase nos processos de argumentação matemática. A competência de representar está associada ao uso dos registros de representação e das diferentes linguagens que, muitas vezes, é necessário para a compreensão, a resolução e a comunicação de resultados de uma atividade. 
+Para \citet{BNCC2019} desenvolver a competência de raciocinar requer a interação dos alunos com colegas e professores, investigação, explicação e justificativa das soluções apresentadas para os problemas, com ênfase nos processos de argumentação matemática. A competência de representar está associada ao uso dos registros de representação e das diferentes linguagens que, muitas vezes, é necessário para a compreensão, a resolução e a comunicação de resultados de uma atividade. 
 
 Ao resolverem os problemas matemáticos, os estudantes precisam apresentar e justificar seus resultados, interpretar os resultados dos colegas e interagir com eles. Seu desenvolvimento pressupõe também a formulação e a testagem de conjecturas, com a apresentação de justificativas, o que compete a comunicação e argumentação.
 
 Para que essas competências sejam alcançadas o professor deve submeter seus alunos a situações de aprendizagem que exijam do aluno elaboração de hipóteses e a construção de modelos matemáticos para situações da realidade.
 
 \begin{quote}
-O professor de Matemática deve compreender que é um mediador do processo de construção do conhecimento matemático e, para isso, sua prática, deve oportunizar aos estudantes exercitarem a capacidade de buscar soluções para os problemas, haja visto que o ritual de apresentação do conceito, das propriedades, da fórmula, do algoritmo e da série de exercícios de aplicação com modelos repetitivos, não está sendo eficaz 
-
-\flushright
-(SANTOS, 2014, p. 235).
+O professor de Matemática deve compreender que é um mediador do processo de construção do conhecimento matemático e, para isso, sua prática, deve oportunizar aos estudantes exercitarem a capacidade de buscar soluções para os problemas, haja visto que o ritual de apresentação do conceito, das propriedades, da fórmula, do algoritmo e da série de exercícios de aplicação com modelos repetitivos, não está sendo eficaz \citep[p. 235]{santos2014}.
 \end{quote}
 
 Dessa forma, o que estamos propondo para essa primeira seção é um momento de interação onde as competências raciocinar, representar, comunicar e argumentar estejam evidentes. Após a verificação dos conhecimentos prévios de seus alunos, sugerimos organizá-los em grupos (de no máximo 4 alunos) para a realização das atividades propostas.  Ao verificar os conceitos que eles apresentam é a oportunidade para averiguar as dificuldades ainda apresentadas, corrigir os erros evidentes e conduzir os alunos a construir o conceito adequado.
@@ -552,10 +524,7 @@ Nosso planeta, a Terra, tem grandes reservas de petróleo e gás presas nas prof
 Para \textit{medir} uma grandeza devemos compará-la com uma outra de mesma espécie tomando-a como unidade. Assim, quando vamos medir uma porção do plano ocupada por uma figura, esta medida é a sua área.
 
 \begin{quote}
-Para encontrar a área de uma figura F, devemos comparar sua superfície (a porção do plano que ele ocupa) com a de uma outra figura tomada como unidade. O resultado dessa comparação será um número que deverá exprimir quantas vezes a figura F contém a unidade de área 
-\flushright
-
-(Lima, 2013, p. 92)
+Para encontrar a área de uma figura F, devemos comparar sua superfície (a porção do plano que ele ocupa) com a de uma outra figura tomada como unidade. O resultado dessa comparação será um número que deverá exprimir quantas vezes a figura F contém a unidade de área \citep[p. 92]{lima2013}.
 \end{quote}
 
 A área de uma figura exprime quantas vezes essa figura contém uma \textit{unidade de área}. Observe a figura a seguir. Consideramos a unidade de área como cada triângulo.
@@ -620,8 +589,7 @@ Assim, por exemplo, ao considerarmos um quadrado de lado $1$cm, a unidade de ár
 
 Mas como poderemos comparar a superfície de uma figura qualquer com a unidade de área? Para figuras com formatos mais irregulares poderemos determinar a sua área por aproximações. Quanto mais preciso forem nossos métodos, melhor será a nossa aproximação.
 
-\begin{paginatexto}
-\section{Explorando: Área de figuras planas}
+\begin{paginatexto}{Área de figuras planas}
 
 \subsection{Objetivos Gerais}
 \begin{itemize}
@@ -638,18 +606,15 @@ Mas como poderemos comparar a superfície de uma figura qualquer com a unidade d
 
 Colega professor, não esqueça que deduzir expressões de cálculo para aplicá-la em situações reais é previsto pela habilidade que norteia este capítulo. O que estamos sugerindo é uma nova abordagem de ensino. Como você já observou anteriormente, é muito importante que seus alunos saibam conceituar área, mas também saber calcular áreas de polígonos e círculos são básicos para o desenvolvimento dessa habilidade.
 
-Para isso, objetiva-se nessa seção entender o processo de dedução de uma fórmula para calcular área de figuras, tais como os quadriláteros, os triângulos, círculos e figuras regulares como o hexágono, por exemplo. Conforme Brasil (2019) a Geometria não pode ficar reduzida a mera aplicação de fórmulas de cálculo de área ou de volume.
+Para isso, objetiva-se nessa seção entender o processo de dedução de uma fórmula para calcular área de figuras, tais como os quadriláteros, os triângulos, círculos e figuras regulares como o hexágono, por exemplo. Conforme \citet{BNCC2019} a Geometria não pode ficar reduzida a mera aplicação de fórmulas de cálculo de área ou de volume.
 
 Ainda no Ensino Fundamental – Anos Finais, a expectativa é que os alunos devem determinar expressões de cálculo de áreas de quadriláteros, triângulos e círculos, mas assumindo que no Ensino Médio deve haver a consolidação, a ampliação e o aprofundamento das aprendizagens essenciais devemos apresentá-la de forma mais integrada. Assim, sugerimos explorar a relação de dependência entre duas grandezas na busca do desenvolvimento do pensamento proporcional.
 
 \begin{quote}
-  Isso pode ser feito pela exploração de situações que oportunizem a representação, em um sistema de coordenadas cartesianas, da variação de grandezas, além da análise e caracterização do comportamento dessa variação (diretamente proporcional, inversamente proporcional ou não proporcional)
-
-  \flushright
-  (BRASIL, 2019, p. 528).
+  Isso pode ser feito pela exploração de situações que oportunizem a representação, em um sistema de coordenadas cartesianas, da variação de grandezas, além da análise e caracterização do comportamento dessa variação (diretamente proporcional, inversamente proporcional ou não proporcional) \citep[p. 528]{BNCC2019}.
  \end{quote}
 
-Dessa forma, Brasil (2019) ainda propõe que os estudantes utilizem tecnologias. Entendemos nessa seção uma oportunidade para a utilização de softwares, em particular o GeoGebra (\url{https://www.geogebra.org/}). O GeoGebra é um software livre, de matemática dinâmica, vindo ao encontro de novas estratégias de ensino e aprendizagem, permitindo a professores e alunos a possibilidade de explorar, conjecturar e investigar na construção do conhecimento matemático.
+Dessa forma, \citet{BNCC2019} ainda propõe que os estudantes utilizem tecnologias. Entendemos nessa seção uma oportunidade para a utilização de softwares, em particular o GeoGebra (\url{https://www.geogebra.org/}). O GeoGebra é um software livre, de matemática dinâmica, vindo ao encontro de novas estratégias de ensino e aprendizagem, permitindo a professores e alunos a possibilidade de explorar, conjecturar e investigar na construção do conhecimento matemático.
 
 \subsection{Sugestões de materiais e metodologias}
 
@@ -666,11 +631,11 @@ Na figura a seguir, temos um exemplo de atividade retirado do site \url{https://
 Fonte: \url{https://bit.ly/3lIvfhj}}
 \end{figure}
 
-Para o professor que não tem muita experiência em utilizar o software ou talvez ainda não o conheça, existe um curso de capacitação de GeoGebra, a fim de abordar seus aspectos técnicos e disponibiliza materiais e recursos para fomentar reflexões sobre seu uso em situações de ensino e aprendizagem (ver Referências Bibliográficas).
+Para o professor que não tem muita experiência em utilizar o software ou talvez ainda não o conheça, existe um curso de capacitação de GeoGebra, a fim de abordar seus aspectos técnicos e disponibiliza materiais e recursos para fomentar reflexões sobre seu uso em situações de ensino e aprendizagem (ver \cite{ogeogebra2020}).
 
 Caso você tenha dúvidas sobre os conceitos envolvidos no capítulo sugerimos o livro \textit{“Temas e Problemas Elementares}” da Coleção PROFMAT, assim como “\textit{A Matemática do Ensino Médio – Volume 2}” da Coleção do Professor de Matemática – SBM (ver Referências Bibliográficas).
 
-Também gostaríamos de sugerir o Programa de Aperfeiçoamento de Professores de Matemática do Ensino Médio – PAPMEM, que consiste em um treinamento gratuito para professores de matemática de todo o Brasil. É realizado desde 1990 abordando assuntos relativos ao Ensino Médio. O programa é realizado durante uma semana em tempo integral, das 9 às 17 horas, de modo independente nos meses de janeiro e julho, durante o recesso escolar. 
+Também gostaríamos de sugerir o Programa de Aperfeiçoamento de Professores de Matemática do Ensino Médio – PAPMEM \citep{impa2020}, que consiste em um treinamento gratuito para professores de matemática de todo o Brasil. É realizado desde 1990 abordando assuntos relativos ao Ensino Médio. O programa é realizado durante uma semana em tempo integral, das 9 às 17 horas, de modo independente nos meses de janeiro e julho, durante o recesso escolar. 
 
 \textbf{Sobre as atividades da seção} Algumas atividades foram adaptadas do site \url{https://m3.ime.unicamp.br/} . Você pode encontrar maiores detalhes nos links citados na atividade. 
 
@@ -736,7 +701,7 @@ Também gostaríamos de sugerir o Programa de Aperfeiçoamento de Professores de
   \end{enumerate}
 }{0}
 \end{answer}
-\explore{área de figuras planas}
+\explore{Área de figuras planas}
 
 \begin{task}{a reforma da sala}
 
@@ -818,7 +783,7 @@ Sabendo que a sala tem dimensões $5{,}30\text{m}\times4{,}50\text{m}\times2{,}7
 
   Nesta etapa, o importante é obter uma grande variedade entre os grupos para o fechamento do experimento. É necessário, portanto, que cada grupo escolha quantidades diferentes de latas. Padronize o tipo de lata que os alunos devem trazer, pois isso é essencial para o experimento. O problema deste experimento considera apenas o custo. A embalagem de cada caixa deve cobrir as latas por completo e estar ajustada aos seus contornos. Note que o custo será o menor possível quando a área superficial da embalagem em uma dada disposição das latas também for a menor possível. 
 
-  Este problema tem o contexto muito interessante e importante de forma que os alunos podem perceber a importância de saber calcular a área de figuras planas. Neste experimento, os alunos irão solucionar um problema de otimização que envolve a embalagem de latas: qual é a disposição de uma quantidade fixa de latas que fornece o menor custo possível de embalagem? É claro que as latinhas devem encostar umas às outras e não podem ser amassadas. Em termos formais, os círculos não se sobrepõem, mas não deve haver nem um círculo isolado (exceto o caso trivial de uma única latinha). Além do mais o material de empacotamento adere ao contorno de parte de uma latinha, mas ao passar de uma latinha para a outra o material vai sair pela tangente de um círculo e chegar ao outro círculo também em tangente. Estas condições matemáticas são satisfeitas aproximadamente no experimento prático. Mais informações sobre o experimento, sobre conceitos matemáticos envolvidos e as possíveis disposições das latas você consegue em https://m3.ime.unicamp.br/recursos/1009 
+  Este problema tem o contexto muito interessante e importante de forma que os alunos podem perceber a importância de saber calcular a área de figuras planas. Neste experimento, os alunos irão solucionar um problema de otimização que envolve a embalagem de latas: qual é a disposição de uma quantidade fixa de latas que fornece o menor custo possível de embalagem? É claro que as latinhas devem encostar umas às outras e não podem ser amassadas. Em termos formais, os círculos não se sobrepõem, mas não deve haver nem um círculo isolado (exceto o caso trivial de uma única latinha). Além do mais o material de empacotamento adere ao contorno de parte de uma latinha, mas ao passar de uma latinha para a outra o material vai sair pela tangente de um círculo e chegar ao outro círculo também em tangente. Estas condições matemáticas são satisfeitas aproximadamente no experimento prático. Mais informações sobre o experimento, sobre conceitos matemáticos envolvidos e as possíveis disposições das latas você consegue em \url{https://m3.ime.unicamp.br/recursos/1009}. 
 
   \textbf{Material necessário}: Latas de alumínio, Calculadora, Régua, Folha de caderno, Compasso.
 }{0}{9}
@@ -971,7 +936,7 @@ Considere um retângulo com $20\text{cm}^2$ de área.
 Refaça a atividade anterior para outras formas planas, além de reângulos. Explique e justifique suas conclusões.
 \end{task}
 
-\arrange{área de figuras planas}
+\arrange{Área de figuras planas}
 
 Como já definimos anteriormente, para medir uma porção do plano ocupada por uma figura $F$, devemos compará-la com a unidade de área, e assim o resultado será um número que exprime quantas vezes a figura $F$ contém a unidade de área.
 
@@ -1388,9 +1353,8 @@ Sabendo-se que os arcos de circunferência que aparecem nos cantos do quadrado t
 \end{task}
 
 
-\begin{paginatexto}
+\begin{paginatexto}{Composição; Decomposição; Planificação}
 {
-\section{Explorando: Composição; Decomposição; Planificação}
 \subsection{Objetivos gerais}
 \begin{itemize}
 \item Entender o processo de cálculo de áreas por decomposição de figuras, ou seja, saber que a área da união de partes não sobrepostas de uma figura é igual à soma de suas áreas (usar essa ideia no cálculo da diferença entre a área de uma figura e a área de uma parte contida nessa figura).
@@ -1403,13 +1367,10 @@ Sabendo-se que os arcos de circunferência que aparecem nos cantos do quadrado t
 
 \subsection{Enriquecimento da discussão}: Caro professor, nesta seção é o momento para a consolidação, a ampliação e o aprofundamento das aprendizagens essenciais desenvolvidas no capítulo. Utilizar a decomposição da superfície em polígonos e/ou setores circulares, remanejar partes da figura para compor outra e determinar áreas por excesso ou por falta estão fortemente associadas ao desenvolvimento dessa habilidade. 
 
-Conforme Brasil (2019) essa habilidade deve desenvolver à interpretação, construção de modelos, resolução e formulação de problemas matemáticos envolvendo noções, conceitos e procedimentos geométricos, entre outros. É importante destacar que o uso de estratégias para a obtenção da área de uma superfície deve ser feito para a modelagem e resolução de situações em contexto, e não apenas como procedimento técnico.
+Conforme \citet{BNCC2019} essa habilidade deve desenvolver à interpretação, construção de modelos, resolução e formulação de problemas matemáticos envolvendo noções, conceitos e procedimentos geométricos, entre outros. É importante destacar que o uso de estratégias para a obtenção da área de uma superfície deve ser feito para a modelagem e resolução de situações em contexto, e não apenas como procedimento técnico.
 
 \begin{quote}
-No caso da resolução e formulação de problemas, é importante contemplar contextos diversos (relativos tanto à própria Matemática, incluindo os oriundos do desenvolvimento tecnológico, como às outras áreas do conhecimento). Não é demais destacar que, também no Ensino Médio, os estudantes devem desenvolver e mobilizar habilidades que servirão para resolver problemas ao longo de sua vida – por isso, as situações propostas devem ter significado real para eles. Nesse sentido, os problemas cotidianos têm papel fundamental na escola para o aprendizado e a aplicação de conceitos matemáticos, considerando que o cotidiano não se refere apenas às atividades do dia a dia dos estudantes, mas também às questões da comunidade mais ampla e do mundo do trabalho 
-
-\flushright
-(BRASIL, 2019, p.535).
+No caso da resolução e formulação de problemas, é importante contemplar contextos diversos (relativos tanto à própria Matemática, incluindo os oriundos do desenvolvimento tecnológico, como às outras áreas do conhecimento). Não é demais destacar que, também no Ensino Médio, os estudantes devem desenvolver e mobilizar habilidades que servirão para resolver problemas ao longo de sua vida – por isso, as situações propostas devem ter significado real para eles. Nesse sentido, os problemas cotidianos têm papel fundamental na escola para o aprendizado e a aplicação de conceitos matemáticos, considerando que o cotidiano não se refere apenas às atividades do dia a dia dos estudantes, mas também às questões da comunidade mais ampla e do mundo do trabalho \citep[p. 535]{BNCC2019}.
 \end{quote}
 
 Também destacamos a importância de relacionar esta seção com a habilidade (\textbf{EM13MAT309}) que consiste em resolver e elaborar problemas que envolvem o cálculo de áreas totais e de volumes de prismas, pirâmides e corpos redondos em situações reais, em particular para esta seção, as áreas totais por meio da planificação dos sólidos, quando possível.
@@ -1668,7 +1629,7 @@ No site (\url{https://m3.ime.unicamp.br/recursos/1032}) você encontra mais suge
 \end{sugestions}
 
 
-\explore{composição; decomposição; planificação}
+\explore{Composição; Decomposição; Planificação}
 
 \begin{task}{comparando embalagens}
 
@@ -1817,7 +1778,7 @@ Calcule a área da pele de todos os componentes do grupo usando a fórmula acima
 
 \end{task}
 
-\arrange{composição; decomposição; planificação}
+\arrange{Composição; Decomposição; Planificação}
 Para calcular a área de um polígono qualquer, basta subdividi-lo em figuras tais como triângulos, quadriláteros ou outra qualquer cuja área sabemos calcular. Desta forma, a área do polígono procurado será a soma das áreas das figuras em que o decompusemos.
 
 Assim, o cálculo de áreas de polígonos segue as seguintes regras:
@@ -2210,7 +2171,7 @@ Assim, o diâmetro deve ser de $1$cm.
 }{1}
 \end{answer}
 
-\practice{composição; decomposição; planificação}
+\practice{Composição; Decomposição; Planificação}
 \begin{task}{Planetário}
 
 (UFSM - 2011) Oscar Niemayer é um arquiteto brasileiro, considerado um dos nomes mais influentes na arquitetura moderna internacional. Ele contribuiu, através de uma doação de um croqui, para a construição do planetário da UFSM, um marco arquitetônico importante da cidade de Santa Maria.
@@ -2262,6 +2223,7 @@ Determine o diâmetro do segundo comprimido de modo que a área da superfície s
 \end{task}
 
 \exercise
+
 \begin{answer}{Exercícios}
 {\exerciselist
   \begin{enumerate}
@@ -2710,6 +2672,6 @@ Determine o diâmetro do segundo comprimido de modo que a área da superfície s
 \fi
 
 \bibliographystyle{apalike-pt}
-\bibliography{../Bibliografia/financeira_bibliografia.bib}
+\bibliography{../Bibliografia/superficie_bibliografia.bib}
 
 \nocite{*}

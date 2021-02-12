@@ -1,0 +1,1551 @@
+\ifnum\aluno=1
+\renewcommand\chapterillustration{./abertura-transformacoes}
+\else
+\renewcommand\chapterillustration{./abertura-transformacoes-professor}
+\fi
+
+\makeatletter
+\ifnum\aluno=1
+\else
+\renewcommand*{\toclevel@section}{1}
+\renewcommand*{\toclevel@subsection}{4}
+\renewcommand*{\toclevel@paragraph}{5}
+\renewcommand*{\toclevel@subparagraph}{6}
+
+\renewcommand*{\toclevel@exploresec}{2}
+\renewcommand*{\toclevel@practicesec}{2}
+\renewcommand*{\toclevel@arrangesec}{2}
+\renewcommand*{\toclevel@knowsec}{1}
+\renewcommand*{\toclevel@exercisesec}{1}
+
+\setcounter{tocdepth}{2}
+\fi
+\makeatother
+
+\renewcommand\chapterwhat{Transformações geométricas no plano:
+isometrias: translações, rotações e reflexões;	homotetias.}
+\renewcommand\chapterbecause{Estamos mergulhados em um mundo de imagens, especialmente na atualidade, em função da multiplicidade de telas que manuseamos e às quais somos expostos. Apropriar-se do conceito de transformação geométrica, que está por detrás das noções de congruência, de simetria, de ampliação e de redução de imagens configura uma espécie de alfabetização geométrico-visual. Em resumo, o estudo das transformações geométricas contribui para a atuação no mundo por meio das linguagens geométrico-visuais presentes nas artes, nas ciências, nas tecnologias e na natureza.} 
+\chapter{Transformações Geométricas}
+\label{transformacoes-chap}
+
+\mbox{}\thispagestyle{empty}\clearpage
+
+\thispagestyle{empty}
+
+\begin{center}
+Projeto: LIVRO ABERTO DE MATEMÁTICA
+
+\noindent \begin{tabular}{lcccr}
+\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
+\end{tabular}
+\end{center}
+
+\vspace*{.3cm}
+
+Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+
+
+
+% \begin{center}
+%   \includegraphics[width=2cm]{canvas}
+% \end{center}
+
+\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+Título: & Transformações Geométricas\\
+\\
+Ano/ Versão: & 2021 / versão 0.1 de \today\\
+\\
+Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+\\
+Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+\\
+Produção:& Associação Livro Aberto\\
+\\
+Coordenação: & Fabio Simas, \\
+			&  Augusto Teixeira (livroaberto@impa.br)\\
+\\
+  Autores: & Aline Matheus, \\
+  		   & Cláudia Cueva\\
+
+        
+\\
+Colaboração: & \\
+\\
+Revisora: & Lhaylla Crissaf \\
+
+\\
+Design: & Andreza Moreira (Tangentes Design) \\
+\\
+  Ilustrações: & --- \\ 
+\\
+Gráficos: & ---\\
+\\
+  Capa: & Foto de Patrick Hendry, no Unsplash \\
+  		& https://unsplash.com/photos/hezNrE5QEa8 \\
+
+\end{tabular}
+\vspace{.5cm}
+
+
+
+\begin{figure}[b]
+\begin{minipage}[l]{5cm}
+\centering
+
+{\large Licença:}
+
+  \includegraphics[width=3.5cm]{cc-by-nc-sa}
+\end{minipage}\hfill
+\begin{minipage}[c]{5cm}
+\centering
+{\large Desenvolvido por}
+
+\includegraphics[width=2.5cm]{logo-associacao.jpg}
+\end{minipage}
+\begin{minipage}[r]{5cm}
+\centering
+
+{\large Patrocínio:}
+  \vspace{1em}
+  \includegraphics[width=3.5cm]{itau}
+\end{minipage}
+\end{figure}
+
+\mainmatter
+
+\begin{apresentacao}{Introdução}
+\subsection{Objetivos gerais}
+
+Os objetivos gerais a seguir expressam, de forma sintética, as aprendizagens relacionadas ao tema da unidade, que se espera alcançar como resultado do desenvolvimento dos objetivos específicos de cada seção, na forma e nos contextos implementados. 
+\begin{itemize}
+\item Associar as noções de congruência e semelhança, estudadas no Ensino Fundamental, às de isometria e homotetia.
+\item Ampliar a capacidade de perceber, apreciar esteticamente e descrever elementos naturais ou produções humanas diversas por meio da linguagem associada às transformações geométricas.
+\item Associar as isometrias aos movimentos de translação, reflexão e rotação. 
+\item Relacionar isometrias e simetrias, reconhecendo a importância desta última noção para a organização do mundo físico e para as produções humanas.
+\item Elaborar, analisar e testar conjecturas sobre os efeitos da composição de isometrias e homotetias, ampliando a capacidade de argumentar matematicamente. 
+\item Analisar e construir figuras planas diversas utilizando as transformações geométricas.
+\item \textbf{Conceitos abordados}: congruência, semelhança, isometria, simetria e homotetia.
+\end{itemize}
+
+\paragraph{Habilidades da BNCC}
+\begin{habilities}{EM13MAT105}
+Utilizar as noções de transformações isométricas (translação, reflexão, rotação e composições destas) e transformações homotéticas para construir figuras e analisar elementos da natureza e diferentes produções humanas (fractais, construções civis, obras de arte, entre outras).
+\end{habilities}
+
+
+
+\subsection{Sobre pré-requisitos e progressão das aprendizagens}
+Na BNCC do Ensino Fundamental, os conceitos citados estão contemplados desde os anos iniciais de escolarização. O reconhecimento de figuras congruentes usando sobreposição, malhas e mesmo tecnologias digitais é tratado a partir do 3° ano e a habilidade a ser desenvolvida (\textbf{EF03MA16}) envolve a compreensão de que figuras congruentes têm a mesma forma e o mesmo tamanho, ainda que estejam em posições diferentes. No 4° ano, encontramos a habilidade (\textbf{EF04MA19}) que prevê reconhecer simetria de reflexão e utilizá-la na construção de figuras congruentes. Nos anos seguintes, encontram-se expressas as habilidades de reconhecer translações, rotações e reflexões e utilizá-las na construção de figuras planas (\textbf{EF07MA20}, \textbf{EF07MA21}, \textbf{EF08MA14}, \textbf{EF08MA18}). Também as ampliações e reduções em malhas quadriculadas ou com uso de tecnologias digitais e a construção de figuras semelhantes figuram entre as habilidades do ensino fundamental do 5° ao 9° ano (\textbf{EF05MA18}, \textbf{EF06MA21}, \textbf{EF06MA29}, \textbf{EF07MA19}, \textbf{EF09MA12}). 
+
+Mesmo que a abordagem a esses conceitos esteja prevista no Ensino Fundamental pela BNCC, ela não é tomada de modo estrito, nesta unidade, como pré-requisitos. Em vez disso, procuramos revisitá-los ao mesmo tempo que os aprofundamos, procurando dar vida à ideia de um currículo espiral \citep{bruner1960,roldao1994}. Tal aprofundamento se dá em duas dimensões: contextual e conceitual. 
+
+O aprofundamento contextual se caracteriza pela escolha de situações e temas que dialogam com a complexidade das obras humanas e do olhar humano sobre a natureza, contribuindo para ampliar o repertório cultural dos alunos e, ao mesmo tempo, valorizar a matemática como lente que permite ler o mundo. 
+
+O aprofundamento conceitual se dá pela interconexão entre diferentes conceitos, pela exigência de explicações, previsões, e elaborações diversas com relação ao tema, sem, no entanto, apelar em demasia para o formalismo matemático. 
+
+\textbf{Quantidade de aulas previstas para a unidade}: 17 horas/aula.
+
+A Unidade aqui proposta é bastante extensa e caberá ao professor fazer algumas escolhas, tendo em vista as particularidades de suas turmas. 
+	
+Como dissemos anteriormente, a BNCC do Ensino Fundamental prevê o desenvolvimento de diversas habilidades ligadas às transformações. Entretanto, o currículo previsto não pode ser tomado como currículo praticado ou efetivamente “aprendido”. Dessa forma, é muito importante que o professor procure saber o que seus alunos já sabem e conseguem fazer com relação aos assuntos de cada seção. 
+	
+O primeiro “Explorando” de cada seção pode servir bem a esse diagnóstico. Uma vez que o professor observe que os alunos já têm certo nível de conhecimento sobre o tema, pode saltar para atividades mais avançadas, concentrando-se, em sala de aula, no “Organizando”, que visa a sistematizar os conceitos abordados. Convém nesse caso, usar um ou mais contextos presentes nos “Explorando” como motivação para o assunto, mas sem se preocupar em percorrer sistematicamente todas as atividades propostas. (Metodologias como sala de aula invertida ou rodízio por estações pode contribuir para abordar esses contextos de forma dinâmica e personalizada, de forma não linear.)
+
+Se, por outro lado, o professor diagnosticar que seus alunos conhecem pouco sobre os conceitos abordados, talvez convenha priorizar o “Explorando” de cada seção, que traz atividades exploratórias, que visam ao desenvolvimento da capacidade de visualização relativa às transformações, mas não chegam a sistematizar os conceitos. 
+
+Ainda sobre as escolhas que podem ser feitas, convém observar que as seções 1 a 3 relacionam-se às isometrias e estão bastante conectadas entre si. A seção 1 procura iniciar o assunto relacionando-o com o conceito de congruência – usualmente trabalhado no Ensino Fundamental mesmo antes da BNCC. As seções 2 e 3 são divididas para melhor tratar das especificidades de diferentes tipos de isometrias (translações, rotações e reflexões na seção 2 e simetrias na seção 3). Já a seção 4 depende pouco das demais e aborda as homotetias tomando o conceito de semelhança como ponto de partida.
+\clearpage
+
+\subsection{Diretrizes teóricas e metodológicas da unidade}
+\paragraph{Sobre o objeto de estudo}
+
+É comum a ideia de que, em Geometria, estudam-se propriedades de figuras geométricas. Quais propriedades? Em geral, consideramos as propriedades que são chamadas intrínsecas, isto é, aquelas que não dependem da localização das figuras geométricas no plano (ou dos objetos no espaço).  Duas figuras idênticas – ou seja, com as mesmas propriedades intrínsecas – e que ocupam posições diferentes são chamadas de congruentes. 
+
+Congruência é um conceito tratado nesta unidade, mas não da forma tradicional. Estamos interessados nos deslocamentos – translações, rotações e reflexões que levam uma figura à outra congruente a ela, a fim de representar matematicamente a ideia de sobreposição. Especificamente, vamos nos debruçar primeiro sobre as transformações geométricas que relacionam figuras congruentes, as chamadas isometrias. 
+
+O entendimento intuitivo das isometrias baseia-se na noção de movimentos rígidos, isto é, aqueles que não deformam, nem ampliam, nem reduzem as figuras geométricas. Partiremos dessa ideia para chegar à noção de isometria como transformação geométrica, ou seja, como uma função que associa pontos do plano a pontos do plano, de modo a manter inalteradas as distâncias entre eles. 
+
+As isometrias relacionam-se intimamente à noção de simetria que, além de noção matemática, é uma ideia fortemente presente na cultura e na natureza. Matematicamente, dizemos que uma figura é simétrica se é invariante por alguma isometria particular, distinta da identidade.
+
+As homotetias – que repousam sobre as ideias intuitivas de ampliação e redução, relacionando-se, assim, com a noção de semelhança – são transformações geométricas, de modo que serão também abarcadas pela unidade. 
+
+\paragraph{Sobre a metodologia}
+A construção da unidade não segue de forma estrita nenhuma linha teórica relativa ao ensino e à aprendizagem da Matemática e, em particular, da Geometria. Mas algumas diretrizes importantes foram consideradas pelas autoras e serão, agora, oportunamente, compartilhadas com os professores. Com isso, esperamos que os professores possam imprimir maior intencionalidade pedagógica à sua própria abordagem do capítulo.
+
+Uma importante referência utilizada para nortear a construção da Unidade Temática é o chamado Modelo de Van Hiele. Trata-se de um modelo de ensino e aprendizagem de geometria apoiado em experiências educacionais do casal Van Hiele (1957)\footnote{falta a referência}.  O ponto central da teoria é que, no processo de aprendizagem de geometria, o raciocínio do indivíduo passa por cinco níveis sequenciais e ordenados. A compreensão e utilização de conceitos geométricos ocorre de maneiras específicas em cada nível, observáveis por meio das diferentes formas com que o estudante interpreta, define, classifica os conceitos em jogo e justifica, refuta ou demonstra as conjecturas que surgem no processo de aprendizagem.   
+
+São propriedades do modelo a sequencialidade dos níveis, a linguagem específica em cada nível, a continuidade (processo gradual e paulatino da aquisição de um nível a partir do anterior) e a localidade (o indivíduo pode ter raciocínio compatível com um nível em determinado tópico e compatível com nível diferente em outro tópico de geometria).
+
+A teoria de Van Hiele está construída sobre dois grandes pilares: o descritivo e o instrutivo.
+
+\begin{itemize}
+\item \textbf{Aspecto descritivo}. Classificação do raciocínio de um indivíduo, em seu aprendizado de geometria, em níveis:
+\begin{enumerate}[label=\titem{\Roman*)}]
+\item Visualização/Reconhecimento, 
+\item Análise,
+\item Classificação/Dedução Informal,
+\item Dedução Formal,
+\item Rigor. 
+\end{enumerate}
+
+É interessante destacar que, \citet{pastor1993}, entre outros autores, indica que, para a Educação Básica, o esperado é que os estudantes atinjam o nível III, da dedução informal, que se caracteriza por operações cognitivas tais como: compreender, classificar, aplicar, predizer, conjecturar e generalizar. Nesse nível, o estudante expressa tais operações utilizando linguagens que ainda não são aquelas próprias da matemática acadêmica, mas que já sinalizam alguma consciência dos problemas relacionados à generalização. 
+
+\item \textbf{Aspecto instrutivo}. Os Van Hiele concluíram que o progresso de um nível ao seguinte depende mais da instrução recebida do que da idade ou da maturidade do aluno e, para orientar os professores na elaboração do planejamento para a sala de aula, propuseram cinco \textit{fases de aprendizagem}. Eles afirmam que a instrução assim empregada promove o desenvolvimento completo dos alunos dentro de um certo nível, tornando-os aptos a avançar para o próximo. 
+Essas fases de aprendizagem são: 
+
+\begin{enumerate}[label=\titem{\arabic*.}]
+\item \textbf{Fase da informação}. Caracteriza-se por um movimento de mão dupla: o professor vai perguntando aos alunos o que eles sabem sobre o assunto e vai esclarecendo os termos referentes ao que se vai estudar.
+\item \textbf{Fase da orientação dirigida}. O professor oferece tarefas que levam o aluno a atingir os objetivos do nível, interagindo continuamente com eles.
+\item \textbf{Fase da explicitação}. Marcada pelos diálogos entre duplas, alunos e professor e até toda a turma. Durante as discussões sobre cada tema proposto, cabe ao professor conduzir a turma para o correto entendimento dos conceitos e resultados tratados e cuidar do uso da linguagem, de forma que o vocabulário dos alunos vá sendo ampliado no decorrer das atividades.  Modernamente, recomenda-se que o diálogo esteja presente em todo o trabalho, deixando assim de ser uma fase para transformar-se numa forma de condução do processo de ensino.
+\item \textbf{Fase da orientação livre}. O professor propõe desafios e quase não interfere, deixa que os alunos os enfrentem de forma autônoma. 
+\item \textbf{Fase da integração}. Nesta fase, o professor deve conduzir os alunos para que façam uma síntese do que aprenderam (no nível), falando ou escrevendo.  Além disso, este é um momento em que o professor elabora e apresenta aos alunos, de modo organizado e claro, um resumo do conjunto de conceitos e resultados estudados até então, de modo a validá-los. É fase muito importante para sanar as dúvidas e corrigir algum equívoco que reste na compreensão dos alunos sobre o tema tratado.  
+\end{enumerate}
+
+\end{itemize}
+Em resumo, o trabalho do professor é o de estimular o protagonismo de seus alunos: o aluno traz informações sobre um assunto, é provocado por novas informações e atividades oferecidas pelo professor, faz questionamentos, discute, é orientado pelo professor até chegar às suas conclusões e, finalmente, expressá-las. 
+
+É importante sinalizar que o Modelo de Van Hiele não é tomado de forma rígida na Unidade, estabelecendo este ou aquele nível nas seções que se seguem. Além disso, as fases de aprendizagem são usadas como norteadoras nas escolhas das atividades propostas, mas não de forma exclusiva. Dentro da unidade temática outros recursos aparecem como estratégias de aprofundamento das aprendizagens.
+
+Como referência essencial, o Modelo de Van Hiele dá, a nós professores, diretrizes importantes a seguir em nosso planejamento do ensino de Geometria (ou até de outros tópicos), tais como: 
+
+\begin{itemize}[itemsep=0pt, topsep=0pt]
+\item Levar em conta as informações que os alunos trazem sobre o assunto a ser tratado;
+\item Cuidar da adequação da linguagem, que deve evoluir gradativamente em profundidade e formalidade;
+\item Aumentar continuamente, sem saltos abruptos, a profundidade das aprendizagens, considerando diferentes tipos de operações cognitivas sobre os objetos de conhecimento em jogo;
+\item Considerar que a progressão das aprendizagens ocorre localmente, isto é, dentro de um mesmo assunto.
+\end{itemize}
+
+\paragraph{Sobre obstáculos à aprendizagem no assunto}
+Em trabalhos sobre ensino de isometrias algumas dificuldades foram observadas, entre alunos da Educação Básica, nas tarefas de reconhecimento da transformação geométrica aplicada a uma figura \citep[Bautier, 1986\footnote{falta a referência}][]{grenier1988,cona2017} (Bautier, 1986; Grenier, 1988; Cona, 2017).  Foram identificados erros recorrentes nas questões em que a posição do vetor de translação em relação à figura dada, ou a posição do centro de rotação em relação à figura dada ou{} a reta de reflexão em relação à figura dada não eram usuais (horizontais, verticais); ou ainda questões em que os elementos estavam sobrepostos (centro de rotação em um ponto interior à região limitada pela figura a ser rotacionada ou reta de reflexão contendo pontos da figura a ser refletida).  Também foram observadas dificuldades em situações em que não existe ortogonalidade ou paralelismo entre elementos da figura e o eixo de reflexão ou aquelas em que o eixo de simetria contém pontos da figura em questão.
+
+Acredita-se que essas dificuldades têm origem em etapas anteriores da escolarização, em que o aluno elaborou concepções limitadas de que, por exemplo, a reflexão em relação a uma reta sempre está associada à presença de duas figuras, uma de cada lado de um eixo de simetria explícito. Concepções limitadas também podem estar relacionadas ao ensino tradicional de congruências (e, também, de semelhanças), que muitas vezes se resume à apresentação de “casos de congruência de triângulos”, conteúdo cuja abordagem está bastante arraigada na cultura escolar, e à proposta de exercícios repetitivos que não trazem desafios. 
+
+Nesta unidade pretendemos que as tarefas propostas tenham potencial para tirar o estudante da zona de conforto e desestabilizar concepções errôneas a fim de quebrar obstáculos no aprendizado de transformações geométricas e aumentar a compreensão sobre o tema. O professor será alertado, no decorrer das seções, para o tipo de dificuldade que pode aparecer e estimulado a fazer intervenções que propiciem a evolução do raciocínio do aluno.
+
+\end{apresentacao}
+
+\begin{paginatexto}{Seção 1 - Congruência}
+\subsection{Objetivo geral da seção}
+\begin{itemize}
+\item Compreender a noção de congruência, identificando, inclusive, os movimentos que permitem associar duas ou mais figuras planas congruentes.
+\end{itemize}
+
+\textbf{Quantidade de aulas previstas para a seção}: 3 horas/aula.
+
+\subsection{Enriquecimento da discussão}
+A congruência entre figuras é tema bastante explorado na Educação Básica, em que aparece com forte ligação à sobreposição de figuras. Nesta seção, o objetivo é articular o conceito de congruência aos movimentos que permitem sobrepor uma figura à outra. O assunto deve ser abordado, de acordo com a BNCC, desde os anos iniciais do Ensino Fundamental (\textbf{EF03MA16}) a partir da ideia de que duas figuras são congruentes se podem ser sobrepostas e que, consequentemente, têm a mesma forma e o mesmo tamanho e, inclusive a mesma área (\textbf{EF03MA21}). Também a noção de simetria de reflexão é proposta cedo (\textbf{EF04MA19}), com ênfase explícita à propriedade de manutenção de forma e do tamanho de figuras simétricas e estímulo à construção de figuras congruentes por meio de reflexões.  Os alunos devem ter tido oportunidade de retomar, conforme previsto para o 7° ano, as simetrias de reflexão (em relação aos eixos e à origem) e de conhecer as demais transformações geométricas que não alteram a forma ou o tamanho das figuras: a translação, a reflexão em relação a uma reta e a rotação com centro em um ponto (\textbf{EF07MA20}, \textbf{EF07MA21}). No 8° ano, estão contempladas as construções de figuras obtidas pela aplicação das transformações geométricas ou de composições delas (\textbf{EF08MA18}). No entanto, não assumimos tais conceitos como pré-requisitos estritos do estudo a desenvolver, pois nesta seção eles serão retomados em diversos contextos que favoreçam sua articulação e aprofundamento. 
+
+Ainda que os alunos tenham tido contato com a noção de congruência somente sob um ponto de vista tradicional, em que se dá grande ênfase aos casos de congruência de triângulos (\textbf{EF08MA14}), a ideia aqui é explorar a relação entre a congruência de figuras e as transformações geométricas que permitem representar a sobreposição de uma figura a outra. Ou seja, estamos interessados nos movimentos – translações, rotações e reflexões – que associam uma figura a outra congruente a ela.
+
+Ao arrastar um móvel em linha reta, ao mudar um quadro de lugar na parede ou ao abrir uma gaveta realizamos movimentos de translação. É claro que o quadro na nova posição é congruente ao quadro na posição original. Dizemos que um ponto marcado na gaveta aberta é a translação do ponto em sua posição original, quando a gaveta estava fechada. Fazemos um movimento de rotação ao abrirmos uma porta e observamos que, em um par de sapatos, cada pé é refletido do outro. De modo geral, desde os deslocamentos permitidos em um jogo de xadrez até a arrumação de objetos em um armário, efetuamos uma sucessão de movimentos rígidos, isto é, movimentos que não alteram forma ou tamanho dos objetos.
+
+Nesta seção, as noções de translação, rotação e reflexão ainda não serão formalizadas. A ideia é o seu reconhecimento e sua descrição de modo informal. Por exemplo, a translação de uma figura no plano corresponde a um movimento retilíneo e podemos pensar que o deslocamento da figura é feito em um trilho reto, formado por duas retas paralelas; a rotação de uma figura no plano corresponde ao deslocamento circular como se ela estivesse presa na ponta de um ponteiro de relógio; a ideia de reflexão é a de que uma figura é a imagem de outra refletida em um espelho plano. As discussões durante a execução das atividades propostas devem permitir, inclusive, que o professor faça um diagnóstico das concepções dos alunos associadas a esses movimentos.
+
+\subsection{Organização da turma}
+Cada aluno deve ser convidado a ler as atividades propostas e refletir um pouco sobre elas para, então, trabalhar em dupla ou grupo; é importante para o desenvolvimento do raciocínio dos alunos que eles explicitem suas ideias e discutam com seus colegas sobre as perguntas que surgem naturalmente na execução das tarefas. 
+
+\subsection{Sobre as atividades da seção}
+São atividades de reconhecimento visual de figuras congruentes em que a prioridade é descrever informalmente as transformações geométricas que permitem sobrepor uma figura à outra. Não se trata de demonstrar a congruência de figuras por meio de técnicas conhecidas na geometria, como, por exemplo, casos de congruência de triângulos. Nessa primeira seção, as isometrias não são formalmente definidas, mas o professor deve ficar atento para o emprego correto dos termos translação, rotação e reflexão para permitir que os alunos expressem a diversidade de ideias que as atividades podem suscitar. Alguns estudantes terão mais facilidade do que outros no decorrer do trabalho prático com os anexos fornecidos nas atividades e o professor pode propor o uso de material concreto ou de desenho – régua, esquadro, discos, transferidor, espelhos – para facilitar a compreensão dos movimentos de translação, rotação e reflexão em relação a uma reta. 
+\end{paginatexto}
+
+\explore{Congruência?}
+\clearmargin
+\begin{sugestions}{Movimentos e congruências no Tetris}
+{
+
+\textbf{Material necessário}: malha quadriculada
+
+A atividade deve ser vista como um diagnóstico que permite descobrir quais são os significados que os alunos atribuem aos termos, para poder compreender suas referências e estabelecer uma linguagem comum sobre os assuntos que estão começando a ser estudados. Particularmente o item a, propicia um momento de informação de mão dupla em que, inicialmente, os alunos trarão seu entendimento informal sobre os termos citados. Alguns estudantes podem mencionar que já estudaram congruência de triângulos e esse conhecimento deve ser bem explorado lembrando que figuras congruentes, a exemplo dos triângulos congruentes, têm a mesma forma e o mesmo tamanho. Também podem se lembrar do movimento de translação da Terra em torno do Sol; se isso ocorrer será necessário esclarecer que a Terra percorre uma órbita elíptica em torno do Sol e que as translações a serem estudadas aqui são os deslocamentos retilíneos entre dois pontos.   Não se trata tanto de “corrigi-los”, mas de compreender suas referências e explicitar os significados dos termos dentro do estudo pretendido (ainda que de modo informal neste primeiro momento). As discussões durante a execução dos itens propostos devem permitir, inclusive, que o professor faça um diagnóstico das concepções dos alunos associadas a esses movimentos. Até o fim da atividade, cabe ao professor garantir a compreensão de que a translação de uma figura no plano corresponde a um movimento retilíneo entre dois pontos e podemos pensar que o deslocamento da figura é feito em um trilho reto, formado por duas retas paralelas; a rotação de uma figura no plano corresponde ao deslocamento circular em torno de um ponto, como se ela estivesse presa na ponta de um ponteiro de relógio; a reflexão espelha todos os pontos de uma figura em relação a uma reta, exatamente como ocorre com a imagem refletida em um espelho plano. 
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Movimentos e congruências no Tetris}
+{
+\begin{enumerate}
+\item Espera-se que os alunos, a partir de suas pesquisas ou por meio de exemplos, associem o termo congruência à manutenção de forma e tamanho. Associem translação a situações em que há deslocamento retilíneo entre dois pontos e rotação a movimentos circulares. 
+\item Apenas R.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{sugestions}{Movimentos e congruências no Tetris}
+{
+\paragraph{Sugestão de condução}
+
+Os alunos podem pensar e fazer registros sobre os itens \titem{a)} até \titem{e)} em duplas. A seguir, esses itens podem ser discutidos em plenária. A ideia é usar a discussão em plenária para diagnosticar o entendimento dos alunos sobre o conceito de congruência, bem como sua fluência e vocabulário para identificar e descrever os movimentos com as peças do Tetris. A partir daí, o professor pode conduzir os alunos para o uso das palavras rotação, translação e reflexão. O item \titem{e)} é especialmente relevante, porque os pares de peças R/L e S/Z são congruentes, mas não podem ser sobrepostos pelos movimentos permitidos no jogo. Podem, entretanto, ser sobrepostos por um movimento no espaço, que resulta na reflexão das formas, que eles podem compreender a partir da noção intuitiva de espelhamento. 
+
+O item \titem{f)} pode ser realizado em duplas, usando malha quadriculada. O professor pode circular pela classe estimulando os alunos a examinar se não estão contabilizando repetidas vezes os mesmos triminós e pentaminós, por meio da visualização de suas rotações e reflexões. 
+
+O item \titem{g)} pode ser apresentado como um desafio livre extraclasse. Tal desafio permite exercitar intensamente a visualização geométrico-espacial, em especial exigindo a imaginação dos movimentos que são a base intuitiva desta unidade. Convém valorizar o engajamento dos alunos que se dedicarem ao desafio, dando espaço, em aulas posteriores, não apenas para as soluções corretas, mas também para a discussão de tentativas, dificuldades e ideias que surgiram no processo. O importante é que os alunos sintam que erros e dificuldades não correspondem a fracasso, mas são parte de um processo de construção de conhecimento que pode se beneficiar de discussões coletivas.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Movimentos e congruências no Tetris}
+{
+\begin{enumerate}\setcounter{enumi}{2}
+\item Espera-se que os alunos digam (com estímulo do professor, se necessário) que a peça deve sofrer uma rotação em sentido horário ou anti-horário, de $90^{\circ}$. Nesse momento, ainda não se espera que seja descrito o centro da rotação. 
+\item Pares congruentes: R e L; S e Z.
+\item Não é possível fazer a sobreposição entre os pares congruentes usando os movimentos do jogo. As figuras são refletidas ou, usando uma linguagem mais técnica, são enantimorfas. A intuição física é justamente que só poderíamos sobrepor essas figuras usando um movimento no espaço. O efeito é o de um espelhamento. 
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Movimentos e congruências no Tetris}
+{
+\begin{enumerate}\setcounter{enumi}{5}
+\item 2 triminós; 12 pentaminós.
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.8\linewidth]{transformacoes6}
+\end{figure}
+
+\item Para esse desafio, utilizar material disponibilizado no Anexo 1. Resposta possível:
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\linewidth]{transformacoes7}
+\end{figure}
+\end{enumerate}
+}{0}
+\end{answer}
+
+Você conhece o jogo Tetris? 
+
+O Tetris é um dos jogos eletrônicos abstratos mais famosos do mundo! Ele foi criado pelos engenheiros Alexey Pajitnov e Dmitry Pavlosvsky, do Centro de Computadores da Academia Russa de Ciências, tendo sido lançado comercialmente em 1984. 
+
+No Tetris, os jogadores devem organizar peças de quebra-cabeça em tempo real, enquanto caem do topo do campo de jogo, usando movimentos de \textbf{translação} ou \textbf{rotação}. Os jogadores devem tentar eliminar o maior número possível de linhas, o que é feito completando linhas horizontais de blocos sem espaço vazio. Se as peças se acumularem até o topo do tabuleiro eletrônico, o jogo acabou. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\linewidth]{transformacoes1}
+\end{figure}
+
+Pode parecer simples, mas a popularidade do jogo demonstra o quanto ele é atraente. No site oficial do jogo, seus desenvolvedores dizem que “\textit{o Tetris, como o mundo real, desafia os jogadores a ordenar o caos usando um sistema organizacional específico, os componentes do jogo se traduzem facilmente em interpretações de situações reais da vida. Esteja você carregando a mala do carro, carregando uma máquina de lavar louça ou organizando as prateleiras, provavelmente está pensando em como cada objeto se encaixará estrategicamente com o mínimo de espaço vazio}”.
+
+O design do jogo utiliza sete peças geométricas distintas, que são tetraminós, figuras compostas por quatro quadrados congruentes que se unem por meio de lados comuns. O prefixo “tetra” (que vem do grego) indica que os tetraminós são formados por quatro quadrados. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.7\linewidth]{transformacoes2}
+\caption{As sete peças do jogo Tetris. Saiba mais sobre o jogo e experimente jogar acessando: \url{https://tetris.com/play-tetris/}.}
+\end{figure}
+
+O Tetris é um jogo que se relaciona a diversos conceitos da Geometria. Um aspecto particular que podemos explorar diz respeito à noção de congruência, que você já estudou no Ensino Fundamental. Nas atividades que seguem, você terá chance de relembrar e aprofundar sua compreensão desse conceito.
+
+\begin{task}{Movimentos e congruências no Tetris}
+\begin{enumerate}
+\item No texto sobre o jogo Tetris, há algumas palavras em destaque: \textbf{translação}, \textbf{rotação} e \textbf{congruente}. Você sabe o que essas palavras significam? Se não souber, pesquise e troque informações com seus colegas. Registre por escrito o significado de cada uma dessas palavras segundo seu próprio entendimento.
+\item Analise a situação de jogo a seguir.
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.5\linewidth]{transformacoes3}
+\end{figure}
+
+Qual peça poderia ser encaixada no espaço demarcado? L, R, ambas ou nenhuma delas?
+\item Analise esta outra situação de jogo.
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.45\linewidth]{transformacoes4}
+\end{figure}
+
+Que movimento deve ser feito com a peça S para que ela seja encaixada no espaço imediatamente abaixo dela cumprindo os objetivos do jogo?
+
+\item Entre as peças do jogo Tetris, existem pares de figuras congruentes. Quais são esses pares e por que tais figuras são congruentes? Desenhe os pares de figuras congruentes e explique.
+
+\item Considere os pares de figuras congruentes que você identificou no item anterior. É possível sobrepor essas peças usando apenas os movimentos permitidos no jogo? Se sim, descreva como poderia ser feita a sobreposição. Se não, explique o porquê.
+
+\item Há cinco tetraminós diferentes, embora haja sete peças de Tetris, porque, para contá-los, consideramos os congruentes como iguais. Para além do jogo Tetris, existem também outros tipos de minós: monominós, dominós, triminós, pentaminós etc, a depender da quantidade de quadrados utilizados. Quantos são os triminós? E os pentaminós? (Para realizar essa atividade, use uma malha quadriculada.)
+
+\item Desafio: usando apenas as formas das peças de Tetris, será que você consegue completar o coração quadriculado abaixo, sem deixar nenhum espaço vazio e sem fragmentar nenhuma forma? Use lápis coloridos e as figuras disponibilizadas no \textbf{Anexo 1} para fazer suas tentativas.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\linewidth]{transformacoes5}
+\end{figure}
+\end{enumerate}
+\end{task}
+
+\arrange{Congruência}
+
+É comum a ideia de que, em Geometria, estudam-se propriedades de figuras geométricas. Por exemplo, dado um triângulo retângulo cujos catetos medem 3 e 4 unidades, o resultado conhecido como Teorema de Pitágoras nos garante que a hipotenusa desse triângulo mede 5 unidades. Essa é uma propriedade desse triângulo que não depende de sua localização no plano. 
+
+Mas podemos dizer que dois triângulos retângulos de lados 3, 4 e 5 unidades são “\textit{o mesmo triângulo”}? É evidente que, quando levamos em conta não apenas as propriedades de uma figura como essa, mas também a sua localização, não podemos dizer isso. Duas figuras idênticas em forma e tamanho – isto é, que podem ser sobrepostas sem faltar e sem sobrar nada –, mas que ocupam posições diferentes são chamadas de \textbf{congruentes}. 
+
+A noção de congruência é tratada no Ensino Fundamental, de modo que você já pode ter entrado em contato com estratégias para reconhecer se duas figuras são congruentes ou não. Em geral, são apresentados casos de congruência de triângulos: Lado-Ângulo-Lado (LAL); Lado-Lado-Lado (LLL), Ângulo-Lado-Ângulo (ALA) etc. Essa abordagem é útil na dedução de muitos resultados geométricos e, também, na resolução de diversas questões envolvendo triângulos e outros polígonos.
+
+Quando as figuras congruentes são polígonos, pode ser útil reconhecer vértices e lados \textbf{correspondentes} ou \textbf{homólogos}. Vamos analisar os polígonos $ABCDE$ e $MNOPQ$ da \fref{transformacoes8}: 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.6\linewidth]{transformacoes8}
+\caption{}
+\label{transformacoes8}
+\end{figure}
+
+Na \fref{transformacoes8}, os pentágonos $ABCDE$ e $MNOPQ$ são congruentes e o vértice $A$ é homólogo ao vértice $M$, $B$ é homólogo ao $N$, e assim por diante.  Também podemos dizer, por exemplo, que os vértices E e Q são correspondentes ou, ainda, que o lado d é correspondente ao lado p. Preste atenção no fato de que, ao nomear dois polígonos congruentes, é  convencional colocar os vértices homólogos na mesma ordem, para facilitar o estabelecimento desse tipo de relação.  
+
+Como você deve ter notado na atividade anterior, existe uma conexão natural entre a noção de congruência de figuras e as translações, rotações em torno de um ponto e reflexões em relação a uma reta. \textbf{Figuras congruentes sempre podem ser sobrepostas por meio de um ou mais desses movimentos, que são chamados de movimentos rígidos ou isometrias}.
+
+\clearpage
+\def\currentcolor{cor1}
+\begin{sugestions}{Exercício 1}
+{
+Nesta atividade é usado um recurso digital para que os alunos apliquem translações, rotações e reflexões, observem os resultados e decidam se duas figuras são congruentes ou não.
+
+A atividade pode ser feita em duplas de forma que um dos alunos dê os comandos e o outro os execute. Um desafio interessante é limitar a quantidade de comandos que podem ser dados ao executante. Espera-se que essa limitação leve a dupla a estabelecer conjecturas quanto aos vértices homólogos e que, com a prática, os alunos cheguem a perceber a vantagem de começar com uma translação de um vértice ao seu correspondente, para depois aplicar uma rotação e, caso necessário, uma reflexão.
+
+\tcbsubtitle{Exercício 2}
+
+A atividade pode ser realizada individualmente ou por grupos com quatro alunos em que, no item \titem{a)} cada um encontra um par e pinta com uma cor à sua escolha. Em seguida, os quatro podem fazer os itens \titem{b)} e \titem{c)} em conjunto. É importante dar liberdade aos alunos para que explorem a diversidade de movimentos que podem, em cada par, levar uma figura à outra e orientá-los para o uso correto dos termos translação, rotação e reflexão. No final da atividade, se houver tempo, a turma toda pode checar se restou algum par de figuras que não tenha sido citado por nenhum grupo.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Exercícios}
+{
+\exerciselist
+\begin{enumerate}
+\item Nos dois primeiros itens, as figuras apresentadas são congruentes e não vai restar dúvida: é possível sobrepô-las após alguns passos. No terceiro item, a congruência não se verifica.
+\item 
+\begin{enumerate}
+\item Há várias possibilidades. 
+\item Há várias possibilidades. As oito hastes ligadas ao centro do painel podem servir como referência para reconhecer diversos pares em que as figuras congruentes podem ser sobrepostas por movimento de rotação. No contorno do painel encontram-se figuras congruentes que podem ser sobrepostas por translações e outras por reflexões. 
+\item A figura (similar a uma flecha) destacada no item aparece na ponta de uma das oito hastes que partem do centro do painel. Figuras congruentes a ela são encontradas por meio de rotação, reflexão e até por translação. 
+\end{enumerate}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\marginpar{\vspace{-3em}}
+\begin{sugestions}{Exercício 3}
+{
+Deve-se orientar a turma no sentido de encontrar dois tipos de hexágonos: os três centrais, que podem ser sobrepostos por rotações de 120° em torno do centro da figura, e os outros seis, que podem ser sobrepostos por rotações de 60° em torno da figura. Ainda, temos seis quadriláteros congruentes que também se relacionam por rotações de 60°.  No entanto, alguns pares de figuras também podem ser sobrepostos por meio de reflexões em torno das diagonais do hexágono que dá o contorno externo da figura.
+
+\tcbsubtitle{Exercício 4}
+
+A ideia aqui é trazer, informalmente, a propriedade da manutenção da área de uma figura transladada, rotacionada ou refletida. O estudo do conceito de área está previsto desde os primeiros anos da escolaridade. A habilidade \textbf{EF03MA21} prevê a abordagem da medida de área relacionada à comparação por superposição de figuras. De fato, figuras que podem ser sobrepostas têm a mesma forma e tamanho e, portanto, têm a mesma área.   A partir dessa compreensão, nos dois itens recomenda-se, a exemplo das atividades anteriores, estimular os alunos a encontrar congruências entre os elementos que compõem as figuras dadas. Trata-se de reconhecer figuras que diferem por uma isometria e não de demonstrar que as figuras envolvidas são congruentes (mesmo que os alunos tenham habilidades com casos de congruência de triângulos ou conhecimento sobre áreas de figuras circulares). 
+
+No item \titem{a)}, se a turma precisar de ajuda,  pode-se sugerir aos alunos que tracem a reta pelos pontos $O$ e $M$, e procurem reconhecer translações (a translação que leva o ponto $O$ ao ponto $A$ e, em seguida, a que leva o ponto $O$ ao ponto $B$), de modo a concluir que os dois semicírculos hachurados encaixam-se nos semicírculos brancos do retângulo e que, afinal,  a área da parte hachurada é igual à área do retângulo. 
+
+No item \titem{b)} a sugestão é que os alunos dividam o retângulo original em quatro retângulos de igual largura, por meio do traçado de retas verticais. Cada parte hachurada é obtida por reflexão de uma parte branca em relação a uma dessas retas. Logo, a parte hachurada tem a mesma área que a parte branca.
+
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{2}
+\item Há dois tipos de hexágonos: os três centrais, que podem ser sobrepostos por rotações de $120^{\circ}$ em torno do centro da figura, e os outros seis, que podem ser sobrepostos por rotações de $60^{\circ}$ em torno da figura. Há. ainda, seis quadriláteros congruentes que também se relacionam por rotações de $60^{\circ}$.  
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{3}
+\item 
+\begin{enumerate}
+\item A área da parte hachurada é igual à área do retângulo. Conforme o enunciado da questão, o retângulo tem perímetro igual a 42cm e os segmentos $AM$, $MB$, $BC$ e $AD$ têm todos a mesma medida. Então o perímetro é formado pela soma de 6 segmentos de medida igual a $7$ cm e o retângulo tem lados $AB$ de $14$ cm e $BC$ de $7$ cm. Logo, a área da figura hachurada é igual a $14\text{ cm}\times7\text{ cm}=98\text{ cm\super{$2$}}$.
+\item A área da parte hachurada é igual à metade da área do retângulo; já que o retângulo tem $4$ cm de largura e $5$ cm de comprimento, a área da parte hachurada é igual a $10$ cm\super{$2$}.
+\end{enumerate}
+\end{enumerate}
+}{1}
+\end{answer}
+\exercise
+
+\begin{enumerate}
+\item No link a seguir, você vai usar o "teste da sobreposição" para verificar se pares de polígonos são congruentes: \url{https://www.geogebra.org/m/tcnywadc}.
+
+
+\item A cidade de Granada, na Espanha, abriga um complexo de palácios e fortalezas chamado Alhambra. Construída entre os séculos XI e XII, quando a Espanha esteve sob o domínio muçulmano, Alhambra é mundialmente conhecida por seus arabescos e mosaicos. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\linewidth]{transformacoes9}
+\end{figure}
+
+Na figura a seguir, você encontra um padrão similar àqueles dos mosaicos que adornam Alhambra: 
+
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.5\linewidth]{transformacoes10}
+\end{figure}
+
+\begin{enumerate}
+\item No padrão geométrico exibido, encontre quatro pares de figuras congruentes. Entre um par e outro, tente selecionar figuras com diferentes formatos! Você pode pintar as figuras de um mesmo par da mesma cor, usando a figura disponível no Anexo 2, ao final desta seção. 
+\item Para cada par de figuras que você selecionou, descreva o(s) movimento(s) que permitiria(m) sobrepor uma à outra. 
+\item Ainda, no Anexo 3, uma figura desse padrão geométrico está em destaque. Tente encontrar todas as figuras congruentes a ela e indique quais são os movimentos envolvidos em suas possíveis sobreposições. 
+\end{enumerate}
+
+
+\item Identifique, visualmente, na imagem a seguir, pelo menos dois pares de figuras congruentes. Então, descreva o movimento que permite sobrepor tais figuras
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.35\linewidth]{transformacoes11}
+\end{figure}
+
+\item Muitas vezes, encontrar figuras congruentes permite resolver de forma mais fácil e ágil alguns problemas geométricos que, de outra forma, teriam resolução longa ou complexa. Vamos ver?
+\begin{enumerate}
+\item \textit{(Fundamentos da Matemática Elementar, v. 9, 6ª edição, pág. 271-I, Exercício I.637 Adaptado)} Na figura a seguir, $O$ é ponto médio do segmento $DC$. Os segmentos $AM$, $MB$, $BC$ e $AD$ têm a mesma medida. Encontre a área hachurada, sabendo que o perímetro do retângulo $ABCD$ mede $42$ cm.  
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\linewidth]{transformacoes12}
+\end{figure} 
+
+\item \textit{(Obmep Nível I - 2012, questão 6 )} O retângulo a seguir, que foi recortado de uma folha de papel quadriculado, mede 4 cm de largura por 5 cm de altura. 
+ 
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.3\linewidth]{transformacoes13}
+\end{figure}
+
+Qual é a área da região cinzenta?
+\begin{enumerate}
+\item $10$ cm\super{2}. 
+\item $11$ cm\super{2}.
+\item $12{,}5$ cm\super{2}.
+\item $13$ cm\super{2}.
+\item $14{,}5$ cm\super{2}.
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\begin{paginatexto}{Seção 2 - Transformações isométricas: translações, rotações, reflexões}
+\subsection{Objetivos Específicos}
+\begin{itemize}
+\item Identificar e descrever cada uma das transformações isométricas, usando recursos diversos (malhas e recursos tecnológicos diversos), em diferentes contextos.
+\item Aplicar concretamente as transformações isométricas para construir figuras, em diversos contextos, utilizando diferentes tipos de recurso. 
+\item Aplicar composições de isometrias para construir figuras, em diversos contextos, utilizando diferentes tipos de recurso. 
+\end{itemize}
+
+\textbf{Quantidade de aulas previstas para a seção}: 06 horas/aula.
+
+\paragraph{Enriquecimento da discussão}
+A proposta da seção é tratar o tema a fim de propiciar o avanço da compreensão dos alunos no estudo de isometrias de modo gradual, a fim de que eles desenvolvam familiaridade e traquejo nas situações que envolvem essas transformações.  A princípio, não são dadas definições de translações, rotações e reflexões; mesmo assim, nas partes “Explorando” são oferecidos exemplos em que é possível identificar as transformações presentes. Além disso, algumas perguntas devem estimular a turma a discutir, a desenhar e a fazer esquemas para representar as isometrias. Em particular, na apresentação de translações e rotações deve ficar clara a associação com movimentos naturais da realidade. Elas são apresentadas com ricos exemplos baseados na azulejaria; trata-se de um bom terreno para nos restringirmos às translações e rotações: movimentos realizados exclusivamente no plano. As reflexões em relação a retas até aparecem nessa primeira abordagem, mas são trabalhadas de fato, posteriormente nesta mesma seção, por meio de vários exemplos de mandalas.
+
+\paragraph{Organização da turma}
+Recomenda-se que os alunos trabalhem em duplas ou em pequenos grupos e que sejam estimulados a se expressarem sobre cada situação apresentada. A socialização dos resultados deve ser organizada pelo professor. Espera-se imprimir uma dinâmica de trabalho que favoreça o envolvimento e a participação de todos. 
+
+\paragraph{Sobre as atividades da seção}
+São atividades para pôr a mão na massa, a depender das habilidades dos alunos. As atividades de reconhecimento servem como um diagnóstico da familiaridade dos alunos com os temas apresentados; em muitas delas são fornecidos anexos e os alunos poderão, desenhar, recortar e manipular as figuras; nesses momentos eles devem ser orientados a utilizar régua, esquadros, compasso e, até mesmo, artefatos concretos como hastes, varetas, palitos discos e espelhos. A partir do reconhecimento de que duas figuras congruentes diferem pela aplicação de uma translação ou rotação, convidamos o aluno a descrever tal isometria. No caso em que duas figuras estão relacionadas por translação, a descrição natural do movimento será feita por meio de flechas que ligam os vértices homólogos das figuras congruentes. No caso em que as figuras estão relacionadas por uma rotação, a descrição do movimento é feita por meio de arcos de circunferência, com centro em um ponto indicado, que ligam vértices homólogos.  
+
+Há também atividades em que os alunos serão convidados a analisar que transformação teria sido aplicada para levar uma figura a uma nova posição ou construir a imagem de uma figura dada por aplicação de uma isometria.
+
+\paragraph{Dificuldades}
+As dificuldades costumam aparecer quando as translações ou o eixo de reflexão são oblíquos. 
+
+Também é comum que apareçam dificuldade de reconhecer, descrever e construir figuras congruentes nos casos em que a figura original e sua imagem têm interseção.
+
+Outra dificuldade usual é descobrir o centro de rotação, assim como identificar rotação quando o centro está fora da figura.
+
+\end{paginatexto}
+
+\explore{Translações e rotações}\footnote{título modificado}
+
+
+
+Você conhece o artista brasileiro Athos Bulcão?
+
+Nascido no Catete, Rio de Janeiro, em 2 de julho de 1918, Athos foi um pintor, escultor e desenhista. Sua obra foi associada, no Brasil e no exterior, aos mosaicos em azulejo que produziu a partir da década de 1940, quando abandonou o curso de medicina para se dedicar à pintura. Nessa época, tornou-se assistente de Candido Portinari na construção do painel de São Francisco de Assis, na Igreja da Pampulha, em Belo Horizonte, marco da arquitetura moderna brasileira.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.24\linewidth]{transformacoes14}
+\end{figure}
+
+A azulejaria praticada por Athos Bulcão mescla a repetição de padrões e a aleatoriedade, criando um efeito de movimento e liberdade que lhe rendeu um lugar de destaque na arte brasileira do século XX. 
+
+O artista viveu em Brasília de 1958 até 2008 (ano de sua morte), contribuindo para fazer dessa cidade um museu a céu aberto. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.35\linewidth]{transformacoes15}
+\caption{Reproduções de padrões de azulejos criados por Athos Bulcão (Foto: Divulgação)}
+\label{}
+\end{figure}
+
+Analisando a obra de azulejaria de Athos Bulcão, podemos observar que os azulejos de um mesmo tipo – que apresentam formas congruentes - se relacionam usualmente por \textbf{translações} e \textbf{rotações}. Observe os azulejos em destaque: 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.425\linewidth]{transformacoes16}
+\hspace{2em}
+\includegraphics[width=.425\linewidth]{transformacoes17}
+\caption{Hospital das Forças Armadas INCOR, Brasília. (Foto: Edgard Cesar)}
+\label{}
+\end{figure}
+
+No primeiro par de azulejos em destaque, a sobreposição entre os azulejos pode ser feita por meio de uma translação horizontal, deslocando o da esquerda duas “unidades” para a direita. (Note que estamos considerando o lado do azulejo quadrado como unidade.) No segundo par de azulejos em destaque, eles podem ser sobrepostos rotacionando $90^{\circ}$ o azulejo da esquerda, no sentido anti-horário, em torno do ponto $O$.  (Ver destaque a seguir.)
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.35\linewidth]{transformacoes18}
+\end{figure}
+
+\begin{knowledge}
+Você pode conhecer mais sobre o artista e sua obra em: 
+\url{https://www.fundathos.org.br/}
+
+\end{knowledge}
+
+\clearpage
+\marginpar{\vspace{-1.25em}}
+\begin{objectives}{Translações e rotações na azulejaria de Athos Bulcão}
+{
+O objetivo específico a atingir aqui é o de identificar e descrever movimentos rígidos no plano. Em todos os itens o aluno é convidado a identificar e descrever translações ou rotações nas situações indicadas. A princípio, os alunos podem ficar livres para decidir qual é a posição inicial e qual a posição final da figura, mas, para facilitar o diálogo, pode ser combinado previamente com a turma, em cada destaque, que peça será movida (posição inicial) e qual será a posição final. Recomenda-se que o professor comece a usar os termos: figura transladada e figura rotacionada. Nos itens c e d, os alunos são convidados a aplicar rotações a uma figura e podem ser estimulados a prever resultados. 
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-2.5em}}
+\begin{sugestions}{Translações e rotações na azulejaria de Athos Bulcão}
+{
+\textbf{Material necessário}: Uma folha contendo o anexo 5, por dupla, nos itens \titem{a)} e \titem{b)}, e uma folha contendo o anexo 6 no item \titem{c)}.
+\begin{enumerate}[label=\titem{\alph*)}]
+\item A atividade pode ser realizada por duplas de alunos. Em primeiro lugar o professor deve estimulá-los a reconhecer o deslocamento ocorrido em cada caso (translação nos destaques 1 e 2 e rotação nos destaques 3 e 4). Se for necessário, um azulejo recortado do anexo 5 pode auxiliar a reconhecer o movimento que permite sobrepor uma peça do par à outra. Espera-se que os alunos identifiquem uma malha quadriculada no painel e a utilizem para descrever oralmente os movimentos contando casas para a direita ou esquerda, para cima ou para baixo no caso das translações. Por exemplo, “duas casas na vertical para baixo (ou para cima, conforme a referência)” no destaque 1 e “uma casa para a direita e duas para baixo” no destaque 2. Já para a descrição das translações nos destaques 1 e 2, espera-se que os alunos, com sugestão do professor se necessário, liguem os vértices homólogos dos quadrados; aqui há que levar em conta que é a observação da mudança de posição do desenho dentro do azulejo que permite estabelecer a correspondência entre vértices homólogos. A atividade pode ser bem explorada: os alunos podem ser levados a   observar que o comprimento, direção e sentido dos segmentos orientados não se alteram nas translações. Para os destaques 3 e 4, o professor pode, por meio de sugestão de algumas tentativas, levar a turma a perceber que não há movimento de translação que relacione as figuras do par. Em seguida, se houver necessidade, pode sugerir que o azulejo recortado seja pregado em uma haste (um palito ou um lápis) que com a ponta oposta fixada no ponto P, no destaque 3, seja girada até encontrar a figura final. No destaque 4, o aluno deve fixar a haste no vértice R do quadrado inicial e explorar as possibilidades de rotação até encontrar a figura final. 
+\end{enumerate}
+}{1}{1}
+\end{sugestions}
+\begin{sugestions}{Translações e rotações na azulejaria de Athos Bulcão}
+{
+\begin{enumerate}[label=\titem{\alph*)}]\setcounter{enumi}{1}
+\item As duplas de alunos devem ser estimuladas a descobrirem e descreverem translações e rotações que levam um azulejo do painel em outro. Depois as duplas podem expor suas escolhas para a turma toda.
+\item Se houver necessidade os alunos podem colocar uma tachinha no centro do quadrado ou simplesmente imaginar que há um pino ali.
+\item Já é hora de abstrair e os alunos podem ser levados a observar a figura estampada no azulejo e comparar com o que ocorreu no item anterior.
+\end{enumerate}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Translações e rotações na azulejaria de Athos Bulcão}
+{
+\begin{enumerate}
+\item Destaque 1: movimento de translação. Três casas na vertical para baixo (ou para cima, conforme a referência). 
+
+Destaque 2: movimento de translação (oblíqua) que corresponde a deslocar o azulejo uma casa para a direita e três casas para baixo (a ordem desses movimentos depende do que foi estabelecido na turma). Nos dois casos o movimento pode ser identificado de maneira concreta apoiando a figura original sobre uma régua; além disso as translações podem ser indicadas por meio de flechas -- segmentos orientados -- que associam os vértices da figura inicial aos seus correspondentes na figura final. 
+
+Destaque 3: a figura do lado esquerdo foi girada de um ângulo de $90^{\circ}$ em torno do ponto $P$ em sentido horário (ou a da direita foi girada de $90^{\circ}$ em sentido anti-horário). 
+
+Destaque 4: a figura do lado esquerdo foi girada de um ângulo de $90^{\circ}$ em torno do ponto $P$ em sentido horário (ou a da direita foi girada de $90^{\circ}$ em sentido anti-horário). Nos dois casos, as rotações podem ser indicadas por meio de arcos (inclusive orientados) que ligam um ponto da figura inicial ao ponto homólogo da figura final.
+
+\item Há muitas possibilidades.
+
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.95\linewidth]{transformacoes26}
+}
+
+\item Não. A figura no azulejo não se altera por rotações de $90^{\circ}$.  
+\end{enumerate}
+}{1}
+\end{answer}
+
+\begin{sugestions}{Mosaico tipo Escher com translações ou }
+{
+A obra de M.C. Escher é fonte riquíssima para explorar as transformações geométricas. O item \titem{a)} tem a função de apresentar a obra do artista para os alunos.  Os efeitos visuais dos mosaicos de Escher costumam impressionar os estudantes, que tendem a ficar bastante motivados ao observar que fazer um mosaico inspirado na obra do artista é algo acessível a partir dos conhecimentos geométricos que estão estudando. 
+
+Os itens \titem{a)} até \titem{d)}, podem ser realizados em casa. Então, em aula, após breve discussão sobre a pesquisa e sobre os vídeos, o item e deve ser discutido em profundidade. O professor deve ajudar os alunos a formular a diferença dos dois procedimentos construtivos da figura que forma o mosaico, mostrando que um deles está relacionado a rotações e outro a translações. Pode ser necessário ter os vídeos disponíveis para serem assistidos em aula.
+
+A partir dessa discussão, o item \titem{f)} pode ser proposto como um pequeno projeto, com um intervalo de tempo suficiente para que os alunos possam tirar qualquer dúvida que surja no processo. É importante atentar para um possível resultado inesperado: os alunos podem inverter involuntariamente o a face do molde que fica para cima ou para baixo ao usá-lo para desenhar o mosaico. Isso afetará o padrão produzido, que deixará de ser apenas de rotação ou de translação. (A reflexão pode acabar sendo incluída ou, então, o aluno pode acabar se perdendo ao usar, sem perceber, dois tipos de transformação.) Para evitar isso, é possível sugerir que eles trabalhem com papel cartão, que costuma ter uma face colorida e outra crua. Mas, caso aconteça, o professor pode chamar a atenção dos alunos para o fato de ser possível identificar que isso aconteceu apenas olhando o resultado.
+
+Organizar uma exposição com os mosaicos criados pelos estudantes pode ser excelente incentivo. 
+Vídeo extra para o professor: \url{https://www.youtube.com/watch?v=Vm4zLz1DtkM}
+}{1}{1}
+\end{sugestions}
+
+
+
+\begin{task}{Translações e rotações na azulejaria de Athos Bulcão}
+\begin{enumerate}
+\item Na fotografia a seguir você encontra o painel “Parada de descanso” (1985), de Athos Bulcão, que está no Parque da Cidade, em Brasília.  
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.3\linewidth]{transformacoes19}
+\end{figure}
+
+Em cada caso, reconheça se pode ser utilizada uma translação ou uma rotação para sobrepor os azulejos destacados em vermelho. Se pode ser utilizada uma translação, descreva-a por meio de palavras e também desenhando, no Anexo 5, flechas que ligam pontos correspondentes. Se puder ser usada uma rotação, descreva-a por meio de palavras e também desenhando, no Anexo 5, arcos, com centro apropriado, para ligar pontos correspondentes. 
+
+\begin{multicols}{2}
+\begin{itemize}
+\item Destaque 1
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.6\linewidth]{transformacoes20}
+\end{figure}
+
+\item Destaque 2
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.6\linewidth]{transformacoes21}
+\end{figure}
+\end{itemize}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item Destaque 3 (Dica: use o ponto P como referência!)
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.6\linewidth]{transformacoes22}
+\end{figure}
+
+\item Destaque 4 (use o ponto R como referência)
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.6\linewidth]{transformacoes23}
+\end{figure}
+\end{itemize}
+\end{multicols}
+
+\item Agora, no mesmo painel “Parada de Descanso”, escolha um par de azulejos e descreva a translação ou a rotação que permite sobrepor um ao outro. Use o Anexo 5 para desenhar. 
+
+
+\item Agora, você vai usar um raciocínio diferente. Em vez de comparar rotações de azulejos em um painel já montado, como proposto anteriormente, você vai desenhar rotações sucessivas do azulejo quadrado dado na figura. Você deverá aplicar três rotações de 90° no sentido horário, em torno de seu ponto central, desenhando-nas nos quadrados em branco. Use o Anexo 6 para desenhar os azulejos rotacionados. A malha quadriculada será útil nesse processo.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.7\linewidth]{transformacoes24}
+\end{figure}
+
+\item Se você fizer o mesmo que no item anterior com este outro azulejo, o efeito será o mesmo? Comente.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.2\linewidth]{transformacoes25}
+\end{figure}
+\end{enumerate}
+
+\end{task}
+
+\begin{task}{Mosaico tipo Escher com translações ou rotações}
+\begin{enumerate}
+\item Outro artista que se valeu da Geometria para criar mosaicos fantásticos foi o holandês M.C. Escher (1898 – 1972). Caso não conheça, faça uma rápida busca na internet pelos mosaicos criados por esse artista.
+
+\item Você também pode fazer um mosaico inspirado no trabalho de M. C. Escher de uma forma bastante simples. Veja o vídeo a seguir: \url{https://www.youtube.com/watch?v=Ca5J_moee7U}
+
+\item No mosaico criado pelo processo descrito no vídeo, duas figuras adjacentes se relacionam por meio de translações ou rotações?
+
+\item Agora, assista a essa sequência de vídeos: 
+\begin{itemize}
+\item Parte 1: \url{https://www.youtube.com/watch?v=TLWy3TZ-91o}
+\item Parte 2: \url{https://www.youtube.com/watch?v=UBW5frsWiSI}
+\item Parte 3: \url{https://www.youtube.com/watch?v=2IyOxI87GvY}
+\end{itemize}
+
+\item Nessa última sequência de vídeos, ao criar a figura base para o mosaico, qual foi a diferença essencial com relação ao processo mostrado no primeiro vídeo? Como essa diferença afeta o produto final?
+
+\item Crie seu próprio mosaico usando um dos processos apresentados. Você vai precisar de um papel de boa gramatura, de fita adesiva e material para desenhar e colorir. Mãos à obra!
+\end{enumerate}
+\end{task}
+
+\arrange{Translações e rotações}
+
+Vimos que dois azulejos idênticos presentes em um painel criado por Athos Bulcão puderam ser sobrepostos por meio de \textbf{translações} ou \textbf{rotações} que, assim como as reflexões em relação a uma reta (que veremos mais adiante), são \textbf{isometrias}. 
+
+A palavra isometria vem do grego e significa \textit{mesma medida}. Intuitivamente, podemos entender as isometrias como \textbf{movimentos rígidos}, isto é, que não deformam, não ampliam e nem diminuem as figuras geométricas sobre as quais são aplicadas, apenas modificam sua posição no plano. Em outras palavras, as isometrias preservam as distâncias entre os pontos das figuras. Por exemplo, tomemos os pentágonos congruentes $ABCDE$ e $A'B'C'D'E'$, mostrados na \fref{transformacoes27}, que se relacionam por meio de uma translação. Tomando quaisquer dois pontos $P$ e $Q$, na região interior ao primeiro pentágono, e seus correspondentes $P'$ e $Q'$, na região interior ao segundo pentágono, teremos que a distância entre $P$ e $Q$ é igual à distância entre $P'$ e $Q'$. Em linguagem matemática, dizemos que $d(P,Q) = d(P',Q')$.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.7\linewidth]{transformacoes27}
+\caption{}
+\label{transformacoes27}
+\end{figure}
+
+A preservação da distância entre pontos tem uma série de implicações, tais como a preservação das medidas dos ângulos e das medidas de área, por exemplo. 
+
+\subsection{Translações}
+
+Na atividade 1 do “Explorando”, você indicou \textbf{translações}, nos destaques 1 e 2, ligando cada vértice de um azulejo por meio de uma flecha – segmento orientado – ao seu correspondente na figura final ou figura transladada. Observe que todos os segmentos desenhados no destaque abaixo, por exemplo, têm mesma direção, mesmo sentido e mesmo comprimento.  Dizemos que essas flechas (\fref{transformacoes28}) representam um mesmo \textbf{vetor}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.5\linewidth]{transformacoes28}
+\caption{}
+\label{transformacoes28}
+\end{figure}
+
+A ideia mais intuitiva que podemos usar para compreender o que é um vetor é a de uma “flecha” (por isso, para designá-los, usamos uma notação em forma de flecha). Só que um vetor tem direção, sentido e comprimento fixos, mas seu “ponto inicial” pode ser colocado em qualquer lugar do plano, dando origem a vários representantes diferentes. Observe os exemplos na \fref{transformacoes29}.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.9\linewidth]{transformacoes29}
+\caption{}
+\label{transformacoes29}
+\end{figure}
+
+Na figura, podemos considerar que $\overrightarrow{AB}$, $\overrightarrow{m}$, $\overrightarrow{u}$, $\overrightarrow{PQ}$ e $\overrightarrow{SS'}$ são diferentes representações do mesmo vetor, pois têm mesma direção, sentido e comprimento. Mas $\overrightarrow{w}$ é um vetor diferente, pois tem mesmo comprimento e mesma direção de $\overrightarrow{AB}$, mas sentido oposto. (Dizemos que $\overrightarrow{AB}$ e $\overrightarrow{w}$ são vetores opostos.) Já $\overrightarrow{p}$ tem apenas o mesmo comprimento de $\overrightarrow{AB}$, mas sua direção é diferente. 
+
+\begin{knowledge}
+O conceito de vetor é importantíssimo não apenas na Matemática, mas também na Física, em que as grandezas que apresentam direção e sentido são, inclusive, chamadas de \textit{grandezas vetoriais}. 
+
+O Livro Aberto de Matemática tem um capítulo dedicado exclusivamente ao estudo dos vetores. Assim, para aprofundar seu entendimento sobre o assunto, acesse-o!
+\end{knowledge}
+
+Uma translação relaciona-se à ideia de um movimento retilíneo, que fica determinado por sua \textit{direção}, \textit{seu sentido} e \textit{seu comprimento}. Por isso, podemos usar vetores para identificar (e descrever) as translações. 
+
+Se tomarmos duas figuras congruentes que se relacionam por uma translação, então pares de pontos correspondentes determinarão sempre o mesmo vetor (ou seu oposto, a depender da orientação do segmento que os têm por extremidade). No painel da \fref{transformacoes30}, por exemplo, os pontos correspondentes das figuras contidas em dois dos azulejos determinam o mesmo vetor $\overrightarrow{v}$. Nesse caso, podemos dizer que uma das figuras (a que está mais abaixo, à direita) é a imagem da outra por uma translação de vetor $\overrightarrow{v}$.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.8\linewidth]{transformacoes30}
+\caption{Igrejinha de N. S. de Fátima, Athos Bulcão, 1957}
+\label{transformacoes30}
+\end{figure}
+
+\subsection{Rotações}
+
+
+Uma rotação, por sua vez, relaciona-se à ideia de um movimento circular. Na Atividade 1 do “Explorando”, nos destaques 3 e 4, vimos exemplos de rotações. Para representar a rotação que ocorre em um deles, podemos ligar pontos do azulejo inicial aos pontos correspondentes no azulejo final por meio de arcos, com centro no ponto $O$, como na \fref{transformacoes31}Figura 5. É importante destacar que, se a rotação leva um ponto A em um ponto $A'$ então o comprimento do segmento $OA$ é igual ao comprimento do segmento $OA'$.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.8\linewidth]{transformacoes31}
+\caption{}
+\label{transformacoes31}
+\end{figure}
+
+Uma rotação fica determinada, portanto, por um centro, por um ângulo “de giro” e por um sentido, que pode ser horário ou anti-horário.  Por simplicidade de linguagem, podemos adotar a ideia de \textbf{ângulo orientado}, com sinal positivo para o sentido anti-horário e com sinal negativo para o sentido horário, como se vê na \fref{transformacoes32}. 
+
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.8\linewidth]{transformacoes32}
+\caption{}
+\label{transformacoes32}
+\end{figure}
+
+Dado um ponto $P$ qualquer em uma figura plana, sobre a qual é aplicada uma rotação de centro $O$ (distinto de $P$) e ângulo $\theta$, o correspondente de P por essa rotação será o ponto P’ pertencente à circunferência de centro $O$ e raio $\overline{OP}$, de tal modo que o ângulo orientado $POP'$ seja igual a $\theta$. 
+Veja o exemplo a seguir (\fref{transformacoes33}), em que o quadrado $KLMN$ é rotacionado de $45^{\circ}$ em torno do ponto $O$. O resultado é o quadrado $K'L'M'N'$. Observe que $K$ e $K'$, por exemplo, pertencem à mesma circunferência de centro $O$ e raio $\overline{OK}$, sendo que o ângulo orientado $KOK'$ mede $45^{\circ}$. O mesmo acontece com qualquer par de pontos homólogos; $M$ e $M'$ pertencem à circunferência de centro $O$ e raio $\overline{OM}$ (observe que esse segmento é diferente de $\overline{OK}$) e o ângulo orientado $MOM'$ também mede $45^{\circ}$.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\linewidth]{transformacoes33}
+\caption{}
+\label{transformacoes33}
+\end{figure}
+
+
+Veja outro exemplo na \fref{transformacoes34}, baseado em um painel de Athos Bulcão. O azulejo do canto inferior direito pode ser visto como uma rotação de centro C e ângulo $-270^{\circ}$ do azulejo do canto superior direito.
+
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.75\linewidth]{transformacoes34}
+\caption{}
+\label{transformacoes34}
+\end{figure}
+
+Observe, nesse último exemplo, que o ponto C está sobre a figura original (é um de seus vértices). O centro, quando está sobre a figura em que a rotação é aplicada, é o único de seus pontos que fica fixo.
+
+\clearpage
+\def\currentcolor{cor1}
+\marginpar{\vspace{-.5em}}
+\begin{sugestions}{Exercícios}
+{
+Vários dos exercícios aqui propostas pedem ao aluno que identifique e descreva translações e /ou rotações e contemplam, portanto, o objetivo específico 1 desta seção. Nos exercícios 2, 7 e 8 os alunos são convidados a construir as imagens de figuras dadas por translações e rotações, o que contribui para atingir o objetivo específico 2. O exercício 10 trata da composição dessas isometrias e está relacionada ao objetivo específico 3, estabelecido no início da seção.   
+
+\tcbsubtitle{Exercício 1}
+
+Em cada item, o estudante deve indicar o vetor por meio de vértices homólogos dos polígonos congruentes. Alguns alunos, podem optar por desenhar representantes do vetor que define cada translação. Descrições diferentes podem estar igualmente corretas, mas é importante esclarecer aos alunos que a translação fica descrita por um único representante do vetor que a define. 
+
+Alguma dificuldade pode surgir no item \titem{c)}, em que a figura transladada contém partes da figura original.
+Chame a atenção dos alunos para o fato de que o vetor que define a translação do item \titem{d)} é oposto ao do item \titem{a)}. Na verdade, a translação do item \titem{d)} é a operação inversa da translação do item \titem{a)}. 
+
+\tcbsubtitle{Exercício 2}
+
+Aqui temos um setor circular e os estudantes devem observar que o formato do arco de circunferência fica mantido por translações. Estimule os alunos a marcarem o ponto homólogo do centro do setor e os homólogos de suas extremidades, isto é, dos pontos $A$ e $B$; em seguida, os alunos devem usar compasso para desenhar os arcos das figuras transladas.  A translação pelo vetor $\overrightarrow{w}$  decerto não gerará dúvidas, mas a translação pelo vetor  $\overrightarrow{v}$  pode apresentar mais dificuldade, por se tratar de vetor oblíquo e porque a figura transladada ocupará partes do plano já ocupadas pela figura original.  
+\tcbsubtitle{Exercício 3}
+
+Recomenda-se voltar à questão 1 com a turma para comparar com o que aconteceu nos itens \titem{a)} e \titem{d)}. Isso dará ideia de que o vetor que define a translação é o vetor oposto àquele que define a translação inversa. 
+}{1}{1}
+\end{sugestions}
+\marginpar{\vspace{-1.5em}}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item Possibilidade: $\overrightarrow{QQ'}$
+\item Possibilidade: $\overrightarrow{QQ''}$
+\item Possibilidade: $\overrightarrow{Q''Q}$
+\item Possibilidade: $\overrightarrow{Q'Q'}$
+\end{enumerate}
+\end{enumerate}
+}{1}
+\end{answer}
+\marginpar{\vspace{-.75em}}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{1}
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.7\linewidth]{transformacoes43}
+}
+\item Pelo vetor oposto $\overrightarrow{QP}$
+\end{enumerate}
+}{0}
+\end{answer}
+\begin{sugestions}{Exercício 4}
+{
+Recomenda-se chamar a atenção dos alunos para as posições dos pontos $B$ e $B'$ na malha quadriculada. A partir do traçado dos raios $PB$ e $PB'$ fica claro que a rotação é de $90^{\circ}$ em sentido horário, ou seja, o ângulo de rotação é $-90^{\circ}$.
+
+\tcbsubtitle{Exercício 5}
+
+Aqui é interessante relembrar ou introduzir a noção de que o centro de uma circunferência pertence à mediatriz do segmento dado por dois pontos quaisquer sobre ela. Assim o centro será encontrado na interseção de mediatrizes de segmentos formados por pontos homólogos.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{3}
+\item $\hat{BPB'}$, que mede $90^{\circ}$
+
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.8\linewidth]{transformacoes44}
+}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Exercício 6}
+{
+Uma rotação de 180° em torno do ponto médio do lado comum aos azulejos do par leva um azulejo no outro
+
+\tcbsubtitle{Exercício 7}
+
+A rotação de 90° em sentido horário do quadrado que emoldura a figura não deve apresentar dificuldade. No entanto, recomenda-se chamar a atenção dos alunos para o fato de que a rotação da figura desenhada dentro do quadrado também vai sofrer rotação e resultar em uma figura congruente a ela. Eles devem ficar atentos para que a rotação mantém o paralelismo entre segmentos e os lados do quadrado, mantém ângulos e comprimentos.    
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{5}
+\item Rotação de $180^{\circ}$ em tono do ponto médio do lado comum aos azulejos.
+
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.8\linewidth]{transformacoes45}
+}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Exercício 8}
+{
+A figura obtida será congruente à figura original e, portanto, deve-se ter atenção para a manutenção dos ângulos (pode-se recomendar que comecem pelos ângulos retos) e dos comprimentos da figura original.
+
+\tcbsubtitle{Exercício 9}
+Recomenda-se levar os alunos a concluírem, informalmente, que uma figura rotacionada em sentido anti-horário deve ser rotacionada em sentido horário para voltar à posição original. Com mesmo centro e ângulo $-\alpha$. 
+
+\tcbsubtitle{Exercício 10}
+Metade da classe pode fazer primeiro a translação e depois a rotação e a outra metade pode fazer o contrário. 
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{7}
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.4\linewidth]{transformacoes46}
+}
+
+\item Rotação com o mesmo centro e ângulo $-\alpha$
+
+
+\item Não são obtidas as mesmas imagens ao trocar a ordem da aplicação das isometrias citadas. 
+\end{enumerate}
+
+\begin{multicols}{2}
+\centering
+Rotação seguida de translação:
+
+\includegraphics[height=5cm]{transformacoes47}
+
+\columnbreak
+
+Translação seguida de rotação:
+
+\includegraphics[height=5cm]{transformacoes48}
+\end{multicols}
+}{1}
+\end{answer}
+\exercise
+
+
+\begin{enumerate}
+\item Considere o trio de polígonos congruentes. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.7\linewidth]{transformacoes35}
+\end{figure}
+
+Mencionando os vetores pertinentes, descreva a translação que leva
+\begin{enumerate}
+\item $QRSTU$ em $Q'R'S'T'U'$. 
+\item $QRSTU$ em $Q''R''S''T''U''$.
+\item $Q''R''S''T''U''$ em $Q'R'S'T'U'$.
+\item $Q'R'S'T'U'$ em $QRSTU$.
+
+\end{enumerate}
+
+\item Utilize o Anexo 7 para desenhar o resultado da translação do setor circular por $\overrightarrow{w}$ e por $\overrightarrow{v}$.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.8\linewidth]{transformacoes36}
+\end{figure}
+
+\item Sabe-se que duas figuras congruentes $A$ e $B$ são tais que $B$ é a translação de $A$ pelo vetor $\overrightarrow{PQ}$. Nesse caso, $A$ é a translação de $B$ por qual vetor?
+
+\item O triângulo $A'B'C'$ é resultado de uma rotação com centro em $P$ do triângulo $ABC$. Qual é o ângulo de rotação? Lembre-se de descrever o sentido da rotação ou de estabelecer um ângulo orientado, cujo sinal indica o sentido.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.7\linewidth]{transformacoes37}
+\end{figure}
+
+\item Considere os quadrados $PATO$ e $P'A'T'O'$, que é sua imagem por uma rotação. Se $P$ e $P'$ são pontos correspondentes, bem como $A$ e $A'$, $T$ e $T'$, $O$ e $O'$, então você consegue descobrir o centro da rotação? Dica: lembre-se que um ponto e sua rotação então ambos na mesma circunferência... Então, se pergunte: dados dois pontos de uma mesma circunferência, o que você sabe sobre a localização do centro? Use o Anexo 8 para fazer construções com régua e compasso. Utilizar esses instrumentos é o melhor modo de descobrir o centro da rotação.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.7\linewidth]{transformacoes38}
+\end{figure}
+
+
+\item Considere, mais uma vez, o painel “Parada de descanso” (1985), de Athos Bulcão, que está no Parque da Cidade, em Brasília. Descreva a rotação que permite sobrepor os dois azulejos destacados em vermelho. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.45\linewidth]{transformacoes39}
+\end{figure}
+
+
+\item Utilize o Anexo 9 para desenhar o resultado da rotação de centro $P$ e ângulo $-90^{\circ}$ aplicada sobre a figura dada. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.55\linewidth]{transformacoes40}
+\end{figure}
+
+\needspace{4em}
+
+\item Utilize o Anexo 10 para desenhar o resultado da rotação de centro $O$ e ângulo $180^{\circ}$. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.6\linewidth]{transformacoes41}
+\end{figure}
+
+\item Sabe-se que duas figuras congruentes $A$ e $B$ são tais que $B$ é a rotação de centro $O$ e ângulo $\alpha$ da figura $A$. Nesse caso, $A$ é a rotação da figura $B$ com qual centro e de qual ângulo?
+
+
+\item Considere a rotação de centro $R$ e ângulo $90^{\circ}$ e a translação pelo vetor $\overrightarrow{v}$. Aline rotacionou o hexágono em forma de $L$, despois o transladou. Cláudia transladou esse mesmo hexágono, depois o rotacionou. Elas obtiveram o mesmo resultado? Justifique.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.6\linewidth]{transformacoes42}
+\end{figure}
+\end{enumerate}
+
+
+\explore{Reflexões em relação a uma reta}
+
+Iniciamos este capítulo explorando o jogo eletrônico Tetris, que apresenta sete peças distintas, que, conforme vão “caindo” do alto da tela, devem ser movimentadas – com translações e rotações – de modo a se encaixarem perfeitamente nos espaços vazios deixados pelas peças anteriores, na parte de baixo da tela. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\linewidth]{transformacoes1}
+\caption{Tela do jogo Tetris}
+\label{}
+\end{figure}
+
+Dentre as sete pelas do jogo, há dois pares de figuras congruentes: as peças S e Z e as peças L e R. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.6\linewidth]{transformacoes2}
+\caption{As sete peças do jogo Tetris}
+\label{}
+\end{figure}
+
+Embora S e Z sejam figuras congruentes, elas não se equivalem no jogo – ou seja, não são capazes de preencher os mesmos espaços. Isso acontece porque tais peças não podem ser sobrepostas usando translações ou rotações, os movimentos permitidos no jogo. Se fossem objetos físicos, não figuras geométricas abstratas, para sobrepor a peça S à peça Z do Tetris, teríamos de “retirá-la do plano”, virando-a no espaço, para só então colocá-la novamente sobre o plano, invertendo a face que fica visível. O mesmo vale em relação às peças R e L.
+
+Figuras congruentes com essa propriedade – que não admitem sobreposição por rotações ou translações – são chamadas de figuras \textbf{enantimorfas}.  Para sobrepor figuras enantimorfas precisamos de um outro tipo de isometria, chamada \textbf{reflexão em relação a uma reta}. 
+	
+A ideia mais intuitiva que podemos ter acerca desse tipo de reflexão vem da nossa experiência com espelhos planos – “naturais”, como aqueles formados pelas águas tranquilas de um lago, ou os de vidro, feitos pelo homem, por exemplo. Em ambos os casos, são produzidas formas congruentes às originais, mas que, em geral, não poderiam ser sobrepostas por translações ou rotações. Em outras palavras, um espelho geralmente forma pares de figuras enantimorfas. 
+	
+Diversas formas de arte exploram intensamente as reflexões em relação a uma reta. Por exemplo, a fotografia de Joanna Lemanska, tirada na cidade de Nova York e apresentada na \fref{transformacoes49}, explora o efeito de um espelho d’água “acidental”, que duplica a paisagem urbana.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{transformacoes49}
+\caption{Disponível em: \url{http://www.misscoolpics.com/photographs\#/6-days-in-new-york/}. Acesso em setembro de 2020}
+\label{transformacoes49}
+\end{figure}
+
+Reflexões também podem relacionar pares de figuras que não são enantimorfas. Por exemplo, as figuras destacadas em verde, na mandala da \fref{transformacoes50}, podem ser sobrepostas por meio de uma rotação de $45^{\circ}$ em torno do ponto central da mandala.  Mas também podemos observar que uma dessas figuras é a reflexão da outra em relação à reta $r$.
+\clearpage
+\begin{objectives}{Reflexões em relação a uma reta}
+{
+As atividades deste bloco devem favorecer a familiarização dos alunos com as reflexões em relação a retas, identificando-as e descrevendo-as; ou seja, devem contemplar o objetivo específico 1 desta seção. 
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Reflexões em relação a uma reta}
+{
+\begin{itemize}
+\item Item \titem{a)}: Aqui os alunos devem separar as figuras em dois conjuntos distintos de modo que em cada um deles todos os pentágonos correspondam-se por movimentos rígidos do plano: translações, rotações ou compostas dessas isometrias. $A$ ideia principal é que duas figuras que estejam em conjuntos distintos são enantimorfas, ou seja não se correspondem por translações e rotações, mas somente por reflexões por uma reta. Pode-se orientar a turma a considerar a figura A e imaginar as possibilidades de translações e rotações que levem A às outras figuras em ordem alfabética. Logo, os alunos vão descobrir que o pentágono $E$ não está relacionado a $A$ por um desses movimentos, mas, sim, por meio de reflexão em relação a uma reta. 
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Reflexões em relação a uma reta}
+{
+\begin{enumerate}
+\item Um conjunto é ${A, B, C, D, G}$ e o outro é ${E, F, H}$. 
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Reflexões em relação a uma reta}
+{
+\begin{itemize}[wide]
+\item Item \titem{c)}: Ao dobrar a folha fazendo com que os pontos $A$ e $B$ coincidam, o vinco corresponde ao eixo de reflexão dos dois pontos. Aqui pode-se orientar os alunos a traçarem o segmento AB, a reta onde fizeram a dobra e estimulá-los a descobrir o ângulo entre eles e medidas do segmento. Os alunos devem concluir que $AB$ é perpendicular ao eixo de reflexão e fica dividido ao meio por ele.  
+
+\item Item \titem{d)}: Há várias possibilidades. Duplas de alunos podem escolher pares de figuras que se relacionam por reflexão e depois, em plenária, podem comparar as respostas. É interessante estimular a turma a procurar, na mandala, pares enantimorfos, ou seja, figuras que se relacionam por reflexão em relação à reta dada, mas não por translações ou rotações.
+
+\item Item \titem{e)}: Esta atividade complementa a anterior e amplia a discussão sobre quais pares são relacionados por movimentos rígidos do plano e quais não são. A turma deve concluir que somente as figuras que são cortadas pela reta $r$ geram pares de figuras enantimorfas.  
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Reflexões em relação a uma reta}
+{
+\begin{enumerate}\setcounter{enumi}{1}
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.95\linewidth]{transformacoes53}
+}
+
+\item O vinco é mediatriz do segmento AB.
+\item Há várias possibilidades. 
+\item Não.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Reflexões em relação a uma reta}
+{
+\begin{itemize}
+\item Item \titem{f)}: Há várias possibilidades. Cada reta que liga o centro da mandala a qualquer ponta de uma estrela é eixo de reflexão de figuras enantimorfas. Os alunos devem representar a reflexão construindo o segmento que une um par de pontos correspondentes. Podem também verificar que a reta de reflexão é mediatriz desse segmento. 
+
+\item Item \titem{g} Sugerimos ao professor que avalie se é o caso de remeter essa atividade para casa ou se, pelo contrário, ele próprio gostaria de projetar o vídeo para que todos assistam juntos. 
+
+Como uma peça expressiva/artística, o vídeo pode ter múltiplas interpretações, mas, para aqueles que conhecem o conteúdo da série (muito popular entre 2019 e 2020), o uso das reflexões, produzindo imagens com padrões complexos, pode remeter à própria complexidade da trama, que lida com viagens no tempo e com a ideia de universos paralelos, que apresentam também algum tipo de “espelhamento”. 
+
+Seja como for, o objetivo aqui é refletir sobre o uso expressivo das transformações.
+\end{itemize}
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Reflexões em relação a uma reta}
+{\begin{enumerate}\setcounter{enumi}{5}
+\item Há várias possibilidades.
+\end{enumerate}
+}{1}
+\end{answer}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.5\linewidth]{transformacoes50}
+\caption{}
+\label{transformacoes50}
+\end{figure}
+
+\begin{task}{Reflexões em relação a uma reta}
+
+\begin{enumerate}
+\item Todos os polígonos a seguir são congruentes. Separe-os em dois conjuntos, de modo que todo elemento de um deles faça um par de figuras enantimorfas com qualquer elemento do outro.  
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.5\linewidth]{transformacoes51}
+\end{figure}
+
+\item Na fotografia de Joanna Lemanska, identifique e desenhe a reta de reflexão, isto é, a reta que “funciona como espelho” entre os objetos e suas imagens. Use o Anexo 11 para desenhar essa reta.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.8\linewidth]{transformacoes49}
+\end{figure}
+
+\item Pegue uma folha de papel e, sobre ela, marque dois pontos distintos quaisquer $A$ e $B$. Então, dobre a folha de modo a sobrepor os pontos $A$ e $B$. Usando a noção de reflexão em relação a uma reta, descreva a relação entre os pontos $A$ e $B$ e a reta representada pelo vinco.
+
+\item Na mandala, selecione pelo menos mais três outros pares de figuras (que não cruzem a reta $r$) que podem ser relacionados por meio de uma reflexão em relação à reta $r$. Use o Anexo 12 para colorir os pares de figuras escolhidas.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.5\linewidth]{transformacoes50}
+\end{figure}
+
+\item Os pares de figuras que você selecionou no item anterior eram enantimorfos? Se não eram, indique rotações ou translações que permitiriam sobrepô-las.
+
+\item Na mandala a seguir encontre um par de figuras enantimorfas e indique a reta de reflexão $r$. Marque pares de pontos $A$ e $A'$ que se correspondem pela reflexão e construa o segmento $AA'$. Verifique que $AA'$ é perpendicular à reta $r$ e fica dividido ao meio por ela. Use o Anexo 13 para fazer as construções necessárias.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\linewidth]{transformacoes52}
+\end{figure}
+
+\item Assista à abertura de uma das temporadas da série de suspense/ficção científica Dark, criada por Baran bo Odar e Jantje Friese. Depois, escreva um breve texto, descrevendo como as reflexões com relação a uma reta são utilizadas nessa abertura e qual é o efeito expressivo que ela produz. O vídeo está disponível aqui: \url{youtube.com/watch?v=Nu56ofHJgr0}. 
+\end{enumerate}
+
+\end{task}
+
+
+\arrange{Reflexões em relação a uma reta}
+
+As reflexões em relação a uma reta associam-se à noção intuitiva de espelhamento, podendo produzir pares de figuras enantimorfas (\fref{transformacoes54}) ou não (\fref{transformacoes55}). 
+
+\begin{multicols}{2}
+\begin{figure}[H]
+\centering
+
+\includegraphics[height=4cm]{transformacoes54}
+\caption{}
+\label{transformacoes54}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[height=4cm]{transformacoes55}
+\caption{}
+\label{transformacoes55}
+\end{figure}
+\end{multicols}
+                      
+Você já trabalhou com a mandala da \fref{transformacoes56} em uma atividade proposta anteriormente. Nela, o segmento AA’ liga pontos correspondentes dos triângulos destacados em vermelho. Esses triângulos se relacionam por uma reflexão em relação à reta r. O segmento AA’ é perpendicular a essa reta e fica dividido ao meio por ela. Isso sempre acontece e é a partir dessa propriedade que podemos escrever a definição a seguir. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\linewidth]{transformacoes56}
+\caption{}
+\label{transformacoes56}
+\end{figure}
+
+Seja P um ponto qualquer em uma figura plana, sobre a qual é aplicada uma reflexão em relação a uma reta $m$, o correspondente de $P$ por essa reflexão será o ponto $P'$, de tal modo que a reta m seja a mediatriz de $\overline{PP'}$ (\fref{transformacoes57}). A única exceção vale para o caso de $P$ estar contido na reta $m$. Se for assim, então $P = P'$ (\fref{transformacoes58}).
+ 
+\begin{multicols}{2}
+\begin{figure}[H]
+\centering
+
+\includegraphics[height=3.75cm]{transformacoes57}
+\caption{}
+\label{transformacoes57}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[height=3.75cm]{transformacoes58}
+\caption{}
+\label{transformacoes58}
+\end{figure}
+\end{multicols}
+
+A reta em relação à qual ocorre a reflexão é comumente chamada de eixo de reflexão.
+
+\clearpage
+\def\currentcolor{cor1}
+\begin{objectives}{Exercícios}
+{
+Os exercícios 1 e 2 deste bloco são propostas de identificação e descrição de reflexões e, portanto, contribuem para alcançar o objetivo específico 1 da seção. No exercício 3, pede-se para aplicar reflexões e, na 4, compostas delas para construir figuras refletidas; elas contribuem para atingir os objetivos específicos 2 e 3, respectivamente.   
+}{1}{1}
+\end{objectives}
+\marginpar{\vspace{-2.5em}}
+\begin{sugestions}{Exercício 1}
+{
+Somente em $A$ e $B$ é possível reconhecer reflexão. Esta é uma questão de reconhecimento visual e não se trata de determinar o eixo de reflexão. Em $C$, as figuras associam-se por translação; em $D$, por translação seguida de rotação. 
+
+\tcbsubtitle{Exercício 2}
+
+Os alunos deverão lembrar que, conforme a definição de reflexão em relação a uma reta, o eixo de reflexão é mediatriz do segmento formado por um par de vértices homólogos. Assim sendo, após reconhecer visualmente que as figuras estão associadas por reflexão e identificar os pares de vértices homólogos,  basta traçar o segmento que os une e, em seguida sua mediatriz $r$; verifica-se que $r$ é mediatriz do segmento que une outros dois pontos correspondentes quaisquer e, portanto, ela é o eixo de reflexão. Os itens $b$ e $c$ podem apresentar dificuldades, pois o item b tem um ponto fixo sobre o eixo de reflexão $e$, no item \titem{c)}, há partes da figura refletida que ocupam espaços já ocupados pela figura original.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}
+\item Somente em $A$ e $B$.
+\item 
+\begin{enumerate}
+\begin{multicols}{2}
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.5\linewidth]{transformacoes67}
+}
+
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.5\linewidth]{transformacoes68}
+}
+\end{multicols}
+
+\item\item[] \adjustbox{valign=t}
+{
+\includegraphics[width=.25\linewidth]{transformacoes69}
+}
+\end{enumerate}
+\end{enumerate}
+}{1}
+\end{answer}
+
+\begin{sugestions}{Exercício 3}
+{
+Para as construções, os alunos devem usar a definição, isto é: o eixo de reflexão é mediatriz do segmento formado por um par de vértices homólogos. Assim sendo, no item a basta traçar a perpendicular a r por cada vértice da figura original e marcar nela o vértice corresponde equidistante do vértice da figura original. No item b, o eixo de reflexão é a mediatriz dos segmentos que ligam os pontos correspondentes já marcados ($MM'$, $NN'$, $PP'$). A partir daí os outros vértices podem ser encontrados como no item a. Nos dois casos é preciso usar cores marcantes, que permitam identificar a figura refletida. 
+
+\tcbsubtitle{Exercício 4}
+
+Os alunos devem ser estimulados a testar, em malha quadriculada, possibilidades para a situação proposta em que duas reflexões são aplicadas sucessivamente, lembrando que pontos refletidos em relação a uma reta mantêm posição ortogonal a ela.  
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{2}
+\item
+\begin{enumerate}
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.8\linewidth]{transformacoes70}
+}
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.7\linewidth]{transformacoes71}
+}
+\end{enumerate}
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{sugestions}{Exercício 5}
+{
+Antes de conduzir esta atividade, pode ser interessante assistir ao vídeo a seguir, em que o processo da construção de mosaicos por reflexão é explicado em detalhes: \url{https://www.youtube.com/watch?v=ZHDkBJP7OlQ}.
+
+\tcbsubtitle{Exercício 6}
+
+A atividade proposta é composta de 19 telas, sendo uma de apresentação, uma para experimentações (a última) e 17 contendo desafios e propostas reflexivas sobre as isometrias. É muito importante que o professor resolva todas as tarefas contidas na atividade, analisando, inclusive as dicas para o professor e os parâmetros de resposta. Se o professor se cadastra na plataforma, pode cadastrar sua turma e pedir que os alunos acessem a atividade por meio de um código de acesso específico. Isso permitirá que o professor observe as resoluções dos alunos e utilize o grande potencial da plataforma para estruturação de aulas e avaliações processuais. 
+}{1}{1}
+\end{sugestions}
+\begin{answer}{Exercícios}
+{\exerciselist
+\begin{enumerate}\setcounter{enumi}{3}
+\item 
+\begin{enumerate}
+\item No caso 1, $s$ e $t$ são retas paralelas e, no caso 2, são perpendiculares.
+\item Translação horizontal.
+\item Translação oblíqua.
+\end{enumerate}
+
+\item Atividade aberta
+
+\item Os parâmetros de resposta estão contidos na própria plataforma
+\end{enumerate}
+}{1}
+\end{answer}
+
+\exercise
+
+\begin{enumerate}
+\item Em qual (ou quais) dos quadros, as figuras relacionam-se por uma reflexão?
+ 
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.5\linewidth]{transformacoes59}
+\end{figure}
+
+\item Em cada caso a seguir, use régua e compasso para construir o eixo de reflexão no Anexo 14.
+\begin{enumerate}
+\begin{multicols}{2}
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.8\linewidth]{transformacoes60}
+}
+
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.8\linewidth]{transformacoes61}
+}
+\end{multicols}
+
+
+\begin{multicols}{2}
+\item \adjustbox{valign=t}
+{
+\includegraphics[width=.8\linewidth]{transformacoes62}
+}
+\end{multicols}
+\end{enumerate}	
+ 
+
+\item Em cada caso, desenhe a reflexão do polígono dado no Anexo 15, conhecendo o eixo de reflexão ou alguns dos pontos correspondentes entre a figura original e sua reflexão. (Pontos correspondentes estão indicados com a mesma letra seguida de apóstrofo, como, por exemplo, $A$ e $A'$.)
+\begin{enumerate}
+\item \adjustbox{valign=t}
+{
+\includegraphics[height=7cm]{transformacoes63}
+}
+ 
+\item \adjustbox{valign=t}
+{
+\includegraphics[height=7cm]{transformacoes64}
+}
+\end{enumerate}
+ 
+
+\item No quadrado $ABCD$, foi aplicada uma reflexão em relação à reta $s$, produzindo o quadrado $A'B'C'D'$. Aplicando nova reflexão no quadrado $A'B'C'D'$, agora em relação à reta $t$, obteve-se o quadrado $A''B''C''D''$.  
+Observe $ABCD$ e $A''B''C''D''$, em cada caso:
+ 
+\begin{itemize}
+\item Caso 1
+ \begin{figure}[H]
+ \centering
+ 
+ \includegraphics[width=\linewidth]{transformacoes65}
+ \end{figure}
+
+\item Caso 2
+ \begin{figure}[H]
+ \centering
+ 
+ \includegraphics[width=.8\linewidth]{transformacoes66}
+ \end{figure}
+\end{itemize}
+
+
+\begin{enumerate}
+\item Sabendo que as retas s e t são ou paralelas ou perpendiculares, qual é a relação entre elas no Caso 1? E no Caso 2? Justifique.
+\item Descreva outra isometria – diferente da aplicação sucessiva das duas reflexões citadas – que pode relacionar $ABCD$ e $A''B''C''D''$ no Caso 1.
+\item Descreva outra isometria – diferente da aplicação sucessiva das duas reflexões citadas – que pode relacionar $ABCD$ e $A''B''C''D''$ no Caso 2.
+\end{enumerate}
+
+\item Anteriormente, foi proposto a você que elaborasse o seu próprio mosaico “tipo Escher” usando translações e rotações. Agora, será que você consegue adaptar o método para fazer um mosaico desse tipo usando apenas reflexões em relação a retas? 
+\begin{enumerate}
+\item Assista novamente o vídeo que ensina a fazer um mosaico desse tipo usando translações: \url{https://www.youtube.com/watch?v=Ca5J_moee7U} . A partir do método ensinado, proponha uma mudança que permita construir um mosaico por reflexões em relação a retas.
+\item Explique porque seu método funciona.
+\item Mãos à obra: construa seu próprio mosaico por meio de reflexões!
+\end{enumerate}
+
+\item Acesse a plataforma DESMOS, no endereço a seguir, para jogar uma partida do Golfe das Isometrias, em que você terá de usar translações, rotações e reflexões para sobrepor figuras planas desviando de eventuais obstáculos:
+
+\url{https://teacher.desmos.com/activitybuilder/custom/5fb5a24bf74e980cc1032177?lang=pt-BR}
+\end{enumerate}
+
+\know{Isometrias e funções}
+
+O estudo das \textbf{funções} constitui um dos principais assuntos estudados na Matemática do Ensino Médio. Se $x$ e $y$ são duas variáveis tais que, para cada valor de x existe, em correspondência, um único valor de $y$, dizemos que \textbf{$\bm{y}$ é função de $\bm{x}$}. 
+
+Usualmente, nas funções estudadas no Ensino Médio, $x$ e $y$ são variáveis que podem assumir valores numéricos no conjunto dos números reais. Por exemplo, $y = x^2+2x+1$ exprime algebricamente uma relação entre números reais. 
+
+Mas a noção de função é bastante ampla e abrange relações entre outros objetos matemáticos, desde que esteja presente a propriedade de que, para cada elemento do conjunto de origem (domínio), haja uma única imagem. As \textbf{funções que relacionam pontos do plano}, por exemplo, são chamadas comumente de \textbf{aplicações}.  Em outras palavras, dizemos que F é uma aplicação do plano sobre si mesmo se, para cada ponto P do plano, existe um único ponto $Q$ do plano, tal que $F(P) = Q$. 
+	
+Se uma aplicação $F$ é \textbf{bijetora}, isto é, se, para cada ponto $Q$ do plano, existe um único ponto $P$ tal que $F(P) = Q$, então essa aplicação é chamada de transformação. E se uma \textbf{transformação} é tal que a distância entre $F(A)$ e $F(B)$ é igual a distância entre $A$ e $B$, para quaisquer pontos $A$ e $B$ do plano, então essa transformação é uma \textbf{isometria}. 
+ 
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{transformacoes72}
+\end{figure}
+
+\textbf{Em outras palavras, uma isometria, como as que temos estudado nesta seção, são funções bijetoras que relacionam pontos do plano a outros pontos do plano, preservando as distâncias entre eles.} 
+	
+Quando começamos a estudar as isometrias, concentramo-nos nos efeitos que elas produzem sobre figuras geométricas particulares, isto é, subconjuntos específicos do plano. Tais figuras, quando submetidas a uma isometria, \textit{parecem ter se movimentado pelo plano}. Mas, de forma matematicamente precisa, o que ocorre \textit{não é um movimento}, mas uma \textit{relação} entre os pontos de dois subconjuntos. Mais: essa relação afeta igualmente todos os pontos do plano, não apenas a figura destacada. Quando olhamos, por exemplo, para uma translação de vetor $\overrightarrow{v}$ sobre o quadrado $ABCD$, focalizamos apenas esse subconjunto e sua imagem $A'B'C'D'$, porque isso nos permite entender melhor o efeito que a translação produz. Mas, na realidade, essa isometria afeta igualmente todos os pontos do plano, tais como, por exemplo, os destacados na figura: $E$, $F$, $G$ e $H$. 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.7\linewidth]{transformacoes73}
+
+\end{figure}
+
+\know{Moléculas enantimorfas na farmacologia}
+
+Neste capítulo, estudamos a noção de \textbf{figuras enantimorfas}: figuras planas congruentes que não podem ser sobrepostas nem por rotações nem por translações, mas apenas por reflexões em relação a uma reta. 
+
+Podemos estender essa noção para o espaço, imaginando objetos tridimensionais congruentes que também não poderiam ser sobrepostos por translações ou rotações no espaço, mas apenas por reflexões em relação a um plano. É exatamente esse um dos principais assuntos da Estereoquímica, uma subdisciplina da Química que estuda a disposição espacial dos átomos que formam a estrutura das moléculas. Em especial, a Estereoquímica estuda os \textbf{enantiômeros}: moléculas que têm a mesma fórmula, mas que diferem no arranjo espacial de seus átomos, de tal modo que uma é a imagem especular da outra. Em outras palavras, enantiômeros são “moléculas enantimorfas”. 
+
+\textbf{O interessante é que apesar da mesma fórmula, enantiômeros são compostos distintos, com diferentes propriedades químicas e físicas}. A confusão entre dois enantiômeros, portanto, pode ter graves consequências, como se pode observar no trágico e famoso caso da talidomida.
+
+A talidomida, uma droga lançada por uma farmacêutica alemã na década de 1950, era tida como um medicamento seguro, podendo até mesmo ser comprado sem receita médica. Ela era usada, inicialmente, como um tranquilizante para melhorar o sono. Logo, entretanto, teve seu uso expandido para gestantes, pois melhorava o enjoo matinal. Até que, na década de 1960, a droga foi banida da maior parte dos países, após comprovação de milhares de casos de má formação fetal. 
+
+Ocorre que a talidomida possui um \textbf{quiral} – átomo de carbono assimétrico – que dá origem a dois enantiômeros, ambos indistintamente presentes na medicação. Embora a talidomida dextrógira (ou enantiômero R) tenha mesmo ações analgésicas e sedativas, sendo inofensiva, a talidomida levógira (ou enantiômero S) é teratogênica, ou seja, provoca mutações graves no feto.
+ 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{transformacoes74}
+\caption{Fonte: \url{https://bit.ly/3qg5qYH}}
+\label{}
+\end{figure}
+
+
+O caso da talidomida impulsionou os estudos da Estereoquímica aplicados à farmacologia. Tais estudos foram tão importantes que, em 2001, três cientistas, K. Barry Sharpless, Ryoji Noyori e William S. Knowles, foram contemplados com o Nobel de Química, por terem desenvolvido métodos para obter compostos “enantiomericamente” puros em escala industrial.
+
+
+
+
+
+
+
+
+
+
+
+
+\ifnum\aluno=1
+\clearpage
+\else
+\notasfinais
+\fi
+
+\bibliographystyle{apalike-pt}
+\bibliography{../Bibliografia/transformacoes_bibliografia.bib}
+
+\nocite{*}
