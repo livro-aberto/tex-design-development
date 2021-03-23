@@ -1,11 +1,32 @@
 \ifnum\aluno=1
 \renewcommand\chapterillustration{abertura-probabilidade.jpg}
 \else
-\renewcommand\chapterillustration{abertura-probabilidade-professor}
+\renewcommand\chapterillustration{abertura-probabilidade-professor.jpg}
 \fi
+\renewcommand\chapterwhat{Reconhecimento de fenômenos determinísticos e aleatórios. Interpretações de probabilidade: clássica, frequentista e subjetiva. Conceitos básicos. Definição matemática deprobabilidade.
+Propriedades da probabilidade. Probabilidade condicional. Inde-
+pendência.}
 \renewcommand\chapterbecause{Porque grande parte das decisões científicas de nossa era se dá em ambiente de incerteza e a Teoria das Probabilidades é a área da matemática que fornece estruturas para a quantificação da aleatoriedade associada a determinados fenômenos de interesse, para uma tomada de decisão adequada sob incerteza.}
-\chapter{Probabilidade}
 
+\makeatletter
+\ifnum\aluno=1
+\else
+\renewcommand*{\toclevel@section}{1}
+\renewcommand*{\toclevel@subsection}{4}
+\renewcommand*{\toclevel@paragraph}{5}
+\renewcommand*{\toclevel@subparagraph}{6}
+
+\renewcommand*{\toclevel@exploresec}{2}
+\renewcommand*{\toclevel@practicesec}{2}
+\renewcommand*{\toclevel@arrangesec}{2}
+\renewcommand*{\toclevel@knowsec}{1}
+\renewcommand*{\toclevel@exercisesec}{1}
+
+\setcounter{tocdepth}{2}
+\fi
+\makeatother
+
+\chapter{Probabilidade}
 \ifdefined\estchapum
 \else
 \label{est1-chap}
@@ -67,8 +88,8 @@ Design: & Andreza Moreira (Tangentes Design) \\
 \\
 Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 \\
-  Capa: & Foto de Robert Anasch, no Unsplash \\
-        & https://unsplash.com/photos/ugV\_7jiFRxM \\
+  Capa: & Foto de Karsten Winegeart, no Unsplash \\
+        & https://unsplash.com/photos/EI-iNlUGfzI \\
 
 \end{tabular}
 
@@ -118,7 +139,7 @@ Reconhecer a existência de diferentes tipos de espaços amostrais, discretos ou
 \end{habilities}
 
 \paragraph{Por que estudar o assunto?}
-“A Probabilidade fornece uma maneira única de se envolver, pensar e interagir com uma gama diversa de situações do mundo real, no qual aleatoriedade e incerteza estão onipresentes.”{} (Pfannkuch e outros, 2016)
+“A Probabilidade fornece uma maneira única de se envolver, pensar e interagir com uma gama diversa de situações do mundo real, no qual aleatoriedade e incerteza estão onipresentes.”{} \citep{budgett2016}
 
 \paragraph{Desfios do capítulo}
 Apresentar o conteúdo de Probabilidade antes do conteúdo de Análise Combinatória, relacionando-o mais à Estatística do que à noção clássica de probabilidade.
@@ -177,8 +198,8 @@ Dar menos ênfase à noção clássica de Probabilidade, apresentando situaçõe
 \paragraph{Dificuldades típicas dos estudantes (distratores)}
 \begin{enumerate}
 \item Dificuldade de interpretar “probabilidade”.
-\item Existe forte inclinação dos estudantes a assumir que os resultados em um espaço amostral são equiprováveis mesmo quando não é apropriado fazer esta suposição (Albert., J. H. 2003)
-\item Confusão entre os conceitos de eventos independentes e eventos disjuntos (Rodrigues, F. W., 1984)
+\item Existe forte inclinação dos estudantes a assumir que os resultados em um espaço amostral são equiprováveis mesmo quando não é apropriado fazer esta suposição \citep{albert2003}
+\item Confusão entre os conceitos de eventos independentes e eventos disjuntos \citep{rodrighes1984}.
 \end{enumerate}
 
 \paragraph{Estratégia pedagógica}
@@ -288,7 +309,7 @@ Serão propostos exercícios do ENEM, Vestibulares entre outros abordando os con
   \textbf{Observação}: Embora esta seção seja mais conceitual, a atividade que envolve a introdução de diferentes interpretações de probabilidade demanda calcular probabilidades. No entanto, trata-se de uma atividade cujas respostas, algumas delas abertas, não são o mais importante. Pretende-se nesta atividade apresentar situações que levam às diferentes interpretações de probabilidade. Lembramos que a noção de probabilidade é intuitiva e já é trabalhada no Ensino Fundamental II. Com a implantação da BNCC do Ensino Fundamental, probabilidade será trabalhada desde os anos iniciais do Ensino Fundamental.
 }
 \end{paginatexto}
-\explore{conceitos básicos}\label{conceitosbasicos}
+\explore{Conceitos Básicos}\label{conceitosbasicos}
 Neste capítulo iremos explorar a noção de probabilidade para, em seguida, apresentar uma teoria matemática útil para calcular probabilidades de eventos associados a experimentos aleatórios ou fenômenos aleatórios, isto é, experimentos cujos resultados finais são conhecidos somente após a realização dos mesmos. Por exemplo,
 
 \begin{enumerate}
@@ -683,7 +704,7 @@ Qual é a probabilidade de que você esteja casado(a) aos 25 anos?
 \end{task}
 
 
-\arrange{conceitos básicos}
+\arrange{Conceitos Básicos}
 \label{organizandoconceitosbasicos}
 Como você fez para determinar as probabilidades no bloco I da atividade \hyperref[avaliando-probabilidades]{Avaliando probabilidades}? E no bloco II? E no bloco III? Você deve ter percebido que, dependendo da situação, nem sempre é possível atribuir probabilidades a um evento, usando o mesmo tipo de raciocínio.
 
@@ -1089,7 +1110,7 @@ Dois diagramas de venn são apresentados. A ideia é realizar a verificação pi
 No diagrama da esquerda tem-se em amarelo a região indicada pela expressão à esquerda na igualdade a ser verificada. No diagrama da direita tem-se $A\cup C$ em listras vermelhas, $B\cup C$ em listras azuis. A região da interseção dos dois é a que contêm listras azuis e vermelhas e está destacada na cor cinza. Observe que é a mesma região em amarelo do diagrama da esquerda.
 }{1}
 \end{answer}
-\practice{conceitos básicos}
+\practice{Conceitos Básicos}
 \begin{task}{espaço amostral não é único!}
 \label{espaço-nao-unico}
 
@@ -1321,7 +1342,7 @@ P(E\cup T)=P(E)+P(T)-P(E\cap T)=\frac{290}{800}+\frac{350}{800}-\frac{140}{800}=
 \end{enumerate}
 }{1}
 \end{answer}
-\explore{regras básicas e propriedades}
+\explore{Regras Básicas e Propriedades}
 
 No início do século XX, o matemático russo Kolmogorov, como já comentado na seção \hyperref[conceitosbasicos]{Explorando: Probabilidade \textendash{} conceitos básicos}, estabeleceu regras básicas para a probabilidade que independem da interpretação adotada, possibilitando assim, a construção de uma teoria matemática de probabilidade.
 
@@ -1410,7 +1431,7 @@ Qual é a probabilidade de que o aluno escolhido seja do turno da tarde \textbf{
 \end{task}
 
 
-\arrange{regras básicas e propriedades}
+\arrange{Regras Básicas e Propriedades}
 
 A última regra básica é chamada propriedade aditiva da probabilidade para eventos disjuntos e, de fato, é um caso particular da propriedade de aditividade da probabilidade.
 
@@ -1726,7 +1747,7 @@ que é, aproximadamente, $0{,}814$. A título de informação veja na tabela a s
 }{0}
 \end{answer}
 
-\practice{regras básicas e propriedades}
+\practice{Regras Básicas e Propriedades}
 \label{regrasbasicaspropriedades}\begin{task}{o problema dos bodes}
 
 
@@ -2034,7 +2055,7 @@ Analisando os dados da tabela e as respostas obtidas, há razões para supor que
 \end{task}
 
 
-\arrange{ Probabilidade Condicional}
+\arrange{Probabilidade Condicional}
 
 
 \paragraph{Definição de probabilidade condicional}
@@ -2534,7 +2555,7 @@ P(A_2|B)&=\frac{P(A_2\cap B)}{P(B)}\\
 }{0}
 \end{answer}
 
-\practice{ Probabilidade Condicional}
+\practice{Probabilidade Condicional}
 \begin{task}{desempenho de exames diagnósticos}
 
 
@@ -3991,6 +4012,6 @@ Qual a probabilidade de se extrair uma boa e uma defeituosa em qualquer ordem?
 \fi
 
 \bibliographystyle{apalike-pt}
-\bibliography{../Bibliografia/financeira_bibliografia.bib}
+\bibliography{../Bibliografia/probabilidade1_bibliografia.bib}
 
 \nocite{*}
