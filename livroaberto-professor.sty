@@ -348,6 +348,7 @@ parbox=false, enhanced, breakable, left=3mm, right=3mm,bottom=2mm, colback=box2!
 
 \newtcolorbox{observation}[1]{parbox=false, enhanced, breakable, left=3mm, right=3mm, top=3mm, bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\bfseries\textcolor{\currentcolor}{ #1}}, attach boxed title to top center={xshift=0mm, yshift=-5.5mm}, boxed title style ={empty}}	 
 
+
 \newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{example}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
 title={
 %{\boxfont EXEMPLO}\hspace{3.5mm} 
@@ -666,9 +667,7 @@ underlay boxed title={
 \titlespacing*{\paragraph}
 {0pt}{1mm}{1mm}
 
-\titleformat{\paragraph}{\color{\currentcolor}\normalfont\normalsize\bfseries}{\thesubsection}{1em}{#1}
-\titlespacing*{\paragraph}
-{0pt}{1mm}{1mm}
+
 
 
 \renewcommand*{\toclevel@section}{1}
@@ -695,11 +694,11 @@ underlay boxed title={
 \newcommand{\scexercise}[1]{\hypersetup{linkcolor=cor1}\paragraph{\color{cor1}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
 
 
-\newcommand{\subexplore}[1]{\subparagraph{\color{session1}\normalfont\Large\bfseries#1}}
-\newcommand{\subarrange}[1]{\subparagraph{\color{session4}\normalfont\Large\bfseries#1}}
-\newcommand{\subpractice}[1]{\subparagraph{\color{session2}\normalfont\Large\bfseries#1}}
-\newcommand{\subknow}[1]{\subparagraph{\color{session3}\normalfont\Large\bfseries#1}}
-\newcommand{\subexercise}[1]{\subparagraph{\color{cor1}\normalfont\Large\bfseries#1}}
+\newcommand{\subexplore}[1]{\paragraph{\color{session1}\normalfont\large\bfseries#1}}
+\newcommand{\subarrange}[1]{\paragraph{\color{session4}\normalfont\large\bfseries#1}}
+\newcommand{\subpractice}[1]{\paragraph{\color{session2}\normalfont\large\bfseries#1}}
+\newcommand{\subknow}[1]{\paragraph{\color{session3}\normalfont\large\bfseries#1}}
+\newcommand{\subexercise}[1]{\paragraph{\color{cor1}\normalfont\large\bfseries#1}}
 
 
 % Create box shape
@@ -2299,6 +2298,13 @@ colframe=grafite!90!white,colupper=white, left=0pt, right=0pt,top=-2pt,bottom=-2
 \geometry{reset, paperwidth=950pt,paperheight=782pt,textwidth=450pt,
 marginparsep=30pt,headsep=19pt,top=45pt,inner=50pt,outer=440pt,
 marginparwidth=350pt,textheight=686pt}
+
+\newcommand{\anexo}[1]{
+  \clearpage
+  \begin{center}
+  \huge{\titem{#1}}
+  \end{center}
+}
 
 
 
