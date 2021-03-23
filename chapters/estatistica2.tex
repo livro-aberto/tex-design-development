@@ -61,12 +61,11 @@ Produção:& Associação Livro Aberto\\
 \\
 Coordenação: & Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
 \\
-  Autores: & Flávia Landim (coordenadora da equipe - UFRJ)\\
-           & Nei Rocha (UFRJ)\\
-           & Vanessa Matos (SEduc Angras dos Reis e Mesquita)\\
-           & José Ezequiel Soto
+  Autores: & Flávia Landim (coordenadora da equipe - UFRJ),\\
+        & Nei Rocha (UFRJ),\\
+             & Vanessa Matos (SEduc Angras dos Reis e Mesquita).\\
 \\
-Revisão: &  Letícia Rangel  \\
+Revisão: &  Cydara Ripoll  \\
 		 &  Alexandre Silva \\
 \\
 Design: & Andreza Moreira (Tangentes Design) \\
@@ -106,7 +105,8 @@ Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
 
 \mainmatter
 
-\begin{apresentacao}{Medidas de Posição e Dispersão}
+\begin{apresentacao}
+\section{Medidas de Posição e Dispersão}
 
 Neste capítulo serão trabalhadas as seguintes habilidades da BNCC para o Ensino Médio:
 
@@ -123,7 +123,7 @@ Planejar e executar pesquisa amostral usando dados coletados ou de diferentes fo
 \tcbsubtitle{EM13MAT510} Investigar conjuntos de dados relativos ao comportamento de duas variáveis numéricas, usando tecnologias da informação, e, se apropriado, levar em conta a variação e utilizar uma reta para descrever a relação observada.
 \end{habilities}
 
-\subsection{Objetivo Geral do Capítulo}
+\section{Objetivo Geral do Capítulo}
 
 Compreender como algumas medidas, chamadas medidas resumo, podem revelar informações sobre a distribuição dos dados. Para alcançar este objetivo geral, este capítulo inclui:
 
@@ -137,18 +137,18 @@ Compreender como algumas medidas, chamadas medidas resumo, podem revelar informa
 
 \textbf{Observação}: Embora muitos textos denominem as medidas de posição (média, mediana e moda) como medidas de tendência central, preferimos denominá-las medidas de posição, pois, por exemplo, na presença de forte assimetria, a média não será um valor central, pois será influenciada pelos valores extremos da distribuição.
 
-\paragraph{Por que estudar o assunto?}
+\subsection{Por que estudar o assunto?}
 
 As medidas resumo (posição e dispersão) correspondem a uma síntese do conjunto de dados observados e ao passo preliminar para fazer uma inferência estatística, ou seja, a partir das informações obtidas na amostra, expandir nossas conclusões para a população. Como as distribuições podem apresentar formas variadas é importante conhecer diferentes tipos de medidas resumo, tanto de posição como de dispersão, para usar medidas apropriadas em cada caso.
 
-\paragraph{Desafios do Capítulo}
+\subsection{Desafios do Capítulo}
 
 \begin{enumerate}
 \item Entender as especificidades das variadas medidas resumo e reconhecer suas limitações em cada contexto.
 \item A partir de algumas medidas resumo, ser capaz de ter uma noção quanto à forma da distribuição dos dados.
 \end{enumerate}
 
-\paragraph{Conteúdos abordados}
+\subsection{Conteúdos abordados}
 
 \begin{enumerate}
 \item Medidas de posição: média, mediana, moda e quartis.
@@ -157,7 +157,7 @@ As medidas resumo (posição e dispersão) correspondem a uma síntese do conjun
 \item Construção do \textit{boxplot} (gráfico caixa).
 \end{enumerate}
 
-\paragraph{Pré-requisitos}
+\subsection{Pré-requisitos}
 
 \begin{habilities}{EF07MA29} Compreender, em contextos significativos, o significado de média estatística como indicador da tendência de uma pesquisa, calcular seu valor e relacioná-lo, intuitivamente, com a amplitude do conjunto de dados.
 
@@ -166,12 +166,13 @@ As medidas resumo (posição e dispersão) correspondem a uma síntese do conjun
 \tcbsubtitle{EM11MT03} Realizar pesquisas, considerando: o planejamento, a discussão (se será censitária ou por amostra), a seleção de amostras, a elaboração e aplicação de instrumentos de coleta, a organização e representação dos dados (incluindo agrupamentos de dados em classe), a construção de gráficos apropriados (incluindo o histograma), a interpretação e a análise crítica apresentadas em relatórios descritivos.
 \end{habilities}
 
-\paragraph{Desdobramentos imediatos}
+\subsection{Desdobramentos imediatos}
 
 \begin{habilities}{EM15MT06} Analisar criticamente os métodos de amostragem em relatórios de pesquisas divulgadas pela mídia e as afirmativas feitas para toda a população baseadas em uma amostra.
 \end{habilities}
+\clearpage
 
-\subsection{Abordagem do Capítulo}
+\section{Abordagem do Capítulo}
 
 Pretende-se ao longo do capítulo, além de apresentar as definições das variadas medidas, enfatizar suas propriedades. Por exemplo, no caso da média, pretende-se explorar as seguintes propriedades:
 
@@ -197,7 +198,7 @@ Na seção \hyperref[\detokenize{PE104-A:sec-para-saber-mais}]{\textbf{Para sabe
 
 Diferencial do Capítulo
 
-De acordo com, Russel e Mokros (1991) \citep[apud][]{batanero2016}, a compreensão da ideia de “valor representativo”{} implica em três competências diferentes:
+De acordo com Russel e Mokros (1991), citados em Batanero e Borovnik (2016), a compreensão da ideia de “valor representativo”{} implica em três competências diferentes:
 
 \begin{enumerate}
 \item selecionar o melhor valor representativo para um dado conjunto de dados;
@@ -210,9 +211,9 @@ A fórmula de cálculo da variância é apresentada de forma detalhada para que 
 
 A definição de quartis e a construção do boxplot são propostas inovadoras em relação ao conteúdo usual de Estatística nos livros didáticos do Ensino Médio. Os conceitos relativamente simples de quartis aliados à grande utilidade do \textit{boxplot} na comparação de grupos diferentes, reforçam a pertinência em tratá-los no Ensino Médio.
 
-\paragraph{Dificuldades típicas dos estudantes (distratores)}
+\subsection{Dificuldades típicas dos estudantes (distratores)}
 
-Com base no texto de \citet{batanero2016}, apesar da maior parte dos métodos de análise exploratória de dados envolverem apenas cálculos e interpretações de medidas estatísticas simples, bem como, construções de gráficos e suas respectivas leituras, pesquisadores sugerem que os estudantes apresentam problemas na compreensão de conceitos, e em relacionar os mesmos ao contexto de forma significativa. Uma razão para isso é que, em geral, os professores focam sobre a aplicação de métodos em vez da interpretação de resultados em um dado contexto. Neste texto, um resumo de resultados de pesquisas realizadas neste tema é apresentado. A seguir, algumas destas dificuldades são destacadas.
+Com base no texto de Batanero e Borovnik (2016), apesar da maior parte dos métodos de análise exploratória de dados envolverem apenas cálculos e interpretações de medidas estatísticas simples, bem como, construções de gráficos e suas respectivas leituras, pesquisadores sugerem que os estudantes apresentam problemas na compreensão de conceitos, e em relacionar os mesmos ao contexto de forma significativa. Uma razão para isso é que, em geral, os professores focam sobre a aplicação de métodos em vez da interpretação de resultados em um dado contexto. Neste texto, um resumo de resultados de pesquisas realizadas neste tema é apresentado. A seguir, algumas destas dificuldades são destacadas.
 
 \begin{enumerate}
 \item Cálculo de médias combinadas a partir das médias de diferentes grupos: desprezam-se os tamanhos dos diferentes grupos, calculando uma média simples das médias dos grupos.
@@ -226,7 +227,7 @@ Os dois primeiros itens estendem-se para o cálculo da variância e do desvio pa
 
 Os distratores serão explorados nas atividades e nos exercícios.
 
-\paragraph{Exemplos}
+\subsection{Exemplos}
 
 Princípios norteadores dos exemplos selecionados:
 
@@ -234,7 +235,7 @@ Princípios norteadores dos exemplos selecionados:
 \item propor problemas cuja solução requer dados a serem coletados pelos alunos ou que de alguma forma estão disponíveis para consulta.
 \item contextualizar sempre os problemas propostos, pois o contexto é fundamental nas investigações e interpretações.
 \end{enumerate}
-\subsection{Estratégia pedagógica}
+\section{Estratégia pedagógica}
 
 Usar um processo reflexivo baseado no pensamento estatístico.
 
@@ -251,9 +252,7 @@ Cabe reforçar também que apesar do capítulo poder à primeira vista parecer p
 
 Enfim o que deve ser valorizado no capítulo é conhecer o significado das medidas aqui apresentadas. O cálculo das mesmas pode ser feito, usando-se aplicativos e, as fórmulas, se por acaso forem necessárias para resolver algum problema, deverão ser sempre fornecidas. Principalmente, em se tratando de medidas de dispersão.
 
-\columnbreak
-\raggedcolumns
-\subsection{Estrutura do Capítulo}
+\section{Estrutura do Capítulo}
 
 \subexplore{Explorando 1 - Medidas de Posição}
 
@@ -314,7 +313,17 @@ Um applet do GeoGebra foi disponibilizado com manual de instruções nesta seç�
 
 Nesta seção são propostos exercícios do ENEM, Vestibulares entre outros, abordando os conteúdos desse capítulo. Nos exercícios serão tratados os distratores.
 
-\textbf{Observação}: Os textos \cite{bussab2017,levine2000,rossman1998} e \cite{triola2005} são recomendados para cursos de estatística a nível de graduação, mas seus capítulos iniciais, que tratam da natureza da estatística, representações gráficas e medidas resumo podem ser úteis. Os mesmos foram consultados para o material deste capítulo.
+% Referências Bibliográficas
+
+% ABE (2015) ABE: Reflexões a respeito dos conteúdos de probabilidade e estatística na escola no Brasil - uma proposta. Disponível em: <https://goo.gl/OBtwpv>. Acesso em: 18 ago. 2017.
+% Batanero, C., Burrill, G., & Reading, C. (Eds.). (2011). Teaching statistics in school mathematics-challenges for teaching and teacher education: A joint ICMI/IASE study: the 18th ICMI study (Vol. 14). Springer Science & Business Media.
+% Batanero, C., & Borovcnik, M. (2016). Statistics and probability in high school. Springer.
+% Bussab, W. O. & Morettin, P. A. (2017). Estatística Básica. Saraiva. Nona edição.
+% Levine, D. M., Bereneson, M. L. e Stephan, D. (2000). Estatística: Teoria e Aplicações. LTC.
+% Rossman, Allan J., and Beth L. Chance. Workshop Statistics:: Discovery With Data and Minitab. Springer Science & Business Media, 1998.
+% Triola, M. F. (2005), Introdução à Estatística. LTC. Nona Edição.
+
+% Observação: Os textos d), e), f) e g) são recomendados para cursos de estatística a nível de graduação, mas seus capítulos iniciais, que tratam da natureza da estatística, representações gráficas e medidas resumo podem ser úteis. Os mesmos foram consultados para o material deste capítulo.
 
 \end{apresentacao}
 
@@ -475,7 +484,7 @@ $[182{,}0 ; 186{,}0 [$ & $16$ \\
 	\end{enumerate}
 }{1}
 \end{answer}
-\explore{Medidas de Posição}
+\explore{medidas de posição}
 \label{\detokenize{PE104-0:sec-explorando1}}\label{\detokenize{PE104-0:explorando-medidas-de-posicao}}\label{\detokenize{PE104-0::doc}}
 No capítulo \textbf{\hyperref[est1-chap]{A Natureza Estatística}} trabalhamos com representações gráficas de conjuntos de dados com a finalidade de obter informações sobre estruturas da sua distribuição como estratégia para resumir os dados. No exemplo dos resgistros de tempo deste capítulo, os 64 dados, no quadro a seguir
 
@@ -1031,7 +1040,7 @@ O boxplot é uma representação gráfica de dados quantitativos alternativa ao 
 \end{task}
 
 
-\arrange{Medidas de Posição}
+\arrange{  medidas de posição}
 \label{\detokenize{PE104-1:sec-organizando1}}\label{\detokenize{PE104-1::doc}}\label{\detokenize{PE104-1:organizando-as-ideias-medidas-de-posicao}}
 
 Medidas de Posição, como o próprio termo indica, visam a resumir um conjunto de dados em geral numa única medida em algum lugar geométrico entre os extremos observados do conjunto (mínimo e máximo). Veja na \hyperref[\detokenize{PE104-1:fig-coloque-aqui-o-nome}]{figura \ref{\detokenize{PE104-1:fig-coloque-aqui-o-nome}}}, as marcações da média e da mediana das notas de Artes sem bonificação.
@@ -1125,7 +1134,7 @@ e
 55^2+ 22^2+ 30^2+ 14^2+ 25^2+  40^2=6.830\end{split}
 \end{equation*}
 
-\subsection{Média}
+\section{Média}
 
 A definição de média de um conjunto de dados quantitativos já é conhecida desde o Ensino Fundamental e, consiste na soma dos valores do conjunto dividida pelo número de observações. No exemplo das idades das seis primeiras pessoas que chegaram para tomar a vacina no Posto de Saúde, a soma das idades é 186 tal que a média será dada por \(\frac{186}{6}=31\) anos.
 
@@ -1146,7 +1155,7 @@ No exemplo das idades das seis primeiras pessoas que chegaram para tomar a vacin
 
 Você já calculou a média dos dados das duas primeiras atividades, a saber, \hyperref[\detokenize{PE104-0:ativ-notas-de-artes}]{Notas de Arte} e \hyperref[\detokenize{PE104-0:ativ-maratona-de-ny}]{A Maratona}. Identifique nos histogramas correspondentes a posição em que estas médias ficaram.
 
-\paragraph{Média para dados agrupados}
+\subsection{Média para dados agrupados}
 
 Quando os dados disponíveis estão agrupados em intervalos de classe, não é possível calcular a soma total exata dos dados. Neste caso, usamos uma aproximação para o cálculo da média como mostra o exemplo a seguir.
 
@@ -1190,7 +1199,7 @@ Observe que este agrupamento resultou numa soma $207$, muito próxima da soma ex
 
 Na seção \hyperref[\detokenize{PE104-A:sec-para-saber-mais}]{Para saber mais} apresenta-se notação e fórmula para o cálculo da média numa situação genérica de dados agrupados.
 
-\paragraph{Interpretação da média como ponto de equilíbrio no histograma}
+\subsection{Interpretação da média como ponto de equilíbrio no histograma}
 
 Observe o \hyperref[\detokenize{PE104-0:fig-histograma-notas-sem-bonificacao}]{Histograma das notas de Artes sem bonificação} , em que as notas dispostas ao longo do eixo horizontal. Suponha que o histograma seja mais do que uma representação da distribuição de frequências, que seja um objeto. Assim, cada ponto que compõe as notas teria massa e poderia ser associado a um peso. Por exemplo, a nota $1$ corresponderia a $1$kg, a nota $5$ a $5$kg e a nota $6{,}3$ a $6{,}3$ Kg. esse caso, podemos perguntar onde se encontrará o ponto de equilíbrio (ou centro de massa) do histograma que representa a distribuição de frequências dos dados. É natural pensar na média como o ponto de equilíbrio, como mostra o histograma na \hyperref[\detokenize{PE104-1:id8}]{figura \ref{\detokenize{PE104-1:id8}}}, com destaque para a média. Veja adiante a seção sobre desvios da média para reforçar esta noção de ponto de equilíbrio.
 
@@ -1484,7 +1493,7 @@ Do exemplo \hyperref[cartao-credito]{\textit{cartão de crédito de supermercado
 
 Alguns textos usam os termos assimetria positiva para indicar assimetria à direita e assimetria negativa para indicar assimetria à esquerda.
 
-\subsection{Mediana}
+\section{Mediana}
 
 A mediana de um conjundo de valores numéricos é definida como o valor que ocupa a posição central dos dados ordenados.
 
@@ -1546,7 +1555,7 @@ Na atividade \hyperref[\detokenize{PE104-0:ativ-maratona-de-ny}]{A Maratona} dis
 \end{equation*}
 \end{example}
 
-\paragraph{Mediana  para dados agrupados}
+\subsection{Mediana  para dados agrupados}
 
 Voltando à atividade \hyperref[\detokenize{PE104-0:ativ-notas-de-artes}]{Notas de Arte}, suponha novamente que o coordenador tenha tido acesso apenas ao
 \hyperref[\detokenize{PE104-0:fig-histograma-notas-sem-bonificacao}]{Histograma das notas de Artes sem bonificação}, sem conhecê-las separadamente. Como ele poderia calcular a mediana da turma, considerando as notas antes da bonificação? Sabemos que a posição da mediana deve ser a posição central depois de ter as notas ordenadas. Na tabela de frequências observe que os intervalos já estão ordenados, mas apenas conhecemos a quantidade de notas que ocorreram em cada intervalo e não as notas individualmente. No entanto, é fácil, a partir da tabela, identificar em que intervalo estará a mediana, bastando para isso encontrar o intervalo que compreende a nota da posição 18. Aqui, vamos introduzir o conceito de frequência absoluta acumulada de um intervalo de classe que corresponde à soma da frequência absoluta do intervalo mais a soma acumulada das frequências absolutas de todos os intervalos anteriores. Veja a \hyperref[notas-agrupadas]{tabela \ref{notas-agrupadas}}, incluindo as frequências absolutas acumuladas.
@@ -1593,7 +1602,7 @@ Por outro lado, a \textbf{média} dos dados do conjunto \(C_2\) é \(\displaysty
 
 Em distribuições aproximadamente simétricas (veja a atividade \hyperref[\detokenize{PE104-1:fig-simetria}]{Histograma dos resgistros de tempo de atividade do Capítulo \hyperref[est1-chap]{A Natureza Estatística}}) temos que a média e a mediana são valores próximos um do outro, esta é uma das razões que levam muitas pessoas a confundir estas duas medidas, achando que elas representam a mesma posição na distribuição dos dados qualquer que seja a situação. Mas, vimos que em distribuições com assimetria à direita, veja, por exemplo a figura  \hyperref[\detokenize{PE104-1:fig-assimetriaadireita}]{figura \ref{\detokenize{PE104-1:fig-assimetriaadireita}}}, a média é maior do que a mediana e, em distribuições com assimetria à esquerda, veja por exemplo a figura \hyperref[\detokenize{PE104-1:fig-assimetriaaesquerda}]{figura \ref{\detokenize{PE104-1:fig-assimetriaaesquerda}}}, a média é menor do que a mediana.
 
-\subsection{Moda}
+\section{Moda}
 
 A moda é a observação mais frequente de um conjunto de dados.
 
@@ -1714,7 +1723,7 @@ Se, por outro lado, o histograma da distribuição é do tipo simétrico e bimod
 \end{tikzpicture}
 \caption{Histograma de distribuição simétrica e bimodal}\label{\detokenize{PE104-1:id5}}\label{\detokenize{PE104-1:id20}}\end{figure}
 
-\subsection{Quartis}
+\section{Quartis}
 
 Os \index{quartis}quartis são os três valores que dividem a distribuição em quatro partes de frequências iguais.
 
@@ -1749,7 +1758,7 @@ porém todos eles com frequências relativas iguais a $\frac{1}{4}=0{,}25$.
 
 Já vimos como determinar mediana (ou segundo quartil) de um conjunto de $n$ dados. Um método simples para obter os demais quartis, $Q_1$ e $Q_3$, é considerar dois novos conjuntos de dados, o primeiro, consistindo da primeira metade dos valores ordenados e, o segundo, consistindo da segunda metade. Depois, tome como primeiro quartil a mediana da primeira metade do conjunto e, como terceiro quartil, a mediana da segunda metade do conjunto de dados.
 
-\paragraph{O esquema dos cínco números e o boxplot}
+\subsection{O esquema dos cínco números e o boxplot}
 
 O esquema dos cinco números é composto pelas seguintes medidas:
 
@@ -2189,7 +2198,7 @@ Na companhia $A$ teremos Mediana=$\dfrac{61+63}{2}=62$ reais e, na companhia B, 
 }{1}
 \end{answer}
 
-\explore{Medidas de Dispersão}
+\explore{  medidas de dispersão}
 \label{\detokenize{PE104-3:explorando-medidas-de-dispersao}}\label{\detokenize{PE104-3::doc}}\label{\detokenize{PE104-3:sec-explorando2}}\phantomsection\label{\detokenize{PE104-3:ativ-estrategia-de-investimento}}
 
 \begin{task}{estratégia de investimento}
@@ -2301,7 +2310,7 @@ Um investimento que apresenta grandes ganhos e perdas pode ser chamado de alto r
 \end{enumerate}
 \end{task}
 
-\arrange{Medidas de Dispersão}
+\arrange{  medidas de dispersão}
 \label{\detokenize{PE104-4:sec-organizando2}}\label{\detokenize{PE104-4::doc}}\label{\detokenize{PE104-4:organizando-as-ideias-medidas-de-dispersao}}
 
 Pela atividade anterior, você deve ter notado que usar apenas medidas de posição para caracterizar uma distribuição não é suficiente. Nos dois conjuntos analisados, vimos que ambos apresentaram média, mediana e moda iguais. No entanto, vimos que um deles apresenta maiores variações de valores do que o outro. A ideia por trás de variação é a noção de dispersão.
@@ -5069,6 +5078,6 @@ Finalmente, é possível construir o boxplot na mesma área gráfica para que o 
 \fi
 
 \bibliographystyle{apalike-pt}
-\bibliography{../Bibliografia/estatistica2_bibliografia.bib}
+\bibliography{../Bibliografia/financeira_bibliografia.bib}
 
 \nocite{*}
