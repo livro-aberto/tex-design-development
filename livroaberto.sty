@@ -421,6 +421,7 @@ underlay boxed title={
 
 
 \NewEnviron{project}{%
+\setlist[itemize]{label=\protect\itemcoloredsquare, }
 \def\currentcolor{cor2}
     \newpage
 	\begin{tikzpicture}[remember picture, overlay]
@@ -451,7 +452,7 @@ underlay boxed title={
 		\end{pgfonlayer}
 		
 		\begin{pgfonlayer}{foreground}
-			\node [color=base1!30, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (title) at (heading) {PROJECTO APLICADO};
+			\node [color=base1!30, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (title) at (heading) {PROJETO APLICADO};
             \node [box, below right] (bodytext) at (border1c){%
 			\begin{minipage}{0.85\textwidth}
 				\BODY			
@@ -1351,9 +1352,9 @@ underlay boxed title={
 
 
 % Set up lists
-\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+\setlist[enumerate]{label=\protect\enumbox{\alph*)}, }
 %\setlist[itemize]{label=\protect\itembox}
-\setlist[itemize]{label=\protect\itemcoloredsquare}
+\setlist[itemize]{label=\protect\itemcoloredsquare, }
 
 
 %Seção 6 - Livro Aberto Page

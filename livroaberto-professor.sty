@@ -435,46 +435,111 @@ underlay boxed title={
 \NewEnviron{project}{%
 \def\currentcolor{cor2}
     \newpage
-	\begin{tikzpicture}[remember picture, overlay]
-		\coordinate (border1) at ($(current page text area.south east) + (0.00mm,8.00mm)$);
-		\coordinate (border1a) at ($(border1) + (-5.00mm,2.00mm)$);
-		\coordinate (border1b) at ($(current page text area.south west) + (11.00mm,10.00mm)$);
-		\coordinate (border1c) at ($(current page text area.north west) + (11.00mm,-13.00mm)$);
+  \begin{tikzpicture}[remember picture, overlay]
+    \coordinate (border1) at ($(current page text area.south east) + (0.00mm,8.00mm)$);
+    \coordinate (border1a) at ($(border1) + (-5.00mm,2.00mm)$);
+    \coordinate (border1b) at ($(current page text area.south west) + (11.00mm,10.00mm)$);
+    \coordinate (border1c) at ($(current page text area.north west) + (11.00mm,-13.00mm)$);
         \coordinate (border1d) at ($(current page text area.south west) + (11.00mm,13.00mm)$);
-		\coordinate (heading) at ($(current page text area.north west) + (32.50mm,-5.00mm)$);
-		\coordinate (corner1) at ($(current page text area.north west) + (6.00mm,-10.00mm)$);
-		\coordinate (corner2) at ($(current page text area.north east) + (-4.00mm,-10.00mm)$);
-		\coordinate (corner3) at ($(current page text area.south east) + (0.00mm,10.00mm)$);
-		\coordinate (corner4) at ($(current page text area.south west) + (10.00mm,6.00mm)$);
-		\coordinate (text1) at ($(current page text area.north west) + (11.00,-12.50mm)$);
-		\coordinate (text2) at ($(current page text area.south east) + (-2.50mm,8.50mm)$);
+    \coordinate (heading) at ($(current page text area.north west) + (32.50mm,-5.00mm)$);
+    \coordinate (corner1) at ($(current page text area.north west) + (6.00mm,-10.00mm)$);
+    \coordinate (corner2) at ($(current page text area.north east) + (-4.00mm,-10.00mm)$);
+    \coordinate (corner3) at ($(current page text area.south east) + (0.00mm,10.00mm)$);
+    \coordinate (corner4) at ($(current page text area.south west) + (10.00mm,6.00mm)$);
+    \coordinate (text1) at ($(current page text area.north west) + (11.00,-12.50mm)$);
+    \coordinate (text2) at ($(current page text area.south east) + (-2.50mm,8.50mm)$);
         \coordinate (bodytextpos) at ($(border1c) + (5.00mm,-3.00mm)$);
-		
-		\begin{pgfonlayer}{background}
-			\draw [draw=base1, fill=base1] (current page text area.south west) rectangle (current page text area.north east);
-            		\end{pgfonlayer}
-		
-		\begin{pgfonlayer}{main}
-			\draw [fill=cor2, draw=cor2] (current page text area.north west) -- ++(0.00mm,-8.00mm) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] -| ++(63.00mm,8.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-			\draw [fill=base1!30, draw=base1!30] (corner1) -- (corner2) arc [start angle=90, end angle=0, x radius=4.00mm, y radius=4.00mm] -- (corner3) arc [start angle=0, end angle=-90, x radius=4.00mm, y radius=4.00mm] -- (corner4) arc [start angle=270, end angle=180, x radius=4.00mm, y radius=4.00mm] -- cycle;
-			% \draw [green] (text1) rectangle (text2);
-			\draw [black] (border1a) -- (border1b) -- (border1c) -| cycle;
+    
+    \begin{pgfonlayer}{background}
+      \draw [draw=base1, fill=base1] (current page text area.south west) rectangle (current page text area.north east);
+                \end{pgfonlayer}
+    
+    \begin{pgfonlayer}{main}
+      \draw [fill=cor2, draw=cor2] (current page text area.north west) -- ++(0.00mm,-8.00mm) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] -| ++(63.00mm,8.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+      \draw [fill=base1!30, draw=base1!30] (corner1) -- (corner2) arc [start angle=90, end angle=0, x radius=4.00mm, y radius=4.00mm] -- (corner3) arc [start angle=0, end angle=-90, x radius=4.00mm, y radius=4.00mm] -- (corner4) arc [start angle=270, end angle=180, x radius=4.00mm, y radius=4.00mm] -- cycle;
+      % \draw [green] (text1) rectangle (text2);
+      \draw [black] (border1a) -- (border1b) -- (border1c) -| cycle;
 
-		\end{pgfonlayer}
-		
-		\begin{pgfonlayer}{foreground}
-			\node [color=base1!30, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (title) at (heading) {PROJETO APLICADO};
+    \end{pgfonlayer}
+    
+    \begin{pgfonlayer}{foreground}
+      \node [color=base1!30, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (title) at (heading) {PROJETO APLICADO};
             \node [box, below right] (bodytext) at (border1c){%
-			\begin{minipage}{0.85\textwidth}
-				\BODY			
-			\end{minipage}	
-			};
-		\end{pgfonlayer}
-	
-		
-	\end{tikzpicture}
+      \begin{minipage}{0.85\textwidth}
+
+\renewcommand*{\itemcoloredsquare}{%
+    \tikz  {%
+        \node[shape=rectangle, fill=\currentcolor, minimum width=1.5mm, minimum height=1.5mm] (boxitem) {};
+    }
+}
+
+      \renewcommand*{\itembox}{%
+    \tikz [baseline=(boxitem.base)] {%
+        \node[shape=rectangle, draw=black, minimum width=.5mm, minimum height=.5mm,fill=\currentcolor] (boxitem) {};
+    }
+}
+% Defining an alternative shape for itemize, where the bullets are actually colored squares.
+
+\setlist[itemize]{label=\protect\itembox}
+
+        \BODY     
+
+
+      \end{minipage}  
+      };
+    \end{pgfonlayer}
+
+    
+  \end{tikzpicture}
     \clearpage
 }
+
+% \NewEnviron{project}{%
+% \setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+% %\setlist[itemize]{label=\protect\itembox}
+% \setlist[itemize]{label=\protect\itemcoloredsquare}
+% \def\currentcolor{cor2}
+%     \newpage
+% 	\begin{tikzpicture}[remember picture, overlay]
+% 		\coordinate (border1) at ($(current page text area.south east) + (0.00mm,8.00mm)$);
+% 		\coordinate (border1a) at ($(border1) + (-5.00mm,2.00mm)$);
+% 		\coordinate (border1b) at ($(current page text area.south west) + (11.00mm,10.00mm)$);
+% 		\coordinate (border1c) at ($(current page text area.north west) + (11.00mm,-13.00mm)$);
+%         \coordinate (border1d) at ($(current page text area.south west) + (11.00mm,13.00mm)$);
+% 		\coordinate (heading) at ($(current page text area.north west) + (32.50mm,-5.00mm)$);
+% 		\coordinate (corner1) at ($(current page text area.north west) + (6.00mm,-10.00mm)$);
+% 		\coordinate (corner2) at ($(current page text area.north east) + (-4.00mm,-10.00mm)$);
+% 		\coordinate (corner3) at ($(current page text area.south east) + (0.00mm,10.00mm)$);
+% 		\coordinate (corner4) at ($(current page text area.south west) + (10.00mm,6.00mm)$);
+% 		\coordinate (text1) at ($(current page text area.north west) + (11.00,-12.50mm)$);
+% 		\coordinate (text2) at ($(current page text area.south east) + (-2.50mm,8.50mm)$);
+%         \coordinate (bodytextpos) at ($(border1c) + (5.00mm,-3.00mm)$);
+		
+% 		\begin{pgfonlayer}{background}
+% 			\draw [draw=base1, fill=base1] (current page text area.south west) rectangle (current page text area.north east);
+%             		\end{pgfonlayer}
+		
+% 		\begin{pgfonlayer}{main}
+% 			\draw [fill=cor2, draw=cor2] (current page text area.north west) -- ++(0.00mm,-8.00mm) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] -| ++(63.00mm,8.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+% 			\draw [fill=base1!30, draw=base1!30] (corner1) -- (corner2) arc [start angle=90, end angle=0, x radius=4.00mm, y radius=4.00mm] -- (corner3) arc [start angle=0, end angle=-90, x radius=4.00mm, y radius=4.00mm] -- (corner4) arc [start angle=270, end angle=180, x radius=4.00mm, y radius=4.00mm] -- cycle;
+% 			% \draw [green] (text1) rectangle (text2);
+% 			\draw [black] (border1a) -- (border1b) -- (border1c) -| cycle;
+
+% 		\end{pgfonlayer}
+		
+% 		\begin{pgfonlayer}{foreground}
+% 			\node [color=base1!30, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (title) at (heading) {PROJETO APLICADO};
+%             \node [box, below right] (bodytext) at (border1c){%
+% 			\begin{minipage}{0.85\textwidth}
+% 				\BODY			
+% 			\end{minipage}	
+% 			};
+% 		\end{pgfonlayer}
+	
+		
+% 	\end{tikzpicture}
+%     \clearpage
+% }
 
 %Seção 2 - Livro Aberto Colors
 
@@ -1850,13 +1915,16 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 \frontmatter
 \setcounter{mypresentation}{\value{page}}
 \def\currentcolor{cor1}
-\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}
+\newgeometry{textwidth=840pt,outer=50pt, bottom=17mm, top=17mm}
 \pagestyle{plain}
 \setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
 \setlist[itemize]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt} 
 \section{#1}
 \begin{multicols}{2}}
 {\clearpage\end{multicols}
+\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}
 \pagebreak\restoregeometry 
 \mainmatter
 \def\currentcolor{session1}
@@ -1883,13 +1951,17 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 \cleardoublepage
 \setcounter{mypagecount}{\value{page}}
 \def\currentcolor{session1}
-\newgeometry{textwidth=840pt,outer=50pt, bottom=45pt, top=46pt}
+\newgeometry{textwidth=840pt,outer=50pt, bottom=17mm, top=17mm}
 \thispagestyle{empty}\pagestyle{empty}
 \setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
 \setlist[itemize]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}
 \section{#1}
 \begin{multicols}{2}}
-{\clearpage\end{multicols}\def\currentcolor{session1}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
+{\clearpage\end{multicols}
+\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}
+\def\currentcolor{session1}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
 }
 
 
@@ -1936,7 +2008,9 @@ attach boxed title to top right={yshift=.5mm-.8pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north east)+(0,-1pt)$)--($(frame.north east)+(-15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
-}, 
+}, after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}},
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=2.5pt, itemsep=0pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
@@ -1965,9 +2039,11 @@ attach boxed title to top left={yshift=.5mm-.8pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
-}, 
+}, after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}},
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
-\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=2.5pt, itemsep=0pt}},
+\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=2.5pt, itemsep=0pt}}, 
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
 % {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
     subtitle style = {
@@ -2003,7 +2079,9 @@ attach boxed title to top left={xshift=3mm , yshift=.5mm-.8pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
-}, 
+},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}},
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
@@ -2037,7 +2115,9 @@ attach boxed title to top left={xshift=3mm , yshift=.5mm-.8pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
-}, 
+},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}},
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
@@ -2057,7 +2137,9 @@ before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 }
 \fi}
 \fi}
-{}
+{\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}}
 
 
 
@@ -2077,7 +2159,9 @@ attach boxed title to top right={ , yshift=.5mm-.2pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north east)+(0,-1pt)$)--($(frame.north east)+(-15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
-}, 
+},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}},
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
@@ -2107,7 +2191,9 @@ attach boxed title to top left={ , yshift=.5mm-.2pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
-}, 
+},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}},
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
@@ -2142,7 +2228,9 @@ attach boxed title to top left={xshift=3mm , yshift=.5mm-.2pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
-}, 
+},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}},
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
@@ -2177,7 +2265,9 @@ attach boxed title to top left={xshift=3mm , yshift=.5mm-.2pt},
 underlay boxed title={
 \draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
 \filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
-}, 
+},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}},
 before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
 \normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
 % {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
@@ -2195,7 +2285,9 @@ before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
     break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
 }
 \fi}
-\fi}
+\fi}{\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}}
 
 
 \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
@@ -2256,7 +2348,9 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,
 
 \fi}
 \fi
-}
+}{\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+%\setlist[itemize]{label=\protect\itembox}
+\setlist[itemize]{label=\protect\itemcoloredsquare}}
 
 
 \newcommand\notas[1]{
@@ -2295,9 +2389,9 @@ title=#1}
 colframe=grafite!90!white,colupper=white, left=0pt, right=0pt,top=-2pt,bottom=-2pt, hbox, sharp corners = northeast, sharp corners = southwest]
 {\textbf{#1}}\end{tcolorbox}}}}
 
-\geometry{reset, paperwidth=950pt,paperheight=782pt,textwidth=450pt,
-marginparsep=30pt,headsep=19pt,top=45pt,inner=50pt,outer=440pt,
-marginparwidth=350pt,textheight=686pt}
+\geometry{reset, paperwidth=950pt,paperheight=275mm,textwidth=162mm,
+marginparsep=30pt,headsep=19pt,top=17mm, bottom=17mm ,inner=50pt,outer=440pt,
+marginparwidth=350pt,textheight=241mm}
 
 \newcommand{\anexo}[1]{
   \clearpage
@@ -2307,7 +2401,10 @@ marginparwidth=350pt,textheight=686pt}
 }
 
 
-
+%Ambiente marginfigure para figuras na margem
+\newfloat{marginfigure}{htp}{Figura}[chapter]
+\floatname{marginfigure}{Figura}
+\renewcommand\themarginfigure{\thechapter.\Roman{marginfigure}}
 
 
 \endinput
