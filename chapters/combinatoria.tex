@@ -279,7 +279,7 @@ A solução no caso geral não precisa ser apresentada aos estudantes, desde que
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\mspace{-2.25em}
+\mspace{-1em}
 \begin{sugestions}{Nome da empresa com letras repetidas}
 {
 O esperado para esta atividade é que os estudantes levem em conta as soluções apresentadas na Atividade \textbf{Escolhendo o nome da equipe} para construção das respostas desta atividade e estabeleçam outras estratégias de organização dos dados. Duas observações podem ser estabelecidas: para contar sequências com elementos repetidos, podemos contá-los como se fossem distintos e depois observar que essas sequências foram contadas múltiplas vezes; se uma sequência é contada múltiplas vezes, é necessário dividir pelo número de vezes que cada sequência foi contada.
@@ -287,7 +287,6 @@ O esperado para esta atividade é que os estudantes levem em conta as soluções
 \textbf{Tempo de Execução:} A questão pode ser feita em 35 minutos sendo utilizados para os itens \titem{a)}, \titem{b)} e \titem{c)} até 5  minutos, e para os itens \titem{c)} e \titem{d)}, entre 5 a 10 minutos cada.
 }{1}{2}
 \end{sugestions}
-\mspace{-1.25em}
 \begin{answer}{Nome da empresa com letras repetidas}
 {
 \begin{enumerate}
@@ -316,7 +315,6 @@ $MRR$, $MRR$, $RMR$, $RMR$, $RRM$, $RRM$. Cada uma das soluções $MRR$, $RMR$, 
 Analisar a necessidade de organização dos registros para a resolução de problemas de contagem. Refletir sobre as possíveis variações de um problema e os impactos em sua solução. Introduzir contagens nas quais a ordem de organização dos elementos não seja importante. Separar um problema em casos menores para a resolução.
 }{1}{1}
 \end{objectives}
-\mspace{-2.25em}
 \begin{sugestions}{Jogo de dominó}
 {
 Primeiramente, todos os estudantes devem estar familiarizados com o jogo de dominó. Tenha certeza de que, mesmo sem nunca ter jogado, todos tenham o conhecimento de como é uma peça de dominó. O esperado para esta atividade é que eles encontrem uma estratégia para contar o número de dominós e consigam ampliar para um número maior de peças. Mesmo que os estudantes já saibam a quantidade de peças é importante que construam um argumento para a contagem da letra b), pois ele será necessário para a ideia da generalização. Ainda assim, a generalização dada no item $e)$ não precisa ser apresentada ao estudante. Eles poderão desenvolver vários casos particulares até entender a quantidade de peças acrescidas a cada passo.
@@ -324,7 +322,6 @@ Primeiramente, todos os estudantes devem estar familiarizados com o jogo de domi
 \textbf{Tempo de Execução:} A questão pode ser feita em 45 minutos sendo utilizados para o item a) até 5  minutos, e para os demais itens 10 minutos cada.
 }{1}{1}
 \end{sugestions}
-\mspace{-1.5em}
 
 \begin{answer}{Jogo de dominó}
 {
@@ -693,8 +690,93 @@ Observe a árvore de possibilidades:
 \begin{figure}[H]
 \centering
 
-    \includegraphics[scale=0.5]{arvore1.jpg}
+ \resizebox{\linewidth}{!}
+ {
+ \begin{tikzpicture}[every node/.style={circle, fill, inner sep=2pt}, level 1/.style={sibling distance = {4cm}, level distance=5cm}, level 2/.style={sibling distance = {.55cm}, level distance = 3cm}, ,  
+]
+\node (A) [sibling distance = {6.5cm}] {}
+	child {node [label=above left:{$M_1$}] {}
+		child {node [label=below:{$M_2$}] {}}
+		child {node [label=below:{$M_3$}] {}}
+		child {node [label=below:{$M_4$}] {}}
+		child {node [label=below:{$M_5$}] {}}
+		child {node [label=below:{$M_6$}] {}}
+		child {node [label=below:{$M_7$}] {}}
+		child {node [label=below:{$M_8$}] {}}
+	}
+	child {node [label=above left:{$M_2$}] {}
+		child {node [label=below:{$M_1$}] {}}
+		child {node [label=below:{$M_3$}] {}}
+		child {node [label=below:{$M_4$}] {}}
+		child {node [label=below:{$M_5$}] {}}
+		child {node [label=below:{$M_6$}] {}}
+		child {node [label=below:{$M_7$}] {}}
+		child {node [label=below:{$M_8$}] {}}
+	}	
+	child {node [label=above left:{$M_3$}] {}
+		child {node [label=below:{$M_1$}] {}}
+		child {node [label=below:{$M_2$}] {}}
+		child {node [label=below:{$M_4$}] {}}
+		child {node [label=below:{$M_5$}] {}}
+		child {node [label=below:{$M_6$}] {}}
+		child {node [label=below:{$M_7$}] {}}
+		child {node [label=below:{$M_8$}] {}}
+	}
+	child {node [label=above left:{$M_4$}] {}
+		child {node [label=below:{$M_1$}] {}}
+		child {node [label=below:{$M_2$}] {}}
+		child {node [label=below:{$M_3$}] {}}
+		child {node [label=below:{$M_5$}] {}}
+		child {node [label=below:{$M_6$}] {}}
+		child {node [label=below:{$M_7$}] {}}
+		child {node [label=below:{$M_8$}] {}}
+	}
+	child {node [label=above right:{$M_5$}] {}
+		child {node [label=below:{$M_1$}] {}}
+		child {node [label=below:{$M_2$}] {}}
+		child {node [label=below:{$M_3$}] {}}
+		child {node [label=below:{$M_4$}] {}}
+		child {node [label=below:{$M_6$}] {}}
+		child {node [label=below:{$M_7$}] {}}
+		child {node [label=below:{$M_8$}] {}}
+	}
+	child {node [label=above right:{$M_6$}] {}
+		child {node [label=below:{$M_1$}] {}}
+		child {node [label=below:{$M_2$}] {}}
+		child {node [label=below:{$M_3$}] {}}
+		child {node [label=below:{$M_4$}] {}}
+		child {node [label=below:{$M_5$}] {}}
+		child {node [label=below:{$M_7$}] {}}
+		child {node [label=below:{$M_8$}] {}}
+	}
+	child {node [label=above right:{$M_7$}] {}
+		child {node [label=below:{$M_1$}] {}}
+		child {node [label=below:{$M_2$}] {}}
+		child {node [label=below:{$M_3$}] {}}
+		child {node [label=below:{$M_4$}] {}}
+		child {node [label=below:{$M_5$}] {}}
+		child {node [label=below:{$M_6$}] {}}
+		child {node [label=below:{$M_8$}] {}}
+	}
+	child {node [label=above right:{$M_8$}] {}
+		child {node [label=below:{$M_1$}] {}}
+		child {node [label=below:{$M_2$}] {}}
+		child {node [label=below:{$M_3$}] {}}
+		child {node [label=below:{$M_4$}] {}}
+		child {node [label=below:{$M_5$}] {}}
+		child {node [label=below:{$M_6$}] {}}
+		child {node [label=below:{$M_7$}] {}}
+	}
+;
+\end{tikzpicture}
+ }
 \end{figure}
+
+% \begin{figure}[H]
+% \centering
+
+%     \includegraphics[scale=0.5]{arvore1.jpg}
+% \end{figure}
 
 
 Saindo da raiz da árvore existem 8 possibilidades $\{M_1, M_2, M_3, M_4, M_5, M_6, M_7, M_8\}$ para a escolha do primeiro membro. Depois o segundo ramo da árvore, contem as possibilidades que estão disponíveis, após a primeira escolha. Qualquer membro que for escolhido para capitão(ã) tem disponível 7 membros para ser vice, as possibilidades são diferentes, mas as quantidades não. Para encontrar o total podemos somar oito parcelas iguais a 7, cada uma correspondendo a contagem feita tomando como referência um membro da equipe, correspondendo a um ramo da árvore. Este cálculo pode ser simplificado como oito vezes sete :
@@ -725,8 +807,91 @@ G_{24},G_{25},G_{26},$ $G_{27},G_{28}\}$. Existem 8 possibilidades para a escolh
 \begin{figure}[H]
 \centering
 
-
-\includegraphics[scale=0.5]{arvore2.jpg}
+\begin{tikzpicture}[every node/.style={scale=.6}, level 1/.style={sibling distance = {3cm}, level distance=3cm}, level 2/.style={sibling distance = {.7cm}, level distance = 3cm}, scale=.6]
+\tikzstyle{dot}=[circle, fill, inner sep=2pt, scale={1}]
+\node [label=above:$G_1$, dot](A) {} 
+	child  [grow=north west, level distance=4cm, xshift=1cm] {node [label=right:{$G_{18}$}, dot] {} [grow=north west, level distance=3cm]
+		child {node [label=left:{$G_{21}$}, dot] {}}
+		child {node [label=left:{$G_{22}$}, dot] {}}
+		child {node [label=left:{$G_{23}$}, dot] {}}
+		child {node [label=left:{$G_{24}$}, dot] {}}
+		child {node [label=left:{$G_{25}$}, dot] {}}
+		child {node [label=left:{$G_{26}$}, dot] {}}
+		child {node [label=left:{$G_{27}$}, dot] {}}
+		child {node [label=left:{$G_{28}$}, dot] {}}
+	}
+	child [level distance=5cm, grow=left] {node [label=above:{$G_{17}$}, dot] {} [grow=west]
+		child {node [label=left:{$G_{21}$}, dot] {}}
+		child {node [label=left:{$G_{22}$}, dot] {}}
+		child {node [label=left:{$G_{23}$}, dot] {}}
+		child {node [label=left:{$G_{24}$}, dot] {}}
+		child {node [label=left:{$G_{25}$}, dot] {}}
+		child {node [label=left:{$G_{26}$}, dot] {}}
+		child {node [label=left:{$G_{27}$}, dot] {}}
+		child {node [label=left:{$G_{28}$}, dot] {}}
+	}	
+	child {node [label=above left:{$G_{16}$}] {} [grow=south west, dot]
+		child {node [label=left:{$G_{21}$}, dot] {}}
+		child {node [label=left:{$G_{22}$}, dot] {}}
+		child {node [label=left:{$G_{23}$}, dot] {}}
+		child {node [label=left:{$G_{24}$}, dot] {}}
+		child {node [label=left:{$G_{25}$}, dot] {}}
+		child {node [label=left:{$G_{26}$}, dot] {}}
+		child {node [label=left:{$G_{27}$}, dot] {}}
+		child {node [label=left:{$G_{28}$}, dot] {}}
+	}
+	child [level distance=6cm, xshift=-.5cm] {node [label=above left:{$G_{15}$}, dot] {} [grow=250]
+		child {node [label=below left:{$G_{21}$}, dot] {}}
+		child {node [label=below left:{$G_{22}$}, dot] {}}
+		child {node [label=below left:{$G_{23}$}, dot] {}}
+		child {node [label=below left:{$G_{24}$}, dot] {}}
+		child {node [label=below left:{$G_{25}$}, dot] {}}
+		child {node [label=below left:{$G_{26}$}, dot] {}}
+		child {node [label=below left:{$G_{27}$}, dot] {}}
+		child {node [label=below left:{$G_{28}$}, dot] {}}
+	}
+	child [sibling distance=.7cm] {node [label=above right:{$G_{14}$}, dot] {} [sibling distance=.7cm, grow=-70]
+		child {node [label=below:{$G_{21}$}, dot] {}}
+		child {node [label=below:{$G_{22}$}, dot] {}}
+		child {node [label=below:{$G_{23}$}, dot] {}}
+		child {node [label=below:{$G_{24}$}, dot] {}}
+		child {node [label=below:{$G_{25}$}, dot] {}}
+		child {node [label=below:{$G_{26}$}, dot] {}}
+		child {node [label=below:{$G_{27}$}, dot] {}}
+		child {node [label=below:{$G_{28}$}, dot] {}}
+	}
+	child [level distance=6cm, grow=south east] {node [label=above right:{$G_{13}$}, dot] {} [grow=south east]
+		child {node [label=below right:{$G_{21}$}, dot] {}}
+		child {node [label=below right:{$G_{22}$}, dot] {}}
+		child {node [label=below right:{$G_{23}$}, dot] {}}
+		child {node [label=below right:{$G_{24}$}, dot] {}}
+		child {node [label=below right:{$G_{25}$}, dot] {}}
+		child {node [label=below right:{$G_{26}$}, dot] {}}
+		child {node [label=below right:{$G_{27}$}, dot] {}}
+		child {node [label=below right:{$G_{28}$}, dot] {}}
+	}
+	child [grow=right, level distance=4cm] {node [label=above:{$G_{12}$}, dot] {} [grow=right]
+		child {node [label=right:{$G_{21}$}, dot] {}}
+		child {node [label=right:{$G_{22}$}, dot] {}}
+		child {node [label=right:{$G_{23}$}, dot] {}}
+		child {node [label=right:{$G_{24}$}, dot] {}}
+		child {node [label=right:{$G_{25}$}, dot] {}}
+		child {node [label=right:{$G_{26}$}, dot] {}}
+		child {node [label=right:{$G_{27}$}, dot] {}}
+		child {node [label=right:{$G_{28}$}, dot] {}}
+	}
+	child [level distance=4cm, grow=north east] {node [label=left:{$G_{11}$}, dot] {} [grow=north east]
+		child {node [label=above:{$G_{21}$}, dot] {}}
+		child {node [label=above:{$G_{22}$}, dot] {}}
+		child {node [label=above:{$G_{23}$}, dot] {}}
+		child {node [label=above:{$G_{24}$}, dot] {}}
+		child {node [label=above:{$G_{25}$}, dot] {}}
+		child {node [label=above:{$G_{26}$}, dot] {}}
+		child {node [label=above:{$G_{27}$}, dot] {}}
+		child {node [label=above:{$G_{28}$}, dot] {}}
+	}
+;
+\end{tikzpicture}
 \caption{$G_{ij}$ indica o membro $j$ do grupo $i$.}
 \end{figure}
 
@@ -741,14 +906,13 @@ Ao dizer que os problemas menores não possuem soluções comuns, a solução ge
 O raciocínio feito para se chegar ao \textbf{Princípio Multiplicativo}  usa do \textbf{Princípio   Aditivo},  pois a solução foi construída como a soma de várias soluções menores. No geral, o \textbf{Princípio Aditivo} aparece em problemas que possuem restrições que devem ser consideradas separadamente. 
 
 Considere que na formação dos juízes duas pessoas não poderiam estar juntas, isso gera restrições na contagem, a solução pode ser dada como a soma de três casos: duplas formadas com  $P_1$ e sem $P_2$; duplas formadas com  $P_2$ e sem $P_1$ e as duplas formadas sem $P_1$ e sem $P_2$. Outra maneira de resolver este mesmo problema é com o uso da subtração. Assim como a divisão é usada para retirar as cópias da solução a subtração é usada para retirar algumas soluções contabilizadas a mais. Neste último problema, a contagem poderia ter sido feita considerando todas as duplas possíveis e depois retirada dela as duplas com $P_1$ e $P_2$ juntas. 
-\clearpage
 \def\currentcolor{session2}
 \begin{objectives}{Jogo da senha}
 {
 Praticar o uso dos Princípios Aditivo e Multiplicativo em variações dentro do mesmo problema. Elaborar questões de contagem. Diferenciar e praticar problemas que envolvam ordem de elementos. Diferenciar e praticar problemas que envolvam repetição de elementos.
 }{1}{1}
 \end{objectives}
-\mspace{-2.25em}
+\mspace{-1.5em}
 \begin{sugestions}{Jogo da senha}
 {
 O esperado para esta atividade é que os estudantes percebam o efeito da ordem e da repetição na contagem. Eles devem ser incentivados a reexplorar o jogo a cada novo questionamento.
@@ -756,7 +920,7 @@ O esperado para esta atividade é que os estudantes percebam o efeito da ordem e
 \textbf{Tempo de Execução:} A questão pode ser feita em 90 minutos (1 hora e meia) sendo utilizados entre 5 a 10 minutos para os alunos jogarem e experimentarem o jogo,  para o item \titem{a)} até 5  minutos, e para os demais itens entre 5 a 10 minutos cada, lembrando que eles podem voltar ao jogo a cada questionamento feito.
 }{1}{1}
 \end{sugestions}
-\mspace{-1.25em}
+\mspace{-.5em}
 \begin{answer}{Jogo da senha}
 {
 \begin{enumerate}
@@ -768,9 +932,7 @@ O esperado para esta atividade é que os estudantes percebam o efeito da ordem e
 
 \item Sendo 6 números ou símbolos seguindo a ideia de serem distintos e não poderem ser repetidos a contagem do número de senhas distintas não mudará, logo $6!$. 
 
-\item Se a repetição de cores é permitida, para cada posição seriam sempre 6 possibilidades, então $6^4=1296.$
-
-\item Seria a soma das senhas começando com números com as senhas começando com cores. Obtemos  $6 \cdot 5 \cdot  10 \cdot 9 $ senhas começando com cores e $10 \cdot 9 \cdot 6 \cdot 5$ senhas começadas em números. Somando teríamos o total de $2 \cdot 2.700= 5.400$ senhas diferentes.
+diferentes.
 \end{enumerate}
 }{1}
 \end{answer}
@@ -790,7 +952,11 @@ No exemplo dado na figura acima, como as cores azul e amarelo não fazem parte d
 \clearmargin
 \begin{answer}{Jogo da senha}
 {
-\begin{enumerate}\setcounter{enumi}{7}
+\begin{enumerate}\setcounter{enumi}{5}
+\item Se a repetição de cores é permitida, para cada posição seriam sempre 6 possibilidades, então $6^4=1296.$
+
+\item Seria a soma das senhas começando com números com as senhas começando com cores. Obtemos  $6 \cdot 5 \cdot  10 \cdot 9 $ senhas começando com cores e $10 \cdot 9 \cdot 6 \cdot 5$ senhas começadas em números. Somando teríamos o total de $2 \cdot 2.700= 5.400$ senhas 
+
 \item Uma senha onde a repetição é permitida geraria mais possibilidades de escolha e portanto, maior segurança.
 
 \item Sugestões que levem em consideração o uso de mais símbolos como letras e números que podem se repetir integradas a senha com cores  aumentam o número de possibilidades da mesma.
@@ -922,7 +1088,7 @@ resultado obtido no item \titem{a)}. Neste ponto é importante destacar para os 
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\mspace{-1.25em}
+
 \begin{sugestions}{Indo de um ponto a outro}
 {
 Esse exercício pode ser usado não só com o intuito de discutir os Princípios de Contagem, mas como material para a metodologia de levar o estudante ao papel de elaboração de uma questão em contagem. Veja que a situação de deslocamento de um local a outro pode ocorrer em várias situações do cotidiano.
@@ -1013,7 +1179,6 @@ No caso Quadra temos $\dfrac{7 \cdot 6 \cdot 5 \cdot 4}{4!}\cdot \dfrac{53\cdot 
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\mspace{-2.25em}
 \begin{sugestions}{Alocando-se no cinema}
 {
 O esperado para esta atividade é que os estudantes percebam que não existe caminho único para organização das soluções, mas que é preciso primeiro organizar as restrições do problema. Assim, tomar decisões distintas leva a  caminhos de contagem distintos. Também é esperado que o aluno entenda que deve ser tomadas as restrições primeiramente na tomada de decisão pois isso facilita a contagem.
@@ -1195,7 +1360,31 @@ Com um mapa abaixo, suponha que você está no ponto $A$ e precise chegar ao pon
 \begin{figure}[H]
 \centering
 
-\includegraphics[scale=1.3]{caca_tesouro.png}
+\begin{tikzpicture}[xscale=1.4, scale=.8]
+\tikzstyle{dot}=[circle, fill, inner sep=2pt]
+\foreach \x in {1,...,4}
+{
+\draw [very thick] (\x,0) -- (\x,6);
+\node [dot, fill=\tikzcolor] at (\x,0) {};
+\node [dot] at (\x,1) {};
+\node [dot] at (\x,2) {};
+\node [dot] at (\x,3) {};
+\node [dot] at (\x,4) {};
+\node [dot] at (\x,5) {};
+\node [dot, blue] at (\x,6) {};
+};
+
+\foreach \x in {1,...,5}
+{
+\draw [very thick] (0,\x) -- (5,\x);
+\node [dot, fill=\tikzcolor] at (0,\x) {};
+\node [dot, fill=\tikzcolor] at (5,\x) {};
+};
+
+\node [dot, fill=session4, label=below left:$A$] at (1,1) {};
+\node [dot, fill=session4, label=above right:$B$] at (4,5) {};
+
+\end{tikzpicture}
 \end{figure}
 
 \begin{enumerate}
@@ -1362,7 +1551,17 @@ Para a produção de algumas bijuterias, como brincos e braceletes são usadas p
 \begin{figure}[H]
 \centering
 
-\includegraphics[scale=0.4]{brincos.png}
+\begin{tikzpicture}[scale=2, every node/.style={node distance=2cm}]
+\tikzstyle{dot}=[circle, fill, inner sep=2pt]
+
+\node (A) [dot, fill=\tikzcolor, above=1cm] {};
+\node (B) [dot, fill=\tikzcolor, right=1cm] {};
+\node (C) [dot, fill=\tikzcolor, below=1cm] {};
+\node (D) [dot, fill=\tikzcolor, left=1cm] {};
+
+\draw (A) -- (B) -- (C) -- (D) -- (A);
+
+\end{tikzpicture}
 \end{figure}
 
 Pense em alguns modelos de brinco que usem exatamente as  três cores de pedras disponíveis de modo que duas pedras na sequência não sejam da mesma cor.
