@@ -165,10 +165,11 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \DeclareMathOperator{\tgh}{tgh}
 \DeclareMathOperator{\mdc}{mdc}
 \DeclareMathOperator{\mmc}{mmc}
+\DeclareMathOperator{\med}{med}
+\DeclareMathOperator{\rad}{rad}
 % \DeclareMathOperator{\si}{Si}
 \DeclareMathOperator{\dirac}{\delta}
 \DeclareMathOperator{\mmu}{\mu}
-\DeclareMathOperator{\rad}{rad}
 \renewcommand{\Im}{\operatorname{Im}}
 \DeclareMathOperator{\D}{D}
 \DeclareMathOperator{\CD}{CD}
@@ -213,7 +214,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{f}{>$c<$}
-
+\newcolumntype{g}[1]{>$e{#1}<$}
 
 % Prevent a clash with tabu, or other packages that also define \extrarowdepth.
 \AtBeginDocument{%
@@ -346,7 +347,7 @@ underlay boxed title={
 parbox=false, enhanced, breakable, left=3mm, right=3mm,bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\bfseries\textcolor{\currentcolor}{ #1}}, boxed title style ={empty},top=8mm, attach boxed title to top center={xshift=0mm, yshift=-7.5mm}
 }
 
-\newtcolorbox{observation}[1]{parbox=false, enhanced, breakable, left=3mm, right=3mm, top=3mm, bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\bfseries\textcolor{\currentcolor}{ #1}}, attach boxed title to top center={xshift=0mm, yshift=-5.5mm}, boxed title style ={empty}}	 
+\newtcolorbox{observation}[1]{parbox=false, enhanced, breakable, left=3mm, right=3mm, top=3mm, bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\bfseries\textcolor{\currentcolor}{ #1}}, attach boxed title to top center={xshift=0mm, yshift=-5.5mm}, boxed title style ={empty}}     
 
 
 \newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{example}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
@@ -881,7 +882,7 @@ underlay boxed title={
         \node[font=\chapnumfont, text=cor2] at (a) {\chapnamefont\thechapter};
 
         \coordinate (b) at ($(c1)!0.5!(c2)$);
-        \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {\begin{varwidth}{15cm}\baselineskip=1cm #1\end{varwidth}};
+        \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {\begin{varwidth}{20cm}\baselineskip=1cm #1\end{varwidth}};
         % solution to the box O QUE and POR QUE?
         \node [right] at ($(current page.north)+(-15mm,-150mm)$) %
         {\begin{openningbox}
@@ -2357,6 +2358,7 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,
 	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
 	\endnotetext
 	{#1}}
+  
 \newcommand\mnotas[1]{
 	\marginpar{
 	\notebox{\textcolor{white}{\textbf{\endnotemark}}}

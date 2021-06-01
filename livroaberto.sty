@@ -2,7 +2,7 @@
 \def\filename{livroaberto}
 \def\filetitle{Livro Aberto package}
 \def\filedate{2018/02/13}
-\def\docdate {2018/02/13}
+\def\docdate{2018/02/13}
 
 %Combinação dos pacotes usados para o livro aberto
 %Para acessar cada seção basta usar Ctrl+F
@@ -106,7 +106,6 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{adjustbox}
 % \RequirePackage{scrlayer-notecolumn}
 \RequirePackage{marginfix}
-\RequirePackage{pdfpages}
 \RequirePackage{stmaryrd}
 \RequirePackage{lscape}
 
@@ -149,7 +148,6 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \PassOptionsToPackage{bookmarks=false}{hyperref}
 \hypersetup{colorlinks=true, colorlinks=true, linkcolor=linkscolor, filecolor=linkscolor, urlcolor=linkscolor,citecolor=linkscolor}
 
-\tcbuselibrary{skins,breakable}
 \RequirePackage{graphicx}
 \@ifclassloaded{memoir}{}{\RequirePackage{fancyhdr}}
 
@@ -163,6 +161,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \DeclareMathOperator{\tgh}{tgh}
 \DeclareMathOperator{\mdc}{mdc}
 \DeclareMathOperator{\mmc}{mmc}
+\DeclareMathOperator{\med}{med}
 \DeclareMathOperator{\rad}{rad}
 % \DeclareMathOperator{\si}{Si}
 \DeclareMathOperator{\dirac}{\delta}
@@ -211,7 +210,7 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{f}{>$c<$}
-
+\newcolumntype{g}[1]{>$e{#1}<$}
 
 % Prevent a clash with tabu, or other packages that also define \extrarowdepth.
 \AtBeginDocument{%
@@ -332,7 +331,6 @@ parbox=false, enhanced, breakable, left=3mm, right=3mm,bottom=2mm, colback=box2!
 }
 
 \newtcolorbox{observation}[1]{parbox=false, enhanced, breakable, left=3mm, right=3mm, top=3mm, bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\bfseries\textcolor{\currentcolor}{ #1}}, attach boxed title to top center={xshift=0mm, yshift=-5.5mm}, boxed title style ={empty}}   	 
-
 
 
 \newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{example}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
