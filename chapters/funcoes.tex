@@ -1,3 +1,5 @@
+%!TEX root = ../aluno.tex
+
 \ifnum \aluno=1
 \renewcommand\chapterillustration{abertura-funcoes}
 \else
@@ -1911,12 +1913,12 @@ Apresentam-se, a seguir, quatro afirmações. De acordo com o gráfico, apenas u
 \draw[->,color=black] (0.,-.1) -- (0.,5.5);
 \foreach \y in {0., 2.,4.,6., 8., 10.}
 \draw[shift={(0,.5*\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left, scale=.7] { $\y$};
-\draw [fill](0,1.5) circle (2pt);
-\draw [fill](2,2.1) circle (2pt);
-\draw [fill](4,2.9) circle (2pt);
-\draw [fill](6,3.6) circle (2pt);
-\draw [fill](8,4.3) circle (2pt);
-\draw [fill](10,5) circle (2pt);
+\node [fill, circle, inner sep=2pt] at (0,1.5) circle {};
+\node [fill, circle, inner sep=2pt] at (2,2.1) circle {};
+\node [fill, circle, inner sep=2pt] at (4,2.9) circle {};
+\node [fill, circle, inner sep=2pt] at (6,3.6) circle {};
+\node [fill, circle, inner sep=2pt] at (8,4.3) circle {};
+\node [fill, circle, inner sep=2pt] at (10,5) circle {};
 \end{tikzpicture}\end{center}\begin{enumerate}
 \item {} 
 A partir dos dados apresentados no gráfico, complete a tabela acima.
@@ -2221,7 +2223,7 @@ Segundo informações do \href{http://www.bigdatabusiness.com.br/visualizacao-de
 \noindent\includegraphics[width=400bp]{{grafico-final}.png}
 \caption{Alguns exemplos de representações gráficas}\label{\detokenize{AF106-4:id1}}\end{figure}
 
-Representar graficamente conjuntos de dados e suas relações pode fazer toda a diferença para transmitir informações. Há vários tipos de gráficos, cada um tem a sua particularidade e serve para transmitir as informações de forma específica. Nesta seção iremos estudar a representação gráfica de funções.
+Represe25ntar graficamente conjuntos de dados e suas relações pode fazer toda a diferença para transmitir informações. Há vários tipos de gráficos, cada um tem a sua particularidade e serve para transmitir as informações de forma específica. Nesta seção iremos estudar a representação gráfica de funções.
 
 Vamos considerar a seguinte situação:
 
@@ -3336,9 +3338,14 @@ O sistema de coordenadas abaixo contém os gráficos para as funções que relac
 \end{tikzpicture}
 \end{figure}
 
+\begin{enumerate}
+\item Qual o preço da tarifa básica por quilowatt-hora nessa cidade?
+\item Considerando que uma residência tenha registrado um consumo de 350KWh em maio, e que seja um mês de bandeira amarela, qual o valor a pagar?
+\item Sabendo que em junho a bandeira será vermelha (patamar 1) e que uma família possa gastar no máximo R\$ $300{,}00$ com a conta de energia elétrica, qual deve ser o consumo máximo nessa residência?
+\end{enumerate}
+
 \end{task}
 
-\clearpage
 \def\currentcolor{session3}
 \begin{objectives}{Todo mundo tem Facebook?}
 {
@@ -3629,7 +3636,7 @@ A codificação acima pode também ser representada em um gráfico em que no eix
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.85]
 \draw[scale=.5](0,0)grid(26,26);
 \foreach \i [count=\x from 0] in{{A}, {B},{C}, {D}, {E}, {F}, {G}, {H},{I},{J},{K},{L},{M},{N},{O},{P},{Q},{R},{S},{T},{U},{V},{W},{X},{Y},{Z}}
 \draw (.2+.5*\x,-.4) node {\i};
@@ -3682,7 +3689,7 @@ Considerando o código do gráfico abaixo, tente decodificar a palavra APQGJXV.
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.85]
 \draw[scale=.5](0,0)grid(26,26);
 \foreach \i [count=\x from 0] in{{A}, {B},{C}, {D}, {E}, {F}, {G}, {H},{I},{J},{K},{L},{M},{N},{O},{P},{Q},{R},{S},{T},{U},{V},{W},{X},{Y},{Z}}
 \draw (.2+.5*\x,-.4) node {\i};
