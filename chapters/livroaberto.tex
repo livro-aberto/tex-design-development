@@ -31,9 +31,10 @@ Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
 
 
 \begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Documentação do Livro Aberto do Ensino médio\\
+
+Título: & \Chaptername\\
 \\
-Ano/ Versão: & 2020 / versão 0.1 de \today\\
+Ano/Versão: & \the\year / versão 0.1 de \today\\
 \\
 Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
 \\
@@ -41,10 +42,10 @@ Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OB
 \\
 Produção:& Associação Livro Aberto\\
 \\
-Coordenação:& Fabio Simas, \\
+Coordenação: & Fabio Simas, \\
 			& Augusto Teixeira (livroaberto@impa.br)\\
 \\
-  Autor: & Tarso Boudet Caldas\\
+  Autor: & Tarso Boudet Caldas \\
         
            
 \\
@@ -55,7 +56,7 @@ Design: & Andreza Moreira (Tangentes Design) \\
 \\
   Ilustrações: & --- \\ 
 \\
-Gráficos: & Tarso Caldas (Licenciandos da UNIRIO)\\
+Gráficos: & --- \\
 \\
   Capa: & Foto de Bernd Klutsch, no Unplash \\
   		& https://unsplash.com/photos/nE2HV5AUXFo
@@ -89,150 +90,150 @@ Gráficos: & Tarso Caldas (Licenciandos da UNIRIO)\\
 \mainmatter
 
 
-\begin{apresentacao}{Introdução à Documentação do Material do Professor}
-A versão do professor atual possui algumas diferenças em relação ao material do aluno, mas utilizando o mesmo arquivo do capítulo em \verb|.tex|. Isto quer dizer que para gerar o material, o texto do capítulo do aluno e do professor convivem no mesmo arquivo, apenas com a diferença de que se compila o arquivo \verb|professor.tex| em vez do \verb|aluno.tex|. De resto, as recomendação sobre como compilar esse texto \textbf{as mesmas} do \textcolor{session1}{Explorando: O que é necessário?} no início desta documentação. Com as seguintes diferenças:
-\begin{itemize}
-\item Ao adicionar a figura de abertura do capítulo, deve haver duas versões, uma para a do aluno e outra para a do professor. No início do arquivo do capítulo deve haver os seguintes comandos:
-\begin{verbatim}
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-capitulo}
-\else
-\renewcommand\chapterillustration{./abertura-capitulo-professor}
-\fi
-\end{verbatim}
-Como o tamanho da página do arquivo do aluno é diferente da do professor, as imagens de abertura possuem tamanhos diferentes. A abertura do aluno está no formato proporcional a \verb|2000 x 2924| pixels e do professor a \verb|2000 x 1646| pixels. É importante observar que as imagens não precisam estar nestes números, apenas deve ter o tamanho proporcional, caso contrário a imagem da capa ficará distorcida.
+% \begin{apresentacao}{Introdução à Documentação do Material do Professor}
+% A versão do professor atual possui algumas diferenças em relação ao material do aluno, mas utilizando o mesmo arquivo do capítulo em \verb|.tex|. Isto quer dizer que para gerar o material, o texto do capítulo do aluno e do professor convivem no mesmo arquivo, apenas com a diferença de que se compila o arquivo \verb|professor.tex| em vez do \verb|aluno.tex|. De resto, as recomendação sobre como compilar esse texto \textbf{as mesmas} do \textcolor{session1}{Explorando: O que é necessário?} no início desta documentação. Com as seguintes diferenças:
+% \begin{itemize}
+% \item Ao adicionar a figura de abertura do capítulo, deve haver duas versões, uma para a do aluno e outra para a do professor. No início do arquivo do capítulo deve haver os seguintes comandos:
+% \begin{verbatim}
+% \ifnum\aluno=1
+% \renewcommand\chapterillustration{./abertura-capitulo}
+% \else
+% \renewcommand\chapterillustration{./abertura-capitulo-professor}
+% \fi
+% \end{verbatim}
+% Como o tamanho da página do arquivo do aluno é diferente da do professor, as imagens de abertura possuem tamanhos diferentes. A abertura do aluno está no formato proporcional a \verb|2000 x 2924| pixels e do professor a \verb|2000 x 1646| pixels. É importante observar que as imagens não precisam estar nestes números, apenas deve ter o tamanho proporcional, caso contrário a imagem da capa ficará distorcida.
 
-\item Há novos ambientes e comandos para os textos do professor, que serão melhor explicados adiantes.
-\end{itemize}
+% \item Há novos ambientes e comandos para os textos do professor, que serão melhor explicados adiantes.
+% \end{itemize}
 
-Para gerar uma página como esta de apresentação, usamos o ambiente
-\begin{verbatim}
-\begin{apresentacao}{titulo}
+% Para gerar uma página como esta de apresentação, usamos o ambiente
+% \begin{verbatim}
+% \begin{apresentacao}{titulo}
 
-\end{apresentacao}
-\end{verbatim}
-com o título de apresentação de sua escolha.  
+% \end{apresentacao}
+% \end{verbatim}
+% com o título de apresentação de sua escolha.  
 
-\subsection{Limitações}
-Por ser uma versão beta do modelo, alguns problemas podem surgir no uso. Este é feito com base em margens, isto é, o material do aluno é o texto principal e o material do professor as margens deste material. Por este motivo, há a dificuldade de alinhamento das caixas do professor nas páginas, por isso, algumas "gambiarras"{} devem ser feitas para que o alinhamento ocorra de modo desejado. Estas serão explicadas no máximo de suas possibilidades, mas alguns problemas podem surgir. 
+% \subsection{Limitações}
+% Por ser uma versão beta do modelo, alguns problemas podem surgir no uso. Este é feito com base em margens, isto é, o material do aluno é o texto principal e o material do professor as margens deste material. Por este motivo, há a dificuldade de alinhamento das caixas do professor nas páginas, por isso, algumas "gambiarras"{} devem ser feitas para que o alinhamento ocorra de modo desejado. Estas serão explicadas no máximo de suas possibilidades, mas alguns problemas podem surgir. 
 
-Ao encontrar um erro, pedimos que este seja reportado na seção de \href{https://github.com/livro-aberto/tex-design-development/issues}{"issues"{} no GitHub do projeto}, para que estes possam ser visto pelo maior número de pessoas, ajudando aqueles que encontrarem um erro semelhante, e também para que os colaboradores que souberem como solucionar o problema tenham melhor acesso.
+% Ao encontrar um erro, pedimos que este seja reportado na seção de \href{https://github.com/livro-aberto/tex-design-development/issues}{"issues"{} no GitHub do projeto}, para que estes possam ser visto pelo maior número de pessoas, ajudando aqueles que encontrarem um erro semelhante, e também para que os colaboradores que souberem como solucionar o problema tenham melhor acesso.
 
-A seguir iremos descrever os ambientes novos criados e seguiremos a exemplificar nas próximas páginas.
+% A seguir iremos descrever os ambientes novos criados e seguiremos a exemplificar nas próximas páginas.
 
-\subsection{Habilidades}
-Temos o ambiente \verb|habilities|, como no exemplo a seguir:
+% \subsection{Habilidades}
+% Temos o ambiente \verb|habilities|, como no exemplo a seguir:
 
-\begin{habilities}{EM13MAT305}
-Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
-\tcbsubtitle{EM13MAT403}
-Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
-\end{habilities}
+% \begin{habilities}{EM13MAT305}
+% Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.
+% \tcbsubtitle{EM13MAT403}
+% Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.
+% \end{habilities}
 
-Estas são as habilidades, do capítulo de Logaritmos. Este ambiente foi gerado pelo seguinte código:
-\begin{verbatim}
-\begin{habilities}{EM13MAT305}
-texto da habilidade
+% Estas são as habilidades, do capítulo de Logaritmos. Este ambiente foi gerado pelo seguinte código:
+% \begin{verbatim}
+% \begin{habilities}{EM13MAT305}
+% texto da habilidade
 
-\tcbsubtitle{EM13MAT403}
-texto da habilidade
-\end{habilities}
-\end{verbatim}
+% \tcbsubtitle{EM13MAT403}
+% texto da habilidade
+% \end{habilities}
+% \end{verbatim}
 
-A primeira habilidade deve estar entre chaves logo depois do início do ambiente. Se houver outras habilidades a serem colocadas no mesmo ambiente, o título deve estar no comando \verb|\tcbsubtitle{habilidade}|. Não há limite para o número de habilidades.
+% A primeira habilidade deve estar entre chaves logo depois do início do ambiente. Se houver outras habilidades a serem colocadas no mesmo ambiente, o título deve estar no comando \verb|\tcbsubtitle{habilidade}|. Não há limite para o número de habilidades.
 
-\subsection{Caixas do para o professor}
+% \subsection{Caixas do para o professor}
 
-O conteúdo para a descrição dos objetivos, sugestões e soluções de atividades e afins deve ser colocado nas seguintes caixas
+% O conteúdo para a descrição dos objetivos, sugestões e soluções de atividades e afins deve ser colocado nas seguintes caixas
 
-\paragraph{Objetivos Específicos}
-Para descrever os objetivos específicos de uma atividade, utilizamos o ambiente \verb|objectives|, com os seguintes argumentos:
-\begin{verbatim}
-\begin{objectives}{título}
-{
-conteúdo
-}{lado da página}{notas}
-\end{objectives}
-\end{verbatim}
-Além do título e do conteúdo, o ambiente requer dois números, um para o lado da página, isto é, se é uma página par ou ímpar. No caso de página ímpar, usamos o número \verb|1| e para páginas ímpar o número \verb|2|. O segundo número indica se a caixa será colocada na página (\verb|1|) do conteúdo ou na seção das notas no final do capítulo (\verb|0|) (exemplificaremos mais à frente). Recomenda-se não colocar os objetivos específicos nas notas no final do capítulo, a menos que necessário.
+% \paragraph{Objetivos Específicos}
+% Para descrever os objetivos específicos de uma atividade, utilizamos o ambiente \verb|objectives|, com os seguintes argumentos:
+% \begin{verbatim}
+% \begin{objectives}{título}
+% {
+% conteúdo
+% }{lado da página}{notas}
+% \end{objectives}
+% \end{verbatim}
+% Além do título e do conteúdo, o ambiente requer dois números, um para o lado da página, isto é, se é uma página par ou ímpar. No caso de página ímpar, usamos o número \verb|1| e para páginas ímpar o número \verb|2|. O segundo número indica se a caixa será colocada na página (\verb|1|) do conteúdo ou na seção das notas no final do capítulo (\verb|0|) (exemplificaremos mais à frente). Recomenda-se não colocar os objetivos específicos nas notas no final do capítulo, a menos que necessário.
 
-\paragraph{Sugestões e discussões}
-Nesta caixa escrevemos informações úteis à execução de uma atividade ou para chamar a atenção a algum conteúdo da página. O funcionamento é o mesmo da caixa de objetivos específicos, mas com o nome \verb|sugestions|:
-\begin{verbatim}
-\begin{sugestions}{título}
-{
-conteúdo
-}{lado da página}{notas}
-\end{sugestions}
-\end{verbatim}
-Neste caso, as notas têm três possibilidades: \verb|1|, \verb|0| ou \verb|9|. A diferença entre a caixa de objetivos específicos e de sugestões é a opção de quebra de página da caixa ao final do capítulo. Traremos exemplos mais tarde.
+% \paragraph{Sugestões e discussões}
+% Nesta caixa escrevemos informações úteis à execução de uma atividade ou para chamar a atenção a algum conteúdo da página. O funcionamento é o mesmo da caixa de objetivos específicos, mas com o nome \verb|sugestions|:
+% \begin{verbatim}
+% \begin{sugestions}{título}
+% {
+% conteúdo
+% }{lado da página}{notas}
+% \end{sugestions}
+% \end{verbatim}
+% Neste caso, as notas têm três possibilidades: \verb|1|, \verb|0| ou \verb|9|. A diferença entre a caixa de objetivos específicos e de sugestões é a opção de quebra de página da caixa ao final do capítulo. Traremos exemplos mais tarde.
 
-\paragraph{Respostas}
-\begin{verbatim}
-\begin{sugestions}{título}
-{
-conteúdo
-}{notas}
-\end{sugestions}
-\end{verbatim}
-O ambiente de respostas não possui diferenciação no lado da página, mas possui o mesmo argumento sobre as notas no final do capítulo que o ambiente de sugestões.
+% \paragraph{Respostas}
+% \begin{verbatim}
+% \begin{sugestions}{título}
+% {
+% conteúdo
+% }{notas}
+% \end{sugestions}
+% \end{verbatim}
+% O ambiente de respostas não possui diferenciação no lado da página, mas possui o mesmo argumento sobre as notas no final do capítulo que o ambiente de sugestões.
 
-\paragraph{Texto fora da caixa}
-Para escrever texto nas margens da página, que não as caixas citadas acima, pode-se utilizar o ambiente \verb|texto|:
-\begin{verbatim}
-\begin{texto}
-{
-conteúdo
-}
-\end{texto}
-\end{verbatim}
+% \paragraph{Texto fora da caixa}
+% Para escrever texto nas margens da página, que não as caixas citadas acima, pode-se utilizar o ambiente \verb|texto|:
+% \begin{verbatim}
+% \begin{texto}
+% {
+% conteúdo
+% }
+% \end{texto}
+% \end{verbatim}
 
-\subsection{Posicionamento das caixas no código}
+% \subsection{Posicionamento das caixas no código}
 
-Por conflitos com as outras caixas do material do aluno, o conteúdo das margens tem sido colocado \textbf{antes} das seções Explorando e afins. A quebra de página das margens deve ser feita com o comando \verb|\clearmargin|, que tem a mesma funcionalidade de \verb|\clearpage|, mas apenas para a margem.
+% Por conflitos com as outras caixas do material do aluno, o conteúdo das margens tem sido colocado \textbf{antes} das seções Explorando e afins. A quebra de página das margens deve ser feita com o comando \verb|\clearmargin|, que tem a mesma funcionalidade de \verb|\clearpage|, mas apenas para a margem.
 
-Por exemplo:
-\begin{verbatim}
-\def\currentcolor{session1}
-\begin{objectives}{atividade 1}
-{
+% Por exemplo:
+% \begin{verbatim}
+% \def\currentcolor{session1}
+% \begin{objectives}{atividade 1}
+% {
 
-}{1}{1}
-\end{objectives}
-\begin{sugestions}{atividade 1}
-{
+% }{1}{1}
+% \end{objectives}
+% \begin{sugestions}{atividade 1}
+% {
 
-}{1}{1}
-\end{sugestions}
-\clearmargin
-\begin{answer}{atividade 1}
-{
+% }{1}{1}
+% \end{sugestions}
+% \clearmargin
+% \begin{answer}{atividade 1}
+% {
 
-}{1}
-\end{answer}
-\explore{título}
-\end{verbatim}
+% }{1}
+% \end{answer}
+% \explore{título}
+% \end{verbatim}
 
-Neste caso, teríamos a definição da cor da caixa usando \verb|\def\currentcolor{cor}|. Suas opções são 
-\begin{itemize}
-\item \verb|session1|, a cor do \textcolor{session1}{Explorando} 
-\item \verb|session2|, a cor do \textcolor{session2}{Praticando}
-\item \verb|session3|, a cor do \textcolor{session3}{Para Saber+}
-\item \verb|session4|, a cor do \textcolor{session4}{Organizando} e
-\item \verb|cor1|, a cor dos \textcolor{cor1}{Exercícios}
-\end{itemize}
-
-
-\subsection{Considerações}
+% Neste caso, teríamos a definição da cor da caixa usando \verb|\def\currentcolor{cor}|. Suas opções são 
+% \begin{itemize}
+% \item \verb|session1|, a cor do \textcolor{session1}{Explorando} 
+% \item \verb|session2|, a cor do \textcolor{session2}{Praticando}
+% \item \verb|session3|, a cor do \textcolor{session3}{Para Saber+}
+% \item \verb|session4|, a cor do \textcolor{session4}{Organizando} e
+% \item \verb|cor1|, a cor dos \textcolor{cor1}{Exercícios}
+% \end{itemize}
 
 
-\paragraph{Adjustbox}
-As opções das notas no final do capítulo dizem respeito à quebra ou não da \verb|tcolorbox|. Quando permitido que as caixas quebrem, há a possibilidade da caixa ir para a próxima página enquando o marcador da nota fique na anterior. Por este motivo é usado o pacote e o comando \verb|adjustbox|. Com ele é possível alinhar a caixa ao marcador da nota. Entretanto, quando é usado este comando a caixa perde a possibilidade de quebrar, por isso é necessário atenção ao utilizar os comandos. 
+% \subsection{Considerações}
 
-Nos casos das três caixas de objetivos, sugestões e respostas, o último número a ser colocado é \verb|1| se é desejado que a caixa apareça na própria página; \verb|0| se é desejado que vá para as notas (usando \verb|adjustbox|) e \verb|9| quando se deseja que a caixa quebre (sem \verb|adjustbox|). Vamos mostrar casos das duas possibilidades.
 
-\paragraph
-\end{apresentacao}
+% \paragraph{Adjustbox}
+% As opções das notas no final do capítulo dizem respeito à quebra ou não da \verb|tcolorbox|. Quando permitido que as caixas quebrem, há a possibilidade da caixa ir para a próxima página enquando o marcador da nota fique na anterior. Por este motivo é usado o pacote e o comando \verb|adjustbox|. Com ele é possível alinhar a caixa ao marcador da nota. Entretanto, quando é usado este comando a caixa perde a possibilidade de quebrar, por isso é necessário atenção ao utilizar os comandos. 
+
+% Nos casos das três caixas de objetivos, sugestões e respostas, o último número a ser colocado é \verb|1| se é desejado que a caixa apareça na própria página; \verb|0| se é desejado que vá para as notas (usando \verb|adjustbox|) e \verb|9| quando se deseja que a caixa quebre (sem \verb|adjustbox|). Vamos mostrar casos das duas possibilidades.
+
+% \paragraph
+% \end{apresentacao}
 
 
 \explore{O que é necessário?}
@@ -475,49 +476,49 @@ $\frac{\sqrt{3}}{\sqrt{3}}$ \\
 
 \end{task}
 
-\begin{observation}{Pacote tabu}
-Em boa parte das tabelas encontradas nos capítulos já prontos, é utilizado o estilo de tabela \verb|tabu|. Este pacote introduz diversas funcionalidades úteis para a construção de tabelas, entretanto, o criador do pacote não o atualizou por muito tempo, gerando incompatibilidades com outros pacotes (não criou conflitos com nenhum usado no livro aberto), e por isso alguns usuários fizeram mudanças para resolver esses problemas. Porém, essa atualização tirou a principal funcionalidade que usamos que é o comando \verb|\rowcolor|, que é usado na macro \verb|\thead|. Por isso, não é recomendado o uso desse ambiente, podendo ser substituído por \verb|tabular| ou outros tipos de tabelas, desde que se use \verb|\tcolor| nas célular necessárias. 
+% \begin{observation}{Pacote tabu}
+% Em boa parte das tabelas encontradas nos capítulos já prontos, é utilizado o estilo de tabela \verb|tabu|. Este pacote introduz diversas funcionalidades úteis para a construção de tabelas, entretanto, o criador do pacote não o atualizou por muito tempo, gerando incompatibilidades com outros pacotes (não criou conflitos com nenhum usado no livro aberto), e por isso alguns usuários fizeram mudanças para resolver esses problemas. Porém, essa atualização tirou a principal funcionalidade que usamos que é o comando \verb|\rowcolor|, que é usado na macro \verb|\thead|. Por isso, não é recomendado o uso desse ambiente, podendo ser substituído por \verb|tabular| ou outros tipos de tabelas, desde que se use \verb|\tcolor| nas célular necessárias. 
 
-É possível recriar a mesma tabela feita anteriormente usando o ambiente \verb|tabu|:
+% É possível recriar a mesma tabela feita anteriormente usando o ambiente \verb|tabu|:
 
-\begin{verbatim}
-\begin{table}[H]
-\centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
-\hline
-\thead
-Atividade Física & Manhã & Tarde & Total \\
-\hline
-\tcolor{Não pratica} & 140 & 130 & 270 \\
-\hline
-\tmcol{2}{|c|}{Futebol} & 80 & 240 \\
-\hline
-\end{tabu}
-\caption{exemplo de tabela usando os três comandos}
-\label{tabela}
-\end{table}
-\end{verbatim}
+% \begin{verbatim}
+% \begin{table}[H]
+% \centering
+% \begin{tabu} to \textwidth{|c|c|c|c|}
+% \hline
+% \thead
+% Atividade Física & Manhã & Tarde & Total \\
+% \hline
+% \tcolor{Não pratica} & 140 & 130 & 270 \\
+% \hline
+% \tmcol{2}{|c|}{Futebol} & 80 & 240 \\
+% \hline
+% \end{tabu}
+% \caption{exemplo de tabela usando os três comandos}
+% \label{tabela}
+% \end{table}
+% \end{verbatim}
 
-\begin{table}[H]
-\centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
-\hline
-\thead
-Atividade Física & Manhã & Tarde & Total \\
-\hline
-\tcolor{Não pratica} & 140 & 130 & 270 \\
-\hline
-\tmcol{2}{|c|}{Futebol} & 80 & 240 \\
-\hline
-\end{tabu}
-\caption{Exemplo de tabela usando os três comandos}
-\label{tabela}
-\end{table}
+% \begin{table}[H]
+% \centering
+% \begin{tabu} to \textwidth{|c|c|c|c|}
+% \hline
+% \thead
+% Atividade Física & Manhã & Tarde & Total \\
+% \hline
+% \tcolor{Não pratica} & 140 & 130 & 270 \\
+% \hline
+% \tmcol{2}{|c|}{Futebol} & 80 & 240 \\
+% \hline
+% \end{tabu}
+% \caption{Exemplo de tabela usando os três comandos}
+% \label{tabela}
+% \end{table}
 
-Para aqueles que se interessarem em usar o pacote \verb|tabu| em sua versão mais antiga, basta entrar na pasta \verb|\texlive\2020\texmf-dist\tex\latex\tabu| no local de instalação de seu \TeX{} Live (na versão de 2020) e trocar o nome do arquivo \verb|tabu-2018| para \verb|tabu|.
+% Para aqueles que se interessarem em usar o pacote \verb|tabu| em sua versão mais antiga, basta entrar na pasta \verb|\texlive\2020\texmf-dist\tex\latex\tabu| no local de instalação de seu \TeX{} Live (na versão de 2020) e trocar o nome do arquivo \verb|tabu-2018| para \verb|tabu|.
 
 
-\end{observation}
+% \end{observation}
 
 
 Na caixa anterior temos o "Observação", que pode ser introduzido no texto no ambiente \verb|observation|:
@@ -594,16 +595,15 @@ Uma característica interessante é a mudança de cores do texto em relação ao
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\thead
-Atividade Física & Manhã & Tarde & Total \\
+\tcolor{Atividade Física} & \tcolor{Manhã} & \tcolor{Tarde} & \tcolor{Total} \\
 \hline
 \tcolor{Não pratica} & 140 & 130 & 270 \\
 \hline
 \tmcol{2}{|c|}{Futebol} & 80 & 240 \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Exemplo da mudança de cor}
 \label{frequenciaatividade}
 \end{table}

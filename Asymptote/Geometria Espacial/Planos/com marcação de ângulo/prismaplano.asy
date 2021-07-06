@@ -1,4 +1,4 @@
-settings.outformat="png";
+//settings.outformat="png";
 settings.render=16;
 import three;
 import graph3;
@@ -19,9 +19,9 @@ triple f = (4,.5,.86602);
 
 draw(surface(a -- b -- c -- a -- cycle), blue+opacity(.9));
 draw(surface(d -- e -- f -- d -- cycle), blue+opacity(1));
-draw(surface(c -- f -- e -- b -- cycle), red+opacity(.8));
-draw(surface(c -- f -- d -- a -- cycle), red+opacity(.8));
-draw(surface(a -- b -- e -- d -- cycle), red+opacity(.8), light=White);
+draw(surface(c -- f -- e -- b -- cycle), red);
+draw(surface(c -- f -- d -- a -- cycle), red);
+draw(surface(a -- b -- e -- d -- cycle), red, light=White);
 
 draw(c -(1,0,0) -- f+(1,0,0), green+linewidth(1), L=Label("$r$", position=0.1));
 

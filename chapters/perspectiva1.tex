@@ -1,8 +1,17 @@
-%!TEX root = ../aluno.tex
+%!TEX root = ../professor.tex
 
-\renewcommand\chapterillustration{./abertura-estatistica1}%Photo by Hoach Le Dinh on Unsplash, https://unsplash.com/photos/c8TWWQ5ZnUw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText 
-\def\chapterwhat{}
-\def\chapterbecause{} 
+\ifnum\aluno=1
+\renewcommand\chapterillustration{./abertura-perspectiva1}
+\else
+\renewcommand\chapterillustration{./abertura-perspectiva1-professor}
+\fi
+
+\def\chapterwhat{Conceito de volume (unidade, aditividade e conservação). Diversos usos de volumes e grandezas relacionadas, como área, densidade, concentração. Compressibilidade de materiais. Posições relativas de planos e planos e planos e retas. Planificações e cortes de sólidos. Cálculo de áreas e volumes de figuras clássicas e obtenção das fórmulas. Aproximação de áreas e volumes considerando o erro. Princípio de Cavalieri e aplicações.}
+
+\def\chapterbecause{Áreas e volumes são conceitos elementares que estão presentes de maneira direta na vida cotidiana do cidadão e também são necessários para outras ciências, como a Química, a Biologia e a Física. O entendimento destes conceitos e de suas relações com outras grandezas são fundamentais e basta m para a maioria dos usos corriqueiros. Aqui, o estudo de áreas e volumes serve de plano de fundo para o aperfeiçoamento do entendimento de número real, de aproximação com erro, para o desenvolvimento da habilidade de visualização espacial e para a resolução de problemas.} 
+
+\chapter{Medidas em Geometria Espacial}
+
 
 \mbox{}\thispagestyle{empty}\clearpage
 
@@ -26,9 +35,9 @@ Versão digital do capítulo:
 
 
 \begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Medidas em Geometria Espacial\\
+Título: & \Chaptername \\
 \\
-Ano/ Versão: & 2020 / versão 0.5 de \today\\
+Ano/Versão: & \the\year /versão 0.5 de \today\\
 \\
 Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
 \\
@@ -39,20 +48,20 @@ Produção:& Associação Livro Aberto\\
 Coordenação:& Fabio Simas, \\
    			& Augusto Teixeira (livroaberto@impa.br)\\
 \\
-Autores: & Gladson Antunes (UNIRIO),\\
-         & Michel Cambrainha (UNIRIO),\\
-         & Bruno Vianna (Colégio Pedro II).\\
+Autores: & Augusto Teixeira,\\
+         & Fabio Simas,\\
+         & José Ezequiel Soto Sánchez,\\
+         & Letícia Rangel. \\
 \\
-Revisoras: &  Alexandre Silva  \\
-           &  Letícia Rangel \\
+Revisão: & \\
 \\
 Design: & Andreza Moreira (Tangentes Design) \\
 \\
   Ilustrações: & --- \\ 
 \\
-Gráficos: & Tarso Caldas (Licenciandos da UNIRIO)\\
+Gráficos: & Tarso Caldas\\
 \\
-  Capa: & Foto de Scott Webb, no Pexels \\
+  Capa: & Foto de Luke Porter, no Unsplash \\
 
 \end{tabular}
 
@@ -83,12 +92,97 @@ Gráficos: & Tarso Caldas (Licenciandos da UNIRIO)\\
 
 \mainmatter
 
-\chapter{Medidas em geometria espacial}
 \label{\detokenize{GE504:medidas-em-geometria-espacial}}\label{\detokenize{GE504::doc}}
 
-\explore{o conceito de volume}
-\label{\detokenize{GE504-0:explorando-o-conceito-de-volume}}\label{\detokenize{GE504-0::doc}}
+\def\currentcolor{session1}
+\begin{objectives}{Volume de uma folha de papel}
+{
+\begin{itemize}
+\item {} 
+Reconhecer o conceito de volume (ideia intuitiva, medida do espaço ocupado por um determinado material incompressível), distinguindo-o da área, da densidade e da massa, por exemplo.
 
+\item {} 
+Aplicar o conceito de unidade (caixa de leite ou cubo de lado 1, que dará origem a uma unidade de medida) para comunicar e comparar volumes. Volume, área, comprimento, litro (e outras unidades de medida volumétrica do SI: cm\(^3\), m\(^3\), etc.).
+
+\item {} 
+Aplicar em contextos diversos o conceito de aditividade, isto é, que a área (e o volume) da união de conjuntos disjuntos é igual à soma de suas áreas (respectivamente volumes), estendendo essa propriedade à subtração quando se fazem “buracos” de formas conhecidas.
+
+\end{itemize}
+
+\textbf{Conceitos abordados:} Volume, área, gramatura.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Volume de uma folha de papel}
+{
+\textbf{Organização em sala de aula:} Nesta atividade, inicialmente o aluno deve estimar o volume de uma folha de papel. A discussão em grupos contribuirá para a avaliação das estimativas realizadas. Os próprios alunos avaliarão as estimativas uns dos outros. Portanto, recomenda-se que a atividade seja desenvolvida em grupos de 3 ou 4 estudantes. Recomendação análoga vale para os demais itens.
+
+\textbf{Dificuldades previstas:} Não é improvável que os estudantes confundam volume e área, respondendo a área do papel como resultado para o volume. Nesse caso, muito provavelmente, o aluno não identificou a espessura do papel. Outra possibilidade é responder que o volume é zero. Aproveite esta atividade para discutir tal diferença. É importante que reconheçam que área é uma grandeza bidimensional e volume tridimensional.
+
+\textbf{Sugestões gerais:} Espera-se que o item \titem{a)} seja respondido por comparação visual. Não se espera que o aluno realize cálculos organizados. A ideia é que aluno estime \(1\) cm$^3$ e relacione com a folha de papel.
+
+Para o desenvolvimento da tarefa, recomenda-se ainda que sejam entregues folhas de papel aos alunos. Acreditamos que a distribuição das folhas pode enriquecer a atividade trazendo concretude e uma postura investigativa, ainda que bastasse ler as informações apresentadas no pacote ilustrado.
+
+Uma estratégia possível para realizar o cálculo do volume é empilhar (bem compactadas) várias folhas. Essa estratégia se baseia na propriedade de aditividade do volume. Nesse caso, os alunos precisarão medir as 3 dimensões da pilha. Será necessário régua. Se possível, leve para a sala uma resma em pacote fechado para que os alunos possam obter tais medidas mais facilmente. O pacote tem 4,9cm de altura. No entanto, não os alerte para essa possibilidade. Deixe-os ter autonomia na condução da solução.
+
+Caso não se tenha uma resma de papel sulfite A4 disponível, a tarefa pode ser realizada com uma pilha com uma quantidade menor de folhas de papel A4 ou com outro tipo de papel que se tenha disponível. Valem até a folha do caderno ou do livro. Outra possibilidade é recortar o papel. Nesse caso, os pedaços devem ser empilhados até que se possa medir a espessura da pilha. Mais importante do que o resultado é a discussão da estratégia utilizada para o cálculo. Se não for utilizar o papel sulfite tamanho A4 \textendash{} gramatura \(75\) g/m$^2$, será necessário ter as informações correspondentes para o papel que for utilizado (largura, comprimento e gramatura), que podem alterar as respostas.
+
+\textbf{Enriquecimento da discussão:} Além do conceito de volume, na atividade, um dos itens trata da gramatura de papel, diferenciando-a de espessura. A gramatura do papel é a medida da massa pela área de um papel expressa em gramas por metro quadrado (g/m\(^2\)). A intenção desse item é que o aluno pesquise a resposta e tenha que interpretar e compreender a informação obtida, que é essencialmente matemática: uma medida. Discuta diferentes respostas obtidas visando ao entendimento dessa medida.
+
+\textbf{Material necessário:} Folhas de papel sulfite tamanho A4 - gramatura \(75g/m^2\).
+Régua milimetrada
+}{0}{9}
+\end{sugestions}
+\begin{answer}{Volume de uma folha de papel}
+{
+\begin{enumerate}
+\item {} 
+Resposta pessoal.
+
+\item {} 
+Considerando uma folha de papel sulfite de tamanho A4 mais comum no mercado, aproximadamente, $6{,}1122$ cm\(^3\). Tal aproximação pode ser obtida a partir das medidas de uma resma. Uma resma desse papel, que é composta por 500 folhas, tem dimensões aproximadas $21{,}0\text{ cm}\times 29{,}7\text{ cm} \times 4{,}9{ cm}$. Portanto, 500 folhas têm volume \(3056,13cm^3\), e uma folha, $1/500$ desse valor. (Essa resposta pode variar dependendo do papel utilizado)
+
+\item {} 
+A gramatura corresponde à massa de \(1\) m$^2$ do papel. Assim, por exemplo, a gramatura \(90\) g/m$^2$ significa que a massa de \(1\) m$^2$ do papel é \(90\) g. Já a espessura é uma medida linear, que pode ser observada como a menor das dimensões da folha de papel. Há papéis de diferentes espessuras. Por exemplo, não é difícil observar que a folha de papel sulfite, comumente usada na escola, tem espessura diferente do papel utilizado para confeccionar caixas de sapatos, por exemplo. Espessura e gramatura, são, portanto, propriedades diferentes do papel. No entanto, em geral, papéis com maior gramatura têm maior espessura.
+
+\item {} 
+O peso da folha pode ser calculado a partir da gramatura do papel, informada no pacote:  \(75\) g/m$^2$. Nesse caso, é necessário ainda calcular a área da superfície da folha: \(623{,}7\text{ cm}^2 = 0{,}06237\text{ m}^2\). Portanto, o peso do papel é \(75 \times 0{,}06237 = 4{,}6\) g.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Caminhonete de areia}
+{
+\begin{itemize}
+\item {} 
+Reconhecer o conceito de volume (ideia intuitiva, medida do espaço ocupado por um determinado material incompressível), distinguindo-o da área, da densidade e da massa, por exemplo.
+
+\item {} 
+Aplicar o conceito de unidade (caixa de leite ou cubo de lado 1, que dará origem a uma unidade de medida) para comunicar e comparar volumes.
+
+\item {} 
+Aplicar relações entre (área e) volume e outras grandezas em situações cotidianas.
+
+\end{itemize}
+
+\textbf{Conceitos abordados:} massa (peso), volume, densidade, unidades de medida.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Caminhonete de areia}
+{
+\textbf{Organização em sala de aula:} Recomenda-se que esta atividade seja realizada em duplas. A discussão com um colega pode ajudar a interpretar o enunciado, que é essencial neste caso.
+
+\textbf{Dificuldades previstas:} A atividade oferece a revisão de alguns conceitos, como massa e densidade, que não costumam oferecer maior dificuldade. No entanto, a abordagem envolve mais a relação entre esses conceitos do que o cálculo. A dificuldade pode emergir daí.
+
+\textbf{Enriquecimento da discussão:} Esta atividade aborda o conceito de volume aparente, que volta a ser discutido de forma mais específica em um “Você Sabia” seguinte.
+
+Para determinar o volume de areia que precisa comprar, Gelson pode simplesmente levar um saco de cimento vazio à loja de materiais para construção e pedir 15 sacos daquele cheios de areia. Esta é uma discussão interessante para o estudante, porque o saco de cimento se torna uma unidade de volume. Na situação deste parágrafo, ela está sendo utilizada para medir o volume de areia a ser comprado.
+}{1}{2}
+\end{sugestions}
+
+
+\explore{O Conceito de Volume}
+\label{\detokenize{GE504-0:explorando-o-conceito-de-volume}}\label{\detokenize{GE504-0::doc}}
 
 \begin{task}{volume de uma folha de papel}
 
@@ -135,37 +229,37 @@ Avalie a sua estimativa no item anterior. Use uma estratégia de cálculo para o
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{1}.png}
+\noindent\includegraphics[width=100bp]{{1}.png}
 \end{figure}
 \begin{enumerate}
 \item {} 
 O que é a gramatura do papel? Qual é a diferença e qual é a relação entre espessura e  gramatura de uma folha de papel? Pesquise.
 
 \item {} 
-Quanto pesa uma folha de papel da resma ilustrada no item (b)?
+Quanto pesa uma folha de papel da resma ilustrada no item \titem{b)}?
 
 \end{enumerate}
 \end{task}
 
 \begin{knowledge}{}
 
-A gramatura de uma folha de papel usada em escolas e escritórios costuma variar de 75 a \(120g/m^2\).  São as indicadas para impressoras domésticas, por exemplo. Para a confecção de cartões e impressão de fotos, são recomendados papéis de maior gramatura, em torno de \(200g/m^2\).  As folhas de um jornal têm gramatura de 35 a \(55g/m^2\).  A escolha da gramatura é determinante para o uso do papel. Imagine as implicações de um jornal impresso em papel de maior gramatura. Seria mais pesado, o que além de ter impacto direto no manuseio e no custo do material, com certeza, influenciaria no transporte e na impressão, por exemplo. De maneira geral, quanto maior a gramatura, mais resistente é o papel. No entanto, não se deve confundir gramatura com espessura nem com volume. Ainda que papéis com gramaturas diferentes tendam a ter espessuras diferentes, a compactação das fibras e materiais que compõem o papel determinará se as espessuras serão ou não distintas. E, portanto, os volumes também.
+A gramatura de uma folha de papel usada em escolas e escritórios costuma variar de $75$ a \(120\) g/m$^2$.  São as indicadas para impressoras domésticas, por exemplo. Para a confecção de cartões e impressão de fotos, são recomendados papéis de maior gramatura, em torno de \(200\) g/m$^2$.  As folhas de um jornal têm gramatura de $35$ a \(55\) g/m$^2$.  A escolha da gramatura é determinante para o uso do papel. Imagine as implicações de um jornal impresso em papel de maior gramatura. Seria mais pesado, o que além de ter impacto direto no manuseio e no custo do material, com certeza, influenciaria no transporte e na impressão, por exemplo. De maneira geral, quanto maior a gramatura, mais resistente é o papel. No entanto, não se deve confundir gramatura com espessura nem com volume. Ainda que papéis com gramaturas diferentes tendam a ter espessuras diferentes, a compactação das fibras e materiais que compõem o papel determinará se as espessuras serão ou não distintas. E, portanto, os volumes também.
 \end{knowledge}
 
 \begin{task}{caminhonete de areia}
 
-\textbf{PARTE 1}
+\paragraph{Parte 1}
 
 Gelson vai fazer um quarto novo para sua filhinha que está chegando. O tijolo e o cimento ele já tem, mas precisa comprar areia para misturar no cimento e começar a obra!
 
 Quanta areia ele precisará comprar?
 
-Gelson utilizará três sacos de cimento e sabe que a proporção recomendada para assentar tijolos é de cinco latas de areia para cada lata de cimento. Gelson avaliou que deveria comprar quinze sacos de areia. No entanto, a areia não é vendida em sacos como os de cimento. A areia fica armazenada em um galpão e é vendida por metro cúbico (\(m^3\)).
+Gelson utilizará três sacos de cimento e sabe que a proporção recomendada para assentar tijolos é de cinco latas de areia para cada lata de cimento. Gelson avaliou que deveria comprar quinze sacos de areia. No entanto, a areia não é vendida em sacos como os de cimento. A areia fica armazenada em um galpão e é vendida por metro cúbico (m\(^3\)).
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{2}.png}
+\noindent\includegraphics[width=125bp]{{2}.png}
 \end{figure}
 
 Quantos metros cúbicos de areia Gelson deve comprar para realizar a obra evitando o desperdício de material?
@@ -173,14 +267,11 @@ Quantos metros cúbicos de areia Gelson deve comprar para realizar a obra evitan
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{3}.png}
+\noindent\includegraphics[height=130bp]{{3}.png}
+\hspace{1em}
+\includegraphics[height=130bp]{{4}.png}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=200bp]{{4}.png}
-\end{figure}
 \begin{enumerate}
 \item {} 
 Avalie as perguntas a seguir e decida qual (ou quais) delas que, uma vez respondidas, permitiriam que Gelson comprasse a quantidade certa de areia:
@@ -203,7 +294,7 @@ P4: Quanto pesa a areia que cabe em um saco de cimento?
 Qual (ou quais) das perguntas do item anterior podem ser respondidas com procedimentos simples feitos em casa? Descreva tais procedimentos.
 
 \item {} 
-Para descobrir quantos metros cúbicos correspondem a quinze sacos de areia, Gelson despejou o cimento de um saco em um balde de \(20L\). Verificou que o cimento coube no balde enchendo-o completamente. Com essa informação, quantos metros cúbicos de areia Gelson precisa comprar?
+Para descobrir quantos metros cúbicos correspondem a quinze sacos de areia, Gelson despejou o cimento de um saco em um balde de \(20\)lL. Verificou que o cimento coube no balde enchendo-o completamente. Com essa informação, quantos metros cúbicos de areia Gelson precisa comprar?
 
 \item {} 
 O problema de Gelson agora é transportar a areia até a sua casa. Para isso, ele utilizará uma caminhonete como a da imagem a seguir. Gelson consegue transportar toda a areia em uma só viagem?
@@ -216,24 +307,24 @@ O problema de Gelson agora é transportar a areia até a sua casa. Para isso, el
 \noindent\includegraphics[width=300bp]{{5}.png}
 \end{figure}
 
-\textbf{PARTE 2}
+\paragraph{Parte 2}
 
-Resolvido o problema do volume a ser carregado, Gelson passou a pensar de a caminhonete aguenta o peso deste tanto de areia. No manual da caminhonete está escrito que sua carga máxima é de \(530kg\).
+Resolvido o problema do volume a ser carregado, Gelson passou a pensar de a caminhonete aguenta o peso deste tanto de areia. No manual da caminhonete está escrito que sua carga máxima é de \(530\) kg.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{6}.png}
+\noindent\includegraphics[width=350bp]{{6}.png}
 \end{figure}
 \begin{enumerate}
 \item {} 
 Em uma estimativa grosseira, quanto você acha que pesa um metro cúbico de areia?
 
 \item {} 
-Gelson procurou na internet “Qual é o peso de um metro cúbico de areia?”. Ele achou várias respostas. Dependendo do tipo de areia, a densidade (isto é, massa / volume) pode variar de \(1200kg/m^3\) até \(1700kg/m^3\). Com essas informações, Gelson pode ter ceteza de que a viagem para transportar a areia comprada estará dentro das especificações da caminhonete?
+Gelson procurou na internet “Qual é o peso de um metro cúbico de areia?”. Ele achou várias respostas. Dependendo do tipo de areia, a densidade (isto é, massa / volume) pode variar de \(1200\) kg/m$^3$ até \(1700\) kg/m$^3$. Com essas informações, Gelson pode ter ceteza de que a viagem para transportar a areia comprada estará dentro das especificações da caminhonete?
 
 \item {} 
-Gelson decidiu pesar a areia comprada. Para isso, encheu o balde (de 20 litros) com areia e o pesou, obtendo \(26kg\). Com tal informação, que estimativa Gelson pode fazer para o peso total da areia que ele vai comprar?
+Gelson decidiu pesar a areia comprada. Para isso, encheu o balde (de $20$ litros) com areia e o pesou, obtendo \(26\) kg. Com tal informação, que estimativa Gelson pode fazer para o peso total da areia que ele vai comprar?
 
 \item {} 
 No dia do transporte choveu e entrou água na caçamba. Gelson observou que aparentemente o nível de areia não havia se alterado, apesar da água. No entanto, se preocupou com o limite de peso, uma vez que o carro parecia perder estabilidade. Houve alteração no volume da carga transportada devido à chuva? Explique a sua resposta considerando a percepção de Gelson de que o nível de areia não se alterou.
@@ -246,7 +337,7 @@ No dia do transporte choveu e entrou água na caçamba. Gelson observou que apar
 Em muitas situações do cotidiano as misturas são descritas por razões, como em:
 \begin{itemize}
 \item {} 
-Misturamos o cimento com a areia na razão de 1 para 5.
+Misturamos o cimento com a areia na razão de $1$ para $5$.
 
 \item {} 
 Uma parte de farinha para três partes de leite.
@@ -255,13 +346,13 @@ Uma parte de farinha para três partes de leite.
 
 Tais instruções podem ser imprecisas se não especificarem a que grandezas corresponde a razão indicada. Observe que as frases acima não diferenciam entre: para cada quilo de cimento usamos cinco quilos de areia, ou para cada litro de cimento utilizamos cinco litros de areia. Ou para cada quilo de farinha três litros de leite ou para cada colher de farinha três litros de leite.
 
-Isso ocorre por exemplo na especificação do álcool para uso doméstico. Nas garrafas desse tipo de álcool a razão entre álcool e água é indicada em graus INPM. Assim, por exemplo, no álcool \(46^\circ\) INPM, há 46g de álcool em cada 100g do produto. Os 54g restantes são de água. Observe que se esta razão, especificada para massa, for considerada a mesma razão para volume, resultará em outra gradação INPM de álcool, já que álcool e água possuem densidades diferentes.
+Isso ocorre por exemplo na especificação do álcool para uso doméstico. Nas garrafas desse tipo de álcool a razão entre álcool e água é indicada em graus INPM. Assim, por exemplo, no álcool \(46^\circ\) INPM, há $46$ g de álcool em cada $100$ g do produto. Os $54$ g restantes são de água. Observe que se esta razão, especificada para massa, for considerada a mesma razão para volume, resultará em outra gradação INPM de álcool, já que álcool e água possuem densidades diferentes.
 Em muitas situações do cotidiano vemos razões descritas na forma de razões, como em:
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{8_1}.jpg}
+\noindent\includegraphics[width=150bp]{{8_1}.jpg}
 \end{figure}
 
 Em alguns casos essa distinção pode ficar subentendida pelo contexto. Por exemplo, no caso da farinha e do leite é mais natural que essa razão esteja se referindo à volume, pois dificilmente medimos leite pelo peso, mas frequentemente medimos farinha em volume (copos, xícaras, colheres, etc.).
@@ -295,14 +386,77 @@ Uma parte de água para quatro partes de areia.
 \end{enumerate}
 \end{knowledge}
 
+\clearpage
+\begin{objectives}{Volume do paralelepípedo retângulo de arestas racionais}
+{
+Entender a demonstração da fórmula do volume de paralelepípedos retângulos (e áreas de retângulos) de lados racionais.
+
+\textbf{Conceitos abordados:}
+Volume de paralelepípedo retângulo. De modo indireto também são abordados funções e a subdivisão da unidade (frações).
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Volume do paralelepípedo retângulo de arestas racionais}
+{
+\textbf{Organização em sala de aula:}
+Sugerimos que a atividade seja individual ou em duplas. A reflexão mediada pelo aplicativo pode ser favorecida pela discussão com um colega. Grupos maiores podem gerar dispersão.
+
+\textbf{Dificuldades previstas:}
+Acreditamos que a atividade impõe desafios importantes, como lidar com uma fração da unidade de volume e compreender volume como uma função. No entanto, destacamos a compreensão da relação entre a variação dos lados e a variação do volume. Não é incomum que os alunos, apesar de reconhecerem na atividade que  \(V(n_1 x, n_2 y, n_3 z) =  n_1.n_2.n_3. V(x, y, z)\), não consigam aplicar tal resultado diretamente.
+.. AQUI, ACHO, O CERTO SERIA INCLUIR INDICACAO DE ATIVIDADES NO MATERIAL QUE TRATEM DO ASSUNTO.
+
+\textbf{Sugestões gerais:}
+Esta atividade pretende levar o aluno a perceber o volume de um paralelepípedo para além da contagem de cubinhos, ou seja, extrapolar o universo dos números naturais. Espera-se que os alunos associem o volume do paralelepípedo (retângulo) à variação de suas dimensões como “medidas contínuas”, ou seja, que percebam de maneira intuitiva (não esperamos nem recomendamos a formalização) que o volume de um paralelepípedo é uma função contínua de três variáveis reais positivas (\(V(a,b,c) = V\)). Destacamos que,  nesta atividade, esse fato é explorado apenas para dimensões (variáveis) racionais. Observe que, no Ensino Fundamental, a fórmula de cálculo do volume do paralelepípedo retângulo é deduzida apenas para arestas naturais (contagem de cubinhos). Entendemos que no Ensino Médio o aluno poderá compreendê-la para arestas racionais, ficando a dedução da mesma para arestas de medidas reais apenas para alguns cursos superiores.
+
+Ao longo de toda a atividade, recomenda-se que as justificativas sejam valorizadas porque o resultado em si é a mera aplicação da fórmula \(V(a,b,c) = abc\) em diversos itens.
+}{1}{2}
+\end{sugestions}
+
+\clearmargin
+\begin{sugestions}{Volume do paralelepípedo retângulo de arestas racionais}
+{
+A atividade foi planejada para ser realizada com o uso dos aplicativos recomendados, ainda que possa ser sem eles. Os aplicativos permitem visualização e interação dinâmica com os objetos  geométricos, contribuindo para a comunicação o ensino e a aprendizagem.
+
+Na Parte 1, espera-se que o aluno compreenda a notação usada na atividade; reconheça que, com a troca dos comprimentos de duas das arestas de um paralelepípedo retângulo, obtém-se paralelepípedos congruentes; reconheça que paralelepípedos congruentes têm o mesmo volume e que paralelepípedos com medidas completamente diferentes podem ter o mesmo volume. Por fim, o item (d) convida o aluno para a reflexão conduzida na parte 2.
+
+Você pode usar uma caixa em forma de paralelepípedo retângulo, destacando as arestas, para facilitar a compreensão da notação pelos estudantes. A manipulação permite observar que a troca, por exemplo, de \(a\) por \(b\) na expressão de V indica uma rotação da caixa e, portanto, uma caixa congruente à inicial.
+No item a), não se preocupe se os estudantes não forem cuidadosos com as medidas das arestas ao desenhar os paralelepípedos porque eles provavelmente conseguirão perceber seus erros no item b).
+No item b), espera-se que o estudante observe que o paralelepípedo de arestas 2, 3 e 4 é congruente ao de arestas 2, 4 e 3 (são iguais do ponto de vista da geometria) e, portanto, seus volumes são iguais.
+No item c), espera-se que os estudantes percebam que volumes iguais podem ser obtidos por paralelepípedos não congruentes, inclusive bastante diferentes entre si.
+
+Na Parte 2, espera-se que os estudantes percebam que, dado um paralelepípedo retângulo qualquer, se multiplicarmos uma de suas arestas por um número natural, então o volume do novo paralelepípedo (que não é semelhante ao primeiro) ficará multiplicado por esse mesmo número natural. O aplicativo permite que sejam gerados variados exemplos, o que ajuda o aluno na compreensão. Também aqui pode valer a pena usar caixas em forma de paralelepípedos para facilitar a visualização.
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{sugestions}{Volume do paralelepípedo retângulo de arestas racionais}
+{
+A Parte 3 é a parte mais delicada para o estudante, por isso recomendamos fortemente o uso dos aplicativos disponibilizados.
+O item \textit{a)} tem o objetivo de familiarizar o estudante com a visualização de paralelepípedos que são frações do cubo unitário e relacioná-los com o próprio cubo unitário.
+No item \titem{b)}, a parte \titem{v)} verifica se o estudante consegue generalizar a construção dos itens anteriores.
+
+\textbf{Enriquecimento da discussão:}so
+Ainda que não sejam discussões sugeridas, nem recomendadas, para a sala de aula, cabe observar que:
+Na Parte 1, item c), é verificado que a função V não é injetiva uma vez que, por exemplo, \(V(1, 1, 72) = V(2, 4, 9)\).
+Da Parte 2, pode-se concluir que a função volume é linear em cada uma de suas coordenadas.
+Sobre a parte 2, destacamos que, nas aulas de função linear, talvez possa ser observado que o volume de um paralelepípedo retângulo de arestas fixadas é uma função linear da terceira aresta (por exemplo, se as arestas são 2, 3 e \(x\), então o volume é \(V(x) = 6x\)).
+Além disso, também na parte 2, item c), observe que \(V(nx, ny, nz)\) é o volume de um paralelepípedo semelhante ao paralelepípedo de lados  \(x\), \(y\) e \(z\). Portanto, \(V(nx, ny, nz) = n^3V(x, y, z)\). Isto pode ser apresentado pelo professor como um desdobramento, caso o professor julgue pertinente.
+
+\textbf{Links relacionados:}
+Todos os aplicativos disponibilizados para esta atividade foram criados para serem facilmente utilizados em telas pequenas.
+
+\textbf{Materiais necessários:}
+A atividade foi planejada para o uso de aplicativos computacionais. Recomendamos que eles sejam utilizados, porque ampararão a construção de uma imagem representativa  A não utilização desses recursos não inviabiliza a realização da atividade, no entanto pode não atingir plenamente os objetivos.
+}{1}{2}
+\end{sugestions}
+
 \begin{knowledge}{}
 
 Lembrando da chuva que atrapalhou a viagem do Gelson, vamos pensar mais sobre o conceito de volume. Quando Gelson saiu do armazém, transportava apenas areia. Com a chuva, entrou água na caçamba sem que o nível da carga de areia se alterasse, ou seja, sugerindo que o volume de carga não se alterou.
-Usualmente, quando medimos o volume de materiais granulados (como arroz, açúcar e areia) consideramos o volume do ar que fica entre os grãos. Assim, um copo com capacidade para 200mL cheio de açúcar, na verdade contém açúcar e ar. Logo, o volume real de açúcar é menor do que 200mL. Isso pode ser verificado, por exemplo, colocando-se, aos poucos, água em um copo cheio de açúcar e observando que o nível do conteúdo no copo não aumenta de início e não transborda imediatamente.
+
+Usualmente, quando medimos o volume de materiais granulados (como arroz, açúcar e areia) consideramos o volume do ar que fica entre os grãos. Assim, um copo com capacidade para $200$ ml cheio de açúcar, na verdade contém açúcar e ar. Logo, o volume real de açúcar é menor do que $200$ ml. Isso pode ser verificado, por exemplo, colocando-se, aos poucos, água em um copo cheio de açúcar e observando que o nível do conteúdo no copo não aumenta de início e não transborda imediatamente.
 \end{knowledge}
 
 \begin{task}{volume do paralelepípedo retângulo de arestas racionais}
-
+\label{persp1-atividade-3}
 
 
 A fórmula para o cálculo do volume de um paralelepípedo já é conhecida desde o Ensino Fundamental. Mas talvez você não saiba explicar por que essa fórmula vale. Esta atividade tem o objetivo de explorar o tema. Para isso, o cubo de aresta 1 será considerado como unidade e será chamado de \emph{cubo unitário}.
@@ -364,19 +518,19 @@ draw((2,1,0) -- (0,1,0), vinho+linewidth(1.25), L=Label("c", position=MidPoint))
 
 O volume \(V\) de um paralelepípedo depende de suas dimensões, \(a\), \(b\) e \(c.\) Assim, indicaremos \(V\) por \(V(a, b, c)\), ou seja, \(V(a,b,c)\) é o volume do paralelepípedo de dimensões \(a\), \(b\) e \(c\).
 
-Desta forma, o volume do cubo de aresta 1 é \(V(1, 1, 1) =1\) e o volume de um paralelepípedo retângulo de lados \(a = 2\), \(b = 3\) e \(c=5\) é \(V(2,3,5) = 30\) pois cabe 30 cubos de aresta 1 no espaço ocupado por esse pararlelepípedo.
+Desta forma, o volume do cubo de aresta $1$ é \(V(1, 1, 1) =1\) e o volume de um paralelepípedo retângulo de lados \(a = 2\), \(b = 3\) e \(c=5\) é \(V(2,3,5) = 30\) pois cabe 30 cubos de aresta $1$ no espaço ocupado por esse pararlelepípedo.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=225bp]{{blocos}.png}
+\noindent\includegraphics[width=175bp]{{blocos}.png}
 \end{figure}
 
 \textbf{Afirmação}: Fixados três números reais positivos \(a\), \(b\) e \(c\). O volume do paralelepípedo retângulo de arestas \(a\), \(b\) e \(c\)  é dado pelo produto \(abc\).
 
 Esta atividade vai justificar que \(V(a, b, c) = abc\) para \(a\), \(b\) e \(c\) números racionais positivos. Ela propõe construções que tratam a subdivisão do cubo unitário, encaminhando para a noção de “infinitamente pequeno”. Esse raciocínio tem um papel essencial na matemática e é importante no desenvolvimento do pensamento humano moderno. Comecemos com uma simples observação:
 
-\textbf{PARTE 1}:
+\paragraph{Parte 1}
 
 Recomendamos o uso \href{https://ggbm.at/yk8bqdvz}{deste aplicativo} para o desenvolvimento da tarefa.
 \begin{enumerate}
@@ -387,14 +541,14 @@ Seguindo o modelo da figura acima, desenhe um paralelepípedo retângulo cujas a
 Obtenha uma relação entre os volumes \(V(2, 3, 4)\) e \(V(2, 4, 3)\). Explique.
 
 \item {} 
-Desenhe um paralelepípedo retângulo cujo volume seja \(V(2, 4, 9)\), mas com arestas diferentes de 2, 4 e 9.
+Desenhe um paralelepípedo retângulo cujo volume seja \(V(2, 4, 9)\), mas com arestas diferentes de $2$, $4$ e $9$.
 
 \item {} 
 Relacione os volumes \(V(2, 4, 3)\) e \(V(2, 4, 9)\).
 
 \end{enumerate}
 
-\textbf{PARTE 2}: Considere um paralelepípedo retângulo de arestas \(x\), \(y\) e \(z\) de volume 12, isto é, \(V(x, y, z) = 12\).
+\paragraph{Parte 2} Considere um paralelepípedo retângulo de arestas \(x\), \(y\) e \(z\) de volume $12$, isto é, \(V(x, y, z) = 12\).
 
 Recomendamos o uso \href{https://ggbm.at/uq2gd3ub}{deste aplicativo}  para o desenvolvimento desta tarefa.
 \begin{enumerate}
@@ -421,12 +575,12 @@ Conclua que se \(a\), \(b\) e \(c\) são números naturais, então
 \begin{equation*}
 \begin{split}V(a, b, c) = abc V(1,1,1) = abc.\end{split}
 \end{equation*}
-\textbf{PARTE 3}: Caso \(a\), \(b\) e \(c\) sejam números racionais.
+\paragraph{Parte 3} Caso \(a\), \(b\) e \(c\) sejam números racionais.
 
-Recomendamos que seja usado \href{https://ggbm.at/zzdv6are}{este aplicativo} para nos itens a) e b).
+Recomendamos que seja usado \href{https://ggbm.at/zzdv6are}{este aplicativo} para nos itens \titem{a)} e \titem{b)}.
 \begin{enumerate}
 \item {} 
-Desenhe o paralelepípedo retângulo de arestas 1, 1 e 1/2. Relacione \(V(1,1,1/2)\) e \(V(1,1,1)\). Faça o mesmo para os paralelepípedos de arestas 1, 1 e 1/4 e de arestas 1, 1/2 e 1/2.
+Desenhe o paralelepípedo retângulo de arestas $1$, $1$ e $\dfrac{1}{2}$. Relacione \(V(1,1,1/2)\) e \(V(1,1,1)\). Faça o mesmo para os paralelepípedos de arestas $1$, $1$ e $\dfrac{1}{4}$ e de arestas $1$, $\dfrac{1}{2}$ e 1/2.
 
 \item {} 
 Calcule os volumes a seguir. Explique as suas soluções.
@@ -500,11 +654,11 @@ para quaisquer \(r\), \(s\), \(p\), \(q\), \(m\) e \(n\) naturais.
 
 \begin{observation}{}
 
-A fórmula \(V(a,b,c) = abc\) explorada na \textbf{Atividade: volume do paralelepípedo retângulo} para \(a\), \(b\) e \(c\) racionais também vale para \(a\), \(b\) e \(c\) irracionais. Por exemplo, \(V(1,1,\pi) = \pi\), \(V(1,1,\sqrt{2}) = \sqrt{2}\), \(V(1,\pi,\sqrt{2} + \sqrt{3}) = (\sqrt{2} + \sqrt{3})\pi\), etc. No entanto, a justificativa extrapola os objetivos do Ensino Médio porque depende de argumentos do Cálculo Diferencial, geralmente estudado nos cursos de exatas na Universidade.
+A fórmula \(V(a,b,c) = abc\) explorada na \hyperref[persp1-atividade-3]{Atividade: volume do paralelepípedo retângulo} para \(a\), \(b\) e \(c\) racionais também vale para \(a\), \(b\) e \(c\) irracionais. Por exemplo, \(V(1,1,\pi) = \pi\), \(V(1,1,\sqrt{2}) = \sqrt{2}\), \(V(1,\pi,\sqrt{2} + \sqrt{3}) = (\sqrt{2} + \sqrt{3})\pi\), etc. No entanto, a justificativa extrapola os objetivos do Ensino Médio porque depende de argumentos do Cálculo Diferencial, geralmente estudado nos cursos de exatas na Universidade.
 \end{observation}
 
 
-\arrange{o conceito de volume}
+\arrange{O Conceito de Volume}
 \label{\detokenize{GE504-1:organizando-as-ideias-o-conceito-de-volume}}\label{\detokenize{GE504-1::doc}}
 Para medir o volume de uma folha de papel, na Atividade: volume de uma folha de papel, foi necessário reconhecer que a folha, além de comprimento e largura, tem espessura, ou seja, é um objeto tridimensional.  De maneira intuitiva, volume diz respeito à quantidade de espaço que um objeto ocupa. Quando observamos uma única folha de papel a espessura parece não ser significativa diante das outras duas dimensões, que ressaltam a área da maior superfície da folha. No entanto, reunindo várias folhas a espessura fica evidente. Ou seja, a espessura da pilha de folhas é a soma das espessuras das folhas.
 
@@ -519,22 +673,17 @@ Para calcular o volume de uma folha de papel também foi considerado que o volum
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{{12}.png}
+\noindent\includegraphics[width=350bp]{{12}.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{13}.png}
+\includegraphics[height=100bp]{{13}.png}\hspace{1em}
+\includegraphics[height=100bp]{{14}.png}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=200bp]{{14}.png}
-\end{figure}
-
-Estabelecer uma estratégia não basta para calcular o volume de um objeto tridimensional. É necessária uma unidade de medida para realizar a comparação e exprimir a medida como um número. O volume é comumente expresso em metro cúbico (\(m^3\)), seus submúltiplos (\(dm^3\), \(cm^3\)) ou em litro (l ou L). A escolha da unidade está relacionada ao que se quer medir e à quantidade medida. Por exemplo, para medir a folha de papel a unidade usada foi cm3. Já para abastecer um carro com GNV usa-se metros cúbicos (\(m^3\)) e com gasolina, no Brasil, usa-se litro.
+Estabelecer uma estratégia não basta para calcular o volume de um objeto tridimensional. É necessária uma unidade de medida para realizar a comparação e exprimir a medida como um número. O volume é comumente expresso em metro cúbico (m\(^3\)), seus submúltiplos (dm\(^3\), cm\(^3\)) ou em litro (l ou L). A escolha da unidade está relacionada ao que se quer medir e à quantidade medida. Por exemplo, para medir a folha de papel a unidade usada foi cm$^3$. Já para abastecer um carro com GNV usa-se metros cúbicos (m\(^3\)) e com gasolina, no Brasil, usa-se litro.
 
 \begin{knowledge}{}
 
@@ -543,43 +692,60 @@ Outra propriedade importante do volume é que , em diversos casos, um mesmo mate
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{15}.png}
+\noindent\includegraphics[width=250bp]{{15}.png}
 \end{figure}
 
-Teste de Piaget - clique em {\color{red}\bfseries{}{}`https://www.youtube.com/watch?v=h9ioMR8C9GI{}`\_} para assistir ao vídeo (opção de legenda em português traduzida automaticamente. Este é Teste de Piaget sobre conservação. Ginsburg, H. \& Opper, S. (1969). Piaget’s theory of intellectual development. Eaglewood Cliffs, New Jersey: Prentice-Hall, Inc).
+Teste de Piaget (\url{https://www.youtube.com/watch?v=h9ioMR8C9GI}) para assistir ao vídeo (opção de legenda em português traduzida automaticamente. Este é Teste de Piaget sobre conservação. Ginsburg, H. \& Opper, S. (1969). Piaget’s theory of intellectual development. Eaglewood Cliffs, New Jersey: Prentice-Hall, Inc).
 \end{knowledge}
 
-Ligado ao conceito de volume está o de capacidade. Por exemplo, quando se diz que o volume de uma xícara é 300mL não se está se referindo ao espaço ocupado pela xícara, ou seja, ao volume do objeto xícara, mas à quantidade de líquido que ela comporta, ou seja, à sua capacidade. Capacidade se refere ao volume de substância (líquido ou gás, por exemplo) que um recipiente pode conter e não à quantidade de espaço que o próprio recipiente ocupa. O tanque de combustível de um automóvel, garrafas térmicas, caixas d’água e geladeiras são identificados por sua capacidade e não pelo espaço que ocupam.
+Ligado ao conceito de volume está o de capacidade. Por exemplo, quando se diz que o volume de uma xícara é $300$ ml não se está se referindo ao espaço ocupado pela xícara, ou seja, ao volume do objeto xícara, mas à quantidade de líquido que ela comporta, ou seja, à sua capacidade. Capacidade se refere ao volume de substância (líquido ou gás, por exemplo) que um recipiente pode conter e não à quantidade de espaço que o próprio recipiente ocupa. O tanque de combustível de um automóvel, garrafas térmicas, caixas d’água e geladeiras são identificados por sua capacidade e não pelo espaço que ocupam.
+
+
+
+\begin{minipage}{.39\linewidth}
+\centering
+\includegraphics[height=150bp]{{16}.png} \hspace{5cm}
+\end{minipage}
+\begin{minipage}{.59\linewidth}
+\centering
+\vfill
+\begin{tabular}{|c|c|}
+\hline
+\tmcol{2}{|c|}{Capacidade} \\
+\hline
+Capacidade geladeira & 265 litros \\
+\hline
+Capacidade freezer & 80 litros \\
+\hline
+Capacidade total de armazenamento & 345 litros \\
+\hline
+\tmcol{2}{|c|}{Dimensões} \\
+\hline
+Largura & 61,9 cm \\
+\hline
+Profundidade & 69 cm \\
+\hline
+Altura & 176 cm \\
+\hline
+\tcolor{Peso} & 72 kg \\
+\hline
+\end{tabular} 
+\vfill
+\end{minipage}
+
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=100bp]{{16}.png}
+\includegraphics[height=110bp]{{19}.png} \hspace{5em} \includegraphics[height=110bp]{{18}.png} 
 \end{figure}
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{{17}.png}
+\includegraphics[height=100bp]{20.png}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=50bp]{{18}.png}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=200bp]{{19}.png}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=200bp]{{20}.png}
-\end{figure}
 
 Observamos que, além de volume, área, comprimento, largura e espessura, há outras medidas que podem caracterizar uma folha de papel: a massa e a gramatura. A gramatura exprime uma relação entre duas dessas medidas e permite classificar o papel para seus diversos fins. Gramatura é a razão da massa pela área de um papel, sendo comumente expressa em gramas por metro quadrado (g/m\(\sp{\text{2}}\)).
 
@@ -588,11 +754,31 @@ São diversas as medidas que podem ser observadas e caracterizam materiais, subs
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=500bp]{{21}.png}
+\noindent\includegraphics[width=400bp]{{21}.png}
 \end{figure}
 
 
-\explore{dimensão}
+\cleardoublepage
+\def\currentcolor{session1}
+
+\begin{objectives}{Loja de material de construção}
+{
+\begin{itemize}
+\item {} 
+Aplicar o conceito de unidade (caixa de leite ou cubo de lado 1, que dará origem a uma unidade de medida) para comunicar e comparar volumes. Volume, área, comprimento, litro (e outras unidades de medida volumétrica do SI: \(cm^3\), \(m^3\), etc.)
+
+\item {} 
+Analisar o uso de medidas linear, de área e de volume em situações do mundo real.
+
+\item {} 
+Aplicar relações entre (área e) volume e outras grandezas em situações cotidiano.
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+
+
+\explore{Dimensão}
 \label{\detokenize{GE504-2::doc}}\label{\detokenize{GE504-2:explorando-dimensao}}
 \begin{task}{loja de material de construção}
 
@@ -614,9 +800,9 @@ Tinta para pintar as paredes e o teto.
 
 \end{itemize}
 
-Gelson precisa decidir alguns detalhes da compra, como a especificação do ar condicionado adequada ao tamanho do quarto, a quantidade de tinta para pintar as paredes etc. Para isso precisará das medidas do quarto, que são aproximadamente 3,60m por 4,80m e 2,80m de altura.
+Gelson precisa decidir alguns detalhes da compra, como a especificação do ar condicionado adequada ao tamanho do quarto, a quantidade de tinta para pintar as paredes etc. Para isso precisará das medidas do quarto, que são aproximadamente $3{,}60$ m por $4{,}80$ m e $2{,}80$ m de altura.
 
-\textbf{PARTE 1}
+\paragraph{Parte 1}
 
 Na hora de escolher o ar condicionado, Gelson encontrou na internet uma regrinha simples para identificar o aparelho recomendado: “Multiplique a área do cômodo em metros quadrados por 600 para obter o núḿero de BTU/h adequado ao ambiente.”
 \begin{enumerate}
@@ -624,63 +810,57 @@ Na hora de escolher o ar condicionado, Gelson encontrou na internet uma regrinha
 De acordo com a recomendação acima, quantos BTU/h seriam ideais para esse quarto?
 
 \item {} 
-Algumas instruções de como comprar ar condicionado usam outra fórmula: “Multiplicar 200 pelo volume do ambiente em metros cúbicos para obter o número de BTU/h adequados”. Faça o cálculo com esse método.
+Algumas instruções de como comprar ar condicionado usam outra fórmula: “Multiplicar $200$ pelo volume do ambiente em metros cúbicos para obter o número de BTU/h adequados”. Faça o cálculo com esse método.
 
 \item {} 
-Explique por que essas duas formas de cálculo têm resultados próximos para cômodos típicos de casas e apartamentos. Indique dimensões possíveis de um ambiente em que essas fórmulas não resultem em valores próximos, gerando dúvida entre comprar aparelho de 45000BTU/h ou 60000BTU/h. Nesse caso, qual fórmula deve ser usada?
+Explique por que essas duas formas de cálculo têm resultados próximos para cômodos típicos de casas e apartamentos. Indique dimensões possíveis de um ambiente em que essas fórmulas não resultem em valores próximos, gerando dúvida entre comprar aparelho de $45.000$ BTU/h ou $60.000$ BTU/h. Nesse caso, qual fórmula deve ser usada?
 
 \end{enumerate}
 
-\textbf{PARTE 2}
+\paragraph{Parte 2}
 
-Ao comprar o piso de cerâmica para o quarto, Gelson encontrou três tamanhos com preços parecidos: 30cm x 30cm, 60cm x 60cm e 1m x 1m (muitas vezes, esses pisos quadrados são identificados apenas pelo tamanho de um lado, como 30cm, 60cm e o de 1m).
+Ao comprar o piso de cerâmica para o quarto, Gelson encontrou três tamanhos com preços parecidos: $30\text{ cm} \times 30\text{ cm}$, $60\text{ cm} \times 60\text{ cm}$ e $1\text{ m} \times 1\text{ m}$ (muitas vezes, esses pisos quadrados são identificados apenas pelo tamanho de um lado, como $30$ cm, $60$ cm e o de $1$ m).
 \begin{enumerate}
 \item {} 
-Quais são as vantagens e desvantagens, em termos da quantidade de trabalho e da dificuldade de instalação, ao se escolher o piso maior (de 1m por 1m)?
+Quais são as vantagens e desvantagens, em termos da quantidade de trabalho e da dificuldade de instalação, ao se escolher o piso maior (de $1$ m por $1$ m)?
 
 \item {} 
-Entre os pisos de 30cm e o de 60cm de lado, qual você entende que daria mais trabalho para instalar na mesma área? Se Gelson escolher a cerâmica de 60cm, ele deve ter que assentar aproximadamente quantas peças? E se ele escolher a de 30cm? Chamando de x o número de peças (aproximado) que devem ser instaladas de 60cm e chamando de y o número de peças de 30cm, quanto vale a razão \(\frac{y}{x}\)?
+Entre os pisos de 30cm e o de 60cm de lado, qual você entende que daria mais trabalho para instalar na mesma área? Se Gelson escolher a cerâmica de $60$ cm, ele deve ter que assentar aproximadamente quantas peças? E se ele escolher a de $30$ cm? Chamando de $x$ o número de peças (aproximado) que devem ser instaladas de $60$ cm e chamando de $y$ o número de peças de $30$ cm, quanto vale a razão \(\frac{y}{x}\)?
 
 \item {} 
-Você saberia encontrar o número \(\frac{y}{x}\) acima sem ter que calcular x e y? E se cada peça de cerâmica tivesse 10cm por 10cm, qual seria a razão do número de peças em comparação a 30cm?
+Você saberia encontrar o número \(\frac{y}{x}\) acima sem ter que calcular $x$ e $y$? E se cada peça de cerâmica tivesse $10$ cm por $10$ cm, qual seria a razão do número de peças em comparação a $30$ cm?
 
 \end{enumerate}
 
-\textbf{PARTE 3}
+\paragraph{Parte 3}
 
 Quanto ao fio, Gelson não sabia qual era a grossura do fio de cobre que ele deveria comprar para as instalações elétricas. Decidiu então medir o diâmetro de um fio que já tinha instalado em seu quarto e obteve aproximadamente 2mm. Na hora de comprar o fio para o quarto da filha, percebeu que a classificação dos fios não era pelo diâmetro, mas pela área da secção do fio, ou seja, em mm\(\sp{\text{2}}\).
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{22}.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=200bp]{{23}.png}
+\noindent\includegraphics[height=175bp]{{22}.jpg}\hspace{3em}\noindent\includegraphics[height=175bp]{{23}.png}
 \end{figure}
 \begin{enumerate}
 \item {} 
 Qual é aproximadamente a bitola (medida de área da seção do fio) em mm\(\sp{\text{2}}\) que Gelson deve comprar para o quarto da sua filha se quiser que seja como o que tem em seu quarto?
 
 \item {} 
-Gelson gostaria de saber o peso do fio para decidir como ir buscá-lo. Ele descobriu na internet que a densidade do cobre é 8890kg/m\(\sp{\text{3}}\). Desprezando o peso da borracha que reveste o fio, estime o peso da compra de fio que Gelson deve fazer?
+Gelson gostaria de saber o peso do fio para decidir como ir buscá-lo. Ele descobriu na internet que a densidade do cobre é $8890$ kg/m\(\sp{\text{3}}\). Desprezando o peso da borracha que reveste o fio, estime o peso da compra de fio que Gelson deve fazer?
 
 \end{enumerate}
 
-\textbf{PARTE 4}
+\paragraph{Parte 4}
 
 Finalmente, Gelson agora precisa fazer o cálculo da quantidade de tinta. Para isso ele decidiu medir todo o quarto.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{24}.jpg}
+\noindent\includegraphics[width=325bp]{{24}.jpg}
 \end{figure}
 
-Como já foi dito, o quarto mede aproximadamente 3,60m por 4,80m no piso e  tem  2.8m de altura. No quarto há ainda uma porta de 72cm por 2,10m e uma janela de 1,9m por 90cm.
+Como já foi dito, o quarto mede aproximadamente $3{,}60$ m por $4{,}80$ m no piso e  tem  $2{,}8$ m de altura. No quarto há ainda uma porta de $72$ cm por $2{,}10$ m e uma janela de $1{,}9$ m por $90$ cm.
 \begin{enumerate}
 \item {} 
 Considerando as informações apresentadas na lata de tinta a seguir e as dimensões do quarto, quantas latas dessa tinta Gelson deve comprar para passar duas demãos de tinta no quarto (as informações da lata se referem a apenas uma demão de tinta)?
@@ -690,12 +870,12 @@ Considerando as informações apresentadas na lata de tinta a seguir e as dimens
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{25}.jpg}
+\noindent\includegraphics[width=150bp]{{25}.jpg}
 \end{figure}
 \begin{enumerate}
 \setcounter{enumi}{1}
 \item {} 
-Sabendo que a lata de tinta possui 3,6 litros, estime a espessura da tinta fresca em cada cada demão, considerando o rendimento de uma demão apresentado na lata.
+Sabendo que a lata de tinta possui $3{,}6$ litros, estime a espessura da tinta fresca em cada cada demão, considerando o rendimento de uma demão apresentado na lata.
 
 \end{enumerate}
 
@@ -703,7 +883,7 @@ Gelson pensou em decorar o quarto, cobrindo as menores paredes do quarto com pap
 \begin{enumerate}
 \setcounter{enumi}{2}
 \item {} 
-As menores paredes do quarto têm 3,60m de largura por 2.80m de altura. Um rolo do papel  que Gelson escolheu para cobrir as paredes tem 60cm de largura e contém 5m do papel. Quantos desses rolos devem ser comprados para cobrir uma das paredes menores, a que não possui porta?
+As menores paredes do quarto têm $3{,}60$ m de largura por $2{,}80$ m de altura. Um rolo do papel  que Gelson escolheu para cobrir as paredes tem 60cm de largura e contém $5$ m do papel. Quantos desses rolos devem ser comprados para cobrir uma das paredes menores, a que não possui porta?
 
 \item {} 
 E para cobrir a outra parede menor, em que  fica a porta do quarto?
@@ -713,11 +893,11 @@ E para cobrir a outra parede menor, em que  fica a porta do quarto?
 
 \begin{observation}{}
 
-Sabe-se que, após a secagem, a espessura da tinta reduz em média para 70\% da inicial. Essa porcentagem é chamada razão Sólido por Volume (SV) da tinta e quanto maior ela for, maior é o rendimento da tinta.
+Sabe-se que, após a secagem, a espessura da tinta reduz em média para $70\%$ da inicial. Essa porcentagem é chamada razão Sólido por Volume (SV) da tinta e quanto maior ela for, maior é o rendimento da tinta.
 \end{observation}
 
 
-\arrange{dimensão}
+\arrange{Dimensão}
 \label{\detokenize{GE504-3:organizando-as-ideias-dimensao}}\label{\detokenize{GE504-3::doc}}
 Para decorar o quarto da filha, Gelson precisou determinar várias medidas. Dentre elas o comprimento necessário de fio, a área da parede a ser pintada e o volume da sala para a especificação do aparelho de ar condicionado. Comprimento, área e volume são grandezas que estão relacionadas à ideia de dimensão.
 
@@ -736,6 +916,209 @@ Assim um objeto é unidimensional (tem dimensão um) quando não têm área nem 
 
 No mundo real, tridimensional, muitas vezes a medida observada é de um atributo unidimensional ou bidimensional dos objetos, corpos ou seres. Por exemplo, um fio elétrico: no momento da compra, é o comprimento, uma grandeza unidimensional, que determina a quantidade a ser adquirida. No entanto, são diferenciados pela área de sua secção reta, uma grandeza bidimensional.
 
+\def\currentcolor{session2}
+\begin{objectives}{GNV}
+{
+\begin{itemize}
+\item {} 
+Entender o conceito de incompressibilidade, ou seja, que o volume de objetos incompressíveis não se altera após aplicação de pressão ou mudança de forma (conservação).
+
+\item {} 
+Aplicar o conceito de unidade (caixa de leite ou cubo de lado 1, que dará origem a uma unidade de medida) para comunicar e comparar volumes. Volume, área, comprimento, litro (e outras unidades de medida volumétrica do SI: cm3, m3, etc.)
+
+\end{itemize}
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{GNV}
+{
+Esta parte da atividade discute o conceito de compressibilidade de gases. Pretende-se chamar a atenção para o fato de que o volume de alguns materiais pode variar sob diversas condições (como por exemplo temperatura ou pressão). Na situação colocada no problema, o volume de GNV é função da temperatura ambiente e da pressão a que o gás está submetido.
+
+Por outro lado, a maioria dos líquidos ou sólidos sofrem pouca ou nenhuma alteração perceptível em seus volumes quando submetidos a pequenas variações de temperatura ou pressão, esses são os materiais com que trabalhamos na maior parte desta Unidade.
+
+\textbf{Organização em sala de aula:}
+Especialmente se sua turma possuir mais de 20 estudantes, recomenda-se que os estudantes estejam dispostos em grupos de 4 ou 5 para que argumentem uns com os outros. Recomenda-se o estabelecimento de uma dinâmica de discussão no grupo. O fechamento da atividade está no Para refletir, é importante discuti-lo com os estudantes.
+}{1}{1}
+\end{sugestions}
+\begin{answer}{GNV}
+{
+\begin{enumerate}
+\item {} 
+O valor de 16m\(\sp{\text{3}}\) não corresponde ao volume ocupado pelo tanque, mas sim à capacidade de armazenamento de GNV no tanque nas condições estipuladas pelo órgão de regulação (ANP). O tanque comporta uma capacidade tão grande de GNV porque o gás fica comprimido em seu interior.
+
+\item {} 
+Alguns dos motivos mais prováveis:
+
+\begin{itemize}
+\item {} 
+O gás no tanque está submetido a maior pressão do que a indicada pela norma (220 bar) possibilitando uma capacidade maior no mesmo tanque.
+
+\item {} 
+A temperatura ambiente está menor do que convencionada para o estabelecimento da capacidade do tanque (13 ou 21º C).
+
+\item {} 
+A capacidade real do tanque é um pouco maior do que a capacidade nominal com que ela foi vendida.
+
+\item {} 
+A bomba não está bem calibrada.
+
+\item {} 
+O frentista ou o posto estão trapaceando.
+
+\end{itemize}
+
+\item {} 
+A capacidade de água no tanque é de 29,7 litros = 0,0297m\(\sp{\text{3}}\) de água, muito menos do que a capacidade de 7,5m\(\sp{\text{3}}\) de GNV no tanque. Esta diferença de capacidades se dá pelo fato da água ser incompressível, já o GNV, como a maioria dos gases, é compressível assim o seu volume não é um valor absoluto, mas uma função das condições de temperatura e pressão do ambiente.
+
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{GNV}
+{
+\begin{enumerate}\setcounter{enumi}{3}
+\item {} 
+Os gases, assim como outros materiais, tendem a se comprimir quando têm sua temperatura reduzida. Isto explica o fenômeno. Por questões de segurança, em dias de baixa temperatura, o tanque deve ser abastecido com menos gás, de modo a manter a pressão mais baixa no tanque para que quando a temperatura subir, a pressão não ultrapasse o valor especificado pelas normas técnicas.
+
+\item {} 
+O volume de um gás, em geral, é estabelecido em condições normais de temperatura e pressão e varia quando as condições de temperatura ou de pressão se alteram. No caso do GNV, o tanque possui capacidade de 15m\(\sp{\text{3}}\) quando submetido a uma pressão de 220bar e a uma temperatura de 21ºC. Fora destas condições, o volume pode se alterar.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{Índice pluviométrico}
+{
+\begin{itemize}
+\item {} 
+Aplicar o conceito de unidade (caixa de leite ou cubo de lado 1, que dará origem a uma unidade de medida) para comunicar e comparar volumes. Volume, área, comprimento, litro (e outras unidades de medida volumétrica do SI: \(cm^3\), \(m^3\), etc.)
+
+\item {} 
+Analisar o uso de medidas linear, de área e de volume em situações do mundo real.
+
+\item {} 
+Aplicar relações entre (área e) volume e outras grandezas em situações cotidiano.
+
+\end{itemize}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Índice pluviométrico}
+{
+Esta atividade, tem como objetivos explorar medidas em situações do mundo real e estabelecer relação entre volume e outras grandezas no cotidiano.
+
+Para compreender o que é índice pluviométrico é preciso entender que não cabe medir a chuva em litros. Não há como coletar toda a chuva e medir o volume. A quantidade de chuva em determinada região e em determinado período é obtida a partir de uma medida linear.
+
+A atividade depende da discussão de ideias entre os alunos. Portanto, recomendamos que inicialmente os alunos sejam organizados em grupos com 3 ou 4 alunos e que, após um período de reflexão, seja conduzida uma discussão geral visando ao fechamento dos conceitos e ideais tratados.
+
+Os itens \titem{a)} e \titem{b)} têm como objetivo levar os alunos a perceberem a relação entre o volume de água de chuva coletada e a forma dos recipientes. Em particular, que percebam que, quanto maior a área de coleta, maior volume de água será armazenado. E que o nível que a água alcança em cada recipiente depende da sua forma.
+
+Os demais itens têm como objetivo verificar a compreensão do aluno sobre o que é e como se mede o índice pluviométrico.
+}{1}{2}
+\end{sugestions}
+\clearmargin
+\begin{sugestions}{Índice pluviométrico}
+{
+Avalie a possibilidade de realizar a experiência descrita no item (a), ou seja, colocar recipientes de vidro ou plástico transparente (que podem ser copos) de formatos diversos na chuva para verificar o nível da água após um período estabelecido de tempo. Realizar a experiência enriquecerá muito a atividade. Observe que, nesse caso, é importante que os recipientes tenham formatos variados e que pelo menos dois sejam prismas de bases diferentes.
+
+No item \titem{c)}, a imagem que apresenta as etapas de construção de um pluviômetro artesanal a partir de uma garrafa de refrigerante é bastante ilustrativa. Também não é difícil obter tutoriais na internet. Por exemplo, em XXXXX. Se houver oportunidade de realizar a construção com seus alunos, recomendamos. Lembramos que é importante verificar a previsão de chuva na região da sua escola para que a construção seja adequadamente aproveitada.
+}{1}{2}
+\end{sugestions}
+\clearmargin
+\begin{answer}{Índice pluviométrico}
+{
+\begin{enumerate}
+\item {} 
+Não. O Volume de chuva coletado em cada recipiente depende da área aberta no recipiente, ou seja, a área de captação. Quanto maior for essa área, maior será o volume de água coletado.
+
+\item {} 
+Recipiente 1: Igual (ou muito próximo); Recipiente 2: Igual (ou muito próximo); Recipiente 3: maior; Recipiente 4: Menor. (Recipiente para oficinas com professores:  Nâo é possível responder sem saber os raios das secções e do recipiente)
+
+\item {} 
+Sim, o índice pluviométrico não é exatamente uma medida de volume, mas uma medida linear que permite estimar a quantidade de chuva em determinada região em um dado período de tempo.
+\end{enumerate}
+}{1}
+\end{answer}
+\clearmargin
+\begin{answer}{Índice pluviométrico}
+{
+\begin{enumerate}\setcounter{enumi}{3}
+\item {} 
+Como a base da garrafa não é plana, as pedras ajudam a preencher o fundo da garrafa. A faixa com a escala é então colocada a partir das pedras. A variação da água é observada a partir de um ponto que não corresponde ao fundo, mas que está na parte cilíndrica da garrafa. Observe que no lugar de pedras poderiam ser colocadas bolinhas de gude, areia ou mesmo nada. Se nada fosse colocado, dever-se-ia  esperar que a água de chuva coletada alcançasse a marca zero da escala, o que demoraria mais.
+
+\item {} 
+Como o primeiro coletor é cilíndrico, alturas iguais correspondem a volumes iguais, portanto a escala pode ser com subdivisões iguais para representar uma unidade. Já o segundo coletor tem a forma de um tronco de cone.Nesse caso, alturas iguais não correspondem a volumes iguais. A escala precisa ser adequada a essa variação.
+
+\item {} 
+Sabemos que \(1\text{ L} = 1\text{ dm}^3 = 0{,}001\text{ m}^3\). Portanto, como a base da caixa tem \(1\text{ m}^2\), \(1\text{ L}\) de água nessa caixa alcançará \(0{,}001\text{ m} = 1\text{ m}\).
+
+\end{enumerate}
+
+A completar. Item f
+}{1}
+\end{answer}
+\clearmargin
+\begin{objectives}{A coelha e o cervo}
+{
+\begin{itemize}
+\item {} 
+Reconhecer dimensões de segmentos de reta, regiões planas e sólidos no espaço e a relação com suas unidades de medidas (e.g., \(m\), \(m^2\) e \(m^3\)).
+
+\item {} 
+Reconhecer a relação entre a dimensão intrínseca e os conceitos de comprimento, área e volume, distinguindo um sólido de sua fronteira.
+
+\end{itemize}
+
+\textbf{Conceitos abordados:} dimensão.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{A coelha e o cervo}
+{
+\begin{itemize}
+\item {} 
+Você, professor, não precisa aplicar todas as questões aqui sugeridas. Dependendo do tempo disponível e da turma, escolhas ou modificações devem ser feitas. Sinta-se livre para fazê-las!
+
+\item {} 
+Parece óbvio, mas vale o conselho: sempre assista ao vídeo antes de trabalhar com ele em sala de aula.
+
+\item {} 
+Antes dos alunos assistirem ao vídeo, sugerimos que eles leiam as questões que serão trabalhadas.
+
+\item {} 
+Nossa experiência mostra que os alunos ficam sempre mais motivados quando as atividades desenvolvidas fazem parte do sistema de avaliação.
+
+\end{itemize}
+}{1}{2}
+\end{sugestions}
+\begin{sugestions}{A coelha e o cervo}
+{
+\textbf{Enriquecimento da discussão:}
+\begin{itemize}
+\item {} 
+Este curta-metragem já ganhou mais de 100 prêmios internacionais.
+
+\item {} 
+No vídeo, o cubo colorido que aparece várias vezes é conhecido como o cubo mágico ou cubo de Rubik. Este quebra-cabeça 3D foi inventado em 1974 pelo escultor e professor de arquitetura húngaro Ernő Rubik. Resolvê-lo consiste em deixar cada uma de suas seis faces com uma única cor. Para isto, o usuário pode girar seus mecanismos. O matemático português Rogério Martins fala um pouco mais sobre o cubo mágico no vídeo \url{https://goo.gl/eQhDXo} da série Isto é Matemática. Uma curiosidade: existem  43 252 003 274 489 856 000 posições diferentes para o cubo de Rubik (Bandelow, 1982). Uma versão interativa virtual do cubo de Rubik que pode ser executada em dispositivos modernos (incluindo smartphones e tablets) pode ser encontrada em \url{http://goo.gl/sc2qUL}.
+\begin{quote}
+
+Figura: Ernő Rubik (1944-)
+Fonte: Wikimedia Commons.
+
+Figura: Cubo mágico.
+Fonte: Wikimedia Commons.
+\end{quote}
+
+\item {} 
+Segundo o diretor Peter Vacz, em seu blog \url{http://vaczpeter.blogspot.com}, os protagonistas da animação foram inspirados nele mesmo (que segundo um amigo se parecia com um cervo) e em sua ex-namorada (que se parecia com uma coelha). Vacz começou a fazer ilustrações com esses dois animais com base nos momentos que compartilharam juntos e, então, percebeu que o que tornou os personagens tão especiais foram seus momentos felizes e suas brigas tolas, cenas de sua vida cotidiana.
+
+\item {} 
+Existem várias outras animações que tratam da questão da dimensão e que podem ser exibidas junto com “A Coelha e O Cervo”:  “Homer” do seriado “Os Simpsons”,   “2-D Blacktop” do seriado “Futurama”, “Planolândia  - O Filme”  e  “Dimensões” (\url{http://goo.gl/dgYi6S}).
+
+\end{itemize}
+
+\textbf{Link para o vídeo:} \url{https://www.youtube.com/watch?v=\_IEvklgjC-U}. Tem apenas 16‘25’‘. Página web oficial: \url{http://www.rabbitanddeer.com}.
+
+É necessário que os estudantes assistam ao vídeo no link da atividade, então ou eles precisarão ter assistido em casa, ou ou professor pode projetar o filme no quadro.
+}{1}{1}
+\end{sugestions}
+
 \begin{knowledge}{}
 
 Em diversas áreas das ciências são necessárias mais do que três dimensões para que sejam descritos alguns fenômenos. Assistam ao vídeo
@@ -745,127 +1128,108 @@ Em diversas áreas das ciências são necessárias mais do que três dimensões 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{{26}.png}
-\end{figure}
+\noindent\includegraphics[width=.45\linewidth]{{26}.png}
+\noindent\includegraphics[width=.45\linewidth]{{27}.png}
 
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=300bp]{{27}.png}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=300bp]{{28}.png}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=300bp]{{29}.png}
+\noindent\includegraphics[width=.45\linewidth]{{28}.png}
+\noindent\includegraphics[width=.45\linewidth]{{29}.png}
 \end{figure}
 \end{knowledge}
 
 
-\practice{}
+\practice{Dimensão}
 \label{\detokenize{GE504-4::doc}}\label{\detokenize{GE504-4:praticando}}
 \begin{task}{GNV}
 
 
 
-A frota de veículos movido a Gás Natural Veicular (GNV) no Brasil no início de 2017 era de 1.859.300 veículos (Fonte: Instituto Brasileiro de Petróleo, Gás e Biocombustíveis - IBP). Metade desta frota está no Rio de Janeiro, seguido por São Paulo com 21,5\%. Isto significa que aproximadamente 4,5\% dos automóveis, picapes ou caminhonetes do país usam GNV (Fontes: \href{http://www.fecombustiveis.org.br/relatorios/relatorio-anual-da-revenda-de-combustiveis-2017/}{Relatório Anual de Revenda de Combustíveis 2017} e \href{https://g1.globo.com/carros/noticia/frota-brasileira-de-veiculos-cresce-12-em-2017-diz-sindipecas.ghtml}{G1 automóveis}, para o tamanho da frota). Esta é a terceira maior frota de veículos movidos a GNV do mundo (carece de fontes confiáveis).
+A frota de veículos movido a Gás Natural Veicular (GNV) no Brasil no início de 2017 era de 1.859.300 veículos (Fonte: Instituto Brasileiro de Petróleo, Gás e Biocombustíveis - IBP). Metade desta frota está no Rio de Janeiro, seguido por São Paulo com $21{,}5\%$. Isto significa que aproximadamente $4{,}5\%$ dos automóveis, picapes ou caminhonetes do país usam GNV (Fontes: \href{http://www.fecombustiveis.org.br/relatorios/relatorio-anual-da-revenda-de-combustiveis-2017/}{Relatório Anual de Revenda de Combustíveis 2017} e \href{https://g1.globo.com/carros/noticia/frota-brasileira-de-veiculos-cresce-12-em-2017-diz-sindipecas.ghtml}{G1 automóveis}, para o tamanho da frota). Esta é a terceira maior frota de veículos movidos a GNV do mundo (carece de fontes confiáveis).
 
-Os instaladores do kit gás nos veículos anunciam os tanques com capacidades variadas como 7,5m\(\sp{\text{3}}\), 14m\(\sp{\text{3}}\), 15m\(\sp{\text{3}}\), 15,5m\(\sp{\text{3}}\) e 16m\(\sp{\text{3}}\). Os tanques são geralmente posicionados no porta malas do carro e é necessário conferir o modelo do carro para saber se o botijão vendido cabe no porta malas.
+Os instaladores do kit gás nos veículos anunciam os tanques com capacidades variadas como $7{,}5$ m\(\sp{3}\), $14$ m\(\sp{3}\), $15$ m\(\sp{3}\), $15{,}5$ m\(\sp{3}\) e $16$ m\(\sp{3}\). Os tanques são geralmente posicionados no porta malas do carro e é necessário conferir o modelo do carro para saber se o botijão vendido cabe no porta malas.
 
-\textbf{Observação matemática:}
+\begin{observationtitle}{Observação matemática}
 
-Lembre-se que 1 metro cúbico (1m\(\sp{\text{3}}\)) é o volume de uma caixa na forma de um cubo de lado 1 metro (veja  a figura 1). Deste modo, 16m\(\sp{\text{3}}\) correspondem a 16 caixas deste tamanho (veja a figura 2).
+Lembre-se que $1$ metro cúbico ($1$ m\(\sp{3}\)) é o volume de uma caixa na forma de um cubo de lado $1$ metro (veja  a figura $1$). Deste modo, $16$ m\(\sp{3}\) correspondem a $16$ caixas deste tamanho (veja a figura 2).
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
 Figura 1 & Figura 2\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
+\end{observationtitle}
 
 \begin{enumerate}
 \item {} 
-Como você explica tantos carros pequenos com tanques para 16m\(\sp{\text{3}}\) de gás em seus portas malas, levando em consideração a observação matemática?
+Como você explica tantos carros pequenos com tanques para $16$ m\(\sp{3}\) de gás em seus portas malas, levando em consideração a observação matemática?
 
 \item {} 
 Outra situação comum para os usuários de GNV é que ao encher o tanque, o volume apresentado na bomba do posto (em metros cúbicos), ultrapassa a capacidade nominal do tanque (veja \href{https://br.answers.yahoo.com/question/index?qid=20120927220946AAlMbWD}{aqui} ou \href{https://br.answers.yahoo.com/question/index?qid=20061006192226AAvKvOl}{aqui}), levando as pessoas a desconfiarem do posto em que abastecem. Após refletir um pouco, apresente os motivos mais prováveis, em sua opinião, para esta aparente contradição.
 
-\end{enumerate}
 
 \begin{figure}[H]
 \centering
 
 \noindent\includegraphics[width=200bp]{{30}.png}
 \end{figure}
-\begin{enumerate}
-\item {} 
-Num tanque de GNV vendido como de 7,5m\(\sp{\text{3}}\) (veja a figura a seguir), está especificado 29,7 litros. Na oficina de instalação, explicam que 29,7 litros é o “volume de água” do tanque e que para obter o volume em metros cúbicos, é necessário dividir a capacidade de água em litros por 4 para obter a capacidade em metros cúbicos de GNV. Compare os volumes de gás e de água no tanque, busque argumentar o significado desta diferença e aparente contradição.
 
-\end{enumerate}
+\item {} 
+Num tanque de GNV vendido como de $7{,}5$ m\(\sp{3}\) (veja a figura a seguir), está especificado $29{,}7$ litros. Na oficina de instalação, explicam que $29{,}7$ litros é o “volume de água” do tanque e que para obter o volume em metros cúbicos, é necessário dividir a capacidade de água em litros por $4$ para obter a capacidade em metros cúbicos de GNV. Compare os volumes de gás e de água no tanque, busque argumentar o significado desta diferença e aparente contradição.
+
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{31}.png}
+\noindent\includegraphics[width=300bp]{{31}.png}
 \end{figure}
-\begin{enumerate}
+
 \item {} 
 É muito comum, por exemplo, em fóruns de discussão e em blogs na internet (veja a discussão no \href{https://www.youtube.com/watch?v=i5QJ0C-qXjw}{vídeo} ou no \href{https://br.answers.yahoo.com/question/index?qid=20120927220946AAlMbWD}{fórum do Yahoo}) as pessoas notificarem que em dias frios, cabe mais GNV no tanque. Como isso é possível?
 
 \item {} 
-Levando em consideração toda a discussão desta parte da atividade, tente explicar qual é o significado da capacidade do tanque do combustível ser, digamos, 15m\(\sp{\text{3}}\). Quais são os fatores relevantes para que o tanque realmente contenha 15m\(\sp{\text{3}}\) de GNV quando completo?
+Levando em consideração toda a discussão desta parte da atividade, tente explicar qual é o significado da capacidade do tanque do combustível ser, digamos, $15$ m\(\sp{3}\). Quais são os fatores relevantes para que o tanque realmente contenha $15$ m\(\sp{3}\) de GNV quando completo?
 
 \end{enumerate}
 \end{task}
 
 \begin{knowledge}{}
 
-Combustíveis fósseis como diesel, gasolina, etanol e GNV emitem \(CO_2\) na atmosfera quando queimados no motor dos veículos. A emissão deste gás na atmosfera é tema de discussões e tratados internacionais (Por exemplo o protocolo de Kyoto de 1997) devido ao seu potencial causador do efeito estufa. Nestes tratados é comum que os países se comprometam a reduzir as emissões de gás carbônico em um dado intervalo de tempo.
+Combustíveis fósseis como diesel, gasolina, etanol e GNV emitem CO\(_2\) na atmosfera quando queimados no motor dos veículos. A emissão deste gás na atmosfera é tema de discussões e tratados internacionais (Por exemplo o protocolo de Kyoto de 1997) devido ao seu potencial causador do efeito estufa. Nestes tratados é comum que os países se comprometam a reduzir as emissões de gás carbônico em um dado intervalo de tempo.
 
-Veículos híbridos, em que um motor elétrico auxilia um motor a gasolina, reduzem a aproximadamente 92 gramas de \(CO_2\) por quilômetro rodado (aproximadamente 82\% do que emite um veículo movido a GNV) e veículos inteiramente elétricos não emitem gás carbônico pois seus motores não funcionam a base de combustão.
+Veículos híbridos, em que um motor elétrico auxilia um motor a gasolina, reduzem a aproximadamente $92$ gramas de CO\(_2\) por quilômetro rodado (aproximadamente $82\%$ do que emite um veículo movido a GNV) e veículos inteiramente elétricos não emitem gás carbônico pois seus motores não funcionam a base de combustão.
 \end{knowledge}
 
 \begin{reflection}{}
 
 Conforme visto na Atividade: GNV, o volume de alguns materiais pode ser alterado consideravelmente devido a variações nas condições de temperatura e pressão. Isto é especialmente fácil de se verificar para gases.
 
-A Lei dos Gases Ideais afirma que para um gás ideal em um sistema isolado as grandezas P, V e T (respectivamente pressão, volume e temperatura) satisfazem
+A Lei dos Gases Ideais afirma que para um gás ideal em um sistema isolado as grandezas $P$, $V$ e $T$ (respectivamente pressão, volume e temperatura) satisfazem
 \begin{equation*}
 \begin{split}PV=nRT,\end{split}
 \end{equation*}
-onde n e R são constantes do sistema. Assim
-\begin{itemize}
-\item {} 
-{[}transformação isobárica{]} se mantivermos a pressão constante, \textbf{o volume torna-se diretamente proporcional à temperatura}: \(V=\frac{nR}{P}T\), ou seja, existe uma constante k (neste caso \(k=\frac{nR}{P}\)), tal que
-
-\end{itemize}
+onde $n$ e $R$ são constantes do sistema. Assim
+\begin{observationtitle}{Transformação isobárica} 
+Se mantivermos a pressão constante, \textbf{o volume torna-se diretamente proporcional à temperatura}: \(V=\frac{nR}{P}T\), ou seja, existe uma constante k (neste caso \(k=\frac{nR}{P}\)), tal que
 \begin{equation*}
 \begin{split}V=kT\end{split}
 \end{equation*}
+\end{observationtitle}
 Isto significa que, nesse tipo de sistema, se a temperatura for multiplicada por algum valor, o volume será multiplicado pelo mesmo valor.
 
-Em dias em que a temperatura ambiente está baixa (T \(\downarrow\)), usando a mesma pressão coloca-se mais GNV no tanque pois o volume por ele ocupado é menor (V \(\downarrow\)).
-\begin{itemize}
-\item {} 
-{[}transformação isotérmica{]} se mantivermos a temperatura constante, o volume torna-se inversamente proporcional à pressão: V = nRT / P, ou seja, existe uma constante k’ tal que
-
-\end{itemize}
+Em dias em que a temperatura ambiente está baixa ($T$ \(\downarrow\)), usando a mesma pressão coloca-se mais GNV no tanque pois o volume por ele ocupado é menor ($V$ \(\downarrow\)).
+\begin{observationtitle}{Transformação isotérmica} 
+Se mantivermos a temperatura constante, o volume torna-se inversamente proporcional à pressão: $V = nRT / P$, ou seja, existe uma constante $k’$ tal que
 \begin{equation*}
 \begin{split}V=\frac{k'}{P}\end{split}
 \end{equation*}
+\end{observationtitle}
 Isto significa, por exemplo, que se aumentarmos a pressão o volume diminui à mesma taxa.
 
-Quando coloca-se o GNV no tanque é exercida uma pressão sobre o gás (P \(\uparrow\)) de modo que o volume por ele ocupado fica bastante reduzido (V \(\downarrow\))como se pode ver na Atividade: GNV. Na prática, você perceberá que o tanque também aquece um pouco.
+Quando coloca-se o GNV no tanque é exercida uma pressão sobre o gás ($P$ \(\uparrow\)) de modo que o volume por ele ocupado fica bastante reduzido ($V$ \(\downarrow\))como se pode ver na Atividade: GNV. Na prática, você perceberá que o tanque também aquece um pouco.
 
-Existe também a transformação isovolumétrica, em que o volume é mantido constante e variam a pressão e a temperatura. Este é aproximadamente o caso da panela de pressão em que aumenta-se a pressão do interior da panela para que o alimento, com volume constante, tenha sua temperatura também aumentada (em relação à panela aberta). Imagine o que acontece quando a panela é aberta antes da hora: a pressão baixa muito de forma abrupta (P \(\downarrow\)), a temperatura varia muito pouco, então o volume aumenta muito (V \(\uparrow\)), também de forma abrupta, o que provoca uma espécie de explosão na cozinha (não tente reproduzir isso em casa! Perigo de morte!).
+Existe também a transformação isovolumétrica, em que o volume é mantido constante e variam a pressão e a temperatura. Este é aproximadamente o caso da panela de pressão em que aumenta-se a pressão do interior da panela para que o alimento, com volume constante, tenha sua temperatura também aumentada (em relação à panela aberta). Imagine o que acontece quando a panela é aberta antes da hora: a pressão baixa muito de forma abrupta ($P$ \(\downarrow\)), a temperatura varia muito pouco, então o volume aumenta muito ($V$ \(\uparrow\)), também de forma abrupta, o que provoca uma espécie de explosão na cozinha (não tente reproduzir isso em casa! Perigo de morte!).
 \end{reflection}
 
 \begin{task}{índice pluviométrico}
@@ -876,60 +1240,56 @@ Existe também a transformação isovolumétrica, em que o volume é mantido con
 
 Medir a quantidade de chuva é importante para a agricultura, influenciando, por exemplo, a decisão do quê e quando plantar.  Também é importante para avaliar a necessidade de medidas que possam evitar tragédias determinadas por grandes quantidades de chuva, como enchentes ou deslizamentos.
 
-\emph{O que significa dizer que, em determinada região, em determinado período, choveu 30mm?}
+\emph{O que significa dizer que, em determinada região, em determinado período, choveu $30$ mm?}
 
-Pode parecer estranho medir chuva como comprimento: “choveu 5mm”. Afinal, chuva é água! Mas, de fato, considerando um determinado período de tempo, é uma medida linear que permite quantificar a chuva que cai em dada região. O índice pluviométrico mede a quantidade a chuva em unidades de comprimento por unidade de tempo \textendash{} por exemplo, em milímetros por hora. O “comprimento” corresponde ao “nível” de água da chuva que se acumulara em uma superfície plana, horizontal e impermeável durante um determinado período de tempo, por exemplo uma hora. Essa forma de medir não considera a chuva que escorre ou se infiltra no solo, apenas a chuva que cai.
+Pode parecer estranho medir chuva como comprimento: “choveu $5$ mm”. Afinal, chuva é água! Mas, de fato, considerando um determinado período de tempo, é uma medida linear que permite quantificar a chuva que cai em dada região. O índice pluviométrico mede a quantidade a chuva em unidades de comprimento por unidade de tempo \textendash{} por exemplo, em milímetros por hora. O “comprimento” corresponde ao “nível” de água da chuva que se acumulara em uma superfície plana, horizontal e impermeável durante um determinado período de tempo, por exemplo uma hora. Essa forma de medir não considera a chuva que escorre ou se infiltra no solo, apenas a chuva que cai.
 
 Na prática, essa medida é feita com um aparelho próprio, o pluviômetro. Há vários modelos diferentes, mas o instrumento constitui-se, basicamente de recipiente de captação e de um recurso para medir o volume coletado de água. Para chegar ao índice pluviométrico de um determinada região (estado ou cidade, por exemplo) em um determinado período, há diversas estações meteorológicas espalhadas, cada uma com o seu pluviômetro. Com base nos dados coletados por essas estações é possível chegar à média da precipitação observada na região. Essa média é o índice pluviométrico da região. Assim, a informação de que choveu, por exemplo, 5 milímetros na cidade ao longo do dia, significa que essa é a altura média alcançada pela água a partir do chão, na área total da cidade ao longo desse dia, se não houvesse escoamento ou infiltração no solo.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{32}.png}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=200bp]{{33}.png}
+\noindent\includegraphics[height=.45\linewidth]{{32}.png} \hfill
+\noindent\includegraphics[height=.45\linewidth]{{33}.png}
 \end{figure}
 \begin{enumerate}
 \item {} 
 Enquanto chovia, durante uma hora, foram colocados cinco recipientes lado a lado para coletar a água da chuva. O volume de água coletado nos cinco recipientes é o mesmo? Explique a sua resposta. De que característica dos recipientes depende a quantidade de água que será coletada em cada um?
 
-\end{enumerate}
+
+\begin{multicols}{2}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=100bp]{{34}.png}
+\noindent\includegraphics[height=100bp]{{34}.png}
 \caption{Recipiente 1 (Cúbico)}\label{\detokenize{GE504-4:id8}}\end{figure}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=100bp]{{35}.png}
+\noindent\includegraphics[height=100bp]{{35}.png}
 \caption{Recipiente 2 (Cilindrico)}\label{\detokenize{GE504-4:id9}}\end{figure}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=100bp]{{36}.png}
+\noindent\includegraphics[height=100bp]{{36}.png}
 \caption{Recipiente 3 (Cone)}\label{\detokenize{GE504-4:id10}}\end{figure}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=100bp]{{37}.png}
+\noindent\includegraphics[height=100bp]{{37}.png}
 \caption{Recipiente para oficinas com professores}\label{\detokenize{GE504-4:id11}}\end{figure}
-\begin{enumerate}
-\setcounter{enumi}{1}
+\end{multicols}
+
 \item {} 
-Considerando que o índice pluviométrico da chuva no local em que os recipientes foram colocados foi de 35 mm em uma hora e que os recipientes ficaram por esse período na chuva, avalie o nível de água em cada um deles: será igual (ou muito próximo), maior ou menor do que 35 mm? Explique.
+Considerando que o índice pluviométrico da chuva no local em que os recipientes foram colocados foi de $35$ mm em uma hora e que os recipientes ficaram por esse período na chuva, avalie o nível de água em cada um deles: será igual (ou muito próximo), maior ou menor do que $35$ mm? Explique.
 
 \item {} 
 Nos recipientes 1 e 2, a chuva coletada alcançará o mesmo nível. No entanto, o volume pode não ser o mesmo. Explique.
@@ -937,17 +1297,19 @@ Nos recipientes 1 e 2, a chuva coletada alcançará o mesmo nível. No entanto, 
 \item {} 
 Na construção de um pluviômetro caseiro foi utilizada uma garrafa plástica como ilustra a sequência de imagens a seguir:
 
-\end{enumerate}
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{38_1}.png}
+\noindent\includegraphics[width=350bp]{{38_1}.png}
 \end{figure}
 
-Explique:   \((i)\) qual o objetivo das pedras e da água colocadas no fundo da garrafa cortada. Se fosse uma garrafa de fundo plano, as pedras seriam necessárias?  e \((ii)\) por que a faixa com a escala de leitura do nível da chuva coleta é colocada a partir do nível da água colocada com as pedras?
+Explique:   
 \begin{enumerate}
-\setcounter{enumi}{4}
+\item qual o objetivo das pedras e da água colocadas no fundo da garrafa cortada. Se fosse uma garrafa de fundo plano, as pedras seriam necessárias?  
+\item por que a faixa com a escala de leitura do nível da chuva coleta é colocada a partir do nível da água colocada com as pedras?
+\end{enumerate}
+
 \item {} 
 Observe os coletores ilustrados nas figuras a seguir. Um é cilíndrico e o outro tem o formato de um tronco de cone. Explique a diferença entre as escalas de leitura do nível da chuva coletada em função do formato do coletor.
 
@@ -956,21 +1318,16 @@ Observe os coletores ilustrados nas figuras a seguir. Um é cilíndrico e o outr
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=100bp]{{39}.png}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\noindent\includegraphics[width=100bp]{{40}.png}
+\noindent\includegraphics[height=200bp]{{39}.png}\hspace{5em}
+\noindent\includegraphics[height=200bp]{{40}.png}
 \end{figure}
 \begin{enumerate}
 \setcounter{enumi}{5}
 \item {} 
-Se em uma caixa com base de área igual a \(1m^2\)  for depositado 1L de água que nível a água alcançará?
+Se em uma caixa com base de área igual a \(1\) m\super{2}  for depositado $1$ $\ell$ de água que nível a água alcançará?
 
 \item {} 
-Em determinada cidade do sudeste do Brasil, foi registrado que o índice pluviométrico da chuva atingiu 123,6 mm por hora. De acordo com os dados estatísticos apresentados a seguir, essa chuva justificaria que manchete:
+Em determinada cidade do sudeste do Brasil, foi registrado que o índice pluviométrico da chuva atingiu $1236$ mm por hora. De acordo com os dados estatísticos apresentados a seguir, essa chuva justificaria que manchete:
 \begin{enumerate}
 \item {} 
 Chuva do final da tarde de ontem confirma a média esperada para o período.
@@ -988,38 +1345,47 @@ A chuva que caiu durante todo o domingo não foi suficiente para atrapalhar o ca
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=430bp]{{41}.png}
+\noindent\includegraphics[width=420bp]{{41}.png}
 \end{figure}
 \begin{enumerate}
 \setcounter{enumi}{7}
 \item {} 
-(ENEM 2015 - adaptado) O índice pluviométrico é utilizado para mensurar a precipitação da água da chuva, em milímetros, em determinado período de tempo. Seu cálculo é feito de acordo com o nível de água da chuva acumulada em  \(1m^2\) , ou seja, se o índice for de 10mm, significa que a altura do nível de água acumulada em um tanque aberto, em formato de um cubo com \(1m^2\) de área de base, é de 10mm. Em uma região, após um forte temporal, verificou-se que a quantidade de chuva acumulada em uma lata de formato cilíndrico, com raio 300mm e altura 1 200mm, era de um terço da sua capacidade. (Se necessário, utilize 3,0 como aproximação para \(\pi\)) .
+(ENEM 2015 - adaptado) O índice pluviométrico é utilizado para mensurar a precipitação da água da chuva, em milímetros, em determinado período de tempo. Seu cálculo é feito de acordo com o nível de água da chuva acumulada em  \(1\) m$^2$ , ou seja, se o índice for de 10mm, significa que a altura do nível de água acumulada em um tanque aberto, em formato de um cubo com \(1\) m$^2$ de área de base, é de 10mm. Em uma região, após um forte temporal, verificou-se que a quantidade de chuva acumulada em uma lata de formato cilíndrico, com raio 300mm e altura 1 200mm, era de um terço da sua capacidade. (Se necessário, utilize 3,0 como aproximação para \(\pi\)) .
 
-\end{enumerate}
 
 O índice pluviométrico da região, durante o período do temporal, em milímetros, é de
+
+\begin{multicols}{6}
 \begin{enumerate}
-\item {} 
-10,8. ii) 12,0.  iii) 32,4.  iv) 108,0.  v) 324,0.  vi) 400,0.
+\item $10{,}8$. 
+\item $12{,}0$.  
+\item $32{,}4$.  
+\item $108{,}0$.  
+\item $324{,}0$.  
+\item $400{,}0$.
+\end{enumerate}
+\end{multicols}
 
 \end{enumerate}
 \end{task}
 
 \begin{task}{a coelha e o cervo}
 
+\textit{(Atividades desenvolvidas por Hamanda de Aguiar Pereira, André de Carvalho Rapozo sob a orientação do Professor Humberto Bortolossi (UFF).)}
+
 As questões a seguir referem-se ao vídeo “A coelha e o cervo” disponível \href{https://www.youtube.com/watch?v=\_IEvklgjC-U}{neste link}.
 
-\textbf{Sinopse}
+\paragraph{Sinopse}
 
 A coelha e o cervo vivem juntos e felizes em um universo plano, até que o cervo fica intrigado com um cubo mágico que aparece em sua TV quando esta se quebra. Com isso, o cervo fica obcecado em descobrir o mundo tridimensional. Um acidente o projeta para este universo e ele então se vê separado de sua amiga coelha. Veja como estes dois personagens resolvem essa situação nesse encantador curta metragem de Péter Vácz.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=430bp]{{42434445464748}.png}
+\noindent\includegraphics[width=\linewidth]{{42434445464748}.png}
 \end{figure}
 
-\textbf{PARTE I:} questões gerais
+\paragraph{Parte 1 - Questões gerais}
 \begin{enumerate}
 \item {} 
 Na sua opinião, o vídeo quer transmitir alguma mensagem? Qual?
@@ -1059,7 +1425,7 @@ Se você fosse o diretor desta animação, você faria algo diferente? O quê?
 
 \end{enumerate}
 
-\textbf{PARTE II:} questões específicas
+\paragraph{Parte 2 - Questões específicas} 
 \begin{enumerate}
 \item {} 
 No momento em que a televisão quebra, surge uma imagem na tela (01:47-01:56). Na sua opinião, que objeto o cineasta quis representar?
@@ -1105,24 +1471,68 @@ Depois que a bebida cai no computador do cervo, ele recebe uma descarga elétric
 
 \end{enumerate}
 
-{\color{red}\bfseries{}{}`}{\color{red}\bfseries{}*}{\color{red}\bfseries{}{}`}Atividades desenvolvidas por Hamanda de Aguiar Pereira, André de Carvalho Rapozo sob a orientação do Professor Humberto Bortolossi (UFF).
+
 \end{task}
 
+\cleardoublepage
+\def\currentcolor{session1}
+\clearmargin
+\begin{objectives}{Reconhecimento de elementos}
+{
+{[}Identificar elementos{]} \textbf{OE10. Reconhecer (identificar e nomear)} elementos básicos da geometria espacial que são necessários para volumes e relacioná-los entre eles (e.g., posições relativas de planos (ver o que é realmente necessário aqui)).  (vértices de sólidos, planos paralelos, perpendicularidade entre reta plano, distância de ponto a plano e retas reversas no espaço)
 
-\explore{elementos de geometria espacial e volumes}
+\textbf{Conceitos abordados:} Reta, plano, posições relativas de retas e retas, retas e planos e, planos e planos, colinearidade, coplanaridade.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Reconhecimento de elementos}
+{
+\textbf{Organização em sala de aula:} Para esta atividade espera-se que os estudantes estejam divididos em grupos de mais do que 2 estudantes (4 ou 5 é o ideal).
+
+\textbf{Dificuldades previstas:} A percepção e a representação de objetos de geometria espacial oferece diversos desafios. Por exemplo, comumente um plano é representado por um retângulo ou um paparalelogramo. Não é raro que os estudantes confundam essas figuras, não reconhecendo que o plano é infinito, por exemplo. O papel do professor nas discussões será fundamental para diferenciar a ideia abstrata de plano de suas representações.
+
+Uma sugestão é que o professor apresente uma folha cortada de forma irregular (com as bordas não retilíneas, por exemplo) e pergunte aos estudantes se a folha ainda poderia representar um plano. Isso deve ajudar o estudante a perceber que o plano é ilimitado, logo se dois planos distintos se intersectam em um ponto, então eles se intersectam em uma reta inteira.
+
+\textbf{Sugestões gerais:} Deixe os materiais concretos que você trouxe à disposição dos estudantes para que os utilizem para desenvolver a sua intuição de reta e plano.
+
+Considere não solicitar que seus estudantes escrevam as suas soluções, mas que a atividade seja um guia de discussões.
+
+Evite deixar o fechamento para o final da atividade. Os estudantes costumam se concentrar por pouco tempo no que você está dizendo, então falar pouco tempo em cada interação pode ajudar na compreensão do que está sendo dito.
+
+\textbf{Materiais necessários:} Canudos ou lápis e folhas de papel à vontade (melhor se houver folhas de cores diferentes)
+}{1}{2}
+\end{sugestions}
+\clearmargin
+\clearmargin
+\begin{objectives}{Agrupando sólidos}
+{
+{[}Identificar elementos{]} OE11. Entender (analisar, segundo Van Hiele) os sólidos clássicos por meio de suas propriedades e não apenas por associação e semelhança (visualização, segundo Van Hiele).
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Agrupando sólidos}
+{
+\textbf{Organização em sala de aula:} Espera-se que sejam realizadas discussões críticas sobre as classificações dos objetos.
+
+\textbf{Dificuldades previstas:} Os estudantes podem querer juntar os  “corpos redondos” entre si. Não há problema neste tipo de agrupamento.
+
+\textbf{Sugestões gerais:} Os estudantes não precisam realmente lembrar os nomes dos sólidos aqui apresentados para desenvolverem a atividade. Espera-se aqui que eles realmente sejam criativos e observadores sobre as características comuns aos objetos.
+}{1}{2}
+\end{sugestions}
+
+
+\explore{Elementos de Geometria Espacial}
 \label{\detokenize{GE504-5:explorando-elementos-de-geometria-espacial-e-volumes}}\label{\detokenize{GE504-5::doc}}
 Nesta seção, exploraremos elementos básicos de geometria espacial e suas relações com os objetivos de estimular a percepção espacial e de construir a linguagem necessária para estudar alguns sólidos clássicos.
 
 \begin{task}{motivação}
 
-\textbf{Parte 1}
+\paragraph{Parte 1}
 
 Observe as figuras a seguir e decida se, em cada uma delas, os segmentos destacados em vermelho têm o mesmo comprimento. Explique a sua resposta.
 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=1.2]
+\begin{tikzpicture}[scale=1]
 
 
 \draw [fill=\currentcolor!50](0,0) rectangle (2,4.5);
@@ -1140,13 +1550,8 @@ Observe as figuras a seguir e decida se, em cada uma delas, os segmentos destaca
 
 \draw [destacado, thick] (4,3.1) -- (4,1.4);
 \draw [destacado, thick] (2,1.5)-- (2,3);
-\end{tikzpicture}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\begin{tikzpicture}[scale=1.2]
+\end{tikzpicture}\hspace{5em}
+\begin{tikzpicture}[scale=1]
 
 
 \draw [fill=\currentcolor!50](0,0) rectangle (2,4.5);
@@ -1166,14 +1571,14 @@ Observe as figuras a seguir e decida se, em cada uma delas, os segmentos destaca
 \draw [destacado, thick] (2,1.5)-- (2,3);
 \end{tikzpicture}\end{figure}
 
-\textbf{Parte 2}
+\paragraph{Parte 2}
 
 A figura sugere a imagem de um cubo do qual um pedaço foi retirado gerando uma superfície plana circular.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{53}.png}
+\noindent\includegraphics[width=175bp]{{53}.png}
 \end{figure}
 
 Isso é possível? Ou seja, é possível retirar um pedaço de um cubo por meio de um único corte, como sugere a figura, gerando uma superfície plana circular? Argumente para justificar a sua resposta ao item anterior a partir da relação entre os pontos os \(A\), \(B\) e \(C\), que, na figura, estão na intersecção da face do cubo e da superfície plana circular.
@@ -1183,7 +1588,7 @@ Isso é possível? Ou seja, é possível retirar um pedaço de um cubo por meio 
 
 
 
-\textbf{Parte 1}
+\paragraph{Parte 1}
 
 Para responder às perguntas, procure imaginar pontos, retas e planos no espaço. Se necessário, use desenhos ou material concreto, tais como folhas de papel, para representar planos, e lápis, canetas ou canudos para representar retas. Lembre-se: pontos são adimensionais, retas unidimensionais, planos bidimensionais e o espaço tridimensional.
 \begin{enumerate}
@@ -1210,7 +1615,7 @@ Explique por que dadas duas retas distintas no espaço, elas necessariamente sã
 
 \end{enumerate}
 
-\textbf{Parte 2}
+\paragraph{Parte 2}
 
 Considere três pontos \(A\), \(B\) e \(C\) no espaço. Suponha que os pontos \(A\), \(B\) e \(C\) não são colineares, isto é, que nenhuma reta contenha todos os três pontos.
 \begin{enumerate}
@@ -1231,7 +1636,7 @@ Em uma folha de papel, faça um desenho que represente quatro pontos não coplan
 
 \end{enumerate}
 
-\textbf{Parte 3}
+\paragraph{Parte 3}
 
 Use \href{https://ggbm.at/ar9et3rv}{este aplicativo} ou folhas de papel para visualizar e responder às perguntas:
 \begin{enumerate}
@@ -1249,7 +1654,7 @@ Em quantas regiões dois planos dividem o espaço?
 
 \end{enumerate}
 
-\textbf{Parte 4}
+\paragraph{Parte 4}
 
 Posições relativas de retas e planos.
 \begin{enumerate}
@@ -1274,7 +1679,9 @@ Em cada um dos casos a seguir diga se a reta \(r\) parece ou não parece perpend
 \noindent\includegraphics[width=450bp]{{54555657}.png}
 \end{figure}
 
-Definição: Dizemos que uma reta é perpendicular a um plano quando existirem duas retas desse plano que sejam concorrentes e perpendiculares a ela.
+\begin{observationtitle}{Definição}
+Dizemos que uma reta é perpendicular a um plano quando existirem duas retas desse plano que sejam concorrentes e perpendiculares a ela.
+\end{observationtitle}
 
 \begin{figure}[H]
 \centering
@@ -1288,7 +1695,6 @@ Observe que nos casos em que a reta \(r\) não é perpendicular ao plano alfa, e
 \begin{task}{agrupando sólidos}
 
 
-
 Descreva três critérios para agrupar os sólidos apresentados nas figuras de modo que a quantidade de diferentes grupos obtidas a partir de cada um deles seja diferente. Qual critério determinou a menor quantidade de grupos?
 
 
@@ -1296,7 +1702,10 @@ Descreva três critérios para agrupar os sólidos apresentados nas figuras de m
 \begin{enumerate}
 \begin{multicols}{4}
 
-\item \text{}\\
+\item
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 currentprojection=orthographic(2,0.5,1/2);
 size(3cm,3cm);
@@ -1318,7 +1727,13 @@ draw((1,0,1) -- (0,0,1));
 draw((0,1,1) -- (0,1,0));
 draw((1,1,1) -- (1,1,0));
 \end{asy}
-\item \text{}\\
+\end{minipage}
+}
+
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(1,2,.5);
@@ -1337,8 +1752,13 @@ draw((0,0,3) -- (2,0,3) -- (2,1,3) -- (0,1,3) -- cycle);
 draw((0,1,0) -- (0,1,3));
 draw((2,1,0) -- (2,1,3));
 \end{asy}
+\end{minipage}
+}
 
-\item \text{}\\
+\item
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(2,0.5,1/2);
@@ -1358,7 +1778,13 @@ draw((0,.5,2) -- (0,1.5,2) -- (1,1.5,2) -- (1,.5,2)-- cycle);
 draw((0,1,0) -- (0,1.5,2) -- (1,1.5,2) -- (1,1,0)-- cycle);
 draw((1,0,0) -- (1,1,0) -- (1,1.5,2) -- (1,.5,2)-- cycle);
 \end{asy}
-\item \text{}\\
+\end{minipage}
+}
+
+\item
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(-1.25,.2,1/2);
@@ -1384,9 +1810,16 @@ draw((-1.03884,2.03884,0) -- (-1.26007,0.64203,0) -- (-1.26007,0.64203,4) -- (-1
 draw(surface((0,0,0) -- (-1.26007,0.64203,0) -- (-1.26007,0.64203,4) -- (0,0,4) -- cycle), azul*80+opacity(0.65));
 draw((0,0,0) -- (-1.26007,0.64203,0) -- (-1.26007,0.64203,4) -- (0,0,4) -- cycle);
 \end{asy}
+\end{minipage}
+}
 \end{multicols}
+
+
 \begin{multicols}{4}
-\item \text{}\\
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(1/2,6,0.5);
@@ -1428,7 +1861,12 @@ draw(surface(f -- F -- A -- a -- cycle), azul*80+opacity(0.65));
 draw((a -- f), dashed);
 draw((A -- F));
 \end{asy}
-\item \text{}\\
+\end{minipage}
+}
+
+
+\item 
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(1/2,6,0.5);
@@ -1446,7 +1884,12 @@ draw(r, black+linewidth(.5));
 draw(surface(circle(c=(0,0,0), r=1, Z)), azul*80+opacity(0.65));
 draw(surface(circle(c=(0,0,3.5), r=1, normal=Z)), azul*80+opacity(0.65));
 \end{asy}
-\item \text{}\\
+\end{minipage}
+
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(2,5,-1);
@@ -1462,7 +1905,13 @@ draw (surface(shift (h * extAlong) * (p)), azul*80+opacity(.5));
 draw (shift (h * extAlong) * (p));
 draw (extrude(reverse (p), h * extAlong), azul*80+opacity (.5));
 \end{asy}
-\item \text{}\\
+\end{minipage}
+}
+
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(2,5,-1);
@@ -1478,9 +1927,15 @@ draw (surface(shift (h * extAlong) * path3 (p)), azul*80+opacity(.5));
 draw (shift (h * extAlong) * path3 (p));
 draw (extrude(reverse (p), h * extAlong), azul*80+opacity (.5));
 \end{asy}
+\end{minipage}
+}
 \end{multicols}
+
 \begin{multicols}{4}
-\item \text{}\\
+\item
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(1/2,2,0.5);
@@ -1504,7 +1959,13 @@ draw(A--b--c--A--d--c);
 draw(b--a--d, dashed);
 draw(a--A, dashed);
 \end{asy}
-\item \text{}\\
+\end{minipage}
+}
+
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(3,10,3);
@@ -1527,7 +1988,13 @@ draw(c -- a);
 draw(a -- A -- b -- c -- A);
 
 \end{asy}
-\item  \text{}\\
+\end{minipage}
+}
+
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(-1.25,.2,1/2);
@@ -1554,7 +2021,13 @@ draw(b -- A, dashed);
 draw(c -- d -- e --a);
 draw(c -- A -- d -- e -- A -- a);
 \end{asy}
-\item \text{}\\
+\end{minipage}
+}
+
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(-1.25,.2,1/2);
@@ -1587,10 +2060,15 @@ draw(d -- e -- f -- a -- b);
 
 draw(d -- A -- e -- f-- A -- a);
 \end{asy}
+\end{minipage}
+}
 \end{multicols}
-\begin{multicols}{4}
 
-\item \text{}\\
+\begin{multicols}{4}
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(1/2,6,0.5);
@@ -1610,7 +2088,13 @@ draw((0,0,3.5) -- (1,0,0));
 draw((0,0,3.5) -- (-1,0,0));
 //draw(surface(circle(c=(0,0,3.5), r=1, normal=Z)), azul*80+opacity(0.65));
 \end{asy}
-\item \text{}\\
+\end{minipage}
+}
+
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(0,7,0.5);
@@ -1626,7 +2110,13 @@ draw (extrude(p, (-1.25,0,3) -- cycle), azul*80+opacity (.5));
 draw ((-1.25,0,3) -- (1,0,0));
 draw ((-1.25,0,3) -- (-1,0,0));
 \end{asy}
-\item \text{}\\
+\end{minipage}
+}
+
+\item 
+\adjustbox{valign=t}
+{
+\begin{minipage}{3cm}
 \begin{asy}
 size(3cm,3cm);
 currentprojection=orthographic(4,7,0.5);
@@ -1639,6 +2129,8 @@ draw (path3 (p));
 draw (surface(path3(p)), azul*80+opacity(.5));
 draw (extrude(path3 (p), (c) -- cycle), azul*80+opacity (.5));
 \end{asy}
+\end{minipage}
+}
 \end{multicols}
 \end{enumerate}
 
@@ -1646,7 +2138,7 @@ draw (extrude(path3 (p), (c) -- cycle), azul*80+opacity (.5));
 \end{task}
 
 
-\arrange{elementos de geometria espacial e volumes}
+\arrange{Elementos de Geometria Espacial}
 \label{\detokenize{GE504-6:organizando-as-ideias-elementos-de-geometria-espacial-e-volumes}}\label{\detokenize{GE504-6::doc}}
 As atividades do início desta seção devem tê-lo levado a reconhecer alguns fatos da geometria espacial que são bastante intuitivos como:
 \begin{itemize}
@@ -1719,20 +2211,22 @@ label ("E", (h), align=NW);
 
 Nesta situação, dizemos que a reta \(AB\) é paralela ao plano \(EFG\).
 
-\textbf{Definição:} Dizemos que um plano é paralelo a uma reta (ou que uma reta é paralela ao plano) quando não possui ponto em comum com a reta, ou seja, quando eles não se intersectam.
+\begin{observationtitle}{Definição}
+Dizemos que um plano é paralelo a uma reta (ou que uma reta é paralela ao plano) quando não possui ponto em comum com a reta, ou seja, quando eles não se intersectam.
+\end{observationtitle}
 
 A reta \(AE\) é perpendicular ao plano \(ABC\). Como \(ABFE\) e \(ADHE\) são quadrados, a reta \(AE\) é perpendicular às retas concorrentes \(AB\) e \(AD\) do plano \(ABC\), logo \(AE\) é perpendicular ao plano \(ABC\).
 
 O primeiro sólido de nossa lista na verdade é uma ampla categoria que inclui quase todos os demais.
 
-\textbf{Cilindro}
+\subsection{Cilindro}
 
 Considere um plano alfa e uma região plana \(R\) (veja a figura). Considere um plano alfa’, paralelo a alfa e uma reta s secante aos planos alfa e alfa’. Por cada ponto \(P\) da figura \(R\), tomamos uma reta paralela a \(s\), que intersecta alfa’ em \(P’\). A união dos pontos \(P’\) assim definidos forma uma figura \(R’\) contida em alfa’. Esta figura é congruente a \(R\). Chamaremos de cilindro de bases \(R\) e \(R’\) à união dos segmentos \(PP’\) como acima.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=200bp]{{75}.png}
+\includegraphics[width=200bp]{{75}.png}
 \end{figure}
 
 Observações:
@@ -1862,14 +2356,18 @@ draw((0,0,0) -- (-1.26007,0.64203,0) -- (-1.26007,0.64203,4) -- (0,0,4) -- cycle
 \end{multicols}
 
 
-\textbf{Cone}
+\subsection{Cone}
 
 Considere uma região \(R\) num plano alfa e um ponto \(V\) não pertencente a alfa. Chamaremos de cone de base \(R\) e vértice \(V\) ao conjunto formado pela união dos segmentos \(PV\) onde \(P\) pertence à região \(R\).
 
 \begin{figure}[H]
 \centering
 
+\ifnum\aluno=1
 \noindent\includegraphics[width=200bp]{{77}.png}
+\else
+\noindent\includegraphics[width=175bp]{{77}.png}
+\fi
 \end{figure}
 
 Observações:
@@ -1915,7 +2413,8 @@ Com os cilindros e cones não será diferente. Usaremos as expressões cilindro 
 \end{observation}
 
 
-\practice{}
+
+\practice{Elementos de Geometria Espacial}
 \label{\detokenize{GE504-7::doc}}\label{\detokenize{GE504-7:praticando}}
 \begin{task}{posições relativas de retas e planos}
 
@@ -1932,7 +2431,7 @@ Se uma reta \(r\) não está contida no plano \(α\) e é perpendicular à reta 
 \item {} 
 Se uma reta \(r\) é paralela ao plano \(α\), então \(r\) é paralela a todas as retas do plano \(α\).
 
-\item {} 
+\item {} Elementos de Geometria Espacial
 Veja as imagens abaixo e reveja as suas respostas nos itens a), b) e c).
 
 \end{enumerate}
@@ -1959,7 +2458,7 @@ Observe que, dado um paralelogramo qualquer, sempre podemos projetar um dos seus
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=100bp]{{82}.png}
+\noindent\includegraphics[width=150bp]{{82}.png}
 \end{figure}
 
 Cortando o paralelepípedo nessa projeção e movendo o triângulo retângulo formado até que a hipotenusa coincida com o lado oposto, obtemos um retângulo.
@@ -1967,13 +2466,13 @@ Cortando o paralelepípedo nessa projeção e movendo o triângulo retângulo fo
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=100bp]{{83}.png}
+\noindent\includegraphics[width=150bp]{{83}.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=100bp]{{84}.png}
+\noindent\includegraphics[width=150bp]{{84}.png}
 \end{figure}
 
 Observe que o retângulo obtido e o paralelogramo original coincidem em base e altura, por tanto, a área de qualquer paralelogramo pode ser calculada da mesma forma: \(A\) \(=\) base \(x\) altura.
@@ -2009,15 +2508,12 @@ Considere um triângulo \(ABC\) qualquer. Trace uma reta paralela a \(BC\) por \
 Como os lados opostos do polígono \(ABCD\) são paralelos, este quadrilátero é um paralelogramo. Observe que os triângulo \(ABC\) e \(ADC\) são congruentes pelo caso \(LLL\) de congruências de triângulos. Assim, as áreas destes dois triângulos são iguais. Portanto,  Área(\(ABC\)) = Área(\(ADC\)) = (base x altura)/2.
 
 Do mesmo modo como fizemos antes, podemos calcular o volume do prisma de base triangular como área da base vezes a altura do prisma com um argumento similar ao usado para calcular a área do triângulo. Basta definir um prisma congruente ao prisma triangular dado que quando posicionado de maneira conveniente transforme o prisma triangular em um prisma cuja base é um paralelogramo. Por um lado, o volume deste novo prisma é o dobro do volume do prisma triangular. Por outro, o volume do novo prisma já foi calculado antes e, sabe-se, que é dado por área da base vezes altura. Conclusão: o volume do prisma de base triangular também é dado por área da base vezes altura. Resumindo em linguagem matemática temos:
-
-V(prisma triangular) = V(prisma paralelogramo)/2 =
-\begin{quote}
-
-(área do paralelogramo) x (altura do prisma)/2 =
-
-(área do paralelogramo/2) x (altura) = (área do triângulo) x (altura).
-\end{quote}
-
+\begin{align*}
+V(\text{prisma triangular}) &= V(\text{prisma paralelogramo})/2 \\
+&=(\text{área do paralelogramo})\times(\text{altura do prisma})/2 \\
+&=(\text{área do paralelogramo}/2)\times(\text{altura}) \\
+&= (\text{área do triângulo})\times(\text{altura}).
+\end{align*}
 \begin{figure}[H]
 \centering
 
@@ -2037,32 +2533,26 @@ Considere um polígono plano qualquer. Observe que sempre é possível decompor 
 \end{figure}
 
 Então a área deste polígono é a soma das áreas dos triângulos formados. Do mesmo modo, dado um prisma de base poligonal qualquer, podemos decompor este prisma em prismas de bases triangulares, cuja soma dos volumes é o volume do prisma original. Isto é,
-\begin{quote}
+\begin{equation*}
+\text{Volume do prisma}= \text{Área da base}\times\text{altura}.
+\end{equation*}
 
-Volume do prisma = Área da base x altura.
-\end{quote}
-
-Por exemplo, se o prisma original tem sua base decomposta em 4 triângulos, digamos \(T1\), \(T2\), \(T3\) e \(T4\) como o da figura, então o volume do prisma original é dado por:
-
-V(prisma hexagonal) =
-\begin{quote}
-
-V(prisma de base \(T1\)) + V(prisma de base \(T2\)) + V(prisma de base \(T3\)) + V(prisma de base \(T4\)) =
-
-A(\(T1\)) x \(h\) + A(\(T2\)) x \(h\) + A(\(T3\)) x \(h\) + A(\(T4\)) x \(h\) =
-
-(A(\(T1\)) + A(\(T2\)) + A(\(T3\)) + A(\(T4\))) x \(h\) =
-
-A(hexágono) x \(h\).
-\end{quote}
+Por exemplo, se o prisma original tem sua base decomposta em 4 triângulos, digamos \(T_1\), \(T_2\), \(T_3\) e \(T_4\) como o da figura, então o volume do prisma original é dado por:
+\begin{align*}
+V(\text{prisma hexagonal})&=V(\text{prisma de base \(T_1\)}) + V(\text{prisma de base \(T_2\)}) \\ 
+&+V(\text{prisma de base \(T_3\)}) + V(\text{prisma de base \(T_4\)})\\
+&=A(T_1)\times h + A(T_2) \times h + A(T_3) \times h + A(T_4) \times h\\
+&=(A(T_1) + A(T_2) + A(T_3) + A(T_4)) \times h\\
+&=A(\text{hexágono}) \times h.
+\end{align*}
 \end{reflection}
 
 \begin{knowledge}{}
 
 Como qualquer cilindro reto pode ser tão bem aproximado quanto se deseje por prismas, o volume de qualquer cilindro pode ser calculado por meio da expressão
-
-Volume = (Área da base) x altura.
-
+\begin{equation*}
+\text{Volume}=(\text{Área da base})\times\text{altura}.
+\end{equation*}
 \begin{figure}[H]
 \centering
 
@@ -2072,23 +2562,237 @@ Volume = (Área da base) x altura.
 Na Seção Princípio de Cavalieri, você verá uma justificativa para esta expressão no caso em que a base é um círculo e que esta mesma expressão serve para calcular o volume de qualquer cilindro, seja ele reto ou oblíquo.
 \end{knowledge}
 
+\clearpage
+\def\currentcolor{session2}
+\begin{objectives}{Um decímetro cúbico é igual a um litro e Secções no cubo}
+{
+\begin{enumerate}\setcounter{enumi}{10}
+\item Reconhecer (identificar e nomear) elementos básicos da geometria espacial que são necessários para volumes e relacioná-los entre eles (e.g., posições relativas de planos (ver o que é realmente necessário aqui)).  (vértices de sólidos, planos paralelos, perpendicularidade entre reta plano, distância de ponto a plano e retas reversas no espaço)
+
+\item Entender (analisar, segundo Van Hiele) os sólidos clássicos por meio de suas propriedades e não apenas por associação e semelhança (visualização, segundo Van Hiele).
+
+\item Reconhecer um objeto sólido a partir de suas projeções ou cortes.
+
+\item Entender a relação entre a planificação de um objeto e o sólido gerado por ela e vice-versa.
+\end{enumerate}
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Um decímetro cúbico é igual a um litro e Secções no cubo}
+{
+Nesta atividade pretende-se desenvolver a capacidade de transferência dos estudantes entre as diversas representações planas de sólidos no espaço e os próprios objetos. Assim, materiais para a construção de objetos em três dimensões são incluídos como suporte às atividades nas quais se indagam propriedades dos objetos.
+
+Diversos elementos dos sólidos serão destacados e identificados em cada uma das diversas representações com a intenção de desenvolver no estudante uma familiaridade com os objetos sólidos e suas representações projetivas, o que permitirá que ele reconheça e descreva os elementos corretamente e resolva de forma correta problemas enunciados na geometria espacial.
+
+Links relacionados: \url{https://www.korthalsaltes.com/}
+}{1}{2}
+\end{sugestions}
+\begin{sugestions}{Um decímetro cúbico é igual a um litro e Secções no cubo}
+{
+\textbf{Representação de objetos:} textual, plana (desenho projetivo), espacial.
+
+\textbf{Operações construtivas:} pĺanificação, decomposição em faces.
+
+\textbf{Outras operações:} cortes, rotação.
+
+\textbf{Materiais necessários:} Para esta atividade será necessário um material que permita preencher volumes, com a finalidade de medir a capacidade de sólidos geométricos utilizando dito material. Os modelos que serão utilizados para medir as suas capacidades estão abertos. No caso de escolher trabalhar com água, eles precisam ser construídos em material plástico (ou em material plastificado reciclado, e.g. tetra-brick).
+\begin{itemize}
+\item {} 
+Fluido: Água, bolinhas de isopor, areia, arroz, feijão, lentilha, fubá, etc. No pior dos casos: bolinhas de gude, massinha (usar as formas como moldes).
+
+\item {} 
+Recipientes com escalas em ml.
+
+\item {} 
+Planificações de sólidos com a escala adequada na qual se quer a construção.
+
+\item {} 
+Semi-esfera de isopor + Cone e Cilindro (ambos do mesmo diâmetro e altura igual ao raio do interior da semi-esfera).
+
+\item {} 
+Régua graduada em cm.
+
+\item {} 
+Tesoura.
+\end{itemize}
+}{0}{0}
+\end{sugestions}
+\clearmargin
+\clearmargin
+\clearmargin
+\begin{objectives}{Cilindro de GNV}
+{
+OE16. Aplicar a decomposição de um sólido dado em sólidos de volume conhecido para calcular seu volume, propondo suas próprias decomposições e incluindo a subtração.
+
+OE17. Analisar o erro de diferentes procedimentos de aproximação por meio do conceito de cota inferior e cota superior.
+
+OE9 - (A) Volume \& outras grandezas (Praticando) - Aplicar relações entre (área e) volume e outras grandezas em situações cotidiana.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Cilindro de GNV}
+{
+\textbf{Organização em sala de aula:} Especialmente se sua turma possuir mais de 20 estudantes, recomenda-se que os estudantes estejam dispostos em grupos de 4 ou 5 para que argumentem uns com os outros. Recomenda-se o estabelecimento de uma dinâmica de discussão no grupo. O fechamento da atividade está no Para refletir, é importante discuti-lo com os estudantes.
+
+\textbf{Sugestões gerais:}
+
+PARTE I. Esta parte da atividade tem como objetivo o cálculo aproximado de volume por inclusão de um sólido em outro. Assim pretende-se que os estudantes usem recursos diversos para aproximarem o melhor que puderem o volume de um objeto do mundo real, obtendo também uma margem de erro. Isso costuma ter muito mais utilidade em situações reais do que o cálculo de volumes exatos.
+
+Ao final desta etapa é importante que o estudante tenha reconhecido que a discussão envolve três medidas: a capacidade do tanque, o volume ocupado pelo tanque e o volume do carro ou do porta-malas do carro..
+
+PARTE II. Esta parte não trata realmente de volumes, você pode prescindir dela para o aprendizado deste tema. O objetivo desta parte é conectar o tema combustíveis com sustentabilidade e economia. A parte usa raciocínio lógico, interpretação de texto e domínio de razões e proporções. Por outro lado, é algo que pode despertar o interesse dos estudantes pela matemática por estar diretamente relacionada a situações com as quais ele ou pessoas próximas a ele podem se deparar.
+
+\textbf{Atividade relacionada:} Atividade: GNV, na Seção: o conceito de volume.
+}{1}{1}
+\end{sugestions}
+\begin{sugestions}{Cilindro de GNV}
+{
+\textbf{Links relacionados:} Sobre queima do metano, da gasolina e do etanol:
+\begin{itemize}
+\item {} 
+\url{http://www.usp.br/qambiental/combustao\_energiaExperimento.html}
+
+\item {} 
+\url{https://www.educabras.com/enem/materia/quimica/aulas/reacao\_de\_combustao\_combustao\_completa\_e\_incompleta}
+
+\item {} 
+\url{http://www.fem.unicamp.br/~em672/GERVAP1.pdf}
+
+\item {} 
+\url{http://www.usp.br/qambiental/combustao\_energiaExperimento.html}
+
+\item {} 
+\url{https://www.infoescola.com/quimica/gas-natural-veicular-gnv/}
+
+\item {} 
+\url{http://ecoscore.be/en/info/ecoscore/co2}
+
+\end{itemize}
+
+\textbf{Materiais necessários:} Para o desenvolvimento desta atividade o aluno pode precisar das fórmulas para o cálculo do volume do cilindro, da esfera e do cone. Se seus alunos ainda não conhecem tais fórmulas, recomendamos que você a escreva no quadro ou permita que os estudantes busquem na internet em seus celulares.
+
+Volume do cilindro = Área da base x altura.
+
+Volume da esfera = (4/3) pi raio\(\sp{\text{3}}\)
+
+Volume do cone = ( Área da base x altura )/ 3
+
+Isto pode reforçar que o conhecimento da fórmula não é o foco. Os estudantes podem precisar de ajuda no item b) para determinar onde termina o cilindro do tanque, estimule o uso da régua e de proporções, tome cuidado para não dar dicas demais e tornar a atividade uma mera aplicação de fórmulas.
+}{0}{1}
+\end{sugestions}
+\begin{answer}{Cilindro de GNV}
+{
+\paragraph{Parte I}  
+Usando uma régua para comparar a largura da imagem do tanque (dimensão de $35$ cm) com a ponta, parte em que ele deixa de ter a forma de um cilindro, vemos que a ponta mede aproximadamente metade, portanto, aproximadamente $17{,}5$ cm em cada ponta. Então o volume do tanque é aproximadamente o volume de um cilindro de altura $70$ cm e raio $17{,}5$ cm. Uma expressão para o volume do cilindro é \(\pi r^2 h\), isto é aproximadamente $0{,}067314$ m\(\sp{3}\) o que corresponde a $67{,}314$ litros.
+
+Observe que a escolha para a altura do cilindro poderia ser qualquer valor entre $85$ e $50$ cm (alturas aproximadas do menor cilindro que contém o tanque e do maior cilindro que está contido no tanque).
+
+FIGURA
+
+O tanque contém um cilindro \(C_1\) de altura \(h_1 = 50\text{ cm}\) e raio da base $17{,}5$ cm, ou seja, o volume do tanque é maior que o volume deste cilindro \(C_1\). Por outro lado, o tanque cabe (está contido) em um cilindro \(C_2\) de altura \(h_2 = 85\text{ cm}\) e raio da base \(17{,}5\) cm, de onde concluímos que o volume do tanque é menor que o volume de \(C_2\). Finalmente o volume do tanque certamente está contido no intervalo aberto 
+$]Vol(C_1), Vol(C_2)[$.
+
+FIGURA
+}
+{1}
+\end{answer}
+
+\begin{answer}{Cilindro de GNV}
+{
+Efetuando os cálculos obtemos:
+\begin{equation*}
+\begin{split}Vol(C_1) = \pi \cdot r^2 \cdot h_1 = \pi\cdot0{,}175^2\cdot 0{,}5 = 0{,}0153125\cdot\pi \approx 0{,}048105627\text{ m}^3
+\end{split}
+\end{equation*}
+o que corresponde a $48{,}106$ litros, aproximadamente. Procedendo de maneira análoga com o cilindro \(C_2\), obtemos \(Vol(C_2) = \pi\cdot r^2 \cdot h_2 = 0{,}0263125 \cdot \pi \approx 0{,}0817796\text{ m}^3 \approx 81,780\) litros.
+
+Finalmente, o volume $Vol(T)$ ocupado pelo tanque está nos intervalos $0{,}048106\text{ m}^3 < Vol(T) < 0{,}081780\text{ m}^3$ ou $48{,}106\text{ litros} < Vol(T) < 81{,}780$ litros.
+
+Uma possibilidade de aproximação para o volume do tanque é considerá-lo como a composição de dois hemisférios com um cilindro como na figura a seguir.
+
+FIGURA
+
+Então teremos \(Vol(T) \approx Vol(C_1) + Vol\) (bola de raio $17{,}5$ cm). O volume do cilindro \(C_1\) já foi calculado no item anterior e após uma busca na internet ou na seção X deste capítulo, o estudante pode descobrir que o volume de uma bola de raio r é \((4 \cdot \pi \cdot r^3)/3\). Efetuando os cálculos obtemos
+\begin{align*}
+Vol(T) & \approx Vol(C_1) + Vol(\text{bola de raio } 17{,}5\text{ cm}) \\
+& \approx 0{,}048106 + (4 \pi \cdot 0{,}175^3)/3 \approx 0{,}070555293\text{ m}^3
+\end{align*}
+o que corresponde a aproximadamente $70{,}555$ litros.
+
+Pode causar estranhamento que o $15$ m$^3$ de GNV caibam em um tanque que ocupa um volume aproximado de $0{,}07$ m\(\sp{\text{3}}\). Mas como discutimos na Parte I, o GNV é armazenado no tanque sob pressão e por isso seu volume é reduzido.
+
+\paragraph{Parte II}
+
+Para decidir que combustível é mais vantajoso, precisamos saber qual anda mais quilômetros com a mesma quantia em dinheiro, isto é, basta obter quantos quilômetros o carro faz por real. Seja G preço do litro da gasolina obtida no link e E o preço do litro do etanol, para a gasolina temos
+
+$14$ km/Litro  dividido por $G$ litros/R\$, obtemos $\frac{14}{G}$ km/R\$.
+
+O cálculo para o rendimento do etanol é análogo. No Rio de Janeiro em 13 de setembro de 2018 obtivemos os seguintes preços $G = \text{R\$ }4,992$/litro e $E = \text{R\$ }3,338$/litro, fazendo as contas obtemos um rendimento de $2{,}804$ km/R\$ para a gasolina e $2{,}996$ km/R\$ para o etanol de modo que o etanol é mais vantajoso que a gasolina, nas condições dadas porque anda mais quilômetros com $1$ real.
+
+O rendimento do etanol por litro de combustível é $10$ km/L. O rendimento da gasolina é de $14$ km/L. Assim, o rendimento do etanol é $10/14 \approx 0{,}7143$ o rendimento da gasolina. Logo se o preço do etanol estiver até $71{,}43\%$ do valor da gasolina, ele será mais vantajoso, caso contrário a gasolina será mais vantajosa. O valor $70\%$ é uma aproximação. Deve-se ao fato de que os rendimentos dependem dos veículos considerados.
+
+Digamos que você rode $x$ quilômetros por mês. Vamos calcular o custo mensal com combustível usando etanol e subtrair do custo mensal com combustível usando GNV e efetuar a diferença, esta diferença é a economia mensal em função do número $x$ de quilômetros rodados num mês. Igualando a expressão obtida a 420 obtemos o número mínimo de quilômetros que precisaremos dirigir num mês para que a economia com o combustível seja igual à prestação. Uma vez que obtivermos $x$, basta dividir por 30 para obter a média diária de quilômetros necessários para que o GNV compense nas condições do problema. Vamos às contas.
+
+Se $R_\text{etanol}$ é o número de quilômetros rodados com $1$ real, isto é, o  rendimentos em km/R\$ do etanol obtido no item a). Rodando $x$ km, serão gastos
+\begin{equation*}
+\begin{split}R_\text{etanol}&\text{ km} \longrightarrow 1\text{ real}\\
+x&\text{ km} \longrightarrow \text{? reais}
+\end{split}
+\end{equation*}
+Obtemos um custo de $x/R_\text{etanol}$ reais no mês. Analogamente, o custo mensal com GNV será de$ x/R_\text{gnv}$ reais e a economia será dada pela diferença do custo com etanol pelo custo com GNV em um mês:
+
+$$x/R_\text{etanol} - x/R_\text{gnv}$$
+
+Igualando este valor a $420$ obtemos o valor de $x$ para que a economia seja igual à prestação da instalação do kit gás.
+
+Usando os valores do Rio de Janeiro como no item \titem{a)} obtemos
+
+$x/2{,}996 - x/5{,}797 = 420$, acarreta em $x\approx2604{,}24$ km, isto é, aproximadamente $87$ quilômetros por dia, em média.
+
+Gasolina: considerando que o veículo tenha um rendimento de $14$ km/L, como são $2392$ gramas de CO$_2$ por litro de gasolina, obtemos
+\begin{equation*}
+2392/14 \text{ (gramas de CO\(_2\)}/\text{L})/(\text{km}/\text{L})\approx170{,}86\text{ gramas de CO\(_2\)/km}.
+\end{equation*}
+GNV: considerando o rendimento de $16$ km/m\(\sp{3}\) de GNV, como são $2252$ gramas de CO\(_2\)/kg de GNV, precisamos da emissão de CO\(_2\) por metro cúbico de GNV. Para isso multiplicamos pela densidade do GNV
+\begin{align*}
+&2252\text{ gramas de CO\(_2\)/kg de GNV} \times 0{,}8\text{ kg/m\(\sp{3}\)} =\\
+&2252\times0{,}8\text{ (gramas de CO\(_2\)/kg de GNV)} \times \text{ (kg de GNV/m\(\sp{3}\) de GNV)}  =\\
+&1801{,}6\text{ gramas de CO\(_2\)/m\(\sp{3}\) de GNV}.
+\end{align*}
+Finalmente, dividimos para obter a emissão de CO\(_2\) por m\(\sp{3}\) de GNV.
+\begin{equation*}
+1801{,}6/16\text{ (gramas de CO\(_2\)/L)/(km/L)} = 112{,}6\text{ gramas de CO\(_2\)/km.}
+\end{equation*}
+Conclusão, o GNV emite $112{,}6/170{,}86=65{,}9\%$ do CO$_2$ emitido pela gasolina a cada.
+}{9}
+\end{answer}
+\begin{objectives}{Aproximando pi}
+{
+OE17. Analisar o erro de diferentes procedimentos de aproximação por meio do conceito de cota inferior e cota superior.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Aproximando pi}
+{
+\textbf{Organização em sala de aula:} Especialmente se sua turma possuir mais de 20 estudantes, recomenda-se que os estudantes estejam dispostos em grupos de 4 ou 5 para que argumentem uns com os outros. Recomenda-se o estabelecimento de uma dinâmica de discussão no grupo. O fechamento da atividade está no Para refletir, é importante discutí-lo com os estudantes.
+
+\textbf{Sugestões gerais:} Nessa atividade o estudante estará reforçando a idéia de aproximar a área de uma figura, obtendo cotas inferiores e superiores para o valor exato. Também será nessa atividade que daremos um sabor da seção seguinte, em que aproximações sucessivamente melhores levam a um resultado exato no limite.
+A qualidade das aproximações não é o foco central dessa atividade e sim o procedimento empregado.
+
+\textbf{Materiais utilizados:} Papel, caneta e régua. Também é recomendado (mas não necessário) o uso de papel milimetrado e um compasso.
+}{1}{1}
+\end{sugestions}
+
 \begin{task}{um decímetro cúbico é igual a um litro}
 
+Construa (em material resistente) um cubo de $10$ cm de lado, quer dizer $1$ dm de aresta, este cubo mede \(1\) dm$^3$ = $1.000$ cm$^3$.
 
-
-Construa (em material resistente) um cubo de 10cm de lado, quer dizer 1dm de aresta, este cubo mede \(1dm^3\) = \(1.000cm^3\).
-\begin{quote}
-
-(\emph{Material:} planificação de cubo de 10cm de lado)
-\end{quote}
+(\emph{Material:} planificação de cubo de $10$ cm de lado)
 \begin{enumerate}
 \item {} 
 Preencha ele com o fluido, repasse o fluido para o seu recipiente graduado em ml ou litros. Qual é a capacidade do cubo?
 
 \item {} 
-Quantos litros tem em 1m\(\sp{\text{3}}\)?
+Quantos litros tem em 1 m\super{$3$}?
 
-1m\(\sp{\text{3}}\) = (1 m)x(1 m)x(1 m) = (\_\_\_ dm)x(\_\_\_ dm)x(\_\_\_ dm) = \_\_\_\_\_ dm\(\sp{\text{3}}\) = \_\_\_\_\_ L
+$1$ m\super{$3$} = ($1$\text{ m})$ \times$ ($1$\text{ m}) $\times$ ($1$\text{ m}) = ( \rule{3em}{.5pt} dm) $\times$ ( \rule{3em}{.5pt} dm) $\times$ ( \rule{3em}{.5pt} dm) = \rule{3em}{.5pt} dm\super{$3$} = \rule{3em}{.5pt} L
 
 \end{enumerate}
 \end{task}
@@ -2107,7 +2811,7 @@ Em cada um dos cubos montados por você, reproduza os desenhos dos modelos a seg
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{{93}.png}
+\noindent\includegraphics[width=350bp]{{93}.png}
 \end{figure}
 \begin{enumerate}
 \item {} 
@@ -2195,7 +2899,7 @@ Os retângulos a seguir são planificações da região lateral de um cilindro c
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture} [every path/.style={very thin}]
+\begin{tikzpicture}
 \begin{scope}
 \draw (0,0) rectangle (5,3.5) node [below left, xshift=-5 cm,\currentcolor] {i)};;
 \draw (0,0) -- (5,3.5);
@@ -2232,11 +2936,9 @@ Os retângulos a seguir são planificações da região lateral de um cilindro c
 
 \begin{task}{cilindro de GNV}
 
-
-
 Na Atividade: GNV discutimos a capacidade do tanque de GNV e a compressibilidade do gás nele colocado. Agora vamos aproveitar esta situação para falar do volume ocupado pelo tanque.
 
-\textbf{Parte 1} Aproximação: cota inferior e cota superior
+\paragraph{Parte 1 - Aproximação: cota inferior e cota superior}
 
 \begin{figure}[H]
 \centering
@@ -2245,7 +2947,7 @@ Na Atividade: GNV discutimos a capacidade do tanque de GNV e a compressibilidade
 \end{figure}
 \begin{enumerate}
 \item {} 
-Aproxime o volume ocupado (em metros cúbicos), por um tanque de GNV de capacidade \(15,5m^3\) como o da figura.
+Aproxime o volume ocupado (em metros cúbicos), por um tanque de GNV de capacidade \(15{,}5\) m$^3$ como o da figura.
 
 \item {} 
 Encontre o menor número que você conseguir que seja certamente maior do que o volume ocupado pelo tanque de GNV. Apresente sua resposta em metros cúbicos e em litros. Use os recursos que julgar conveniente.
@@ -2260,13 +2962,13 @@ Encontre o menor número que você conseguir que seja certamente maior que o vol
 Crie um modelo aproximado do tanque usando figuras conhecidas, busque as fórmulas para o cálculo do volume destas figuras e obtenha uma nova aproximação para o volume do tanque.
 
 \item {} 
-Discuta o significado da diferença entre as suas aproximações para o volume do tanque e a capacidade especificada pelo vendedor, de \(15,5m^3\).
+Discuta o significado da diferença entre as suas aproximações para o volume do tanque e a capacidade especificada pelo vendedor, de \(15{,}5\) m$^3$.
 
 \end{enumerate}
 
-\textbf{Parte 2}
+\paragraph{Parte 2}
 
-Dentre os carros populares, os mais econômicos na cidade fazem \(14 km / l\) usando gasolina e \(10 Km / l\) usando etanol como combustível (Veja a edição de 2018 do \href{http://www.inmetro.gov.br/consumidor/pbe/veiculos\_leves\_2018.pdf}{Programa Brasileiro de Etiquetagem Veicular} do INMETRO).
+Dentre os carros populares, os mais econômicos na cidade fazem \(14\) km/L usando gasolina e \(10\) km/L usando etanol como combustível (Veja a edição de 2018 do \href{http://www.inmetro.gov.br/consumidor/pbe/veiculos\_leves\_2018.pdf}{Programa Brasileiro de Etiquetagem Veicular} do INMETRO).
 \begin{enumerate}
 \item {} 
 Verifique se é financeiramente mais vantajoso usar gasolina ou etanol com os preços atuais no seu município. Use o preço médio para este cálculo*.
@@ -2277,26 +2979,24 @@ Os preços atuais do GNV, da Gasolina e do Etanol no seu município estão no \h
 \end{itemize}
 
 \item {} 
-É corrente entre usuários de carros com motor FLEX utilizar a regra dos 70\% para saber se é mais vantajoso usar etanol ou gasolina (Veja por exemplo: \href{http://www.calculoexato.net/calculadora-flex-gasolina-x-alcool/}{calculadora}). A regra funciona assim: se o preço do etanol for até 70\% do preço da gasolina, deve-se comprar etanol, acima desse percentual deve-se comprar gasolina. É claro que o valor 70\% é aproximado. Explique como ela foi obtida.
+É corrente entre usuários de carros com motor FLEX utilizar a regra dos $70\%$ para saber se é mais vantajoso usar etanol ou gasolina (Veja por exemplo: \href{http://www.calculoexato.net/calculadora-flex-gasolina-x-alcool/}{calculadora}). A regra funciona assim: se o preço do etanol for até $70\%$ do preço da gasolina, deve-se comprar etanol, acima desse percentual deve-se comprar gasolina. É claro que o valor $70\%$ é aproximado. Explique como ela foi obtida.
 
 \end{enumerate}
 
-Estes mesmos veículos fariam aproximadamente 16 Km / m\(\sp{\text{3}}\) de GNV. Digamos que você saiba que o serviço de instalação pode ser financiado em até 10 vezes de R\$ 420,00 para o seu carro.
+Estes mesmos veículos fariam aproximadamente 16 km/m\(\sp{\text{3}}\) de GNV. Digamos que você saiba que o serviço de instalação pode ser financiado em até 10 vezes de R\$ $420{,}00$ para o seu carro.
 \begin{enumerate}
 \item {} 
 Quantos quilômetros você precisaria rodar em média por dia para que você consiga pagar a instalação com a economia de combustível proveniente do uso do GNV. Use o preço médio para este cálculo?
 
 \item {} 
-Os motores dos veículos a base destes combustíveis fósseis, como GNV, gasolina e etanol funcionam a base de combustão. Isto é, consomem oxigênio e liberam gás carbônico e água. Um motor regulado libera aproximadamente 2392 gramas de \(CO_2\) por de gasolina e 2252 gramas de CO\_2 por quilograma de GNV. Qual dos dois combustíveis emite menos CO\_2 por cada quilômetro rodado? Considerando que a densidade do GNV no motor do veículo é de aproximadamente 0,8 Kg / m\(\sp{\text{3}}\).
+Os motores dos veículos a base destes combustíveis fósseis, como GNV, gasolina e etanol funcionam a base de combustão. Isto é, consomem oxigênio e liberam gás carbônico e água. Um motor regulado libera aproximadamente $2392$ gramas de CO$_2$ por de gasolina e $2252$ gramas de CO$_2$ por quilograma de GNV. Qual dos dois combustíveis emite menos CO$_2$ por cada quilômetro rodado? Considerando que a densidade do GNV no motor do veículo é de aproximadamente $0{,}8$ kg/m\(\sp{\text{3}}\).
 
 \end{enumerate}
 \end{task}
 
 \begin{task}{aproximando pi}
 
-
-
-\textbf{Parte 1}
+\paragraph{Parte 1}
 
 Existe uma constante muito importante na matemática chamada  \(\pi\) (lê-se pi), que aparece nas fórmulas do comprimento da circunferência, área do círculo, volume da esfera, funções trigonométricas e muitas outras.
 
@@ -2325,7 +3025,7 @@ Qual a medida da área de um quadradinho do quadriculado que você fez?
 Com essa figura, pinte todos os quadradinhos que estão inteiramente contidos no círculo. Qual é a área da região colorida? Agora pinte todos os quadradinhos que têm intersecção não vazia com o círculo. Qual é a área da nova região colorida. Com esses cálculos é possível concluir que a área do círculo está entre que números? Dê uma estimativa para a área do círculo.
 
 \item {} 
-Sabendo que a fórmula da área do círculo é \(\pi.r^2\) e usando os cálculos realizados no item anterior, apresente estimativas para \(\pi\), uma menor e outra maior do que o valor de \(\pi\). Algo como: “\(\pi\) é maior do que \_\_\_\_  e menor do que \_\_\_\_”.
+Sabendo que a fórmula da área do círculo é \(\pi.r^2\) e usando os cálculos realizados no item anterior, apresente estimativas para \(\pi\), uma menor e outra maior do que o valor de \(\pi\). Algo como: “\(\pi\) é maior do que \rule{3em}{.5pt}  e menor do que \rule{3em}{.5pt}”.
 
 \item {} 
 Compare os resultados obtidos neste experimento com o valor de \(\pi\) que você conhece.
@@ -2335,7 +3035,7 @@ Que alteração poderia ser feita no processo desse experimento para melhorar a 
 
 \end{enumerate}
 
-\textbf{Parte 2}
+\paragraph{Parte 2}
 
 A imprecisão do método utilizado na Parte 1 está na limitação do desenho, que, especialmente à medida que os quadradinhos diminuem, dificulta a decisão sobre alguns quadradinhos terem ou não interseção com o círculo. Desta vez, usaremos outro procedimento para aproximar o valor de \(\pi\), sem incorrer neste tipo de imprecisão.
 \begin{enumerate}
@@ -2367,9 +3067,82 @@ Faça o mesmo agora considerando um hexágono circunscrito ao círculo unitário
 
 \end{enumerate}
 
-Outra forma de estimar el valor de \(\pi\) usando áreas pode ser encontrada no \href{https://www.geogebra.org/m/v2aqzkce}{aplicativo Geogebra: Aproximação de Pi}
+Outra forma de estimar o valor de \(\pi\) usando áreas pode ser encontrada no \href{https://www.geogebra.org/m/v2aqzkce}{aplicativo Geogebra: Aproximação de Pi}
 \end{task}
 
+\cleardoublepage
+\def\currentcolor{session1}
+\begin{objectives}{Princípio de Cavalieri em 2D}
+{
+OE23. Entender o Princípio de Cavalieri.
+
+\textbf{Conceitos abordados:} Área de figuras planas, Princípio de Cavalieri
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Princípio de Cavalieri em 2D}
+{
+\textbf{Organização em sala de aula:} O professor pode levar um projetor de multimídia para apresentar os aplicativos ou pode permitir que os estudantes manipulem os aplicativos em seus telefones celulares ou computadores.
+
+\textbf{Materiais necessários:} Projetor de multimídia e computador com acesso à internet (o professor pode baixar as aplicações antes da aula e usar offline durante a aula) OU telefones celulares dos estudantes com conexão com a internet OU computadores com conexão com a internet.
+
+\textbf{Links relacionados:} Aplicativos do GeoGebra utilizados na atividade \url{https://ggbm.at/bxrxatwv}, \url{https://ggbm.at/gkh7g4y5} e \url{https://ggbm.at/rqpdcc33}
+}{0}{1}
+\end{sugestions}
+\begin{objectives}{Distância percorrida dada a velocidade instantânea}
+{
+OE22. Entender que refinamentos no processo de aproximação podem levar a erros cada vez menores.
+
+OE23. Entender o Princípio de Cavalieri.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Distância percorrida dada a velocidade instantânea}
+{
+\textbf{Organização em sala de aula:} Manter os estudantes em grupos pode facilitar o controle do professor sobre o caminho da atividade e permitir que eles discutam suas estratégias de solução com outros estudantes.
+
+\textbf{Sugestões gerais:} Esteja atento às estratégias dos estudantes durante o desenvolvimento da atividade para não permitir que os estudantes se afastem demais dos objetivos propostos e, especialmente, que atinjam os objetivos esperados.
+
+Cuidado para não se antecipar às dificuldades dos estudantes e transformar a atividade em mero exercício de calcule. Deixe os estudantes testarem as suas estratégias e discutirem seus métodos. Valorize a diversidade de ideias.
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{objectives}{Volume de concreto de uma barragem}
+{
+\textbf{Objetivos específicos:}
+
+OE22. Entender que refinamentos no processo de aproximação podem levar a erros cada vez menores.
+
+\textbf{Conceitos abordados:} Volume, logaritmos, aproximações sucessivas.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Volume de concreto de uma barragem}
+{
+\textbf{Organização em sala de aula:} Recomenda-se que os estudantes estejam em pequenos grupos para que discutam as suas tentativas com outros estudantes.
+
+\textbf{Dificuldades previstas:} O item a) não trata de volume, antes trata de funções exponencial e logaritmo. Caso você prefira saltar esta parte, dê a resposta aos seus estudantes.
+
+\textbf{Sugestões gerais:} No enunciado não é indicada uma forma para que os estudantes realizem a aproximação. Estimule que eles reflitam sobre soluções diversas. Mas ao final recomenda-se que você apresente a solução deste aplicativo com um projetor.
+
+A observação final no texto da atividade serve para que os estudantes busquem cotas superiores (e não inferiores) para o volume da barragem.
+
+\textbf{Enriquecimento da discussão:} As ideias desta e da atividade anterior são aquelas que servirão de pano de fundo para a noção de integral que os estudantes que continuarem seus estudos na área de exatas verão. No aplicativo colocamos o símbolo de integral, embora ele seja desnecessário para ajudar a despertar a curiosidade do estudante e, eventualmente, criar a oportunidade do professor discutir temas mais avançados com a turma.
+
+\textbf{Links relacionados:} Versão digital desta atividade \url{https://ggbm.at/nxtbehpa}.
+
+\textbf{Materiais necessários:} Para o item a) é necessário calculadora científica para calcular exponencial e logaritmos. Mas você pode deixar os estudantes usarem seus celulares ou mesmo apresentar para eles os valores necessários.
+}{1}{2}
+\end{sugestions}
+\begin{answer}{Volume de concreto de uma barragem}
+{
+\begin{enumerate}
+\item {} 
+Seja \(f: (0, \infty) \to \mathbb{R}\), a função procurada. Como ela é do tipo exponencial, podemos escrever \(f(z) = c \cdot a^z\). Sabendo que \(f(0) = 16\), obtemos \(c = 16\). Como \(f(24) = 4,67\), temos \(4,67 = 16 \cdot a^z\). Tomando o logaritmo natural em ambos os lados obtemos \(\ln 4,67 = \ln 16 + 24 \ln a\) e, portanto, \(\ln a = (\ln 4,67 - \ln 16)/24 \approx  -0,0513\), elevando ambos os membros a  \(e\) , obtemos \(a \approx 0,95\). Portanto,  \(f(z) = 16 \cdot 0,95^z\).
+
+\item {} 
+Como não pode faltar concreto, é melhor procurar uma cota superior. Um paralelepípedo de lados \(92m \cdot 16m x 24m\) certamente tem volume superior ao da barragem e seu volume é dado por \(92 \cdot 16 \cdot 24m^3 = 35,328m^3\).
+
+\end{enumerate}
+}{0}
+\end{answer}
 
 \explore{Princípio de Cavalieri}
 \label{\detokenize{GE504-8:explorando-principio-de-cavalieri}}\label{\detokenize{GE504-8::doc}}
@@ -2397,7 +3170,7 @@ A velocidade de um veículo em metros por segundo no intervalo de tempo {[}1,4{]
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=1.5, every node/.style={scale=1.5}]
+\begin{tikzpicture}[scale=1, every node/.style={scale=1.5}]
 
 \draw [->] (-.1,0) -- (5.5,0) node [above left, scale=0.6] {$t$};
 \draw [->] (0,-.1) -- (0,5.5) node [below right, scale=0.6] {$v$};
@@ -2412,13 +3185,8 @@ A velocidade de um veículo em metros por segundo no intervalo de tempo {[}1,4{]
 
 
 
-\end{tikzpicture}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\begin{tikzpicture}[scale=1.5, every node/.style={scale=1.5}]
+\end{tikzpicture}\hspace{5em}
+\begin{tikzpicture}[scale=1, every node/.style={scale=1.5}]
 
 \fill [\currentcolor!50, opacity=0.3, domain =1:4, variable=\x] (1,0) -- plot  (\x,{(\x)^2 -4*\x+5}) -- (4,0) -- cycle;
 
@@ -2500,7 +3268,8 @@ A imagem apresenta duas retas tracejadas paralelas, um retângulo (à esquerda),
 
 As áreas dos dois quadriláteros são iguais pois ambos são paralelogramos de mesma base e mesma altura. Como você já deve imaginar da discussão as atividades iniciais desta seção a área da terceira região também coincide com as duas anteriores. Para esta e outras situações usamos o Princípio de Cavalieri.
 
-\textbf{Princípio de Cavalieri (versão do plano):} Suponha que duas regiões em um plano estão compreendidas entre duas retas paralelas. Se toda reta paralela a essas duas retas intersecta as regiões em segmentos de comprimentos iguais, então as duas regiões têm áreas iguais.
+\begin{observationtitle}{Princípio de Cavalieri (versão do plano):} Suponha que duas regiões em um plano estão compreendidas entre duas retas paralelas. Se toda reta paralela a essas duas retas intersecta as regiões em segmentos de comprimentos iguais, então as duas regiões têm áreas iguais.
+\end{observationtitle}
 
 A versão tridimensional é inteiramente análoga, mas trata das áreas das seções e volumes dos sólidos onde a versão plana trata de comprimentos das seções e áreas das regiões.
 
@@ -2509,36 +3278,106 @@ Todos concordamos que pilhas de formas diferentes formadas com as mesmas peças,
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{107}.png}
+\noindent\includegraphics[width=300bp]{{107}.png}
 \end{figure}
 
-\textbf{Princípio de Cavalieri (versão do espaço):} Suponha que dois sólidos no espaço estão compreendidos entre planos paralelos. Se todo plano paralelo a estes dois planos intersectar os sólidos em regiões de áreas iguais, então os dois sólidos têm volumes iguais.
+\begin{observationtitle}{Princípio de Cavalieri (versão do espaço):} Suponha que dois sólidos no espaço estão compreendidos entre planos paralelos. Se todo plano paralelo a estes dois planos intersectar os sólidos em regiões de áreas iguais, então os dois sólidos têm volumes iguais.
+\end{observationtitle}
 
 Uma primeira aplicação do Princípio de Cavalieri é o cálculo do volume de cilindro oblíquos. Em um cilindro oblíquo todas as seções por um plano paralelo às bases resultam em regiões congruentes às bases. Por isso, e pelo Princípio de Cavalieri, o volume de qualquer cilindro oblíquo coincide com o volume do cilindro reto de mesma área da base e mesma altura. Portanto, o volume dos cilindros oblíquos também são dados por área da base vezes altura. A figura mostra o caso particular em que este cilindro oblíquo tem base triangular.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=400bp]{{108}.png}
+\noindent\includegraphics[width=300bp]{{108}.png}
 \end{figure}
 
 \textbf{Atenção:} Não confunda a altura do prisma oblíquo com o comprimento de suas arestas laterais.
 
+\clearpage
+\def\currentcolor{session2}
+\begin{objectives}{Reflexões sobre perímetros e áreas de triângulos}
+{
+\textbf{Objetivos específicos:}
 
-\practice{}
-\label{\detokenize{GE504-10::doc}}\label{\detokenize{GE504-10:praticando}}
+OE23. Entender o princípio de Cavalieri.
+
+\textbf{Conceitos abordados:} semelhança de triângulos, perímetro de triângulos, área de triângulos, relação entre áreas de triângulos semelhantes, retas paralelas, Princípio de Cavalieri.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Reflexões sobre perímetros e áreas de triângulos}
+{
+\textbf{Sugestões gerais:} Se possível, mostre o aplicativo do link usando um projetor ou permita que os estudantes acessem o aplicativo de seus smartphones. Nele será possível arrastar os pontos azuis das figuras e experimentar diferentes posições antes de resolver a atividade.
+
+A atividade ainda pode ser desenvolvida em sala de aula mesmo sem o uso deste recurso.
+
+\textbf{Atividade relacionada:} Embora esta atividade tenha um interesse próprio do ponto de vista do pensamento matemático, ela serve de preparação e estabelecimento da linguagem e ideias necessárias para a Atividade: volume de pirâmides.
+
+\textbf{Links relacionados:} Versão digital desta atividade - \href{https://ggbm.at/vhxy7mp3}{Parte II}
+}{1}{1}
+\end{sugestions}
+\clearmargin
+\begin{objectives}{Volume da pirâmide}
+{
+\textbf{Objetivos específicos:}
+
+OE24. Entender como utilizar o princípio de Cavalieri no cálculo de volumes de prismas e cilindros oblíquos.
+}{1}{2}
+\end{objectives}
+\begin{sugestions}{Volume da pirâmide}
+{
+\textbf{Dificuldades previstas:} Os estudantes provavelmente terão dificuldades em mostrar a semelhança \(XYZ \sim ABC\). Caso decida dar alguma dica, sugerimos que vá oferecendo conforme a necessidade dos estudantes o seguinte passo a passo:
+\begin{enumerate}
+\item {} 
+Observe que \(XY\), \(YZ\) e \(ZX\) são paralelas a \(AB\), \(BC\) e \(CA\), respectivamente.
+
+\item {} 
+Explique que \(VXY \sim VAB\), \(VYZ \sim VBC\) e \(VZX \sim VCA\).
+
+\item {} 
+Explique por que \(VWX \sim VDA\) com razão de semelhança \(h / H\).
+
+\item {} 
+Conclua que as razões de semelhança do item b) também são h / H.
+
+\item {} 
+Conclua que \(VX = (h/H) VA\), \(VY = (h/H) VB\) e \(VZ = (h/H) VC\), de onde segue a semelhança.
+
+\end{enumerate}
+
+\textbf{Enriquecimento da discussão:} O conhecimento do Teorema de Tales no espaço poderia simplificar um pouco as contas do item a) da atividade, veja A Matemática do Ensino Médio, vol. 2, SBM.
+
+\textbf{Links relacionados:} Versão digital desta atividade - \href{https://ggbm.at/zzcvwr9m}{Parte I} e  \href{https://ggbm.at/sq7h5tjr}{Parte II}
+}{1}{2}
+\end{sugestions}
+\clearmargin
+\clearmargin
+\clearmargin
+\begin{objectives}{Volume da esfera}
+{
+OE21. Entender a demonstração da expressão para cálculo do volume da esfera usando o Princípio de Cavalieri.
+}{1}{1}
+\end{objectives}
+\begin{sugestions}{Volume da esfera}
+{
+\textbf{Enriquecimento da discussão:} O conhecimento do Teorema de Tales no espaço poderia simplificar um pouco as contas do item a) da atividade, veja A Matemática do Ensino Médio, vol. 2, SBM.
+
+\textbf{Links relacionados:} \href{https://ggbm.at/dcetmq2g}{Versão digital} desta atividade Vídeo da UNICAMP \url{https://www.youtube.com/watch?time\_continue=566\&v=2pP9aR4nkQc}
+}{1}{1}
+\end{sugestions}
+
+
+\practice{Princípio de Cavalieri}
 \begin{task}{reflexões sobre perímetros e áreas de triângulos}
 
-
-
-\textbf{Parte 1}
+\paragraph{Parte 1}
 
 Na figura, as retas \(r\) e \(s\) são paralelas e os segmentos \(BC\) e \(B'C'\) são congruentes.
 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=1.5, every node/.style={scale=2}]
+\begin{tikzpicture}[scale=1.35, every node/.style={scale=2}]
 
 \draw [fill=\currentcolor!80, color=\currentcolor, opacity=0.4] (1,0) -- (1.75,3) -- (2.5,0) -- cycle;
 
@@ -2564,14 +3403,14 @@ Dentre todos os triângulos que se pode formar movendo A’  sobre a reta \(r\),
 
 \end{enumerate}
 
-\textbf{Parte 2}
+\paragraph{Parte 2}
 
 Seja \(H\) a distância entre as retas \(r\) e \(s\) e considere uma reta \(t\) paralela a \(r\) e a \(s\), que dista \(h\) de \(r\) e intersecta os lados dos triângulos em \(XY\) e \(X'Y'\) como na figura.
 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=1.5, every node/.style={scale=2}]
+\begin{tikzpicture}[scale=1.35, every node/.style={scale=2}]
 
 \draw [fill=\currentcolor!80, color=\currentcolor, opacity=0.4] (1,0) -- (1.75,3) -- (2.5,0) -- cycle;
 
@@ -2611,16 +3450,14 @@ Calcule Área(\(AXY\)) / Área(\(ABC\)) em termos de \(h\) e de \(H\).
 
 \begin{task}{volume da pirâmide}
 
-
-
-\textbf{Parte 1}
+\paragraph{Parte 1}
 
 O tetraedro de vértice \(V\) e base \(ABC\) da figura possui arestas de comprimentos \(AB\), \(BC\), \(CA\), \(VA\), \(VB\) e \(VC\) respectivamente iguais a 8, 9, 10, 18, 18, 19 cm e altura \(H\) cm. Foi traçado um plano paralelo ao plano \(ABC\) a uma distância \(h\) do ponto \(V\) intersectando o tetraedro no triângulo \(XYZ\) como na figura.
 
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{{112}.png}
+\noindent\includegraphics[width=350bp]{{112}.png}
 \end{figure}
 \begin{enumerate}
 \item {} 
@@ -2631,7 +3468,7 @@ Calcule a razão Área(\(XYZ\)) / Área(\(ABC\)) em função de \(h\) e \(H\).
 
 \end{enumerate}
 
-\textbf{Parte 2}
+\paragraph{Parte 2}
 
 Dois tetraedros com áreas iguais em suas bases e alturas iguais têm volume iguais.
 
@@ -2640,7 +3477,7 @@ Os tetraedros da figura têm bases \(ABC\) e \(A'B'C'\) de mesma área e possuem
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{{113}.png}
+\noindent\includegraphics[width=350bp]{{113}.png}
 \end{figure}
 \begin{enumerate}
 \item {} 
@@ -2651,7 +3488,7 @@ Use o Princípio de Cavalieri para explicar por que os tetraedros \(V-ABC\) e \(
 
 \end{enumerate}
 
-\textbf{Parte 3}
+\paragraph{Parte 3}
 
 Qualquer tetraedro é parte de um prisma triangular formado por outros dois tetraedros de mesmo volume que o tetraedro original.
 \begin{enumerate}
@@ -2666,7 +3503,7 @@ Explique por que os sólidos dados têm mesmo volume (reveja os resultados dos i
 
 \end{enumerate}
 
-\textbf{Parte 4}
+\paragraph{Parte 4}
 
 A sequência de figuras, apresenta uma demonstração sem palavras de um fato matemático.
 
@@ -2693,9 +3530,8 @@ Explique a construção realizada em cada um dos passos. Explique com cuidado es
 \end{enumerate}
 \end{task}
 
+\clearpage
 \begin{task}{volume da esfera}
-
-
 
 A figura mostra um hemisfério de raio \(r\) (metade de uma bola) e um cilindro de raio e altura iguais a \(r\) de onde foi removido um cone de mesma base e altura que o cilindro (chamaremos este sólido de anticlépsidra).
 
@@ -2802,12 +3638,9 @@ Preencha a tabela com os cortes
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\thead
-Tipo de corte & Área da peça & núm. de peças usadas & área acumulada \\
-\hline
-figura & & & \\
+\tcolor{Tipo de corte} & \tcolor{Área da peça} & \tcolor{núm. de peças usadas} & \tcolor{área acumulada} \\
 \hline
 figura & & & \\
 \hline
@@ -2815,7 +3648,9 @@ figura & & & \\
 \hline
 figura & & & \\
 \hline
-\end{tabu}
+figura & & & \\
+\hline
+\end{tabular}
 \end{table}
 
 \item {} 
@@ -2865,3 +3700,15 @@ Figura com cilindro circular oblíquo com raio e comprimento  do eixo dados.
 (Enem 2001)  Um fabricante de brinquedos recebeu o projeto de uma caixa que deverá conter cinco pequenos sólidos, colocados na caixa por uma abertura em sua tampa. A figura representa a planificação da caixa, com as medidas dadas em centímetros.
 
 \end{enumerate}
+
+
+\ifnum\aluno=1
+\clearpage
+\else
+\notasfinais
+\fi
+
+\bibliographystyle{apalike-pt}
+\bibliography{../Bibliografia/perspectiva1_bibliografia.bib}
+
+\nocite{*}

@@ -39,10 +39,8 @@
 \RequirePackage{geometry}
 \RequirePackage{hypcap}
 \RequirePackage{makeidx}
-\makeindex
 \RequirePackage{xurl}
 \RequirePackage{amsmath,amssymb,amsfonts,amsthm,amstext}
-\RequirePackage{tabu} 
 \RequirePackage{hhline}
 \RequirePackage{pbox}
 \RequirePackage{ragged2e}
@@ -54,7 +52,7 @@
 \RequirePackage{bm}
 \RequirePackage[low-sup]{subdepth} 
 \RequirePackage{tikz-3dplot}
-\RequirePackage{pgfplots}
+% \RequirePackage{pgfplots}
 \RequirePackage[inline, attach]{asymptote}
 \RequirePackage[dvips]{attachfile2}
 \RequirePackage{vwcol}
@@ -94,10 +92,9 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{kvoptions}
 \RequirePackage{sphinx}
 \@ifclassloaded{memoir}{}{\RequirePackage{fancyhdr}}
-\RequirePackage{etoolbox}
 \RequirePackage{framed}
-\RequirePackage[load=addn]{siunitx}
-\RequirePackage{caption}
+% \RequirePackage{siunitx}
+% \RequirePackage{caption}
 \RequirePackage{pdfpages}
 \RequirePackage{layout}
 \RequirePackage{stackengine}
@@ -108,6 +105,8 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{marginfix}
 \RequirePackage{stmaryrd}
 \RequirePackage{lscape}
+\RequirePackage{zref-savepos}
+\RequirePackage{tasks}
 
 \RequirePackage[sectionbib]{natbib}
 \RequirePackage{chapterbib}
@@ -125,24 +124,20 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{listofitems}
 \RequirePackage{url}
 \RequirePackage{graphicx}
-%\RequirePackage[usenames,dvipsnames]{color}
 \RequirePackage{forloop}
 \RequirePackage{lipsum}
 \RequirePackage{suffix}
 \RequirePackage{refcount}
-% \RequirePackage[hidelinks]{hypreref}
 \RequirePackage{xcolor}
 \RequirePackage{multicol}
-\RequirePackage{etex}
 \RequirePackage{multirow}
-%\RequirePackage[brazilian]{babel}
 \RequirePackage{blindtext}
-
 \RequirePackage{cleveref}
 \RequirePackage{collcell}
 \RequirePackage{datatool}
 \RequirePackage{environ}
 \RequirePackage{xstring}
+% \RequirePackage{tabu}
 
 \RequirePackage{hyperref}
 \PassOptionsToPackage{bookmarks=false}{hyperref}
@@ -178,9 +173,6 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 
 %Commands
 \renewcommand{\bottomtitlespace}{0.25\textheight}
-%\pgfplotsset{compat=1.15}
-\renewcommand{\thead}{\rowfont{\bfseries \color{white}} \rowcolor{\currentcolor!80}}
-\newcommand{\tnumber}{\rowfont{\color{white}}\rowcolor{\currentcolor!80}}
 
 \newcommand{\tmat}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\bm{#1}}}
 \newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
@@ -213,38 +205,33 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcolumntype{g}[1]{>$e{#1}<$}
 
 % Prevent a clash with tabu, or other packages that also define \extrarowdepth.
-\AtBeginDocument{%
-  \ifdefdimen\extrarowdepth{} % \extrarowdepth already defined as a length
-  {\ifdef\extrarowdepth % if it is defined but not a length, we have an error
-    {\PackageError{extrarowdepth}{Cannot define length \string\extrarowdepth}
-      {There is already a \string\extrarowdepth\space and it is not a length parameter.}}
-    {\newlength\extrarowdepth\setlength\extrarowdepth{0pt}}}%
-  \newlength\@temprowdepth}
+% \AtBeginDocument{%
+%   \ifdefdimen\extrarowdepth{} % \extrarowdepth already defined as a length
+%   {\ifdef\extrarowdepth % if it is defined but not a length, we have an error
+%     {\PackageError{extrarowdepth}{Cannot define length \string\extrarowdepth}
+%       {There is already a \string\extrarowdepth\space and it is not a length parameter.}}
+%     {\newlength\extrarowdepth\setlength\extrarowdepth{0pt}}}%
+%   \newlength\@temprowdepth}
 
-\RequirePackage{array}
-\RequirePackage{etoolbox}
+% \RequirePackage{array}
 
-\patchcmd{\@array}{\setbox \@arstrutbox \hbox{\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \dp \strutbox \@width \z@}}
-{\@temprowdepth  \dp \strutbox \advance \@temprowdepth by\extrarowdepth \setbox \@arstrutbox \hbox{\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \@temprowdepth \@width \z@}}
-{\PackageInfo{extrarowdepth}{\string\extrarowdepth\space added to the array package}}
-{\PackageWarning{extrarowdepth}{Failed to include \string\extrarowdepth\space in the array package}}
-\let\@@array\@array
+% \patchcmd{\@array}{\setbox \@arstrutbox \hbox{\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \dp \strutbox \@width \z@}}
+% {\@temprowdepth  \dp \strutbox \advance \@temprowdepth by\extrarowdepth \setbox \@arstrutbox \hbox{\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \@temprowdepth \@width \z@}}
+% {\PackageInfo{extrarowdepth}{\string\extrarowdepth\space added to the array package}}
+% {\PackageWarning{extrarowdepth}{Failed to include \string\extrarowdepth\space in the array package}}
+% \let\@@array\@array
 
-\newcommand\tablinesep[1]{
-	\setlength{\extrarowheigth}{#1}
-	\setlength{\extrarowdepth}{#1}
-}
 
+% Permite preencher o resto da página com figura
 
 %Coloca listas de enumerate no padrão da seção de exercícios
-\newcommand\exerciselist
-{	
+\newcommand{\exerciselist}{	
 	\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
 	\setlist[enumerate,2]{label=\textit{\alph*)}}
 	\setlist[enumerate,3]{label=\textit{\roman*)}}
 }
 
-\newcommand\semihuge{\@setfontsize\semiHuge{16.72}{21.38}}
+\newcommand{\semihuge}{\@setfontsize\semiHuge{16.72}{21.38}}
 
 \renewcommand{\fref}[1]{\hyperref[#1]{figura \ref{#1}}}
 \newcommand{\Fref}[1]{\hyperref[#1]{Figura \ref{#1}}}
@@ -1374,12 +1361,10 @@ underlay boxed title={
 \RequirePackage{lipsum}
 \RequirePackage{microtype}
 \RequirePackage{suffix}
-\RequirePackage{etoolbox}
 \RequirePackage{refcount}
 % \RequirePackage[hidelinks]{hypreref}
 \RequirePackage{xcolor}
 \RequirePackage{multicol}
-\RequirePackage{etex}
 
 \RequirePackage{blindtext}
 
@@ -1467,12 +1452,12 @@ pen agua = rgb(0,165/255,157/255); //verde agua
 pen box2 = rgb(240/255,238/255,201/255);
 
 
-texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
+texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}");
 \end{asydef}
 
 % Define asymptote picture directory
 
-\def\asydir{asytmp-perspectiva2}
+\def\asydir{Asymptote/asytmp-perspectiva2}
 
 % Define the layers to be used in document.
 \pgfdeclarelayer{background}
@@ -1480,6 +1465,19 @@ texpreamble("\usepackage{fontspec}\setmainfont{Exo2-Light}");
 \pgfdeclarelayer{top}
 \pgfdeclarelayer{bottom}
 \pgfsetlayers{bottom,background,main,foreground,top}
+
+
+% Permite referência ao nome do capítulo e das seções
+\let\Chaptermark\chaptermark
+\let\Sectionmark\sectionmark
+\let\Subsectionmark\subsectionmark
+\let\Subsubsectionmark\subsubsectionmark
+\def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
+\def\sectionmark#1{\def\Sectionname{#1}\Sectionmark{#1}}
+\def\subsectionmark#1{\def\Subsectionname{#1}\Subsectionmark{#1}}
+\def\subsubsectionmark#1{\def\Subsubsectionname{#1}\Subsubsectionmark{#1}}
+
+
 
 
 %Seção 7 - Livro Aberto Professor

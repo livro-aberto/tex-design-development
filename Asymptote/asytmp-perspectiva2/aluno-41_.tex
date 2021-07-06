@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{ifluatex}\ifluatex
+\ifx\pdfpagewidth\undefined\let\pdfpagewidth\paperwidth\fi
+\ifx\pdfpageheight\undefined\let\pdfpageheight\paperheight\fi\else
+\let\paperwidthsave\paperwidth\let\paperwidth\undefined
+\usepackage{graphicx}
+\let\paperwidth\paperwidthsave\fi
+\usepackage{hyperref}
+\hypersetup{setpagesize=false,unicode,pdfborder=0 0 0}
+\usepackage[bigfiles]{media9}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\usepackage{fontspec}\setmainfont{Exo2-Light}
+\newbox\ASYbox
+\newdimen\ASYdimen
+\def\ASYprefix{}
+\long\def\ASYbase#1#2{\leavevmode\setbox\ASYbox=\hbox{#1}%\ASYdimen=\ht\ASYbox%
+\setbox\ASYbox=\hbox{#2}\lower\ASYdimen\box\ASYbox}
+\long\def\ASYaligned(#1,#2)(#3,#4)#5#6#7{\leavevmode%
+\setbox\ASYbox=\hbox{#7}%
+\setbox\ASYbox\hbox{\ASYdimen=\ht\ASYbox%
+\advance\ASYdimen by\dp\ASYbox\kern#3\wd\ASYbox\raise#4\ASYdimen\box\ASYbox}%
+\setbox\ASYbox=\hbox{#5\wd\ASYbox 0pt\dp\ASYbox 0pt\ht\ASYbox 0pt\box\ASYbox#6}%
+\hbox to 0pt{\kern#1pt\raise#2pt\box\ASYbox\hss}}%
+\long\def\ASYalignT(#1,#2)(#3,#4)#5#6{%
+\ASYaligned(#1,#2)(#3,#4){%
+\special{pdf:literal q #5 0 0 cm}%
+}{%
+\special{pdf:literal Q}%
+}{#6}}
+\long\def\ASYalign(#1,#2)(#3,#4)#5{\ASYaligned(#1,#2)(#3,#4){}{}{#5}}
+\def\ASYraw#1{#1}
+\usepackage{graphicx}
+\usepackage{color}
+\pdfpagewidth=255.118110bp
+\ifx\pdfhorigin\undefined
+\hoffset=-1in
+\voffset=-72.000000bp
+\pdfpageheight=237.774984bp
+\else
+\pdfhorigin=0bp
+\pdfvorigin=0.000000bp
+\pdfpageheight=237.774984bp
+\fi
+\usepackage{everypage}%
+\setlength{\unitlength}{1pt}%
+\pagestyle{empty}
+\textheight=255.774984bp
+\textwidth=273.118110bp
+\parindent=0pt
+\oddsidemargin=0pt
+\evensidemargin=\oddsidemargin
+\headheight=0pt
+\headsep=0pt
+\topmargin=0pt
+\topskip=0pt
+\begin{document}
+\makeatletter%
+\let\ASYencoding\f@encoding%
+\let\ASYfamily\f@family%
+\let\ASYseries\f@series%
+\let\ASYshape\f@shape%
+\makeatother%
+{\catcode`"=12%
+\includegraphics{aluno-41_0}%
+}%
+\kern -256.074803pt%
+\definecolor{ASYcolor}{gray}{0.000000}\color{ASYcolor}%
+\fontsize{12.000000}{14.400000}\selectfont%
+\usefont{\ASYencoding}{\ASYfamily}{\ASYseries}{\ASYshape}%
+\ASYalignT(64.342091,234.815702)(-0.500000,-1.000000){0.800000 0.000000 0.000000 0.800000}{Vista Frontal}%
+\definecolor{ASYcolor}{gray}{0.000000}\color{ASYcolor}%
+\fontsize{12.000000}{14.400000}\selectfont%
+\ASYalignT(183.424474,234.815702)(-0.500000,-1.000000){0.800000 0.000000 0.000000 0.800000}{Vista Lateral}%
+\definecolor{ASYcolor}{gray}{0.000000}\color{ASYcolor}%
+\fontsize{12.000000}{14.400000}\selectfont%
+\ASYalignT(64.342091,115.733320)(-0.500000,-1.000000){0.800000 0.000000 0.000000 0.800000}{Vista Superior}%
+\definecolor{ASYcolor}{gray}{0.000000}\color{ASYcolor}%
+\fontsize{12.000000}{14.400000}\selectfont%
+\ASYalignT(1.200900,178.874511)(-0.500000,0.000000){0.000000 0.800000 -0.800000 0.000000}{Plano Frontal}%
+\definecolor{ASYcolor}{gray}{0.000000}\color{ASYcolor}%
+\fontsize{12.000000}{14.400000}\selectfont%
+\ASYalignT(1.200900,59.792129)(-0.500000,0.000000){0.000000 0.800000 -0.800000 0.000000}{Plano Horizontal}%
+\definecolor{ASYcolor}{gray}{0.000000}\color{ASYcolor}%
+\fontsize{12.000000}{14.400000}\selectfont%
+\ASYalignT(254.873903,178.874511)(-0.500000,-0.500000){0.000000 0.800000 -0.800000 0.000000}{Plano Lateral}%
+\end{document}

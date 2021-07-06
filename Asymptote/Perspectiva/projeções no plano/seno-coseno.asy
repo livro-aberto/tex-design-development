@@ -13,10 +13,12 @@ real z(real t) {return (t+.5)/6;}
 
 path3 p=graph(x,y,z,0,5,operator ..);
 
-//draw(p,Arrow3);
+draw(p,Arrow3);
 draw(planeproject(XY*unitsquare3)*p);
 draw(planeproject(YZ*unitsquare3)*p);
 draw(planeproject(ZX*unitsquare3)*p);
+
+
 
 triple a = (0,0,0);
 triple b = (1,0,0);

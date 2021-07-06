@@ -1,5 +1,3 @@
-%!TEX root = ../aluno.tex
-
 \ifnum\aluno=1
 \renewcommand\chapterillustration{./abertura-computacional}
 \else
@@ -10,7 +8,7 @@
 }
 \renewcommand\chapterbecause{Os computadores estão presentes em quase todas as atividades humanas na atualidade e, por isso, desenvolver o pensamento computacional e conhecer noções básicas de linguagens de programação pode ser fundamental para sua vida profissional, trajetória acadêmica e participação efetiva na sociedade.
 } 
-\chapter{Pensamento Computacional - Introdução}
+\chapter{Pensamento Computacional}
 \label{computacional-chap}
 
 \mbox{}\thispagestyle{empty}\clearpage
@@ -53,9 +51,7 @@ Coordenação: & Fabio Simas, \\
 \\
 Colaboração: & \\
 \\
-Revisão: & Diego Lieban \\ 
-         & Larissa Monzon \\
-         & Kátia Rocha \\
+Revisor: & Diego Lieban \\
 \\
 Design: & Andreza Moreira (Tangentes Design) \\
 \\
@@ -159,7 +155,7 @@ Esse tipo de questão pode ser respondida de forma textual, com auxílio de nota
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.95\linewidth]{imagem_01}
+\includegraphics[width=\linewidth]{imagem_01}
 \end{figure}
 
 Ao longo do módulo, ao resolver um problema sob o ponto de vista computacional, esperamos que os estudantes vivenciem um movimento que se inicia com descrições textuais e notação matemática, passa por fluxogramas e se completa com uma linguagem de programação.
@@ -327,7 +323,7 @@ A relação entre as diferentes seções deste módulo com as habilidades da BNC
 \end{tabular}
 \end{table}
 
-\textbf{Objetivo Específico 1}: Analisar problemas matemáticos visando sua resolução do ponto de vista computacional.
+\textbf{Objetivo Específico 1}: Analisar problemas matemáticos visando a sua resolução do ponto de vista computacional.
 
 \textbf{Objetivo Específico 2}: Compreender como sistematizar soluções algorítmicas através de recursos como a linguagem matemática, fluxogramas ou linguagens de programação.
 
@@ -339,7 +335,7 @@ A relação entre as diferentes seções deste módulo com as habilidades da BNC
 \def\currentcolor{session1}
 \begin{texto}
 {
-As atividades desta seção introduzem o que chamamos anteriormente de "resolução de um problema do ponto de vista computacional"{} e criam um contexto no qual um primeiro aspecto importante para o pensamento computacional pode ser discutido: a clareza das instruções.
+As atividades desta seção introduzem aos estudantes o que chamamos na introdução para o professor de "resolução de um problema do ponto de vista computacional"{} e criam um contexto no qual um primeiro aspecto importante para o pensamento computacional pode ser discutido: a clareza das instruções.
 
 Os dois problemas propostos na duas primeiras atividades serão revisitados em seguida. Primeiro, como contexto para a discussão de \textbf{fluxogramas}. Não pretendemos usar sempre fluxogramas ao longo do capítulo, mas a discussão da estrutura e uso deste tipo de representação pode salientar aspectos importantes sobre a clareza das instruções descritas pelos estudantes em outras representações. A BNCC propõe o uso de fluxogramas no Ensino Fundamental (como nas habilidades \textbf{EF06MA04}, \textbf{EF07MA07}, \textbf{EF08MA10}, \textbf{EF09MA15}), porém, mesmo que os estudantes não tenham estudado o assunto, esperamos que haja alguma familiaridade informal e isso deve bastar para criar discussões proveitosas. Por último, os dois problemas servirão de contexto para introdução da linguagem de programação Portugol. Isso é feito no \hyperref[comp-know1]{Para Saber Mais} que encerra a seção.
 
@@ -460,25 +456,32 @@ Neste módulo, vamos desenvolver habilidades relacionadas ao que é chamado de p
 
 O proprietário de uma empresa que fabrica e vende bottons gostaria de criar uma promoção para incentivar a compra de grandes quantidades, uma vez que isso agiliza a produção. Na sua loja, todos os bottons são vendidos pelo mesmo preço: R\$ $2,00$.
 
+A primeira ideia foi oferecer um desconto de 10\% no valor total da compra caso o comprador adquirisse mais do que 100 unidades.
+
+\begin{enumerate}
+\item Com essa promoção, qual seria o valor de uma compra de 95 bottons? E de uma compra de $105$ bottons?
+\end{enumerate}
+Como você deve ter notado, o problema dessa proposta é que algumas compras (com poucas unidades acima de $100$) podem ficar mais baratas do que compras que não atingiram o valor que as qualifica para o desconto.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=.5\linewidth]{desconto}
 \end{figure}
 
-A primeira ideia foi oferecer um desconto de 10\% no valor total da compra caso o comprador adquirisse mais do que 100 unidades.
+Uma outra ideia do proprietário foi a seguinte: cada unidade além da centésima recebe $15\%$ de desconto no seu valor. Por exemplo, se alguém comprar $105$ bottons, o comprador paga o preço normal para $100$ deles e depois recebe $15\%$ de desconto no valor dos outros $5$.
 
 \begin{enumerate}
-\item Com essa promoção, qual seria o valor de uma compra de 95 bottons? E de uma compra de $105$ bottons?
-
-Como você deve ter notado, o problema dessa proposta é que algumas compras (com poucas unidades acima de $100$) podem ficar mais baratas do que compras que não atingiram o valor que as qualifica para o desconto.
-
-Uma outra ideia do proprietário foi a seguinte: cada unidade além da centésima recebe $15\%$ de desconto no seu valor. Por exemplo, se alguém comprar $105$ bottons, o comprador paga o preço normal para $100$ deles e depois recebe $15\%$ de desconto no valor dos outros $5$.
+\setcounter{enumi}{1}
 
 \item Com essa promoção, qual seria o valor de uma compra de 95 bottons? E de $105$? E de $200$ bottons?
 
-\item Você acha que essa promoção evita o problema de compras com pouco mais de $100$ bottons ficarem mais baratas do que compras com quantidades menores? Justifique a sua resposta.
+\item Você acha que essa ideia evita o problema de compras com pouco mais de $100$ bottons ficarem mais baratas do que compras com quantidades menores? Justifique a sua resposta.
+\end{enumerate}
 
-O proprietário da empresa decide adotar essa segunda promoção, mas notou que ela cria um problema: o cálculo do valor final da compra não pode mais ser feito de maneira imediata na calculadora.
+O proprietário da empresa decide adotar essa segunda ideia, mas notou que ela cria um problema: o cálculo do valor final da compra não pode mais ser feito de maneira imediata na calculadora.
+
+\begin{enumerate}
+\setcounter{enumi}{3}
 
 \item Descreva com as suas palavras como um funcionário deve proceder para calcular o valor de uma compra a partir da informação de quantos bottons foram comprados. Dê a sua resposta na forma de um bilhete que será lido por uma pessoa que você não irá encontrar pessoalmente.
 
@@ -496,6 +499,7 @@ O cometa Halley é um dos cometas de menor período do Sistema Solar, completand
 
 \begin{figure}[H]
 \centering
+
 \includegraphics[width=.35\linewidth]{cometa}
 \caption{Registro da passagem do cometa Halley em 1682}
 \end{figure}
@@ -522,12 +526,6 @@ O cometa Halley é um dos cometas de menor período do Sistema Solar, completand
 As atividades anteriores mostraram que não é simples criar um conjunto de instruções que resolve um determinado problema de modo que uma pessoa seja capaz de compreendê-las e segui-las sem poder fazer mais perguntas ou pedir esclarecimentos. Por isso é importante que fique claro tanto o significado de cada instrução, quanto a ordem em que elas devem ser executadas.
 
 No caso de criarmos instruções para um computador seguir (um conjunto finito de instruções com fluxo bem definido também pode ser chamado de algoritmo), essa exigência fica ainda maior, pois o computador não consegue usar um pouco de bom senso ou conhecimentos adicionais sobre a situação para complementar as instruções ou tomar decisões, caso isso seja necessário. Para um computador, todas as instruções devem ser dadas de modo que ele seja capaz de executar e o fluxo das instruções deve estar absolutamente claro na descrição.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=.35\linewidth]{pagina_4.png}
-\caption{Fonte: \url{http://desplugada.ime.unicamp.br}}
-\end{figure}
 
 \explore{A representação via fluxogramas}
 \label{comp-exp2}
@@ -615,26 +613,27 @@ O que você achou dos fluxogramas como forma de apresentar um conjunto de instru
 \arrange{Fluxogramas}
 \label{comp-arr2}
 
-Os fluxogramas são uma maneira de representar algoritmos que fazem uso de um arranjo visual para deixar claro o caminho que deve ser percorrido ao longo da execução de uma série de comandos. Embora seja conveniente em muitas situações, eles não são recomendados para algoritmos muito complexos ou longos. Uma outra limitação dos fluxogramas é que eles não podem ser interpretados diretamente por um computador.
+Os fluxogramas são uma maneira de representar algoritmos que fazem uso de um arranjo visual para deixar claro o fluxo, ou seja, a sequência em que comandos devem ser realizados. Embora seja conveniente em muitas situações, eles não são recomendados para algoritmos muito complexos ou longos. Uma outra limitação dos fluxogramas é que eles não podem ser interpretados diretamente por um computador.
 
 Mesmo assim, eles ainda podem ser uma forma rápida para organizar o seu raciocínio quando estiver pensando em um algoritmo. Por isso, consideramos que vale a pena mostrar mais um exemplo que ilustra uma situação não mostrada anteriormente: um processo repetitivo.
 
 Considere a seguinte solução (descrita na forma textual) para a \hyperref[comp-task2]{Atividade 2}:
 
-\textit{Se o ano de nascimento for maior que 1986, então some 76 a 1986 até que o resultado seja maior ou igual ao ano de nascimento. Quando isso ocorrer, o resultado da última soma é a resposta. Se o ano de nascimento for menor do que 1986, então subtraia 76 a 1986 até que o resultado seja menor que ano de nascimento. Quando isso ocorrer, some 76 ao resultado da última soma e essa será a resposta.}
+Se o ano de nascimento for maior que 1986, então some 76 a 1986 até que o resultado seja maior ou igual ao ano de nascimento. Quando isso ocorrer, o resultado da última soma é a resposta.
+Se o ano de nascimento for menor do que 1986, então subtraia 76 a 1986 até que o resultado seja menor que ano de nascimento. Quando isso ocorrer, some 76 ao resultado da última soma e essa será a resposta.
 
 Como fluxograma, ela pode ser representada como mostrado a seguir.
 
 \begin{figure}[H]
 \centering
-
 \includegraphics[width=\linewidth]{fluxograma3}
 \end{figure}
 
 Três coisas merecem atenção neste fluxograma.
 Primeiro, a variável tentativa, que não apareceu nos fluxogramas anteriores. Ela é usada para armazenar em qual ano estamos à medida que somamos ou subtraímos 76 até encontrar a resposta. Na descrição verbal não é necessário mencioná-la, mas em uma linguagem de programação precisamos armazenar todos os resultados que desejamos usar posteriormente em alguma variável. Em um fluxograma também poderíamos evitar o seu uso, se escrevêssemos algo como "some 76 ao ano", mas a prática de armanzenar o resultado em uma variável é boa para não deixar dúvidas nas instruções seguintes.
 
-Segundo, a ocorrência de ciclos: eles representam processos que devem ser repretidos diversas vezes, até que alguma condição seja satisfeita. Focando no que está mais à esquerda, ele diz o seguinte: cheque se a tentativa é menor do que a, se não for, subtraia 76 e volte para a checagem. Isso faz com que o algoritmo repita essa subtração até que o resultado encontrado seja menor do que a. No ciclo do lado direito, ocorre o mesmo mas com adições (veja que o lado direito do fluxograma é acionado quando a é maior do que 1986).
+Segundo, a ocorrência de ciclos: esses ciclos representam processos iterativos, ou seja, que envolvem repetição sucessiva, são repetitivos. 
+ Focando no que está mais à esquerda, ele diz o seguinte: cheque se a tentativa é menor do que a, se não for, subtraia 76 e volte para a checagem. Isso faz com que o algoritmo repita essa subtração até que o resultado encontrado seja menor do que a. No ciclo do lado direito, ocorre o mesmo mas com adições (veja que o lado direito do fluxograma é acionado quando a é maior do que 1986).
 
 O terceiro aspecto que merece atenção são os comandos que são realizados dentro dos ciclos. Vamos focar novamente no que está mais à esquerda: tentativa = tentativa + 76. Note que essa expressão, do ponto de vista matemático, representa uma equação sem solução. Mas em grande parte das linguagens de programação, o sinal de igual significa "guarde o resultado da direita na variável à esquerda". Nesse caso, o computador primeiro calcula o valor do lado direito (somando 76 ao valor atual da variável tentativa) e então guarda na mesma variável (tentativa) o resultado (perdendo o valor anterior, o que não é um problema, pois já testamos e o descartamos).
 
@@ -659,7 +658,7 @@ Existem centenas de linguagens de programação em uso na atualidade, cada uma c
 
 A imagem abaixo mostra dois algoritmos escritos em uma linguagem de programação chamada \textbf{Portugol}, que tem seus comandos em português. Apesar de não ser usada comercialmente, essa é a linguagem que sugerimos para você neste capítulo.
 
-Essas instruções são as mesmas descritas anteriormente com fluxogramas. Leia com calma e tente compreender como as duas representações se relacionam.
+As instruções descritas abaixo em Portugol são as mesmas descritas anteriormente com fluxogramas. Leia com calma e tente compreender como as duas representações se relacionam.
 
 \begin{figure}[H]
 \centering
@@ -669,9 +668,8 @@ Essas instruções são as mesmas descritas anteriormente com fluxogramas. Leia 
 
 Você pode acessar um ambiente online que permite a execução destes algoritmos em \url{portugol-webstudio.cubos.io}. Caso você não esteja familiarizado com esse tipo de recurso, sugerimos o vídeo \url{youtu.be/6OIADpFImtc} como ponto de partida.
 
-\cleardoublepage
-
-\def\currentcolor{session1}
+\explore{Algoritmos para problemas matemáticos}
+\label{comp_exp3}
 \begin{texto}
 {
 As duas atividades propostas nesta seção focam no uso de variáveis e operações aritméticas entre elas.
@@ -691,27 +689,27 @@ O que importa aqui é a consciência da limitação e não o domínio sobre como
 \end{itemize}
 }{1}{1}
 \end{objectives}
-% \marginpar{\vspace{-2.5em}}
+\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{Contêineres}
 {
 \textbf{Organização da turma}: sugerimos a resolução desta e da próxima atividade conjuntamente e, especialmente por causa da segunda atividade, recomendamos a organização da turma em duplas.
 
-\textbf{Duração}: essa e a próxima atividade juntas devem ocupar em torno de 1 aula.
+\textbf{Duração}: 2 aulas para a resolução desta e da próxima atividade e discussão de ambas ao final.
 
 \textbf{Comentários para o laboratório}: a implementação da solução a este problema em Portugol é muito próxima ao que os estudantes devem descrever aqui, pois ao fazermos a divisão entre dois números inteiros e armazenarmos em uma variável inteira, o Portugol armazena o quociente da divisão inteira (com resto), causando o efeito de arredondar para baixo.
 
-\textbf{Conexões}: você pode discutir o conceito de volume de paralelepípedos e relembrar a interpretação da divisão como "quantos cabem".
+\textbf{Conexões}: você pode discutir o conceito de volume de paralelepípedos e relembrar o significado da divisão em termos de medida.
 }{1}{1}
 \end{sugestions}
-% \marginpar{\vspace{-1em}}
+\marginpar{\vspace{-1em}}
 \begin{answer}{Contêineres}
 {
 \begin{enumerate}
-\item $3750$ contêineres.
+\item $3750$
 
-\item $588$ contêineres.
+\item $588$
 
-\item Calculamos a quantidade de contêineres que cabem em cada uma das dimensões: $n1=X/ A$, $n2=Y\slash B$ e $n3=25\slash C$, sempre considerando a parte inteira do quociente. O total de conteineres que podem ser levados será: total = $n1\times n2\times n3$.
+\item Calculamos a quantidade de conteineres que cabem em cada uma das dimensões: $n1=X/ A$, $n2=Y\slash B$ e $n3=25\slash C$, sempre considerando a parte inteira do quociente. O total de conteineres que podem ser levados será: total = $n1\times n2\times n3$.
 \end{enumerate}
 }{0}
 \end{answer}
@@ -728,7 +726,7 @@ O que importa aqui é a consciência da limitação e não o domínio sobre como
 {
 \textbf{Organização da turma}: em duplas.
 
-\textbf{Duração}: essa atividade e a anterior devem ocupar em torno de 1 aula.
+\textbf{Duração}: 2 aulas para a resolução desta atividade e da anterior e discussão de ambas ao final.
 
 \textbf{Dificuldades previstas}: a interpretação do enunciado da questão pode gerar algumas dúvidas, por isso dê tempo para que os alunos compreendam matematicamente o problema antes de partir para os itens de natureza computacional.
 
@@ -742,16 +740,12 @@ O que importa aqui é a consciência da limitação e não o domínio sobre como
 
 \item Calcule $n$ dividido por $13$ e arredonde o resultado para cima se houver parte decimal
 
-\item Sim, haverá lugar para todos os professores. Não, não haverá lugar para todos os professores.
+\item Sim, Não
 
 \item Calcule n dividido por $13$ e arredonde o resultado para cima se houver parte decimal. Esse resultado, vamos chamar de $p$, é igual ao número de vans necessárias e igual ao número mínimo de professores. O número máximo de professores, chamemos de $\max$, é dado por $\max=14p-n$
 \end{enumerate}
 }{1}
 \end{answer}
-
-\explore{Algoritmos para problemas matemáticos}
-\label{comp_exp3}
-
 
 Dois recursos são muito comuns na criação de algoritmos, não importando se descrevemos na forma textual, com fluxograma ou em uma linguagem de programação: condicionais e repetições. Além desses dois recursos, o conceito de variável é especialmente importante quando pensamos em linguagens de programação, seja ela qual for.
 
@@ -759,16 +753,7 @@ Já conhecemos esses três elementos nas atividades anteriores e nas atividades 
 
 \begin{task}{Contêineres}
 \label{comp-task4}
-O transporte em grandes navios de carga se dá através de contêineres, que são caixas metálicas grandes, dentro das quais as empresas acomodam seus produtos da maneira que desejar. Porém, a maneira como os contêineres são colocados nos navios costuma ser determinada pelo sistema de carregamento disponível nos portos.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=.5\linewidth]{barco.jpg}
-\caption{Fonte: Imagem de hectorgalarza por Pixabay}
-\end{figure}
-
-
-Imagine um porto que, por restrição nos equipamentos disponíveis, carregue seus contêineres todos alinhados, na mesma direção e com os lados paralelos aos lados da área de carregamento do navio, como mostrado na figura abaixo.
+O transporte em grandes navios de carga se dá através de contêineres, que são caixas metálicas grandes, dentro das quais as empresas acomodam seus produtos da maneira que desejar. Porém, a maneira como os contêineres são colocados nos navios costuma ser determinada pelo sistema de carregamento disponível nos portos. Imagine um porto que, por restrição nos equipamentos disponíveis, carregue seus contêineres todos alinhados, na mesma direção e com os lados paralelos aos lados da área de carregamento do navio, como mostrado na figura abaixo.
 
 \begin{figure}[H]
 \centering
@@ -776,7 +761,7 @@ Imagine um porto que, por restrição nos equipamentos disponíveis, carregue se
 \includegraphics[width=.7\linewidth]{conteineres}
 \end{figure}
 
-A administradora desse porto está com problemas para determinar quantos contêineres de dimensões $A$, $B$ e $C$ (em metros) podem ser colocados em um navio que tenha área de carregamento com dimensões $X$ e $Y$ (em metros). Observe que a dimensão $A$ dos contêineres deve ser carregada paralelamente à dimensão $X$ dos navios, o mesmo ocorre para as dimensões $B$ e $Y$.
+A administradora desse porto está com problemas para determinar quantos contêineres de dimensões $A$, $B$ e $C$ (em metros) podem ser colocados em um navio que tenha área de carregamento nas dimensões $X$ e $Y$ (em metros). Observe que a dimensão $A$ dos contêineres deve ser carregada paralelamente à dimensão $X$ dos contêineres, o mesmo ocorre para as dimensões $B$ e $Y$.
 
 Além dessas restrições, há uma limitação de altura imposta pelas autoridades portuárias que diz que a pilha de contêineres não pode ultrapassar $25$ metros de altura.
 
@@ -799,18 +784,12 @@ Uma escola costuma organizar passeios com frequência e para levar os alunos con
 
 \item Descreva com suas palavras, e de forma clara, como obter a quantidade mínima de professores necessários para acompanhar um passeio em que $n$ estudantes estejam interessados em participar.
 
-Em algumas ocasiões, porém, há mais professores dispostos a acompanhar os estudantes do que o necessário. Em geral, a direção gosta dessa situação pois cada professor fica responsável por menos estudantes. Porém, já aconteceu de não haver lugares disponíves nas vans para os professores adicionais, e a escola não pretende contratar vans adicionais.
+Em algumas ocasiões, porém, há mais professores dispostos a acompanhar os estudantes do que o necessário. Em geral, a direção gosta dessa situação pois cada professor fica responsável por menos estudantes. Porém, já aconteceu de não haverem lugares disponíves nas vans para os professores adicionais, e a escola não pretende contratar vans adicionais.
 
-\item Se houver $200$ estudantes interessados e $20$ professores disponíveis, haverá lugar para todos os professores nas vans sem que seja necessário contratar vans adicionais? E se forem $75$ estudantes e $10$ professores?
+\item Se houverem $200$ estudantes interessados e $20$ professores disponíveis, haverá lugar para todos os professores nas vans sem que seja necessário contratar vans adicionais? E se forem $75$ estudantes e $10$ professores?
 
 \item Descreva com suas palavras e de forma clara como descobrir o número máximo de professores que podem acompanhar $n$ estudantes em um passeio sem que seja necessário contratar mais vans.
 \end{enumerate}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=.35\linewidth]{van.png}
-\caption{Fonte: \url{http://desplugada.ime.unicamp.br}}
-\end{figure}
 
 \end{task}
 
@@ -821,7 +800,11 @@ Para resolver as duas atividades anteriores você deve ter utilizado apenas algu
 
 Na atividade Um professor em cada van você deve ter utilizado o recurso de arredondar para cima para descobrir o número mínimo de professores necessários para acompanhar a turma. Por exemplo, se $30$ alunos quiserem participar de uma viagem, calculamos . Logo, precisamos de mais de $2$ professores, ou seja, $3$. Matematicamente, dizemos que obtivemos o menor número inteiro maior ou igual ao resultado da divisão. Informalmente, dizemos que estamos "arredondando para cima". Porém, o Portugol (e outras linguagens de programação) não entende o comando "arredonde para cima"{} ou "obtenha o menor número inteiro maior ou igual". Então, como poderíamos descrever para o computador esse processo?
 
-Para fazer isso, podemos utilizar duas operações que a maioria das linguagens de programação oferece: quociente da divisão (representada por "\verb|/|") e resto da divisão entre dois números inteiros (representada por "\verb|%|"). A operação \verb|%| só pode ser realizada entre dois números inteiros e também retorna como resultado um número inteiro. Já a operação \verb|/| retorna um número real como quociente se os valores envolvidos forem números reais e a parte inteira do quociente se os números envolvidos forem inteiros. Por exemplo, \verb|9/4| terá como resultado $2$, enquanto que \verb|9%4| terá como resultado $1$ e \verb|7.2/4.8| terá como resultado $1.5$.
+Para fazer isso, podemos utilizar duas operações que a maioria das linguagens de programação oferece: quociente da divisão (representada por "\verb|/|") e resto da divisão entre dois números inteiros (representada por "\verb|%|").
+
+A operação \verb|/| retorna um número real igual ao quociente da divisão se os valores envolvidos forem números reais, caso todos sejam números inteiros, ela retorna a parte inteira do quociente. Por exemplo, \verb|7.2/4.8| terá como resultado $1.5$ e \verb|9/4| terá como resultado $2$.
+
+Já a operação \verb|%| só pode ser realizada entre dois números inteiros e também retorna como resultado um número inteiro. Já . , \verb|9%4| terá como resultado $1$ e \verb|7.2/4.8| terá como resultado $1.5$ e a expressão \verb|7.2%4| não será compreendida.
 
 No caso do problema posto na atividade, devemos adicionar uma van se a divisão do número de interessados por 13 tiver resto maior do que zero. Em Portugol, uma possibilidade seria essa:
 
@@ -831,7 +814,7 @@ No caso do problema posto na atividade, devemos adicionar uma van se a divisão 
 \includegraphics[width=.7\linewidth]{algoritmos2}
 \end{figure}
 
-Veja que esse algoritmo primeiro considera que o número mínimo de professores é igual ao resultado inteiro (pois a variável n é do tipo inteiro) da divisão do número de interessados por $13$. Depois, se o resto da divisão por $13$ for maior do que zero, o algoritmo soma $1$ ao número mínimo de professores.
+Veja que esse algoritmo primeiro considera que o número mínimo de professores é igual ao resultado inteiro (veja que a variável n é do tipo inteiro) da divisão do número de interessados por $13$. Depois, se o resto da divisão por $13$ for maior do que zero, o algoritmo soma $1$ ao número mínimo de professores.
 
 \explore{Condicionais}
 \label{comp-exp4}
@@ -875,20 +858,17 @@ Um exemplo simples e interessante que pode ser usado tanto para avaliar o trabal
 \item $500$ litros, $500$ litros, $250$ litros
 
 \item $600$ litros, $600$ litros, $600$ litros
-
-\item $800$ litros, $800$ litros, $800$ litros
-
 \end{enumerate}
-
 }{1}
 \end{answer}
-
 \begin{answer}{Cubos conectados}
 {
-\begin{enumerate}\setcounter{enumi}{4}
+\begin{enumerate}
+\item $800$ litros, $800$ litros, $800$ litros
+
 \item Existem muitas maneiras de resolver esse problema. Duas delas são discutidas na seção Organizando a seguir. Sugerimos que as soluções dadas pelos estudantes sejam comparadas levando em conta as discussões propostas a seguir.
 \end{enumerate}
-}{0}
+}{1}
 \end{answer}
 
 As sentenças que fazem uso do condicional (aqui chamadas simplesmente de condicionais) são um componente central em qualquer linguagem de programação e, na verdade, em boa parte dos recursos computacionais que utilizamos explícita ou implicitamente.
@@ -923,7 +903,7 @@ Por questões de logística, a empresa atualmente enche sempre $3$ cubos conecta
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.5\linewidth]{cubos1}
+\includegraphics[width=.8\linewidth]{cubos1}
 \end{figure}
 
 Por exemplo, se forem injetados $600$ litros de detergente, os cubos ficarão como mostrado a seguir, com $500$ litros no primeiro, $100$ litros no segundo e $0$ no terceiro.
@@ -931,7 +911,7 @@ Por exemplo, se forem injetados $600$ litros de detergente, os cubos ficarão co
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.5\linewidth]{cubos2}
+\includegraphics[width=.8\linewidth]{cubos2}
 \end{figure}
 
 \begin{enumerate}
@@ -1028,7 +1008,7 @@ As duas atividades propostas abordam conteúdos com grande potencial do ponto de
 
 A intenção do exemplo mostrado no \textbf{Organizando} é promover uma discussão, através de um algoritmo simples, sobre duas práticas comuns em estruturas de repetição: o uso de uma variável como contador e a passagem de valores entre variáveis.
 
-A segunda atividade abre portas para muitos outros exemplos interessantes envolvendo sequências numéricas. Se seus estudantes estiverem com dificuldades, pode ser um bom momento para explorar sequências numéricas diversas e fixar alguns conceitos tratados até aqui. As sequências que são descritas via termo geral são mais simples do que as que são definidas via relação de recorrência. Alguns exemplos que são abordados em outros módulos do Livro Aberto são: Progressão Aritmética de primeira e segunda orgem, Progressão Geométrica, Números Triangulares e Números Hexagonais.
+A segunda atividade ele abre portas para muitos outros exemplos interessantes envolvendo sequências numéricas. Se seus estudantes estiverem com dificuldades, pode ser um bom momento para explorar sequências numéricas diversas e fixar alguns conceitos tratados até aqui. As sequências que são descritas via termo geral são mais simples do que as que são definidas via relação de recorrência. Alguns exemplos que são abordados em outros módulos do Livro Aberto são: Progressão Aritmética de primeira e segunda orgem, Progressão Geométrica, Números Triangulares e Números Hexagonais.
 }
 \end{texto}
 
@@ -1080,7 +1060,7 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 
 \item Sim, é primo.
 
-\item Se a turma notou a possibilidade de procurar divisores apenas até $\sqrt{n}$, serão necessárias aproximadamente $2000$ verificações, ou seja, $2000$ segundos, que equivale a mais de meia hora. Se a turma tivesse uma lista de números primos, seria necessário apenas cerca de $300$ verificações, ou seja, $5$ minutos.
+\item Se a turma notou a restrição de procurar divisores até , serão necessárias aproximadamente $2000$ verificações, ou seja, $2000$ segundos, que equivale a mais de meia hora. Se a turma tivesse uma lista de números primos, seria necessário apenas cerca de $300$ verificações, ou seja, $5$ minutos.
 \end{enumerate}
 }{0}
 \end{answer}
@@ -1095,9 +1075,10 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 \end{itemize}
 }{1}{1}
 \end{objectives}
+\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{A sequência de Collatz}
 {
-\textbf{Dificuldades}: este problema não deve oferecer muitas dificuldades do ponto de vista matemático. Do ponto de vista computacional, ele também é mais simples que a ativdiade anterior e essa escolha foi intencional, para servir como uma atividade de fixação.
+\textbf{Dificuldades}: este problema propõe uma sequência que é obtida de forma recursiva e os estudantes podem não estar acostumados com esse tipo de sequência numérica. Do ponto de vista computacional, ele também é mais simples que a atividade anterior e essa escolha foi intencional, para servir como uma atividade de fixação.
 
 \textbf{Organização da turma}: por ter objetivo maior de fixação e pela simplicidade matemática do problema, sugerimos que essa atividade seja resolvida individualmente ou em duplas, após uma discussão inicial com a turma toda para que se compreenda o pedido descrito no problema.
 
@@ -1106,6 +1087,7 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 \textbf{Para o laboratório}: com o algoritmo em mãos, várias explorações podem ser feitas, por exemplo: você consegue encontrar um valor para  que resulte em uma sequência de tamanho exatamente igual a 7? Qual é o número inteiro menor do que 50 que resulta na sequência com o maior número de termos?
 }{1}{1}
 \end{sugestions}
+\marginpar{\vspace{-1em}}
 \begin{answer}{A sequência de Collatz}
 {
 \begin{enumerate}
@@ -1137,17 +1119,12 @@ Esse é um exemplo simples de uma estrutura de repetição, que poderia ser feit
 \begin{task}{É primo ou não?}
 Você deve se lembrar que um número é chamado de primo se tiver exatamente dois divisores inteiros positivos diferentes: $1$ e ele mesmo. Por exemplo, o número $9$ não é primo, pois seus divisores são $1$, $3$ e $9$. Já o número $13$ é primo. O número 1 não é primo por que possui um único divisor inteiro positivo.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{primos.png}
-\end{figure}
-
 Até hoje, não existem métodos realmente rápidos para identificar se um número é primo ou não. Basicamente, todos os métodos existentes baseiam-se em testar se o número dado deixa resto zero quando é dividido pelos números menores do que ele. Imagina a quantidade de repetições necessárias para verificar se o número $4.000.037$ é primo!
 
 \begin{enumerate}
-\item Crie um algoritmo que verifica se um número é primo ou não.
+\item Descreva um algoritmo que verifica se um número é primo ou não.
 
-\item Em conjunto com toda a turma escrevam um dos algoritmos criados na questão $1$ em Portugol.
+\item Em conjunto com toda a turma, escrevaa um dos algoritmos criados na questão $1$ em Portugol.
 
 \item Utilize esse algoritmo para verificar se o número $4.000.037$ é primo.
 
@@ -1159,7 +1136,7 @@ Você deve ter notado que o algoritmo responde quase que imediatamente se o núm
 \end{task}
 
 \begin{reflection}
-Embora muitas checagens precisem ser feitas, não é necessário dividir um número dado por todos os números naturais menores do que ele para verificar se ele é primo. Várias mudanças podem ser feitas nesse processo para torná-lo mais eficiente. Discuta com a turma quais poderiam ser essas mudanças.
+Embora muitas checagens precisem ser feitas, não é necessário dividir um número dado por todos os números naturais menores do que ele para verificar se ele é primo. Várias melhorias podem ser feitas nesse processo para torná-lo mais eficiente. Discuta com a turma essas melhorias.
 \end{reflection}
 
 \begin{task}{A sequência de Collatz}
@@ -1224,6 +1201,12 @@ Quais valores serão escritos por esse algoritmo se usarmos \verb|n=6|? E \verb|
 Você conhece essa sequência numérica?
 \end{reflection}
 
+O aspecto que é importante compreender neste algoritmo é o uso das variáveis \verb|i| e \verb|an|.
+
+Note que a variável \verb|i| começa com o valor \verb|3| e ela aparece na condição que determina quantas vezes o comando enquanto vai ser repetido. Ao final dos comandos que são executados dentro do enquanto, o valor de \verb|i| é incrementado em \verb|1| unidade, até que ela fica maior do que n e o enquanto para de ser repetido. O papel dessa variável é servir como um contador para o enquanto.
+
+Já a variável an tem uma função diferente. Para entendê-la, é necessário olhar para os comandos das linhas \verb|12|, \verb|15| e \verb|16| em conjunto. Na linha \verb|12|, a variável an recebe o valor de a1+a2 e depois o seu conteúdo é escrito, ou seja, \verb|an| é o próximo termo da sequência. Porém, o que ocorre nas linhas \verb|15| e \verb|16|?
+
 \clearmargin
 \begin{texto}
 {\def\currentcolor{session2}
@@ -1245,12 +1228,6 @@ Você conhece essa sequência numérica?
 }
 \end{texto}
 
-O aspecto que é importante compreender neste algoritmo é o uso das variáveis \verb|i| e \verb|an|.
-
-Note que a variável \verb|i| começa com o valor \verb|3| e ela aparece na condição que determina quantas vezes o comando enquanto vai ser repetido. Ao final dos comandos que são executados dentro do enquanto, o valor de \verb|i| é incrementado em \verb|1| unidade, até que ela fica maior do que n e o enquanto para de ser repetido. O papel dessa variável é servir como um contador para o enquanto.
-
-Já a variável \verb|an| tem uma função diferente. Para entendê-la, é necessário entender os comandos das linhas \verb|12|, \verb|15| e \verb|16| em conjunto. Na linha \verb|12|, a variável \verb|an| recebe o valor de \verb|a1+a2| e depois o seu conteúdo é escrito, ou seja, \verb|an| é o próximo termo da sequência. Porém, o que ocorre nas linhas \verb|15| e \verb|16|?
-
 
 O que está sendo feito ali é "avançando na sequência". Nesse ponto, as variáveis \verb|a1| e \verb|a2| deixam de ser o primeiro e segundo termos e passam a ser os próximos: \verb|a1| recebe o valor do \verb|a2| e \verb|a2| recebe o valor de \verb|an|, como se estivéssemos "andando"{} na sequência. Dessa forma, na próxima repetição, \verb|a1| e \verb|a2| serão os dois últimos valores calculados e an será a soma deles, ou seja, o próximo termo.
 
@@ -1268,6 +1245,7 @@ Compreender os conceitos básicos de uma linguagem de programação, como repeti
 }{1}{1}
 \end{objectives}
 
+\marginpar{\vspace{-1em}}
 \begin{sugestions}{Imposto de renda retido na fonte}
 {
 \textbf{Conexões}: a atividade tem conexões com funções definidas por partes e continuidade de funções, além de estar relacionada com tópicos abordados no módulo de Educação Financeira.
@@ -1415,13 +1393,13 @@ Por exemplo, para um salário de R\$ $2.000{,}00$, começamos identificando que 
 \end{task}
 
 \begin{task}{Xadrez}
-
+\textit{Fonte: Olimpíada Brasileira de Informática}
 No tabuleiro de xadrez, a casa na linha 1, coluna 1 (canto superior esquerdo) é sempre branca e as cores das casas se alternam entre branca e preta. Dessa forma, como o tabuleiro tradicional tem oito linhas e oito colunas, a casa na linha 8, coluna 8 (canto inferior direito) será também branca. Neste problema, entretanto, queremos saber a cor da casa no canto inferior direito de um tabuleiro com dimensões quaisquer: L linhas e C colunas. No exemplo da figura, para L=6 e C=9, a casa no canto inferior direito será preta.
 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.35\linewidth]{xadrez}
+\includegraphics[width=.8\linewidth]{xadrez}
 \end{figure}
 
 \begin{enumerate}
@@ -1475,12 +1453,13 @@ Você conseguiria modificar o seu algoritmo de modo que ele possa ser usado para
 Você pode assumir que essas quantidades sempre serão uma potência de $2$ ($2, 4, 8, 16, 32, 64$, etc).
 \end{reflection}
 
-
+\know{Um projeto com bolinhas e vetores}
+\label{comp-know3}
 
 \clearmargin
 \begin{texto}
 {
-Professor, esta atividade foi proposta com o objetivo de oferecer um problema desafiador e interessante, mas ainda acessível para os estudantes que tenham sido bem sucedidos nas atividades propostas na seção Praticando. A atividade deve ser encarada como um projeto, que exigirá uma maior dedicação de tempo dos estudantes.
+Professor, esta atividade foi proposta com o objetivo de oferecer um problema desafiador e interessante, mas ainda acessivel para os estudantes que tenham sido bem sucedidos nas atividades propostas na seção Praticando. A atividade deve ser encarada como um projeto, que exigirá uma maior dedicação de tempo dos estudantes.
 
 Do ponto de vista computacional, o problema oferece uma oportunidade interessante para que os estudantes aprendam a utilizar vetores. Do ponto de vista matemático, o problema pode ser relacionado com álgebra booleana (ao pensarmos nas cores como os valores 0 e 1) e, surpreendemente, com o Triângulo de Pascal.
 
@@ -1488,19 +1467,16 @@ Uma referência sobre este problema, discutindo a sua solução matemática e co
 }
 \end{texto}
 
-\newpage
-
-\begin{project}
-\label{comp-know3}
-
 Para o encerramento desta parte, escolhemos um problema que foi sugerido na Olimpíada Brasileira de Informática. Este problema, além do desafio matemático envolvido na sua resolução, vai exigir que você aprenda um novo conceito muito importante em todas as linguagens de programação. Mas vamos começar com o problema.
 
 \textbf{Triângulo de bolinhas}: Dois amigos inventaram um passatempo com bolas pretas e brancas. Elas são colocadas uma por vez na mesa, de acordo com uma regra fixa: no início, são colocadas N bolas formando a primeira fileira; em seguida, um triângulo é formado, fileira a fileira, de modo que ao se colocar uma bola na nova fileira, ela ficará encostada em duas bolas da fileira anterior e sua cor será:
 
-\begin{enumerate}
+\begin{itemize}
 \item Preta, se estiver encostada em duas bolas de mesma cor;
-\item Branca, se estiver encostada em duas bolas de cores diferentes.
-\end{enumerate}
+Branca, se estiver encostada em duas bolas de cores diferentes.
+
+\item O passatempo acaba quando a bolinha do topo é colocada. A figura abaixo ilustra a formação de um triângulo para N=5.
+\end{itemize}
 
 \begin{figure}[H]
 \centering
@@ -1510,28 +1486,13 @@ Para o encerramento desta parte, escolhemos um problema que foi sugerido na Olim
 
 A partir deste contexto, é possível colocar várias perguntas que podem ser respondidas com auxílio da matemática e da computação. Por exemplo:
 
-\begin{enumerate}
+\begin{itemize}
 \item Dadas as cores das bolinhas da primeira linha, qual será a cor da bolinha do topo?
 \item É possível prever a cor da última bolinha sem precisar construir todas as linhas?
-\end{enumerate}
-
+\end{itemize}
 A criação de algoritmos que permitam a investigação dessas perguntas depende do uso de um recurso existente em todas as linguagens de programação, mas que não discutiremos neste livro. Este recurso é chamado vetor em português, ou array em inglês. Ele tem algumas semelhanças com o conceito de vetor que são estudadas nas aulas de matemática e física, mas seu uso em computação tem algumas peculiaridades que precisam ser compreendidas para seu uso efetivo. De maneira simplificada, um vetor é uma variável que contém várias variáveis de um mesmo tipo dentro e essas variáveis podem ser acessadas de acordo com a sua posição no vetor. Você pode aprender mais sobre vetores em Portugol com o vídeo \url{youtu.be/5oQrDq8qqfg}.
 
 Nossa sugestão é que este problema seja encarado como um projeto, ou seja, que não será resolvido em uma ou duas aulas, mas exigirá de você (e de seus colegas) muito estudo, análises e discussões. Bom trabalho!
-% 
-\end{project}
-
-
-
-%Inicio do capítulo 2
-%criando a página de capa
-\renewcommand\chapterwhat{Aplicações do pensamento computacional e de linguagens de programação na exploração de problemas matemáticos.}
-\renewcommand\chapterbecause{Dominar uma linguagem de programação nos permite explorar e resolver problemas matemáticos de maneiras diferentes. Assim, podemos entender o poder de ferramentas computacionais e porque elas são tão usadas em todas as áreas do conhecimento atualmente.} 
-\chapter{Pensamento Computacional - Aplicações}
-\label{computacional-chap2}
-\mbox{}\thispagestyle{empty}\clearpage
-%fim da capa
-
 
 \begin{paginatexto}{Parte II}
 
@@ -1575,7 +1536,7 @@ Nesta seção propomos uma investigação sobre a representação binária de n�
 
 Como um todo, esta seção leva 2 aulas para ser realizada, sem considerar as sugestões deixadas no \hyperref[comp-know1]{Para Saber Mais}.
 
-Sugerimos, na introdução, o vídeo Hit dos Bits, da coleção \href{http://www.m3.ime.unicamp.br}{Matemática Multimídia}. O vídeo faz uma apresentação geral do sistema de númeração binário, mas caso a sua utilização não seja viável, o professor pode fazer a introdução expositivamente a partir das questões propostas.
+Sugerimos, na introdução, o vídeo Hit dos Bits, da coleção \href{https://m3.ime.unicamp.br/}{Matemática Multimídia}. O vídeo faz uma apresentação geral do sistema de númeração binário, mas caso a sua utilização não seja viável, o professor pode fazer a introdução expositivamente a partir das questões propostas.
 
 Do ponto de vista matemático, os conteúdos utilizados aqui são simples: potências de 2, somas e subtrações. Do ponto de vista computacional, utilizaremos repetições e condicionais para atingir o objetivo final.
 
@@ -1591,7 +1552,7 @@ Esta seção tem um relevância maior para o contexto computacional por conta do
 \begin{itemize}
 \item O objetivo principal desta atividade é familiarizar os estudantes com a base binária e com o método de conversão de um número dado na base decimal para a base binária que será usado para criar o algoritmo final.
 
-\item Aplicar o pensamento computacional e formas sistemáticas de representação de um algoritmo para criar soluções para problemas relacionados a conteúdos matemáticos
+\item Aplicar o pensamento computacional e formas sistemáticas de representação de um algoritmo para criar ~soluções para problemas relacionados a conteúdos matemáticos
 \end{itemize}
 }{1}{2}
 \end{objectives}
@@ -1615,19 +1576,19 @@ Esta seção tem um relevância maior para o contexto computacional por conta do
 \end{answer}
 \clearmargin
 \clearmargin
-\begin{objectives}{Zeros e Uns}
+\begin{objectives}{0s e 1s}
 {
 Aplicar o pensamento computacional e formas sistemáticas de representação de um algoritmo para criar soluções para problemas relacionados a conteúdos matemáticos.
 }{1}{2}
 \end{objectives}
-\begin{sugestions}{Zeros e Uns}
+\begin{sugestions}{0s e 1s}
 {
 \textbf{Duração}: 1 aula no laboratório de informática.
 
 \textbf{Enriquecimento da discussão}: uma vez obtido o algoritmo, você pode propor perguntas adicionais para os estudantes de modo a investigar algumas propriedades dos números escritos na base $2$. Alguns exemplos são: como podemos identificar números pares e ímpares na base $2$? O que acontece com a representação binária de um número quando dobramos o seu valor? Você observa algum padrão nos algarismos da representação binária dos números de $0$ a $31$?
 }{1}{2}
 \end{sugestions}
-\begin{answer}{Zeros e Uns}
+\begin{answer}{0s e 1s}
 {
 \begin{enumerate}
 \item 10010001
@@ -1640,11 +1601,9 @@ Aplicar o pensamento computacional e formas sistemáticas de representação de 
 \end{answer}
 \explore{Números binários}
 \label{comp-exp6}
-
-
 \subsection{Dois estados}
 
-Na atividade sobre alfabeto Braile no módulo sobre Contagem, você conheceu um pouco sobre esta forma de escrita desenvolvida para cegos. Basicamente, você viu que as letras em Braile são representadas por um conjunto de 6 pontos dispostos em 2 colunas e 3 linhas, de modo que o estado de cada ponto pode ser MARCADO (pontos maiores na figura abaixo ou em relevo quando impressos) ou NÃO MARCADO (pontos menores na imagem abaixo ou sem relevo quando impressos).
+Na atividade sobre alfabeto Braile no módulo sobre Contagem, você conheceu um pouco sobre esta forma de escrita desenvolvida para cegos. Basicamente, você viu que as letras em Braile são representadas por um conjunto de 6 pontos dispostos em 2 colunas e 3 linhas, de modo que o estado de cada ponto pode ser marcado (pontos maiores na figura abaixo, em relevo quando impressos) ou não marcado (pontos menores na imagem abaixo, sem relevo quando impressos).
 
 \begin{figure}[H]
 \centering
@@ -1654,15 +1613,13 @@ Na atividade sobre alfabeto Braile no módulo sobre Contagem, você conheceu um 
 
 A questão resolvida no módulo sobre Contagem foi: quantos caracteres diferentes podemos montar com a estrutura do alfabeto Braile?
 
-Para resolver a esta questão, usamos basicamente a ideia de que cada pontinho pode assumir dois estados: com relevo ou sem relevo. Dessa forma, para cada um dos 6 pontinhos temos duas possibilidades, o que leva a: $2\cdot2\cdot2\cdot2\cdot2\cdot2=2^6=64$ caracteres ($63$ se excluírmos o caso em que nenhum pontinho foi marcado).
+Para resolver a esta questão, usamos basicamente a ideia de que cada pontinho é independente e pode assumir dois estados: com relevo ou sem relevo. Dessa forma, para cada um dos 6 pontinhos temos duas possibilidades, o que leva a: $2\cdot2\cdot2\cdot2\cdot2\cdot2=2^6=64$ caracteres ($63$ se excluírmos o caso em que nenhum pontinho foi marcado).
 
 O que vamos explorar nesta seção é uma relação do alfabeto Braile com a maneira como computadores guardam informação.
 
-A relação vem de outra característica: assim como o alfabeto Braile, computadores utilizam apenas dois estados para armazenar informações, os famosos 0 e 1 (ligado e desligado, carregado e descarregado, verdadeiro e falso).
+A relação vem de outra característica: assim como o alfabeto Braile, computadores utilizam apenas dois estados para armazenar informações, os famosos 0 e 1 (ligado e desligado, carregado e descarregado, verdadeiro e falso, etc).
 
-\begin{research}
 O vídeo \href{https://m3.ime.unicamp.br/recursos/1116}{Hit dos Bits}, da coleção Matemática Multimídia explica como o sistema de representação binário é usado por computadores.
-\end{research}
 
 Nesta seção, vamos analisar o sistema de representação binária com o objetivo de escrever um algoritmo que converta um número dado na base decimal para a base binária. Mas para isso, é importante compreendermos bem como essa conversão funciona.
 
@@ -1673,7 +1630,7 @@ No sistema de numeração decimal, ou de base $10$, cada algarismo de um número
 \begin{align*}
 308&=300+0+8\\
 308&=3\cdot100+0\cdot10+8\cdot1\\
-308&=3\cdot10^2+0\cdot10^1+8\cdot10^0
+308&=3\cdot10^2+-\cdot10^1+8\cdot10^0
 \end{align*}
  
 No sistema de numeração binário, ou de base $2$, temos apenas dois algarismos disponíveis, o $0$ e o $1$, e a posição de cada algarismo determina qual potência de $2$ ele está multiplicando. Por exemplo, o número $1101$, na representação binária, pode ser convertido para a base decimal da seguinte forma:
@@ -1689,9 +1646,9 @@ Por exemplo, o $20$ pode ser escrito com $16+4$. Note que $16$ e $4$ são ambos 
 \begin{align*}
 20&=16+4\\
 20&=2^4+2^2\\
-20&=1\cdot2^4+1\cdot2^2\\
-20&=1\cdot2^4+1\cdot2^2\\
-20&=1\cdot2^4+0\cdot2^3+1\cdot2^2+0\cdot2^1+0\cdot2^0
+20&1\cdot2^4+1\cdot2^2\\
+20&1\cdot2^4+1\cdot2^2\\
+20&1\cdot2^4+0\cdot2^3+1\cdot2^2+0\cdot2^1+0\cdot2^0
 \end{align*}
 
 Assim, o número $20$ é representado na base binária por $10100$.
@@ -1724,7 +1681,7 @@ Agora, vamos pensar sobre esse procedimento de forma a sistematizá-lo em um alg
 \end{enumerate}
 \end{task}
 
-\subsection{Zeros e Uns}
+\subsection{0s e 1s}
 
 Existe mais de uma maneira de converter um número inteiro da base decimal para a base binária e o método que vamos utilizar se baseia em encontrar quais potências de 2 são menores do que o número que se deseja representar.
 
@@ -1732,9 +1689,9 @@ Para entender essa abordagem, precisamos levar em conta uma propriedade das pot�
 
 Não demonstraremos essa propriedade aqui, mas isso pode ser feito com auxílio de progressões geométricas.
 
-O que essa propriedade nos permite concluir é que se uma potência de $2$ é menor do que um determinado número, ela necessariamente deve aparecer na representação binária desse número. Vejamos um exemplo com o número $46$.
+O que essa propriedade nos permite concluir é que se uma potência de $2$ é menor do que um determinado número, ela necessariamente deve aparecer na representação binária desse número. Vejamos um exemplocom o número $46$.
 
-Começamos listando as potências de $2$ até que elas sejam maiores do que $46$: $1$, $2$, $4$, $8$, $16$, $32$ e $64$. Como $64$ é maior do que $46$, ele não vai aparecer na representação binária desse número. Mas como $32$ é menor, ele vai aparecer. Podemos escrever o seguinte:
+Começamos listando as potências de $2$ até que elas sejam maiores do que $46$: $1$, $2$, $4$, $8$, $16$, $32$ e $64$. Como $64$ é maior do que $46$, ele não vai entrar na representação binária desse número. Mas como $32$ é menor, ele vai entrar. Podemos escrever o seguinte:
 
 \begin{equation*}
 46=32+14=2^5+14
@@ -1768,7 +1725,7 @@ Finalmente, indicando o 1 como multiplicador de cada uma das potências acima e 
  
 Portanto, a representação binária de $46$ é dada por $101110$.
 
-\begin{task}{Usando apenas zeros e uns}
+\begin{task}{0s e 1s}
 \begin{enumerate}
 \item Use o procedimento descrito acima para obter a representação binária do número $145$.
 
@@ -1778,7 +1735,7 @@ Portanto, a representação binária de $46$ é dada por $101110$.
 \end{enumerate}
 \end{task}
 
-\arrange{Usando zeros e uns}
+\arrange{0s e 1s}
 \label{comp-arr6}
 
 A base binária é importante não apenas pelo seu uso em computação, mas também pela sua simplicidade: o fato de usarmos apenas 2 símbolos (0s e 1s) para representar um número qualquer confere a ela algumas propriedades que podem ser usadas em diversos outros contextos.
@@ -2210,13 +2167,13 @@ Quando temos uma representação visual em mãos, é fácil dizer se um ponto da
 
 \begin{task}{Tem sinal? - parte 1}
 \begin{enumerate}
-\item Considere que uma nova torre com alcance de $3$ quilômetros foi instalada no ponto de $(1;-1)$. Represente essa nova torre e o seu alcance na imagem acima. O ponto marcado com um x está dentro do alcance dessa nova torre?
+\item Considere que uma nova torre com alcance de $3$ quilômetros foi instalada no ponto de $(1;-1)$. Represente essa nova torre e o seu alcance na imagem acima. O ponto $x$ está dentro do alcance dessa nova torre?
 
-\item Considere agora que uma terceira torre com alcance de $4$ quilômetros foi instalada no ponto de $(-1;4)$. Represente essa nova torre e o seu alcance na imagem acima. O ponto marcado com um x está dentro do alcance dessa nova torre?
+\item Considere agora que uma terceira torre com alcance de $4$ quilômetros foi instalada no ponto de $(-1;4)$. Represente essa nova torre e o seu alcance na imagem acima. O ponto $x$ está dentro do alcance dessa nova torre?
 
 Por mais que a sua representação tenha sido feita com cuidado, é possível que você tenha ficado com dúvidas sobre a resposta para a questão \titem{b)}, não?
 
-\item Como podemos decidir, a partir das coordenadas da posição do celular e das torres em seu entorno, se o ponto está dentro do alcance de cada uma das torres?
+\item Como podemos decidir, a partir das coordenadas da posição do celular e das torres em seu entorno, se o ponto $x$ está dentro do alcance de cada uma das torres?
 
 Embora possa haver limitações em termos de precisão ou de dificuldade em desenhar, nós podemos usar representações visuais para resolver questões, especialmente as que envolvem objetos geométricos. Porém, computadores não contam com esse recurso. De maneira geral, objetos geométricos são tratados por meio de suas coordendas e questões como essa (se um ponto está dentro ou fora de uma circunferência) são respondidas com o auxílio de alguns cálculos.
 
@@ -2282,7 +2239,7 @@ Agora que você já sabe como resolver esse problema a partir das coordendadas d
 Mas antes de começar a implementar a solução em Portugol, vejamos alguns detalhes da linguagem que pode afetar a sua solução:
 
 \begin{itemize}
-\item Para elevar um número ao quadrado ou extrair a sua raiz quadrada, você vai precisar usar comandos que não fazem parte das funcionalidades básicas do Portugol, mas estão disponíveis como parte de uma biblioteca chamada Matematica. Isso é simples, e de fato está explicado na seção sobre o método da bissecção ou pode ser entendido com auxílio \href{https://www.youtube.com/watch?v=rs8ihN08bgU&feature=youtu.be}{deste vídeo}. Mas para evitar esses pontos, podemos simplesmente usar o fato de que $x^=x\cdot x$;
+\item Para elevar um número ao quadrado ou extrair a sua raiz quadrada, você vai precisar usar comandos que não fazem parte das funcionalidades básicas do Portugol, mas estão disponíveis como parte de uma biblioteca chamada Matematica. Isso é simples, e de fato está explicado na seção sobre o método da bissecção ou pode ser entendido com auxílio \href{https://www.youtube.com/watch?v=rs8ihN08bgU&feature=youtu.be}{deste vídeo}. Mas para evitar esses pontos, podemos simplesmente usar o fato de que $x^2 = x \cdot x$;
 \item Os símbolos de desigualdades disponíveis em Portugol são: \verb|<| (menor que), \verb|>| maior que, \verb|<=| (menor ou igual a) e \verb|>=| (maior ou igual a)
 \end{itemize}
 

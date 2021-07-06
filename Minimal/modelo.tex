@@ -1,0 +1,194 @@
+%Define ilustração da capa do capítulo
+\ifnum\aluno=1 
+% Versão do aluno
+\renewcommand\chapterillustration{abertura-capitulo}
+\else
+% Versão do professor
+\renewcommand\chapterillustration{abertura-capitulo-professor}
+\fi
+
+% O quê
+\renewcommand\chapterwhat{}
+
+% Por quê
+\renewcommand\chapterbecause{}
+
+
+\chapter{Nome do capítulo}
+
+
+% Página de créditos
+\mbox{}\thispagestyle{empty}\clearpage
+
+\thispagestyle{empty}
+
+\begin{center}
+Projeto: LIVRO ABERTO DE MATEMÁTICA
+
+\noindent \begin{tabular}{lcccr}
+\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
+\end{tabular}
+\end{center}
+
+\vspace*{.3cm}
+
+Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+
+Versão digital do capítulo:
+
+\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/GE301.html}
+
+
+\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+Título: & Nome do capítulo\\
+\\
+Ano/ Versão: & \the\year / versão x.x de \today\\
+\\
+Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+\\
+Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+\\
+Produção:& Associação Livro Aberto\\
+\\
+Coordenação:& Fabio Simas, \\
+            & Augusto Teixeira (livroaberto@impa.br)\\
+\\
+  Autores: & Autor 1,\\
+           & Autor 2,\\
+             \\
+Revisão: & Revisor \\
+                
+\\
+Design: & Andreza Moreira (Tangentes Design) \\
+\\
+  Ilustrações: & --- \\ 
+\\
+Gráficos: & --- \\
+		    
+
+\\
+  Capa: & Foto de ---, no --- \\
+  		& \url{endereço da imagem} \\
+
+\end{tabular}
+
+\begin{figure}[b]
+\begin{minipage}[l]{5cm}
+\centering
+
+{\large Licença:}
+
+  \includegraphics[width=3.5cm]{cc-by-sa1}
+\end{minipage}\hfill
+\begin{minipage}[c]{5cm}
+\centering
+{\large Desenvolvido por}
+
+\includegraphics[width=2.5cm]{logo-associacao.jpg}
+\end{minipage}
+\begin{minipage}[r]{5cm}
+\centering
+
+{\large Patrocínio:}
+  \vspace{1em}
+  \includegraphics[width=3.5cm]{itau}
+\end{minipage}
+\end{figure}
+
+
+\mainmatter
+
+
+%%%%%%%%%%% Comandos do material do professor
+
+% Introdução no livro do professor
+\begin{apresentacao}{Título}
+
+
+\end{apresentacao}
+
+\def\currentcolor{session1}
+
+% Objetivos específicos
+\begin{objectives}{}
+{
+
+}{}{}
+\end{objectives}
+
+% Sugestões e Discussões
+\begin{sugestions}{}
+{
+
+}{}{}
+\end{sugestions}
+
+% Resposta
+\begin{answer}{}
+{
+
+}{}
+\end{answer}
+
+%%%%%%%%%%%%%%
+% Observação % As caixas do material do aluno devem ser colocadas antes do código da seção, usando o comando \clearmargin para mudar de páginas
+%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%% Comandos do material do aluno
+
+% Explorando
+\explore{}
+
+% Caixa de atividade
+\begin{task}{}
+
+\end{task}
+
+% Caixa de exemplo
+\begin{example}{}
+
+\end{example}
+
+% Caixa do Você sabia?
+\begin{knowledge}
+
+\end{knowledge}
+
+% Caixa de Observação
+\begin{observation}
+
+\end{observation}
+
+% Caixa de Observação com título
+\begin{observationtitle}{}
+
+\end{observationtitle}
+
+% Caixa de Refletindo
+\begin{reflection}
+
+\end{reflection}
+
+
+% Organizando
+\arrange{}
+
+
+% Praticando
+\practice{}
+
+% Para saber +
+\know{}
+
+% Exercícios
+\exercise
+
+
+\begin{enumerate}
+\item 
+
+\item 
+
+\item 
+\end{enumerate}
