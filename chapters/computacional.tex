@@ -51,7 +51,9 @@ Coordenação: & Fabio Simas, \\
 \\
 Colaboração: & \\
 \\
-Revisor: & Diego Lieban \\
+Revisão: & Diego Lieban \\ 
+         & Larissa Monzon \\
+         & Kátia Rocha \\
 \\
 Design: & Andreza Moreira (Tangentes Design) \\
 \\
@@ -155,7 +157,7 @@ Esse tipo de questão pode ser respondida de forma textual, com auxílio de nota
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=\linewidth]{imagem_01}
+\includegraphics[width=.95\linewidth]{imagem_01}
 \end{figure}
 
 Ao longo do módulo, ao resolver um problema sob o ponto de vista computacional, esperamos que os estudantes vivenciem um movimento que se inicia com descrições textuais e notação matemática, passa por fluxogramas e se completa com uma linguagem de programação.
@@ -1065,7 +1067,7 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 }{0}
 \end{answer}
 \clearmargin
-
+\mspace{-1em}
 \begin{objectives}{A sequência de Collatz}
 {
 \begin{itemize}
@@ -1075,7 +1077,6 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{A sequência de Collatz}
 {
 \textbf{Dificuldades}: este problema propõe uma sequência que é obtida de forma recursiva e os estudantes podem não estar acostumados com esse tipo de sequência numérica. Do ponto de vista computacional, ele também é mais simples que a atividade anterior e essa escolha foi intencional, para servir como uma atividade de fixação.
@@ -1087,7 +1088,6 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 \textbf{Para o laboratório}: com o algoritmo em mãos, várias explorações podem ser feitas, por exemplo: você consegue encontrar um valor para  que resulte em uma sequência de tamanho exatamente igual a 7? Qual é o número inteiro menor do que 50 que resulta na sequência com o maior número de termos?
 }{1}{1}
 \end{sugestions}
-\marginpar{\vspace{-1em}}
 \begin{answer}{A sequência de Collatz}
 {
 \begin{enumerate}
@@ -1245,7 +1245,6 @@ Compreender os conceitos básicos de uma linguagem de programação, como repeti
 }{1}{1}
 \end{objectives}
 
-\marginpar{\vspace{-1em}}
 \begin{sugestions}{Imposto de renda retido na fonte}
 {
 \textbf{Conexões}: a atividade tem conexões com funções definidas por partes e continuidade de funções, além de estar relacionada com tópicos abordados no módulo de Educação Financeira.
@@ -1453,30 +1452,36 @@ Você conseguiria modificar o seu algoritmo de modo que ele possa ser usado para
 Você pode assumir que essas quantidades sempre serão uma potência de $2$ ($2, 4, 8, 16, 32, 64$, etc).
 \end{reflection}
 
-\know{Um projeto com bolinhas e vetores}
-\label{comp-know3}
 
-\clearmargin
-\begin{texto}
+
+
+
+\newpage
+
+\def\currentcolor{cor2}
+\begin{sugestions}{Um projeto com bolinhas e vetores}
 {
 Professor, esta atividade foi proposta com o objetivo de oferecer um problema desafiador e interessante, mas ainda acessivel para os estudantes que tenham sido bem sucedidos nas atividades propostas na seção Praticando. A atividade deve ser encarada como um projeto, que exigirá uma maior dedicação de tempo dos estudantes.
 
 Do ponto de vista computacional, o problema oferece uma oportunidade interessante para que os estudantes aprendam a utilizar vetores. Do ponto de vista matemático, o problema pode ser relacionado com álgebra booleana (ao pensarmos nas cores como os valores 0 e 1) e, surpreendemente, com o Triângulo de Pascal.
 
 Uma referência sobre este problema, discutindo a sua solução matemática e computacional, pode ser encontrada em \url{doi.org/10.1080/0020739X.2015.1109147} (em inglês).
-}
-\end{texto}
+}{1}{1}
+\end{sugestions}
+
+\begin{project}
+\label{comp-know3}
 
 Para o encerramento desta parte, escolhemos um problema que foi sugerido na Olimpíada Brasileira de Informática. Este problema, além do desafio matemático envolvido na sua resolução, vai exigir que você aprenda um novo conceito muito importante em todas as linguagens de programação. Mas vamos começar com o problema.
 
 \textbf{Triângulo de bolinhas}: Dois amigos inventaram um passatempo com bolas pretas e brancas. Elas são colocadas uma por vez na mesa, de acordo com uma regra fixa: no início, são colocadas N bolas formando a primeira fileira; em seguida, um triângulo é formado, fileira a fileira, de modo que ao se colocar uma bola na nova fileira, ela ficará encostada em duas bolas da fileira anterior e sua cor será:
 
-\begin{itemize}
+\begin{enumerate}
 \item Preta, se estiver encostada em duas bolas de mesma cor;
 Branca, se estiver encostada em duas bolas de cores diferentes.
 
 \item O passatempo acaba quando a bolinha do topo é colocada. A figura abaixo ilustra a formação de um triângulo para N=5.
-\end{itemize}
+\end{enumerate}
 
 \begin{figure}[H]
 \centering
@@ -1486,13 +1491,29 @@ Branca, se estiver encostada em duas bolas de cores diferentes.
 
 A partir deste contexto, é possível colocar várias perguntas que podem ser respondidas com auxílio da matemática e da computação. Por exemplo:
 
-\begin{itemize}
+\begin{enumerate}
 \item Dadas as cores das bolinhas da primeira linha, qual será a cor da bolinha do topo?
 \item É possível prever a cor da última bolinha sem precisar construir todas as linhas?
-\end{itemize}
+\end{enumerate}
+
+
+
+
 A criação de algoritmos que permitam a investigação dessas perguntas depende do uso de um recurso existente em todas as linguagens de programação, mas que não discutiremos neste livro. Este recurso é chamado vetor em português, ou array em inglês. Ele tem algumas semelhanças com o conceito de vetor que são estudadas nas aulas de matemática e física, mas seu uso em computação tem algumas peculiaridades que precisam ser compreendidas para seu uso efetivo. De maneira simplificada, um vetor é uma variável que contém várias variáveis de um mesmo tipo dentro e essas variáveis podem ser acessadas de acordo com a sua posição no vetor. Você pode aprender mais sobre vetores em Portugol com o vídeo \url{youtu.be/5oQrDq8qqfg}.
 
 Nossa sugestão é que este problema seja encarado como um projeto, ou seja, que não será resolvido em uma ou duas aulas, mas exigirá de você (e de seus colegas) muito estudo, análises e discussões. Bom trabalho!
+
+\end{project}
+
+%Inicio do capítulo 2
+%criando a página de capa
+\renewcommand\chapterwhat{Aplicações do pensamento computacional e de linguagens de programação na exploração de problemas matemáticos.}
+\renewcommand\chapterbecause{Dominar uma linguagem de programação nos permite explorar e resolver problemas matemáticos de maneiras diferentes. Assim, podemos entender o poder de ferramentas computacionais e porque elas são tão usadas em todas as áreas do conhecimento atualmente.} 
+\chapter{Pensamento Computacional - Aplicações}
+\label{computacional-chap2}
+\mbox{}\thispagestyle{empty}\clearpage
+%fim da capa
+
 
 \begin{paginatexto}{Parte II}
 
