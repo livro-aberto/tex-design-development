@@ -1,151 +1,30 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{./abertura-financeira}{./abertura-financeira-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-financeira}
-\else
-\renewcommand\chapterillustration{./abertura-financeira-professor}
-\fi
+\expandtocdepth
 
-\makeatletter
-\ifnum\aluno=1
-\else
-\renewcommand*{\toclevel@section}{1}
-\renewcommand*{\toclevel@subsection}{4}
-\renewcommand*{\toclevel@paragraph}{5}
-\renewcommand*{\toclevel@subparagraph}{6}
+\bigopenningbox
 
-\renewcommand*{\toclevel@exploresec}{2}
-\renewcommand*{\toclevel@practicesec}{2}
-\renewcommand*{\toclevel@arrangesec}{2}
-\renewcommand*{\toclevel@knowsec}{1}
-\renewcommand*{\toclevel@exercisesec}{1}
+\chapterwhat{Educação Financeira em Contextos Escolares (EFCE) é um processo de educar a partir de um conjunto de estratégias e ações desenvolvidas para o contexto escolar, considerando aspectos matemáticos e não matemáticos, didáticos e multidisciplinares, que convide os estudantes a refletirem sobre situações econômicas e financeiras relacionadas com a aquisição, planejamento, utilização e redistribuição do dinheiro, de forma crítica e fundamentada. Abordaremos temas como renda e trabalho, planejamento, orçamento e gestão financeira, consumo, cultura e sustentabilidade; o valor do dinheiro no tempo e suas causas: inflação, câmbio, juros e investimentos; equivalência de capitais e de taxas; tributos e contribuições; previdência e proteção, buscando produzir conexões didáticas com a Educação Básica por meio do ensino de matemática, convidando os estudantes a refletirem sobre possíveis consequências de suas decisões e atitudes frente às suas demandas, necessidades, projetos e realizações em sua vida pessoal, familiar e da sociedade em que vivem.}
 
-\setcounter{tocdepth}{2}
-\fi
-\makeatother
+\chapterbecause{Vivemos diariamente situações financeiras e econômicas que envolvem consumo, poupança, proteção e investimento, em que os nossos desejos, preferências, análises, princípios, valores e escolhas estão presentes e conectadas. Do orçamento financeiro pessoal/familiar aos nossos padrões de consumo; das compras pelos aplicativos às discussões sobre questões demográficas e previdenciárias; das escolhas por produtos sustentáveis ou mais baratos à forma como escolhemos o combustível do automóvel; das nossas decisões sobre onde vamos passar as férias aos planos e estratégias para realizar determinados sonhos, a Educação Financeira aqui abordada será um convite à reflexão sobre situações do dia a dia na busca pelo exercício crítico da cidadania, integrando aspectos matemáticos (em especial da matemática financeira) e não matemáticos (dentre eles os sociais, comportamentais, e ambientais - em especial da psicologia econômica e da sustentabilidade). } 
 
-
-
-
-
-\renewtcolorbox{openningbox}{
-  enhanced,
-%  jigsaw,
-  opacityframe=.3,
-  opacityfill=.3,
-  width=105mm,
-  left=3mm,
-  right=3mm,
-  top=3mm,
-  bottom=.5mm,
-  colback=white,
-  colframe=white,
-  arc=3mm,
-  sharp corners=uphill,
-    % frame empty,
-    % arc = 8pt,
-    lower separated = false,
-    before upper = \tcbsubtitle{O QU\^E?},
-    before lower = \tcbsubtitle{POR QU\^E?},
-    fontupper = \sffamily,
-    fontlower = \sffamily,
-    sharp corners = north,
-    subtitle style = {
-      frame empty,
-      fontupper = \fontsize{13pt}{0}\selectfont\titlefont\bfseries,
-      colback = cor1,
-      coltext = black!70,
-      width = 3.5cm,
-      arc = 8pt,
-      rounded corners = east
-    }
-  }
-
-\def\chapterwhat{Educação Financeira em Contextos Escolares (EFCE) é um processo de educar a partir de um conjunto de estratégias e ações desenvolvidas para o contexto escolar, considerando aspectos matemáticos e não matemáticos, didáticos e multidisciplinares, que convide os estudantes a refletirem sobre situações econômicas e financeiras relacionadas com a aquisição, planejamento, utilização e redistribuição do dinheiro, de forma crítica e fundamentada. Abordaremos temas como renda e trabalho, planejamento, orçamento e gestão financeira, consumo, cultura e sustentabilidade; o valor do dinheiro no tempo e suas causas: inflação, câmbio, juros e investimentos; equivalência de capitais e de taxas; tributos e contribuições; previdência e proteção, buscando produzir conexões didáticas com a Educação Básica por meio do ensino de matemática, convidando os estudantes a refletirem sobre possíveis consequências de suas decisões e atitudes frente às suas demandas, necessidades, projetos e realizações em sua vida pessoal, familiar e da sociedade em que vivem.}
-\def\chapterbecause{Vivemos diariamente situações financeiras e econômicas que envolvem consumo, poupança, proteção e investimento, em que os nossos desejos, preferências, análises, princípios, valores e escolhas estão presentes e conectadas. Do orçamento financeiro pessoal/familiar aos nossos padrões de consumo; das compras pelos aplicativos às discussões sobre questões demográficas e previdenciárias; das escolhas por produtos sustentáveis ou mais baratos à forma como escolhemos o combustível do automóvel; das nossas decisões sobre onde vamos passar as férias aos planos e estratégias para realizar determinados sonhos, a Educação Financeira aqui abordada será um convite à reflexão sobre situações do dia a dia na busca pelo exercício crítico da cidadania, integrando aspectos matemáticos (em especial da matemática financeira) e não matemáticos (dentre eles os sociais, comportamentais, e ambientais - em especial da psicologia econômica e da sustentabilidade). } 
 \chapter{Educação Financeira}
 \label{fin-chap}
 
-\mbox{}\thispagestyle{empty}\clearpage
+%%%% Página de Créditos
 
-\thispagestyle{empty}
+\autorum{Ivail Muniz Junior}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\revisorum{Amarildo Melchiades da Silva}
+\revisordois{Vanessa Matos}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\graficos{Tarso Caldas}
 
-\vspace*{.3cm}
+\versao{1.0}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+\autordacapa{Josh Appel}{Unsplash}{https://unsplash.com/photos/QSipy5RFcSA}
 
-
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Educação Financeira\\
-\\
-Ano/ Versão: & 2020 / versão 1.0 de 17 de novembro 2020\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas, \\
-			&  Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autor: & Ivail Muniz Junior\\
-        
-\\
-Colaboração: & \\
-\\
-Revisão: & Amarildo Melchiades da Silva \\
-         & Vanessa Matos \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & Tarso Caldas (Licenciando da UNIRIO)\\
-\\
-  Capa: & Foto de Josh Appel, no Unsplash \\
-  		& https://unsplash.com/photos/QSipy5RFcSA \\
-
-\end{tabular}
-\vspace{.5cm}
-
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \cleardoublepage
 \def\currentcolor{cor1}
@@ -153,11 +32,9 @@ Gráficos: & Tarso Caldas (Licenciando da UNIRIO)\\
 
 \section{Agradecimentos}
 
-Esse capítulo (que mais parece um livro) de Educação Financeira do Livro Aberto é fruto da articulação entre experiência em sala de aula e pesquisa acadêmica. Gostaria de agradecer a alguns interlocutores que foram construindo comigo ao longo de vários anos as ideais que fundamentam essa obra, muito antes dela sequer ser pensada ou concebida, quer como parceiros de pesquisa nos programas de Pós-graduação do Colégio Pedro II, quer em fóruns sobre Educação Financeira no Brasil e fora dele. Agradeço aos professores Daniel Martins, Rony Barros, Josimar Silva e Andreia Maciel do Colégio Pedro II. Aos professores Amarildo Melchiades, Chang Kuo e Marco Kistemann da UFJF; Arthur B. Powell da Rutgers University. Aos professores Carlos Heitor Campani, Marcos Ávila, Vicente Ferreira e da Economista Margarida Gutierrez do Instituto Coppead/UFRJ. Ao professor e contador Luiz Antônio Ochsendorf, da UFRJ e conselheiro do CRC/RJ; aos professores Fernando Villar e Leo Akio do CapUFRJ; Rafael Novoa e André Silva do IFRJ. Às professoras Cristiane Pessoa e Gilda Guimarães da UFPE. A professora Vanessa Matos pela parceria no curso e na finalização deste
-volume. Aos professores da equipe do Livro Aberto que deram sugestões ao trabalho, em especial a Letícia Rangel, Fábio Simas (Coordenador) e Humberto Bortolossi. Aos meus orientandos Michela Santana, Natasha Cardoso, Vanessa Borges, Wagner Bernardes, Mauricio Quintanilha e Lucas Ribeiro no âmbito dos programas de residência docente, especialização em Educação Matemática e do PROFMAT. A todos os meus alunos da Escola Técnica Estadual João Luiz do Nascimento, do Colégio Pedro II – Campus Centro e do Colégio de São Bento do Rio de Janeiro com os quais tive a honra de conversar, trocar, experimentar e aprender por meio de interações em aulas, bate papos informais, projetos e programas de iniciação científica Júnior. 
+Esse capítulo (que mais parece um livro) de Educação Financeira do Livro Aberto é fruto da articulação entre experiência em sala de aula e pesquisa acadêmica. Gostaria de agradecer a alguns interlocutores que foram construindo comigo ao longo de vários anos as ideais que fundamentam essa obra, muito antes dela sequer ser pensada ou concebida, quer como parceiros de pesquisa nos programas de Pós-graduação do Colégio Pedro II, quer em fóruns sobre Educação Financeira no Brasil e fora dele. Agradeço aos professores Daniel Martins, Rony Barros, Josimar Silva e Andreia Maciel do Colégio Pedro II. Aos professores Amarildo Melchiades, Chang Kuo e Marco Kistemann da UFJF; Arthur B. Powell da Rutgers University. Aos professores Carlos Heitor Campani, Marcos Ávila, Vicente Ferreira e da Economista Margarida Gutierrez do Instituto Coppead/UFRJ. Ao professor e contador Luiz Antônio Ochsendorf, da UFRJ e conselheiro do CRC/RJ; aos professores Fernando Villar e Leo Akio do CapUFRJ; Rafael Novoa e André Silva do IFRJ. Às professoras Cristiane Pessoa e Gilda Guimarães da UFPE. A professora Vanessa Matos pela parceria no curso e na finalização deste volume. Aos professores da equipe do Livro Aberto que deram sugestões ao trabalho, em especial a Letícia Rangel, Fábio Simas (Coordenador) e Humberto Bortolossi. Aos meus orientandos Michela Santana, Natasha Cardoso, Vanessa Borges, Wagner Bernardes, Mauricio Quintanilha e Lucas Ribeiro no âmbito dos programas de residência docente, especialização em Educação Matemática e do PROFMAT. A todos os meus alunos da Escola Técnica Estadual João Luiz do Nascimento, do Colégio Pedro II – Campus Centro e do Colégio de São Bento do Rio de Janeiro com os quais tive a honra de conversar, trocar, experimentar e aprender por meio de interações em aulas, bate papos informais, projetos e programas de iniciação científica Júnior. 
 
-Finalmente eu agradeço, em nome da equipe do Livro aberto, aos docentes espalhados pelo Brasil que estiverem efetivamente conosco em nosso primeiro curso de extensão de Educação Financeira no âmbito do Projeto Livro, contribuindo para o aperfeiçoamento desse volume. São eles(elas): Aldair Santana Coelho, Amanda Pereira Lima Mesquita, Ana Clara Bonete, Ana
-Paula Dantas de Souza, André Monteiro Novaes, Daniela Presotti, Danielle Angélica da Luz e Silva, Dilo Marquesini, Erica Marlucia Leite Pagani, Fábio Henrique da Silva, Fábio Henrique Marinho Cabral, Fábio Pinheiro Pergentino, Fernanda Erculano, Gabriel Bernardino, Jaqueline Cardoni Herrera, José Carlos Nogueira, Josivaldo Gonçalves dos Santos, Ligia Maria Ferreira do Couto, Lucas José Ribeiro, Manoela Franco da Silva, Marciléia Maria da Silva, Nair da Conceição Pinto, Osvaldo Marcelino, Railson Costa da Silva, Raquel Oliveira Bodart, Samuel de Oliveira Cardoso, Sergio Gouveia de Assis, Vanessa Henriques Borges, Virginia Teodoro Inocêncio.
+Finalmente eu agradeço, em nome da equipe do Livro aberto, aos docentes espalhados pelo Brasil que estiverem efetivamente conosco em nosso primeiro curso de extensão de Educação Financeira no âmbito do Projeto Livro, contribuindo para o aperfeiçoamento desse volume. São eles(elas): Aldair Santana Coelho, Amanda Pereira Lima Mesquita, Ana Clara Bonete, Ana Paula Dantas de Souza, André Monteiro Novaes, Daniela Presotti, Danielle Angélica da Luz e Silva, Dilo Marquesini, Erica Marlucia Leite Pagani, Fábio Henrique da Silva, Fábio Henrique Marinho Cabral, Fábio Pinheiro Pergentino, Fernanda Erculano, Gabriel Bernardino, Jaqueline Cardoni Herrera, José Carlos Nogueira, Josivaldo Gonçalves dos Santos, Ligia Maria Ferreira do Couto, Lucas José Ribeiro, Manoela Franco da Silva, Marciléia Maria da Silva, Nair da Conceição Pinto, Osvaldo Marcelino, Railson Costa da Silva, Raquel Oliveira Bodart, Samuel de Oliveira Cardoso, Sergio Gouveia de Assis, Vanessa Henriques Borges, Virginia Teodoro Inocêncio.
 
 \mainmatter
 
@@ -173,7 +50,7 @@ Nossa proposta de Educação Financeira, baseada em Muniz (\citeyear{muniz2016a}
 
 Olhando para o Brasil, temos vários motivos que justificam a importância de uma Educação Financeira que ajude as pessoas, incluindo nossos alunos, a lidarem com desafios financeiros inseridos em um cenário econômico complexo e dinâmico, como temos observado nas últimas décadas. A estabilidade da moeda (a partir de 1994), o aumento da renda, o crescimento da classe média brasileira, o aumento da oferta de crédito para bens (móveis e imóveis) e serviços, a ampliação do prazo dos financiamentos imobiliários, a velocidade da geração e do consumo de bens e serviços, a redução do grau de desigualdade de renda, além do aumento da expectativa de vida da população, compõem um conjunto de profundadas mudanças sociais e econômicas ocorridas no país que demandam da população brasileira uma educação financeira que traga crítica e atitudes bem fundamentadas. Além dessas mudanças, a crise internacional de 2008 e a recente crise econômica brasileira iniciada em 2015, têm ampliado o conjunto de transformações, trazendo fatores como desemprego, aumento das taxas de inflação e da taxa SELIC, redução do nível de atividade em praticamente todos os setores econômicos, dentre outros. Temos, portanto, uma diversidade de fatores que têm impactado fortemente a vida dos brasileiros, conforme se pode ver em \cite{neri2010}, \cite{PNAD2010}, \cite{leitao2011}.
 
-Nesse texto, entenderemos \textbf{Educação Financeira em Contextos Escolares (EFCE)}, ou simplesmente \textbf{Educação Financeira Escolar}, como o processo de educar por meio de um conjunto de estratégias e ações desenvolvidas para o contexto escolar, considerando aspectos matemáticos e não matemáticos, didáticos e multidisciplinares, que con\textbf{vide os estudantes a refletirem} sobre situações econômicas e financeiras relacionadas com a aquisição, planejamento, utilização e redistribuição do dinheiro, de forma crítica e fundamentada, e também sobre possíveis consequências de suas decisões e atitudes frente às suas demandas, necessidades, projetos e realizações em sua vida pessoal, familiar e da sociedade em que vivem.
+Nesse texto, entenderemos \textbf{Educação Financeira em Contextos Escolares (EFCE)}, ou simplesmente \textbf{Educação Financeira Escolar}, como o processo de educar por meio de um conjunto de estratégias e ações desenvolvidas para o contexto escolar, considerando aspectos matemáticos e não matemáticos, didáticos e multidisciplinares, que \textbf{convide os estudantes a refletirem} sobre situações econômicas e financeiras relacionadas com a aquisição, planejamento, utilização e redistribuição do dinheiro, de forma crítica e fundamentada, e também sobre possíveis consequências de suas decisões e atitudes frente às suas demandas, necessidades, projetos e realizações em sua vida pessoal, familiar e da sociedade em que vivem.
 
 Um convite que leve em consideração ASPECTOS MATEMÁTICOS E NÃO MATEMÁTICOS na análise e na tomada de decisão, e que também leve em consideração o contexto social e econômico dos estudantes, as características culturais e singularidades sociais da região em que vivem, bem com os desafios da realidade econômica e social brasileira.
 
@@ -249,7 +126,7 @@ Mas o objetivo desse livro é mostrar alguns princípios e caminhos. Foi mostrar
 \scpractice{\hyperref[fin-prac-1]{Praticando 1 --- Ampliando a visão sobre Educação Financeira}}
 \begin{enumerate}[label=Atividade \arabic* --, wide]\setcounter{enumi}{2}
 \item \hyperref[fin-ativ-3]{Armadilha ou oportunidade}?
-\item \hyperref[fin-ativ-400]{O desemprego entre os jovens no Brasil}
+\item \hyperref[fin-ativ-4]{O desemprego entre os jovens no Brasil}
 \item \hyperref[fin-ativ-5]{A pandemia dos preços}
 \end{enumerate}
 \vspace{1cm}
@@ -616,7 +493,6 @@ Essas situações são apenas algumas das quais iremos abordar ao longo das vár
 Nessa primeira atividade, convidamos o aluno a pensar sobre os aumentos sucessivos no contexto do reajuste salarial de uma determinada categoria. Os aspectos matemáticos são importantes pois permitem entender que a taxa acumulada não é a soma das taxas, ainda que possa ser obtida por um processo aditivo. Apresentamos dois caminhos para obter a taxa acumulada, sendo o primeiro aditivo (calculando a porcentagem e somando ao valor inicial de cada etapa), e o segundo multiplicativo (considerando a multiplicação pelo fator de atualização $(1+i)$, a cada aumento de uma taxa $i$. Recomendamos sempre que o primeiro processo anteceda o segundo, tanto na abordagem, como para uma possível demonstração. Para alunos do ensino fundamental, o primeiro processo já pode ser abordado aos poucos, conforme inclusive sugere a BNCC com as habilidades \textbf{EF05MA06}, \textbf{EF06MA13}, \textbf{EF07MA02} e \textbf{EF09MA05}. Para os alunos do Ensino Médio, além da retomada das habilidades do ensino fundamental, temos tanto a interpretação situações econômicas (\textbf{EM13MAT101}), como a interpretação e processo de cálculo de taxas e índices de natureza econômica (\textbf{EM13MAT104}), com uma oportunidade para o professor de matemática abordar o conceito de taxa acumulada, a partir de aumentos e descontos sucessivos, em contexto como inflação, salário e renda, bem como discutir as possibilidades de negociação em torno do valor calculado. 
 }{0}{0}
 \end{sugestions}
-\marginpar{\vspace{.5em}}
 \begin{answer}{Negociando reajustes}
 {
 A solução comentada será apresentada no próprio texto, dentro do tópico Organizando as Ideias.
@@ -638,7 +514,6 @@ Primeiramente, é importante dizer que teremos sessões específicas para tratar
 Essa atividade também está relacionada à habilidade \textbf{EM13MAT203}: aplicar conceitos matemáticos no planejamento, na execução e na análise de ações envolvendo a utilização de aplicativos e a criação de planilhas (para o controle de orçamento familiar, simuladores de cálculos de juros simples e compostos, entre outros), para tomar decisões.
 }{0}{0}
 \end{sugestions}
-\marginpar{\vspace{.5em}}
 \begin{answer}{Cobertor curto}
 {
 A solução comentada será apresentada no próprio texto, dentro do tópico Organizando as Ideias.
@@ -657,13 +532,11 @@ A família Silva identificou que está gastando mais do que ganha, e para isso e
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth {|c|c|c|c|}
-
+\begin{tabular}{|c|c|c|c|}
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{{Receitas}}}}} & \multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{{Despesas}}}}}\\
+\tmcol{2}{|c|}{Receitas} & \tmcol{2}{|c|}{Despesas}\\
 \hline
-\thead
-Descrição & Valor (R\$) & Descrição & Valor (R\$)\\
+\tcolor{Descrição} & \tcolor{Valor (R\$)} & \tcolor{Descrição} & \tcolor{Valor (R\$)}\\
 Salário Pai & 1.800{,}00 & Alimentação & 1.100{,}00 \\
 \hline
 Salário Mãe & 2.200{,}00 & Luz & 180{,}00 \\
@@ -680,11 +553,10 @@ Salário Mãe & 2.200{,}00 & Luz & 180{,}00 \\
 \hline
 & & Transporte & 440{,}00\\
 \hline
-\thead
-Total & 4.000{,}00 & Total & 4.500{,}00\\
+\tcolor{Total} & \tcolor{4.000{,}00} & \tcolor{Total} & \tcolor{4.500{,}00}\\
 \hline
 
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -819,7 +691,6 @@ Recomendamos ao professor que peça aos alunos para pesquisarem na internet mat�
 
 }{0}{1}
 \end{sugestions}
-\marginpar{\vspace{.05em}}
 \begin{answer}{Armadilha ou oportunidade?}
 {
 \begin{enumerate}
@@ -946,7 +817,7 @@ Observe a seguinte bolsa sendo divulgada em duas lojas diferentes:
 
 \begin{task}{O desemprego entre os jovens no Brasil}
 
-\label{fin-ativ-400}
+\label{fin-ativ-4}
 
 \begin{figure}[H]
 \centering
@@ -980,7 +851,7 @@ Durante a pandemia, em 2020, observamos um aumento significativo no preço de v�
 
 \includegraphics[width=\linewidth]{financeira54}
 \caption{Disponível em \href{https://economia.uol.com.br/noticias/redacao/2020/09/08/preco-do-arroz-dispara.html}{Economia UOL}}
-\label{}
+
 \end{figure}
 
 \begin{enumerate}
@@ -1214,12 +1085,11 @@ E você, sabe quanto custa por mês? Utilize a tabela abaixo como referência e 
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{15pt}
-\begin{tabu} to \textwidth{|l|r|}
+\begin{tabular}{|l|r|}
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Despesas}}}} \\
+\tmcol{2}{|c|}{Despesas} \\
 \hline
-\thead
-Descrição & Valor \\
+\tcolor{Descrição} & \tcolor{Valor} \\
 \hline
 Alimentação & \\
 \hline
@@ -1244,7 +1114,7 @@ Transporte & \\
 
 Total & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -1292,9 +1162,9 @@ Mariana é uma adolescente muito estudiosa que mora com seu pai, sua mãe e um i
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{2.5pt}
-\begin{tabu} to \textwidth{|l|r|l|r|l|r|}
+\begin{tabular}{|l|r|l|r|l|r|}
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Janeiro}}}}& \multicolumn{2}{c}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Fevereiro}}}} & \multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Março}}}}\\
+\tmcol{2}{|c|}{Janeiro}& \tmcol{2}{c}{Fevereiro} & \tmcol{2}{|c|}{Março}\\
 \hline
 \tmcol{1}{|c|}{Descrição} & \tmcol{1}{|c|}{Valor} & \tmcol{1}{c|}{Descrição} & \tmcol{1}{c|}{Valor}& \tmcol{1}{c|}{Descrição} & \tmcol{1}{c|}{Valor}\\
 \hline
@@ -1320,10 +1190,9 @@ Transporte & 250{,}00 & Transporte & 200{,}00 & Transporte & 200{,}00 \\
 \hline
 \parbox[c][1cm]{3.25cm}{ Saldo devedor do mês anterior} & 0{,}00 & \parbox[c][1cm]{3.25cm}{ Saldo devedor do mês anterior} & 330{,}00 & \parbox[c][1cm]{3.25cm}{ Saldo devedor do mês anterior} & 440{,}00 \\
 \hline
-\thead
-Total & 3800{,}00 & Total & 3900{,}00 & Total & 4200{,}00 \\
+\tcolor{Total} & \tcolor{3800{,}00} & \tcolor{Total} & \tcolor{3900{,}00} & \tcolor{Total} & \tcolor{4200{,}00} \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Fonte: Adaptado de \cite{santana2019}}
 \end{table}
 
@@ -1344,7 +1213,6 @@ Total & 3800{,}00 & Total & 3900{,}00 & Total & 4200{,}00 \\
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{Sonhos de uma bolsista}
 {
 Nessa atividade convidamos o aluno a pensar sobre o que faria com seu próprio orçamento se fosse um aluno(a) bolsista, ou seja, se pudesse gerenciar totalmente seu próprio dinheiro proveniente de uma bolsa. A questão das trocas intertemporais aparece aqui. Satisfazer a pequenos desejos todo mês, ou ter paciência e força de vontade para guardar dinheiro para satisfazer a um sonho maior?
@@ -1355,7 +1223,6 @@ Nessa atividade convidamos o aluno a pensar sobre o que faria com seu próprio o
   Ambas as respostas são individuais
 }{1}
 \end{answer}
-% \marginpar{\vspace{-2.5em}}
 \begin{objectives}{Vivendo a vida no \textit{Slackline}}
 {
 \begin{itemize}
@@ -1377,7 +1244,6 @@ Nessa atividade convidamos o aluno a pensar sobre a dinâmica da frequência do 
 A análise de vários meses permite ter uma fotografia sobre hábitos de consumo, o que pode ajudar tanto na qualidade como na precisão na busca de soluções e na tomada de decisões para equilibrar as contas.
 }{1}{2}
 \end{sugestions}
-\marginpar{\vspace{.5em}}
 
 
 \begin{answer}{Vivendo a vida no \textit{Slackline}}
@@ -1411,10 +1277,9 @@ O esquema abaixo representa o registro de uma pessoa, sem filhos,  que recebe um
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{1.5pt}
-\begin{tabu} to \textwidth{|l|r|r|r|r|r|r|}
+\begin{tabular}{|l|r|r|r|r|r|r|}
 \hline
-\thead
-& \multicolumn{1}{l|}{JAN} & \multicolumn{1}{l|}{FEV} &\multicolumn{1}{l|}{MAR} & \multicolumn{1}{l|}{ABRIL} & \multicolumn{1}{l|}{MAIO} & \multicolumn{1}{l|}{JUN} \\
+\tcolor{} & \tmcol{1}{l|}{JAN} & \tmcol{1}{l|}{FEV} &\tmcol{1}{l|}{MAR} & \tmcol{1}{l|}{ABRIL} & \tmcol{1}{l|}{MAIO} & \tmcol{1}{l|}{JUN} \\
 \hline
 Salário &\textcolor{session2}{\textbf{R\$1.502{,}00}} & \textcolor{session2}{\textbf{R\$1.502{,}00}} & \textcolor{session2}{\textbf{R\$1.502{,}00}} & \textcolor{session2}{\textbf{R\$1.502{,}00}} & \textcolor{session2}{\textbf{R\$1.502{,}00}} & \textcolor{session2}{\textbf{R\$1.502{,}00}} \\
 \hline
@@ -1436,7 +1301,7 @@ Dívidas Anteriores & \textbf{R\$0{,}00} & \textcolor{session3}{\textbf{-R\$ 706
 \hline
 Saldo & \textcolor{session3}{\textbf{-R\$ 642{,}00}} & \textcolor{session2}{\textbf{R\$21,85}} & \textcolor{session3}{\textbf{-R\$ 302,15}} & \textcolor{session2}{\textbf{R\$303,64}} & \textcolor{session3}{\textbf{-R\$ 172,36}} & \textcolor{session2}{\textbf{R\$126,20}} \\ 
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -1451,10 +1316,9 @@ Saldo & \textcolor{session3}{\textbf{-R\$ 642{,}00}} & \textcolor{session2}{\tex
 
 \begin{table}[H]
 \centering
-\begin{tabu} to 0.5\textwidth{|>{\color{session3}}l|>{\color{session3}}l|}
+\begin{tabular}{|>{\color{session3}}l|>{\color{session3}}l|}
 \hline
-\thead
-Receitas/Despesas & Valor \\
+\tcolor{Receitas/Despesas} & \tcolor{Valor} \\
 \hline
 \textcolor{session2}{Salário} & \textcolor{session2}{\hspace{0.3em} R\$ } \\
 \hline
@@ -1482,7 +1346,7 @@ Outros Gastos & -R\$  \\
 \hline
 \textcolor{session2}{Saldo} & \textcolor{session2}{\hspace{0.3em} R\$}  \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{task}
 
@@ -1620,7 +1484,7 @@ Leia atentamente as chamadas de algumas matérias veiculadas na internet sobre o
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=375bp]{financeira5}
+\includegraphics[width=365bp]{financeira5}
 
 \caption{Fonte: \href{https://www.destaquenoticias.com.br/panificadores-de-sergipe-prometem-reajustar-preco-do-pao/}{Destaque Notícias}}
 \end{figure}
@@ -1628,7 +1492,7 @@ Leia atentamente as chamadas de algumas matérias veiculadas na internet sobre o
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=375bp]{financeira6}
+\includegraphics[width=365bp]{financeira6}
 \end{figure}
 \begin{enumerate}
   \item Você viveu alguma experiência de consumo ou renda, em quem a alta do dólar influenciou na sua vida e da sua família?
@@ -1657,9 +1521,9 @@ José tinha uma conta para pagar no valor de R\$ $1.328{,}78$ com vencimento par
 
 Mas afinal, o que é dinheiro? O dinheiro é um meio de troca, que tem a vantagem de ser melhor que o escambo (troca de mercadorias por outras mercadorias – galinhas por arroz, madeira por espelhos, etc), pois tem equivalência de valor, o que facilita a avaliação e o cálculo. É também um “recipiente de valor”, que permite que as transações econômicas sejam conduzidas durante longos períodos e por longas distâncias geográficas.
 
-\begin{wrapfigure}[15]{r}{.3\textwidth}
+\begin{wrapfigure}[16]{r}{.28\textwidth}
 \vspace{-1em}
-\includegraphics[width=.3\textwidth]{niall-ferguson}
+\includegraphics[width=.28\textwidth]{niall-ferguson}
 
 \caption{Niall Ferguson}
 \end{wrapfigure}
@@ -1701,11 +1565,9 @@ Os juros nesse caso são ditos juros compostos, uma vez que a taxa incide sobre 
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth {|c|c|}
-
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Anos de aplicação & Valor atualizado\\
+\tcolor{Anos de aplicação} & \tcolor{Valor atualizado}\\
 \hline
 0 & 10.000{,}00\\
 \hline
@@ -1720,7 +1582,7 @@ Anos de aplicação & Valor atualizado\\
 5 & 17.623,42\\
 \hline
 
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{figure}[H]
@@ -1781,7 +1643,7 @@ Ao comprar um título público, você empresta dinheiro para o governo brasileir
 \end{quote}
 Mas podemos ver o dinheiro se transformando no tempo, não apenas investindo dinheiro para poupança, a fim de atingir objetivos de médio e longo prazos que traçamos para nossas vidas. Precisamos tomar muito cuidado com a forma como usamos o crédito para consumo de curto de prazo, em especial, com o cartão de crédito quando usado de maneira não planejada. 
 
-\begin{observation}{}
+\begin{observation}
 {As taxas que nos cobram geralmente são bem maiores que as taxas que nos pagam.}
 \end{observation}
 
@@ -1826,7 +1688,7 @@ Nesse caso, os preços em reais aumentaram em $25$\%, e o real se desvalorizou e
 
 Ou seja, a variação cambial produziu uma transformação no valor do dinheiro no tempo. Isso aconteceu, por exemplo, no primeiro semestre de 2020 no Brasil, onde vivenciamos uma forte alta do dólar dólar com a pandemia do novo coronavírus, que influenciou o aumento de preço em vários produtos, dentre eles os eletrônicos.
 
-\begin{observation}{}
+\begin{observation}
 {Você tem percebido o impacto da variação cambial na sua vida e de sua família?}
 \end{observation}
 
@@ -1948,7 +1810,6 @@ Recomendamos que o professor amplie a parte das questões abertas, discutindo o 
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{O valor do amanhã}
 {
 Nessa atividade convidamos o estudante a continuar pensando nas decisões de investimento de Fábio, trazendo um contexto com opções de investimento, ampliando-se os prazos nos quais o dinheiro ficará investido, e aumentando o número de opções de investimento.
@@ -2059,10 +1920,9 @@ Vanessa teve uma emergência e precisa de $10.000$ reais para daqui a dois dias.
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|c|r|}
+\begin{tabular}{|l|c|r|}
 \hline
-\thead
-Banco & Taxa Mensal (\%) & Taxa Anual (\%) \\
+\tcolor{Banco} & \tcolor{Taxa Mensal (\%)} & \tcolor{Taxa Anual (\%)} \\
 \hline
 BCO BMG S.A. & 3{,}00 & 42,58 \\
 \hline
@@ -2086,7 +1946,7 @@ BCO SAFRA S.A. & 7,84 & 147,32 \\
 \hline
 BCO SANTANDER (BRASIL) S.A. & 7,95 & 150,36 \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Fonte: Banco Central. Período de julho/2020}
 \end{table}
 
@@ -2249,9 +2109,9 @@ Vamos analisar a transformação do dinheiro no tempo para cada um dos quatro es
 Primeiro, vamos investigar como os valores aplicados pelos quatro estudantes se transformam ao longo do tempo. Comecemos pela estratégia de Giovana.
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth {|c|c|c|c|c|c|}
+\begin{tabular} {|c|c|c|c|c|c|}
 \hline
-\multicolumn{6}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Giovana}}}}\\
+\tmcol{6}{|c|}{Giovana}\\
 \hline
 jul/19 & ago/19 & set/19 & out/19 & nov/19 & dez/19 \\
 \hline
@@ -2261,7 +2121,7 @@ jul/19 & ago/19 & set/19 & out/19 & nov/19 & dez/19 \\
 \hline 
 & & 100\tikzmark{e1} & & & \tikzmark{f1}\\
  \hline
-\end{tabu}
+\end{tabular}
 \begin{tikzpicture}[overlay, remember picture, shorten >=5pt, shorten <=5pt, ,transform canvas={yshift=.13cm}]
 
 \draw [->, very thick, \currentcolor] ({pic cs:a1}) to ({pic cs:b1});
@@ -2274,9 +2134,9 @@ jul/19 & ago/19 & set/19 & out/19 & nov/19 & dez/19 \\
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth {|c|c|c|c|c|c|}
+\begin{tabular} {|c|c|c|c|c|c|}
 \hline
-\multicolumn{6}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Giovana}}}}\\
+\tmcol{6}{|c|}{Giovana}\\
 \hline
 Jul/19 & Ago/19 & Set/19 & Out/19 & Nov/19 & Dez/19 \\
 \hline
@@ -2286,9 +2146,9 @@ R\$ 100  & R\$ 101{,}00 & R\$ 102,01 & R\$ 103,03 & R\$ 104,06 & R\$ 105,10 \\
 \hline 
 & & R\$ 100 & R\$ 101{,}00 & R\$ 102,01 & R\$ 103,03  \\
 \hline
-& & & & \multicolumn{1}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Total =}}}} & \multicolumn{1}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{R\$ 312,19}}}} \\
+& & & & \tmcol{1}{|c|}{Total =} & \tmcol{1}{|c|}{R\$ 312,19} \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 Na representação temporal acima, observe que os 100 reais aplicados em jul/19 transformam-se em 101 reais em ago/19, depois em 102,01 em set/19, em seguida em 103,03 em out/19, em 104,06 em nov/19 e finalmente em 105,10 em dez/19. Essa sequência de valores representa a transformação dos 100 reais aplicados em jul/19 ao longo desse período. Fazendo isso para os 100 reais aplicados em ago/2019 e set/2019, Giovana terá em dez/2019 um total igual a
 
@@ -2302,19 +2162,19 @@ Outra forma de se obter o $\mathit{VF}$ de Giovana, em dez/2019 é calcular o ac
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{7}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Giovana}}}}\\
+\tmcol{7}{|c|}{Giovana}\\
 \hline
 Mês/Ano & Jul/19 & Ago/19 & Set/19 & Out/19 & Nov/19 & Dez/19 \\
 \hline
 Saldo inicial & R\$ 0{,}00 & R\$ 101{,}00 & R\$ 203,01 & R\$ 306,04 & R\$ 309,10 & R\$ 312,19 \\
 \hline
-Depósito & {\cellcolor{\currentcolor!60}{\textcolor{white}{\textbf{R\$ 100{,}00}}}} & {\cellcolor{\currentcolor!60}{\textcolor{white}{\textbf{R\$ 100{,}00}}}} & {\cellcolor{\currentcolor!60}{\textcolor{white}{\textbf{R\$ 100{,}00}}}} & --- & R\$ --- & R\$ ---\\
+Depósito & \tcolor{R\$ 100{,}00} & \tcolor{R\$ 100{,}00} & \tcolor{R\$ 100{,}00} & --- & R\$ --- & R\$ ---\\
 \hline
 Saldo final & R\$ 100{,}00 & R\$ 201{,}00 & R\$ 303,01 &R\$ 306,04 & R\$ 309,10 & R\$ 312,19 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Nesse caso, o modelo matemático que fornece o $\mathit{VF}$ das aplicações de Giovana é dado por:
@@ -2345,20 +2205,19 @@ No quadro a seguir, temos uma representação temporal que mostra o resultado fi
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth {|l|c|c|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
-\thead
-& jul/19 & ago/19 & set/19 & out/19 & nov/19 & dez/19 \\
+\tcolor{} & \tcolor{jul/19} & \tcolor{ago/19} & \tcolor{set/19} & \tcolor{out/19} & \tcolor{nov/19} & \tcolor{dez/19} \\
 \hline
-\cellcolor{\currentcolor!80} \textcolor{white}{\textbf{Giovana}} & 100 & 100 & 100 & & & 312,19\\
+\tcolor{Giovana} & 100 & 100 & 100 & & & 312,19\\
 \hline
-\cellcolor{\currentcolor!80} \textcolor{white}{\textbf{Polyana}} & 300 & & & & & 315,30\\
+\tcolor{Polyana} & 300 & & & & & 315,30\\
 \hline
-\cellcolor{\currentcolor!80} \textcolor{white}{\textbf{Juliana}} & 150 & 150 & & & & 313,74\\
+\tcolor{Juliana} & 150 & 150 & & & & 313,74\\
 \hline
-\cellcolor{\currentcolor!80} \textcolor{white}{\textbf{Luiz Felipe}} & & & 300 & & & 309,09\\
+\tcolor{Luiz Felipe} & & & 300 & & & 309,09\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -2412,7 +2271,6 @@ O professor deve observar que essa atividade poderia ser considerada como de jur
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{O enigma das taxas de juros invisíveis}
 {
 Nessa atividade convidamos o aluno a pensar sobre taxa de juros embutidas em financiamentos diante do desconto no preço de tabela para pagamento à vista. O modelo matemático aqui resulta em uma equação do segundo grau, o que se constitui em uma excelente oportunidade tanto para o professor de matemática do 9º ano do EF, como para o do Ensino Médio quando aborda funções quadráticas ou progressões geométricas. 
@@ -2600,24 +2458,25 @@ A representação temporal abaixo ilustra o fluxo de depósitos que será realiz
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth {|c|c|c|c|}
+\begin{tabular} {|c|c|c|c|}
 \hline
-\multicolumn{4}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Isabel}}}}\\
+\tmcol{4}{|c|}{Isabel}\\
 \hline
 Janeiro & Fevereiro & março & abril \\
 \hline
-\cellcolor{\currentcolor!50}\textcolor{white}{\textbf{300}}\tikzmark{a} & & &\tikzmark{b} 309,09 \\
+\def\currentcolor{session4!50}
+\tcolor{300} \tikzmark{a} & & &\tikzmark{b} 309,09 \\
 \hline
-& \cellcolor{\currentcolor!50}\textcolor{white}{\textbf{300}}\tikzmark{c} & & \tikzmark{d}
+& \tcolor{300} \tikzmark{c} & & \tikzmark{d}
  306,03 \\
 \hline 
-& & \cellcolor{\currentcolor!50}\textcolor{white}{\textbf{300}}\tikzmark{e} & \tikzmark{f}
+& & \tcolor{300} \tikzmark{e} & \tikzmark{f}
  303{,}00 \\
  \hline
-& & & \cellcolor{\currentcolor!50}\textcolor{white}{\textbf{300{,}00}}\\
+& & & \tcolor{300{,}00}\\
 \hline
 
-\end{tabu}
+\end{tabular}
 \end{table}
 % \begin{tikzpicture}[overlay, remember picture, shorten >=.5pt, shorten <=.5pt,transform canvas={yshift=.13cm}]
 
@@ -2711,10 +2570,9 @@ Essas diferentes taxas podem gerar grandes diferenças no $\mathit{VF}$ de uma s
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth {|c|c|}
+\begin{tabular} {|c|c|}
 \hline
-\thead
-Taxa Mensal & Valor Futuro \\
+\tcolor{Taxa Mensal} & \tcolor{Valor Futuro} \\
 \hline
 0,40\% & R\$ 120.502,51 \\
 \hline
@@ -2740,7 +2598,7 @@ Taxa Mensal & Valor Futuro \\
 \hline
 5{,}00\% & R\$ 730.431.442,45 \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Fonte: Elaborado pelo autor}
 \end{table}
 
@@ -2800,7 +2658,6 @@ A taxa de 0,5\% ao mês foi aproximadamente a remuneração da poupança – mod
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{O dilema de caber no bolso - parcelas mensais e iguais}
 {
 Essa atividade tem alguns (poucos) elementos das atividades tradicionais de séries uniformes encontradas em livros didáticos de matemática, e vários elementos diferentes. 
@@ -2816,7 +2673,6 @@ Finalmente o item d temos um outro tipo de tomada de decisão, na qual a pessoa 
 }{1}{2}
 \end{sugestions}
 
-\marginpar{\vspace{.5em}}
 \begin{answer}{O dilema de caber no bolso - parcelas mensais e iguais}
 {
 \begin{enumerate}
@@ -2934,11 +2790,9 @@ Para responder a essa pergunta, podemos pensar em cada parcela separadamente e d
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2pt}
-\begin{tabu} to \textwidth {|c|c|c|c|c|c|}
+\begin{tabular} {|c|c|c|c|c|c|}
 \hline
-\thead
-Hoje & Parcela 1 & Parcela 2 & Parcela 3 & \phantom{Parcela 3} & Parela $\bm{n}$ \\
+\tcolor{Hoje} & \tcolor{Parcela 1} & \tcolor{Parcela 2} & \tcolor{Parcela 3} & \tcolor{\phantom{Parcela 3}} & \tcolor{Parcela $\bm{n}$} \\
 \hline
 $\displaystyle\frac{P}{(1+i)}$\tikzmark{b} & \tikzmark{a}$P$ & & & & \\
 \hline
@@ -2950,7 +2804,7 @@ $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
 \hline
 $\displaystyle\frac{P}{(1+i)^n}$\tikzmark{h} & & & & & \tikzmark{g}$P$ \\
 \hline
-\end{tabu}
+\end{tabular}
 
 \begin{tikzpicture}[overlay, remember picture, shorten >=1pt, shorten <=.5pt,transform canvas={yshift=.13cm}]
 
@@ -3093,7 +2947,7 @@ Por fim, procuramos trazer para essa atividade uma discussão sobre o impacto da
       \begin{table}[H]
       \centering
 
-      \begin{tabu} to \textwidth{|c|r|}
+      \begin{tabular}{|c|r|}
       \hline
       \tmcol{2}{|c|}{1\textsuperscript{a} Operação} \\
       \hline
@@ -3105,13 +2959,13 @@ Por fim, procuramos trazer para essa atividade uma discussão sobre o impacto da
       \hline
       $\mathit{VP}$ & R\$ $2.380.070{,}29$ \\
       \hline
-      \end{tabu}
+      \end{tabular}
       \end{table}
 
       \begin{table}[H]
       \centering
 
-      \begin{tabu} to \textwidth{|c|r|}
+      \begin{tabular}{|c|r|}
       \hline
       \tmcol{2}{|c|}{2\textsuperscript{a} Operação} \\
       \hline
@@ -3123,14 +2977,14 @@ Por fim, procuramos trazer para essa atividade uma discussão sobre o impacto da
       \hline
       PMT & R\$ $1.190{,}10$ \\
       \hline
-      \end{tabu}
+      \end{tabular}
       \end{table}
     \end{multicols}
 
     \begin{table}[H]
     \centering
 
-    \begin{tabu} to \textwidth{|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|}
     \hline
     \tmcol{2}{|c|}{Tempo de contribuição} & \tmcol{2}{c|}{Tempo de recebimentos} \\
     \hline
@@ -3142,7 +2996,7 @@ Por fim, procuramos trazer para essa atividade uma discussão sobre o impacto da
     \hline 
     R\$ $1.180{,}10$ & R\$ $1.180{,}10$ & R\$ $20.000{,}00$ & R\$ $20.000{,}00$ \\
     \hline
-    \end{tabu}
+    \end{tabular}
     \end{table}
 
     \item Considerando a inflação de $3$\% ao ano, uma pessoa vai conseguir comprar com 20.000 reais o que consegue comprar hoje com
@@ -3296,7 +3150,6 @@ O Banco Central do Brasil disponibiliza em seu portal uma gama de taxas de juro 
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{Velozes e Furiosos! Uma conversa sobre taxas equivalentes}
 {
 Nessa atividade, baseado em taxas reais (de set 2019), disponíveis no site do Banco Central, convidamos o aluno pensar sobre a situação das taxas de juros no Brasil, em especial às taxas que nos cobram. E para isso, entender o conceito de equivalência de taxas pode ser muito importante. Escolhemos para essa atividade as taxas de juro do crédito rotativo do Cartão de Crédito por ser uma das maiores aberrações da realidade econômica Brasileira. E algo que costuma atormentar a vida de milhões de Brasileiros segundo dados do Serasa Experian. 
@@ -3323,12 +3176,11 @@ A atividade será discutida e resolvida na próxima seção.
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth {|c|l|c|c|}
+\begin{tabular} {|c|l|c|c|}
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}} & \multicolumn{2}{c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Taxas de juros}}}} \\
+\tmcol{2}{|c|}{} & \tmcol{2}{c|}{Taxas de juros} \\
 \hline
-\thead
-Posição & \multicolumn{1}{c|}{Instituição} & \% a.m. & \% a.a\\
+\tcolor{Posição} & \tmcol{1}{c|}{Instituição} & \tcolor{\% a.m.} & \tcolor{\% a.a}\\
 \hline
 1 & BCO BMG S.A. & 3,91 & 58,41 \\
 \hline
@@ -3358,7 +3210,7 @@ Posição & \multicolumn{1}{c|}{Instituição} & \% a.m. & \% a.a\\
 \hline
 14 & BCO ITAUCARD X.A. & 10,99 & 249,61 \\
 \hline
-\end{tabu}
+\end{tabular}
 
 \caption{Fonte: Banco Central, acesso em 02/09/2019}
 \end{table}
@@ -3405,10 +3257,9 @@ O quadro a seguir mostra uma simulação para algumas taxas mensais de retorno, 
 \begin{table}[H]
 \centering
 % \newcommand{\gline}{\rowcolor{secundario!20}}
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\thead
-Rentabilidade & \multicolumn{5}{c|}{Tempo de aplicação (em anos)} \\
+\tcolor{Rentabilidade} & \tmcol{5}{c|}{Tempo de aplicação (em anos)} \\
 \hline
 Mensal & 10 & 15 & 20 & 25 & 30 \\
 \hline
@@ -3436,7 +3287,7 @@ Mensal & 10 & 15 & 20 & 25 & 30 \\
 \hline
 2{,}00\% & 976,52\% & 3432,08\% & 11488,87\% & 37923,45\% & 124656,11\% \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -3472,7 +3323,6 @@ Lembre-se que as taxas que nos cobram são geralmente maiores que as taxas que n
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{Imprevistos e Cheque especial: uma dupla explosiva}
 {
 Nessa atividade, convidamos o aluno a tomar decisões diante de uma situação de emergência, mas agora olhando para as taxas das opções que têm. Inserimos os valores tanto para criar uma possibilidade para o cálculo das taxas equivalentes como para retomar o conceito de juros compostos abordado anteriormente. 
@@ -3483,7 +3333,6 @@ Os dois dias foram inseridos para representar a emergência da situação, e tir
 }{1}{2}
 \end{sugestions}
 
-\marginpar{\vspace{-2.5em}}
 \begin{objectives}{Reduzindo taxas e ampliando oportunidades}
 {
 \begin{itemize}
@@ -3519,9 +3368,9 @@ Veja que basta comparar as taxas para tomar uma decisão mais favorável do pont
 \vspace{1em}
 
 \centering
-\begin{tabu} to \textwidth {|c|l|f|f|}
+\begin{tabular} {|c|l|f|f|}
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}} & \tmcol{2}{c|}{Taxas de juros} \\
+\tmcol{2}{|c|}{} & \tmcol{2}{c|}{Taxas de juros} \\
 \hline
 \tcolor{Posição} & \tmcol{1}{c|}{Instituição} & \tmat{\%} $\tcolor{a.m.}$ & \tmat{\%} $\tcolor{a.a}$\\
 \hline
@@ -3544,7 +3393,7 @@ Veja que basta comparar as taxas para tomar uma decisão mais favorável do pont
 \hline
 17 & BCO DO BRASIL S.A. & 7{,}54 & 138{,}27 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item Os R\$ $5.000$ se aplicados na poupança a uma taxa de $0{,}5$\% durante 6 meses daria o valor de R\$ $5.182{,}72$
@@ -3675,7 +3524,7 @@ Leia atentamente os dados a seguir:
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hhline{~|---|}
 \multicolumn{1}{c|}{} & \tcolor{Set/2017} & \tcolor{Out/2017} & \tcolor{Nov/2017} \tabularnewline
 \hline
@@ -3685,7 +3534,7 @@ Leia atentamente os dados a seguir:
 \hline
 \tcolor{Crédito do Cartão de Crédito Rotativo} & 15,0\% & 14,6\% & 14,0\% \tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Fonte: Banco Central do Brasil. 2017}
 \end{table}
 
@@ -3727,12 +3576,11 @@ Sim, a situação pode ficar crítica. São pessoas que vivem a base de remédio
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth {|c|l|c|c|}
+\begin{tabular} {|c|l|c|c|}
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}} & \multicolumn{2}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Taxas de juros}}}} \\
+\tmcol{2}{|c|}{} & \tmcol{2}{|c|}{Taxas de juros} \\
 \hline
-\thead
-Posição & \multicolumn{1}{c|}{Instituição} & \% a.m. & \% a.a\\
+\tcolor{Posição} & \tmcol{1}{c|}{Instituição} & \tcolor{\% a.m.} & \tcolor{\% a.a}\\
 \hline
 1 & BCO BMG S.A. & 3,91 & 58,41 \\
 \hline
@@ -3762,7 +3610,7 @@ Posição & \multicolumn{1}{c|}{Instituição} & \% a.m. & \% a.a\\
 \hline
 14 & BCO ITAUCARD X.A. & 10,99 & 249,61 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -3841,7 +3689,6 @@ Sugerimos a leitura de pesquisas sobre a abordagem de inflação na Educação B
 }
 \end{texto}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Cadê o meu dinheiro?}
 {
 \begin{enumerate}
@@ -3915,13 +3762,11 @@ Josimar alugou um apartamento, em fevereiro de 2019, por R\$ $2.400{,}00$, fican
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2pt}
-\begin{tabu} to \textwidth{|c|c|>{\centering}m{.15\textwidth}|>{\centering}m{.15\textwidth}|}
+\begin{tabular}{|c|c|>{\centering}m{.15\textwidth}|>{\centering\arraybackslash}m{.15\textwidth}|}
 \hline
 \tmcol{4}{|c|}{2020}\\
 \hline
-\thead
-Mês & Mensal (\%) & Acumulado nos últimos 12 meses (\%) & Acumulado no ano (\%) \\
+\tcolor{Mês} & \tcolor{Mensal (\%)} & \tcolor{Acumulado nos últimos 12 meses (\%)} & \tcolor{Acumulado no ano (\%)} \\
 \hline
 Janeiro & 0,48 & 7,8223 & 0,4800 \\
 \hline
@@ -3947,7 +3792,7 @@ Junho & 1,56 & 7,3133 & 4,3892 \\
 % \hline
 % Dezembro & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Em março de 2020, ele percebeu que o aluguel passou de R\$ $2.400{,}00$ para R\$ $2.564{,}00$. O valor do aluguel foi reajustado corretamente? Justifique sua resposta
@@ -3999,7 +3844,7 @@ Esse período de inflação parcialmente controlada foi uma importante conquista
 \includegraphics[width=400bp]{financeira21}
 
 \caption{Fonte: \href{http://g1.globo.com/economia/inflacao-o-que-e/platb}{G1 - Portal de notícias da Globo}. Acesso em 01/04/2017}.
-\label{}
+
 \end{figure}
 
 Segundo o IBGE, o objetivo do INPC é medir a "inflação de um conjunto de produtos e serviços comercializados no varejo, referentes ao consumo pessoal das famílias". Então, na maioria das vezes que você vê a divulgação do índice de inflação, você está ouvindo falar sobre o IPCA, que mede a variação dos preços do seguinte conjunto (cesta) de produtos e serviços. Cada item tem um peso, conforme mostra o gráfico a seguir.
@@ -4020,7 +3865,7 @@ Um outro índice de inflação é o IGPM: índice geral de preços do mercado, q
 \includegraphics[width=400bp]{financeira23}
 \end{figure}
 
-\begin{observation}{}
+\begin{observation}
 \begin{wrapfigure}{r}{.2\textwidth}
 \vspace{-1.5em}
 \includegraphics[width=.2\textwidth]{financeira24}
@@ -4125,7 +3970,6 @@ Uma sociedade mais consciente e bem informada pode agir de forma a interferir em
 
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{inflação e investimento: impactos nos projetos de longo prazo}
 {
 Nessa atividade convidamos o aluno a pensar sobre o impacto da inflação no seu projeto de proteção no futuro. $100$ mil reais hoje têm o mesmo valor que daqui a 30 anos? Provavelmente terá um valor menor, na medida que o poder de compra dessa quantia será reduzido por alguns fatores, dentre eles a inflação acumulada no período.
@@ -4134,7 +3978,6 @@ O professor pode focar apenas na análise do impacto da inflação sobre o valor
 
 }{1}{2}
 \end{sugestions}
-\marginpar{\vspace{-1em}}
 \begin{objectives}{De quanto é a inflação anual no Brasil?}
 {
 \begin{itemize}
@@ -4263,7 +4106,7 @@ Leve em consideração, sempre que puder, o contexto sócio-econômico dos estud
 
 A parte da estatística que pode ser (não necessariamente tem que ser) trabalhado, tais como média móvel, série histórica (despesas com luz, gás, telefone), pode ser um ponto de dificuldade, todavia, tem enorme potencial de de aplicação e de compreensão das regularidades e sazonalidades das receitas e despesas pessoais e familiares.
 
-\subsection*{Enriquecimento da discussão}
+\paragraph*{Enriquecimento da discussão}
 
 Recomendamos o trabalho de \cite{dias2018} sobre a educação fiscal e educação financeira na Educação Básica para servir de apio para o professor na abordagem do assunto desta seção.
 
@@ -4381,10 +4224,9 @@ Para o ano de 2020, a tabela do Imposto de Renda foi a seguinte
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|c|r|}
+\begin{tabular}{|l|c|r|}
 \hline
-\thead
-Base de cálculo (R\$) & Alíquota (\%) & Parcela a deduzir do IR (R\$) \\
+\tcolor{Base de cálculo (R\$)} & \tcolor{Alíquota (\%)} & \tcolor{Parcela a deduzir do IR (R\$)} \\
 \hline
 Até $1.903{,}98$ & - & - \\
 \hline
@@ -4396,7 +4238,7 @@ $3.751{,}06$ até $4.664{,}68$ & 22,5 & $636{,}13$ \\
 \hline
 Acima de $4.664{,}68$ & 27,5 & $869{,}36$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Mas o que é a base de cálculo? É o salário de uma pessoa? E como aplicar esses percentuais sobre a base de cálculo?
@@ -4478,7 +4320,7 @@ O quadro a seguir sintetiza os resultados:
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|r|r|}
+\begin{tabular}{|l|r|r|}
 \hline
 \tcolor{Valor Investido} & R\$ $200.000{,}00$ & R\$ $200.000{,}00$ \\
 \hline
@@ -4490,7 +4332,7 @@ O quadro a seguir sintetiza os resultados:
 \hline
 \tcolor{Rentabilidade líquida} & R\$ $7.613{,}35$ & R\$ $7.101{,}69$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Os cálculos mostram que o investimento com menor taxa acabou se mostrando mais rentável na comparação com o investimento de maior taxa, mas que é taxado pelo IR. Assim, é preciso ficar atento aos impostos e taxas cobradas, opis se algo que pode parecer ser mais vantajoso do ponto de vista financeiro, na verdade não é.
@@ -4500,7 +4342,7 @@ No item \textcolor{\currentcolor}{\textbf{b)}}, operando da mesma forma, temos o
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|l|l|}
+\begin{tabular}{|l|l|l|}
 \hline
 \tcolor{Valor Investido} & R\$ $200.000{,}00$ & R\$ $200.000{,}00$ \\
 \hline
@@ -4512,7 +4354,7 @@ No item \textcolor{\currentcolor}{\textbf{b)}}, operando da mesma forma, temos o
 \hline
 \tcolor{Rentabilidade líquida} & R\$ $39.282{,}71$ & R\$ $40.783{,}65$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Nesse caso, como o dinheiro ficou aplicado por mais tempo, foi tributado com uma alíquota menor, gerando maior rentabilidade.
@@ -4537,10 +4379,9 @@ Suponha que você tem 200 mil reais e como não tem planos para gastar essa gran
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|l|}
+\begin{tabular}{|l|l|}
 \hline
-\multicolumn{1}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{
-Prazo}}}} & \multicolumn{1}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Alíquota do IR}}}} \\
+\tmcol{1}{|c|}{Prazo} & \tmcol{1}{|c|}{Alíquota do IR} \\
 \hline
 Até 180 dias & 22,5\% \\
 \hline
@@ -4548,7 +4389,7 @@ Entre 181 e 360 dias & 20,0\% \\
 \hline
 Entre 361 e 720 dias & 17,5\% \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{itemize}
@@ -4908,13 +4749,11 @@ Obviamente, entender o efeito de ancoragem não deve gerar uma paranóia ou neur
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{Desconto progressivo: oportunidade ou enganação ancorada?}
 {
 Nessa atividade convidamos o aluno a pensar sobre como algumas propagandas induzem o consumidor a pensar que está tendo uma vantagem acima daquela que efetivamente está sendo oferecida. Nesse caso, o consumidor pensa que o desconto progressivo é concedido sobre o total da compra, mas não é. As pessoas são induzidas a se ancorarem nos percentuais, e acabam se esquecendo ou não se dando conta de perceber sobre que valores esses percentuais de fato serão aplicados.
 }{1}{1}
 \end{sugestions}
-\marginpar{\vspace{-2.5em}}
 \begin{objectives}{Indenizações e acoragem}
 {
 \begin{itemize}
@@ -5064,7 +4903,6 @@ Espero que nossa conversa tenha sido proveitosa e com muito aprendizado. Que ela
 \end{answer}
 \clearmargin
 
-\marginpar{\vspace{-2em}}
 \begin{objectives}{Exercício 6}
 {
 \begin{itemize}
@@ -5169,7 +5007,7 @@ Espero que nossa conversa tenha sido proveitosa e com muito aprendizado. Que ela
       \begin{table}[H]
       \centering
 
-      \begin{tabu} to \textwidth{|c|r|}
+      \begin{tabular}{|c|r|}
       \hline
       \tmcol{2}{|c|}{1\textsuperscript{a} Operação} \\
       \hline
@@ -5181,13 +5019,13 @@ Espero que nossa conversa tenha sido proveitosa e com muito aprendizado. Que ela
       \hline
       $\mathit{VP}$ & R\$ $2.380.070{,}29$ \\
       \hline
-      \end{tabu}
+      \end{tabular}
       \end{table}
 
       \begin{table}[H]
       \centering
 
-      \begin{tabu} to \textwidth{|c|r|}
+      \begin{tabular}{|c|r|}
       \hline
       \tmcol{2}{|c|}{2\textsuperscript{a} Operação} \\
       \hline
@@ -5199,14 +5037,14 @@ Espero que nossa conversa tenha sido proveitosa e com muito aprendizado. Que ela
       \hline
       PMT & R\$ $1.190{,}10$ \\
       \hline
-      \end{tabu}
+      \end{tabular}
       \end{table}
     \end{multicols}
 
     \begin{table}[H]
     \centering
 
-    \begin{tabu} to \textwidth{|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|}
     \hline
     \tmcol{2}{|c|}{Tempo de contribuição} & \tmcol{2}{c|}{Tempo de recebimentos} \\
     \hline
@@ -5218,7 +5056,7 @@ Espero que nossa conversa tenha sido proveitosa e com muito aprendizado. Que ela
     \hline 
     R\$ $1.190{,}10$ & R\$ $1.190{,}10$ & R\$ $20.000{,}00$ & R\$ $20.000{,}00$ \\
     \hline
-    \end{tabu}
+    \end{tabular}
     \end{table}
 
     \item Considerando a inflação de $3$\% ao ano, uma pessoa vai conseguir comprar com 20.000 reais o que consegue comprar hoje com
@@ -5547,15 +5385,15 @@ Espero que nossa conversa tenha sido proveitosa e com muito aprendizado. Que ela
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hhline{~|---|}
-\multicolumn{1}{c|}{}& \tcolor{Set} & \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Out}}} & \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Nov}}} \\
+\multicolumn{1}{c|}{} & \tcolor{Set} & \tcolor{Out} & \tcolor{Nov} \\
 \hline
 \tcolor{Poupança} & $0,50\%$ & $0,47\% $& $0,43\% $\\
 \hline
-\thead{Tesouro Pré-fixado 2023 (LTN) já descontado IR e taxas} & 0,80\% & 0,70\% & 0,60\% \\
+\tcolor{Tesouro Pré-fixado 2023 (LTN) já descontado IR e taxas} & 0,80\% & 0,70\% & 0,60\% \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Fonte: \href{http://www.tesouro.fazenda.gov.br/tesouro-direto-precos-e-taxas-dos-titulos;  http://www4.bcb.gov.br/pec/poupanca/poupanca.asp}{Tesouro Direto}}
 \end{table}
 
@@ -5739,13 +5577,13 @@ Qual das duas opções você escolheria? Justifique
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hhline{~|---|}
 \multicolumn{1}{c|}{} & \tcolor{Set} & \tcolor{Out} & \tcolor{Nov} \\
 \hline
 \tcolor{Poupança} & 0,50\% & 0,47\% & 0,43\% \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \vfill\null
 \end{multicols}
@@ -5777,12 +5615,11 @@ Sobre isso, responda:
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|l|c|l|}
+\begin{tabular}{|c|l|c|l|}
 \hline
-\multicolumn{4}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Tabela de análise de compra parcelada}}}} \\
+\tmcol{4}{|c|}{Tabela de análise de compra parcelada} \\
 \hline
-\thead
-Mês & Acumulado & Taxa de poupança & Rendimento \\
+\tcolor{Mês} & \tcolor{Acumulado} & \tcolor{Taxa de poupança} & \tcolor{Rendimento} \\
 \hline
 0 & R\$ 2.000{,}00 & 0,0\% & R\$ 0{,}00 \\
 \hline
@@ -5806,7 +5643,7 @@ Mês & Acumulado & Taxa de poupança & Rendimento \\
 \hline
 10 & R\$ 55,76 & 0,6\% & R\$ 0,33 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item Você tem R\$ 2.000{,}00 e quer comprar um telefone novo, no valor de R\$ 900{,}00. Você ganhará R\$ 900{,}00 por mês a partir do mês que vem. Você tem uma dívida de R\$ 1900{,}00 no cartão e se não pagar neste mês, essa dívida cairá no cartão de crédito rotativo, com juros de aproximadamente 12\% ao mês. O valor mínimo para pagar é de até 285 reais, ou seja, você pode pagar o mínimo do cartão, comprar o seu telefone e ainda sobrará um dinheiro para o mês, mas você ainda terá a dívida para o mês que vem.
@@ -5885,10 +5722,9 @@ Ao final, explique:
 
 \begin{table}[H]
 \centering\setlength\tabcolsep{2.5pt}
-\begin{tabu} to \textwidth{|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-\thead
-\parbox[c]{2.45cm}{\centering Alimento} & \parbox[c]{2.45cm}{\centering Medida} & \parbox[c]{2.45cm}{\centering Preço - Agricultura Convencional} & \parbox[c]{2.45cm}{\centering Preço - Agricultura Orgânica} & \parbox[c]{2.45cm}{\centering Diferença Percentual} \\[.1cm]
+\tcolor{\parbox[c]{2.45cm}{\centering Alimento}} & \tcolor{\parbox[c]{2.45cm}{\centering Medida}} & \tcolor{\parbox[c]{2.45cm}{\centering Preço - Agricultura Convencional}} & \tcolor{\parbox[c]{2.45cm}{\centering Preço - Agricultura Orgânica}} & \tcolor{\parbox[c]{2.45cm}{\centering Diferença Percentual}} \\[.1cm]
 \hline
 Banana & kg & R\$ 4,54 & R\$ 6{,}00 & 24,3\% \\
 \hline
@@ -5906,7 +5742,7 @@ Aipim & kg & R\$ 2,20 & R\$ 6,50 & 66,1\% \\
 \hline
 Laranja & kg & R\$ 2,18 & R\$ 7{,}00 & 68,8\% \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \begin{enumerate}
 \item Se você se depara com essa escolha, o que contaria mais: o preço ou a qualidade oferecida pelo alimento em questão?
@@ -5942,10 +5778,9 @@ Larissa, cliente da CEF, teve uma emergência e precisa de 10.000 reais para daq
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|c|r|}
+\begin{tabular}{|l|c|r|}
 \hline
-\thead
-Banco & Taxa Mensal (\%) & Taxa Anual (\%) \\
+\tcolor{Banco} & \tcolor{Taxa Mensal (\%)} & \tcolor{Taxa Anual (\%)} \\
 \hline
 BCO O BRASIL S.A. & 11,99 & 289,19 \\
 \hline
@@ -5965,7 +5800,7 @@ BCO DAYCOVAL S.A. & 13,96 & 379,74 \\
 \hline
 BCO SANTANDER (BRASIL) S.A. & 14,75 & 421,29 \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Fonte: Banco Central. Acesso em 12 de Maio de 2019}
 \end{table}
 
@@ -6006,7 +5841,7 @@ BCO SANTANDER (BRASIL) S.A. & 14,75 & 421,29 \\
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/financeira_bibliografia.bib}
 
 \nocite{*}

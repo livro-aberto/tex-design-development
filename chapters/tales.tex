@@ -1,95 +1,35 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-tales}{abertura-tales-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{abertura-tales}
-\else
-\renewcommand\chapterillustration{abertura-tales-professor}
-\fi
-\renewcommand\chapterwhat{São estudados o significado de um teorema
+\chapterwhat{São estudados o significado de um teorema
 com sua hipótese e tese, o Teorema de Tales, sua recíproca, as projeções paralelas e aplicações.}
-\renewcommand\chapterbecause{O capítulo contém uma ferramenta útil para resolver situações que envolvem retas paralelas. Além disso, o teorema de Tales será usado para para desenvolver o conceito de semelhança de triângulos, que é um dos instrumentos necessários para compreender o mundo real. A semelhança, por sua vez, permite a obtenção de diversas propriedades métricas das figuras geométricas, tanto planas como espaciais.}
+
+\chapterbecause{O capítulo contém uma ferramenta útil para resolver situações que envolvem retas paralelas. Além disso, o teorema de Tales será usado para para desenvolver o conceito de semelhança de triângulos, que é um dos instrumentos necessários para compreender o mundo real. A semelhança, por sua vez, permite a obtenção de diversas propriedades métricas das figuras geométricas, tanto planas como espaciais.}
 
 
 \chapter{Teorema de Tales}
 
 
+%%%% Página de créditos
 
-\mbox{}\thispagestyle{empty}\clearpage
+% Autores
+\autorum{Eduardo Wagner}
+\autordois{Marcos Paulo}
 
-\thispagestyle{empty}
+% Revisores
+\revisorum{Cydara Cavedon Ripoll}
+\revisordois{Letícia Rangel}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\autordacapa{Sigmund}{Unsplash}{https://unsplash.com/photos/r9PeXDCJyEw}
+\versao{1.0}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+%Licença cc-by-sa
+\ccbysa
 
-\vspace*{.3cm}
+% Link para versão digital:
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/GE201.html}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+\creditos
 
-Versão digital do capítulo:
-
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/GE201.html}
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Teorema de Tales\\
-\\
-Ano/ Versão: & 2021 / versão 1.0 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Eduardo Wagner,\\
-        & Marcos Paulo\\
-\\
-Revisão: &  Cydara Ripoll  \\
-          &  Letícia Rangel \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  % Ilustrações: & Miller  Guglielmo \\ 
-% \\
-Gráficos: & --- \\
-\\
-  Capa: & Foto de Sigmund, no Unsplash \\
-        & https://unsplash.com/photos/r9PeXDCJyEw \\
-
-\end{tabular}
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -342,7 +282,7 @@ Que relação existe entre os segmentos \(AB\) e \(CD\)? E com os segmentos \(AD
 \arrange{}
 \begin{texto}
 {\def\currentcolor{session4}
-\begin{observation}{}
+\begin{observation}
 Vale lembrar que serão utilizados conceitos do Ensino Fundamental. Em alguns casos, será necessário que se recorde tais conceitos para poder avançar no capítulo.
 \begin{itemize}
 \item {} 
@@ -1150,7 +1090,7 @@ Escreva as medidas de \(a'\) e \(b'\) na unidade \(v\), reuna essas medidas com 
 
 
 
-\begin{observation}{}
+\begin{observation}
 
 O teorema de Tales foi demonstrado no caso dos dois segmentos de uma das retas serem comensuráveis. Entretanto, o teorema vale quando as medidas desses dois segmentos são números reais quaisquer. A demonstração geral do teorema está no final do capítulo, na seção Para Saber Mais.
 \end{observation}
@@ -1989,7 +1929,7 @@ Sabendo-se que os segmentos de reta \(C_1L\), \(C_2T\) e \(C_3S\) são paralelos
 % \notasfinais
 % \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/probabilidade1_bibliografia.bib}
 
 \nocite{*}

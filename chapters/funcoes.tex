@@ -1,99 +1,41 @@
-%!TEX root = ../professor.tex
+\chapterillustration{abertura-funcoes}{abertura-funcoes-professor}
 
-\ifnum \aluno=1
-\renewcommand\chapterillustration{abertura-funcoes}
-\else
-\renewcommand\chapterillustration{abertura-funcoes-professor}
-\fi
-\renewcommand\chapterwhat{Funções e suas diferentes representações (numérica, algébrica e gráfica); domínio, contradomínio e imagem; aplicações em situações envolvendo a análise, interpretação e resolução de problemas em contextos diversos.}
-\renewcommand\chapterbecause{Funções são objetos matemáticos que nos permitem compreender como a variação de uma grandeza influencia na variação de outra. Por isso elas são ferramentas essencias para a compreensão, análise e tomada de decisão em diversas situações do nosso dia a dia.
+\chapterwhat{Funções e suas diferentes representações (numérica, algébrica e gráfica); domínio, contradomínio e imagem; aplicações em situações envolvendo a análise, interpretação e resolução de problemas em contextos diversos.}
+
+\chapterbecause{Funções são objetos matemáticos que nos permitem compreender como a variação de uma grandeza influencia na variação de outra. Por isso elas são ferramentas essencias para a compreensão, análise e tomada de decisão em diversas situações do nosso dia a dia.
+
 O estudo de funções nos permite, por exemplo, relacionar a área de um polígono com o comprimento de seus lados, a distância percorrida por um objeto com o intervalo de tempo gasto no percurso e o valor da conta de energia elétrica com o consumo de energia.
+
 De um modo mais geral, funções são úteis para o estudo do crescimento populacional, disseminação de doenças, lançamento de foguetes e satélites, interpretação de exames médicos, etc.}
+
 \chapter{Introdução às Funções}
 \label{chap-funcoes}
 
-\mbox{}\thispagestyle{empty}\clearpage
 
-\thispagestyle{empty}
-\def\funcoeschap{}
+%%%% Página de créditos
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\autorum{Gladson Antunes (UNIRIO)}
+\autordois{Michel Cambrainha (UNIRIO)}
+\revisorum{Cydara Ripoll}
+\revisordois{Letícia Rangel}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\versao{1.0}
 
-\vspace*{.3cm}
+\graficos{Beatriz Cabral e Tarso Caldas}
+\ilustracao{Miller  Guglielmo}
+\autordacapa{Engin Akyurt}{Pexels}{https://www.pexels.com/pt-br/foto/animacao-ao-ar-livre-ativo-borrao-1435537/}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+%Licença cc-by-sa
+\ccbysa
 
-Versão digital do capítulo:
+% Link para versão digital:
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF106.html}
 
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF106.html}
-
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Introdução às Funções\\
-\\
-Ano/ Versão: & 2020 / versão 1.0 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação:& Fabio Simas, \\
-			& Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Gladson Antunes (UNIRIO),\\
-        & Michel Cambrainha (UNIRIO),\\
-           
-\\
-Revisão: &  Cydara Ripoll  \\
-                &  Letícia Rangel \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
-\\
-  Capa: & Foto de Engin Akyurt, no Pexels \\
-  		& \url{https://www.pexels.com/pt-br/foto/animacao-ao-ar-livre-ativo-borrao-1435537/}
-\end{tabular}
-\vspace{.5cm}
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1.png}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \mainmatter
 
 \begin{apresentacao}{Introdução}
-
 Muitas situações e decisões do dia a dia dependem do reconhecimento de uma relação entre duas grandezas e da análise de como a variação de uma delas influencia na variação da outra (Por exemplo, a distância percorrida e o tempo, a área de um polígono e o comprimento de seus lados, a absorção de um medicamento pelo organismo humano e o tempo desde a sua ingestão, valor da conta de energia elétrica e consumo, quantidade de vereadores e a população etc). O tema \textit{funções} trata da relação entre grandezas, sendo uma ferramenta matemática importante para descrever, analisar e tomar decisões em diversas situações. Além disso, na Matemática como ciência, função é considerado um conceito fundamental e elementar para que outros conceitos e resultados da própria Matemática sejam estabelecidos.
 
 \subsection{Objetivos do capítulo}
@@ -518,13 +460,13 @@ Imagine um arranha-céu de \(40\) andares cujas diferentes alturas que correspon
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|@{}|*{9}{p{.5cm}@{}|}}
+\begin{tabular}{|c|c|@{}|*{9}{p{.5cm}@{}|}}
 \hline
-\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Número do Andar}}} & Garagem (0) & 1 & 2 & 3 & 4 & … & 10 & … & & \\
+\tcolor{Número do Andar} & Garagem (0) & 1 & 2 & 3 & 4 & … & 10 & … & & \\
 \hline
-\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Altura (metros)}}} & -1 & 3 & 7 & 11 & 15 & … & & … & & 91 \\
+\tcolor{Altura (metros)} & -1 & 3 & 7 & 11 & 15 & … & & … & & 91 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{quote}
@@ -624,7 +566,7 @@ Por exemplo, na {\hyperref[\detokenize{AF106-0:ativ-funcoes-pluviometria}]{Ativi
 
 Em uma função \(f\) de \(A\) em \(B\), a dependência estabelecida entre as variáveis \(x \in A\) e \(y \in B\) permite que \(y\) seja identificada como “variável dependente” e \(x\) como  “variável independente”, uma vez que os valores assumidos por \(y\) são determinados em função da variação de \(x\) no domínio. Na atividade “Arranha-céu” por exemplo, a variável independente é aquela que representa os andares e a variável dependente é a altura do andar.
 
-\begin{observation}{}
+\begin{observation}
 
 A definição de uma função \(f\) de \(A\) em \(B\) exige que a cada elemento \(x\in A\) corresponda uma imagem \(y=f(x)\in B\) e que não haja ambiguidade na determinação dessa imagem, ou seja, que ela seja única. Asssim, nem toda relação de \(A\) em {\color{red}\bfseries{}{}`}B é uma função. Por exemplo, a relação que associa a cada pessoa o número de seu telefone não é função, pois a imagem pode não ser única, ou seja, há ambiguidade: algumas pessoas têm mais de um número de telefone. E além disso, nem todas as pessoas têm telefone.
 \end{observation}
@@ -712,7 +654,6 @@ Apenas as relações de $B$ em $A$ e de $B$ em $C$ não são funções. A primei
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{Não é função!}
 {
 \begin{itemize}
@@ -753,7 +694,6 @@ Um exemplo não númerico: a relação associa cada livro ao seu autor
 
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{A família!}
 {
 \begin{itemize}
@@ -797,9 +737,9 @@ Um exemplo não númerico: a relação associa cada livro ao seu autor
 {
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|>{$}c<{$}|}
+\begin{tabular}{|l|>{$}c<{$}|}
 \hline
-\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Função}} & $\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Valor}}$ \\
+\tcolor{Função} & $\tcolor{Valor}$ \\
 \hline
 \(f(3)\) & 42\\ 
 \hline
@@ -823,7 +763,7 @@ Um exemplo não númerico: a relação associa cada livro ao seu autor
 \hline
 \(x\) quando \(h(x)=3\) & 5\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 }{1}
 \end{answer}
@@ -839,7 +779,7 @@ Um exemplo não númerico: a relação associa cada livro ao seu autor
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2em}}
+
 \begin{sugestions}{Enchendo o cone}
 {
 \begin{itemize}
@@ -853,7 +793,7 @@ Um exemplo não númerico: a relação associa cada livro ao seu autor
 \end{itemize}
 }{1}{2}
 \end{sugestions}
-\marginpar{\vspace{-2em}}
+
 \begin{objectives}{Uniformemente variado}
 {
 \begin{itemize}
@@ -908,7 +848,7 @@ A imagem a seguir, que foi retirada do aplicativo Google Maps, exibe o trânsito
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=425bp]{{rio_niteroi_maps}.png}
+\noindent\includegraphics[width=390bp]{{rio_niteroi_maps}.png}
 \end{figure}
 
 A tabela a seguir mostra os dados coletados sobre o tempo gasto pelos veículos (em média) para atravessar a ponte, ao longo de um dia.
@@ -916,10 +856,9 @@ A tabela a seguir mostra os dados coletados sobre o tempo gasto pelos veículos 
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|>{\centering}m{.1\textwidth}|c|}
+\begin{tabular}{|c|c|>{\centering}m{.1\textwidth}|c|}
 \hline
-\thead
-Período do Dia & Tempo (min) & Cor & Velocidade Média (km/min) \\
+\tcolor{Período do Dia} & \tcolor{Tempo (min)} & \tcolor{Cor} & \tcolor{Velocidade Média (km/min)} \\
 \hline
 5:00 - 7:00 & 13 & & \\
 \hline
@@ -939,7 +878,7 @@ Período do Dia & Tempo (min) & Cor & Velocidade Média (km/min) \\
 \hline
 21:00 - 23:00 & 13 & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -978,30 +917,29 @@ No contexto da atividade anterior são observados diferentes conjuntos de dados:
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|>{\centering}m{6cm}|}
+\begin{tabular}{|c|c|>{\centering}m{6cm}<{\arraybackslash}|}
 \hline
-\thead
-Relação & É função? &  Se não, por que? \\
+\tcolor{Relação} & \tcolor{É função?} &  \tcolor{Se não, por que?} \tabularnewline
 \hline
 De A em B
-&&\\
+&&\tabularnewline
 \hline
 De B em A
-&&\\
+&&\tabularnewline
 \hline
 De A em C
-&&\\
+&&\tabularnewline
 \hline
 De C em A
-&&\\
+&&\tabularnewline
 \hline
 De B em C
-&&\\
+&&\tabularnewline
 \hline
 De C em B
-&&\\
+&&\tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{task}
 
@@ -1131,10 +1069,9 @@ Determine o valor de:
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|c|}
+\begin{tabular}{|l|c|}
 \hline
-\thead
-Função & Valor \\
+\tcolor{Função} & \tcolor{Valor} \\
 \hline
 \(f(3)\) & \\ 
 \hline
@@ -1158,7 +1095,7 @@ Função & Valor \\
 \hline
 \(x\) quando \(h(x)=3\) & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \end{task}
@@ -1250,7 +1187,7 @@ Após quanto tempo o veículo estará a $18$km da origem?
 \item Determinar a partir da expressão algébrica os conjuntos domínio e imagem.
 
 \end{itemize}
-}{1}{2}
+}{1}{1}
 \end{objectives}
 \begin{sugestions}{Domínio e imagem}
 {
@@ -1259,7 +1196,7 @@ Após quanto tempo o veículo estará a $18$km da origem?
 
 \item É importante que o estudante perceba as restrições para a escolha de $x$ impostas por algumas das expressões dadas.
 \end{itemize}
-}{1}{2}
+}{1}{1}
 \end{sugestions}
 \begin{answer}{Domínio e imagem}
 {
@@ -1267,10 +1204,9 @@ Ajude o estudante a completar a tabela.
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Expressão & Domínio $A$ & Imagem \\
+\tcolor{Expressão} & \tcolor{Domínio $A$} & \tcolor{Imagem} \\
 \hline
 \((a)\) & \(\mathbb{R}^+\) & $\mathbb{R}^+$\\
 \hline
@@ -1288,7 +1224,7 @@ Expressão & Domínio $A$ & Imagem \\
 \hline
 \((h)\) & $\mathbb{R}$  & $[-3,+\infty[$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 }{1}
 \end{answer}
@@ -1357,10 +1293,10 @@ Veja que, em algumas das expressões, a variável independente não pode assumir
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Expressão & Domínio $A$ & Imagem \\
+
+\tcolor{Expressão} & \tcolor{Domínio $A$} & \tcolor{Imagem} \\
 \hline
 \((a)\) & \(\mathbb{R}^+\) & \\
 \hline
@@ -1378,7 +1314,7 @@ Expressão & Domínio $A$ & Imagem \\
 \hline
 \((h)\) & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -1849,10 +1785,9 @@ Se \(x\) representar o número total de cubos (brancos e cinzas) de um prisma de
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Tempo (s) & Distância (m) \\
+\tcolor{Tempo (s)} & \tcolor{Distância (m)} \\
 \hline
 5 & $25$ \\
 \hline
@@ -1862,7 +1797,7 @@ Tempo (s) & Distância (m) \\
 \hline
 20 & $100$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Considerando que a velocidade da atleta é constante ao longo dos 100 metros responda as seguintes perguntas.
@@ -2561,7 +2496,7 @@ Os conjuntos domínio e imagem ficam evidenciados na representação gráfica de
 {
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|>{$}c<{$}|}
+\begin{tabular}{|l|>{$}c<{$}|}
 \hline
 \cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Notação}} & \cellcolor{\currentcolor!80}\textcolor{white}{\textbf{Valor}} \\
 \hline
@@ -2579,7 +2514,7 @@ Os conjuntos domínio e imagem ficam evidenciados na representação gráfica de
 \hline
 \(f(3\cdot 2)-4\cdot f(\sqrt{81})+1\) & -21 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 }{1}
 \end{answer}
@@ -2618,10 +2553,9 @@ Os conjuntos domínio e imagem ficam evidenciados na representação gráfica de
 \item
 \adjustbox{valign=t}{
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Ponto & Alíquota & Salário \\
+\tcolor{Ponto} & \tcolor{Alíquota} & \tcolor{Salário} \\
 \hline
 A & $7{,}5\%$ (segundo intervalo) & R\$ $2600{,}00$\\
 \hline
@@ -2629,7 +2563,7 @@ B & $15\%$ (terceiro intervalo) & R\$ $3400{,}00$\\
 \hline
 C & $22{,}5\%$ (quarto intervalo) & R\$ $4000{,}00$\\ 
 \hline
-\end{tabu}}
+\end{tabular}}
 
 \end{enumerate}
 }{1}
@@ -2761,7 +2695,7 @@ Os pontos marcados no plano cartesiano abaixo fornecem informações sobre a jor
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.9]
 \tikzstyle{ponto}=[circle, minimum size=3pt, inner sep=0, draw=black, fill=black, shift only]
 \begin{scope}[xscale=3]
 \draw[help lines,xstep=.2,ystep=.2, lightgray] (0,0) grid (3,7);
@@ -2806,52 +2740,52 @@ Dentre os gráficos apresentados a seguir identifique aquele que melhor descreve
 \item  Café esfriando
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 \tcolor{Tempo (minutos)} & 0 & 5 & 10 & 15 & 20 & 25 & 30 \\
 \hline
 \tcolor{Temperatura ($^{\circ}$C)} & 90 & 79 & 70 & 62 & 55 & 49 & 44\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item Preparando a ceia
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 \tcolor{Peso (quilos)} & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
 \hline
 \tcolor{Tempo (horas)} & 2,5 & 3 & 3,5 & 4 & 4,5 & 5 & 5,5\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item Depois de três canecas de cerveja…
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 \tcolor{Tempo (horas)} & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
 \hline
 \tcolor{Álcool no sangue (mg/100ml)} & 90 & 75 & 60 & 45 & 30 & 15 & 0 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item Como um bebê cresce antes do nascimento
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
 \tcolor{Tempo de gestação (meses)} & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
 \hline
 \tcolor{Comprimento do bebê (cm)} & 4 & 9 & 16 & 24 & 30 & 34 & 38 & 42 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{enumerate}
 
@@ -3116,10 +3050,9 @@ A partir da representação gráfica calcule os seguintes valores:
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|c|}
+\begin{tabular}{|l|c|}
 \hline
-\thead
-Notação & Valor \\
+\tcolor{Notação} & \tcolor{Valor} \\
 \hline
 \(f(1)-f(0)\) & \\
 \hline
@@ -3135,7 +3068,7 @@ Notação & Valor \\
 \hline
 \(f(3\cdot 2)-4\cdot f(\sqrt{81})+1\) & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \end{task}
@@ -3160,10 +3093,9 @@ A seguinte tabela é utilizada para o cálculo do Imposto de Renda para Pessoa F
 \large{\textbf{Tabela do IRF - Vigência a partir de 01/04/2015}}
 
 (Medida Provisória 670/2015 convertida na Lei 13.149/2015)
-\begin{tabu} to \textwidth{|l|c|r|}
+\begin{tabular}{|l|c|r|}
 \hline
-\thead
-Base de cálculo (R\$) & Alíquota (\%) & Parcela a deduzir do IR (R\$) \\
+\tcolor{Base de cálculo (R\$)} & \tcolor{Alíquota (\%)} & \tcolor{Parcela a deduzir do IR (R\$)}\\
 \hline
 Até $1.903{,}98$ & - & - \\
 \hline
@@ -3175,7 +3107,7 @@ $3.751{,}06$ até $4.664{,}68$ & 22,5 & $636{,}13$ \\
 \hline
 Acima de $4.664{,}68$ & 27,5 & $869{,}36$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Fonte: \url{http://www.portaltributario.com.br}}
 \end{table}
 
@@ -3459,13 +3391,13 @@ O sistema de coordenadas abaixo contém os gráficos para as funções que relac
 \resizebox{\linewidth}{!}
 {
 \setlength\tabcolsep{2.5pt}
-\begin{tabu} to \textwidth{|c|*{26}{>{$}c<{$}|}}
+\begin{tabular}{|c|*{26}{>{$}c<{$}|}}
 \hline
 \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Original}}} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 \\
 \hline
 \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Código}}} & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
 \hline
-\end{tabu}}
+\end{tabular}}
 \end{table}
 
 Outra possibilidade é escrever $f(x)=x+15$, subtraindo $26$ se $f(x)$ for maior que $26$.
@@ -3539,10 +3471,9 @@ A tabela a seguir mostra o número de usuários ativos do \emph{Facebook} em jan
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|l|c|}
+\begin{tabular}{|c|l|c|}
 \hline
-\thead
-Ano & Número de usuários & Crescimento percentual \\
+\tcolor{Ano} & \tcolor{Número de usuários} & \tcolor{Crescimento percentual} \\
 \hline
 2004 & 5 & \textendash{} \\
 \hline
@@ -3568,7 +3499,7 @@ Ano & Número de usuários & Crescimento percentual \\
 \hline
 2015 & 1.317.000.000 & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -3617,13 +3548,13 @@ Considere a seguinte maneira de codificar o alfabeto
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{3pt}
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Original}}} & A & B & C & D & E & F & G & H & I & J & K & L & M & N & O & P & Q & R & S & T & U & V & W & X & Y & Z \\
 \hline
 \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Código}}} & P & Q & R & S & T & U & V & W & X & Y & Z & A & B & C & D & E & F & G & H & I & J & K & L & M & N & O \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -3822,13 +3753,13 @@ Faça uma comparação com os volumes das caixas construídas pelos demais grupo
 \begin{figure}[H]
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{x}}} & & & & & & & & & & \\
 \hline
 \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{V(x)}}} & & & & & & & & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{figure}
 
@@ -3923,7 +3854,7 @@ Entre as garrafas \(A\) e \(E\), qual tem o melhor custo-benefício? Por que? E 
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/funcoes_bibliografia.bib}
 
 \nocite{*}

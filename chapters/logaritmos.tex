@@ -1,114 +1,32 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-log.jpg}{abertura-log-prof.jpg}
 
-\ifnum \aluno=1
-\renewcommand\chapterillustration{abertura-log.jpg}
-\else
-\renewcommand\chapterillustration{abertura-log-prof.jpg}
-
-\makeatletter
-
-% \renewcommand*{\toclevel@section}{1}
-% \renewcommand*{\toclevel@subsection}{4}
-% \renewcommand*{\toclevel@paragraph}{5}
-% \renewcommand*{\toclevel@subparagraph}{6}
-
-% \renewcommand*{\toclevel@exploresec}{2}
-% \renewcommand*{\toclevel@practicesec}{2}
-% \renewcommand*{\toclevel@arrangesec}{2}
-% \renewcommand*{\toclevel@knowsec}{1}
-% \renewcommand*{\toclevel@exercisesec}{1}
-
-\makeatother
-\fi
-
-
-
-%Imagem da Wikimedia Commons - https://commons.wikimedia.org/wiki/File:Pedra_Azul_Milky_Way.jpg
-\renewcommand\chapterwhat{Conceito de logaritmo.
+\chapterwhat{Conceito de logaritmo.
 Propriedades operacionais dos logaritmos. Função logarítmica.
 Gráfico da função logarítmica  e sua relação com a função exponencial. Gráficos em escalas logarítmicas.}
-\renewcommand\chapterbecause{Os logaritmos estão presentes em problemas de natureza exponencial sempre que a incógnita aparece no expoente. Esse tipo de questão é relevante em muitos problemas práticos como,  por exemplo, para calcular em quanto tempo uma dívida no cartão de crédito dobrará seu valor.
+
+\chapterbecause{Os logaritmos estão presentes em problemas de natureza exponencial sempre que a incógnita aparece no expoente. Esse tipo de questão é relevante em muitos problemas práticos como,  por exemplo, para calcular em quanto tempo uma dívida no cartão de crédito dobrará seu valor.
 
 Os logaritmos estão presentes na matemática financeira e também em questões técnicas de áreas do conhecimento como a física, a engenharia, a química e até as ciências da saúde, sendo utilizados, por exemplo, na escala Richter, nas definições de decibel e de PH, no decaimento radioativo, na datação por carbono 14 e na farmacologia.
 
 Os logaritmos são também úteis sempre que dados de magnitudes muito distintas estão representadas em um mesmo gráfico ou quando crescimentos relativos são mais importantes do que os valores absolutos. Gráficos nessa escala são muito utilizados para avaliar a evolução de ações da bolsa de valores e em processos que cresçam exponencialmente, como na pandemia de Covid-19.}
+
 \chapter{Logaritmos e a Função Logarítmica}
 
-\mbox{}\thispagestyle{empty}\clearpage
+%%%% Página de créditos
 
-\thispagestyle{empty}
+\autorum{Márcio Rostirolla Adames (UTFPR)}
+\autordois{Rose Elizangela Martins Pedrosa (SEED - PR)}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\revisorum{Wanderley Rezende (UFF)}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\graficos{Márcio Rostirolla Adames}
 
-\vspace*{.3cm}
+\versao{1.0}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+\autordacapa{EduardoMSNeves (adaptada)}{Wikimedia Commons}{https://pt.wikipedia.org/wiki/Ficheiro:Pedra_Azul_Milky_Way.jpg}
 
-% Versão digital do capítulo:
+\creditos
 
-% \url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF107.html}
-
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Logaritmos\\
-\\
-Ano/Versão: & 2020 / versão 1.1 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Livro Aberto\\
-\\
-Coordenação:& Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Márcio Rostirolla Adames (UTFPR)\\
-             & Rose Elizangela Martins Pedrosa (SEED - PR)\\
-\\
-Revisão: & Wanderley Rezende (UFF) \\
-                
-\\
-Design: & Andreza Moreira (Tangentes Design)\\
-\\
-  Ilustrações: & Márcio Rostirolla Adames \\ 
-\\
-Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
-\\
-Capa: & (adaptado da) Foto "Pedra Azul Milky Way"\, de EduardoMSNeves, na Wikimedia Commons  \\
-
-\end{tabular}
-\vspace{.5cm}
-
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -347,10 +265,9 @@ Podemos utilizar a tabela para calcular o montante em cada mês a partir de R$\$
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Mês & Montante (R\$) \\
+\tcolor{Mês} & \tcolor{Montante (R\$)} \\
 \hline
 0 & $10.000$\\
 \hline
@@ -374,7 +291,7 @@ Mês & Montante (R\$) \\
 \hline
 10 & $25.930$\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Assim, atingimos R$\$15.000{,}00$, R$\$20.000{,}00$ e R$\$25.000{,}00$ em, respectivamente 5, 8 e 10 meses.
@@ -385,10 +302,9 @@ A evolução do número de bactérias pode ser tabelado
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|l|l|}
+\begin{tabular}{|c|l|l|}
 \hline
-\thead
-Tempo (horas) & Evolução das Bactérias & População \\
+\tcolor{Tempo (horas)} & \tcolor{Evolução das Bactérias} & \tcolor{População} \\
 \hline
 $0$ & $200$ & $200$ \\
 \hline
@@ -400,7 +316,7 @@ $3$ & $200\times3^3$ & $5.400$ \\
 \hline
 $4$ & $200\times3^4$ & $16.200$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 A população atinge 16.200 indivíduos após 4 horas.
 }
@@ -420,10 +336,9 @@ A população atinge 16.200 indivíduos após 4 horas.
 	\begin{table}[H]
 	\centering
 
-	\begin{tabu} to \textwidth{|c|l|l|}
+	\begin{tabular}{|c|l|l|}
 	\hline
-	\thead
-	$0$ & $40.000$ & $40.000$ \\
+	\tcolor{$0$} & \tcolor{$40.000$} & \tcolor{$40.000$} \\
 	\hline
 	$1$ & $40.000\times1{,}01$ & $40.400$ \\
 	\hline
@@ -433,7 +348,7 @@ A população atinge 16.200 indivíduos após 4 horas.
 	\hline
 	$10$ & $40.000\times(1{,}01)^{10}$ & $44.160$ \\
 	\hline
-	\end{tabu}
+	\end{tabular}
 	\end{table}
 	}{1}
 \end{answer}
@@ -508,7 +423,7 @@ No capítulo sobre a função exponencial você observou diversas situações em
 
 \begin{figure}[!htb]
 \centering
-\scalebox{.9}
+\scalebox{.85}
 {
 \begin{tikzpicture}[scale=0.48]
 \node[black] at (-2,2) {mês};
@@ -558,12 +473,13 @@ Utilize a tabela de potências a seguir nas atividades propostas. Por exemplo, n
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|*{11}{l|}}
+\scalebox{.9}
+{
+\begin{tabular}{|c|*{11}{l|}}
 \hline
 \tmcol{12}{|c|}{Expoentes} \\
 \hline
-\thead
-Bases & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\tcolor{Bases} & \tcolor{0} & \tcolor{1} & \tcolor{2} & \tcolor{3} & \tcolor{4} & \tcolor{5} & \tcolor{6} & \tcolor{7} & \tcolor{8} & \tcolor{9} & \tcolor{10} \\
 \hline
 \tcolor{1,01} & 1                         & 1,01                      & 1,0201                    & 1,030 & 1,040               & 1,051             & 1,061 & 1,072 & 1,082         & 1,093         & 1,104          \\
 \hline
@@ -574,7 +490,8 @@ Bases & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
 \tcolor{3}    & 1                         & 3                         & 9                         & 27                        & 81                        & 243                       & 729                       & 2187                      & 6561                      & 19683                     & 59049                      \\
 
 \hline
-\end{tabu}
+\end{tabular}
+}
 \end{table}
 
 
@@ -607,7 +524,7 @@ Por exemplo, 3 é o expoente ao qual precisamos elevar a base 2 para obter 8. Di
 Para dois números reais $a$ e $b$ positivos, o \textit{logaritmo de a em base b}, que denotamos $\log_b a$, é o expoente ao qual a base $b$ deve ser elevada para obtermos $a$. Assim, $c=\log_b a$ se, e somente se, $b^c=a$.
 \end{description}
 
-\begin{observation}{}
+\begin{observation}
 Quando escrevemos $c = \log_b a$, utilizamos os seguintes \textit{nomes} para os números $a,\,b$ e $c$.
 \begin{center}
 \begin{minipage}{0.3\linewidth}
@@ -641,7 +558,7 @@ Na atividade "Dívida no cartão"\, temos os logaritmandos $a=15000/10000=1,5$, 
 \end{example}
 
 
-\begin{observation}{}
+\begin{observation}
 Assim, o logaritmo $c = \log_b a$ é o expoente ao qual a base precisa ser elevada para obtermos o logaritmando, ou seja $b^{\log_b a}=a$.
 \end{observation}
 
@@ -789,12 +706,11 @@ Se não tiver acesso ao applet, as atividades podem ser resolvidas utilizando a 
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|*{10}{l|}}
+\begin{tabular}{|l|*{10}{l|}}
 \hline
 \tmcol{11}{|c|}{Logaritmando} \\
 \hline
-\thead
-Base & $\bm{1}$ & $\bm{2}$ & $\bm{3}$ & $\bm{4}$ & $\bm{5}$ & $\bm{6}$ & $\bm{7}$ & $\bm{8}$ & $\bm{9}$ & $\bm{10}$ \\
+\tcolor{Base} & \tcolor{$\bm{1}$} & \tcolor{$\bm{2}$} & \tcolor{$\bm{3}$} & \tcolor{$\bm{4}$} & \tcolor{$\bm{5}$} & \tcolor{$\bm{6}$} & \tcolor{$\bm{7}$} & \tcolor{$\bm{8}$} & \tcolor{$\bm{9}$} & \tcolor{$\bm{10}$} \\
 \hline
 \tcolor{$\bm{1{,}41}$} & $0$ & $2{,}02$ & $3{,}2$ & $4{,}03$ & $4{,}68$ & $5{,}21$ & $5{,}66$ & $6{,}05$ & $6{,}34$ & $6{,}7$ \\
 \hline
@@ -806,7 +722,7 @@ Base & $\bm{1}$ & $\bm{2}$ & $\bm{3}$ & $\bm{4}$ & $\bm{5}$ & $\bm{6}$ & $\bm{7}
 \hline
 \tcolor{$\bm{4}$} & $0$ & $0{,}5$ & $0{,}79$ & $1$ & $1{,}16$ & $1{,}29$ & $1{,}4$ & $1{,}5$ & $1{,}58$ & $1{,}66$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Logaritmos nas bases $1{,}41$; $2$; $2{,}71$; $3$ e $4$}
 \label{tabela_logs}
 \end{table}
@@ -927,12 +843,11 @@ Se não tiver acesso ao applet, as atividades seguintes podem ser resolvidas uti
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|*{10}{l|}}
+\begin{tabular}{|*{10}{l|}}
 \hline
 \tmcol{10}{|c|}{Expoentes} \\
 \hline
-\thead
-$\bm{1}$ & $\bm{2}$ & $\bm{3}$ & $\bm{4}$ & $\bm{5}$ & $\bm{6}$ & $\bm{7}$ & $\bm{8}$ & $\bm{9}$ & $\bm{10}$ \\
+\tcolor{$\bm{1}$} & \tcolor{$\bm{2}$} & \tcolor{$\bm{3}$} & \tcolor{$\bm{4}$} & \tcolor{$\bm{5}$} & \tcolor{$\bm{6}$} & \tcolor{$\bm{7}$} & \tcolor{$\bm{8}$} & \tcolor{$\bm{9}$} & \tcolor{$\bm{10}$} \\
 \hline
 $1{,}0035$ & $1{,}007$ & $1{,}0105$ & $1{,}014$ & $1{,}0176$ & $1{,}0211$ & $1{,}0247$ & $1{,}0283$ & $1{,}0319$ & $1{,}035$ \\
 \hline
@@ -940,7 +855,7 @@ $1{,}03$ & $1{,}06$ & $1{,}092$ & $1{,}125$ & $1{,}159$ & $1{,}194$ & $1{,}229$ 
 \hline
 $1{,}14$ & $1{,}299$ & $1{,}481$ & $1{,}688$ & $1{,}925$ & $2{,}194$ & $2{,}502$ & $2{,}852$ & $3{,}251$ & $3{,}707$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Potências de  $1{,}0035$; $1{,}03$ e $1{,}14$}
 \end{table}
 
@@ -1121,12 +1036,11 @@ Existem algumas propriedades que auxiliam na resolução de problemas envolvendo
 Iniciamos utilizando a tabela de potências racionais de 2 a seguir para buscar padrões nos logaritmos de base 2. Os expoentes são aproximações dos logaritmos dos naturais na coluna ao lado, com erro menor do que $0,01$.
 
 \begin{table}[H]
+\renewcommand{\arraystretch}{1.25}
 \centering
-\setlength\tabulinesep{1.5pt}
-\begin{tabu} to \textwidth{|>{$}l<{$}|>{$}c<{$}|}
+\begin{tabular}{|>{$}l<{$}|>{$}c<{$}|}
 \hline
-\rowfont{\color{white}}\rowcolor{\currentcolor!80}
-\bm{2^{\log_2n}} & \bm{n} \tabularnewline
+\tmat{\bm{2^{\log_2n}}} & \tmat{\bm{n}} \tabularnewline
 \hline
 2^0 & 1 \tabularnewline
 \hline
@@ -1148,11 +1062,10 @@ Iniciamos utilizando a tabela de potências racionais de 2 a seguir para buscar 
 \hline
 2^{3{,}32} & 10 \tabularnewline
 \hline
-\end{tabu}\hspace{2em}
-\begin{tabu} to \textwidth{|>{$}l<{$}|>{$}c<{$}|}
+\end{tabular}\hspace{2em}
+\begin{tabular}{|>{$}l<{$}|>{$}c<{$}|}
 \hline
-\rowfont{\color{white}}\rowcolor{\currentcolor!80}
-\bm{2^{\log_2n}} & \bm{n} \tabularnewline
+\tmat{\bm{2^{\log_2n}}} & \tmat{\bm{n}} \tabularnewline
 \hline
 2^{3{,}46} & 11 \tabularnewline
 \hline
@@ -1174,11 +1087,10 @@ Iniciamos utilizando a tabela de potências racionais de 2 a seguir para buscar 
 \hline
 2^{4{,}32} & 20 \tabularnewline
 \hline
-\end{tabu}\hspace{2em}
-\begin{tabu} to \textwidth{|>{$}l<{$}|>{$}c<{$}|}
+\end{tabular}\hspace{2em}
+\begin{tabular}{|>{$}l<{$}|>{$}c<{$}|}
 \hline
-\rowfont{\color{white}}\rowcolor{\currentcolor!80}
-\bm{2^{\log_2n}} & \bm{n} \tabularnewline
+\tmat{\bm{2^{\log_2n}}} & \tmat{\bm{n}} \tabularnewline
 \hline
 2^{4{,}39} & 21 \tabularnewline
 \hline
@@ -1200,7 +1112,7 @@ Iniciamos utilizando a tabela de potências racionais de 2 a seguir para buscar 
 \hline
 2^{4{,}9} & 30 \tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 
 \caption{Expoentes de $2$ aproximando os naturais de $1$ a $30$}\label{potencias2_log}
 \end{table}
@@ -1334,7 +1246,7 @@ Utilize a \hyperref[potencias2_log]{tabela \ref{potencias2_log}} para encontrar 
 Utilizando a propriedade do logaritmo do produto, você consegue inferir alguma fórmula para calcular o valor de $\log_a b^n$, para $n \in \mathbb{N}$? Vamos buscar um padrão calculando alguns exemplos, como $\log 100$, $\log 100^2$ e $\log 100^3$?
 \end{reflection}
 
-\begin{observation}{}
+\begin{observation}
 Não apenas para a base $10$, mas para qualquer base $a>0$, $a \neq 1$, logaritmando $b>0$ e $n \in \mathbb{N}$, temos:
 $$
 \log_a b^n = \underbrace{\log_a b + \log_a b + \cdots + \log_a b}_{n \mbox{ vezes }} = n\log_a b.
@@ -1387,7 +1299,7 @@ a^{t\log_a b} = (a^{\log_a b})^t = b^t,
 onde utilizamos a propriedade da exponencial que $a^{tx} = (a^{x})^t$.
 \end{proof}
 
-\begin{observation}{}
+\begin{observation}
 A propriedade do logaritmo da potência é muito utilizada na resolução de problemas envolvendo logaritmos. Podemos aplicar o logaritmo dos dois lados de uma equação para obter uma equação linear em $t$, que pode ser facilmente resolvida. Por exemplo, para encontrar $t$ na equação
 \begin{align*}
 3^t=20,
@@ -1412,6 +1324,7 @@ População após dois anos: $P_2= P_0 \times (1{,}02)^2$.
 População após $t$ anos $P_t =  P_0 \times (1{,}02)^t$.
 
 E utilizamos o teorema do logaritmo da potência para descobrir para que valor $t$ obtemos o dobro da população:
+
 \begin{align*}
 P_t &= P_0 \times (1{,}07)^t = 2 P_0\\
 &\Longrightarrow (1{,}07)^t = 2\\
@@ -1906,11 +1819,9 @@ Para lidarmos com o modo como percebemos o som e a potência das ondas sonoras, 
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2pt}
-\begin{tabu} to \textwidth{|l|c|l|l|}
+\begin{tabular}{|l|c|l|l|}
 \hline
-\thead
-Fonte do som & \makecell{Nível \\ (dB)} & \makecell{Intensidade \\($\bm{W/m^2}$)} & Percepção\\
+\tcolor{Fonte do som} & \tcolor{\makecell{Nível \\ (dB)}} & \tcolor{\makecell{Intensidade \\($\bm{W/m^2}$)}} & \tcolor{Percepção}\\
 \hline
 Arma de fogo próxima ao ouvido & $130$ & $10$ & Dor\\
 \hline
@@ -1940,7 +1851,7 @@ Sussurrar da folhas & $10$ & $10^{-11}$ & \\
 \hline
 Limiar da audição & $0$ & $10^{-12}$ & \\
 \hline
-\end{tabu}
+\end{tabular}
 
 \caption{Níveis sonoros e intensidades sonoras. Fonte: Adaptado de um artigo de \url{EEWeb.com} por Andrew Carter} \label{tab_decibeis}
 \end{table}
@@ -2229,7 +2140,7 @@ A escala Richter\footnote{Desenvolvida por Charles Richter e Beno Gutenberg} uti
 \begin{figure}[!h]
 \centering
 
-\includegraphics[width=0.8\linewidth]{Sismografo.png}
+\includegraphics[width=0.75\linewidth]{Sismografo.png}
 
 \caption{\begin{minipage}[t]{115mm}
 Um sismógrafo e o registro de um evento \\ Fonte: Casa das Ciências (\url{https://www.casadasciencias.org/}).
@@ -2280,12 +2191,10 @@ O pH, às vezes chamado de potencial de Ionização, é uma escala utilizada par
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{1pt}
 
-\begin{tabu} to \textwidth{|l|l|}
+\begin{tabular}{|l|l|}
 \hline
-\thead
-Substância & pH \\
+\tcolor{Substância} & \tcolor{pH} \\
 \hline
 Ácido de bateria & < 1,0\\
 \hline
@@ -2323,7 +2232,7 @@ Amoníaco &	11,5\\
 \hline
 Hidróxido de sódio (soda cáustica)&	13,5\\
 \hline
-\end{tabu}
+\end{tabular}
 
 \caption{\begin{minipage}[t]{110mm}
 Alguns valores comuns de pH.\\Fonte: Dados da Wikipedia-pH (\url{pt.wikipedia.org/wiki/PH}).
@@ -2406,10 +2315,9 @@ concentração de $H_3O^+$, é correto afirmar que a água com pH 4,5 era:
 	\begin{table}[H]
 	\centering
 	
-	\begin{tabu} to \textwidth{|c|c|c|}
+	\begin{tabular}{|c|c|c|}
 	\hline
-	\thead
-	$\bm{x}$ & $\bm{y=2^x}$ & $\bm{{\log_2 x}}$ \\
+	\tcolor{$\bm{x}$} & \tcolor{$\bm{y=2^x}$} & \tcolor{$\bm{{\log_2 x}}$} \\
 	\hline
 	$1$ & $2$ & $1$ \\
 	\hline
@@ -2419,12 +2327,11 @@ concentração de $H_3O^+$, é correto afirmar que a água com pH 4,5 era:
 	\hline
 	$4$ & $16$ & $4$ \\
 	\hline
-	\end{tabu}
+	\end{tabular}
 	\hspace{2em}
-	\begin{tabu} to \textwidth{|c|c|c|}
+	\begin{tabular}{|c|c|c|}
 	\hline
-	\thead
-	$\bm{y}$ & $\bm{x=3^y}$ & $\bm{{\log_3 x}}$ \tabularnewline
+	\tcolor{$\bm{y}$} & \tcolor{$\bm{x=3^y}$} & \tcolor{$\bm{{\log_3 x}}$} \tabularnewline
 	\hline
 	$-1$ & $1/3$ & $-1$ \\
 	\hline
@@ -2434,7 +2341,7 @@ concentração de $H_3O^+$, é correto afirmar que a água com pH 4,5 era:
 	\hline
 	$2$ & $9$ & $2$ \\
 	\hline
-	\end{tabu}
+	\end{tabular}
 	\end{table}
 
 	\tcbsubtitle{Para refletir}
@@ -2501,10 +2408,9 @@ Complete a tabela abaixo calculando a exponencial do logaritmo e o logaritmo da 
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-$\bm{x}$ & $\bm{y=2^x}$ & $\bm{{\log_2 x}}$ \\
+\tcolor{$\bm{x}$} & \tcolor{$\bm{y=2^x}$} & \tcolor{$\bm{{\log_2 x}}$} \\
 \hline
 $1$ & & \\
 \hline
@@ -2514,12 +2420,11 @@ $3$ & & \\
 \hline
 $4$ & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \hspace{2em}
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-$\bm{y}$ & $\bm{x=3^y}$ & $\bm{{\log_3 x}}$ \tabularnewline
+\tcolor{$\bm{y}$} & \tcolor{$\bm{x=3^y}$} & \tcolor{$\bm{{\log_3 x}}$} \tabularnewline
 \hline
 $-1$ & & \\
 \hline
@@ -2529,7 +2434,7 @@ $0$ & & \\
 \hline
 $2$ & & \\
 \hline
-\end{tabu}
+\end{tabular}
 
 \end{table}
 \end{task}
@@ -2558,7 +2463,7 @@ No \textit{applet} do GeoGebra, disponível através do atalho abaixo, podemos m
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.3\linewidth]{QRcode_mult_constante.png}
+\includegraphics[width=.175\linewidth]{QRcode_mult_constante.png}
 
 \url{https://www.geogebra.org/calculator/qyuzhbmp}
 \end{figure}
@@ -2603,9 +2508,9 @@ $$
 $$
 
 \end{observationtitle}
+\clearpage
 
 \def\currentcolor{cor1}
-\marginpar{\vspace{.5em}}
 \begin{answer}{Exercícios}
 {
 	\exerciselist
@@ -3126,7 +3031,7 @@ Investidores do mercado financeiro fazem os mais variados tipos de investimentos
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=\linewidth]{Bitcoin_linear.png}
+\includegraphics[width=.75\linewidth]{Bitcoin_linear.png}
 \caption{\begin{minipage}[t]{108mm}
 Valor de venda de uma Bitcoin (02/10/2013 - 24/05/2020).\\
 Dados de \href{coindesk.com}{coindesk}
@@ -3138,7 +3043,7 @@ Esse gráfico traz informações importantes, mas não é adequado a todas as qu
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=\linewidth]{Bitcoin_log.png}
+\includegraphics[width=.8\linewidth]{Bitcoin_log.png}
 
 \caption{Valor de venda de um Bitcoin (escala logarítmica).}\label{bitcoinlog}
 \end{figure}
@@ -3248,7 +3153,7 @@ A \textbf{meia vida} de um isótopo radioativo é o tempo necessário para que a
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|r|}
+\begin{tabular}{|l|r|}
 \hline
 \tcolor{Oxigênio-19} & 26,5 s\\
 \hline
@@ -3258,7 +3163,7 @@ A \textbf{meia vida} de um isótopo radioativo é o tempo necessário para que a
 \hline
 \tcolor{Urânio-235} & 703.800.000 anos\\
 \hline
-\end{tabu}
+\end{tabular}
 
 \caption{Meias-vidas de alguns isótopos radioativos (aproximações).}
 \end{table}
@@ -3298,10 +3203,9 @@ Como perdemos metade da massa a cada meia-vida, teremos as seguintes quantidades
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|r|l|}
+\begin{tabular}{|r|l|}
 \hline
-\thead
-Anos & Carbono-14 \\
+\tcolor{Anos} & \tcolor{Carbono-14} \\
 \hline 
 $0$ & $100$g \\
 \hline
@@ -3315,7 +3219,7 @@ $22.930$ & $6{,}25$g \\
 \hline 
 $28.650$ & $3{,}125$g \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Quantidade de Carbono-14 restante.}
 \end{table}
 
@@ -3535,7 +3439,7 @@ Contudo o número de partidas só pode ser um número inteiro positivo, desse mo
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.9\linewidth]{World_linear.png}
+\includegraphics[width=.875\linewidth]{World_linear.png}
 \caption{Total de casos confirmados da Covid-19 no mundo (linear)\\
 Fonte: \textit{Our World in Data} (\url{ourworldindata.org})}
 \end{figure}
@@ -3543,7 +3447,7 @@ Fonte: \textit{Our World in Data} (\url{ourworldindata.org})}
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.9\linewidth]{World_log.png}
+\includegraphics[width=.875\linewidth]{World_log.png}
 \caption{Total de casos confirmados da Covid-19 no mundo (log)\\
 Fonte: \textit{Our World in Data} (\url{ourworldindata.org})}
 \end{figure}
@@ -4392,7 +4296,7 @@ Anotamos os dados de idade e altura no GeoGebra, no endereço abaixo, e utilizam
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.3\linewidth]{QRcode_ajuste_curvas.png}
+\includegraphics[width=.2\linewidth]{QRcode_ajuste_curvas.png}
 
 \url{https://www.geogebra.org/calculator/za7dq64a}
 \end{figure}
@@ -4420,16 +4324,15 @@ Vamos comparar os dados obtidos pela fórmula com os dados reais.
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|*{7}{c|}}
+\begin{tabular}{|*{7}{c|}}
 \hline
-\thead
-& 22/03 & 23/03 & 24/03 & 25/03 & 26/03 & 27/03 \\
+\tcolor{} & \tcolor{22/03} & \tcolor{23/03} & \tcolor{24/03} & \tcolor{25/03} & \tcolor{26/03} & \tcolor{27/03} \\
 \hline
 \tcolor{Dados reais} & 33.404 & 44.183 & 54.453 & 68.440 & 85.356 & 103.321\\
 \hline
 \tcolor{Previsão da função} & 34.544 & 47.136 & 64.317 & 87.762 & 119.752 & 163.403\\
 \hline
-\end{tabu}
+\end{tabular}
 
 \caption{Total de Casos nos E.U.A.}
 \end{table}
@@ -4594,20 +4497,26 @@ de modo que $v(b) = p$ e $v(a)=a$, ou seja, $v(x)$ tenta estimar a diferença pe
 
 \clearpage
 \def\currentcolor{cor2}
-\begin{texto}
-{
-\paragraph{Objetivo específico}
-Utilizar os conhecimentos sobre logaritmos como ferramenta para a tomada de decisão.
 
-\paragraph{Sugestões e discussões}
+\begin{objectives}{Projeto Aplicado}
+{
+Utilizar os conhecimentos sobre logaritmos como ferramenta para a tomada de decisão.
+}{1}{1}
+\end{objectives}
+
+\begin{sugestions}{Projeto Aplicado}
+{
 Essa atividade lúdica deve ser desenvolvida com toda a turma se for possível encaixá-la no cronograma da turma, pois está relacionada a habilidade \textbf{EM13MAT203}, que não precisa ser, necessariamente, trabalhada no contexto de logaritmos. A atividade ilustra como os logaritmos poderiam auxiliar na tomada de decisão em um contexto de matemática financeira. O professor precisará de papeletes ou um dado de 10 faces para realizar os sorteios.
 
 No item \titem{a)}, o professor pode discutir com os estudantes os cálculos que devem ser realizados, e apresentar os valores dos logaritmos.
 
 No item \titem{b)} o/a professor/a deve sortear números mensalmente e os alunos vão saindo da brincadeira conforme seus números são sorteados, até que alguém atinja o objetivo.
 
-Obs: quem escolheu o plano A não vai  sair, mas como sua taxa de juros é baixa, até que ele atinja o valor, outro aluno pode vencer antes, daí ele também perde. Se todos os outros perderem os investidores do plano A são os vencedores. }
-\end{texto}
+Obs: quem escolheu o plano A não vai  sair, mas como sua taxa de juros é baixa, até que ele atinja o valor, outro aluno pode vencer antes, daí ele também perde. Se todos os outros perderem os investidores do plano A são os vencedores. 
+}{1}{1}
+\end{sugestions}
+
+
 \begin{answer}{Projeto Aplicado}
 {
 	\begin{itemize}
@@ -4622,27 +4531,25 @@ Obs: quem escolheu o plano A não vai  sair, mas como sua taxa de juros é baixa
 \begin{project}
 Um banco tem 4 opções de investimento (A : sem risco, B: baixo risco, C: médio risco e D: alto risco), com taxas de juros mensais de $1\%$, $2\%$, $5\%$ e $7\%$ respectivamente. Você investirá R$\$ 10.000,00$ em um desses investimentos e quer obter R$\$15.000,00$.
 
-\begin{itemize}
+\begin{enumerate}
 \item Quantos meses você levará para atingir seu objetivo em cada um dos Planos?
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2.5pt}
-\begin{tabu} to \textwidth{|*{5}{>{\centering}m{4em}|}}
+\begin{tabular}{|*{5}{>{\centering}m{4em}|}}
 \hline
-\thead
-Plano & A & B & C & D \tabularnewline
+\tcolor{Plano} & \tcolor{A} & \tcolor{B} & \tcolor{C} & \tcolor{D} \tabularnewline
 \hline
 \tcolor{Taxa} & 1\% & 2\% & 5\% & 7\% \tabularnewline
 \hline
 \tcolor{Tempo} & & & & \tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
 \item Nesse item propomos um jogo. “JOGO DE RISCO” depois que os alunos calcularem o tempo (em meses) para acumular o valor desejado eles devem escolher um dos planos possíveis para investir seu capital. Cada aluno escolhe, então, 0, 1, 2 ou 3 “números do azar” de 0 a 9. Quem escolheu o plano A escolhe 0 números de azar e quem escolheu D deve escolher 3 números. A cada mês o professor sorteará um número de 0 a 9 e aqueles que tiverem o número sorteado perdem tudo e saem do jogo. O primeiro a atingir o montante desejado vence.
-\end{itemize}
+\end{enumerate}
 \end{project}
 
 \ifnum\aluno=1
@@ -4661,7 +4568,7 @@ Plano & A & B & C & D \tabularnewline
 \end{center}
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/logaritmos_bibliografia.bib}
 
 \nocite{*}

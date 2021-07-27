@@ -1,117 +1,28 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{./abertura-trigonometria}{./abertura-trigonometria-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-trigonometria}
-\else
-\renewcommand\chapterillustration{./abertura-trigonometria-professor}
-\fi
+\expandtocdepth[know]
 
-
-\makeatletter
-\ifnum\aluno=1
-\else
-\renewcommand*{\toclevel@section}{1}
-\renewcommand*{\toclevel@subsection}{4}
-\renewcommand*{\toclevel@paragraph}{5}
-\renewcommand*{\toclevel@subparagraph}{6}
-
-\renewcommand*{\toclevel@exploresec}{2}
-\renewcommand*{\toclevel@practicesec}{2}
-\renewcommand*{\toclevel@arrangesec}{2}
-\renewcommand*{\toclevel@knowsec}{2}
-\renewcommand*{\toclevel@exercisesec}{1}
-
-\setcounter{tocdepth}{2}
-\fi
-\makeatother
-
-\renewcommand\chapterwhat{Trigonometria em triângulos retângulos e em triângulos não retângulos,  leis dos senos e 
+\chapterwhat{Trigonometria em triângulos retângulos e em triângulos não retângulos,  leis dos senos e 
 cossenos.}
-\renewcommand\chapterbecause{As relações e resultados provenientes da Trigonometria são fundamentais para resolver problemas em diversos contextos, apesar de  muitas vezes não serem utilizados explicitamente no nosso cotidiano. Aplicações relacionadas à Trigonometria podem ser encontradas em diversas áreas, como Física, Engenharia, Arquitetura, Astronomia e Topografia.} 
+
+\chapterbecause{As relações e resultados provenientes da Trigonometria são fundamentais para resolver problemas em diversos contextos, apesar de  muitas vezes não serem utilizados explicitamente no nosso cotidiano. Aplicações relacionadas à Trigonometria podem ser encontradas em diversas áreas, como Física, Engenharia, Arquitetura, Astronomia e Topografia.} 
+
 \chapter{Trigonometria}
 \label{trigo-chap}
 
-\mbox{}\thispagestyle{empty}\clearpage
+%%%% Página de créditos
 
-\thispagestyle{empty}
+% Autores
+\autorum{Carlos A. Gomes (UFRN)}
+\autordois{Lhaylla Crissaff (UFF)}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+% Revisores
+\revisorum{Cydara Ripoll}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\autordacapa{Logan Liu}{Unsplash}{https://unsplash.com/photos/ud6XcK_KYBLVEtEDgc}
+\versao{1.0}
 
-\vspace*{.3cm}
-
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
-
-
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Trigonometria\\
-\\
-Ano/ Versão: & 2020 / versão 0.1 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas, \\
-			&  Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Carlos A. Gomes (UFRN),\\
-             & Lhaylla Crissaff (UFF).\\
-        
-\\
-Colaboração: & \\
-\\
-Revisão: & Cydara Ripoll \\
-
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & ---\\
-\\
-  Capa: & Foto de Logan Liu, no Unsplash \\
-  		& https://unsplash.com/photos/KYBLVEtEDgc \\
-
-\end{tabular}
-\vspace{.5cm}
-
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \mainmatter
 
@@ -1658,7 +1569,7 @@ Nesta definição, utilizamos o cosseno de $180^\circ-\alpha$ para definir o cos
 
 Por agora, basta que tenhamos a definição anterior em mente para continuarmos nosso estudo de Trigonometria. Se você quiser saber um pouco mais sobre essa definição, veja o \textit{Para saber+ Explorando a definição de senos e cossenos}. E ainda, no capítulo que trata as funções trigonométricas, você terá a oportunidade de trabalhar mais profundamente com cossenos (e senos também) de um ângulo qualquer, indo além do que estamos vendo aqui.
 
-\begin{observation}{}
+\begin{observation}
 Já sabemos que o cosseno de um ângulo agudo $\alpha$ assume apenas valores positivos e menores que $1$, então, de acordo com a definição acima,  
 $$\text{se }0^\circ \leq\alpha \leq180^\circ, \text{então} -1\leq\cos\alpha\leq 1.$$
 \end{observation}
@@ -2287,7 +2198,7 @@ Logo,
 Agora, seja $AE$ a altura do triângulo $ABC$ traçada a partir de $A$ e denotemos por $h'$ sua medida. A situação está esboçada na \Fref{sec2_leidossenos_parte1_demo2_fig}.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.8]{sec2_leidossenos_parte1_demo2.png}
+    \includegraphics[scale=0.75]{sec2_leidossenos_parte1_demo2.png}
     \caption{$ABC$ é um triângulo acutângulo com altura $AE$.}
     \label{sec2_leidossenos_parte1_demo2_fig}
 \end{figure}
@@ -2327,7 +2238,7 @@ Definimos:
 
 Nesta definição, utilizamos o seno de $180^\circ-\alpha$ para definir o seno de $\alpha$. Observe que se $\alpha$ é um ângulo obtuso, então $180^\circ-\alpha$ é um ângulo agudo e portanto, sabemos calcular seu seno com o conteúdo que aprendemos até aqui. 
 
-\begin{observation}{}
+\begin{observation}
 Já sabemos que o seno de um ângulo agudo $\alpha$ assume apenas valores positivos e menores que $1$, então, de acordo com a definição acima,  
 $$\text{se }0^\circ \leq\alpha \leq180^\circ, \text{então} 0\leq\sen\alpha\leq 1.$$
 \end{observation}
@@ -2407,7 +2318,7 @@ Consideremos, então, o triângulo obtusângulo $ABC$, como mostrado na \Fref{se
 Seja $CD$ a altura do triângulo $ABC$ traçada a partir do vértice $C$ e $h$ sua medida. Veja a \Fref{sec2_leidossenos_parte2_demo1_fig}.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{sec2_leidossenos_parte2_demo1.png}
+    \includegraphics[scale=0.55]{sec2_leidossenos_parte2_demo1.png}
     \caption{$ABC$ é um triângulo obtusângulo com altura $CD$.}
     \label{sec2_leidossenos_parte2_demo1_fig}
 \end{figure}
@@ -2431,7 +2342,7 @@ Como $\sen(180^\circ-\alpha)=\sen\alpha$, temos
 Agora, seja $AE$ a altura do triângulo $ABC$ traçada a partir de $A$ e denotemos por $h'$ sua medida. A situação está esboçada na \Fref{sec2_leidossenos_parte2_demo2_fig}.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{sec2_leidossenos_parte2_demo2.png}
+    \includegraphics[scale=0.55]{sec2_leidossenos_parte2_demo2.png}
     \caption{$ABC$ é um triângulo obtusângulo com altura $AE$.}
     \label{sec2_leidossenos_parte2_demo2_fig}
 \end{figure}
@@ -2467,7 +2378,7 @@ Com esse resultado, encontramos então uma nova relação válida para um triân
 Um corredor corre em linha reta partindo do ponto $A$ no sentido $AX$ e com velocidade constante igual à $v_S= 8,0$ m/s. Já um outro corredor, se desloca a partir de $B$ em linha reta no sentindo $BX$ e com velocidade constante igual à $v_B=8\sqrt{3}$ m/s, e pretende alcançar o corredor $A$ no ponto $X$. Veja a \Fref{sec2_leidossenos_ex_enunciado}.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{sec2_leidossenos_ex_enunciado.png}
+    \includegraphics[scale=0.65]{sec2_leidossenos_ex_enunciado.png}
     \caption{Corredores partindo dos pontos $A$ e $B$.}
     \label{sec2_leidossenos_ex_enunciado}
 \end{figure}
@@ -2612,7 +2523,7 @@ Repare que, em relação ao triângulos $ABC$, conhecemos dois de seus lados e o
     
     Logo, $\sen(C\hat{A}B)=0,7$. Com o auxílio da tabela trigonométrica, encontramos que o ângulo que possui seno igual a $0,7$ é $46^\circ$. Sendo assim, o ângulo de inclinação do cabo em relação ao chão é $46^\circ$.
 \end{enumerate}
-}{0}
+}{9}
 \end{answer}
 \def\currentcolor{session4}
 
@@ -3061,7 +2972,7 @@ $$\cos36^\circ=\frac{\sqrt{5}+1}{4}=\frac{1}{2}\cdot \frac{\sqrt{5}+1}{2}=\frac{
     
     Portanto a área da praça é $S=\pi R^2=\pi (10\sqrt{5+2\sqrt{3}})^2=100(5+2\sqrt{3})\pi$ m$^2$.
 \end{enumerate}
-}{0}
+}{9}
 \end{answer}
 
 \label{trigonometria-exercicios}
@@ -3071,7 +2982,7 @@ $$\cos36^\circ=\frac{\sqrt{5}+1}{4}=\frac{1}{2}\cdot \frac{\sqrt{5}+1}{2}=\frac{
 (ENEM) Para decorar um cilindro circular reto será usada uma faixa retangular de papel transparente, na qual está desenhada em negrito uma diagonal que forma um ângulo de $30^\circ$ com a borda inferior.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{Cilindro.JPG}
+    \includegraphics[scale=0.65]{Cilindro.JPG}
     \caption{Cilindro circular reto.}
     \label{Cilindro}
 \end{figure}
@@ -3088,7 +2999,7 @@ O raio da base do cilindro mede $\frac{6}{\pi}$cm, e ao enrolar a faixa obtém-s
 (ENEM) Para determinar a distância de um barco até a praia, um navegante utilizou o seguinte procedimento: a partir de um ponto A, mediu o ângulo visual $\alpha$ fazendo mira em um ponto fixo $P$ da praia. Mantendo o barco no mesmo sentido, ele seguiu até um ponto B de modo que fosse possível ver o mesmo ponto $P$ da praia, no entanto sob um ângulo visual $2\alpha$. A \Fref{Barco} ilustra essa situação:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{Barcotri.JPG}
+    \includegraphics[scale=0.45]{Barcotri.JPG}
     \caption{Barco navegando.}
     \label{Barco}
 \end{figure}
@@ -3266,7 +3177,7 @@ $B$ é de:
 (UERJ) O raio de uma roda gigante de centro $C$ mede $CA = CB = 10$m. Do centro $C$ ao plano horizontal do chão, há uma distância de $11$m. Os pontos $A$ e $B$, situados no mesmo plano vertical, $ACB$, pertencem à circunferência dessa roda e distam, respectivamente, $16$m e $3,95$m do plano do chão. Observe o esquema e a \Tref{Roda}.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{Roda.JPG}
+    \includegraphics[scale=0.65]{Roda.JPG}
     \caption{Medindo a distância entre dois pontos $A$ e $B$.}
     \label{Roda}
 \end{figure}
@@ -3411,7 +3322,7 @@ Para realizar um projeto de modernização da praça um engenheiro da prefeitura
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/trigonometria_bibliografia.bib}
 
 \nocite{*}

@@ -1,88 +1,27 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{./abertura-exponencial}{./abertura-exponencial-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-exponencial}
-\else
-\renewcommand\chapterillustration{./abertura-exponencial-professor}
-\fi
-\renewcommand\chapterwhat{Crescimento e decaimento exponenciais, função exponencial, juros compostos, progressão geométrica, expoentes racionais e irracionais.}
-\renewcommand\chapterbecause{Dizemos que estamos diante de um crescimento exponencial sempre que o aumento percentual de determinada quantidade por unidade de tempo é constante. Este é o caso das medições econômicas, financeiras e políticas de crescimento - de vendas, lucros, preços de ações, produto interno bruto, inflação, taxas de juros. Assim, compreender bem o crescimento exponencial é crucial para compreender o mundo.}
+\chapterwhat{Crescimento e decaimento exponenciais, função exponencial, juros compostos, progressão geométrica, expoentes racionais e irracionais.}
+\chapterbecause{Dizemos que estamos diante de um crescimento exponencial sempre que o aumento percentual de determinada quantidade por unidade de tempo é constante. Este é o caso das medições econômicas, financeiras e políticas de crescimento - de vendas, lucros, preços de ações, produto interno bruto, inflação, taxas de juros. Assim, compreender bem o crescimento exponencial é crucial para compreender o mundo.}
+
 \chapter{Função Exponencial}
 
 
 
-\mbox{}\thispagestyle{empty}\clearpage
+%%%% Página de créditos
 
-\thispagestyle{empty}
+\autorum{Gladson Antunes (UNIRIO)}
+\autordois{Michel Cambrainha (UNIRIO)}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\revisorum{Wanderley Rezende}
 
- \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\versao{1.0}
 
-\vspace*{.3cm}
+\graficos{Tarso Caldas}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
+\autordacapa{Gustavo Fring}{Pexels}{https://www.pexels.com/photo/woman-in-white-long-sleeve-shirt-wearing-white-goggles-3985155/}
 
-% Versão digital do capítulo:
+\creditos
 
-% \url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF107.html}
-
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Função Exponencial\\
-\\
-Ano/ Versão: & 2019 / versão 0.1 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Livro Aberto\\
-\\
-Coordenação:& Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Gladson Antunes (UNIRIO),\\
-        & Michel Cambrainha (UNIRIO)\\
-\\
-Revisão: & Wanderley Rezende \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & --- \\
-\\
-  Capa: & Foto de Gustavo Fring , no Pexels \\
-
-\end{tabular}
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -289,7 +228,7 @@ As informações solicitadas dependem de informações sobre a população da ci
 	\item{}
 	\adjustbox{valign=t}
 	{
-	\begin{tabu} to \textwidth{|c|c|c|}
+	\begin{tabular}{|c|c|c|}
 	\hline
 	\tcolor{Lançamento} & \tcolor{\# verdes} & \tcolor{quocientes} \\ 
 	\hline
@@ -309,7 +248,7 @@ As informações solicitadas dependem de informações sobre a população da ci
 	\hline
 	7 & $0$ & $\frac{0}{2}=0$\\ 
 	\hline
-	\end{tabu}
+	\end{tabular}
 	}
 
 	\item{}
@@ -618,7 +557,7 @@ E aí? Com quantas dobras a espessura alcançaria a ordem de grandeza o número 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=250bp]{intel.jpg}
+\includegraphics[width=225bp]{intel.jpg}
 \caption{Foto de Slejven Djurakovic, Unsplash}
 \end{figure}
 
@@ -672,13 +611,13 @@ Uma outra lei similar é conhecida como lei de Moore. Gordon Moore foi um dos fu
 	\item{}
 	\adjustbox{valign=t}
 	{
-	\begin{tabu} to \textwidth{|>{\centering}d{.15\textwidth}|*{7}{c|}}
+	\begin{tabular}{|>{\centering}d{.15\textwidth}|*{7}{c|}}
 	\hline
 	\tcolor{Ano} & 10 & 15 & 20 & 25 & 30 & 35 & 40 \\
 	\hline
 	\tcolor{Árvores remanescentes} & 5.987 & 4.633 & 3.585 & 2.774 & 2.146 & 1.661 & 1.285 \\
 	\hline
-	\end{tabu}
+	\end{tabular}
 	}
 
 	\item{}
@@ -718,7 +657,6 @@ Uma outra lei similar é conhecida como lei de Moore. Gordon Moore foi um dos fu
 }{1}{1}
 
 \end{objectives}
-\marginpar{\vspace{-1.5em}}
 \begin{sugestions}{Dobradura}
 {
 	\begin{itemize}
@@ -736,8 +674,8 @@ Uma outra lei similar é conhecida como lei de Moore. Gordon Moore foi um dos fu
 {
 	\begin{enumerate}
 	\item \adjustbox{valign=t}
-	{\setlength\tabulinesep{2.5pt}
-	\begin{tabu} to \textwidth{|c|c|c|}
+	{
+	\begin{tabular}{|c|c|c|}
 	\hline
 	\tcolor{Etapas} & \tcolor{Área de cada região} & \tmcol{1}{c|}{Número de regiões} \\ 
 	\hline
@@ -753,7 +691,7 @@ Uma outra lei similar é conhecida como lei de Moore. Gordon Moore foi um dos fu
 	\hline
 	5 & $\dfrac{1}{243}$ & $243$ \\ 
 	\hline
-	\end{tabu}
+	\end{tabular}
 	}
 
 	\item Em cada nova etapa a área da menor região é obtida dividindo por 3 a área da menor região da etapa anterior, já o número de regiões de uma nova etapa é obtido fazendo a multiplicação de 3 pelo número de regiões da etapa anterior.
@@ -766,10 +704,9 @@ Uma outra lei similar é conhecida como lei de Moore. Gordon Moore foi um dos fu
 	\begin{table}[H]
 	\centering
 
-	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\begin{tabular}{|>{$}c<{$}|>{$}c<{$}|}
 	\hline
-	\tnumber
-	\bm{x} & \bm{2\cdot3^x} \\
+	\tmat{x} & \tmat{2\cdot3^x} \\
 	\hline
 	1 & 6 \\
 	\hline
@@ -791,11 +728,10 @@ Uma outra lei similar é conhecida como lei de Moore. Gordon Moore foi um dos fu
 	\hline
 	10 & 118098 \\
 	\hline
-	\end{tabu}\hspace{1em}
-	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\end{tabular}\hspace{1em}
+	\begin{tabular}{|>{$}c<{$}|>{$}c<{$}|}
 	\hline
-	\tnumber
-	\bm{x} & \bm{64\cdot(1{,}5)^x} \\
+	\tmat{x} & \tmat{64\cdot(1{,}5)^x} \\
 	1 & 96 \\
 	\hline
 	2 & 144 \\
@@ -816,7 +752,7 @@ Uma outra lei similar é conhecida como lei de Moore. Gordon Moore foi um dos fu
 	\hline
 	10 & 3690{,}5625 \\
 	\hline
-	\end{tabu}
+	\end{tabular}
 	\end{table}
 	\begin{figure}[H]
 	\centering
@@ -854,13 +790,13 @@ Uma fazenda de árvores começou a colher um lote que havia sido plantada anos a
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|d{.15\textwidth}|*{9}{c|}}
+\begin{tabular}{|d{.15\textwidth}|*{9}{c|}}
 \hline
 \tcolor{Ano} & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
 \hline
 \tcolor{Árvores remanescentes} & 10.000 & 9.502 & 9.026 & 8.574 & 8.145 & 7.737 & 7.350 & 6.982 & 6.634 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -879,13 +815,13 @@ Os donos da fazenda querem parar a colheita quando sobrarem 15\% do número inic
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|d{.15\textwidth}|*{7}{>{\centering}m{3em}|}}
+\begin{tabular}{|d{.15\textwidth}|*{7}{>{\centering\arraybackslash}m{3em}|}}
 \hline
 \tcolor{Ano} & 10 & 15 & 20 & 25 & 30 & 35 & 40 \\
 \hline
 \tcolor{Árvores remanescentes} & & & & & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \end{task}
@@ -1047,10 +983,9 @@ Fonte: CEPA}
 	\begin{table}[H]
 	\centering
 	
-	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\begin{tabular}{|>{$}c<{$}|>{$}c<{$}|}
 	\hline
-	\tnumber
-	\bm{t}\text{ \textbf{(meses)}} & \bm{C}\text{ \textbf{coelhos}} \\
+	\tmat{t}\text{ \textbf{(meses)}} & \tmat{C}\text{ \textbf{coelhos}} \\
 	\hline
 	0 & 100 \\
 	\hline
@@ -1078,12 +1013,11 @@ Fonte: CEPA}
 	\hline
 	12 & 201 \\
 	\hline
-	\end{tabu}
+	\end{tabular}
 	\hspace{1em}	
-	\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|}
+	\begin{tabular}{|>{$}c<{$}|>{$}c<{$}|}
 	\hline
-	\tnumber
-	\bm{t}\text{ \textbf{(meses)}} & \bm{B}\text{ \textbf{bactérias}} \\
+	\tmat{t}\text{ \textbf{(meses)}} & \tmat{B}\text{ \textbf{bactérias}} \\
 	\hline
 	0 & 950.000 \\
 	\hline
@@ -1111,7 +1045,7 @@ Fonte: CEPA}
 	\hline
 	12 & 268.308 \\
 	\hline
-	\end{tabu}
+	\end{tabular}
 	\end{table}
 
 	\item{}
@@ -1277,9 +1211,8 @@ O valor de um investimento de R\$ 1.000 a uma taxa de juros de 10\% ao mês evol
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2.5pt}
 
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
 \tcolor{Tempo} & \tcolor{Valor}                       & \tcolor{Juro}                \\ \hline
 $t=0$   & R\$ $1.000$ (capital inicial) & R\$ 0               \\ \hline
@@ -1288,7 +1221,7 @@ $t=2$   & R\$ $1.100(1+0{,}1)$ = R\$ $1.210$   & R\$ $110$             \\ \hline
 $t=3$   & R\$ $1.210(1+0{,}1)$ = R\$ $1.331$   & R\$ $121$             \\ \hline
       &                             &                     \\ \hline
 $t=n$   & $R\$1000\cdot (1{,}1)^{n}$               & $R\$ 1000\cdot (1{,}1)^{n-1} \cdot 0,1$ \\ \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{figure}[H]
@@ -1361,12 +1294,10 @@ Tabela $1$ é exponencial com fator $1,03$, tabela $2$ tem variação linear com
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{3.5pt}
 
-\begin{tabu} to \linewidth{|c|c|c|>{\centering}m{.2\linewidth}|>{\centering}d{.2\textwidth}|}
+\begin{tabular}{|c|c|c|>{\centering}m{.2\linewidth}|>{\centering\arraybackslash}d{.2\textwidth}|}
 \hline
-\thead
-Valor inicial & Fator & Taxa percentual & Crescimento ou decaimento? & Esboço do gráfico 
+\tcolor{Valor inicial} & \tcolor{Fator} & \tcolor{Taxa percentual} & \tcolor{Crescimento ou decaimento?} & \tcolor{Esboço do gráfico} 
 \tabularnewline 
 \hline
 $3$ & $1{,}7$ & $0{,}7=70\%$ & Crescimento & 
@@ -1469,7 +1400,7 @@ node at (0,.2) [fill, circle, inner sep=1pt, label=left:{$0{,}2$}, overlay] {};
 
 \tabularnewline 
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 }{0}
 \end{answer}
@@ -1520,10 +1451,9 @@ As tabelas abaixo mostram os dados de três possíveis variações nas populaç�
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Ano & Antílopes \\
+\tcolor{Ano} & \tcolor{Antílopes} \\
 \hline
 2017 & $1.000$ \\
 \hline
@@ -1533,18 +1463,17 @@ Ano & Antílopes \\
 \hline
 2020 & $1.093$ \\
 \hline
-\end{tabu}
+\end{tabular}
 
-\caption*{Tabela 1}
+\caption{}
 \end{table}
 
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Ano & Antílopes \\
+\tcolor{Ano} & \tcolor{Antílopes} \\
 \hline
 2017 & $1.000$ \\
 \hline
@@ -1554,19 +1483,18 @@ Ano & Antílopes \\
 \hline
 2020 & $1.090$ \\
 \hline
-\end{tabu}
+\end{tabular}
 
-\caption*{Tabela 2}
+\caption{}
 \end{table}
 
 
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Ano & Antílopes \\
+\tcolor{Ano} & \tcolor{Antílopes} \\
 \hline
 2017 & $1.000$ \\
 \hline
@@ -1576,9 +1504,9 @@ Ano & Antílopes \\
 \hline
 2020 & $1.009$ \\
 \hline
-\end{tabu}
+\end{tabular}
 
-\caption*{Tabela 3}
+\caption{}
 \end{table}
 \end{multicols}
 
@@ -1609,10 +1537,9 @@ Classifique dentre os modelos dados abaixo os que apresentam crescimento exponen
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|>{\centering}m{.2\textwidth}|c|c|>{\centering}m{.1\textwidth}|>{\centering}m{.2\textwidth}|>{\centering}m{.15\textwidth}|}
+\begin{tabular}{|>{\centering}m{.2\textwidth}|c|c|>{\centering}m{.1\textwidth}|>{\centering}m{.2\textwidth}|>{\centering}m{.15\textwidth}|}
 \hline
-\thead
-Modelo & Valor inicial & Fator & Taxa percentual & Crescimento ou decaimento? & Esboço do gráfico 
+\tcolor{Modelo} & \tcolor{Valor inicial} & \tcolor{Fator} & \tcolor{Taxa percentual} & \tcolor{Crescimento ou decaimento?} & \tcolor{Esboço do gráfico} 
 \tabularnewline 
 \hline
 $y(z)=3(1{,}7)^{z}$ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
@@ -1630,7 +1557,7 @@ $M(x)=5\cdot 3^{x}$ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0);
 $F(y)=0,2\cdot 7^{y} $ & & & & & \tikz\draw [<->] (0,1cm) -- (0,0) -- (1cm,0); 
 \tabularnewline 
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -1718,7 +1645,6 @@ O número $2$ elevado ao número em cinza é igual ao número em vermelho.
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Expoentes inteiros}
 {
 \begin{enumerate}\setcounter{enumi}{1}
@@ -1793,7 +1719,6 @@ Alguns outros exemplos: $(2^{2})^{3}=2^{2\times3}=2^6$,\quad $(2^{8})^{5}=2^{8\t
 }{0}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{-1.5em}}
 \begin{objectives}{Expoentes racionais}
 {
 \begin{itemize}
@@ -1803,7 +1728,6 @@ Alguns outros exemplos: $(2^{2})^{3}=2^{2\times3}=2^6$,\quad $(2^{8})^{5}=2^{8\t
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{Expoentes racionais}
 {
 \begin{itemize}
@@ -2256,6 +2180,7 @@ A expressão então é dada por $f(x)=4\cdot \left(\dfrac 32\right)^{\frac x5}$.
 
 
 \explore{Função Exponencial}
+\vspace{-.5em}
 
 \begin{task}{Um cafézinho}
 
@@ -2632,6 +2557,7 @@ Seguindo este raciocínio, isto é, capitalizando a quantidade emprestada em dif
 %\includegraphics[width=300bp]{capitalização_contínua.png}
 %\end{figure}
 \begin{center}
+\renewcommand{\arraystretch}{2}
 	\begin{tabular}{|l|l|}
 		\hline
 		Se capitalizado trimestralmente & $\left(1+\frac 14 \right)^4=2{,}44140625$                     \\ \hline
@@ -2643,7 +2569,7 @@ Seguindo este raciocínio, isto é, capitalizando a quantidade emprestada em dif
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=300bp]{euler1.png}
+\includegraphics[width=230bp]{euler1.png}
 \end{figure}
 
 Isso nos mostra que na medida em que vamos considerando períodos de tempo cada vez menores vamos nos aproximando de um valor máximo constante $2,71828...$ que é conhecido como \textbf{número de Euler} e denotado pela letra $ e $. Ou seja, se adotássemos um regime de capitalização contínua ao final de um ano a pessoa deveria pagar $e$ reais.
@@ -2690,7 +2616,6 @@ Essa Lei pode ser traduzida matematicamente pela função exponencial $D(t)=D_{0
 
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{Próximo valor}
 {
 \begin{itemize}
@@ -2768,10 +2693,9 @@ Complete a tabela com os próximos valores de acordo com cada modelo especificad
 
 \scalebox{.9}
 {
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\thead
-$\bm{x}$ & Afim & Quadrática & Exponencial \\
+\tcolor{$\bm{x}$} & \tcolor{Afim} & \tcolor{Quadrática} & \tcolor{Exponencial} \\
 \hline
 $0$ & $3$ & $3$ & $3$ \\
 \hline
@@ -2787,7 +2711,7 @@ $5$ & & & \\
 \hline
 $6$ & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 }
 \end{table}
 
@@ -2872,25 +2796,25 @@ Isto é, a velocidade média em intervalos de tamanho $0,5$ é sempre o dobro da
 %\end{figure}
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2.5pt}
-	\begin{tabu} to \textwidth{|c|c|c|c|}
+\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{|e{2cm}|c|c|c|}
 		\hline
 		\tcolor{$\bm{[x,x+0,5]}$}                  & $[1;1{,}5]$ & $[2{,}5;3]$ & $[-1;-0{,}5]$  \\ \hline
 		\tcolor{$\bm{f(x)}$}                       & $f(1)=4$  & $f(2)=32$ & $f(-1)=0{,}25$ \\ \hline
 		\tcolor{$\bm{\dfrac{\Delta f}{\Delta x}}$} & $8$         & $64$        & $0{,}5$          \\ \hline
-	\end{tabu}
+	\end{tabular}
 \end{table}
 
 O fator de multiplicação na taxa de variação média depende apenas da base a e do tamanho do intervalo $h$. Vamos analisar o que ocorre quando fazemos o comprimento do intervalo ficar bem próximo de zero, ou seja, quando taxa de variação média se aproxima da taxa de variação instantânea.
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2.5pt}
 
-\begin{tabu} to \textwidth{|*{6}{>{$}{c}<{$}|}}
+\scalebox{.875}
+{
+\begin{tabular}{|g{.1\linewidth}|*{5}{g{.14\linewidth}|}}
 \hline
-\tnumber
-\bm{h} & \bm{\dfrac{2^h-1}{h}} & \bm{\dfrac{3^h-1}{h}} & \bm{\dfrac{4^h-1}{h}} & \bm{\dfrac{\bigg(\dfrac{1}{2}\bigg)^h-1}{h}}  & \bm{\dfrac{\bigg(\dfrac{3}{4}\bigg)^h-1}{h}} \tabularnewline
+\tmat{h} & \tmat{\dfrac{2^h-1}{h}} & \tmat{\dfrac{3^h-1}{h}} & \tmat{\dfrac{4^h-1}{h}} & \tmat{\dfrac{\bigg(\dfrac{1}{2}\bigg)^h-1}{h}}  & \tmat{\dfrac{\bigg(\dfrac{3}{4}\bigg)^h-1}{h}} \tabularnewline
 1 & 1 & 2 & 3 & -0{,}5 & -0{,}25 \\
 \hline
 0{,}5 & 0{,}82842712 & 1{,}4641016 & 2 & -0{,}58578644 & -0{,}26794919 \\
@@ -2907,7 +2831,8 @@ O fator de multiplicação na taxa de variação média depende apenas da base a
 \hline
 0{,}000001 & 0{,}69314742 & 1{,}0986129 & 1{,}3862953 & -0{,}69314694 & -0{,}28768203 \\
 \hline
-\end{tabu}
+\end{tabular}
+}
 \end{table}
 
 % \begin{figure}[H]
@@ -2925,12 +2850,12 @@ Pode-se conjecturar, ainda a partir da última tabela que, para bases menores qu
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2.5pt}
 
-\begin{tabu} to \textwidth{|*{6}{>{$}{c}<{$}|}}
+\scalebox{.875}
+{
+\begin{tabular}{|g{.1\linewidth}|*{5}{g{.15\linewidth}|}}
 \hline
-\tnumber
-\bm{h} & \bm{\dfrac{2{,}7^h-1}{h}} & \bm{\dfrac{2{,}71^h-1}{h}} & \bm{\dfrac{2{,}718^h-1}{h}} & \bm{\dfrac{2{,}7182^h-1}{h}}  & \bm{\dfrac{2{,}61828^h-1}{h}} \tabularnewline
+\tmat{h} & \tmat{\dfrac{2{,}7^h-1}{h}} & \tmat{\dfrac{2{,}71^h-1}{h}} & \tmat{\dfrac{2{,}718^h-1}{h}} & \tmat{\dfrac{2{,}7182^h-1}{h}}  & \tmat{\dfrac{2{,}61828^h-1}{h}} \tabularnewline
 1 & 1{,}7 & 1{,}71 & 1{,}718 & 1{,}7182 & 1{,}71828 \\
 \hline
 0{,}5 &  1{,}2863353 & 1{,}2924155 & 1{,}2972716 & 1{,}2973929 & 1{,}2974414 \\
@@ -2947,7 +2872,8 @@ Pode-se conjecturar, ainda a partir da última tabela que, para bases menores qu
 \hline
 0{,}000001 &  0{,}99325227 & 0{,}99694913 & 0{,}99989682 & 0{,}9999704 & 0{,}99999983\\
 \hline
-\end{tabu}
+\end{tabular}
+}
 \end{table}
 
 % \begin{figure}[H]
@@ -3587,9 +3513,8 @@ Calculando a soma da PG infinita de razão $\dfrac{3}{4}$ que aparece dentro do 
 \item\phantom{a}
 \end{enumerate}
 
-\setlength\tabulinesep{2.5pt}
 \setlength\tabcolsep{2.5pt}
-\begin{tabu} to \linewidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
 \tmcol{1}{|l|}{} & \tcolor{Área} & \tcolor{Perímetro} & \tcolor{Área esburacada} \\ 
 \hline
@@ -3619,7 +3544,7 @@ $A_4=\left(\dfrac{3}{4}\right)^4\cdot A$ &
 $P_4=\left(\dfrac{3}{2}\right)^4\cdot P$& 
 $B_4=\dfrac{1}{4}\cdot A\left[1+\dfrac{3}{4}+\bigg(\dfrac{3}{4}\bigg)^2+\bigg(\dfrac{3}{4}\bigg)^3\right]$\\ 
 \hline
-\end{tabu}
+\end{tabular}
 
 }{0}
 \end{answer}
@@ -3707,8 +3632,7 @@ Na tabela a seguir apresentamos os valores da área, do perímetro e da área es
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2.5pt}
-\begin{tabu}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
 \tmcol{1}{|l|}{} & \tcolor{Área} & \tcolor{Perímetro} & \tcolor{Área esburacada} \\ 
 \hline
@@ -3717,7 +3641,7 @@ $1^a$ Iteração             & $A_1=\dfrac{3}{4}\cdot A$               & $P_1=\d
 $2^a$ Iteração             & $A_2=\left(\dfrac{3}{4}\right)^2\cdot A$ & $P_2=\left(\dfrac{3}{2}\right)^2\cdot P$ & $B_2=\dfrac{1}{4}\left[A+\dfrac{3}{4}\cdot A\right]$ \\ \hline
 $3^a$ Iteração             & \multicolumn{1}{l|}{}                   & \multicolumn{1}{l|}{}                   & \multicolumn{1}{l|}{}                               \\ \hline
 $4^a$ Iteração             & \multicolumn{1}{l|}{}                   & \multicolumn{1}{l|}{}                   & \multicolumn{1}{l|}{}                               \\ \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Complete as linhas da tabela com os valores da área, do perímetro e da área esburacada para a terceira e quarta iteração.
@@ -3755,7 +3679,6 @@ Utilize a expressão para a área esburacada que você encontrou no item anterio
 \end{knowledge}
 \clearpage
 \def\currentcolor{cor1}
-\marginpar{\vspace{.5em}}
 \begin{answer}{Exercícios}
 {\exerciselist
 	\begin{enumerate}
@@ -4006,7 +3929,7 @@ Utilize a expressão para a área esburacada que você encontrou no item anterio
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/exponencial_bibliografia.bib}
 
 \nocite{*}

@@ -26,7 +26,7 @@ pen box2 = rgb(240/255,238/255,201/255);
 
 texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}");
 
-size(4cm);
+size(3.7cm);
 
 currentprojection=orthographic(1.5,1.5,1/2);
 

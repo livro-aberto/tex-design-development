@@ -1,88 +1,20 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-sistemas}{abertura-sistemas-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{abertura-sistemas}
-\else
-\renewcommand\chapterillustration{abertura-sistemas-professor}
-\fi
-\renewcommand\chapterwhat{Equações lineares e quadráticas, sistemas de equações lineares e inequações polinomiais de primeiro e segundo grau, explorando métodos algébricos e geométricos de determinação de suas soluções.}
-\renewcommand\chapterbecause{Equações e inequações consistem em poderosos instrumentos de modelagem matemática, utilizados pelo homem há muitos anos para investigar padrões de comportamento e resolução de problemas em diferentes áreas do conhecimento envolvendo medidas de uma ou várias grandezas. Quando uma coleção de equações está associada à resolução de um determinado problema, tal coleção é chamada de sistema de equações. Neste capítulo estudaremos alguns sistemas de equações, entre eles, podemos destacar o tipo mais simples, os sistemas lineares, que nos permitirão resolver problemas sobre dietas nutricionais, produção de uma fábrica de bolos, lucro de bilheteria de um teatro, redes de tráfego rodoviário, interpolação polinomial, tomografia computadorizada, dentre outros. Por sua vez, as inequações são úteis para se comparar valores de duas grandezas variáveis, obter estimativas, calcular intervalos de variação e de erro associados à medição de uma grandeza e resolver problemas de otimização (cálculo de máximos e mínimos), que são ações inquestionavelmente relevantes na construção do pensamento matemático dos estudantes. Tanto para os sistemas lineares como para as inequações, aplicaremos as noções sobre funções afim e quadrática vistas nos capítulos anteriores.}
+\chapterwhat{Equações lineares e quadráticas, sistemas de equações lineares e inequações polinomiais de primeiro e segundo grau, explorando métodos algébricos e geométricos de determinação de suas soluções.}
+
+\chapterbecause{Equações e inequações consistem em poderosos instrumentos de modelagem matemática, utilizados pelo homem há muitos anos para investigar padrões de comportamento e resolução de problemas em diferentes áreas do conhecimento envolvendo medidas de uma ou várias grandezas. Quando uma coleção de equações está associada à resolução de um determinado problema, tal coleção é chamada de sistema de equações. Neste capítulo estudaremos alguns sistemas de equações, entre eles, podemos destacar o tipo mais simples, os sistemas lineares, que nos permitirão resolver problemas sobre dietas nutricionais, produção de uma fábrica de bolos, lucro de bilheteria de um teatro, redes de tráfego rodoviário, interpolação polinomial, tomografia computadorizada, dentre outros. Por sua vez, as inequações são úteis para se comparar valores de duas grandezas variáveis, obter estimativas, calcular intervalos de variação e de erro associados à medição de uma grandeza e resolver problemas de otimização (cálculo de máximos e mínimos), que são ações inquestionavelmente relevantes na construção do pensamento matemático dos estudantes. Tanto para os sistemas lineares como para as inequações, aplicaremos as noções sobre funções afim e quadrática vistas nos capítulos anteriores.}
 \chapter{Sistemas Lineares e Inequações}
 
+%%%% Página de créditos
 
+\autorum{Douglas Monsôres de Melo Santos (UFRRJ)}
+\autordois{Gisela Maria da Fonseca Pinto (UFRRJ)}
+\autortres{Luciano Vianna Félix (UFRRJ)}
 
-\mbox{}\thispagestyle{empty}\clearpage
+\versao{1.0}
+\revisorum{Wanderley Rezende}
 
-\thispagestyle{empty}
-
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
-
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
-
-\vspace*{.3cm}
-
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
-
-% Versão digital do capítulo:
-
-% \url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF107.html}
-
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Sistemas Lineares e Inequações\\
-\\
-Ano/ Versão: & 2020 / versão 0.1 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Livro Aberto\\
-\\
-Coordenação:& Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Douglas Monsôres de Melo Santos (UFRRJ),\\
-        & Gisela Maria da Fonseca Pinto (UFRRJ),\\
-             & Luciano Vianna Félix (UFRRJ).\\
-\\
-Revisão: & Wanderley Rezende \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & --- \\
-\\
-  Capa: & Foto de Scott Webb, no Pexels \\
-
-\end{tabular}
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \mainmatter
 
@@ -978,7 +910,7 @@ De fato, na primeira equação, a incógnita $x$ aparece elevada a dois. Na segu
 As equações lineares já haviam aparecidos nas seções anteriores deste capítulo (localize-as!) e em todas elas, a representação geométrica das soluções também eram dadas por retas. Esse fato nos sugere a seguinte pergunta:	
 
 
-\begin{observation}{}
+\begin{observation}
 
 \textbf{O conjunto solução de uma equação linear de duas incógnitas sempre pode ser representado geometricamente por uma reta no plano cartesiano?}
 
@@ -1013,8 +945,7 @@ Todo esse raciocínio nos mostrou que a resposta à pergunta é sim, ou seja:
 Uma vez que respondemos à pergunta anterior, é natural que pensemos sobre outra questão:
 
 
-\begin{observation}{}
-
+\begin{observation}
 \textbf{Toda reta no plano cartesiano representa o conjunto solução de uma equação linear de duas incógnitas?}
 
 Vamos começar o raciocínio considerando uma reta qualquer do plano cartesiano. Novamente, vamos dividir o problema em dois casos:
@@ -1939,19 +1870,19 @@ Um nutricionista está elaborando uma dieta para um paciente que está com defic
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|e{3,5cm}|}
+\begin{tabular}{|c|c|c|c|e{3,5cm}|}
 \hline
-\tmcol{5}{|c|}{Miligramas de nutrientes por porção de 50g de alimento} \\
+\tmcol{5}{|c|}{Miligramas de nutrientes por porção de 50g de alimento} \tabularnewline
 \hline
-\tcolor{Nutriente} & \tcolor{Alimento 1 (mg)} & \tcolor{Alimento 2 (mg)} & \tcolor{Alimento 3 (mg)} & \tcolor{Total de  nutrientes  necessários (mg)} \\
+\tcolor{Nutriente} & \tcolor{Alimento 1 (mg)} & \tcolor{Alimento 2 (mg)} & \tcolor{Alimento 3 (mg)} & \tcolor{Total de  nutrientes  necessários (mg)} \tabularnewline
 \hline
-Vitamina C & 10 & 10 & 20 & 100  \\
+Vitamina C & 10 & 10 & 20 & 100  \tabularnewline
 \hline
-Cálcio & 50 & 40 & 10 & 300 \\
+Cálcio & 50 & 40 & 10 & 300 \tabularnewline
 \hline
-Magnésio & 30 & 10 & 40 & 200 \\
+Magnésio & 30 & 10 & 40 & 200 \tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -2050,7 +1981,7 @@ A construção de uma imagem da Tomografia requer encontrar \textbf{soluções a
 
 \begin{figure}[H]
 \centering
-\noindent\includegraphics[width=175bp]{pixel}
+\noindent\includegraphics[width=160bp]{pixel}
 \caption{Fonte: Livro do Howard Anton.}
 \end{figure}
 
@@ -2287,8 +2218,7 @@ Tranquilize seus alunos com relação aos valores dessa atividade. Eles podem ac
 }{1}
 \end{answer}
 \def\currentcolor{session4}
-\begin{observation}{}
-\textbf{Resolvendo Inequações Graficamente}
+\begin{observationtitle}{Resolvendo Inequações Graficamente}
 
 Considere, na imagem a seguir, as funções $f$ e $g$ e que $P_1$ e $P_2$ são os únicos pontos de interseção entre os seus gráficos.
 
@@ -2315,7 +2245,7 @@ O conjunto solução $S$ da inequação $f(x) \leq g(x)$ equivale unir os conjun
 Resolver a inequação $f(x) < 0$ significa buscar os valores de $x$ nos quais a função $f$ é menor que zero, ou seja, é negativa. Note que nessa inequação, estamos comparando duas funções também, a saber, a função $f$ e uma função $h(x)=0$, cujo gráfico é o eixo dos $x$. Assim, , os valores de $x$ para os quais $f(x) <0$ estão nos intervalos do eixo $x$ para os quais o gráfico de $f$ está \textbf{abaixo} desse eixo (desconsiderando os valores de $x$ nos quais o gráfico está exatamente sobre o eixo $x$!). O raciocínio para o conjunto solução da inequação $f(x) >0$ é o mesmo, considerando agora os valores de $x$ para os quais o gráfico de $f$ está \textbf{acima} do eixo $x$.
 \end{enumerate}
 
-\end{observation}
+\end{observationtitle}
 
 
 \practice{Inequações em uma incógnita}
@@ -2499,7 +2429,7 @@ Como queremos $f(x) < 0$, a parte do gráfico que fica abaixo do eixo $x$ é exa
 
 Com base no que fizemos, podemos enunciar o seguinte resultado:
 
-\begin{observation}{}
+\begin{observation}
 \textbf{Teorema:} Toda inequação polinomial do 1\super{o} grau pode ser reduzida a uma inequação da forma $f(x) <0$, $f(x) > 0$, $f(x) \leq 0$ ou $f(x) \geq 0$, onde $f$ é uma função constante ou uma função afim.
 
 \end{observation}
@@ -2747,7 +2677,7 @@ $5x - 2x^2 > 1$.
 
 Utilizando o argumento, visto na seção anterior, de somar um mesmo número real nas duas expressões de uma desigualdade, podemos concluir o seguinte resultado:
  
-\begin{observation}{}
+\begin{observation}
 \textbf{Teorema:} Toda inequação polinomial do 2\super{o} grau pode ser reduzida a uma inequação da forma $f(x) <0$, $f(x) > 0$, $f(x) \leq 0$ ou $f(x) \geq 0$, onde $f$ é uma função constante, afim ou quadrática.
 
 \end{observation}
@@ -3075,7 +3005,7 @@ x\in\R;-\frac{3}{2}\leq x\leq\frac{4}{3}
 \end{equation*}
 \end{example}
 
-\begin{observation}{}
+\begin{observation}
 Note que precisamos usar o sinal $\leq$ para que pudéssemos indicar no conjunto solução que os valores $x=-\frac{3}{2}$ e $x=\frac{4}{3}$ também satisfazem à inequação, ou seja, que quando temos $x=-\frac{3}{2}$ ou $x=\frac{4}{3}$, o produto $f_1\cdot f_2$ é nulo e que, portanto, atendem à desigualdade $(4-3x)(2x+3)\geq0$.
 \end{observation}
 
@@ -3109,7 +3039,7 @@ Podemos verificar que $f_1$ é negativa para valores de $x$ menores que $-\frac{
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=175bp]{inequacoes12}
+\includegraphics[width=165bp]{inequacoes12}
 \end{figure}
 
 São então 5 intervalos a considerar:
@@ -3126,7 +3056,7 @@ São então 5 intervalos a considerar:
 \begin{multicols}{5}
 \centering
 
-\includegraphics[height=150bp]{inequacoes13}
+\includegraphics[height=125bp]{inequacoes13}
 \begin{equation*}
 \left \{
 \begin{aligned}
@@ -3139,7 +3069,7 @@ f_1\cdot f_2&<0
 \end{equation*}
 
 
-\includegraphics[height=150bp]{inequacoes14}
+\includegraphics[height=125bp]{inequacoes14}
 \begin{equation*}
 \left \{
 \begin{aligned}
@@ -3152,7 +3082,7 @@ f_1\cdot f_2&>0
 \end{equation*}
 
 
-\includegraphics[height=150bp]{inequacoes14}
+\includegraphics[height=125bp]{inequacoes14}
 \begin{equation*}
 \left \{
 \begin{aligned}
@@ -3166,7 +3096,7 @@ f_1\cdot f_2&<0
 
 
 
-\includegraphics[height=150bp]{inequacoes14}
+\includegraphics[height=125bp]{inequacoes14}
 \begin{equation*}
 \left \{
 \begin{aligned}
@@ -3179,7 +3109,7 @@ f_1\cdot f_2&>0
 \end{equation*}
 
 
-\includegraphics[height=150bp]{inequacoes17}
+\includegraphics[height=125bp]{inequacoes17}
 \begin{equation*}
 \left \{
 \begin{aligned}
@@ -3193,7 +3123,7 @@ f_1\cdot f_2&<0
 \end{multicols}
 Além disso, vamos analisar como se comporta esse produto nos valores que são raízes das funções:
 
-\begin{itemize}
+\begin{itemize}[topsep=0pt,itemsep=0pt]
 \item $x=-\frac{1}{2}\implies f_1\big(-\frac{1}{2}\big)=0$, logo $f_1\cdot f_2$ é zero
 \item $x=0\implies f_2(0)=0$, logo $f_1\cdot f_2$ é zero.
 \item $x=\frac{1}{2}\implies f_1\big(\frac{1}{2}\big)=0$, logo $f_1\cdot f_2$ é zero.
@@ -3208,7 +3138,7 @@ x\in\R; -\frac{3}{2}<x<-\frac{1}{2}\text{ \textit{ou} }0<x<\frac{1}{2}
 
 \end{example}
 
-\begin{observation}{}
+\begin{observation}
 Note que precisamos usar o sinal $\leq$ para que pudéssemos indicar no conjunto solução que os valores $x=-\frac{3}{2}$ e $x=\frac{4}{3}$ também satisfazem à inequação, ou seja, que quando temos x=-3/2 ou x=4/3, o produto $f_1\cdot f_2$ é nulo e que, portanto, atendem à desigualdade $(4-3x)(2x+3)\geq$.
 \end{observation}
 
@@ -3235,7 +3165,7 @@ Raiz de $f_2$:
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=350bp]{inequacoes18}
+\includegraphics[width=300bp]{inequacoes18}
 \end{figure}
 
 
@@ -3244,7 +3174,7 @@ Podemos verificar que $f_1$ é positiva para valores de $x$ menores que $\frac{2
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=350bp]{inequacoes19}
+\includegraphics[width=330bp]{inequacoes19}
 \end{figure}
 
 São então 4 intervalos a considerar:
@@ -3259,7 +3189,7 @@ São então 4 intervalos a considerar:
 \begin{minipage}{.195\linewidth}
 \centering
 
-\includegraphics[height=140bp]{inequacoes20}
+\includegraphics[height=125bp]{inequacoes20}
 \begin{equation*}
 \left \{
 \begin{aligned}
@@ -3275,7 +3205,7 @@ f_1\cdot f_2&<0
 \centering
 
 
-\includegraphics[height=140bp]{inequacoes21}
+\includegraphics[height=125bp]{inequacoes21}
 \begin{equation*}
 \left \{
 \begin{aligned}
@@ -3291,7 +3221,7 @@ f_1\cdot f_2&>0
 \centering
 
 
-\includegraphics[height=140bp]{inequacoes22}
+\includegraphics[height=125bp]{inequacoes22}
 \begin{equation*}
 \left \{
 \begin{aligned}
@@ -3306,7 +3236,7 @@ f_1\cdot f_2&<0
 \begin{minipage}{.195\linewidth}
 \centering
 
-\includegraphics[height=140bp]{inequacoes23}
+\includegraphics[height=125bp]{inequacoes23}
 \begin{equation*}
 \left \{
 \begin{aligned}
@@ -3333,7 +3263,7 @@ S=\left\{x\in\R;-2<x\frac{1}{2}\text{ \textit{ou} }x\geq\frac{1}{2}\right\}
 \end{equation*}
 \end{example}
 
-\begin{observation}{}
+\begin{observation}
 Note que precisamos usar o sinal   para que pudéssemos indicar no conjunto solução que o valor $x=\frac{1}{2}$ também satisfaz à inequação, mas já para os valores $x=-2$ e $x=\frac{1}{2}$, usamos apenas a desigualdade, sem o igual, pois em $x=-2$ e $x=\frac{1}{2}$ a função quociente não está definida.
 \end{observation}
 
@@ -3495,7 +3425,7 @@ S=\{x\in\R;-4<x<-3\text{ \textit{ou} }1\leq x\leq2\}
 \end{equation*}
 \end{example}
 
-\begin{observation}{}
+\begin{observation}
 Note que precisamos usar o sinal $\leq$ para que pudéssemos indicar no conjunto solução que o valor $x=1$ e $x=2$ também satisfazem à inequação, mas já para os valores $x=-4$ e $x=-3$, usamos apenas a desigualdade, sem o igual, pois em $x=-4$ e $x=-3$ a função quociente não está definida.
 \end{observation}
 
@@ -3758,7 +3688,7 @@ Nessas condições, qual é a quantidade N de parcelas a serem pagas de acordo c
 \item $6.100{,}00$.
 \end{enumerate}
 
-
+\clearpage
 \item (PM Ceará). O batalhão de polícia militar de uma cidade constituída dos bairros $B_1$, $B_2$ e $B_3$ será dividido em três pelotões distintos de modo que cada um fique responsável pelo policiamento ostensivo de um desses bairros. As populações dos bairros $B_1$, $B_2$ e $B_3$ são, respectivamente, iguais a $60.000$, $66.000$ e $74.000$ pessoas; o batalhão possui um efetivo de $4.000$ militares dos quais $300$ trabalham exclusivamente em uma central única de comunicação e inteligência, não caracterizando atividade policial ostensiva; e todos os militares do batalhão residem na cidade. Com base nessa situação hipotética, julgue a afirmação a seguir:
 \begin{quote}
 “Se as quantidades de policiais do sexo feminino em cada um dos três pelotões são números que satisfazem à inequação $x^2 - 520x + 64.000 < 0$, então, no batalhão, há mais de $600$ policiais do sexo feminino.”
@@ -3908,7 +3838,7 @@ Considere a função $w:\R\to\R$ e $z:\R\to\R$ definidas por $w(x)=3x$ e $z(x)=x
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/sistemas_bibliografia.bib}
 
 \nocite{*}

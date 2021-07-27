@@ -1,32 +1,11 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-probabilidade.jpg}{abertura-probabilidade-professor.jpg}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{abertura-probabilidade.jpg}
-\else
-\renewcommand\chapterillustration{abertura-probabilidade-professor.jpg}
-\fi
-\renewcommand\chapterwhat{Reconhecimento de fenômenos determinísticos e aleatórios. Interpretações de probabilidade: clássica, frequentista e subjetiva. Conceitos básicos. Definição matemática deprobabilidade.
-Propriedades da probabilidade. Probabilidade condicional. Inde-
-pendência.}
-\renewcommand\chapterbecause{Porque grande parte das decisões científicas de nossa era se dá em ambiente de incerteza e a Teoria das Probabilidades é a área da matemática que fornece estruturas para a quantificação da aleatoriedade associada a determinados fenômenos de interesse, para uma tomada de decisão adequada sob incerteza.}
+\expandtocdepth
 
-\makeatletter
-\ifnum\aluno=1
-\else
-\renewcommand*{\toclevel@section}{1}
-\renewcommand*{\toclevel@subsection}{4}
-\renewcommand*{\toclevel@paragraph}{5}
-\renewcommand*{\toclevel@subparagraph}{6}
+\chapterwhat{Reconhecimento de fenômenos determinísticos e aleatórios. Interpretações de probabilidade: clássica, frequentista e subjetiva. Conceitos básicos. Definição matemática deprobabilidade. Propriedades da probabilidade. Probabilidade condicional. Independência.}
 
-\renewcommand*{\toclevel@exploresec}{2}
-\renewcommand*{\toclevel@practicesec}{2}
-\renewcommand*{\toclevel@arrangesec}{2}
-\renewcommand*{\toclevel@knowsec}{1}
-\renewcommand*{\toclevel@exercisesec}{1}
+\chapterbecause{Porque grande parte das decisões científicas de nossa era se dá em ambiente de incerteza e a Teoria das Probabilidades é a área da matemática que fornece estruturas para a quantificação da aleatoriedade associada a determinados fenômenos de interesse, para uma tomada de decisão adequada sob incerteza.}
 
-\setcounter{tocdepth}{2}
-\fi
-\makeatother
 
 \chapter{Probabilidade}
 \ifdefined\estchapum
@@ -40,83 +19,29 @@ pendência.}
 \fi
 
 
-\mbox{}\thispagestyle{empty}\clearpage
+%%%% Página de créditos
 
-\thispagestyle{empty}
+\autorum{Flávia Landim (coordenadora da equipe - UFRJ)}
+\autordois{Alexandre Silva (UNIRIO)}
+\autortres{Nei Rocha (UFRJ)}
+\autorquatro{Vanessa Matos (SEduc Angras dos Reis e Mesquita)}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\revisorum{Cydara Ripoll}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\versao{1.2}
 
-\vspace*{.3cm}
+\graficos{Beatriz Cabral e Tarso Caldas}
+\ilustracao{Miller  Guglielmo}
+\autordacapa{Karsten Winegeart}{Unsplash}{https://unsplash.com/photos/EI-iNlUGfzI}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+%Licença cc-by-sa
+\ccbysa
 
-Versão digital do capítulo:
+% Link para versão digital:
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/PE511.html}
 
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/PE511.html}
+\creditos
 
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Probabilidade\\
-\\
-Ano/ Versão: & 2020 / versão 1.2 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Flávia Landim (coordenadora da equipe - UFRJ),\\
-        & Alexandre Silva (UNIRIO),\\
-        & Nei Rocha (UFRJ),\\
-             & Vanessa Matos (SEduc Angras dos Reis e Mesquita).\\
-\\
-Revisão: &  Cydara Ripoll  \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & Miller  Guglielmo \\ 
-\\
-Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
-\\
-  Capa: & Foto de Karsten Winegeart, no Unsplash \\
-        & https://unsplash.com/photos/EI-iNlUGfzI \\
-
-\end{tabular}
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -863,7 +788,7 @@ o evento \(\overline{A}\) ocorreu se, e somente se, o evento \(A\) \textbf{não}
 
 \end{itemize}
 
-\begin{observation}{}
+\begin{observation}
 Dois eventos \(A\)  e \(B\) são ditos eventos disjuntos se $A\cap B=\emptyset$, ou seja, se \(A\) e \(B\) não tiverem elementos em comum.
 \end{observation}
 
@@ -961,7 +886,7 @@ Veja na \hyperref[1000_lancamentos2]{figura \ref{1000_lancamentos2}} uma ilustra
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=250bp]{{1000_lancamentos2}.png}
+\noindent\includegraphics[width=230bp]{{1000_lancamentos2}.png}
 \caption{Simulação do lançamento de uma moeda honesta 1000 vezes com destaque para  os 100 primeiros lançamentos da moeda.}
 \label{1000_lancamentos2}
 \end{figure}
@@ -971,7 +896,7 @@ Veja na \hyperref[1000_lancamentos2]{figura \ref{1000_lancamentos2}} uma ilustra
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=245bp]{{100_lancamentos2}.png}
+\noindent\includegraphics[width=230bp]{{100_lancamentos2}.png}
 \caption{100 primeiros lançamentos da moeda com destaque para os 10 primeiros lançamentos
 }
 \end{figure}
@@ -980,7 +905,7 @@ Veja na \hyperref[1000_lancamentos2]{figura \ref{1000_lancamentos2}} uma ilustra
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=245bp]{{10_lancamentos2}.png}
+\noindent\includegraphics[width=230bp]{{10_lancamentos2}.png}
 \caption{10 primeiros lançamentos da moeda}
 \label{10_lancamentos2}
 \end{figure}
@@ -1049,7 +974,7 @@ A partir de dados coletados e representados por meio de um histograma, os alunos
 }{1}{2}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
+
 \begin{answer}{Avaliando probabilidades a partir de um histograma}
 {
 Para responder as questões desta atividade será usada a interpretação frequentista de probabilidade.
@@ -1080,7 +1005,7 @@ Veja a figura a seguir. No primeiro diagrama foi pintada a região correspondent
 
 \includegraphics[width=\linewidth]{demorgan2.png}
 \caption{As leis de De Morgan podem ser enunciadas da seguinte forma:}
-\label{}
+
 \end{figure}
 
 \begin{enumerate}
@@ -1106,7 +1031,7 @@ Dois diagramas de venn são apresentados. A ideia é realizar a verificação pi
 
 \includegraphics[width=\linewidth]{distributividade.png}
 \caption{Diagramas de Venn: $(A\cap B)\cup C=(A\cup C)\cap(B\cup C)$}
-\label{}
+
 \end{figure}
 
 No diagrama da esquerda tem-se em amarelo a região indicada pela expressão à esquerda na igualdade a ser verificada. No diagrama da direita tem-se $A\cup C$ em listras vermelhas, $B\cup C$ em listras azuis. A região da interseção dos dois é a que contêm listras azuis e vermelhas e está destacada na cor cinza. Observe que é a mesma região em amarelo do diagrama da esquerda.
@@ -1169,10 +1094,9 @@ tabela \ref{maratonatabela}} são apresentados os intervalos de classe e suas re
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-\parbox[c][1cm]{3.5cm}{\centering Intervalo de classe} & \parbox[c][1cm]{3.5cm}{\centering Frequência Absoluta} & \parbox[c][1cm]{3.5cm}{\centering Frequência Relativa} \\
+\tcolor{\parbox[c][1cm]{3.5cm}{\centering Intervalo de classe}} & \tcolor{\parbox[c][1cm]{3.5cm}{\centering Frequência Absoluta}} & \tcolor{\parbox[c][1cm]{3.5cm}{\centering Frequência Relativa}} \\
 \hline\relax
 $[130,0;133,0[$ & $7$ & $0{,}07$ \\
 \hline
@@ -1194,7 +1118,7 @@ $[154,0;157,0[$ & $24$ & $0{,}24$ \\
 \hline
 $[157,0;160,0[$ & $19$ & $0{,}19$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Distribuição de frequências dos 100 melhores tempos na categoria homens da maratona de Nova Iorque (2017)}
 \label{maratonatabela}
 \end{table}
@@ -1392,10 +1316,9 @@ Na \hyperref[frequenciaatividade]{tabela \ref{frequenciaatividade}} estão os re
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\thead
-Atividade Física & Manhã & Tarde & Total \\
+\tcolor{Atividade Física} & \tcolor{Manhã} & \tcolor{Tarde} & \tcolor{Total} \\
 \hline
 Não pratica & $140$ & $130$ & $270$ \\
 \hline
@@ -1407,7 +1330,7 @@ Outra atividade & $70$ & $70$ & $140$ \\
 \hline
 Total & $450$ & $350$ & $800$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Distribuição de frequências por atividade, segundo o turno.}
 \label{frequenciaatividade}
 \end{table}
@@ -1520,21 +1443,24 @@ A validade das regras básicas na interpretação subjetiva de probabilidade dep
 
 A seguir, serão enumeradas algumas propriedades úteis no cálculo de probabilidades. Estas propriedades são consequências das regras básicas da probabilidade.
 
-\begin{observationtitle}{Propriedade 1}
+\begin{description}
+\item[Propriedade 1]
 A probabilidade do evento vazio (\(\emptyset\)) é zero.
-\end{observationtitle}
+\end{description}
 
 Esta propriedade é obtida das regras básicas \(P(S)=1\) e aditividade da probabilidade para eventos disjuntos, lembrando que \(S\cup \emptyset =S\) e \(S\cap \emptyset =\emptyset\).
 
 Observe que de fato é natural que a probabilidade do evento vazio seja zero, pois um evento vazio nunca irá ocorrer.
 
-\begin{observationtitle}{Propriedade 2} A probabilidade de um evento \(A\) pode ser calculada por \(P({A})= 1-P(\overline{A})\).
-\end{observationtitle}
+\begin{description}
+\item[Propriedade 2] A probabilidade de um evento \(A\) pode ser calculada por \(P({A})= 1-P(\overline{A})\).
+\end{description}
 
 Muitas vezes pode ser complicado calcular diretamente a probabilidade de um evento. Uma possível simplificação será calcular a probabilidade do evento complementar. Um exemplo comum, é o problema dos aniversários que será apresentado na seção \hyperref[regrasbasicaspropriedades]{Praticando: Probabilidade - regras básicas e propriedades}. Uma aplicação desta propriedade está ilustrada no item \titem{c)} da atividade \hyperref[censo-educacao-fisica]{Censo Educação Física}.
 
-\begin{observationtitle}{Propriedade 3} Dados \(A\) e \(B\) eventos em um espaço amostral \(S\) tais que \(A\subset B\) (\(A\) está contido em \(B\)), então \(P(A)\leq P(B)\).
-\end{observationtitle}
+\begin{description}
+\item[Propriedade 3] Dados \(A\) e \(B\) eventos em um espaço amostral \(S\) tais que \(A\subset B\) (\(A\) está contido em \(B\)), então \(P(A)\leq P(B)\).
+\end{description}
 
 Essa propriedade, ilustrada no item \titem{d)} da atividade \hyperref[censo-educacao-fisica]{Censo Educação Física}, pode ser obtida a partir das regras básicas:
 como \(A\subset B\), podemos escrever o evento \(B\) como a união de dois eventos disjuntos, a saber,  \(B=A\cup (B\cap \overline{A})\). Veja uma ilustração na \hyperref[eventosdijuntos]{figura \ref{eventosdijuntos}}.
@@ -1555,7 +1481,6 @@ como \(A\subset B\), podemos escrever o evento \(B\) como a união de dois event
 \label{eventosdijuntos}
 \end{figure}
 
-\clearpage
 
 Assim, usando a regra de que toda probabilidade é um número não-negativo e a regra básica de aditividade da probabilidade, tem-se
 \begin{equation*}
@@ -1654,7 +1579,7 @@ Note que a frase “Suponha que você seja suficientemente experiente de modo qu
 }{1}{2}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
+
 \begin{answer}{Jogo de dardos}
 {
 \begin{enumerate}
@@ -2016,18 +1941,17 @@ Na tabela a seguir estão os dados de uma turma de segundo ano do Ensino Médio 
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|c|c|c|}
+\begin{tabular}{|l|c|c|c|}
 \hline
-\thead
-gênero & usa óculos & não usa óculos & total \\
+\tcolor{Gênero} & \tcolor{Usa óculos} & \tcolor{Não usa óculos} & \tcolor{Total} \\
 \hline
 feminino & $6$ & $16$ & $22$ \\ 
 \hline
-masculino & $5$ & $13$ & $18$ \\
+Masculino & $5$ & $13$ & $18$ \\
 \hline
-total & $11$ & $29$ & $40$ \\
+Total & $11$ & $29$ & $40$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Se um estudante desta turma é sorteado, pede-se determinar a probabilidade de que ele
@@ -2089,7 +2013,7 @@ A questão que se coloca é: como incorporar matematicamente a informação de q
 
 A definição de probabilidade condicional é a resposta para essa questão.
 
-\begin{observation}{}
+\begin{observation}
 A probabibilidade condicional de o evento \(A\) ocorrer, dado que sabemos que o evento \(B\)  ocorreu, denotada por \(P(A|B)\),  é definida por
 \begin{equation*}
 \begin{split}P(A|B)=\frac{P(A\cap B)}{P(B)}, \quad P(B)>0\end{split}
@@ -2235,7 +2159,7 @@ Logo, pela árvore, \(\displaystyle P(E)=\frac{8}{33}+\frac{8}{33}=\frac{16}{33}
 \paragraph{Eventos Independentes}
 
 Na atividade \hyperref[uso-oculos]{uso de óculos e sexo de estudantes}, concluímos que uso de óculos independe de gênero, pois  comparando as probabilidades incondicionais de ser do gênero feminino $(0{,}55)$ e de ser do gênero masculino $(0{,}45)$ com as probabilidades condicionais de ser do gênero feminino $(0{,}545)$ e do gênero masculino $(0{,}455)$ dado que usa óculos, percebe-se que elas são aproximadamente iguais. Na teoria, para que os eventos sejam independentes, essas probabilidades deveriam ser iguais. Na prática esse tipo de análise é usado em Estatística para avaliar a hipótese de independência entre dois eventos.
-\begin{observation}{}
+\begin{observation}
 Dois eventos \(A\) e \(B\) são ditos independentes se a ocorrência de um deles não muda a incerteza sobre a ocorrência do outro.
 \end{observation}
 
@@ -2301,7 +2225,7 @@ Se \(A\) e \(B\) são independentes, então \(P(A\cap B)=P(A)\cdot P(B)>0\)o que
 Observe que a única situação em que se pode ter \(A\)  e \(B\)  simultaneamente disjuntos e independentes ocorre se um dos eventos \(A\) ou \(B\) tiver probabilidade nula.
 \end{example}
 
-\begin{observation}{}
+\begin{observation}
 
 Três eventos \(A\), \(B\)  e  \(C\) são independentes se, e somente se, eles são dois a dois independentes e \(P(A\cap B\cap C)=P(A)\cdot P(B)\cdot P(C)\).
 \end{observation}
@@ -2506,7 +2430,7 @@ $P(\overline{A_1}\cap \overline{A_2}\cap A_3)=P(\overline{A_1})\cdot P(\overline
 {
 Aplicar a definição de probabilidade condicional e propriedades da probabilidade para resolver um problema cuja solução faz uso do teorema de Bayes.
 
-}{2}{2}
+}{1}{2}
 \end{objectives}
 \begin{sugestions}{Probabilidade total}
 {
@@ -2516,7 +2440,7 @@ Teorema de Bayes: Sejam $A_1,A_2,\cdot,A_n$ eventos tais que $A_1\cup A_2\cup\cd
 \begin{equation*}
 P(A_k|B)=\dfrac{P(A_k)\cdot P(B|A_k)}{\displaystyle\sum^n_{i=1}P(A_i)\cdot P(B|A_i)}, k=1,2,...,n.
 \end{equation*}
-}{2}{2}
+}{1}{2}
 \end{sugestions}
 \begin{answer}{Probabilidade total}
 {
@@ -2600,16 +2524,15 @@ O quadro a seguir refere-se a um teste diagnóstico para a doença \(X\), aplica
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|l|l|}
+\begin{tabular}{|l|l|l|}
 \hline
-\thead
-Resultado do teste & doente & sadia \\
+\tcolor{Resultado do teste} & \tcolor{Doente} & \tcolor{Sadia} \\
 \hline
 Positivo & 95 & 15 \\
 \hline
 Negativo & 5 & 85 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -2657,31 +2580,15 @@ Para fins de controle de qualidade das peças produzidas em uma fábrica, foram 
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Máquina
-&
-Defeituosas
-&
-Boas
-\\
+\tcolor{Máquina} & \tcolor{Defeituosas} & \tcolor{Boas} \\
 \hline
-$I$
-&
-5
-&
-195
-\\
+$I$ & 5 & 195 \\
 \hline
-$II$
-&
-15
-&
-585
-\\
+$II$ & 15 & 585 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -2713,7 +2620,7 @@ Numa caixa há 5 chaves das quais apenas uma abre um cadeado.
 \includegraphics[width=175bp]{cadeado}
 
 \caption{Chaves e cadeado}
-\label{}
+
 \end{figure}
 Retirando-se chaves sequencialmente da caixa, qual a probabilidade de se abrir o cadeado apenas na terceira tentativa se:
 \begin{enumerate}
@@ -3013,10 +2920,9 @@ Complete o quadro a seguir e comente sobre os resultados obtidos.
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Número de Observações & Frequência relativa de caras \\
+\tcolor{Número de Observações} & \tcolor{Frequência relativa de caras} \\
 \hline
 20 &\\
 \hline
@@ -3028,7 +2934,7 @@ Número de Observações & Frequência relativa de caras \\
 \hline
 1000 &\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \end{task}
@@ -3056,11 +2962,9 @@ Complete o quadro a seguir e comente sobre os resultados que você obteve.
 \end{enumerate}
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-\centering
-Número de Observações & Frequência relativa de 6 \\
+\tcolor{Número de Observações} & \tcolor{Frequência relativa de 6} \\
 \hline
 30 &\\
 \hline
@@ -3072,7 +2976,7 @@ Número de Observações & Frequência relativa de 6 \\
 \hline
 1500 &\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{task}
 \clearpage
@@ -3097,10 +3001,9 @@ Complete a tabela a seguir e comente sobre os resultados que você obteve.
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Número de Observações & Frequência relativa de 6 \\
+\tcolor{Número de Observações} & \tcolor{Frequência relativa de 6} \\
 \hline
 42 &\\
 \hline
@@ -3112,7 +3015,7 @@ Número de Observações & Frequência relativa de 6 \\
 \hline
 1680 &\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \end{task}
@@ -3138,10 +3041,9 @@ Complete a tabela a seguir e comente sobre os resultados que você obteve.
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Número de Observações & Frequência relativa de 2 \\
+\tcolor{Número de Observações} & \tcolor{Frequência relativa de 2} \\
 \hline
 30 &\\
 \hline
@@ -3153,10 +3055,9 @@ Número de Observações & Frequência relativa de 2 \\
 \hline
 1800 &\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{task}
-\clearpage
 \begin{observationtitle}{Teorema: Lei dos Grandes Números}
 
 À medida que um experimento é repetido várias vezes, a probabilidade dada pela frequência relativa de um evento tende a se aproximar da probabilidade teórica.
@@ -3362,9 +3263,9 @@ Usando o diagrama de árvore na \hyperref[prova-aluno]{figura \ref{prova-aluno}}
 \begin{figure}[H]
 \centering
 
-\resizebox{.95\linewidth}{!}
+\resizebox{.9\linewidth}{!}
 {
-\begin{tikzpicture}[scale=0.4, ever node/.style=scale{2}]
+\begin{tikzpicture}[scale=0.3, ever node/.style=scale{2}, xscale=.9, yscale=.8]
 
          \draw (0,0) -- (30:3) node [right, scale=0.28] {Acerta} node [above, midway, rotate=30, scale=0.28] {0,3};
          \draw (0,0) -- (-30:3) node [right, scale=0.28] {Erra} node [below, midway, rotate=-30, scale=0.28] {0,7};
@@ -3384,11 +3285,11 @@ Usando o diagrama de árvore na \hyperref[prova-aluno]{figura \ref{prova-aluno}}
          \node [right, scale=0.28] at (8.77888,-0.4739) {Um Acerto}; 
          \node [right, scale=0.28] at (8.77888,-2.5260) {Dois Erros}; 
          
-         \node [right, scale=0.28] at (10.77888,3.5260) {Probabilidade};
-         \node [right, scale=0.28] at (10.77888,2.5260) {$0,4 \cdot 0,4=0,16$}; 
-         \node [right, scale=0.28] at (10.77888,0.4739) {$0,4 \cdot 0,6=0,24$}; 
-         \node [right, scale=0.28] at (10.77888,-0.4739) {$0,6 \cdot 0,4=0,24$}; 
-         \node [right, scale=0.28] at (10.77888,-2.5260) {$0,6 \cdot 0,6=0,36$};
+         \node [right, scale=0.28] at (11.77888,3.5260) {Probabilidade};
+         \node [right, scale=0.28] at (11.77888,2.5260) {$0,4 \cdot 0,4=0,16$}; 
+         \node [right, scale=0.28] at (11.77888,0.4739) {$0,4 \cdot 0,6=0,24$}; 
+         \node [right, scale=0.28] at (11.77888,-0.4739) {$0,6 \cdot 0,4=0,24$}; 
+         \node [right, scale=0.28] at (11.77888,-2.5260) {$0,6 \cdot 0,6=0,36$};
 \end{tikzpicture}
 }
 \caption{Solução do exercício 10}
@@ -3707,10 +3608,9 @@ ter 15 ou 16 anos.
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\thead
-tipo & Rh+ & Rh- & total \\
+\tcolor{tipo} & \tcolor{Rh}+ & \tcolor{Rh}- & \tcolor{total} \\
 \hline
 O & $0{,}32$ & $0{,}08$ & $0{,}40$ \\
 \hline
@@ -3722,7 +3622,7 @@ B & $0{,}07$ & $0{,}03$ & $0{,}10$ \\
 \hline
 Total & $0{,}75$ & $0{,}25$ & $1{,}00$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -4013,7 +3913,7 @@ Qual a probabilidade de se extrair uma boa e uma defeituosa em qualquer ordem?
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/probabilidade1_bibliografia.bib}
 
 \nocite{*}

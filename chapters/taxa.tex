@@ -1,84 +1,33 @@
-%!TEX root = ../aluno.tex
+% \makeatletter
+% \def\@autorcapa[2]{Foto do site #1 \\ & #2}
+% \makeatother
 
-\ifnum \aluno=1
-\renewcommand\chapterillustration{abertura-taxa}
-\else
-\renewcommand\chapterillustration{abertura-taxa-professor}
-\fi
-\renewcommand\chapterwhat{Taxas de variação média e instantânea de uma função real. Tipos de crescimento e decrescimento.}
-\renewcommand\chapterbecause{É bastante comum nos depararmos com taxas em nosso cotidiano, informações que tratam de taxas de natalidade e mortalidade, taxa de variação cambial, velocidade, frequência, potência, inflação, aceleração, ritmo etc. Em algum sentido a taxa de variação é a generalização da ideia de razão. Enquanto razão é a comparação entre duas medidas a taxa de variação surge quando há covariação entre duas grandezas, ou seja, quando uma pode ser expressa como função da outra. A taxa de variação, então, é uma razão que traz consigo informações sobre duas grandezas que covariam sendo uma ferramenta poderosa para a interpretação de gráficos e a consequente compreensão de diferentes fenômenos e situações que nos cercam.}
+
+\chapterillustration{abertura-taxa}{abertura-taxa-professor}
+
+\chapterwhat{Taxas de variação média e instantânea de uma função real. Tipos de crescimento e decrescimento.}
+\chapterbecause{É bastante comum nos depararmos com taxas em nosso cotidiano, informações que tratam de taxas de natalidade e mortalidade, taxa de variação cambial, velocidade, frequência, potência, inflação, aceleração, ritmo etc. Em algum sentido a taxa de variação é a generalização da ideia de razão. Enquanto razão é a comparação entre duas medidas a taxa de variação surge quando há covariação entre duas grandezas, ou seja, quando uma pode ser expressa como função da outra. A taxa de variação, então, é uma razão que traz consigo informações sobre duas grandezas que covariam sendo uma ferramenta poderosa para a interpretação de gráficos e a consequente compreensão de diferentes fenômenos e situações que nos cercam.}
 
 \chapter{Taxa de Variação}
 
-\mbox{}\thispagestyle{empty}\clearpage
 
-\thispagestyle{empty}
+\autorum{Gladson Antunes (UNIRIO)}
+\autordois{Michel Cambrainha (UNIRIO)}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\revisorum{Wanderley Rezende}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\graficos{Tarso Caldas}
 
-\vspace*{.3cm}
+\autordacapa{Autor desconhecido}{Pexels}{https://br.freepik.com/fotos-premium/mao-do-empresario-preparando-graficos-na-placa-de-vidro-com-marcador_2554735.htm\#page=1\&query=graficos\%20graficos\&position=30/}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+% Link para versão digital:
 
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Taxa de Variação\\
-\\
-Ano/ Versão: & 2020 / versão 1.1 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação:& Fabio Simas, \\ 
-			& Augusto Teixeira (livroaberto@impa.br)\\
-\\
-Autores: & Gladson Antunes (UNIRIO) e\\
-         & Michel Cambrainha (UNIRIO) \\
-\\
-Revisão: &  Wanderley Rezende\\
-                
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & Tarso Caldas (Licenciando da UNIRIO)\\
-\\
-  Capa: & Foto do site Freepik \\
-  		& shorturl.at/owJQ2 \\
+\versao{1.0}
 
-\end{tabular}
+%Licença cc-by-sa
+\ccbysa
 
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \mainmatter
 
@@ -90,11 +39,7 @@ Entendemos que o estudo de taxa de variação dará maior significado ao estudo 
 \begin{quote}
 [...] O estudo da variação por meio de leis matemáticas se deve em grante parte ao desenvolvimento da Física pós-Galileu. A ideia de uma variação em função do tempo é fundamental em seus trabalhos, onde já encontramos uma certa noção de função no sentido de uma associação entre duas grandezas que variam, dada por uma proporção geométrica. 
 
-Úma função pode ser vista justamente como uma relação entre duas grandezas que variam. Para Descartes, essa relação devia ser algébrica, uma vez que não se associava uma grandeza Física ao tempo. Ou seja, o movimento que gera uma relação de tipo funcional deveria ser, para Descartes, de natureza geométrica, mas não física. No caso de Galileu era diferente, pois ele desejava entender o movimento físico [...]
-\flushright
-
-\vspace{-.5\parskip}
-\citep[p. 336]{roque2012}
+Úma função pode ser vista justamente como uma relação entre duas grandezas que variam. Para Descartes, essa relação devia ser algébrica, uma vez que não se associava uma grandeza Física ao tempo. Ou seja, o movimento que gera uma relação de tipo funcional deveria ser, para Descartes, de natureza geométrica, mas não física. No caso de Galileu era diferente, pois ele desejava entender o movimento físico [...] \citep[p. 336]{roque2012}
 \end{quote}
 \vspace{-1.5\parskip}
 
@@ -102,11 +47,7 @@ A necessidade de resgatar o conceito dinâmico no estudo do conceito de função
 
 \vspace{-1.5\parskip}
 \begin{quote}
-Fala-se, por exemplo, em injetividade ou sobrejetividade, mas nãoi em crescimento ou decrescimento da função, ou melhor, em quanto e como cresce/decresce o valor de uma função em relação à sua variável independente. A noção de função é estabelecida não no contexto da variabilidade, mas, em termos de uma correspondência estática entre os valores das variáveis "$x$"{}e "$y$". O gráfico de uma função é, em geral, plotado através de uma tabela de valores notáveis. As curvaturas das curvas que compões os gráficos das funções são, em geral, induzidas pelo acréscimo de mais pontos.
-\flushright
-
-\vspace{-.5\parskip}
-\citep[p. 75]{rezende2012}
+Fala-se, por exemplo, em injetividade ou sobrejetividade, mas nãoi em crescimento ou decrescimento da função, ou melhor, em quanto e como cresce/decresce o valor de uma função em relação à sua variável independente. A noção de função é estabelecida não no contexto da variabilidade, mas, em termos de uma correspondência estática entre os valores das variáveis "$x$"{}e "$y$". O gráfico de uma função é, em geral, plotado através de uma tabela de valores notáveis. As curvaturas das curvas que compões os gráficos das funções são, em geral, induzidas pelo acréscimo de mais pontos. \citep[p. 75]{rezende2012}
 \end{quote}
 \vspace{-1.5\parskip}
 
@@ -138,7 +79,6 @@ Este capítulo tem início com uma seção "\textit{Explorando}", na qual são a
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{A água está subindo}
 {
 \begin{itemize}
@@ -152,7 +92,7 @@ Este capítulo tem início com uma seção "\textit{Explorando}", na qual são a
 }{1}{2}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
+
 
 \begin{answer}{A água está subindo}
 {
@@ -186,12 +126,11 @@ precisa para o que devemos entender como crescimento/decrescimento uniforme.
 }{1}{1}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
+
 \begin{answer}{A água continua subindo}
 {
 Admitindo que a água entra a uma taxa constante em cada um dos recipientes, podemos descrever a maneira como a altura da coluna de água varia com o tempo da seguinte forma:
 
-% \setlength\abovetabulinesep{2mm}
 \begin{tabular}{|>{\centering\vspace{.5em}}m{.15\linewidth}<{\vspace{-.5em}}|>{\centering}m{.6\linewidth}|>{\centering}m{.125\linewidth}|}
 % \endfirsthead
 \hline
@@ -296,7 +235,7 @@ Admitindo que a água entra a uma taxa constante em cada um dos recipientes, pod
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2em}}
+
 \begin{sugestions}{Uma viagem de carro}
 {
 \begin{itemize}
@@ -311,10 +250,9 @@ como base para a generalização de taxa de variação média de uma função qu
 \begin{enumerate}
 \item \adjustbox{valign=t}{
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Horário & \makecell{Tempo decorrido \\ desde a partida (h)} & \makecell{Distância percorrida \\ (km)} \\
+\tcolor{Horário} & \tcolor{\makecell{Tempo decorrido \\ desde a partida (h)}} & \tcolor{\makecell{Distância percorrida \\ (km)}} \\
 \hline
 & $t$ & $d(t)$ \\
 \hline
@@ -330,7 +268,7 @@ Horário & \makecell{Tempo decorrido \\ desde a partida (h)} & \makecell{Distân
 \hline
 18h & 6 & 410 \\
 \hline
-\end{tabu}
+\end{tabular}
 }
 \vspace{1em}
 \begin{figure}[H]
@@ -373,23 +311,21 @@ Horário & \makecell{Tempo decorrido \\ desde a partida (h)} & \makecell{Distân
 \item \adjustbox{valign=t}{
 \begin{minipage}{\linewidth}
 \setlength\tabcolsep{2.5pt}
-\setlength\tabulinesep{2.5pt}
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|e{.3\linewidth}|e{.6\linewidth}|}
 \hline
-\thead
-Intervalo de tempo $\bm{[a,b]}$ & Velocidade média $\displaystyle\bm{\frac{\Delta d}{\Delta t}=\frac{d(b)-d(a)}{b-a}}$\\
+\tcolor{Intervalo de tempo $\bm{[a,b]}$} & \tcolor{Velocidade média $\displaystyle\bm{\frac{\Delta d}{\Delta t}=\frac{d(b)-d(a)}{b-a}}$}\tabularnewline
 \hline
-$[0,2]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{140}{2}=70 km/h$ \\
+$[0,2]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{140}{2}=70 km/h$ \tabularnewline
 \hline
-$[2,2.5]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{0}{0{,}5}=0 km/h$ \\
+$[2,2.5]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{0}{0{,}5}=0 km/h$ \tabularnewline
 \hline
-$[2.5,4]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{120}{1{,}5}=80 km/h$ \\
+$[2.5,4]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{120}{1{,}5}=80 km/h$ \tabularnewline
 \hline
-$[4,4.5]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{0}{0{,}5}=0 km/h$ \\
+$[4,4.5]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{0}{0{,}5}=0 km/h$ \tabularnewline
 \hline
-$[4.5,6]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{150}{1{,}5}=100 km/h$ \\
+$[4.5,6]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{150}{1{,}5}=100 km/h$ \tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 \end{minipage}
 }
 
@@ -404,7 +340,7 @@ $[4.5,6]$ & $\displaystyle\frac{\Delta d}{\Delta t}=\frac{150}{1{,}5}=100 km/h$ 
 \includegraphics[width=250bp]{taxa-explore-1-1}
 
 \caption{Por \href{http://data.giss.nasa.gov/gistemp/graphs/}{NASA Goddard Institute for Space Studies}}
-\label{}
+
 \end{figure}
 
 A comparação está nas bases da matemática. Ela é fundamental para estabelecer os processos de contagem, de medida, para definir o conceito de número, também está presente nas ideias de razão e de proporção bem como em diversos outros contextos. No estudo das funções, quando estamos interessados em grandezas que variam conjuntamente, podemos usar a comparação para quantificar essas variações. Por exemplo, ao afirmarem que a temperatura média global está aumentando mais rapidamente agora que nos últimos anos, os cientistas fazem uso de uma ferramenta matemática que serve para medir esse crescimento: a taxa de variação. Ela serve especialmente para indicar de que maneira, ou a que velocidade, uma grandeza varia em relação a outra. 
@@ -416,14 +352,14 @@ Contudo a discussão não se restringirá somente a este capítulo, a taxa de va
 \clearpage
 \begin{task}{A água está subindo}
 
-\textbf{Parte I} Um reservatório cilíndrico de altura $h$ (em cm), com capacidade máxima de $100 \ell$, encontra-se vazio. Para enchê-lo, abriu-se uma torneira que despeja $2\ell$ de água por minuto.
+\textbf{Parte I}: Um reservatório cilíndrico de altura $h$ (em cm), com capacidade máxima de $100 \ell$, encontra-se vazio. Para enchê-lo, abriu-se uma torneira que despeja $2\ell$ de água por minuto.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=100bp]{taxa-ativ-1-1}
 
 %\caption{}
-\label{}
+
 \end{figure}
 
 Qual dos gráficos seguintes expressa corretamente a variação da altura $x$ da coluna de água em função do tempo $t$? Explique.
@@ -480,7 +416,7 @@ Qual dos gráficos seguintes expressa corretamente a variação da altura $x$ da
 \includegraphics[width=100bp]{taxa-ativ-1-3}
 
 %\caption{}
-\label{}
+
 \end{figure}
 
 Qual dos gráficos seguintes expressa corretamente a variação da altura $x$ da coluna de água em função do tempo $t$? Explique.
@@ -489,7 +425,7 @@ Qual dos gráficos seguintes expressa corretamente a variação da altura $x$ da
 \begin{multicols}{3}
 \begin{enumerate}[label=(\Roman*)]
 \item \adjustbox{valign=t}{
-\begin{tikzpicture}[scale=.5,baseline=(current bounding box.north)]
+\begin{tikzpicture}[scale=.5,baseline=(current bounding box.north),external/export next=true]
 
 \draw [->] (-.5,0) -- (6,0) node [below ] {$t(min)$};
 \draw [->] (0,-.5) -- (0,3.5) node [right] {$x(cm)$};
@@ -530,14 +466,15 @@ Qual dos gráficos seguintes expressa corretamente a variação da altura $x$ da
 \end{enumerate}
 \end{multicols}
 
-\textbf{PARTE III} Os recipientes cilíndricos $A,B, \text{ e } C$, que têm altura $h$ raios da base respectivamente iguais a $r,2r$ e $3r$, estão vazios. As torneiras que os abastecem estão igualmente reguladas para despejar o mesmo número de litros de água por minuto.
+
+\textbf{Parte III} Os recipientes cilíndricos $A,B, \text{ e } C$, que têm altura $h$ raios da base respectivamente iguais a $r,2r$ e $3r$, estão vazios. As torneiras que os abastecem estão igualmente reguladas para despejar o mesmo número de litros de água por minuto.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=150bp]{taxa-ativ-1-5}
 
 %\caption{}
-\label{}
+
 \end{figure}
 
 Os gráficos mostram a varação da altura $x$ da coluna de água em função to tempo $t$. Associe cada recipiente ao gráfico correspondente a ele e justifique suas escolhas.
@@ -598,19 +535,17 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 
 \textbf{Parte I} Suponha que os diversos reservatórios abaixo têm a mesma capacidade, a mesma altura e que em cada um deles a água entra a uma vazão constante. Analisando a forma de cada um dos reservatórios, descreva de que maneira a altura varia em função do tempo no início, meio e fim do processo. Use, quando necessário, as palavras \textbf{lentamente}, \textbf{rapidamente} e \textbf{uniformemente}. (Gravina, 1992)\footnote{GRAVINA, M. Um estudo de funções. Revista do Professor de Matemática, n° 20, SBM, pp. 33 –38, 1992}.
 
-\setlength\abovetabulinesep{2mm}
-\begin{longtabu} to \textwidth{|c|@{\hspace{0.8\textwidth}}|}
+\newcommand{\fit}[1]{\parbox[c][2.5cm]{\linewidth}{\vfill\centering#1\vfill}}
+\begin{longtable}{|m{2.25cm}|@{\hspace{0.8\textwidth}}|}
 \endfirsthead
 \hline
-\begin{tikzpicture}[scale=.3]
-
+\fit{\begin{tikzpicture}[scale=.3]
 \draw (-3,0) -- (0,-6);
 \draw (3,0) -- (0,-6);
 \draw [fill=white] (0,0) ellipse [x radius=3,y radius=1];
-
-\end{tikzpicture}\\
+\end{tikzpicture}}\\
 \hline
-\begin{tikzpicture}[scale=.3]
+\fit{\begin{tikzpicture}[scale=.3]
 
 \draw (-3,0) -- (0,6);
 \draw (3,0) -- (0,6);
@@ -619,9 +554,9 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \clip (-3,0) rectangle (3,-1);
 \draw [fill=white] (0,0) ellipse [x radius=3,y radius=1];
 
-\end{tikzpicture}\\
+\end{tikzpicture}}\\
 \hline
-\begin{tikzpicture}[scale=.3]
+\fit{\begin{tikzpicture}[scale=.3]
 
 \draw (-2,0) -- (-2,5+2/3);
 \draw (2,0) -- (2,5+2/3);
@@ -633,9 +568,9 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [fill=white] (0,0) ellipse [x radius=2,y radius=2/3];
 
 
-\end{tikzpicture}\\
+\end{tikzpicture}}\\
 \hline
-\begin{tikzpicture}[scale=.3]
+\fit{\begin{tikzpicture}[scale=.3]
 
 \draw (-1.5,0) .. controls (-3,1.5) and (-3,3.5) .. (-1.5,5+2/3);
 \draw (1.5,0) .. controls (3,1.5) and (3,3.5) .. (1.5,5+2/3);
@@ -647,9 +582,9 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [fill=white] (0,0) ellipse [x radius=1.5,y radius=2/3*3/4];
 
 
-\end{tikzpicture}\\
+\end{tikzpicture}}\\
 \hline
-\begin{tikzpicture}[scale=.3]
+\fit{\begin{tikzpicture}[scale=.3]
 
 \draw (-2,0) -- (2,5+2/3);
 \draw (2,0) -- (-2,5+2/3);
@@ -661,9 +596,9 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [fill=white] (0,0) ellipse [x radius=2,y radius=2/3];
 
 
-\end{tikzpicture}\\
+\end{tikzpicture}}\\
 \hline
-\begin{tikzpicture}[scale=.3]
+\fit{\begin{tikzpicture}[scale=.3]
 
 \draw (-2,0) .. controls (-1,1.5) and (-1,3.5) .. (-2,5+2/3);
 \draw (2,0) .. controls (1,1.5) and (1,3.5) .. (2,5+2/3);
@@ -675,28 +610,28 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [fill=white] (0,0) ellipse [x radius=2,y radius=2/3];
 
 
-\end{tikzpicture}\\
+\end{tikzpicture}}\\
 \hline
-\end{longtabu}
+\end{longtable}
+
 \textbf{Parte II} Relacione a forma do pote com o gráfico da variação da altura em função do tempo de cada um deles.
 
-\setlength{\columnsep}{0pt}
+\begin{tasks}(3)
 
-\begin{multicols}{3}
-
-\begin{enumerate}
-\setlength{\itemsep}{0pt}
-\setlength{\parskip}{0pt}
-
-\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.3]
 
 \draw (-3,0) -- (0,-6);
 \draw (3,0) -- (0,-6);
 \draw [fill=white] (0,0) ellipse [x radius=3,y radius=1];
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.3]
 
 \draw (-3,0) -- (0,6);
 \draw (3,0) -- (0,6);
@@ -706,8 +641,11 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [fill=white] (0,0) ellipse [x radius=3,y radius=1];
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.3]
 
 \draw (-2,0) -- (-2,5+2/3);
 \draw (2,0) -- (2,5+2/3);
@@ -720,8 +658,11 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.3]
 
 \draw (-1.5,0) .. controls (-3,1.5) and (-3,3.5) .. (-1.5,5+2/3);
 \draw (1.5,0) .. controls (3,1.5) and (3,3.5) .. (1.5,5+2/3);
@@ -734,8 +675,11 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.3]
 
 \draw (-2,0) -- (2,5+2/3);
 \draw (2,0) -- (-2,5+2/3);
@@ -748,8 +692,11 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.3,baseline=(current bounding box.north)]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.3]
 
 \draw (-2,0) .. controls (-1,1.5) and (-1,3.5) .. (-2,5+2/3);
 \draw (2,0) .. controls (1,1.5) and (1,3.5) .. (2,5+2/3);
@@ -762,18 +709,14 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 
 
 \end{tikzpicture}
-\end{enumerate}
-\end{multicols}
+}
+\end{tasks}
 
-% \begin{figure}[H]
-% \centering
-% \includegraphics[width=350bp]{taxa-ativ-2-7}
 
-% \end{figure}
-
-\begin{multicols}{3}
-\begin{enumerate}[label=(\Roman*)]
-\item \begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+\begin{tasks}[label=(\Roman*)](3)
+\task \adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.4, every node/.style={scale=.8}]
 
 
 \draw [->] (0,0) -- (5,0) node [below] {T};
@@ -785,8 +728,11 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [thick] (0,0) .. controls (3,2) and (2,3) ..  (4,4);
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.4, every node/.style={scale=.8}]
 
 
 \draw [->] (0,0) -- (5,0) node [below] {T};
@@ -798,8 +744,11 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [thick] (4,0) circle (4);
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.4, every node/.style={scale=.8}]
 
 
 \draw [->] (0,0) -- (5,0) node [below] {T};
@@ -811,8 +760,11 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [thick] (0,0) .. controls (1,3) and (3,1) ..  (4,4);
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.4, every node/.style={scale=.8}]
 
 
 \draw [->] (0,0) -- (5,0) node [below] {T};
@@ -824,8 +776,11 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [thick] (0,0) .. controls (3,1) and (1,3) ..  (4,4);
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.4, every node/.style={scale=.8}]
 
 
 \draw [->] (0,0) -- (5,0) node [below] {T};
@@ -837,8 +792,11 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [thick] (0,4) circle (4);
 
 \end{tikzpicture}
+}
 
-\item\begin{tikzpicture}[scale=.4,baseline=(current bounding box.north), every node/.style={scale=.8}]
+\task\adjustbox{valign=t}
+{
+\begin{tikzpicture}[scale=.4, every node/.style={scale=.8}]
 
 
 \draw [->] (0,0) -- (5,0) node [below] {T};
@@ -849,11 +807,9 @@ Os gráficos mostram a varação da altura $x$ da coluna de água em função to
 \draw [thick] (0,0) -- (4,4);
 
 \end{tikzpicture}
+}
 
-\end{enumerate}
-\end{multicols}
-
-
+\end{tasks}
 
 \end{task}
 
@@ -866,10 +822,9 @@ Você está viajando de carro para uma cidade que está a 410 km de distância d
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|r|c|c|}
+\begin{tabular}{|r|c|c|}
 \hline
-\thead
-Horário & \parbox{3.5cm}{\centering\vspace{.5em} Tempo decorrido desde a partida (h)\vspace{.5em}} & \parbox{3.5cm}{\centering\vspace{.5em} Distância percorrida (km)\vspace{.5em}} \\
+\tcolor{Horário} & \tcolor{\parbox{3.5cm}{\centering\vspace{.5em} Tempo decorrido desde a partida (h)\vspace{.5em}}} & \tcolor{\parbox{3.5cm}{\centering\vspace{.5em} Distância percorrida (km)\vspace{.5em}}} \\
 \hline
 & $t$ & $d(t)$ \\
 \hline
@@ -885,7 +840,7 @@ Horário & \parbox{3.5cm}{\centering\vspace{.5em} Tempo decorrido desde a partid
 \hline
 18h & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{figure}[H]
@@ -895,7 +850,7 @@ Horário & \parbox{3.5cm}{\centering\vspace{.5em} Tempo decorrido desde a partid
 \draw [gray!30, step=.25] (0,0) grid (7.25,5);
 \draw [gray!70] (0,0) grid (7.25,5);
 \draw [->] (0,0) -- (7.25,0) node [below, shift={(0,-.5)}, pos=.82] {tempo desde a partida (h)};
-\draw [->] (0,0) -- (0,5) node [pos=.75,above, rotate=90, shift={(-1,.6)}] {distância percorrida (km)};
+\draw [->] (0,0) -- (0,5) node [pos=.75,above, rotate=90, shift={(-1,1)}] {distância percorrida (km)};
 \foreach \x in {1,...,7} \node [below] at (\x,0) {\x};
 \foreach \x in {1,...,4} \node [left] at (0,\x) {\x00};
 \node [below left] at (0,0) {0};
@@ -917,11 +872,10 @@ Ele é o mesmo que o anterior? Explique
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{1mm}
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Intervalo de tempo $a,b$ & \makecell{Velocidade média \vspace{.3em}\\  $\bm{\displaystyle \frac{\Delta d}{\Delta t} = \frac{d(b)-(d(a)}{b-a}}$} \\
+\tcolor{Intervalo de tempo $\bm{a,b}$} & \tcolor{\makecell{Velocidade média \vspace{.3em}\\
+$\bm{\displaystyle \frac{\Delta d}{\Delta t} = \frac{d(b)-(d(a)}{b-a}}$}} \\
 \hline
 $0,2$ & \\
 \hline
@@ -933,7 +887,7 @@ $4,4.5$ & \\
 \hline
 $4.5,6$ & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{enumerate}
 
@@ -961,10 +915,9 @@ O gráfico e a tabela a seguir mostram a variação do número de visualizaçõe
 
 \begin{minipage}{0.4\textwidth}
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Dia ($d$) & Visualizações ($V$) \\
+\tcolor{Dia ($d$)} & \tcolor{Visualizações ($V$)} \\
 \hline
 0&0 \\
 \hline
@@ -982,7 +935,7 @@ Dia ($d$) & Visualizações ($V$) \\
 \hline
 7&132 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{minipage}
 \begin{minipage}{0.6\textwidth}
 \centering
@@ -1281,8 +1234,10 @@ funções.
 \item Para a primeira situação descrita é possível que alguns estudantes apresentem um
 gráfico como o seguinte:
 
+
 \begin{figure}[H]
 \centering
+\vfill
 \begin{tikzpicture}[xscale=.75, scale=.7]
 
 \draw [->] (0,0) -- (16,0) node [below left, yshift=-.25cm] {Tempo (meses)};
@@ -1295,6 +1250,7 @@ gráfico como o seguinte:
 \clip (0,0) rectangle (15,9);
 \draw[domain=1:13, thick, \tikzcolor] plot (\x,{0.8*\x-0.8});
 \end{tikzpicture}
+\vfill
 \end{figure}
 
 Caso apareça uma solução como esta, sugerimos encaminhar as discussões destacando
@@ -1314,6 +1270,7 @@ relacione as grandezas, mas mesmo assim podemos ter ideias qualitativas sobre o
 comportamento e as variações.
 
 \end{itemize}
+\columnbreak
 }{0}{1}
 \end{sugestions}
 \begin{answer}{Gráficos, tabelas e fórmulas}
@@ -1353,7 +1310,6 @@ comportamento e as variações.
 \draw [domain=0:15, \tikzcolor, dashed] plot (\x,{6.5*0.8^\x});
 \end{tikzpicture}
 
-\columnbreak
 \textbf{Subindo uma escada}
 
 
@@ -1372,7 +1328,7 @@ comportamento e as variações.
 
 \end{tikzpicture}
 
-
+\columnbreak
 \textbf{Polígonos regulares}
 
 
@@ -1404,10 +1360,9 @@ comportamento e as variações.
 \item \textbf{TV por assinatura}
 
 
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Tempo (meses) & Custo da assinatura (R\$) \\
+\tcolor{Tempo (meses)} & \tcolor{Custo da assinatura (R\$)} \\
 \hline
 1 & 0 \\
 \hline
@@ -1419,16 +1374,15 @@ Tempo (meses) & Custo da assinatura (R\$) \\
 \hline
 $\vdots$ & $\vdots$ \\
 \hline
-\end{tabu}
+\end{tabular}
 
 
 \textbf{Valor de mercado de um carro}
 
 
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Tempo (anos) & Valor de mercado do carro (R\$) \\
+\tcolor{Tempo (anos)} & \tcolor{Valor de mercado do carro (R\$)} \\
 0 & 65.000,00 \\
 \hline
 1 & 52.000,00 \\
@@ -1439,16 +1393,15 @@ Tempo (anos) & Valor de mercado do carro (R\$) \\
 \hline
 $\vdots$ & $\vdots$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \vspace{1em}
 
 \textbf{Subindo uma escada}
 
 
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Altura do degrau (cm) & Comprimento da passada (cm) \\
+\tcolor{Altura do degrau (cm)} &\tcolor{Comprimento da passada (cm)} \\
 0 & 60 \\
 \hline
 1 & 58 \\
@@ -1459,16 +1412,15 @@ Altura do degrau (cm) & Comprimento da passada (cm) \\
 \hline
 $\vdots$ & $\vdots$ \\
 \hline
-\end{tabu}
+\end{tabular}
 
 \vspace{1em}
 \textbf{Polígonos regulares}
 
 
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Número de lados & Tamanho de cada ângulo (graus) \\
+\tcolor{Número de lados} & \tcolor{Tamanho de cada ângulo (graus)} \\
 3 & 60 \\
 \hline
 4 & 90 \\
@@ -1483,7 +1435,7 @@ Número de lados & Tamanho de cada ângulo (graus) \\
 \hline
 $\vdots$ & $\vdots$ \\
 \hline
-\end{tabu}
+\end{tabular}
 
 
 \item \textbf{TV por assinatura}
@@ -1537,7 +1489,7 @@ $A$=medida de cada ângulo interno, $n$=número de lados do polígono regular.
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2em}}
+
 \begin{sugestions}{As imagens}
 {
 \begin{itemize}
@@ -1623,7 +1575,7 @@ taxas que correspondam às formas abaixo,
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
+
 \begin{answer}{As imagens}
 {
 \begin{enumerate}\setcounter{enumi}{1}
@@ -1667,7 +1619,7 @@ taxas que correspondam às formas abaixo,
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
+
 \begin{answer}{As imagens}
 {
 \begin{enumerate}\setcounter{enumi}{4}
@@ -1732,10 +1684,9 @@ A população brasileira alcançou os 210,1 milhões de habitantes em 2019. Segu
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-População aproximada & Ano \\
+\tcolor{População aproximada} & \tcolor{Ano} \\
 \hline
 190 milhões & 2007 \\
 \hline
@@ -1743,7 +1694,7 @@ População aproximada & Ano \\
 \hline
 210 milhões & 2019 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \begin{enumerate}
 \item Qual foi a variação da população entre 2007 e 2012? E entre 2012 e 2019?
@@ -1902,10 +1853,9 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
   \begin{minipage}{.4\textwidth}
  \begin{table}[H]
     \setlength\tabcolsep{2.5pt}
-\begin{tabu} to .4\textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
   \hline
-  \thead
-  $\bm{[a,b]}$ & $\bm{f(0) = 1}$ & $\bm{\Delta y/\Delta x}$ \\
+  \tcolor{$\bm{[a,b]}$} & \tcolor{$\bm{f(0) = 1}$} & \tcolor{$\bm{\Delta y/\Delta x}$} \\
   \hline
   $[0,1]$ & $f(1) = \phantom{1000} $ & 2 \\
   \hline
@@ -1915,7 +1865,7 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
   \hline
   $[3,4]$ & $f(4) = \phantom{1000} $ & 2 \\  
   \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{minipage}\hfill
 \begin{minipage}{.4\textwidth}
@@ -1936,12 +1886,10 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
 
   \begin{minipage}{.4\textwidth}
    \begin{table}[H]
-   \setlength\tabulinesep{1mm}
    \setlength\tabcolsep{2.5pt}
-\begin{tabu} to .4\textwidth{|m{.3\textwidth}|m{.35\textwidth}|c|}
+\begin{tabular}{|e{.3\textwidth}|e{.35\textwidth}|c|}
   \hline
-  \thead
-  $\bm{[a,b]}$ & $\bm{f(0) = 10}$ & $\bm{\Delta y/\Delta x}$ \\
+  \tcolor{$\bm{[a,b]}$} & \tcolor{$\bm{f(0) = 10}$} & \tcolor{$\bm{\Delta y/\Delta x}$} \\
   \hline
   $[0,\frac{1}{2}]$ & $f(1/2) = $ & -2 \\
   \hline
@@ -1959,7 +1907,7 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
   \hline
   $[\frac{7}{2},4]$ & $f(4) =$   &-2 \\
   \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{minipage}\hfill
 \begin{minipage}{.4\textwidth}
@@ -1980,10 +1928,9 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
   \begin{minipage}{.4\textwidth}
  \begin{table}[H]
     \setlength\tabcolsep{2.5pt}
-\begin{tabu} to .4\textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
   \hline
-  \thead
-  $\bm{[a,b]}$ & $\bm{f(0) = 0}$ & $\bm{\Delta y/\Delta x}$ \\
+  \tcolor{$\bm{[a,b]}$} & \tcolor{$\bm{f(0) = 0$}} & \tcolor{$\bm{\Delta y/\Delta x}$} \\
   \hline
   $[0,2]$ & $f(2) = \phantom{1000} $ & 1 \\
   \hline
@@ -1993,7 +1940,7 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
   \hline
   $[6,8]$ & $f(8) = \phantom{1000} $ & 4 \\  
   \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{minipage}\hfill
 \begin{minipage}{.4\textwidth}
@@ -2015,10 +1962,9 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
   \begin{minipage}{.4\textwidth}
    \begin{table}[H]
       \setlength\tabcolsep{2.5pt}
-  \begin{tabu} to .4\textwidth{|c|c|c|}
+  \begin{tabular}{|c|c|c|}
     \hline
-    \thead
-    $\bm{[a,b]}$ & $\bm{f(0) = 0}$ & $\bm{\Delta y/\Delta x}$ \\
+    \tcolor{$\bm{[a,b]}$} & \tcolor{$\bm{f(0) = 0}$} & \tcolor{$\bm{\Delta y/\Delta x}$} \\
     \hline
     $[0,1]$ & $f(1) = \phantom{1000} $ & 10 \\
     \hline
@@ -2028,7 +1974,7 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
     \hline
     $[3,4]$ & $f(4) = \phantom{1000} $ & 0 \\  
     \hline
-  \end{tabu}
+  \end{tabular}
   \end{table}
   \end{minipage}\hfill
   \begin{minipage}{.4\textwidth}
@@ -2051,10 +1997,9 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
   \begin{minipage}{.4\textwidth}
    \begin{table}[H]
       \setlength\tabcolsep{2.5pt}
-  \begin{tabu} to .4\textwidth{|c|c|c|}
+  \begin{tabular}{|c|c|c|}
     \hline
-    \thead
-    $\bm{[a,b]}$ & $\bm{f(0) = 0}$ & $\bm{\Delta y/\Delta x}$ \\
+    \tcolor{$\bm{[a,b]}$} & \tcolor{$\bm{f(0) = 0}$} & \tcolor{$\bm{\Delta y/\Delta x}$} \\
     \hline
     $[0,1]$ & $f(1) = \phantom{1000} $ & 1 \\
     \hline
@@ -2072,7 +2017,7 @@ Nas tabelas abaixo encontram-se as taxas de variação médias de funções e os
     \hline
     $[7,8]$ & $f(8) =  $\phantom{1000} & 0 \\  
     \hline  
-  \end{tabu}
+  \end{tabular}
   \end{table}
   \end{minipage}\hfill
   \begin{minipage}{.4\textwidth}
@@ -2148,7 +2093,7 @@ intuição sobre o assunto, não pretendemos tratar as coisas de maneira formal.
 \begin{answer}{Arremeço}
 {
 \centering
-\begin{tabu} to \textwidth{|l|>{$}c<{$}|>{$}c<{$}|}
+\begin{tabular}{|l|>{$}c<{$}|>{$}c<{$}|}
 \hline
 \cellcolor{\tikzcolor}\textcolor{white}& \cellcolor{\tikzcolor}\textcolor{white}{\bm{v_0=6m/s}} & \cellcolor{\tikzcolor}\textcolor{white}{\bm{v_0=7m/s}}\\
 \hline
@@ -2162,7 +2107,7 @@ Entre $t=0$ e $=0{,}001$ & 5{,}995 & 6{,}995\\
 \hline
 Entre $t=0$ e $=0{,}0001$ & 5{,}9995 & 6{,}9995\\
 \hline
-\end{tabu}
+\end{tabular}
 \begin{enumerate}
 
 \item Os valores parecem aproximar-se do valor da velocidade inicial, 6 no primeiro caso e 7 no segundo caso.
@@ -2182,21 +2127,21 @@ Entre $t=0$ e $=0{,}0001$ & 5{,}9995 & 6{,}9995\\
 
 \centering
 \setlength\tabcolsep{2.5pt}
-\begin{tabu} to \textwidth{|*{7}{>{$}c<{$}|}}
+\begin{tabular}{|*{7}{>{$}c<{$}|}}
 \hline
 \cellcolor{\tikzcolor}\textcolor{white}{\bm{\alpha}} & 0{,}1 & 0{,}01 & 0{,}001 & 10^{-4} & 10^{-5} & 10^{-6} \\
 \hline
 \cellcolor{\tikzcolor}\textcolor{white}{\bm{-4-5\alpha}} & -4{,}5 & -4{,}05 & -4{,}005 & -4{,}0005 & -4{,}00005 & -4{,}000005 \\
 \hline
-\end{tabu}
+\end{tabular}
 
-\begin{tabu} to \textwidth{|*{7}{>{$}c<{$}|}}
+\begin{tabular}{|*{7}{>{$}c<{$}|}}
 \hline
 \cellcolor{\tikzcolor}\textcolor{white}{\bm{\alpha}} & -0{,}1 & -0{,}01 & -0{,}001 & -10^{-4} & -10^{-5} & -10^{-6} \\
 \hline
 \cellcolor{\tikzcolor}\textcolor{white}{\bm{-4-5\alpha}} & -3{,}5 & -3{,}95 & -3{,}995 & -3{,}9995 & -3{,}99995 & -3{,}999995 \\
 \hline
-\end{tabu}
+\end{tabular}
 
 }{1}
 \end{answer}
@@ -2235,10 +2180,9 @@ Com a ajuda de uma calculadora, calcule as taxas de variação médias da altura
 
 \begin{table}[H]
   \centering
-\begin{tabu} to .7\textwidth{|l|c|c|}
+\begin{tabular}{|l|c|c|}
   \hline
-  \thead
-          & $\bm{v_0 = 6 m/s}$ & $\bm{v_0 = 7 m/s}$ \\
+  \tcolor{}& \tcolor{$\bm{v_0 = 6 m/s}$} & \tcolor{$\bm{v_0 = 7 m/s}$} \\
 \hline
 Entre $t=0$ e $t=1$ & & \\
 \hline
@@ -2250,7 +2194,7 @@ Entre $t=0$ e $t=0,001$ & & \\
 \hline
 Entre $t=0$ e $t=0,0001$ & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -2261,10 +2205,10 @@ Entre $t=0$ e $t=0,0001$ & & \\
 
   \begin{multicols}{2}
     \begin{table}[H]
-    \begin{tabu}[l]{|l|>{$}c<{$}|}
+    \begin{tabular}[l]{|l|>{$}c<{$}|}
       \hline
-      \tnumber
-	  & \bm{v_0 = 6m/s} \\
+      \tcolor{}
+	  & \tmat{\bm{v_0 = 6m/s}} \\
       \hline
       Entre $t=0{,}5$ e $t=0{,}6$  & 0{,}5 \\
       \hline
@@ -2274,13 +2218,12 @@ Entre $t=0$ e $t=0,0001$ & & \\
       \hline
       Entre $t=0{,}5999$ e $t=0{,}6$  & 0{,}0005 \\
       \hline
-    \end{tabu}
+    \end{tabular}
 \end{table}
 \begin{table}[H]
-    \begin{tabu}[r]{|l|c|}
+    \begin{tabular}[r]{|l|c|}
       \hline
-      \thead
-      & $\bm{v_0 = 6m/s}$ \\
+      \tcolor{} & \tcolor{$\bm{v_0 = 6m/s}$} \\
       \hline
       Entre $t=0{,}6$ e $t=0{,}7$  & -0,5 \\
       \hline
@@ -2290,7 +2233,7 @@ Entre $t=0$ e $t=0,0001$ & & \\
       \hline
       Entre $t=0{,}6$ e $t=0{,}6005$  & -0,0025 \\
       \hline
-    \end{tabu}
+    \end{tabular}
   \end{table}
 \end{multicols}
 
@@ -2309,11 +2252,9 @@ Entre $t=0$ e $t=0,0001$ & & \\
 	\item 
 	\adjustbox{valign=t}
 	{\setlength\tabcolsep{2.5pt}
-	\setlength\tabulinesep{2.5pt}
-	\begin{tabu}[l]{|c|c|c|}
+		\begin{tabular}[l]{|c|c|c|}
 	\hline
-	\thead
-	\makecell{Intervalo $\bm{[a,b]}$} & \makecell{Variação da função \\  $\bm{\Delta f = f(b) - f(a)}$} & \makecell{Variação média da função \\ $\bm{\dfrac{\Delta f}{\Delta x} = \dfrac{f(b) - f(a)}{b-a}}$} \\
+	\tcolor{\makecell{Intervalo $\bm{[a,b]}$}} & \tcolor{\makecell{Variação da função \\  $\bm{\Delta f = f(b) - f(a)}$}} & \tcolor{\makecell{Variação média da função \\ $\bm{\dfrac{\Delta f}{\Delta x} = \dfrac{f(b) - f(a)}{b-a}}$}} \\
 	\hline
 	$[-1,0]$ & $4$ & $4$\\
 	\hline
@@ -2327,9 +2268,9 @@ Entre $t=0$ e $t=0,0001$ & & \\
 	\hline
 	$[-1,2]$ & $5$ & $\dfrac{5}{2}$ \\
 	\hline
-    \end{tabu}
+    \end{tabular}
   	}
-	\end{enumerate}
+	\end{enumerate}  
 }{1}
 \end{answer}
 
@@ -2399,11 +2340,9 @@ Entre $t=0$ e $t=0,0001$ & & \\
     
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2.5pt}
-\begin{tabu}[l]{|c|c|c|}
+\begin{tabular}[l]{|c|c|c|}
 \hline
-\thead
-\makecell{Intervalo $\bm{[a,b]}$} & \makecell{Variação da função \\  $\bm{\Delta f = f(b) - f(a)}$} & \makecell{Variação média da função \\ $\bm{\dfrac{\Delta f}{\Delta x} = \dfrac{f(b) - f(a)}{b-a}}$} \\
+\tcolor{\makecell{Intervalo $\bm{[a,b]}$}} & \tcolor{\makecell{Variação da função \\  $\bm{\Delta f = f(b) - f(a)}$}} & \tcolor{\makecell{Variação média da função \\ $\bm{\dfrac{\Delta f}{\Delta x} = \dfrac{f(b) - f(a)}{b-a}}$}} \\
 \hline
 $[-1,0]$ & & \\
 \hline
@@ -2417,7 +2356,7 @@ $[0,2]$ & & \\
 \hline
 $[-1,2]$ & & \\
 \hline
-        \end{tabu}
+        \end{tabular}
       \end{table}
 
     \item (Velocidade Média) Se um objeto é arremessado para o alto a $20m/s$ a partir de uma altura de $6m$, sua altura $S$ após $t$ segundos é dada por
@@ -2544,7 +2483,7 @@ em que $x$ é o número de unidades vendidas. Qual é a taxa da variação médi
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/taxa_bibliografia.bib}
 
 \nocite{*}

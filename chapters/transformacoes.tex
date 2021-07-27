@@ -1,117 +1,31 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{./abertura-transformacoes}{./abertura-transformacoes-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-transformacoes}
-\else
-\renewcommand\chapterillustration{./abertura-transformacoes-professor}
-\fi
+\expandtocdepth
 
-\makeatletter
-\ifnum\aluno=1
-\else
-\renewcommand*{\toclevel@section}{1}
-\renewcommand*{\toclevel@subsection}{4}
-\renewcommand*{\toclevel@paragraph}{5}
-\renewcommand*{\toclevel@subparagraph}{6}
-
-\renewcommand*{\toclevel@exploresec}{2}
-\renewcommand*{\toclevel@practicesec}{2}
-\renewcommand*{\toclevel@arrangesec}{2}
-\renewcommand*{\toclevel@knowsec}{1}
-\renewcommand*{\toclevel@exercisesec}{1}
-
-\setcounter{tocdepth}{2}
-\fi
-\makeatother
-
-\renewcommand\chapterwhat{Transformações geométricas no plano:
+\chapterwhat{Transformações geométricas no plano:
 isometrias: translações, rotações e reflexões;	homotetias.}
-\renewcommand\chapterbecause{Estamos mergulhados em um mundo de imagens, especialmente na atualidade, em função da multiplicidade de telas que manuseamos e às quais somos expostos. Apropriar-se do conceito de transformação geométrica, que está por detrás das noções de congruência, de simetria, de ampliação e de redução de imagens configura uma espécie de alfabetização geométrico-visual. Em resumo, o estudo das transformações geométricas contribui para a atuação no mundo por meio das linguagens geométrico-visuais presentes nas artes, nas ciências, nas tecnologias e na natureza.} 
+
+\chapterbecause{Estamos mergulhados em um mundo de imagens, especialmente na atualidade, em função da multiplicidade de telas que manuseamos e às quais somos expostos. Apropriar-se do conceito de transformação geométrica, que está por detrás das noções de congruência, de simetria, de ampliação e de redução de imagens configura uma espécie de alfabetização geométrico-visual. Em resumo, o estudo das transformações geométricas contribui para a atuação no mundo por meio das linguagens geométrico-visuais presentes nas artes, nas ciências, nas tecnologias e na natureza.} 
+
 \chapter{Transformações Geométricas}
 \label{transformacoes-chap}
 
-\mbox{}\thispagestyle{empty}\clearpage
 
-\thispagestyle{empty}
+%%%% Página de créditos
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+% Autores
+\autorum{Aline Matheus}
+\autordois{Cláudia Cueva}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+% Revisores
+\revisorum{Lhaylla Crissaf}
 
-\vspace*{.3cm}
-
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+\autordacapa{Patrick Hendry}{Unsplash}{https://unsplash.com/photos/hezNrE5QEa8}
+\versao{1.0}
 
 
+\creditos
 
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Transformações Geométricas\\
-\\
-Ano/ Versão: & 2021 / versão 0.1 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas, \\
-			&  Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Aline Matheus, \\
-  		   & Cláudia Cueva\\
-
-        
-\\
-Colaboração: & \\
-\\
-Revisão: & Lhaylla Crissaf \\
-
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & ---\\
-\\
-  Capa: & Foto de Patrick Hendry, no Unsplash \\
-  		& https://unsplash.com/photos/hezNrE5QEa8 \\
-
-\end{tabular}
-\vspace{.5cm}
-
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -341,7 +255,7 @@ O Tetris é um jogo que se relaciona a diversos conceitos da Geometria. Um aspec
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.5\linewidth]{transformacoes3}
+\includegraphics[width=.475\linewidth]{transformacoes3}
 \end{figure}
 
 Qual peça poderia ser encaixada no espaço demarcado? L, R, ambas ou nenhuma delas?
@@ -571,7 +485,6 @@ O artista viveu em Brasília de 1958 até 2008 (ano de sua morte), contribuindo 
 
 \includegraphics[width=.35\linewidth]{transformacoes15}
 \caption{Reproduções de padrões de azulejos criados por Athos Bulcão (Foto: Divulgação)}
-\label{}
 \end{figure}
 
 Analisando a obra de azulejaria de Athos Bulcão, podemos observar que os azulejos de um mesmo tipo – que apresentam formas congruentes - se relacionam usualmente por \textbf{translações} e \textbf{rotações}. Observe os azulejos em destaque: 
@@ -583,7 +496,7 @@ Analisando a obra de azulejaria de Athos Bulcão, podemos observar que os azulej
 \hspace{2em}
 \includegraphics[width=.425\linewidth]{transformacoes17}
 \caption{Hospital das Forças Armadas INCOR, Brasília. (Foto: Edgard Cesar)}
-\label{}
+
 \end{figure}
 
 No primeiro par de azulejos em destaque, a sobreposição entre os azulejos pode ser feita por meio de uma translação horizontal, deslocando o da esquerda duas “unidades” para a direita. (Note que estamos considerando o lado do azulejo quadrado como unidade.) No segundo par de azulejos em destaque, eles podem ser sobrepostos rotacionando $90^{\circ}$ o azulejo da esquerda, no sentido anti-horário, em torno do ponto $O$.  (Ver destaque a seguir.)
@@ -762,7 +675,7 @@ A palavra isometria vem do grego e significa \textit{mesma medida}. Intuitivamen
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.7\linewidth]{transformacoes27}
+\includegraphics[width=.675\linewidth]{transformacoes27}
 \caption{}
 \label{transformacoes27}
 \end{figure}
@@ -853,7 +766,7 @@ Veja outro exemplo na \fref{transformacoes34}, baseado em um painel de Athos Bul
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.75\linewidth]{transformacoes34}
+\includegraphics[width=.725\linewidth]{transformacoes34}
 \caption{}
 \label{transformacoes34}
 \end{figure}
@@ -1088,7 +1001,7 @@ Iniciamos este capítulo explorando o jogo eletrônico Tetris, que apresenta set
 
 \includegraphics[width=.4\linewidth]{transformacoes1}
 \caption{Tela do jogo Tetris}
-\label{}
+
 \end{figure}
 
 Dentre as sete pelas do jogo, há dois pares de figuras congruentes: as peças S e Z e as peças L e R. 
@@ -1098,7 +1011,7 @@ Dentre as sete pelas do jogo, há dois pares de figuras congruentes: as peças S
 
 \includegraphics[width=.6\linewidth]{transformacoes2}
 \caption{As sete peças do jogo Tetris}
-\label{}
+
 \end{figure}
 
 Embora S e Z sejam figuras congruentes, elas não se equivalem no jogo – ou seja, não são capazes de preencher os mesmos espaços. Isso acontece porque tais peças não podem ser sobrepostas usando translações ou rotações, os movimentos permitidos no jogo. Se fossem objetos físicos, não figuras geométricas abstratas, para sobrepor a peça S à peça Z do Tetris, teríamos de “retirá-la do plano”, virando-a no espaço, para só então colocá-la novamente sobre o plano, invertendo a face que fica visível. O mesmo vale em relação às peças R e L.
@@ -1522,7 +1435,7 @@ Ocorre que a talidomida possui um \textbf{quiral} – átomo de carbono assimét
 
 \includegraphics[width=\linewidth]{transformacoes74}
 \caption{Fonte: \url{https://bit.ly/3qg5qYH}}
-\label{}
+
 \end{figure}
 
 
@@ -1760,7 +1673,7 @@ Nas atividades 1 e 2 os alunos devem desenhar o polígono tratado em cada item o
 
 \item A rotação de 120° em torno do centro do disco é eixo de simetria radial.
 \end{enumerate}
-}{9}
+}{0}
 \end{answer}
 \begin{sugestions}{Simetrias - Exercícios p. \pageref{transformacoes-exercise4}}
 {
@@ -2159,7 +2072,7 @@ Se tiver interesse em se aprofundar no tema das projeções cinematográficas, a
  
 \includegraphics[width=.7\linewidth]{transformacoes97}
 \caption{“Harry Potter e o Prisioneiro de Azkaban” (2004).}
-\label{}
+
 \end{figure} 
 
 Usando uma régua, meça a tela e a cena original e indique seu formato (ainda que aproximado), usando a linguagem matemática usual (por exemplo, 4:3) e usando a linguagem apresentada no texto (onde 4:3 se torna 1.33:1). 
@@ -2258,27 +2171,13 @@ Dessa forma, figuras homotéticas são sempre semelhantes, mas figuras semelhant
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.6\linewidth]{transformacoes101}
+\includegraphics[width=.55\linewidth]{transformacoes101}
 \caption{}
 \label{transformacoes101}
 \end{figure}
  
 No conjunto da esquerda, por exemplo, os polígonos rosa e azul relacionam-se por uma homotetia indireta. Os polígonos azul e roxo, por exemplo, relacionam-se por uma homotetia direta. No conjunto da direita, as figuras relacionam-se por uma homotetia indireta. Quando, no entanto, tomamos, por exemplo, o polígono rosa e o polígono verde, elas podem se relacionar por uma homotetia direta seguida de uma rotação de $90^{\circ}$. 
 
-\renewcommand{\exercise}[1]
-{ 
-  \stepcounter{exercisesec}
-  \exercisesec{\texorpdfstring{}{Exercícios}}
-  % \pdfbookmark[\theexercisesec]{Exercícios}{}
-  \def\currentcolor{cor1}
-  \setlist[enumerate]{label=\protect\enumbox{\arabic*}}
-  \setlist[enumerate,2]{label=\textit{\alph*)}
-  % ,ref=\theenumi.\emph{\arabic*}
-  }
-  \setlist[enumerate,3]{label=\textit{\roman*)}
-  % ,ref=\theenumi.\emph{\roman*}
-  }
-}
 
 \def\currentcolor{cor1}
 \begin{sugestions}{Exercício 1}
@@ -2305,7 +2204,7 @@ Dois triângulos com ângulos congruentes são semelhantes porque, como consequ�
  \begin{figure}[H]
 \centering
 
-\includegraphics[width=\linewidth]{transformacoes102}
+\includegraphics[width=.9\linewidth]{transformacoes102}
 \end{figure}
 \end{enumerate}
 \clearpage
@@ -2361,7 +2260,7 @@ Nesta atividade, os alunos devem trabalhar em malha quadriculada. Recomenda-se o
 
 \item Dissemos que, se a razão $k$ de uma homotetia é tal que $|k|<1$, trata-se de uma redução. Se $|k|>1$, trata-se de uma ampliação. O que acontece se $|k|=1$? Explique.
 
-\item Fazendo construções com régua, descubra o centro da homotetia que relaciona as figuras semelhantes em cada caso.  Use o Anexo 16.
+\item Fazendo construções com régua, descubra o centro da homotetia que relaciona as figuras semelhantes em cada caso.  Use o Anexo 15.
 
 \begin{figure}[H]
 \centering
@@ -2910,28 +2809,28 @@ Esses pares de figuras congruentes relacionam-se por meio de uma rotação de ce
 
 \includegraphics[width=.8\linewidth]{transformacoes120}
 \caption{Pintura 1 – Concreção 8462 (1984)}
-\label{}
+
 \end{figure}
 \begin{figure}[H]
 \centering
 
 \includegraphics[width=.8\linewidth]{transformacoes121}
 \caption{Pintura 2 – Concreção 8074 (1980)}
-\label{}
+
 \end{figure}
 \begin{figure}[H]
 \centering
 
 \includegraphics[width=.8\linewidth]{transformacoes122}
 \caption{Pintura 3 – Concreção 8723 (1987)}
-\label{}
+
 \end{figure}
 \begin{figure}[H]
 \centering
 
 \includegraphics[width=.8\linewidth]{transformacoes123}
 \caption{Pintura 4 – Concreção 8463 (1984)}
-\label{}
+
 \end{figure}
 \end{multicols}
 
@@ -3319,7 +3218,7 @@ O aluno pode desenhar um quadrilátero, ampliá-lo ou reduzi-lo e aplicar uma ro
 \notasfinais
 \fi
 
-\anexo{Anexo 1}
+\anexo
 Entendemos que a melhor forma de explorar a atividade proposta é por meio de tentativas. Assim, disponibilizamos alguns corações quadriculados para que você possa fazer suas tentativas, usando lápis de diferentes cores, com as quais você poderá demarcar as peças do Tetris. (Você pode imprimir quantas cópias desejar!)
 
 \begin{figure}[H]
@@ -3341,7 +3240,7 @@ Entendemos que a melhor forma de explorar a atividade proposta é por meio de te
 
 \end{multicols}
 
-\anexo{Anexo 2}
+\anexo
 
 \begin{figure}[H]
 \centering
@@ -3349,7 +3248,7 @@ Entendemos que a melhor forma de explorar a atividade proposta é por meio de te
 \includegraphics[width=.8\linewidth]{transformacoes161}
 \end{figure}
 
-\anexo{Anexo 3}
+\anexo
 
 \begin{figure}[H]
 \centering
@@ -3357,7 +3256,8 @@ Entendemos que a melhor forma de explorar a atividade proposta é por meio de te
 \includegraphics[width=.8\linewidth]{transformacoes162}
 \end{figure}
 
-\anexo{Anexo 4}
+\anexo
+
 \begin{figure}[H]
 \centering
 
@@ -3370,12 +3270,150 @@ Entendemos que a melhor forma de explorar a atividade proposta é por meio de te
 \includegraphics[height=.45\textheight]{transformacoes164}
 \end{figure}
 
-\anexo{Anexo 5}
+\anexo
+
+\setlength\columnsep{2em}
+
+\begin{multicols}{2}
+\paragraph{Destaque 1}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.875\linewidth]{transformacoes167}
+\end{figure}
+\columnbreak
+\paragraph{Destaque 2}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.875\linewidth]{transformacoes168}
+\end{figure}
+\end{multicols}
+\begin{multicols}{2}
+\paragraph{Destaque 3}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.875\linewidth]{transformacoes169}
+\end{figure}
+\columnbreak
+\paragraph{Destaque 4}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.875\linewidth]{transformacoes170}
+\end{figure}
+\end{multicols}
 
 
+\subsection{Painel para escolha livre}
+\begin{figure}[H]
+\centering
+
+\includegraphics[height=.9\textheight]{transformacoes171}
+\caption{``Parada de descanso'' (1985), de Athos Bulcão}
+\end{figure}
 
 
-\bibliographystyle{apalike-pt}
+\anexo
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[height=.9\textheight]{transformacoes172}
+\end{figure}
+
+\anexo
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[height=.9\textheight]{transformacoes173}
+\end{figure}
+
+
+\anexo
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[height=.9\textheight]{transformacoes174}
+\end{figure}
+
+\anexo
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{transformacoes175}
+\end{figure}
+
+\anexo
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{transformacoes176}
+\end{figure}
+
+\anexo
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[height=.9\textheight]{transformacoes177}
+\caption{Fotografia: Joanna Lemanska.}
+\end{figure}
+
+\anexo
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{transformacoes178}
+\end{figure}
+
+\anexo
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{transformacoes179}
+\end{figure}
+
+\anexo
+
+\begin{enumerate}[label=\textit{\alph*)}]
+\item \adjustbox{valign=t}
+{
+\includegraphics[height=.3\textheight]{transformacoes180}
+}
+
+\item \adjustbox{valign=t}
+{
+\includegraphics[height=.3\textheight]{transformacoes181}
+}
+
+\item \adjustbox{valign=t}
+{
+\includegraphics[height=.3\textheight]{transformacoes182}
+}
+\end{enumerate}
+
+\anexo
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=\linewidth]{transformacoes183}
+\end{figure}
+
+\clearpage
+
 \bibliography{../Bibliografia/transformacoes_bibliografia.bib}
 
 \nocite{*}

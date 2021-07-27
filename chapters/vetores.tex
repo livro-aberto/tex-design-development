@@ -1,94 +1,36 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-vetores.jpg}{abertura-vetores-professor.jpg}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{abertura-vetores.jpg}
-\else
-\renewcommand\chapterillustration{abertura-vetores-professor.jpg}
-\fi
-\renewcommand\chapterwhat{Vetores no plano do ponto de vista geométrico (segmentos orientados) e algébrico (coordenadas); operações com vetores (adição, subtração e multiplicação por escalar) e suas interpretações geométricas (translação e homotetia); algumas aplicações na Física. } 
-\renewcommand\chapterbecause{Vetores são os objetos matemáticos adequados para se descrever, de modo apropriado, certas grandezas (ditas vetoriais) tais como deslocamento, velocidade, aceleração e força. Mais ainda, muitas leis naturais são expressas por equações que envolvem vetores e estudar tais equações permite entender os fenômenos associados. Além disso, o material deste capítulo fornece um primeiro contato, mais simples, com uma disciplina universitária denominada Álgebra Linear, que possui várias aplicações em Biologia, Economia, Computação Gráfica, Engenharia, Física, Matemática, Química, Estatística, etc.} 
-
+\chapterwhat{Vetores no plano do ponto de vista geométrico (segmentos orientados) e algébrico (coordenadas); operações com vetores (adição, subtração e multiplicação por escalar) e suas interpretações geométricas (translação e homotetia); algumas aplicações na Física. } 
+\chapterbecause{Vetores são os objetos matemáticos adequados para se descrever, de modo apropriado, certas grandezas (ditas vetoriais) tais como deslocamento, velocidade, aceleração e força. Mais ainda, muitas leis naturais são expressas por equações que envolvem vetores e estudar tais equações permite entender os fenômenos associados. Além disso, o material deste capítulo fornece um primeiro contato, mais simples, com uma disciplina universitária denominada Álgebra Linear, que possui várias aplicações em Biologia, Economia, Computação Gráfica, Engenharia, Física, Matemática, Química, Estatística, etc.} 
 
 \chapter{Vetores no Plano}
 
+%%%% Página de créditos
 
-\mbox{}\thispagestyle{empty}\clearpage
+% Autores
+\autorum{Humberto Bortolossi}
+\autordois{Lhaylla Crissaff}
+\autortres{Fabio Simas}
+% \autorquatro{}
+% \autorcinco{}
 
-\thispagestyle{empty}
+% Revisores
+\revisorum{Cydara Cavedon Ripoll}
+\revisordois{Letícia Rangel}
+% \revisortres{}
+% \revisorquatro{}
+% \revisorcinco
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\autordacapa{Jr Korpa}{Unsplash}{https://unsplash.com/photos/yF3S905z9dM}
+\versao{1.0}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+%Licença cc-by-sa
+\ccbysa
 
-\vspace*{.3cm}
+% Link para versão digital:
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF106.html}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
-
-% Versão digital do capítulo:
-
-% \url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/GE101.html}
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Vetores no Plano \\
-\\
-Ano/ Versão: & 2021 / versão 1.0 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Humberto Bortolossi,\\
-        & Lhaylla Crissaff,\\
-        & Fabio Simas
-\\
-Revisão: &  Cydara Cavedon Ripoll  \\
-          &  Letícia Rangel \\ 
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & --- \\
-\\
-  Capa: & Foto de Jr Korpa, no Unsplash \\
-        & https://unsplash.com/photos/yF3S905z9dM \\
-
-\end{tabular}
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \mainmatter
 
@@ -1304,9 +1246,12 @@ Dois vetores são iguais se os representantes de suas coleções possuem o mesmo
 \clearmargin
 
 Na \Fref{fig-geometria-operacoesvetores-05}, os vetores \(\vec{u}\) e \(\vec{v}\) são iguais, pois possuem o mesmo módulo, a mesma direção e o mesmo sentido. Nesse caso, escreve-se \(\vec{u}=\vec{v}\).
+
+
+
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=.9]
+\begin{tikzpicture}[scale=.85]
  
 \coordinate (A) at (0,0) {};
 \coordinate (B) at (1,1) {};
@@ -1323,14 +1268,23 @@ Na \Fref{fig-geometria-operacoesvetores-05}, os vetores \(\vec{u}\) e \(\vec{v}\
 \end{tikzpicture} 
  \caption{$\vec{u}$ e $\vec{v}$ são vetores iguais.} \label{fig-geometria-operacoesvetores-05} 
  \end{figure}
+
+\begin{objectives}{Para refletir}
+{
+As indagações feitas têm por objetivo levar o aluno a perceber que, dado um vetor \(\vec{v}\), a partir de qualquer ponto é possível determinar um vetor igual à \(\vec{v}\) e que portanto, a extremidade inicial do vetor não é importante. E também, que existem infinitos vetores iguais a \(\vec{v}\).}
+{1}{1}
+\end{objectives}
+
 Não é necessário que todas as características dos vetores sejam diferentes para que eles sejam diferentes. Se pelo menos pelo menos uma das  características de dois vetores for diferente, então esses vetores são diferentes.
 
 Na \Fref{fig-geometria-operacoesvetores-06}, \(\vec{u}\) e \(\vec{v}\) não são iguais, pois ssses vetores têm mesmo módulo, mesma direção (estão em retas suportes paralelas), mas não têm o mesmo sentido. Nesse caso, \(\vec{u}\) e \(\vec{v}\) têm sentidos opostos.
 
+
+
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=.9]
+\begin{tikzpicture}[scale=.85]
 \coordinate (A) at (0,0) {};
 \coordinate (B) at (1,1) {};
 \draw [dashed, thick] (-1,-1) -- (2,2);
@@ -1355,12 +1309,9 @@ Na \Fref{fig-geometria-operacoesvetores-06}, \(\vec{u}\) e \(\vec{v}\) não são
 
 Algumas palavras usadas frequentemente no nosso cotidiano podem ter diferentes significados quando estão relacionadas a objetos matemáticos. Pense na seguinte situação: durante uma aula, a professora pede que seus alunos Pedro e Beatriz, que estão sentados em diferentes posições da sala de aula, andem em direção à porta. Neste caso, os dois alunos sairão de suas carteiras e se encontrarão na porta. Apesar dos dois alunos estarem andando na mesma "direção"{} (expressão usada no senso comum), os vetores que indicam o deslocamento dos alunos não têm a mesma "direção"{} (no sentido matemático). Os vetores correspondentes aos deslocamentos dos alunos não são colineares nem paralelos. Ou seja, de maneira geral, a expressão direção usada no nosso dia a dia não tem o mesmo significado da palavra direção usada em Matemática
 \end{observationtitle}
-\marginpar{\vspace{5em}}
-\begin{objectives}{Para refletir}
-{
-As indagações feitas têm por objetivo levar o aluno a perceber que, dado um vetor \(\vec{v}\), a partir de qualquer ponto é possível determinar um vetor igual à \(\vec{v}\) e que portanto, a extremidade inicial do vetor não é importante. E também, que existem infinitos vetores iguais a \(\vec{v}\).}
-{1}{1}
-\end{objectives}
+
+
+
 \begin{reflection}
 
 Considere um ponto \(A\) e um vetor \(\vec{v}\).
@@ -1615,9 +1566,10 @@ Comutatividade da soma: observando novamente a \Fref{fig-geometria-operacoesveto
 \begin{split}\vec{u} + \vec{v} = \vec{v} + \vec{u}.\end{split}
 \end{equation*}
 
+\clearpage
 \begin{objectives}{Para refletir}
 {O questionamento feito anteriormente pode ser discutido usando a lei de formação de um triângulo, que diz que para que um triângulo exista, cada lado deve ser menor que a soma dos outros dois. Ao realizar a soma de dois vetores, utilizando a regra do triângulo, construímos um triângulo de lados \(|\vec{u}+\vec{v}|\), \(|\vec{u}|\) e  \(|\vec{v}|\). É fácil ver que não é possível construir um triângulo de lados  \(|\vec{u}|\), \(|\vec{v}|\) e \(|\vec{u}+\vec{v}|=|\vec{u}|+|\vec{v}|\)}
-{1}{1}
+{1}{2}
 \end{objectives}
 
 \begin{reflection}
@@ -1720,7 +1672,6 @@ Escreva o vetor \(\overrightarrow{AM}\) como a multiplicação de um vetor por u
 \end{enumerate}
 \end{example}
 
-\clearpage
 \begin{example}{ base média de um triângulo}
 
 O segmento de reta cujos extremos são pontos médios de dois lados de um triângulo é paralelo ao terceiro lado. Mostre que a medida deste segmento é metade da medida do terceiro lado do triângulo.
@@ -1792,6 +1743,7 @@ Em Computação Gráfica, uma imagem vetorial é aquela que é representada via 
 
 \clearpage
 \def\currentcolor{session2}
+
 \begin{objectives}{Toda seta é vetor?}
 {
 \begin{itemize}
@@ -1803,11 +1755,10 @@ Perceber que grandezas vetoriais podem ser representadas geometricamente por out
 
 \item {} 
 Perceber os diversos usos de setas como recurso gráfico.
-
 \end{itemize}
 }{1}{1}
 \end{objectives}
-% \marginpar{\vspace{-2.5em}}
+
 \begin{sugestions}{Toda seta é vetor?}
 {
 \begin{itemize}
@@ -1845,7 +1796,6 @@ As setas da \hyperref[\detokenize{GE101-0C:fig-geometria-flechas-07}]{\Fref{\det
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Toda seta é vetor?}
 {
 \begin{itemize}
@@ -1862,13 +1812,11 @@ A seta da \hyperref[\detokenize{GE101-0C:fig-geometria-flechas-08}]{\Fref{\detok
 Somar vetores incluindo em situações singulares (não prototípicas, conforme \citet{poynter2005}).
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{Soma de dois vetores}
 {
 Dependendo das escolhas dos representantes dos vetores e dos procedimentos usados (a "regra do triângulo"{} ou a "regra do paralelogramo), estratégias diferentes podem ser usadas pelos alunos, todas produzindo o mesmo vetor soma.
 }{1}{1}
 \end{sugestions}
-\marginpar{\vspace{-1.5em}}
 \begin{answer}{Soma de dois vetores}
 {
 Os procedimentos indicados a seguir não são únicos, pois diferentes estratégias podem ser usadas, todas produzindo o mesmo vetor soma no final.
@@ -1919,7 +1867,6 @@ Os procedimentos indicados a seguir não são únicos, pois diferentes estratég
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Soma de dois vetores}
 {
 \begin{multicols}{2}
@@ -2073,7 +2020,6 @@ Perceber que, dado um vetor \(\vec{w}\), a decomposição \(\vec{w} = \vec{u} + 
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Decomposição de vetores em componentes}
 {
 \begin{multicols}{2}
@@ -2254,7 +2200,7 @@ Uma estratégia que pode ser usada para se resolver o problema é fazer uma segu
 
 \end{marginfigure}
 \end{enumerate}
-}{9}
+}{0}
 \end{answer}
 \clearmargin
 \begin{objectives}{A ordem das parcelas não altera a soma}
@@ -3105,13 +3051,11 @@ preparar o estudante para representar algebricamente, com notação vetorial, ve
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{Vetores numa malha quadriculada}
 {
 No problema não foi dado um ponto de referência (origem de um sistema de coordenadas), eles são desnecessários aqui e podem confundir os estudantes.
 }{1}{1}
 \end{sugestions}
-\marginpar{\vspace{-1em}}
 \begin{answer}{Vetores numa malha quadriculada}
 {
 \begin{center}\begin{tikzpicture}
@@ -3134,7 +3078,6 @@ No problema não foi dado um ponto de referência (origem de um sistema de coord
 \end{tikzpicture}\end{center}
 }{1}
 \end{answer}
-\marginpar{\vspace{-1em}}
 \begin{objectives}{Expressão algébrica dado vetor}
 {
 \begin{itemize}
@@ -3143,13 +3086,11 @@ No problema não foi dado um ponto de referência (origem de um sistema de coord
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{Expressão algébrica dado vetor}
 {
 Se for necessário, relembre a linguagem usada na questão anterior para que os estudantes entendam o que é esperado.
 }{1}{1}
 \end{sugestions}
-\marginpar{\vspace{-1em}}
 \begin{answer}{Expressão algébrica dado vetor}
 {
 \begin{itemize}
@@ -3575,263 +3516,263 @@ Da definição de homotetia obtemos que \(\overrightarrow{OA'}=3\overrightarrow{
 \end{enumerate}
 }{1}
 \end{answer}
-\begin{answer}{Homotetia}
-{
-\begin{enumerate}\setcounter{enumi}{2}
-\item {} 
-Digamos que \(B'=(x',y')\), o triângulo de lados 3, 4 e \(|\overrightarrow{OB}|=5\) e o triângulo de lados \(x'\), \(y'\) e \(|\overrightarrow{OB'}|=15\) são semelhantes porque têm dois ângulos iguais.
-\begin{center}
-\begin{tikzpicture}
-\begin{scope}[scale=.3]
-\fill (9,12) circle (0.13) node[right]{$B'$};
-\fill (0,12) circle (0.13) node[left]{$C'$};
-\fill (0,0) circle (0.13) node[below left]{$O$};
-\fill (3,4) circle (0.13) node[above]{$B$};
-\fill (0,4) circle (0.13) node[left]{$C$};
-\fill[gray] (0,0)--(3,0)--(3,4)--cycle;
-\fill[lightgray!30] (0,0)--(9,0)--(9,12)--cycle;
-\draw[dashed] (3,4)--(3,0);
-\draw[dashed] (9,12)--(9,0);
-\draw[-latex] (-2,0) -- (12,0) node[below right]{$x$};
-\draw[-latex] (0,-2) -- (0,15) node[left]{$y$};
-\draw[-latex,very thick, blue] (0,0)--(9,12);
-\draw[-latex, thick, red] (0,0)--(3,4);
-\node[below] at (1.5,0){3};
-\node at (4.5,-1){$x'$};
-\node[right] at (3,2){4};
-\node[right] at (9,6){$y'$};
-\draw (9,0) rectangle (8.6,.4);
-\draw (3,0) rectangle (2.6,.4);
-\end{scope}
-\end{tikzpicture}
-\end{center}
+% \begin{answer}{Homotetia}
+% {
+% \begin{enumerate}\setcounter{enumi}{2}
+% \item {} 
+% Digamos que \(B'=(x',y')\), o triângulo de lados 3, 4 e \(|\overrightarrow{OB}|=5\) e o triângulo de lados \(x'\), \(y'\) e \(|\overrightarrow{OB'}|=15\) são semelhantes porque têm dois ângulos iguais.
+% \begin{center}
+% \begin{tikzpicture}
+% \begin{scope}[scale=.3]
+% \fill (9,12) circle (0.13) node[right]{$B'$};
+% \fill (0,12) circle (0.13) node[left]{$C'$};
+% \fill (0,0) circle (0.13) node[below left]{$O$};
+% \fill (3,4) circle (0.13) node[above]{$B$};
+% \fill (0,4) circle (0.13) node[left]{$C$};
+% \fill[gray] (0,0)--(3,0)--(3,4)--cycle;
+% \fill[lightgray!30] (0,0)--(9,0)--(9,12)--cycle;
+% \draw[dashed] (3,4)--(3,0);
+% \draw[dashed] (9,12)--(9,0);
+% \draw[-latex] (-2,0) -- (12,0) node[below right]{$x$};
+% \draw[-latex] (0,-2) -- (0,15) node[left]{$y$};
+% \draw[-latex,very thick, blue] (0,0)--(9,12);
+% \draw[-latex, thick, red] (0,0)--(3,4);
+% \node[below] at (1.5,0){3};
+% \node at (4.5,-1){$x'$};
+% \node[right] at (3,2){4};
+% \node[right] at (9,6){$y'$};
+% \draw (9,0) rectangle (8.6,.4);
+% \draw (3,0) rectangle (2.6,.4);
+% \end{scope}
+% \end{tikzpicture}
+% \end{center}
 
-Logo \(x'= 3 \times 3 = 9\) e \(y'=3 \times 4 = 12\). Conclusão: \(P'=(9,12)\).
+% Logo \(x'= 3 \times 3 = 9\) e \(y'=3 \times 4 = 12\). Conclusão: \(P'=(9,12)\).
 
-\item {} 
-Como antes denotemos \(P'=(a',b')\). Novamente o triângulo de lados \(a\), \(b\) e \(OP\) é semelhante ao de lados \(a'\), \(b'\) e \(OP'\) porque têm dois ângulos iguais.
-\begin{center}
-\begin{tikzpicture}
-\begin{scope}[scale=.3]
-\fill (9,0) circle (0.13) node[below]{$A'$};
-\fill (9,12) circle (0.13) node[right]{$B'$};
-\fill (0,12) circle (0.13) node[left]{$C'$};
-\fill (0,0) circle (0.13) node[below left]{$O$};
-\fill (2,1.5) circle (0.13) node[above]{$P$};
-\fill (6,4.5) circle (0.13) node[above]{$P'$};
-\draw[fill=lightgray] (0,0)--(2,1.5)--(2,0)--cycle;
-\fill[lightgray!30] (0,0)--(6,4.5)--(6,0)--cycle;
-\draw (0,0)--(9,0)--(9,12)--(0,12)--cycle;
-\draw[dashed] (6,4.5)--(6,0);
-\draw[dashed] (2,1.5)--(2,0);
-\draw[-latex] (-2,0) -- (12,0) node[below right]{$x$};
-\draw[-latex] (0,-2) -- (0,15) node[left]{$y$};
-\draw[-latex,very thick, blue] (0,0)--(6,4.5);
-\draw[-latex, thick, red] (0,0)--(2,1.5);
-\node[below] at (1,0){$a$};
-\node at (3.5,-1){$a'$};
-\node[right] at (2,.75){$b$};
-\node[right] at (6,2.25){$b'$};
-\draw (6,0) rectangle (5.6,.4);
-\draw (2,0) rectangle (1.6,.4);
-\end{scope}
-\end{tikzpicture}
-\end{center}
+% \item {} 
+% Como antes denotemos \(P'=(a',b')\). Novamente o triângulo de lados \(a\), \(b\) e \(OP\) é semelhante ao de lados \(a'\), \(b'\) e \(OP'\) porque têm dois ângulos iguais.
+% \begin{center}
+% \begin{tikzpicture}
+% \begin{scope}[scale=.3]
+% \fill (9,0) circle (0.13) node[below]{$A'$};
+% \fill (9,12) circle (0.13) node[right]{$B'$};
+% \fill (0,12) circle (0.13) node[left]{$C'$};
+% \fill (0,0) circle (0.13) node[below left]{$O$};
+% \fill (2,1.5) circle (0.13) node[above]{$P$};
+% \fill (6,4.5) circle (0.13) node[above]{$P'$};
+% \draw[fill=lightgray] (0,0)--(2,1.5)--(2,0)--cycle;
+% \fill[lightgray!30] (0,0)--(6,4.5)--(6,0)--cycle;
+% \draw (0,0)--(9,0)--(9,12)--(0,12)--cycle;
+% \draw[dashed] (6,4.5)--(6,0);
+% \draw[dashed] (2,1.5)--(2,0);
+% \draw[-latex] (-2,0) -- (12,0) node[below right]{$x$};
+% \draw[-latex] (0,-2) -- (0,15) node[left]{$y$};
+% \draw[-latex,very thick, blue] (0,0)--(6,4.5);
+% \draw[-latex, thick, red] (0,0)--(2,1.5);
+% \node[below] at (1,0){$a$};
+% \node at (3.5,-1){$a'$};
+% \node[right] at (2,.75){$b$};
+% \node[right] at (6,2.25){$b'$};
+% \draw (6,0) rectangle (5.6,.4);
+% \draw (2,0) rectangle (1.6,.4);
+% \end{scope}
+% \end{tikzpicture}
+% \end{center}
 
-Como \(OP'=3OP\), a razão de semelhança é 3 e, portanto, \(a'=3a\) e \(b'=3b\). Conclusão: \(P'=(3a,3b)\), ou seja, \(3(a,b)=(3a,3b)\).
-\end{enumerate}
-}{0}
-\end{answer}
-\clearmargin
-\begin{objectives}{Translação num plano}
-{
-\begin{itemize}
-\item {} 
-Reconhecer, através de atividade prática, que as coordenadas do vetor soma são as somas das respectivas coordenadas dos vetores em questão,
+% Como \(OP'=3OP\), a razão de semelhança é 3 e, portanto, \(a'=3a\) e \(b'=3b\). Conclusão: \(P'=(3a,3b)\), ou seja, \(3(a,b)=(3a,3b)\).
+% \end{enumerate}
+% }{0}
+% \end{answer}
+% \clearmargin
+% \begin{objectives}{Translação num plano}
+% {
+% \begin{itemize}
+% \item {} 
+% Reconhecer, através de atividade prática, que as coordenadas do vetor soma são as somas das respectivas coordenadas dos vetores em questão,
 
-\item {} 
-descrever equações vetoriais em termos de coordenadas,
+% \item {} 
+% descrever equações vetoriais em termos de coordenadas,
 
-\item {} 
-reconhecer translação de pontos no plano como uma correspondência entre pontos do plano,
+% \item {} 
+% reconhecer translação de pontos no plano como uma correspondência entre pontos do plano,
 
-\item {} 
-relacionar translação de pontos no plano e vetores no contexto do plano cartesiano.
+% \item {} 
+% relacionar translação de pontos no plano e vetores no contexto do plano cartesiano.
 
-\end{itemize}
-}{1}{1}
-\end{objectives}
-\begin{sugestions}{Translação num plano}
-{
-Alguns autores (c.f., \citet{poynter2005} defendem a translação como a melhor representação de \textit{vetor livre} e de adição de vetores. Esta é uma das principais atividades desta seção porque ela busca formar esta imagem na memória dos estudantes.
-}{1}{1}
-\end{sugestions}
-\clearmargin
-\begin{answer}{Translação num plano}
-{
-\paragraph{Parte I}
-\begin{enumerate}
-\item {} 
-Como o ponto \(A'\) é a translação horizontal do ponto \(A\) de 4 unidades na direção e sentido do eixo \(x\), temos \(A'=(-1+4,4)=(3,4)\).
-\begin{marginfigure}[H]
-\centering
-\begin{tikzpicture}[scale=.65]
-\draw[fill=lightgray!30] (-1,4)coordinate(a)--(3,1)coordinate(b)--(2,-1)coordinate(c)--cycle;
-\draw[xshift=4cm] (-1,4)coordinate(a');
-\draw[-latex] (-2,0) -- (4,0) node[below right]{$x$};
-\draw[-latex] (0,-1) -- (0,5) node[left]{$y$};
-\fill (0,0) circle (0.05) node[below left]{$O$};
-\fill (a) circle (0.05) node[above left]{$A=(-1,4)$};
-\fill (a') circle (0.05) node[above]{$A'=(3,4)$};
-\draw[dashed] (a) -- (-1,0);
-\draw[dashed] (a') -- (3,0);
-\node[below] at (1,4) {4};
-\draw[-latex,thick,red] (a)--(a');
-\end{tikzpicture}
-\caption{Translação horizontal do triângulo ABC}
-\end{marginfigure}
-Com o mesmo argumento obtemos \(B'=(3+4,1)=(7,1)\) e \(C'=(2+4,-1)=(6,-1)\).
+% \end{itemize}
+% }{1}{1}
+% \end{objectives}
+% \begin{sugestions}{Translação num plano}
+% {
+% Alguns autores (c.f., \citet{poynter2005} defendem a translação como a melhor representação de \textit{vetor livre} e de adição de vetores. Esta é uma das principais atividades desta seção porque ela busca formar esta imagem na memória dos estudantes.
+% }{1}{1}
+% \end{sugestions}
+% \clearmargin
+% \begin{answer}{Translação num plano}
+% {
+% \paragraph{Parte I}
+% \begin{enumerate}
+% \item {} 
+% Como o ponto \(A'\) é a translação horizontal do ponto \(A\) de 4 unidades na direção e sentido do eixo \(x\), temos \(A'=(-1+4,4)=(3,4)\).
+% \begin{marginfigure}[H]
+% \centering
+% \begin{tikzpicture}[scale=.65]
+% \draw[fill=lightgray!30] (-1,4)coordinate(a)--(3,1)coordinate(b)--(2,-1)coordinate(c)--cycle;
+% \draw[xshift=4cm] (-1,4)coordinate(a');
+% \draw[-latex] (-2,0) -- (4,0) node[below right]{$x$};
+% \draw[-latex] (0,-1) -- (0,5) node[left]{$y$};
+% \fill (0,0) circle (0.05) node[below left]{$O$};
+% \fill (a) circle (0.05) node[above left]{$A=(-1,4)$};
+% \fill (a') circle (0.05) node[above]{$A'=(3,4)$};
+% \draw[dashed] (a) -- (-1,0);
+% \draw[dashed] (a') -- (3,0);
+% \node[below] at (1,4) {4};
+% \draw[-latex,thick,red] (a)--(a');
+% \end{tikzpicture}
+% \caption{Translação horizontal do triângulo ABC}
+% \end{marginfigure}
+% Com o mesmo argumento obtemos \(B'=(3+4,1)=(7,1)\) e \(C'=(2+4,-1)=(6,-1)\).
 
-\item {} 
-Qualquer ponto \(P=(a,b)\), quando transladado horizontalmente de 4 unidades na direção e sentido do eixo \(x\) terá sua primeira coordenada aumentada em 4 unidades, portanto, \(P'=(a,b)+(4,0) = (a+4,b)\).
-\end{enumerate}
+% \item {} 
+% Qualquer ponto \(P=(a,b)\), quando transladado horizontalmente de 4 unidades na direção e sentido do eixo \(x\) terá sua primeira coordenada aumentada em 4 unidades, portanto, \(P'=(a,b)+(4,0) = (a+4,b)\).
+% \end{enumerate}
 
-\paragraph{Parte II}
-\begin{enumerate}
-\item {} 
-Como o ponto \(A"\) foi obtido movendo-se o ponto \(A\) duas unidades para baixo, temos \(A"=(-1,4-3)=(-1,1)\).
-\begin{marginfigure}[H]
-\centering
+% \paragraph{Parte II}
+% \begin{enumerate}
+% \item {} 
+% Como o ponto \(A"\) foi obtido movendo-se o ponto \(A\) duas unidades para baixo, temos \(A"=(-1,4-3)=(-1,1)\).
+% \begin{marginfigure}[H]
+% \centering
 
-\begin{tikzpicture}[scale=.65]
-\draw[fill=lightgray!30] (-1,4)coordinate(a)--(3,1)coordinate(b)--(2,-1)coordinate(c)--cycle;
-\draw[yshift=-3cm] (-1,4)coordinate(a');
-\draw[-latex] (-2,0) -- (4,0) node[below right]{$x$};
-\draw[-latex] (0,-1) -- (0,5) node[left]{$y$};
-\fill (0,0) circle (0.05) node[below left]{$O$};
-\fill (a) circle (0.05) node[above left]{$A=(-1,4)$};
-\fill (a') circle (0.05) node[below left]{$A"=(-1,1)$};
-\draw[dashed] (a) -- (0,4);
-\draw[dashed] (a') -- (0,1);
-\node[left] at (-1,2.5) {3};
-\draw[-latex,thick,red] (a)--(a');
-\end{tikzpicture}
-\caption{Translação horizontal do triângulo ABC}
-\end{marginfigure}
-Do mesmo modo obtemos \(B"=(3,1-3)=(3,-2)\) e \(C"=(2,-1-3)=(2,-4)\).
+% \begin{tikzpicture}[scale=.65]
+% \draw[fill=lightgray!30] (-1,4)coordinate(a)--(3,1)coordinate(b)--(2,-1)coordinate(c)--cycle;
+% \draw[yshift=-3cm] (-1,4)coordinate(a');
+% \draw[-latex] (-2,0) -- (4,0) node[below right]{$x$};
+% \draw[-latex] (0,-1) -- (0,5) node[left]{$y$};
+% \fill (0,0) circle (0.05) node[below left]{$O$};
+% \fill (a) circle (0.05) node[above left]{$A=(-1,4)$};
+% \fill (a') circle (0.05) node[below left]{$A"=(-1,1)$};
+% \draw[dashed] (a) -- (0,4);
+% \draw[dashed] (a') -- (0,1);
+% \node[left] at (-1,2.5) {3};
+% \draw[-latex,thick,red] (a)--(a');
+% \end{tikzpicture}
+% \caption{Translação horizontal do triângulo ABC}
+% \end{marginfigure}
+% Do mesmo modo obtemos \(B"=(3,1-3)=(3,-2)\) e \(C"=(2,-1-3)=(2,-4)\).
 
-\item {} 
-Qualquer ponto \(P=(a,b)\), quando transladado -3 unidades na mesma direção e sentido oposto ao do eixo \(y\) terá sua segunda coordenada diminuída de 3 unidades, portanto, \(P"=(a,b)+(0,-3) = (a,b-3)\).
+% \item {} 
+% Qualquer ponto \(P=(a,b)\), quando transladado -3 unidades na mesma direção e sentido oposto ao do eixo \(y\) terá sua segunda coordenada diminuída de 3 unidades, portanto, \(P"=(a,b)+(0,-3) = (a,b-3)\).
 
-\end{enumerate}
-}{1}
-\end{answer}
-\begin{answer}{Translação num plano}
-{
-\paragraph{Parte III}
-\begin{enumerate}
-\item {} 
-Do item a) da Parte I conhecemos as coordenadas de \(A'\), \(B'\) e \(C'\). Do item b) da Parte II, sabemos que a translação vertical de um ponto  de -3 unidades altera a segunda coordenada do ponto em -3, portanto, temos \(D =(3,4-3)=(3,1)\), \(E=(7,1-3)=(7,0)\) e \(F=(6,-1-3)=(6,-4)\).
-\begin{marginfigure}[H]
-\centering
+% \end{enumerate}
+% }{1}
+% \end{answer}
+% \begin{answer}{Translação num plano}
+% {
+% \paragraph{Parte III}
+% \begin{enumerate}
+% \item {} 
+% Do item a) da Parte I conhecemos as coordenadas de \(A'\), \(B'\) e \(C'\). Do item b) da Parte II, sabemos que a translação vertical de um ponto  de -3 unidades altera a segunda coordenada do ponto em -3, portanto, temos \(D =(3,4-3)=(3,1)\), \(E=(7,1-3)=(7,0)\) e \(F=(6,-1-3)=(6,-4)\).
+% \begin{marginfigure}[H]
+% \centering
 
-\begin{tikzpicture}[scale=.65]
-\draw[fill=lightgray!30] (-1,4)coordinate(a)--(3,1)coordinate(b)--(2,-1)coordinate(c)--cycle;
-\draw[fill=lightgray!30,xshift=4cm] (-1,4)coordinate(a')--(3,1)coordinate(b')--(2,-1)coordinate(c')--cycle;
-\draw[fill=lightgray!30,xshift=4cm,yshift=-3cm] (-1,4)coordinate(d)--(3,1)coordinate(e)--(2,-1)coordinate(f)--cycle;
-\draw[-latex] (-2,0) -- (8,0) node[below right]{$x$};
-\draw[-latex] (0,-1) -- (0,5) node[left]{$y$};
-\fill (0,0) circle (0.05) node[below left]{$O$};
-\fill (a) circle (0.05) node[left]{$A$};
-\fill (c) circle (0.05) node[below left]{$C$};
-\fill (a') circle (0.05) node[below left]{$A'$};
-\fill (b') circle (0.05) node[below left]{$B'$};
-\fill (c') circle (0.05) node[below left]{$C'$};
-\fill (d) circle (0.05) node[left]{$D=B$};
-\fill (e) circle (0.05) node[below left]{$E$};
-\fill (f) circle (0.05) node[below left]{$F$};
-\fill (1,2)coordinate(p) circle (0.05) node[below left]{$P$};
-\fill (5,2)coordinate(p') circle (0.05) node[below left]{$P'$};
-\fill (5,-1)coordinate(q) circle (0.05) node[below left]{$Q$};
-\draw[-latex,thick,red] (a')--(d);
-\draw[-latex,thick,red] (b')--(e);
-\draw[-latex,thick,red] (c')--(f);
-\draw[-latex,thick,red] (p')--(q);
-\end{tikzpicture}
-\caption{Composição de translações do triângulo ABC}
-\end{marginfigure}
-\item {} 
-Vejamos: o ponto procurado é \(P"{} + \vec{u}\) que tem as  mesmas coordenadas que \(P\), só que com 4 somado à primeira, então \(P"{} + \vec{u} = (a+4,b-3) = Q\). Ou seja, obtém-se o mesmo ponto se translando \(P\) por \(\vec{u}\) e o resultado por \(\vec{v}\) que transladando \(P\) por \(\vec{v}\) e o resultado por \(\vec{u}\).
+% \begin{tikzpicture}[scale=.65]
+% \draw[fill=lightgray!30] (-1,4)coordinate(a)--(3,1)coordinate(b)--(2,-1)coordinate(c)--cycle;
+% \draw[fill=lightgray!30,xshift=4cm] (-1,4)coordinate(a')--(3,1)coordinate(b')--(2,-1)coordinate(c')--cycle;
+% \draw[fill=lightgray!30,xshift=4cm,yshift=-3cm] (-1,4)coordinate(d)--(3,1)coordinate(e)--(2,-1)coordinate(f)--cycle;
+% \draw[-latex] (-2,0) -- (8,0) node[below right]{$x$};
+% \draw[-latex] (0,-1) -- (0,5) node[left]{$y$};
+% \fill (0,0) circle (0.05) node[below left]{$O$};
+% \fill (a) circle (0.05) node[left]{$A$};
+% \fill (c) circle (0.05) node[below left]{$C$};
+% \fill (a') circle (0.05) node[below left]{$A'$};
+% \fill (b') circle (0.05) node[below left]{$B'$};
+% \fill (c') circle (0.05) node[below left]{$C'$};
+% \fill (d) circle (0.05) node[left]{$D=B$};
+% \fill (e) circle (0.05) node[below left]{$E$};
+% \fill (f) circle (0.05) node[below left]{$F$};
+% \fill (1,2)coordinate(p) circle (0.05) node[below left]{$P$};
+% \fill (5,2)coordinate(p') circle (0.05) node[below left]{$P'$};
+% \fill (5,-1)coordinate(q) circle (0.05) node[below left]{$Q$};
+% \draw[-latex,thick,red] (a')--(d);
+% \draw[-latex,thick,red] (b')--(e);
+% \draw[-latex,thick,red] (c')--(f);
+% \draw[-latex,thick,red] (p')--(q);
+% \end{tikzpicture}
+% \caption{Composição de translações do triângulo ABC}
+% \end{marginfigure}
+% \item {} 
+% Vejamos: o ponto procurado é \(P"{} + \vec{u}\) que tem as  mesmas coordenadas que \(P\), só que com 4 somado à primeira, então \(P"{} + \vec{u} = (a+4,b-3) = Q\). Ou seja, obtém-se o mesmo ponto se translando \(P\) por \(\vec{u}\) e o resultado por \(\vec{v}\) que transladando \(P\) por \(\vec{v}\) e o resultado por \(\vec{u}\).
 
-\item {} 
-O ponto \(Q\) é o resultado da translação de \(P'\) por \(\vec{v}\). Do item b) da Parte I sabemos que \(P' = (a + 4,b)\). Do item b) da Parte II sabemos que as coordenadas da translação de um ponto por \(\vec{v}\) são as coordenadas do ponto com a segunda subtraída de -3, então \(Q = P' + \vec{v} = (a+4,b-3)\).
+% \item {} 
+% O ponto \(Q\) é o resultado da translação de \(P'\) por \(\vec{v}\). Do item b) da Parte I sabemos que \(P' = (a + 4,b)\). Do item b) da Parte II sabemos que as coordenadas da translação de um ponto por \(\vec{v}\) são as coordenadas do ponto com a segunda subtraída de -3, então \(Q = P' + \vec{v} = (a+4,b-3)\).
 
-\item {} 
-O ponto \(Q\) é o resultado da translação de \(P'\) por \(\vec{v}\), assim \(Q = P' + \vec{v}\). Como \(P'\) é o resultado da translação de \(P\) por \(\vec{u}\), temos \(P'=P + \vec{u}\). Substituindo na expressão para \(Q\) obtemos \(Q= (P+\vec{u}) + \vec{v}\).
+% \item {} 
+% O ponto \(Q\) é o resultado da translação de \(P'\) por \(\vec{v}\), assim \(Q = P' + \vec{v}\). Como \(P'\) é o resultado da translação de \(P\) por \(\vec{u}\), temos \(P'=P + \vec{u}\). Substituindo na expressão para \(Q\) obtemos \(Q= (P+\vec{u}) + \vec{v}\).
 
 
-\end{enumerate}
-}{1}
-\end{answer}
-\begin{answer}{Translação num plano - Parte III}
-{
-\begin{enumerate}\setcounter{enumi}{4}
-\item {} 
-Sim, pois o efeito é o mesmo que transladar \(P\) pelo vetor \(\vec{u} + \vec{v} = 4\overrightarrow{OX} - 3 \overrightarrow{OY} = (4,-3)\). Então \(Q=P+(\vec{u}+\vec{v})\). Ou seja, a composição da translação de \(P\) por \(\vec{u}\) e depois por \(\vec{v}\) é a translação de \(P\) pelo vetor \(\vec{u}+\vec{v}\).
+% \end{enumerate}
+% }{1}
+% \end{answer}
+% \begin{answer}{Translação num plano - Parte III}
+% {
+% \begin{enumerate}\setcounter{enumi}{4}
+% \item {} 
+% Sim, pois o efeito é o mesmo que transladar \(P\) pelo vetor \(\vec{u} + \vec{v} = 4\overrightarrow{OX} - 3 \overrightarrow{OY} = (4,-3)\). Então \(Q=P+(\vec{u}+\vec{v})\). Ou seja, a composição da translação de \(P\) por \(\vec{u}\) e depois por \(\vec{v}\) é a translação de \(P\) pelo vetor \(\vec{u}+\vec{v}\).
 
-\begin{marginfigure}[H]
-\centering
+% \begin{marginfigure}[H]
+% \centering
 
-\begin{tikzpicture}[scale=.8]
-\draw[fill=lightgray!30] (-1,4)coordinate(a)--(3,1)coordinate(b)--(2,-1)coordinate(c)--cycle;
-\draw[fill=lightgray!30,xshift=4cm,yshift=-3cm] (-1,4)coordinate(d)--(3,1)coordinate(e)--(2,-1)coordinate(f)--cycle;
-\draw[-latex] (-2,0) -- (8,0) node[below right]{$x$};
-\draw[-latex] (0,-1) -- (0,5) node[left]{$y$};
-\fill (0,0) circle (0.05) node[below left]{$O$};
-\fill (a) circle (0.05) node[left]{$A$};
-\fill (c) circle (0.05) node[below left]{$C$};
-\fill (d) circle (0.05) node[above right]{$D=B$};
-\fill (e) circle (0.05) node[below left]{$E$};
-\fill (f) circle (0.05) node[below left]{$F$};
-\fill (1,2)coordinate(p) circle (0.05) node[below left]{$P$};
-\fill (5,-1)coordinate(q) circle (0.05) node[below left]{$Q$};
-\draw[-latex,thick,red] (a)--(d);
-\draw[-latex,thick,red] (b)--(e);
-\draw[-latex,thick,red] (c)--(f);
-\draw[-latex,thick,red] (p)--(q);
-\end{tikzpicture}
-\caption{Composição de translações do triângulo ABC}
-\end{marginfigure}
-\end{enumerate}
-}{0}
-\end{answer}
-\clearmargin
-\begin{objectives}{Vetor de uma translação}
-{
-Usar translação para concluir que \(\overrightarrow{AB} = (x_B-x_A, y_B-y_A)\) num caso particular.
-}{1}{2}
-\end{objectives}
-\begin{sugestions}{Vetor de uma translação}
-{
-A dificuldade dos estudantes deve permanecer na obtenção das coordenadas. Peça que eles escrevam a expressão vetorial que define uma translação. Veja a definição de translação acima.
-}{1}{2}
-\end{sugestions}
-\begin{answer}{Vetor de uma translação}
-{
-O ponto \(A'\) é uma translação de \(A\) por \(\vec{v}\) se \(A' = A + \vec{v}\). A resposta é sim, basta tomar \(\vec{v} = A' - A\). Teremos \(\vec{v}=\overrightarrow{AA'}\) e \(A'=A + \overrightarrow{AA'}\) em coordenadas
-\begin{equation*}
-\begin{split}\overrightarrow{v} =A'- A = (5,3) - (1,5) = (5-1,3-5) = (4,-2).\end{split}
-\end{equation*}
-Observe o resultado disso na figura.
+% \begin{tikzpicture}[scale=.8]
+% \draw[fill=lightgray!30] (-1,4)coordinate(a)--(3,1)coordinate(b)--(2,-1)coordinate(c)--cycle;
+% \draw[fill=lightgray!30,xshift=4cm,yshift=-3cm] (-1,4)coordinate(d)--(3,1)coordinate(e)--(2,-1)coordinate(f)--cycle;
+% \draw[-latex] (-2,0) -- (8,0) node[below right]{$x$};
+% \draw[-latex] (0,-1) -- (0,5) node[left]{$y$};
+% \fill (0,0) circle (0.05) node[below left]{$O$};
+% \fill (a) circle (0.05) node[left]{$A$};
+% \fill (c) circle (0.05) node[below left]{$C$};
+% \fill (d) circle (0.05) node[above right]{$D=B$};
+% \fill (e) circle (0.05) node[below left]{$E$};
+% \fill (f) circle (0.05) node[below left]{$F$};
+% \fill (1,2)coordinate(p) circle (0.05) node[below left]{$P$};
+% \fill (5,-1)coordinate(q) circle (0.05) node[below left]{$Q$};
+% \draw[-latex,thick,red] (a)--(d);
+% \draw[-latex,thick,red] (b)--(e);
+% \draw[-latex,thick,red] (c)--(f);
+% \draw[-latex,thick,red] (p)--(q);
+% \end{tikzpicture}
+% \caption{Composição de translações do triângulo ABC}
+% \end{marginfigure}
+% \end{enumerate}
+% }{0}
+% \end{answer}
+% \clearmargin
+% \begin{objectives}{Vetor de uma translação}
+% {
+% Usar translação para concluir que \(\overrightarrow{AB} = (x_B-x_A, y_B-y_A)\) num caso particular.
+% }{1}{2}
+% \end{objectives}
+% \begin{sugestions}{Vetor de uma translação}
+% {
+% A dificuldade dos estudantes deve permanecer na obtenção das coordenadas. Peça que eles escrevam a expressão vetorial que define uma translação. Veja a definição de translação acima.
+% }{1}{2}
+% \end{sugestions}
+% \begin{answer}{Vetor de uma translação}
+% {
+% O ponto \(A'\) é uma translação de \(A\) por \(\vec{v}\) se \(A' = A + \vec{v}\). A resposta é sim, basta tomar \(\vec{v} = A' - A\). Teremos \(\vec{v}=\overrightarrow{AA'}\) e \(A'=A + \overrightarrow{AA'}\) em coordenadas
+% \begin{equation*}
+% \begin{split}\overrightarrow{v} =A'- A = (5,3) - (1,5) = (5-1,3-5) = (4,-2).\end{split}
+% \end{equation*}
+% Observe o resultado disso na figura.
 
-\begin{marginfigure}[H]
-\centering
-\capstart
+% \begin{marginfigure}[H]
+% \centering
+% \capstart
 
-\noindent\sphinxincludegraphics[width=200bp]{{coordenadas-vetor}.png}
-\caption{Trocar B por A’ na figura}\label{\detokenize{GE101-1A:id6}}\end{marginfigure}
-}{1}
-\end{answer}
+% \noindent\sphinxincludegraphics[width=200bp]{{coordenadas-vetor}.png}
+% \caption{Trocar B por A’ na figura}\label{\detokenize{GE101-1A:id6}}\end{marginfigure}
+% }{1}
+% \end{answer}
 % \begin{answer}{}
 % {
 % Os vetores \(AD\) e \(BC\) são iguais.
@@ -4269,247 +4210,247 @@ Em contraposição, se o tenista larga a mesma bolinha sobre uma mesa horizontal
 \caption{Força resultante \textbf{diferente de zero} na bola da esquerda e força resultante \textbf{igual à zero} na bola da direita.}\label{\detokenize{GE101-1B:id1}}\end{figure}
 \end{example}
 
-\clearpage
-\def\currentcolor{session2}
-\begin{objectives}{Puxando o barco}
-{
-\begin{itemize}
-\item {} 
-representar esquema de forças a partir de uma situação real.
+% \clearpage
+% \def\currentcolor{session2}
+% \begin{objectives}{Puxando o barco}
+% {
+% \begin{itemize}
+% \item {} 
+% representar esquema de forças a partir de uma situação real.
 
-\item {} 
-expressar a resultante de duas forças geometricamente.
+% \item {} 
+% expressar a resultante de duas forças geometricamente.
 
-\item {} 
-reconhecer que a força resultante é maior quanto menor for o ângulo entre as forças.
+% \item {} 
+% reconhecer que a força resultante é maior quanto menor for o ângulo entre as forças.
 
-\end{itemize}
-}{1}{2}
-\end{objectives}
-\begin{sugestions}{Puxando o barco}
-{
-Esteja atento ao esquema utilizado pelos estudantes para representar as forças e sua resultante. É um erro comum fechar o triângulo para se obter a resultante ao invés de formar um paralelogramo, como é típico no uso de forças. Espera-se que no item c) os estudantes calculem a força em resultante em cada uma das situações para argumentarem, se eles não fizerem isso você pode incrementar a questão perguntando diretamente: \textit{"Digamos que nos dois esquemas as forças realizadas pelos homens tenham módulos iguais a F. Qual é o valor da força resultante em cada um dos casos? Expresse sua resposta em termos de F.}
-}{1}{2}
-\end{sugestions}
-\begin{answer}{Puxando o barco }
-{
-\begin{enumerate}
-\item {} 
-\adjustbox{valign=t}
-{
-\begin{tikzpicture}
-\fill (0,0) circle (.12);
-\draw[-latex,thick, blue,xshift=-.05cm,yshift=-.05cm] (0,0)--(-30:1);
-\draw[-latex,thick, blue,xshift=.05cm,yshift=.05cm] (0,0)-- (-30:1);
-\node[above] at (-30:1) {$\vec{F_1}$};
-\node[below] at (-30:1) {$\vec{F_2}$};
-\node [below] at (1,-1.75) {(a)};
-\begin{scope}[xshift=5cm]
-\fill (0,0) circle (.12);
-\draw[-latex,thick, blue] (0,0)--(0:1);
-\draw[-latex,thick, blue] (0,0)-- (270:1);
-\draw (0,0) rectangle (.2,-.2);
-\node[above] at (0:1) {$\vec{F_1}$};
-\node[below] at (270:1) {$\vec{F_2}$};
-\node [below] at (1,-1.75) {(b)};
-\end{scope}
-\end{tikzpicture}
-}
+% \end{itemize}
+% }{1}{2}
+% \end{objectives}
+% \begin{sugestions}{Puxando o barco}
+% {
+% Esteja atento ao esquema utilizado pelos estudantes para representar as forças e sua resultante. É um erro comum fechar o triângulo para se obter a resultante ao invés de formar um paralelogramo, como é típico no uso de forças. Espera-se que no item c) os estudantes calculem a força em resultante em cada uma das situações para argumentarem, se eles não fizerem isso você pode incrementar a questão perguntando diretamente: \textit{"Digamos que nos dois esquemas as forças realizadas pelos homens tenham módulos iguais a F. Qual é o valor da força resultante em cada um dos casos? Expresse sua resposta em termos de F.}
+% }{1}{2}
+% \end{sugestions}
+% \begin{answer}{Puxando o barco }
+% {
+% \begin{enumerate}
+% \item {} 
+% \adjustbox{valign=t}
+% {
+% \begin{tikzpicture}
+% \fill (0,0) circle (.12);
+% \draw[-latex,thick, blue,xshift=-.05cm,yshift=-.05cm] (0,0)--(-30:1);
+% \draw[-latex,thick, blue,xshift=.05cm,yshift=.05cm] (0,0)-- (-30:1);
+% \node[above] at (-30:1) {$\vec{F_1}$};
+% \node[below] at (-30:1) {$\vec{F_2}$};
+% \node [below] at (1,-1.75) {(a)};
+% \begin{scope}[xshift=5cm]
+% \fill (0,0) circle (.12);
+% \draw[-latex,thick, blue] (0,0)--(0:1);
+% \draw[-latex,thick, blue] (0,0)-- (270:1);
+% \draw (0,0) rectangle (.2,-.2);
+% \node[above] at (0:1) {$\vec{F_1}$};
+% \node[below] at (270:1) {$\vec{F_2}$};
+% \node [below] at (1,-1.75) {(b)};
+% \end{scope}
+% \end{tikzpicture}
+% }
 
-\item {} 
-\adjustbox{valign=t}
-{
-\begin{tikzpicture}
-\fill (0,0) circle (.12);
-\draw[-latex,thick, blue,xshift=-.05cm,yshift=-.05cm] (0,0)--(-30:1);
-\draw[-latex,thick, blue,xshift=.05cm,yshift=.05cm] (0,0)-- (-30:1);
-\draw[-latex,very thick, red] (0,0)-- (-30:2);
-\node[above] at (-30:1) {$\vec{F_1}$};
-\node[below] at (-30:1) {$\vec{F_2}$};
-\node[below right] at (-30:2) {$\vec{F_R} = \vec{F_1} + \vec{F_2}$};
-\node [below] at (1.5,-1.75) {(a)};
-\begin{scope}[xshift=7cm]
-\fill (0,0) circle (.12);
-\draw[-latex,thick, blue] (0,0)--(0:1);
-\draw[-latex,thick, blue] (0,0)-- (270:1);
-\draw[-latex,very thick, red] (0,0)-- (-45:1.414);
-\node[above] at (0:1) {$\vec{F_1}$};
-\node[below] at (270:1) {$\vec{F_2}$};
-\node[below right] at (-45:1.414) {$\vec{F_R} = \vec{F_1} + \vec{F_2}$};
-\node [below] at (1.5,-1.75) {(b)};
-\end{scope}
-\end{tikzpicture}
-}
+% \item {} 
+% \adjustbox{valign=t}
+% {
+% \begin{tikzpicture}
+% \fill (0,0) circle (.12);
+% \draw[-latex,thick, blue,xshift=-.05cm,yshift=-.05cm] (0,0)--(-30:1);
+% \draw[-latex,thick, blue,xshift=.05cm,yshift=.05cm] (0,0)-- (-30:1);
+% \draw[-latex,very thick, red] (0,0)-- (-30:2);
+% \node[above] at (-30:1) {$\vec{F_1}$};
+% \node[below] at (-30:1) {$\vec{F_2}$};
+% \node[below right] at (-30:2) {$\vec{F_R} = \vec{F_1} + \vec{F_2}$};
+% \node [below] at (1.5,-1.75) {(a)};
+% \begin{scope}[xshift=7cm]
+% \fill (0,0) circle (.12);
+% \draw[-latex,thick, blue] (0,0)--(0:1);
+% \draw[-latex,thick, blue] (0,0)-- (270:1);
+% \draw[-latex,very thick, red] (0,0)-- (-45:1.414);
+% \node[above] at (0:1) {$\vec{F_1}$};
+% \node[below] at (270:1) {$\vec{F_2}$};
+% \node[below right] at (-45:1.414) {$\vec{F_R} = \vec{F_1} + \vec{F_2}$};
+% \node [below] at (1.5,-1.75) {(b)};
+% \end{scope}
+% \end{tikzpicture}
+% }
 
-\item {} 
-Com a mesma intensidade de força \(|\vec{F}|\), na situação (a), obtemos resultante \(2\vec{F}\) na direção e sentido do movimento enquanto que na situação (b) obtemos \(\sqrt{2}\vec{F}\). Como \(2 > \sqrt{2}\), o esforço é mais bem aproveitado em (a).
+% \item {} 
+% Com a mesma intensidade de força \(|\vec{F}|\), na situação (a), obtemos resultante \(2\vec{F}\) na direção e sentido do movimento enquanto que na situação (b) obtemos \(\sqrt{2}\vec{F}\). Como \(2 > \sqrt{2}\), o esforço é mais bem aproveitado em (a).
 
-\end{enumerate}
-}{1}
-\end{answer}
-\clearmargin
-\begin{objectives}{Grampos de escalada}
-{
-\begin{itemize}
-\item {} 
-Decompor um vetor como soma dos vetores coordenados,
+% \end{enumerate}
+% }{1}
+% \end{answer}
+% \clearmargin
+% \begin{objectives}{Grampos de escalada}
+% {
+% \begin{itemize}
+% \item {} 
+% Decompor um vetor como soma dos vetores coordenados,
 
-\item {} 
-representar forças através de vetores,
+% \item {} 
+% representar forças através de vetores,
 
-\item {} 
-atribuir a permanência de um objeto numa mesma posição ao cancelamento das forças agindo nele.
+% \item {} 
+% atribuir a permanência de um objeto numa mesma posição ao cancelamento das forças agindo nele.
 
-\end{itemize}
-}{1}{1}
-\end{objectives}
-\begin{sugestions}{Grampos de escalada}
-{
-Oriente os estudantes a fazer uma bolinha representando o nó e, então desenhar os vetores indicando força sobre ela. Fique atento que alguns estudantes devem representar as forças apontando para a bolinha e não a partir dela. Na análise, recomenda-se promover uma discussão entre os estudantes. Para a solução do exercício pode-se desprezar o peso dos equipamentos. No item \titem{a)}, não é esperado que os estudantes levem em consideração as intensidades das forças que estão acima do nó. Mas este é o questionamento interessante da questão que será discutido no item \titem{c)}.
-}{1}{1}
-\end{sugestions}
-\begin{answer}{Grampos de escalada}
-{
-\begin{enumerate}
-\item {} 
+% \end{itemize}
+% }{1}{1}
+% \end{objectives}
+% \begin{sugestions}{Grampos de escalada}
+% {
+% Oriente os estudantes a fazer uma bolinha representando o nó e, então desenhar os vetores indicando força sobre ela. Fique atento que alguns estudantes devem representar as forças apontando para a bolinha e não a partir dela. Na análise, recomenda-se promover uma discussão entre os estudantes. Para a solução do exercício pode-se desprezar o peso dos equipamentos. No item \titem{a)}, não é esperado que os estudantes levem em consideração as intensidades das forças que estão acima do nó. Mas este é o questionamento interessante da questão que será discutido no item \titem{c)}.
+% }{1}{1}
+% \end{sugestions}
+% \begin{answer}{Grampos de escalada}
+% {
+% \begin{enumerate}
+% \item {} 
 
-\adjustbox{valign=t}
-{
-\begin{tikzpicture}
-\node at (0,-1.75) {(I)};
-\fill (0,0) circle (.08);
-\node[above] at (160:1.462) {$\vec{F_1}$};
-\node[above] at (20:1.462) {$\vec{F_2}$};
-\node[below] at (270:1) {$\vec{P}$};
-\draw[-latex,very thick, blue] (0,0) -- (160:1.462);
-\draw[-latex,very thick, blue] (0,0) -- (20:1.462);
-\draw[-latex,very thick, blue] (0,0) -- (270:1);
-\begin{scope}[xshift=4cm]
-\node at (0,-1.75) {(I)};
-\fill (0,0) circle (.08);
-\node[above] at (160:.707) {$\vec{F_1}$};
-\node[above] at (20:.707) {$\vec{F_2}$};
-\node[below] at (270:1) {$\vec{P}$};
-\draw[-latex,very thick, blue] (0,0) -- (135:.707);
-\draw[-latex,very thick, blue] (0,0) -- (45:.707);
-\draw[-latex,very thick, blue] (0,0) -- (270:1);
-\begin{scope}[xshift=4cm]
-\node at (0,-1.75) {(III)};
-\fill (0,0) circle (.08);
-\node[above] at (160:.577) {$\vec{F_1}$};
-\node[above] at (20:.577) {$\vec{F_2}$};
-\node[below] at (270:1) {$\vec{P}$};
-\draw[-latex,very thick, blue] (0,0) -- (120:.577);
-\draw[-latex,very thick, blue] (0,0) -- (60:.577);
-\draw[-latex,very thick, blue] (0,0) -- (270:1);
-\end{scope}
-\end{scope}
-\end{tikzpicture}
-}
+% \adjustbox{valign=t}
+% {
+% \begin{tikzpicture}
+% \node at (0,-1.75) {(I)};
+% \fill (0,0) circle (.08);
+% \node[above] at (160:1.462) {$\vec{F_1}$};
+% \node[above] at (20:1.462) {$\vec{F_2}$};
+% \node[below] at (270:1) {$\vec{P}$};
+% \draw[-latex,very thick, blue] (0,0) -- (160:1.462);
+% \draw[-latex,very thick, blue] (0,0) -- (20:1.462);
+% \draw[-latex,very thick, blue] (0,0) -- (270:1);
+% \begin{scope}[xshift=4cm]
+% \node at (0,-1.75) {(I)};
+% \fill (0,0) circle (.08);
+% \node[above] at (160:.707) {$\vec{F_1}$};
+% \node[above] at (20:.707) {$\vec{F_2}$};
+% \node[below] at (270:1) {$\vec{P}$};
+% \draw[-latex,very thick, blue] (0,0) -- (135:.707);
+% \draw[-latex,very thick, blue] (0,0) -- (45:.707);
+% \draw[-latex,very thick, blue] (0,0) -- (270:1);
+% \begin{scope}[xshift=4cm]
+% \node at (0,-1.75) {(III)};
+% \fill (0,0) circle (.08);
+% \node[above] at (160:.577) {$\vec{F_1}$};
+% \node[above] at (20:.577) {$\vec{F_2}$};
+% \node[below] at (270:1) {$\vec{P}$};
+% \draw[-latex,very thick, blue] (0,0) -- (120:.577);
+% \draw[-latex,very thick, blue] (0,0) -- (60:.577);
+% \draw[-latex,very thick, blue] (0,0) -- (270:1);
+% \end{scope}
+% \end{scope}
+% \end{tikzpicture}
+% }
 
-\item {} 
-Como o escalador está parado, a força resultante é zero pela Primeira Lei de Newton.
+% \item {} 
+% Como o escalador está parado, a força resultante é zero pela Primeira Lei de Newton.
 
-\item {} 
-A tensão na fita abaixo do nó é sempre constante igual ao peso do escalador, digamos \(\vec{P}\). Como a força resultante é zero, a soma das componentes verticais acima do nó é constante igual a \(-\vec{P}\). Assim quanto mais distantes estiverem os grampos, maior será a componente horizontal da tensão nas fitas, logo maior será a tensão nas fitas acima do nó.
+% \item {} 
+% A tensão na fita abaixo do nó é sempre constante igual ao peso do escalador, digamos \(\vec{P}\). Como a força resultante é zero, a soma das componentes verticais acima do nó é constante igual a \(-\vec{P}\). Assim quanto mais distantes estiverem os grampos, maior será a componente horizontal da tensão nas fitas, logo maior será a tensão nas fitas acima do nó.
 
-\end{enumerate}
-}{1}
-\end{answer}
-\clearmargin
-\begin{objectives}{Plano inclinado}
-{
-\begin{itemize}
-\item {} 
-decompor um vetor como soma dos vetores coordenados,
+% \end{enumerate}
+% }{1}
+% \end{answer}
+% \clearmargin
+% \begin{objectives}{Plano inclinado}
+% {
+% \begin{itemize}
+% \item {} 
+% decompor um vetor como soma dos vetores coordenados,
 
-\item {} 
-representar forças através de vetores,
+% \item {} 
+% representar forças através de vetores,
 
-\item {} 
-atribuir a permanência de um objeto numa mesma posição ao cancelamento das forças agindo nele.
+% \item {} 
+% atribuir a permanência de um objeto numa mesma posição ao cancelamento das forças agindo nele.
 
-\end{itemize}
-}{1}{2}
-\end{objectives}
-\begin{sugestions}{Plano inclinado}
-{
-Esteja atento ao esquema utilizado pelos estudantes para representar as forças e sua resultante. Alguns erros comuns são:
-\begin{itemize}
-\item {} 
-não representar as forças como se estivessem aplicadas a um mesmo ponto,
+% \end{itemize}
+% }{1}{2}
+% \end{objectives}
+% \begin{sugestions}{Plano inclinado}
+% {
+% Esteja atento ao esquema utilizado pelos estudantes para representar as forças e sua resultante. Alguns erros comuns são:
+% \begin{itemize}
+% \item {} 
+% não representar as forças como se estivessem aplicadas a um mesmo ponto,
 
-\item {} 
-indicar forças apontando para o ponto que representa o corpo e não com origem neste ponto,
+% \item {} 
+% indicar forças apontando para o ponto que representa o corpo e não com origem neste ponto,
 
-\item {} 
-fechar o triângulo para obter a resultante ao invés de formar um paralelogramo.
+% \item {} 
+% fechar o triângulo para obter a resultante ao invés de formar um paralelogramo.
 
-\end{itemize}
-}{1}{2}
-\end{sugestions}
-\begin{answer}{Plano inclinado}
-{
-\begin{enumerate}
-\item {} 
-Como o bloco não se move, a resultante das forças que agem sobre ele é zero pela Primeira Lei de Newton.
+% \end{itemize}
+% }{1}{2}
+% \end{sugestions}
+% \begin{answer}{Plano inclinado}
+% {
+% \begin{enumerate}
+% \item {} 
+% Como o bloco não se move, a resultante das forças que agem sobre ele é zero pela Primeira Lei de Newton.
 
-\item {} 
-\adjustbox{valign=t}
-{
-\begin{tikzpicture}
-\begin{scope}[rotate=-45]
-\draw[fill=lightgray!30] (-1,-.5)--(1,-.5)--(1,.5)--(-1,.5)--cycle;
-\draw[ultra thick] (-2,-.5) -- (4.5,-.5)--(0,-5);
-\node at (3.8,-.9) {$45^{\circ}$};
-\fill (0,0) circle (.1) node[left]{$O$};
-\draw[-latex] (-2,0)coordinate(xm)--(4,0) node[above]{$x$};
-\draw[-latex] (0,-3)--(0,2) node[above]{$y$};
-\draw[-latex, very thick, red] (0,0) -- (-45:2) node[below, black]{$\vec{P}$};
-\draw[-latex, thick, blue] (0,0) -- (0,-{2/1.414}) node[below, black]{$\vec{P_y}$};
-\draw[-latex, thick, blue] (0,0) -- ({2/1.414},0) node[below, black]{$\vec{P_x}$};
-\draw[dashed] (0,-{2/1.414})--(-45:2);
-\draw[dashed] ({2/1.414},0)--(-45:2);
-\end{scope}
-\end{tikzpicture}
-}
-\end{enumerate}
-}{1}
-\end{answer}
+% \item {} 
+% \adjustbox{valign=t}
+% {
+% \begin{tikzpicture}
+% \begin{scope}[rotate=-45]
+% \draw[fill=lightgray!30] (-1,-.5)--(1,-.5)--(1,.5)--(-1,.5)--cycle;
+% \draw[ultra thick] (-2,-.5) -- (4.5,-.5)--(0,-5);
+% \node at (3.8,-.9) {$45^{\circ}$};
+% \fill (0,0) circle (.1) node[left]{$O$};
+% \draw[-latex] (-2,0)coordinate(xm)--(4,0) node[above]{$x$};
+% \draw[-latex] (0,-3)--(0,2) node[above]{$y$};
+% \draw[-latex, very thick, red] (0,0) -- (-45:2) node[below, black]{$\vec{P}$};
+% \draw[-latex, thick, blue] (0,0) -- (0,-{2/1.414}) node[below, black]{$\vec{P_y}$};
+% \draw[-latex, thick, blue] (0,0) -- ({2/1.414},0) node[below, black]{$\vec{P_x}$};
+% \draw[dashed] (0,-{2/1.414})--(-45:2);
+% \draw[dashed] ({2/1.414},0)--(-45:2);
+% \end{scope}
+% \end{tikzpicture}
+% }
+% \end{enumerate}
+% }{1}
+% \end{answer}
 
-\begin{answer}{Plano inclinado}
-{
-\begin{enumerate}\setcounter{enumi}{2}
-\item {} 
-Como \(\vec{P}\) tem direção vertical e \(\vec{P_x}\) é paralelo à rampa, o ângulo entre \(\vec{P}\) e \(\vec{P_x}\) é \(45^{\circ}\).
-
-
-\begin{figure}[H]
-\centering
-
-\begin{tikzpicture}
-\begin{scope}[rotate=-45]
-\fill (0,0) circle (.1) node[left]{$O$};
-\draw[-latex, very thick, red] (0,0) -- (-45:2) node[below, black]{$\vec{P}$};
-\draw[-latex, thick, blue] (0,0) -- (0,-{2/1.414}) node[below, black]{$\vec{P_y}$};
-\draw[-latex, thick, blue] (0,0) -- ({2/1.414},0) node[below, black]{$\vec{P_x}$};
-\draw[dashed] (0,-{2/1.414})--(-45:2);
-\draw[dashed] ({2/1.414},0)--(-45:2);
-\end{scope}
-\end{tikzpicture}
-\end{figure}
+% \begin{answer}{Plano inclinado}
+% {
+% \begin{enumerate}\setcounter{enumi}{2}
+% \item {} 
+% Como \(\vec{P}\) tem direção vertical e \(\vec{P_x}\) é paralelo à rampa, o ângulo entre \(\vec{P}\) e \(\vec{P_x}\) é \(45^{\circ}\).
 
 
-Assim, \(|\vec{P}|\) é a diagonal de um quadrado de lados \(|\vec{P_x}| = |\vec{P_y}|\). Portanto, se \(|\vec{P}| = 10N\), então \(|\vec{P_x}|^2 + |\vec{P_y}|^2 = |\vec{P}|^2\) pelo Teorema de Pitágoras, logo \(|\vec{P_x}| = |\vec{P_y}| = 5\sqrt{2}\).
+% \begin{figure}[H]
+% \centering
 
-\item {} 
-Conforme informado no texto, a força normal é sempre perpendicular à superfície de contato. Como não há movimento na direção do eixo \(y\), a resultante nesta direção deve ser zero, portanto, \(|\vec{N}|=|\vec{P_y}|=5\sqrt{2}\).
+% \begin{tikzpicture}
+% \begin{scope}[rotate=-45]
+% \fill (0,0) circle (.1) node[left]{$O$};
+% \draw[-latex, very thick, red] (0,0) -- (-45:2) node[below, black]{$\vec{P}$};
+% \draw[-latex, thick, blue] (0,0) -- (0,-{2/1.414}) node[below, black]{$\vec{P_y}$};
+% \draw[-latex, thick, blue] (0,0) -- ({2/1.414},0) node[below, black]{$\vec{P_x}$};
+% \draw[dashed] (0,-{2/1.414})--(-45:2);
+% \draw[dashed] ({2/1.414},0)--(-45:2);
+% \end{scope}
+% \end{tikzpicture}
+% \end{figure}
 
-\item {} 
-Como a força resultante é zero, existe uma força de resistência igual a \(-\vec{P_x}\). Sem ela, o bloco estaria se movendo de acordo com o Princípio da Inércia.
-\end{enumerate}
-}{0}
-\end{answer}
+
+% Assim, \(|\vec{P}|\) é a diagonal de um quadrado de lados \(|\vec{P_x}| = |\vec{P_y}|\). Portanto, se \(|\vec{P}| = 10N\), então \(|\vec{P_x}|^2 + |\vec{P_y}|^2 = |\vec{P}|^2\) pelo Teorema de Pitágoras, logo \(|\vec{P_x}| = |\vec{P_y}| = 5\sqrt{2}\).
+
+% \item {} 
+% Conforme informado no texto, a força normal é sempre perpendicular à superfície de contato. Como não há movimento na direção do eixo \(y\), a resultante nesta direção deve ser zero, portanto, \(|\vec{N}|=|\vec{P_y}|=5\sqrt{2}\).
+
+% \item {} 
+% Como a força resultante é zero, existe uma força de resistência igual a \(-\vec{P_x}\). Sem ela, o bloco estaria se movendo de acordo com o Princípio da Inércia.
+% \end{enumerate}
+% }{0}
+% \end{answer}
 
 \practice{ }
 \label{\detokenize{GE101-1B:praticando}}\begin{task}{ puxando o barco}
@@ -4614,7 +4555,7 @@ Discuta a variação na tensão nas três pontas da fita em cada uma das situaç
 
 
 A figura esboça um plano inclinado com ângulo de \(45^{\circ}\) e um bloco apoiado sobre ele. Um sistema de coordenadas foi escolhido com origem no centro \(O\) do bloco. A força peso está representada a partir de \(O\). Suponha que este bloco permanece parado.
-\begin{figure}[H]\centering\begin{tikzpicture}
+\begin{figure}[H]\centering\begin{tikzpicture}[scale=.9]
 \begin{scope}[rotate=-45]
 \draw[fill=lightgray!30] (-1,-.5)--(1,-.5)--(1,.5)--(-1,.5)--cycle;
 \draw[ultra thick] (-2,-.5) -- (4.5,-.5)--(0,-5);
@@ -4661,158 +4602,158 @@ Isto é, a aceleração média naquele intervalo de tempo é a variação da vel
 A unidade de aceleração neste caso é \(\text{m}/\text{s}^2\) (metros por segundo ao quadrado). Isto significa que a velocidade varia \(|\vec{a}|~\text{m}/\text{s}\) a cada segundo na direção e sentido do vetor \(\vec{a}\).
 \clearpage
 
-\begin{objectives}{Corrida de vetores}
-{
-\begin{itemize}
-\item {} 
-Consolidar as definições de velocidade e aceleração média.
+% \begin{objectives}{Corrida de vetores}
+% {
+% \begin{itemize}
+% \item {} 
+% Consolidar as definições de velocidade e aceleração média.
 
-\item {} 
-Usar vetores de modo apropriado para representar situações físicas que envolvem velocidade e aceleração.
+% \item {} 
+% Usar vetores de modo apropriado para representar situações físicas que envolvem velocidade e aceleração.
 
-\end{itemize}
-}{1}{1}
-\end{objectives}
-\marginpar{\vspace{-2em}}
-\begin{sugestions}{Corrida de vetores}
-{
-Aproximar velocidade instatânea por velocidades médias é algo bastante razoável na física. Na verdade esta é a velocidade que conseguimos, de fato, calcular.
+% \end{itemize}
+% }{1}{1}
+% \end{objectives}
+% \marginpar{\vspace{-2em}}
+% \begin{sugestions}{Corrida de vetores}
+% {
+% Aproximar velocidade instatânea por velocidades médias é algo bastante razoável na física. Na verdade esta é a velocidade que conseguimos, de fato, calcular.
 
-Caso todos os estudantes tenham \textit{smartphones}, recomendamos que os encorage a jogar um pouco a corrida de vetores neste aplicativo disponível para \href{https://play.google.com/store/apps/details?id=zielanski.com.vectorrace\&hl=pt}{Android}.
+% Caso todos os estudantes tenham \textit{smartphones}, recomendamos que os encorage a jogar um pouco a corrida de vetores neste aplicativo disponível para \href{https://play.google.com/store/apps/details?id=zielanski.com.vectorrace\&hl=pt}{Android}.
 
-No aplicativo os estudantes podem jogar em dupla via \textit{bluetooth}.
-Jogar o jogo deve ajudar a identificar os trechos de aceleração e desaceleração na figura.
-Se dispuser de computador com internet e projetor de multimídia, sugerimos que mostre para seus estudantes o jogo \href{http://www.harmmade.com/vectorracer/\#interlagos}{Corrida de Vetores}.
+% No aplicativo os estudantes podem jogar em dupla via \textit{bluetooth}.
+% Jogar o jogo deve ajudar a identificar os trechos de aceleração e desaceleração na figura.
+% Se dispuser de computador com internet e projetor de multimídia, sugerimos que mostre para seus estudantes o jogo \href{http://www.harmmade.com/vectorracer/\#interlagos}{Corrida de Vetores}.
 
-Neste jogo pode-se introduzir a linguagem de vetores, de inércia, deslocamento, velocidade e aceleração, sempre do ponto de vista vetoria.
-No artigo \citep{oliveira2009}, de uma única página, você encontra uma apresentação deste jogo de mais de 50 anos.
-Este é um \href{http://www.sbfisica.org.br/fne/Vol10/Num1/a08.pdf}{link para o artigo}.
+% Neste jogo pode-se introduzir a linguagem de vetores, de inércia, deslocamento, velocidade e aceleração, sempre do ponto de vista vetoria.
+% No artigo \citep{oliveira2009}, de uma única página, você encontra uma apresentação deste jogo de mais de 50 anos.
+% Este é um \href{http://www.sbfisica.org.br/fne/Vol10/Num1/a08.pdf}{link para o artigo}.
 
-Uma observação interessante é que o tempo mínimo gasto para uma volta completa na pista de Interlagos foi de 1 minuto, 10 segundos e 23 milésimos de segundo em 2014 por Nico Rosberg, em sua Mercedes V6 Turbo (informação de outubro de 2017).
+% Uma observação interessante é que o tempo mínimo gasto para uma volta completa na pista de Interlagos foi de 1 minuto, 10 segundos e 23 milésimos de segundo em 2014 por Nico Rosberg, em sua Mercedes V6 Turbo (informação de outubro de 2017).
 
-Na situação fictícia desta atividade, a pista teria sido percorrida em 75 segundos.
-}{1}{1}
-\end{sugestions}
+% Na situação fictícia desta atividade, a pista teria sido percorrida em 75 segundos.
+% }{1}{1}
+% \end{sugestions}
 
-\begin{answer}{Corrida de Vetores}
-{
-\paragraph{Parte I}
+% \begin{answer}{Corrida de Vetores}
+% {
+% \paragraph{Parte I}
 
-\begin{enumerate}
-\item {} 
-Os deslocamentos foram iguais a \(\vec{u} = (1,1)\) nos intervalos com tempos \([0,1]\), \([3,4]\), \([4,5]\) e \([5,6]\). Nos intervalos \([1,2]\) e \([2,3]\) os deslocamentos foram ambos iguais a \(\vec{u} = (2,2)\).
+% \begin{enumerate}
+% \item {} 
+% Os deslocamentos foram iguais a \(\vec{u} = (1,1)\) nos intervalos com tempos \([0,1]\), \([3,4]\), \([4,5]\) e \([5,6]\). Nos intervalos \([1,2]\) e \([2,3]\) os deslocamentos foram ambos iguais a \(\vec{u} = (2,2)\).
 
-\item {} 
-As velocidades médias coincidem com os deslocamentos porque os intervalos considerados são todos de 1 segundo. Assim as velocidades médias são iguais nos mesmos intervalos em que os deslocamentos são iguais.
+% \item {} 
+% As velocidades médias coincidem com os deslocamentos porque os intervalos considerados são todos de 1 segundo. Assim as velocidades médias são iguais nos mesmos intervalos em que os deslocamentos são iguais.
 
-\item {} 
-Os módulos das velocidades são na ordem \(\sqrt{2}\), \(2\sqrt{2}\), \(2\sqrt{2}\), \(\sqrt{2}\), \(\sqrt{2}\), \(\sqrt{2}\) e \(\sqrt{2}\) unidades de comprimento do lado de cada quadradinho. Portanto, apenas no intervalo \([3,4]\) a velcidade é menor que no intervalo anterior.
+% \item {} 
+% Os módulos das velocidades são na ordem \(\sqrt{2}\), \(2\sqrt{2}\), \(2\sqrt{2}\), \(\sqrt{2}\), \(\sqrt{2}\), \(\sqrt{2}\) e \(\sqrt{2}\) unidades de comprimento do lado de cada quadradinho. Portanto, apenas no intervalo \([3,4]\) a velcidade é menor que no intervalo anterior.
 
-\item {} 
-No intervalo \([1,2]\) a velocidade média foi maior que no segundo anterior.
+% \item {} 
+% No intervalo \([1,2]\) a velocidade média foi maior que no segundo anterior.
 
-\end{enumerate}
-}{0}
-\end{answer}
-\clearmargin
+% \end{enumerate}
+% }{0}
+% \end{answer}
+% \clearmargin
 
-\begin{answer}{Corrida de Vetores}
-{
+% \begin{answer}{Corrida de Vetores}
+% {
 
-\paragraph{Parte II}
+% \paragraph{Parte II}
 
-\begin{enumerate}
-\item 
-Como os intervalos de tempo têm todos comprimento 1 segundo, a velocidade média neste intervalos coincidem com os deslocamentos nos respectivos intervalos.
+% \begin{enumerate}
+% \item 
+% Como os intervalos de tempo têm todos comprimento 1 segundo, a velocidade média neste intervalos coincidem com os deslocamentos nos respectivos intervalos.
 
-\begin{tikzpicture}
-\tikzstyle{vetor}=[->,>=latex]
-\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only, label={}]
-\definecolor{destacado}{RGB}{183,13,40} %avermelhado
-\definecolor{atento}{RGB}{0,94,176} %azul forte
-\begin{scope}[scale=.5]
-\draw[step=1.0,gray,thin] (-0.05,-0.05) grid (8.05,8.05);
-\node[ponto, color=destacado] (o) at (0,0) {};
-\foreach \n in {1,3,5,6,7,8}{
-\node[ponto, color=atento] (t\n) at (\n,\n) {};};
-\node[right] at (o) {$t=0$ s};
-\node[right] at (t1) {$t=1$ s};
-\node[right] at (t3) {$t=2$ s};
-\node[right] at (t5) {$t=3$ s};
-\node[right] at (t6) {$t=4$ s};
-\node[right] at (t7) {$t=5$ s};
-\node[right] at (t8) {$t=6$ s};
-\draw[vetor, color=atento] (o)--(t1);
-\draw[vetor, color=atento] (t1)--(t3);
-\draw[vetor, color=atento] (t3)--(t5);
-\draw[vetor, color=atento] (t5)--(t6);
-\draw[vetor, color=atento] (t6)--(t7);
-\draw[vetor, color=atento] (t7)--(t8);
-\end{scope}
-\end{tikzpicture}
+% \begin{tikzpicture}
+% \tikzstyle{vetor}=[->,>=latex]
+% \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only, label={}]
+% \definecolor{destacado}{RGB}{183,13,40} %avermelhado
+% \definecolor{atento}{RGB}{0,94,176} %azul forte
+% \begin{scope}[scale=.5]
+% \draw[step=1.0,gray,thin] (-0.05,-0.05) grid (8.05,8.05);
+% \node[ponto, color=destacado] (o) at (0,0) {};
+% \foreach \n in {1,3,5,6,7,8}{
+% \node[ponto, color=atento] (t\n) at (\n,\n) {};};
+% \node[right] at (o) {$t=0$ s};
+% \node[right] at (t1) {$t=1$ s};
+% \node[right] at (t3) {$t=2$ s};
+% \node[right] at (t5) {$t=3$ s};
+% \node[right] at (t6) {$t=4$ s};
+% \node[right] at (t7) {$t=5$ s};
+% \node[right] at (t8) {$t=6$ s};
+% \draw[vetor, color=atento] (o)--(t1);
+% \draw[vetor, color=atento] (t1)--(t3);
+% \draw[vetor, color=atento] (t3)--(t5);
+% \draw[vetor, color=atento] (t5)--(t6);
+% \draw[vetor, color=atento] (t6)--(t7);
+% \draw[vetor, color=atento] (t7)--(t8);
+% \end{scope}
+% \end{tikzpicture}
 
 
-\item \adjustbox{valign=t}
-{
-\begin{tikzpicture}
-\begin{scope}[scale=.5]
-\draw[step=1.0,gray,thin] (-0.05,-0.05) grid (8.05,8.05);
-\fill[black] (0,0)coordinate(o) circle (.2);
-\foreach \n in {1,3,5,6,7,8}{
-\fill[red] (\n,\n) coordinate (t\n) circle (.13);};
-\draw[blue] (o)--(t1)--(t3)--(t5)--(t6)--(t7)--(t8);
-\fill[red] (3,3) circle (.2);
-\fill[red] (6,6) circle (.2);
-\fill[red] (7,7) circle (.2);
-\node[right] at (o) {$t=0$ s};
-\node[right] at (t1) {$t=1$ s};
-\node[right] at (t3) {$t=2$ s};
-\node[right] at (t5) {$t=3$ s};
-\node[right] at (t6) {$t=4$ s};
-\node[right] at (t7) {$t=5$ s};
-\node[right] at (t8) {$t=6$ s};
-\draw[-latex,red,thick] (t1)--(2,2);
-\draw[-latex,red,thick] (t5)--(4,4);
-\draw[-latex,red,thick] (t8)--(7,8);
-\end{scope}
-\end{tikzpicture}
-}
+% \item \adjustbox{valign=t}
+% {
+% \begin{tikzpicture}
+% \begin{scope}[scale=.5]
+% \draw[step=1.0,gray,thin] (-0.05,-0.05) grid (8.05,8.05);
+% \fill[black] (0,0)coordinate(o) circle (.2);
+% \foreach \n in {1,3,5,6,7,8}{
+% \fill[red] (\n,\n) coordinate (t\n) circle (.13);};
+% \draw[blue] (o)--(t1)--(t3)--(t5)--(t6)--(t7)--(t8);
+% \fill[red] (3,3) circle (.2);
+% \fill[red] (6,6) circle (.2);
+% \fill[red] (7,7) circle (.2);
+% \node[right] at (o) {$t=0$ s};
+% \node[right] at (t1) {$t=1$ s};
+% \node[right] at (t3) {$t=2$ s};
+% \node[right] at (t5) {$t=3$ s};
+% \node[right] at (t6) {$t=4$ s};
+% \node[right] at (t7) {$t=5$ s};
+% \node[right] at (t8) {$t=6$ s};
+% \draw[-latex,red,thick] (t1)--(2,2);
+% \draw[-latex,red,thick] (t5)--(4,4);
+% \draw[-latex,red,thick] (t8)--(7,8);
+% \end{scope}
+% \end{tikzpicture}
+% }
 
-A aceleração média no intervalo de tempo \([5,6]\) não pode ser calculada com os dados do item \titem{a)} porque não se sabe a velocidade no instante \(t=6\) segundos.
+% A aceleração média no intervalo de tempo \([5,6]\) não pode ser calculada com os dados do item \titem{a)} porque não se sabe a velocidade no instante \(t=6\) segundos.
 
-Contudo, da \Fref{GE101-A:fig-interlagos-corrida} pode-se observar que a velocidade média no intervalo \([6,7]\) é \(\vec{v_6}=(0,1)\) e como do item a) a velocidade média no intervalo \([5,6]\) é  \(\vec{v_5}=(1,1)\), podemos calcular a aceleração média em \([5,6]\) como a diferença
-\begin{equation*}
-\begin{split}
-\vec{a} = \vec{v_6} - \vec{v_5} = (0,1) - (1,1) = (-1,0).
-\end{split}
-\end{equation*}
-\end{enumerate}
-}{1}
-\end{answer}
-\begin{answer}{Corrida de vetores}
-{
-\paragraph{Parte III}
+% Contudo, da \Fref{GE101-A:fig-interlagos-corrida} pode-se observar que a velocidade média no intervalo \([6,7]\) é \(\vec{v_6}=(0,1)\) e como do item a) a velocidade média no intervalo \([5,6]\) é  \(\vec{v_5}=(1,1)\), podemos calcular a aceleração média em \([5,6]\) como a diferença
+% \begin{equation*}
+% \begin{split}
+% \vec{a} = \vec{v_6} - \vec{v_5} = (0,1) - (1,1) = (-1,0).
+% \end{split}
+% \end{equation*}
+% \end{enumerate}
+% }{1}
+% \end{answer}
+% \begin{answer}{Corrida de vetores}
+% {
+% \paragraph{Parte III}
 
-Conforme foi definido no início desta seção, o vetor aceleração média é
-\begin{equation*}
-\begin{split}\vec{a} = \dfrac{\vec{v_{47}} - \vec{v_{43}}}{4},\end{split}
-\end{equation*}
-onde \(\vec{v_{47}}\) e \(\vec{v_{43}}\) são as velocidades nos instantes 47 e 43 segundos, respectivamente. Novamente os vetores velocidade média coincidem com os vetores deslocamento porque estamos considerando o intervalo de tempo de 1 segundo.
-Portanto, \(\vec{v_{47}} = (-3,-1)\)  e \(\vec{v_{43}} = (1,1)\), logo \(\vec{a} = \left(-1,-\frac{1}{2}\right)\). Na figura obtemos
-\begin{center}\begin{tikzpicture}
-\begin{scope}[scale=.8]
-\draw[step=1.0,gray,thin] (-0.05,-0.05) grid (6.05,2.05);
-\draw[blue,-latex,thick] (5,0)node[below,black]{$t=43$ s}--(6,1);
-\draw[blue,-latex,thick] (6,1) node[right,black]{$t=44$ s}--(6,2);
-\draw[blue,-latex,thick] (6,2)node[right,black]{$t=45$ s} --(5,2);
-\draw[blue,-latex,thick] (5,2)node[above,black]{$t=46$ s}--(3,1);
-\draw[red,-latex,very thick] (6,2)--(5,1.5)node[below right, black]{$\vec{a}$};
-\draw[blue,-latex,thick] (3,1)node[above,black]{$t=47$ s}--(0,0)node[below,black]{$t=48$ s};
-\foreach \x/\y in {5/0,6/1,6/2,5/2,3/1,0/0}{ \fill[blue] (\x,\y) circle (.08);};
-\end{scope}
-\end{tikzpicture}\end{center}
-}{0}
-\end{answer}
+% Conforme foi definido no início desta seção, o vetor aceleração média é
+% \begin{equation*}
+% \begin{split}\vec{a} = \dfrac{\vec{v_{47}} - \vec{v_{43}}}{4},\end{split}
+% \end{equation*}
+% onde \(\vec{v_{47}}\) e \(\vec{v_{43}}\) são as velocidades nos instantes 47 e 43 segundos, respectivamente. Novamente os vetores velocidade média coincidem com os vetores deslocamento porque estamos considerando o intervalo de tempo de 1 segundo.
+% Portanto, \(\vec{v_{47}} = (-3,-1)\)  e \(\vec{v_{43}} = (1,1)\), logo \(\vec{a} = \left(-1,-\frac{1}{2}\right)\). Na figura obtemos
+% \begin{center}\begin{tikzpicture}
+% \begin{scope}[scale=.8]
+% \draw[step=1.0,gray,thin] (-0.05,-0.05) grid (6.05,2.05);
+% \draw[blue,-latex,thick] (5,0)node[below,black]{$t=43$ s}--(6,1);
+% \draw[blue,-latex,thick] (6,1) node[right,black]{$t=44$ s}--(6,2);
+% \draw[blue,-latex,thick] (6,2)node[right,black]{$t=45$ s} --(5,2);
+% \draw[blue,-latex,thick] (5,2)node[above,black]{$t=46$ s}--(3,1);
+% \draw[red,-latex,very thick] (6,2)--(5,1.5)node[below right, black]{$\vec{a}$};
+% \draw[blue,-latex,thick] (3,1)node[above,black]{$t=47$ s}--(0,0)node[below,black]{$t=48$ s};
+% \foreach \x/\y in {5/0,6/1,6/2,5/2,3/1,0/0}{ \fill[blue] (\x,\y) circle (.08);};
+% \end{scope}
+% \end{tikzpicture}\end{center}
+% }{0}
+% \end{answer}
 
 
 \begin{task}{ corrida de vetores}
@@ -6800,7 +6741,7 @@ Basicamente, o que a simulação faz é coordenar o movimento de cada pássaro d
 
 \clearpage
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/vetores_bibliografia.bib}
 
 \nocite{*}

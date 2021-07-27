@@ -1,91 +1,27 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{./abertura-ladrilhos}{./abertura-ladrilhos-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-ladrilhos}
-\else
-\renewcommand\chapterillustration{./abertura-ladrilhos-professor}
-\fi
+\chapterwhat{Ladrilhamentos regulares, semirregulares e irregulares. }
 
-%Photo by <a href="https://unsplash.com/@teckhonc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">T.H. Chia</a> on <a href="https://unsplash.com/s/photos/tesselations?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
-\def\chapterwhat{Ladrilhamentos regulares, semirregulares e irregulares. }
+\chapterbecause{O ladrilhamento de uma superfície plana é uma cobertura do plano onde formas (por exemplo, polígonos) são repetidos sem sobreposição ou buracos. No caso de polígonos, estes podem ser regulares ou não. Os ladrilhos compostos por figuras geométricas podem ser vistos como uma arte, usados em outras aplicações, como papéis de parede, forros de madeira, estamparia de tecidos, bordados entre outros. Apesar do número de possibilidades de realizar um ladrilhamento parecer infinita, é possível comprovar que ao utilizar apenas polígonos regulares existe apenas 11 possibilidades. Contudo pode-se aprofundar o estudo e investigar a utilização de polígonos irregulares.} 
 
-\def\chapterbecause{O ladrilhamento de uma superfície plana é uma cobertura do plano onde formas (por exemplo, polígonos) são repetidos sem sobreposição ou buracos. No caso de polígonos, estes podem ser regulares ou não. Os ladrilhos compostos por figuras geométricas podem ser vistos como uma arte, usados em outras aplicações, como papéis de parede, forros de madeira, estamparia de tecidos, bordados entre outros. Apesar do número de possibilidades de realizar um ladrilhamento parecer infinita, é possível comprovar que ao utilizar apenas polígonos regulares existe apenas 11 possibilidades. Contudo pode-se aprofundar o estudo e investigar a utilização de polígonos irregulares.} 
 \chapter{Ladrilhamento}
 \label{ladri-chap}
 
-\mbox{}\thispagestyle{empty}\clearpage
 
-\thispagestyle{empty}
+%%%% Página de créditos
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+% Autores
+\autorum{Carmen Vieira Mathias (UFSM)}
+\autordois{Lucas Schimith Zanon (SEDUC - RS)}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+% Revisores
+\revisorum{José Ezequiel Soto}
 
-\vspace*{.3cm}
-
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+\autordacapa{T.H. Chia}{Unsplash}{https://unsplash.com/photos/1-Zr2ye5588}
+\versao{1.0}
 
 
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Ladrilhamento\\
-\\
-Ano/ Versão: & 2020 / versão 0.2 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas, \\
-			&  Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autor: & Carmen Vieira Mathias (UFSM) \\
-         & Lucas Schimith Zanon (SEDUC - RS) \\
-\\
-Revisão: & José Ezequiel Soto  \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & --- \\
-\\
-  Capa: & Foto de T.H. Chia, no Unsplash \\
-  		& https://unsplash.com/photos/1-Zr2ye5588 \\
-
-\end{tabular}
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \mainmatter
 
@@ -133,7 +69,7 @@ Nessa unidade serão abordados os seguintes assuntos:
 \end{itemize}
 	
 
-Levando em consideração a habilidade EM13MAT509 citada anteriormente, nossa escolha nesta unidade é focar em:
+Levando em consideração a habilidade EM13MAT509 citada anteriormente, os objetivos desse capítulo são:
 
 \vspace{-1em}
 \begin{itemize}
@@ -167,14 +103,7 @@ Brasil (1999) apresentam os ladrilhamentos, também para o EF no que tange o ens
 No que diz respeito ao campo das figuras geométricas, inúmeras possibilidades de trabalho se colocam. Por exemplo, as atividades de classificação dessas figuras com base na observação de suas propriedades e regularidades. Atividades que exploram a composição e decomposição de figuras, como ladrilhamentos, tangrans, poliminós, fazem com que os alunos verifiquem que o recobrimento de uma superfície pode ser feito por determinadas figuras, como triângulos equiláteros, quadrados, retângulos, hexágonos regulares (p.123).
 \end{quote}
 
-Essa abordagem possui uma aproximação com o que a BNCC do o Ensino Médio (EM) apresenta para o campo da geometria, no terceiro ano.
-
-
-\begin{habilities}{EM13MAT505} 
-Resolver problemas sobre ladrilhamento do plano, com ou sem apoio de aplicativos de geometria dinâmica, para conjecturar a respeito dos tipos ou composição de polígonos que podem ser utilizados em ladrilhamento, generalizando padrões observados.
-\end{habilities}
-
-Observa-se que os ladrilhamentos não são citados nos PCN EM (Brasil, 2006), apesar da recomendação de trabalhar com padrões em sala de aula. 
+Essa abordagem possui uma aproximação com o que a BNCC do o Ensino Médio (EM) apresenta para o campo da geometria. Observa-se que os ladrilhamentos não são citados nos PCN EM (Brasil, 2006), apesar da recomendação de trabalhar com padrões em sala de aula. 
 \begin{quote}
 [...] estimular a busca de regularidades, a generalização de padrões, a capacidade de argumentação, elementos fundamentais para o processo de formalização do conhecimento matemático e para o desenvolvimento de habilidades essenciais à leitura e interpretação da realidade e de outras áreas do conhecimento (p.42)
 \end{quote}
@@ -183,11 +112,11 @@ Os padrões são importantes nesse contexto, pois, ladrilhamentos do plano são 
 
 Acredita-se que um dos  objetivos ao propor o estudo de ladrilhamentos, principalmente nos anos iniciais da educação básica, deve ser melhorar as habilidades psicomotoras dos alunos e ensinar matemática com base em  atividades da vida diária, evoluindo do concreto ao abstrato. Além disso, artistas combinam matemática com arte e revelam a incrível beleza da geometria em áreas como têxteis, design de interiores, desenho industrial (Hatfieldet al, 2000). Além das preferências estéticas, os alunos precisam decidir quais formas são mais adequadas para preencher/decorar uma determinada área, levando em consideração as características das formas (Callingham, 2014). Pesquisas como Fuys, Geddes e Tischler(1988); Serra(1993) e  Wheatley e Reynolds(1996) mostram que trabalhar com ladrilhamentos do plano auxilia os alunos a compreender outros conceitos relacionados à geometria, como por exemplo áreas e transformações isométricas.  
 
-Como ladrilhamento do plano é um conceito que pode melhorar a compreensão dos alunos sobre as concepções em geometria,  enquando professores, podemos  solicitar aos alunos que expressem sua compreensão sobre os ladrilhamentos. Pois conforme Callingham(2004) concepções errôneas (missconceptions)  sobre esse assunto, podem afetar o desenvolvimento de outras ideias. Algumas pesquisas mostram que a maioria dos alunos do ensino fundamental apenas consegue descrever os ladrilhamentos de forma visual. Outras pesquisas apontam que os alunos podem fazer ladrilhamentos  usando objetos e formas geométricas desde a primeira série (Eberle, 2014; O'Daffer et al. 1998; Ward, 2003). Por outro lado, estudos como Outhred e Mitchelmore (2000) afirmam que as crianças não compreendem totalmente as sequências finitas de quadrados antes do quarto ou quinto ano. Marchini (2003) mostra que é  difícil para os alunos compreenderem a área infinita dos ladrilhamentos. Nessa pesquisa, o autor indica que os alunos pensam que o ladrilhamento está concluído quando o papel termina e o infinito não faz sentido. Além disso,  poucos alunos fazem tentativas criativas de adicionar um novo papel. Conforme Owens \& Outhred(1998) ao colocar ladrilhos em uma área limitada, os alunos trabalham mais com triângulos do que com retângulos. Isso indica que o sucesso dos alunos ao construir diferentes tipos de ladrilhamento  pode mudar.
+Como ladrilhamento do plano é um conceito que pode melhorar a compreensão dos alunos sobre as concepções em geometria,  enquanto professores, podemos  solicitar aos alunos que expressem sua compreensão sobre os ladrilhamentos. Pois conforme Callingham(2004) concepções errôneas (missconceptions)  sobre esse assunto, podem afetar o desenvolvimento de outras ideias. Algumas pesquisas mostram que a maioria dos alunos do ensino fundamental apenas consegue descrever os ladrilhamentos de forma visual. Outras pesquisas apontam que os alunos podem fazer ladrilhamentos  usando objetos e formas geométricas desde a primeira série (Eberle, 2014; O'Daffer et al. 1998; Ward, 2003). Por outro lado, estudos como Outhred e Mitchelmore (2000) afirmam que as crianças não compreendem totalmente as sequências finitas de quadrados antes do quarto ou quinto ano. Marchini (2003) mostra que é  difícil para os alunos compreenderem a área infinita dos ladrilhamentos. Nessa pesquisa, o autor indica que os alunos pensam que o ladrilhamento está concluído quando o papel termina e o infinito não faz sentido. Além disso,  poucos alunos fazem tentativas criativas de adicionar um novo papel. Conforme Owens \& Outhred(1998) ao colocar ladrilhos em uma área limitada, os alunos trabalham mais com triângulos do que com retângulos. Isso indica que o sucesso dos alunos ao construir diferentes tipos de ladrilhamento  pode mudar.
 
 Uma pesquisa muito interessante a respeito das dificuldades dos alunos sobre ladrilhamentos no plano é Callinghan (2004). Esse estudo focou em classificar a compreensão dos alunos sobre ladrilhamentos pelos níveis de pensamento geométrico de Van Hiele. Nesse contexto, no Nível 0 de acordo com os Níveis de Pensamento Geométrico de Van Hiele, esperava-se que os alunos reconhecessem as formas geométricas presentes no ladrilhamento, bem como a unidade fundamental ( forma ou combinação das formas) formam o padrão do ladrilhamento. No Nível 1, os alunos deveriam definir as formas e as transformçãoes  usadas para compor o ladrilhamento. No nível 2, espera-se que expliquem e façam alguma tentativa de medir a extensão da transformação, usando o nível de linguagem técnica, como “girar, rotacionar” ou “transladar ”. Embora o uso dos Níveis de Pensamento Geométrico de Van Hiele revele implicitamente os resultados acima mencionados, Callinghan (2004) sugere que a natureza dos equívocos que alguns alunos realizam não foi suficientemente definida por esta abordagem. 
 
-Neste capitulo, não estamos interessando em identificar os Níveis de Pensamento Geométrico dos alunos, porém estes foram levados em conta ao pensarmos nas atividades propostas. Começamos trabalhando com ladrilhamentos monoédricos, formados por polígonos regulares e irregulares. Pensamos em começar por eese tipo de ladrilhamento, pois são mais simples de construir e por considerar que  os alunos estão familiarizados com a maioria das  formas . Os ladrilhamentos semirregulares que são os compostos por mais de um polígono regular, são trabalhados na sequencia. Após estudar e dominar esses conceitos, são propostas atividades onde os alunos necessitam utilizar conceitos de transformações isométricas para criar e explorar ladilhamentos.
+Neste capitulo, não estamos interessando em identificar os Níveis de Pensamento Geométrico dos alunos, porém estes foram levados em conta ao pensarmos nas atividades propostas. Começamos trabalhando com ladrilhamentos monoédricos, formados por polígonos regulares e irregulares. Pensamos em começar por esse tipo de ladrilhamento, pois são mais simples de construir e por considerar que  os alunos estão familiarizados com a maioria das  formas. Os ladrilhamentos semirregulares que são os compostos por mais de um polígono regular, são trabalhados na sequencia. Após estudar e dominar esses conceitos, são propostas atividades onde os alunos necessitam utilizar conceitos de transformações isométricas para criar e explorar ladilhamentos.
 
 Em todas as atividades do capítulo, pensamos em abordagens fundamentadas na metodologia de investigação matemática. Justifica-se essa escolha, pois conforme \cite[p.2]{Ponte} \textit{"em contextos de ensino, aprendizagem ou formação, investigar não significa necessariamente lidar com problemas na fronteira do conhecimento nem com problemas de grande dificuldade. Significa, apenas, trabalhar a partir questões que nos interessam e que se apresentam inicialmente confusas, mas que conseguimos clarificar e estudar de modo organizado." }
 
@@ -206,9 +135,9 @@ O material foi planejado para ser desenvolvido em 2 ou 3 semanas, em classes com
 \def\currentcolor{session1}
 \begin{texto}
 {
-	\paragraph {Objetivos gerais da seção}
+	%\paragraph {Objetivos gerais da seção}
 
-	Reconhecer ladrilhamentos no plano
+	%Reconhecer ladrilhamentos no plano
 
 	\paragraph {Sugestões e discussões}
 	Quando se trata de ladrilhamentos em matemática, também conhecidos como mosaicos ou pavimentações, é necessário explicar alguns termos comumente utilizados em outras áreas do conhecimento, caso esses apareçam na discussão.
@@ -227,7 +156,7 @@ O material foi planejado para ser desenvolvido em 2 ou 3 semanas, em classes com
 	\end{itemize}
 
 	Assim, pode-se considerar que mosaico é o resultado, é o produto final de uma pavimentação usando ou não algum tipo de padrão. Por sua vez, o termo tesselação é mais adequado para se referir a um padrão em tecidos, por exemplo. Quanto a ladrilhamento, é plausível concluir que são pavimentações construídas a partir de  polígonos regulares ou não.  Como foi colocado, propõe-se reconhecer ladrilhamentos no plano, assim, optou-se por utilizar preferencialmente esse termo. 
-	No material disponibilizado ao estudante, ainda não faremos uma definição formal de ladrilhamento, porém utilizaremos a seguinte ideia que será utilizada é a seguinte: “Quando revestimos uma superfície plana com alguma figura sem deixar falhas ou sobrepô-las, dizemos que houve um ladrilhamento dessa superfície” (adaptado de BIANCHINI, 2015, p. 264).
+	No material disponibilizado ao estudante, ainda não faremos uma definição formal de ladrilhamento, porém utilizaremos a ideia que será utilizada é a seguinte: “Quando revestimos uma superfície plana com alguma figura sem deixar falhas ou sobrepô-las, dizemos que houve um ladrilhamento dessa superfície” (adaptado de BIANCHINI, 2015, p. 264).
 
 }
 \end{texto}
@@ -283,23 +212,21 @@ O material foi planejado para ser desenvolvido em 2 ou 3 semanas, em classes com
 	\end{itemize}
 }{1}{0}
 \end{sugestions}
-% \marginpar{\vspace{.5\baselineskip}}
 \begin{answer}{Reconhecendo um ladrilhamento}
 {
 	O objetivo da atividade Reconhecendo um ladrilhamento é fazer com que os alunos consigam definir ladrilhamento a partir dos exemplos apresentados. São expostas 6 figuras, cuja intenção é provocar discussão.
 
-	\textbf{Figura 1}- A ilustração representa uma pavimentação de pedras coloridas, onde existem alguns espaços não utilizados (lacunas).  Os "ladrilhos" devem se encaixar como as peças de um quebra-cabeça. Além disso, não existe um padrão sendo respeitado. Então “NÃO”
+	\textbf{Figura 1}- A ilustração representa uma "pavimentação" de peças de um quebra-cabeça monocromático, em que algumas peças estão sobrepostas e  existem  espaços não utilizados (lacunas).  Os "ladrilhos" deveriam se encaixar montando o quebra-cabeça. Além disso, não existe um padrão sendo respeitado. Então “NÃO”
 
-	\textbf{Figura 2}- Na metade inferior esquerda da foto, sim porque as penas se encaixam sem folgas ou sobreposições e claramente, esse padrão pode ser repetido para sempre para preencher um plano. No entanto, na metade superior direita da foto, muitas das penas estão sobrepostas. Os "ladrilhos" em não devem se sobrepor. Então, na área superior direita, "NÃO".
+	\textbf{Figura 2}- As formas se repetem perfeitamente, sem espaços ou sobreposições, logo a resposta é SIM, pois em um ladrilhamento do plano, as formas devem se encaixar, sem espaços ou sobreposições.
 
-	\textbf{Figura 3} - A forma básica (triângulo) se repete perfeitamente. Se fossem apenas triângulos, seria um ladrilhamento. No entanto, existem lacunas ( espaços amarelos) a resposta é  "NÃO, isso não é um ladrilhamento".
+	\textbf{Figura 3} - A forma básica (papéis adesivos no formato quadrado) se repete de forma desordenada  em que algumas peças estão sobrepostas e  existem  espaços não utilizados (lacunas). 
 
-	\textbf{Figura 4} - A forma básica (novamente triângulos) se repete perfeitamente. Se fossem apenas triângulos, seria um ladrilhamento. No entanto, como a forma que se repete é o Yoda, a resposta é  "NÃO, isso não é um ladrilhamento" porque nesse caso, os triângulos azuis são as lacunas.
+	\textbf{Figura 4} - A forma básica (papéis recortados no formato de círculos) se repete. Apesar de parecer existir um tipo de ordem na posição das formas, existem espaços não utilizados.
 
+	\textbf{Figura 5}- Na metade inferior esquerda da foto, sim porque as penas se encaixam sem folgas ou sobreposições e claramente, esse padrão pode ser repetido para sempre para preencher um plano. No entanto, na metade superior direita da foto, muitas das penas estão sobrepostas. Os "ladrilhos" em não devem se sobrepor. Então, na área superior direita, "NÃO"
 
-	\textbf{Figura 5}- A forma básica se repete perfeitamente, sem espaços ou sobreposições, logo a resposta é SIM, pois em um ladrilhamento do plano, as formas devem se encaixar, sem espaços ou sobreposições.
-
-	\textbf{Figura 6}-  A forma básica se repete perfeitamente, porém existem sobreposições, logo a resposta é NÃO, pois em um ladrilhamento do plano, as formas devem se encaixar porfeitamente sem sobreposições.
+	\textbf{Figura 6}-  As formas se encaixam, se repetem perfeitamente e não existe sobreposições. logo a resposta é SIM.
 }{0}
 \end{answer}
 
@@ -339,7 +266,7 @@ Utilize o material disponibilizado por seu professor para construir o ladrilhame
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=300bp]{ladrilhamento3}
+\includegraphics[width=290bp]{ladrilhamento3}
 \caption{Lagartos}
 \label{lizard}
 \end{figure}
@@ -352,7 +279,7 @@ Utilize o material disponibilizado por seu professor para construir o ladrilhame
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=300bp]{bosta}
+\includegraphics[width=300bp]{reviso1}
 \caption{Imagens que podem ilustrar ladrilhamentos.}
 \label{ladr12}
 \end{figure}
@@ -367,19 +294,19 @@ Utilize o material disponibilizado por seu professor para construir o ladrilhame
 
 \arrange{A arte de ladrilhar}
 
-No primeiro item da \hyperref[rec_lad]{atividade \ref{rec_lad}} nosso objetivo foi que você identificasse  quais das imagens eram ladrilhamentos.
-Observamos que as figuras 1, 3, 4 e 6 não são ladrilhamentos, visto que os requisitos:  obedecer um padrão, não existir espaços não utilizados (lacunas) e não haver sobreposição de formas, não são cumpridos. A figura 2 (penas do pássaro) parece obedecer essas condições, pois na metade inferior esquerda da foto, as penas se encaixam sem folgas ou sobreposições e claramente, esse padrão pode ser repetido para sempre para preencher um plano. No entanto, na metade superior direita da foto, muitas das penas estão sobrepostas. E como os "ladrilhos" não devem se sobrepor. Então, a figura não é um ladrilhamento.
+No primeiro item da \hyperref[rec_lad]{atividade \ref{rec_lad}} nosso objetivo foi que você identificasse quais das imagens eram ladrilhamentos.
+Observamos que as figuras 1, 3, 4 e 5 não são ladrilhamentos, visto que os requisitos:  obedecer um padrão, não existir espaços não utilizados (lacunas) e não haver sobreposição de formas, não são cumpridos. A figura 5 (penas do pássaro) parece obedecer essas condições, pois na metade inferior esquerda da foto, as penas se encaixam sem folgas ou sobreposições e claramente, esse padrão pode ser repetido para sempre para preencher um plano. No entanto, na metade superior direita da foto, muitas das penas estão sobrepostas. E como os "ladrilhos" não devem se sobrepor. Então, a figura não é um ladrilhamento.
 
-Assim, a única figura que onde a forma básica se repete perfeitamente, sem espaços ou sobreposições, podendo ser reptida indefinidamente é a figura 5.
+Assim, as figuras em que as formas se repetem perfeitamente, sem espaços ou sobreposições, podendo ser repetidas indefinidamente são as figura 2 e 6.
 Assim,  quando revestimos uma superfície plana com figuras sem deixar falhas ou sobrepô-las, dizemos que houve um ladrilhamento dessa superfície. 
 
 No segundo item parte da  \hyperref[rec_lad]{atividade \ref{rec_lad}} questionamos onde é possível encontrar encontrar ladrilhamentos no mundo ao nosso redor. 
-Ao observarmos a natureza, um dos exemplos mais conhecidos de ladrilhamentos são os favos de mel, que são formas tridimensionais hexagonais. Pode-se observar que não há lacunas entre as formas. Sem lacunas, as abelhas usam seu espaço de armazenamento de forma muito eficiente. Outros exemplos são as peles de algumas cobras e a organização das escamas de alguns peixes (\hyperref[natureza]{figura \ref{natureza}}).
+Ao observarmos a natureza, um dos exemplos mais conhecidos de ladrilhamentos são os favos de mel, que são formas tridimensionais hexagonais. Pode-se observar que não há lacunas entre as formas. Sem lacunas, as abelhas usam seu espaço de armazenamento de forma muito eficiente. Outros exemplos são as peles de algumas cobras e o pelo da girafa (\hyperref[natureza]{figura \ref{natureza}}).
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=400bp]{nature1}
+\includegraphics[width=400bp]{reviso2}
 \caption{Ladrilhamentos na natureza. Fonte: Google Imagens}
 \label{natureza}
 \end{figure}
@@ -401,7 +328,7 @@ Os ladrilhamentos têm sido amplamente utilizados na arte e na arquitetura desde
 Quando se trata de ladrilhamento em matemática, também conhecido como mosaico ou pavimentação, é necessário explicar vários termos técnicos com os quais a geometria opera. Por exemplo, uma forma fundamental (também chamado de ladrilho) é uma peça que é repetida para formar um ladrilhamento. Na atividade anterior, a peça que foi repetida foi o lagarto.
 
 
-No caso da matemática, geralmente, trabalha-se com polígonos e nesse caso, para construir um ladrilhamento é necessário observar alguns aspectos e é sobre isso que trata a próxima seção.
+No caso da matemática, geralmente, trabalha-se com polígonos e nesse caso é necessário observar que ao revestimos uma superfície plana com um ou mais polígonos, não devemos  deixar falhas ou fazer sobreposições e é sobre isso que tratará a próxima seção.
 
 
 \know{Tesselação} \label{tess}
@@ -409,26 +336,26 @@ No caso da matemática, geralmente, trabalha-se com polígonos e nesse caso, par
 Tesselação é outra palavra para ladrilhamento. Derivado da palavra latina, tessella, que eram os pequenos pedaços de pedra usados para fazer mosaicos romanos, uma tesselação ou ladrilho, é um padrão feito de uma ou mais formas que se encaixam sem lacunas ou sobreposições.
 Destas palavras antigas derivam termos semelhantes que aparecem em várias aplicações práticas, da arte e arquitetura à ciência, tecnologia e produção.
 
-Em design e arquitetura, a tesselação se refere à pavimentação de paredes, pisos ou outras superfícies com um padrão de pequenos ladrilhos feitos de cerâmica, vidro ou outros materiais. Essesa ladrilhoa normalmente são cortadas em formas geométricas que se encaixam perfeitamente em designs simples ou complexos formando um padrão aparentemente infinito. A aplicação de ladrilhamentos  na arquitetura pode é  amplamente encontrada em muitas civilizações do mundo, incluindo o antigo Egito, mouros, romanos, Pérsia, Arábia, Japão e China, existindo ao longo da história do desenvolvimento da arquitetura. Embora os ladrilhamentos geralmente consistam em formas abstratas, principalmente retângulos, hexágonos, octógonos e outros polígonos, também podem consistir em elementos figurativos, como no trabalho de artistas como M.C. Escher (1898-1972). Escher é famoso por suas tesselações compostas de cavalos, borboletas, pássaros e criaturas imaginárias.
+Em design e arquitetura, a tesselação se refere à pavimentação de paredes, pisos ou outras superfícies com um padrão de pequenos ladrilhos feitos de cerâmica, vidro ou outros materiais. Esses ladrilhos normalmente são cortadas em formas geométricas que se encaixam perfeitamente em designs simples ou complexos formando um padrão aparentemente infinito. A aplicação de ladrilhamentos  na arquitetura  é  amplamente encontrada em muitas civilizações do mundo, incluindo o antigo Egito, Pérsia, Arábia, Japão e China, existindo ao longo da história do desenvolvimento da arquitetura. Embora os ladrilhamentos geralmente consistam em formas abstratas, principalmente retângulos, hexágonos, octógonos e outros polígonos, também podem consistir em elementos figurativos, como no trabalho de artistas como M.C. Escher (1898-1972). Escher é famoso por suas tesselações compostas de cavalos, borboletas, pássaros e criaturas imaginárias.
 
 
 \clearpage
 \def\currentcolor{session1}
 \begin{texto}
 {
-	\paragraph {Objetivos gerais da seção}
-	\begin{itemize}
-	\item Criar ladrilhamentos do plano, usando apenas um tipo de polígono regular.
-	\item Reconhecer quais polígonos regulares ladrilham o plano.
-	\item Reconhecer que alguns polígonos irregulares ladrilham o plano.
-	\end{itemize}
+	%\paragraph {Objetivos gerais da seção}
+	%\begin{itemize}
+	%\item Criar ladrilhamentos do plano, usando apenas um tipo de polígono regular.
+	%\item Reconhecer quais polígonos regulares ladrilham o plano.
+	%\item Reconhecer que alguns polígonos irregulares ladrilham o plano.
+	%\end{itemize}
 
 
 	Observamos que todas as atividades desse explorando são muito parecidas, porém cada uma tem um objetivo específico.
 
 	\paragraph {Sugestões e discussões}
 
-	Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imedita, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) ou por meio de aplicativos a resposta ao questionamento. Dessa forma, em todas pas atividades dessa seção, o professor poderá optar pela Parte 1 ou pela parte 2, caso tenha pouco tempo para explorar o tema. No organizando haverá a formalização do que foi abordado.  
+	Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imediata, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) ou por meio de aplicativos a resposta ao questionamento. Dessa forma, em todas as atividades dessa seção, o professor poderá optar pela Parte 1 ou pela Parte 2, caso tenha pouco tempo para explorar o tema. No organizando haverá a formalização do que foi abordado.  
 }
 \end{texto}
 \begin{objectives}{Ladrilhamento usando triângulos}
@@ -456,7 +383,7 @@ Em design e arquitetura, a tesselação se refere à pavimentação de paredes, 
 \item Que não ladrilhamentos que satisfazer a condição: "Para isso, procure distribuir os triângulos ao redor de um vértice". Mas será salutar que isso ocorra, para que o aluno perceba a condição imposta e não repita o "erro" nas demais atividades.
 \end{itemize}
 
-\textbf{Enriquecimento da discussão}: Sugere-se que o professor incetive seus alunos a perceber quais as transformações isométricas utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+\textbf{Enriquecimento da discussão}: Sugere-se que o professor incentive seus alunos a perceber quais as transformações isométricas utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
 
 \textbf{Material necessário}: Polígonos impressos do encarte em folha de gramatura mais alta, recortados em EVA, feitos com MDF em corte a laser ou impressos em 3D e aplicativos indicados .
 
@@ -474,7 +401,7 @@ Em design e arquitetura, a tesselação se refere à pavimentação de paredes, 
 		\item Sim, todo triângulo pode ladrilhar um plano. O triângulo irregular é aquele que não possui.
 		\item Serão congruentes quando satisfizerem um dos condições de congruência, por exemplo, lados correspondentes congruentes
 		\item Sim, pela “regra imposta”: procure distribuir os triângulos ao redor de um vértice.
-		\item  Por exemplo,  usou translações, rotações ou reflexões ou uma combinação de tranformações
+		\item  Por exemplo,  usou translações, rotações ou reflexões ou uma combinação de transformações
 	\end{enumerate}
 	\end{enumerate}
 }{0}
@@ -483,7 +410,7 @@ Em design e arquitetura, a tesselação se refere à pavimentação de paredes, 
 \begin{objectives}{Ladrilhamentos usando quadriláteros}
 {\begin{itemize}
 	\item Criar ladrilhamentos do plano usando apenas um tipo de quadrilátero.
-	\item Reconhecer que todos os quadrláteros ladrilham o plano.
+	\item Reconhecer que todos os quadriláteros ladrilham o plano.
 	\item \textbf{Conceitos abordados}: Ladrilhamentos monoédricos.
 \end{itemize}
 }{1}{0}
@@ -494,9 +421,9 @@ Em design e arquitetura, a tesselação se refere à pavimentação de paredes, 
 
 \textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao material utilizado (ou os aplicativos ou o material manipulativo). Mas a ideia é que os estudantes consigam montar o ladrilhamento usando as peças. 
 
-\textbf{Sugestões gerais}: Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imedita, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) a resposta ao questionamento. No organizando haverá a formalização do que foi abordado.  Os alunos podem ter dificuldade com o conceito de convexo. Pode ser necessário uma explicação para o conceito. 
+\textbf{Sugestões gerais}: Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imediata, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) a resposta ao questionamento. No organizando haverá a formalização do que foi abordado.  Os alunos podem ter dificuldade com o conceito de convexo. Pode ser necessário uma explicação para o conceito. 
 
-\textbf{Enriquecimento da discussão}: Sugere-se que o professor incetive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+\textbf{Enriquecimento da discussão}: Sugere-se que o professor incentive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
 
 \textbf{Material necessário}: polígonos impressos do encarte em folha de gramatura mais alta, recortados em EVA, feitos com MDF em corte a laser ou impressos em 3D e aplicativos indicados .
 }{0}{0}
@@ -516,14 +443,13 @@ Em design e arquitetura, a tesselação se refere à pavimentação de paredes, 
 
 \textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao material utilizado (ou os aplicativos ou o material manipulativo). Mas a ideia é que os estudantes não consigam  montar o ladrilhamento usando os pentágonos regulares. Nesse sentido é interessante reforçar que “que quando revestimos uma superfície plana com figuras sem deixar falhas ou sobrepô-las, dizemos que houve um ladrilhamento dessa superfície”. Observa-se que será possível realizar o ladrilhamento usando o pentágono irregular. Aproveite para questionar se isso vai ocorrer com qualquer pentágono irregular, como acontece com os quadriláteros. A resposta é negativa, como você poderá conferir no organizando. 
 
-\textbf{Sugestões gerais}: Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imedita, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) a resposta ao questionamento. No organizando haverá a formalização do que foi abordado.  
+\textbf{Sugestões gerais}: Uma pergunta que deve ser respondida no decorrer dessa seção é: quais polígonos regulares pavimentam o plano. No livro do aluno essa resposta não será imediata, pretende-se que os alunos investiguem, por meio de experimentação, feita com materiais manipuláveis ( polígonos regulares congruentes recortados em cartolina ou em EVA, cortados a laser ou impressos em 3D) a resposta ao questionamento. No organizando haverá a formalização do que foi abordado.  
 
-\textbf{Enriquecimento da discussão}: Sugere-se que o professor incetive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+\textbf{Enriquecimento da discussão}: Sugere-se que o professor incentive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
 
 \textbf{Material necessário}: polígonos impressos do encarte em folha de gramatura mais alta, recortados em EVA, feitos com MDF em corte a laser ou impressos em 3D e aplicativos indicados.
 }{0}{0}
 \end{sugestions}
-\marginpar{\vspace{.5\baselineskip}}
 \begin{answer}{Ladrilhamento usando quadriláteros}
 {
 	
@@ -570,7 +496,6 @@ Em design e arquitetura, a tesselação se refere à pavimentação de paredes, 
 
 }{0}{1}
 \end{sugestions}
-\marginpar{\vspace{.5\baselineskip}}
 \begin{answer}{Ladrilhamento usando hexágonos}
 {
 	\begin{enumerate}
@@ -596,7 +521,7 @@ Em design e arquitetura, a tesselação se refere à pavimentação de paredes, 
 
 	\textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao material utilizado (ou os aplicativos ou o material manipulativo). Mas a ideia é que os estudantes consigam montar o ladrilhamento usando as peças disponibilizadas, com exceção dos pentágonos regulares. Ao realizar o ladrilhamento com pentágonos regulares, os alunos certamente não irão conseguir fazer o ladrilhamento. Nesse sentido é interessante reforçar que “que quando revestimos uma superfície plana com figuras sem deixar falhas ou sobrepô-las, dizemos que houve um ladrilhamento dessa superfície”. 
 
-	\textbf{Enriquecimento da discussão}: Sugere-se que o professor incetive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
+	\textbf{Enriquecimento da discussão}: Sugere-se que o professor incentive seus alunos a perceber quais as transformações utilizaram para construir o ladrilhamento. Recomenda-se que isso seja realizado enquanto os alunos tentam construir o ladrilhamento e em um momento posterior, quando os ladrilhamentos estiverem prontos.
 
 	\textbf{Material necessário}: Aplicativo indicado.
 }{0}{1}
@@ -608,11 +533,10 @@ Em design e arquitetura, a tesselação se refere à pavimentação de paredes, 
 
 	\begin{table}[H]
 	\centering
-	\setlength\tabulinesep{2.5pt}
-	\begin{tabu} to \textwidth{|l|c|c|}
+
+	\begin{tabular}{|l|c|c|}
 	\hline
-	\thead
-	\centering{Polígono} & \pbox[c][1.5cm]{.25\textwidth}{Medida de \\ cada ângulo \\ interno} & \pbox[c][1.5cm]{.25\textwidth}{Previsão: \\ polígono \\ ladrilha o plano?}  \\
+	\tcolor{\centering{Polígono}} & \tcolor{\pbox[c][1.5cm]{.25\textwidth}{Medida de \\ cada ângulo \\ interno}} & \tcolor{\pbox[c][1.5cm]{.25\textwidth}{Previsão: \\ polígono \\ ladrilha o plano?}}  \\
 	\hline
 	Triângulo Equilátero & $60^{\circ}$ & Sim \\
 	\hline
@@ -632,7 +556,7 @@ Em design e arquitetura, a tesselação se refere à pavimentação de paredes, 
 	\hline
 	Hexágono irregular & Depende do polígono & Depende do polígono \\
 	\hline
-	\end{tabu}
+	\end{tabular}
 	\end{table}
 	\setcounter{enumi}{2}
 	\item Não, pois para um polígono regular poder ladrilhar, precisa que a medida do ângulo interno seja um divisor de $360^{\circ}$.
@@ -646,7 +570,7 @@ Ladrilhamentos são frequentemente feitos de repetições de um padrão, chamado
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=350bp]{porcelana}
+\includegraphics[width=330bp]{porcelana}
 \caption{Ladrilhamentos usando polígonos de um só tipo. Fonte: Google imagens}
 \label{porce}
 \end{figure}
@@ -685,7 +609,7 @@ Ladrilhamentos são frequentemente feitos de repetições de um padrão, chamado
 \item Utilize o \href{https://www.geogebra.org/m/d6nvffqk}{aplicativo} e escolha um dos quadriláteros para construir um ladrilhamento. Apenas observe que a interseção entre dois polígonos seja um lado ou um vértice.
 \item Utilize o \href{https://www.geogebra.org/m/mdybnpnq}{aplicativo} e escolha um dos quadriláteros para construir um novo ladrilhamento.
 \item Qual a diferença nos ladrilhamentos construídos nos itens a) e b) ?
-\item Utilize o \href{https://www.geogebra.org/m/ejfw44rt}{aplicativo}. Depois responda as questões:
+\item Utilize o \href{https://www.geogebra.org/m/uqemfkhp#material/bhuqetbc}{aplicativo}. Depois responda as questões:
 \begin{enumerate}
 \item O ladrilhamento que você produziu nos itens a) e b) podem ser reproduzidos nesse aplicativo?
 \item Os quadriláteros não convexos podem ser usados para criar ladrilhamentos interessantes. O que caracteriza um quadrilátero não convexo?
@@ -716,7 +640,7 @@ Ladrilhamentos são frequentemente feitos de repetições de um padrão, chamado
 \textbf{Parte 2:} Vamos explorar  ladrilhamentos  usando  hexágonos. 
 \begin{enumerate}
 
-\item Utilize o  \href{https://www.geogebra.org/m/uqemfkhp#material/zfczbshq}{aplicativo} para construir um ladrilhamento usando hexágnos regulares.
+\item Utilize o  \href{https://www.geogebra.org/m/uqemfkhp#material/zfczbshq}{aplicativo} para construir um ladrilhamento usando hexágonos regulares.
 \item Utilize o  \href{https://www.geogebra.org/m/uqemfkhp#material/pnhc6tep}{aplicativo} e ladrilhe o plano com o hexágono disponível.
 \item Qual a diferença nos ladrilhamentos construídos nos itens a) e b) ?
 
@@ -739,11 +663,9 @@ Ladrilhamentos são frequentemente feitos de repetições de um padrão, chamado
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2.5pt}
-\begin{tabu} to \textwidth{|l|c|c|}
+\begin{tabular}{|l|c|c|}
 \hline
-\thead
-\centering{Polígono} & \makecell{Medida de \\ cada ângulo \\ interno} & \makecell{Previsão: \\ O polígono \\ ladrilha o plano?}  \\
+\tcolor{\centering{Polígono}} & \tcolor{\makecell{Medida de \\ cada ângulo \\ interno}} & \tcolor{\makecell{Previsão: \\ O polígono \\ ladrilha o plano?}}  \\
 \hline
 Triângulo Equilátero & &  \\
 \hline
@@ -761,7 +683,7 @@ Pentágono irregular & &  \\
 \hline
 Hexágono irregular & &  \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item Utilize o  \href{https://www.geogebra.org/m/uqemfkhp#material/eqwhddse}{aplicativo} para responder a seguinte questão:  Além dos polígonos citados na tabela, existem outros polígonos regulares  que ladrilham o plano?  Justifique!
@@ -787,7 +709,7 @@ Os ladrilhamentos com peças quadrangulares são comuns nos cômodos de nossas c
 \label{lad_qd}
 \end{figure}
 
-Também existem ladrilhamento hexagonais, apesar de menos usuais. Eles são encontrados em algumas pavimentações de ruas e áreas externas, nos favos, onde é armazenado o mel das abelhas. Também são comuns na confeção de colchas de retalhos  ou  de crochê (\hyperref[lad_hex]{figura \ref{lad_hex}}.
+Também existem ladrilhamento hexagonais, apesar de menos usuais. Eles são encontrados em algumas pavimentações de ruas e áreas externas, nos favos, onde é armazenado o mel das abelhas. Também são comuns na confecção de colchas de retalhos  ou  de crochê (\hyperref[lad_hex]{figura \ref{lad_hex}}.
 
 \begin{figure}[H]
 \centering
@@ -859,11 +781,10 @@ Daí vem,
 
 Logo,
 \begin{equation*}
-\frac{1}{n}+\frac{1}{m}=2.
+\frac{1}{n}+\frac{1}{m}=\frac{1}{2}.
 \end{equation*}
 
-Como $n$ é o número de lados de um polígono regular, é um número natural maior ou igual a três. E como $m$ também é um número natural, as únicas soluções inteiras e positivas, possíveis para a equação anterior são $n=3$ (com $m=6$), $n=4$ (com $m=4$) e $n=6$ (com $m=3$). Essas soluções resultam em exatamente três ladrilhamentos e consistem em distribuir ao redor de cada vértice ou $6$ triângulos equiláteros, ou $4$ quadrados ou $3$ hexágonos regulares. Ou seja, existem apenas três tipos de ladrilhamentos regulares, ilustrados na \hyperref[ladr_reg]{figura \ref{ladr_reg}}.
-
+Como $n$ é o número de lados de um polígono regular, é um número natural maior ou igual a três. E como $m$ também é um número natural, as únicas soluções inteiras e positivas, possíveis para a equação anterior são $n=3$ (com $m=6$), $n=4$ (com $m=4$) e $n=6$ (com $m=3$). Essas soluções resultam em exatamente três ladrilhamentos e consistem em distribuir ao redor de cada vértice ou $6$ triângulos equiláteros, ou $4$ quadrados ou $3$ hexágonos regulares. Ou seja, existem apenas três tipos de ladrilhamentos regulares, ilustrados na \hyperref[ladr_reg]{figura \ref{ladr_reg}}. O   \href{https://youtu.be/y__0a7TDbfs}{vídeo} poderá auxiliar na sua compreensão.
 
 
 \begin{figure}[H]
@@ -992,7 +913,7 @@ No item d) da \hyperref[lad_hex]{atividade \ref{lad_hex}} apresentamos o terceir
 \def\currentcolor{session2}
 \begin{objectives}{Ladrilhando com losangos}
 {
-	Reconhecer que os losangos são quadriláteros, e portanto, ladrilham o plano.	
+	Reconhecer que os losangos  ladrilham o plano.	
 }{1}{0}
 \end{objectives}
 \begin{sugestions}{Ladrilhando com losangos}
@@ -1005,12 +926,12 @@ No item d) da \hyperref[lad_hex]{atividade \ref{lad_hex}} apresentamos o terceir
 \begin{answer}{Ladrilhando usando losangos}
 {
 	\begin{enumerate}
-	\item Sim, como os ângulos são dois a dois suplementares, em todo o nó se tem $360^{\circ}$.
 	\item É um losango que possui os ângulos de de $60^{\circ}$ e $120^{\circ}$
+	\item Sim, como os ângulos são dois a dois suplementares, em todo o nó se tem $360^{\circ}$.Um outro ladrilhamento possível é o ilustrado na figura:
 	\begin{figure}[H]
 	\centering
 	
-	\includegraphics[width=125bp]{ladrilhamento-professor2}
+	\includegraphics[width=125bp]{ladrilhamento-professor23}
 	\end{figure}
 	\end{enumerate}
 }{1}
@@ -1019,8 +940,7 @@ No item d) da \hyperref[lad_hex]{atividade \ref{lad_hex}} apresentamos o terceir
 \begin{objectives}{Ladrilhamentos usando trapézios}
 {
 	\begin{itemize}
-	\item Aplicar os conceitos vistos até então.
-	\item Analisar os tipos de ladrilhamentos e criar novas suposições.
+	\item Analisar os tipos de ladrilhamentos que podem ser construídos usando trapézios.
 	\end{itemize}
 }{1}{1}
 \end{objectives}
@@ -1040,44 +960,19 @@ No item d) da \hyperref[lad_hex]{atividade \ref{lad_hex}} apresentamos o terceir
 	\item 
 	\adjustbox{valign=t}
 	{
-	\includegraphics[width=150bp]{ladrilhamento-professor3}
+	\includegraphics[width=150bp]{ladrilhamento-professor24}
 	}
 
 	\item
 	\adjustbox{valign=t}
 	{	
-	\includegraphics[width=.9\linewidth]{ladrilhamento-professor4}
+	\includegraphics[width=150bp]{ladrilhamento-professor24}
 	}
 	\end{enumerate}
 	\end{enumerate}
 }{1}
 \end{answer}
-\clearmargin
-\begin{objectives}{Ladrilhamento com pentágonos irregulares}
-{
-	Aplicar os conceitos apresentados na seção
-}{1}{0}
-\end{objectives}
-\begin{sugestions}{Ladrilhamento com pentágonos irregulares}
-{
-	Estas atividades, foram pensadas para serem realizadas com o uso de lápis e papel. Pretende-se com a atividade chamar a atenção para os diferentes tipos de ladrilhamentos e criados comparando entre eles e reconhecer quais padrões encontrado. 
 
-	\textbf{Organização em sala de aula}: Recomenda-se que os estudantes trabalhem individualmente. E no final uma exposição dos diferentes resultados
-
-}{1}{0}
-\end{sugestions}
-\begin{answer}{Ladrilhamento com pentágonos irregulares}
-{
-\begin{enumerate}
-\item Pessoal
-\item \adjustbox{valign=t}
-{
-\includegraphics[width=.9\linewidth]{pentagono}
-}
-\end{enumerate}
-}
-{1}
-\end{answer}
 \clearmargin
 \begin{objectives}{Ladrilhamento dual}
 {
@@ -1099,7 +994,7 @@ No item d) da \hyperref[lad_hex]{atividade \ref{lad_hex}} apresentamos o terceir
 	\begin{figure}[H]
 	\centering
 	
-	\includegraphics[width=.8\linewidth]{ladrilhamento-professor5}
+	\includegraphics[width=.8\linewidth]{reviso4}
 	\end{figure}
 }{1}
 \end{answer}
@@ -1185,24 +1080,6 @@ Faça um ladrilhamento diferente do apresentado usando trapézios 60-120.
 \end{enumerate}
 \end{task}
 
-\begin{task}{Ladrilhamento com pentágonos irregulares}
-Algumas calçadas possuem uma pavimentação diferente, denominada \textit{Cairo Tiling} ou Pavimentação do Cairo (\hyperref[cairo]{figura \ref{cairo}}). Esse nome foi criado devido ao fato de várias ruas do Cairo (no Egito) serem pavimentadas com pedras desse tipo.
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=250bp]{ladrilhamento17}
-	\caption{Cairo Tiling. Fonte \href{encurtador.com.br/eksyU}{Arab West Report}}
-	\label{cairo}
-	\end{figure}
-
-Observamos que os ladrilhos são pentágonos irregulares.
-
-	\begin{enumerate}
-		\item Desenhe um ladrilho pentagonal diferente do apresentado na figura, que possa pavimentar o plano. Explique como ele ladrilhará o plano.
-		\item Esse é o único ladrilho pentagonal possível? Compare com seus colegas.
-	\end{enumerate}
-
-\end{task}
 
 \clearpage
 
@@ -1237,31 +1114,30 @@ O diagrama a seguir ilustra um ladrilhamento de quadrados. Adicionando um ponto 
 	\end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-\baselineskip}}
 \begin{sugestions}{Ladrilhando o plano com polígonos de mais de um tipo}
 {
 Tenha  em mente alguns exemplos de ladrilhamenos semirregulares, incentivando os alunos a terems êxito na  atividade.
 
 Relembrar os ângulos internos de cada polígono regular pode ser útil. Deixando uma dica aos alunos para pensar nisso antes de escolher seus polígonos.
 
-\textbf{Organização em sala de aula}: Nesta atividade, o aluno deverá construir ladrilhamentos com polígonos regulares de tipos diferentes. O ideal é que ele faça isso em grupos de no máximo 4 alunos, para que possam discutir sobre as construções realizadas. 
+\textbf{Organização em sala de aula}:Para realizar essa atividade, deve-se distribuir aos alunos ( ou grupos) polígonos regulares de tipos diferentes. Nesta atividade, o aluno deverá construir ladrilhamentos com polígonos regulares de tipos diferentes. O ideal é que ele faça isso em grupos de no máximo 4 alunos, para que possam discutir sobre as construções realizadas. 
 
 \textbf{Dificuldades previstas}: É possível que inicialmente os alunos tenham alguma dificuldade, principalmente devido ao desafio proposto. Observa-se que a descoberta via experimento utilizando polígonos regulares de diferentes tipos congruentes entre si, pode ser realizada, como foi feito para polígonos regulares de um único tipo. Porém, é preciso ter cuidado, pois poderá conduzir a conclusões errôneas, se não for observado a soma dos ângulos internos dos polígonos que circundam um vértice, no sentido de verificar se essa soma é, ou não, igual a 360º. Os enganos podem ocorrer visto pequenas imperfeições no material utilizado, ou por erros de aproximação do tipo visual. No exemplo (figura) tem-se um pentágono, um hexágono e um octógono regulares. Nesse caso, a soma dos ângulos é 363º, o que ultrapassa em apenas 3º o valor de uma volta completa.
 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=150bp]{ladrilhamento-professor6}
+\includegraphics[width=150bp]{reviso5}
 \end{figure}
 
 }{1}{1}
 \end{sugestions}
 \begin{sugestions}{Ladrilhando o plano com polígonos de mais de um tipo}
 {
-	\textbf{Sugestões gerais}: Espera-se que os alunos consigam chegar à conclusão que existem exatamente 8 tipos de mosaicos semirregulares sendo obtidos com 2 ou, no máximo, 3 tipos de polígonos regulares. Observa-se que nem todos os polígonos regulares podem ser usados para fazer ladrilhamentos semirregulares; assim, pentágonos, heptágonos, eneágonos e decágonos regulares não compõem ladrilhamentos semirregulares
-	Para o desenvolvimento da tarefa, recomenda-se ainda que o professor prepare o material com antecedência, imprimindo os polígonos do encarte em papel cartão, ou solicitando que os alunos o façam. Caso opte por utilizar o site indicado (http://www.cdme.im-uff.mat.br/ppr/ppr-html/ppr-st-br.html) , verifique se o mesmo está funcionando de forma satisfatória. 
+	\textbf{Sugestões gerais}: Espera-se que os alunos consigam chegar à conclusão que existem exatamente 8 tipos de mosaicos semirregulares sendo obtidos com 2 ou, no máximo, 3 tipos de polígonos regulares. Observa-se que nem todos os polígonos regulares podem ser usados para fazer ladrilhamentos semirregulares. Por exemplo, pentágonos, heptágonos, eneágonos e decágonos regulares não compõem ladrilhamentos semirregulares, mas é importante que os alunos tentem fazer ladrilhamentos usando esses tipos de polígonos. 
+	Para o desenvolvimento da tarefa, recomenda-se ainda que o professor prepare o material com antecedência, imprimindo os polígonos do encarte em papel cartão, ou solicitando que os alunos o façam. Caso opte por utilizar material digital, indicamos o site http://www.cdme.im-uff.mat.br/ppr/ppr-html/ppr-st-br.html . Apenas verifique com antecedência se o mesmo está funcionando de forma satisfatória. 
 	 
-	\textbf{Enriquecimento da discussão}: Sugere-se ainda que o professor incetive seus alunos a perceper quais as combinações produzem ladrilhamentos e quais os padrões que estão sendo formados.
+	\textbf{Enriquecimento da discussão}: Sugere-se ainda que o professor incentive seus alunos a perceber quais as combinações produzem ladrilhamentos e quais os padrões que estão sendo formados.
 
 	\textbf{Material necessário}: Polígonos impressos do encarte em folha de gramatura mais alta ou impressos em 3D	
 }{0}{1}
@@ -1275,20 +1151,20 @@ Relembrar os ângulos internos de cada polígono regular pode ser útil. Deixand
 
 \textbf{Parte 1 :} Escolha dois polígonos regulares diferentes que possam ser usados para criar um ladrilhamento. 
 \begin{enumerate}
-\item Quais polígonos foram escolhidos?
-\item Desenhe o ladrilhamento usando papel milimetrado usando os dois polígonos. 
-\item É possível fazer um ladrilhamento, arranjando  apenas dois polígonos ao redor de um vértice? Justifique! 
+\item Quais polígonos regulares foram escolhidos?
+\item Desenhe o ladrilhamento usando papel milimetrado usando os dois polígonos regulares. 
+\item É possível fazer um ladrilhamento, arranjando  apenas dois polígonos regulares ao redor de um vértice? Justifique! 
 \end{enumerate}
 
 \textbf{Parte 2:} Escolha três polígonos regulares diferentes que possam ser usados para criar um ladrilhamento. 
 \begin{enumerate}
-\item Quais polígonos foram escolhidos?
-\item Desenhe o ladrilhamento usando papel milimetrado usando os dois polígonos. 
-\item É possível fazer um ladrilhamento, arranjando  apenas três polígonos ao redor de um vértice? Justifique! 
+\item Quais polígonos regulares foram escolhidos?
+\item Desenhe o ladrilhamento usando papel milimetrado usando os dois polígonos regulares. 
+\item É possível fazer um ladrilhamento, arranjando  apenas três polígonos regulares ao redor de um vértice? Justifique! 
 \end{enumerate}
 
 
-\textbf{Parte 3:} Repita o procedimento realizado na \textbf{Parte 2 }usando 4,5, 6 e 7 polígonos.
+\textbf{Parte 3:} Repita o procedimento realizado na \textbf{Parte 2 }usando 4,5, 6 e 7 polígonos regulares.
 
 \textbf{Parte 4:} Socialize suas respostas com os colegas.
 
@@ -1297,7 +1173,7 @@ Relembrar os ângulos internos de cada polígono regular pode ser útil. Deixand
 
 \arrange{Ladrilhando com polígonos regulares}
 
-Na \hyperref[ladtipos]{atividade \ref{ladtipos}} investigamos  quais os tipos de ladrilhamentos lado-lado, cujos ladrilhos são polígonos regulares de mais de um tipo, podem ser construídos. Esses ladrilhamentos são denominados semirregulares. Alguns desses ladrilhamentos são encontrados em revestimentos de pisos. Alguns são formados por quadrados e octógonos regulares  e outros são formados por quadrados, triângulos equiláteros e hexágonos regulares (\hyperref[lad_tp1]{figura \ref{lad_tp1}}).
+Na \hyperref[ladtipos]{atividade \ref{ladtipos}} investigamos  quais os tipos de ladrilhamentos, cujos ladrilhos são polígonos regulares de mais de um tipo, podem ser construídos. Esses ladrilhamentos são denominados semirregulares. Alguns desses ladrilhamentos são encontrados em revestimentos de pisos. Alguns são formados por quadrados e octógonos regulares  e outros são formados por quadrados, triângulos equiláteros e hexágonos regulares (\hyperref[lad_tp1]{figura \ref{lad_tp1}}).
 
 
 \begin{figure}[H]
@@ -1307,7 +1183,7 @@ Na \hyperref[ladtipos]{atividade \ref{ladtipos}} investigamos  quais os tipos de
 \label{lad_tp1}
 \end{figure}
 
-Um arranjo de polígonos ao redor de um determinado vértice é denominado de configuração. E existe uma notação para ela, que se deve ao número de lados dos polígonos que constituem o arranjo. Por exemplo, a configuração 4-8-8 significa que ao redor de um vértice há um quadrado, um octágono e um octágono, nesta ordem e em qualquer vértice do ladrilhamento. Já a configuração 3- 4- 6- 4 significa que ao redor de um vértice há um triângulo, um quadrado, um hexágono e um quadrado, nesta ordem e em qualquer vértice do ladrilhamento (\hyperref[lad_tp2]{figura \ref{lad_tp2}}).
+Um arranjo de polígonos regulares ao redor de um determinado vértice é denominado de configuração. E existe uma notação para ela, que se deve ao número de lados dos polígonos regulares que constituem o arranjo. Por exemplo, a configuração 4-8-8 significa que ao redor de um vértice há um quadrado,  um octágono regular e um octágono regular, nesta ordem e em qualquer vértice do ladrilhamento. Já a configuração 3- 4- 6- 4 significa que ao redor de um vértice há um triângulo equilátero, um quadrado, um hexágono regular e um quadrado, nesta ordem e em qualquer vértice do ladrilhamento (\hyperref[lad_tp2]{figura \ref{lad_tp2}}).
 
 
 \begin{figure}[H]
@@ -1317,7 +1193,7 @@ Um arranjo de polígonos ao redor de um determinado vértice é denominado de co
 \label{lad_tp2}
 \end{figure}
 
-A existência de ladrilhamentos lado-a-lado cujas peças são polígonos regulares já era conhecida pelos antigos pitagóricos da Matemática grega. Porém, a primeira pessoa a exibir os ladrilhamentos regulares e semirregulares (formados por polígonos regulares de tipos diferentes) foi J. Kepler em um trabalho publicado no início do século XVII, onde consta o seguinte resultado:
+A existência de ladrilhamentos  cujas peças são polígonos regulares já era conhecida pelos antigos pitagóricos da Matemática grega. Porém, a primeira pessoa a exibir os ladrilhamentos regulares e semirregulares (formados por polígonos regulares de tipos diferentes) foi J. Kepler em um trabalho publicado no início do século XVII, onde consta o seguinte resultado:
 
 \begin{observation}{Teorema de Kepler}
 Existem exatamente 11 maneiras de se cobrir o plano utilizando-se exclusivamente polígonos regulares sujeitos as seguintes condições:
@@ -1337,7 +1213,7 @@ Johannes Kepler (1571-1630), em sua obra \textit{Harmonia do Mundo}, de 1619,tro
 
 
 
-Assim, considerando que em torno de um vértice podemos colocar um número $k$ de polígonos regulares, e que $60^{\circ}$ é o menor ângulo interno de um polígono regular, então o maior valor de $k$ é dado por $\displaystyle \frac{360^{\circ}}{60^{\circ}} = 6$, que corresponde a 6 triângulos equiláteros. Por outro lado, o menor número de polígonos necessários para realizar um ladrilhamento em torno de um vértice é 3, temos  $3\leq k \leq 6$.
+Assim, considerando que em torno de um vértice podemos colocar um número $k$ de polígonos regulares, e que $60^{\circ}$ é o menor ângulo interno de um polígono regular, então o maior valor de $k$ é dado por $\displaystyle \frac{360^{\circ}}{60^{\circ}} = 6$, que corresponde a 6 triângulos equiláteros. Por outro lado, o menor número de polígonos regulares  necessários para realizar um ladrilhamento em torno de um vértice é 3, temos  $3\leq k \leq 6$.
 
 Observa-se então que será possível construir ladrilhamentos do plano com 3, 4, 5 ou 6 polígonos regulares em torno de cada vértice (\hyperref[lad_tp3]{figura \ref{lad_tp3}}).
 
@@ -1348,14 +1224,14 @@ Observa-se então que será possível construir ladrilhamentos do plano com 3, 4
 \label{lad_tp3}
 \end{figure}
 
-Examinaremos cada um dos casos separadamento.
+Examinaremos cada um dos casos separadamente.
 
-Considerando $k=3$, ou seja, supondo que três polígonos regulares são arranjados em torno de um vértica de modo que não haja nem lacunas nem sobreposições, o primeiro com $n_1$ lados, o segundo com $n_2$ lados e o terceiro com $n_3$ lados (\hyperref[lad_tp4]{figura \ref{lad_tp4}}).
+Considerando $k=3$, ou seja, supondo que três polígonos regulares são arranjados em torno de um vértice de modo que não haja nem lacunas nem sobreposições, o primeiro com $n_1$ lados, o segundo com $n_2$ lados e o terceiro com $n_3$ lados (\hyperref[lad_tp4]{figura \ref{lad_tp4}}).
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=200bp]{ladrilhamento22}
-\caption{Número de polígonos em torno de um vértice.}
+\caption{Número de polígonos regulares em torno de um vértice.}
 \label{lad_tp4}
 \end{figure}
 
@@ -1393,7 +1269,7 @@ e portanto,
 
 ou seja, $n_1\leq6$.
 
-Suponhamos que $n_1=3$, ou seja, que um dos polígonos dispostos ao redor do vértice seja um triângulo equilátero. Então,
+Suponhamos que $n_1=3$, ou seja, que um dos polígonos regulares dispostos ao redor do vértice seja um triângulo equilátero. Então,
 
 \begin{equation*}
 \frac{1}{3}+\frac{1}{n_2}+\frac{1}{n_3}=\frac{1}{2}.
@@ -1427,10 +1303,9 @@ Assim, substituindo os valores possíveis para $n_2$ e como $n_3$ é um número 
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{5mm}
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-$\bm{n_1}$ & $\bm{n_2}$ & $\bm{n_3}$ \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} \\
 \hline
 $3$ & $7$ & $42$ \\
 \hline
@@ -1442,10 +1317,10 @@ $3$ & $10$ & $15$ \\
 \hline
 $3$ & $12$ & $12$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
-Suponhamos agora que $n_1=4$, ou seja, que um dos polígonos dispostos ao redor do vértice seja um quadrado. Então,
+Suponhamos agora que $n_1=4$, ou seja, que um dos polígonos regulares dispostos ao redor do vértice seja um quadrado. Então,
 
 \begin{equation*}
 \frac{1}{4}+\frac{1}{n_2}+\frac{1}{n_3}=\frac{1}{2}.
@@ -1479,10 +1354,9 @@ Assim, substituindo os valores possíveis para $n_2$ e como $n_3$ é um número 
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{5mm}
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-${n_1}$ & ${n_2}$ & ${n_3}$ \\
+\tcolor{${n_1}$} & \tcolor{${n_2}$} & \tcolor{${n_3}$} \\
 \hline
 $4$ & $5$ & $20$ \\
 \hline
@@ -1490,7 +1364,7 @@ $4$ & $6$ & $12$ \\
 \hline
 $4$ & $8$ & $8$ \\ 
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Procedendo de forma análoga, considerando $n_1 = 5$, temos $5\leq n_2 \leq6$ e uma única solução da equação
@@ -1512,10 +1386,9 @@ estão descritas na tabela a seguir:
 \begin{table}[H]
 \setlength\tabcolsep{5mm}
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-$\bm{n_1}$ & $\bm{n_2}$ & $\bm{n_3}$ \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} \\
 \hline
 $3$ & $7$ & $42$ \\
 \hline
@@ -1537,7 +1410,7 @@ $5$ & $5$ & $10$ \\
 \hline
 $6$ & $6$ & $6$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Considerando $k=4$, ou seja, supondo que quatro polígonos regulares são arranjados em torno de um vértice de modo que não haja nem lacunas nem sobreposições, o primeiro com $n_1$ lados, o segundo com $n_2$ lados, o terceiro com $n_3$ lados e o quarto com $n_4$ lados (\hyperref[lad_tp5]{figura \ref{lad_tp5}}).
@@ -1566,10 +1439,9 @@ Aplicando uma técnica de análise similar a anterior, é possível verificar qu
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{5mm}
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\thead
-$\bm{n_1}$ & $\bm{n_2}$ & $\bm{n_3}$ & $\bm{n_4}$ \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} & \tcolor{$\bm{n_4}$} \\
 \hline
 $3$ & $3$ & $4$ & $12$ \\
 \hline
@@ -1579,7 +1451,7 @@ $3$ & $4$ & $4$ & $6$ \\
 \hline
 $4$ & $4$ & $4$ & $4$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Usando procedimentos semelhantes, determinamos que a classificação das possíveis combinações de $k=5$ polígonos regulares em torno de um vértice de modo que não haja nem lacunas nem sobreposições corresponde a determinação das soluções inteiras e positivas da equação
@@ -1599,16 +1471,15 @@ As únicas soluções inteiras e positivas dessa equação, com $3\leq n_2 \leq 
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{5mm}
-\begin{tabu} to \textwidth{|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-\thead
-$\bm{n_1}$ & $\bm{n_2}$ & $\bm{n_3}$ & $\bm{n_4}$ & $\bm{n_5}$ \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} & \tcolor{$\bm{n_4}$} & \tcolor{$\bm{n_5}$} \\
 \hline
 $3$ & $3$ & $3$ & $3$ & $6$ \\
 \hline
 $3$ & $3$ & $3$ & $4$ & $4$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Finalmente, considerando $k=6$ polígonos regulares ao redor de um vértice, temos que determinar as soluções inteiras e positivas da equação
@@ -1622,9 +1493,9 @@ cuja única solução é $n_1=n_2=n_3=n_4=n_5=n_6=3$
 Resumindo, as possíveis combinações de polígonos regulares que podem ser arranjados em torno de um vértice a modo de cobrir o espaço ao redor dele sem lacunas nem estão dispostas na tabela:
 
 \setlength\tabcolsep{5mm}
-\begin{longtabu} to \textwidth{|c|c|c|c|c|c|c|}
+\begin{longtable}{|c|c|c|c|c|c|c|}
 \hline\endfirsthead
-\cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_1}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_2}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_3}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_4}$}}& \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_5}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_6}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Configuração}}} \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} & \tcolor{$\bm{n_4}$}& \tcolor{$\bm{n_5}$} & \tcolor{$\bm{n_6}$} & \tcolor{Configuração} \\
 \hline
 $3$ & $7$ & $42$ & & & & $3-7-42$ \\
 \hline
@@ -1660,7 +1531,7 @@ $3$ & $3$ & $3$ & $4$ & $4$ & & $3-3-3-4-4$ \\
 \hline
 $3$ & $3$ & $3$ & $3$ & $3$ & $3$ & $3-3-3-3-3-3$ \\
 \hline
-\end{longtabu}
+\end{longtable}
 
 Será que todas as  combinações /configurações que constam na tabela anterior podem ser construídas geometricamente de modo a ladrilhar o plano?
 
@@ -1678,14 +1549,13 @@ Será que todas as  combinações /configurações que constam na tabela anterio
 \end{objectives}
 \begin{sugestions}{Investigando as combinações}
 {
-	\textbf{Organização em sala de aula}: Sugerimos que as atividades sejam realizadas de forma individual ou em duplas. A reflexão mediada pela manipulação dos polígonos pode ser favorecida pela discussão com um colega. Grupos maiores podem gerar dispersão.
+	\textbf{Organização em sala de aula}: Essa é uma continuação da atividade anterior. Sugerimos que as atividades sejam realizadas de forma individual ou em duplas. A reflexão mediada pela manipulação dos polígonos regulares  pode ser favorecida pela discussão com um colega. Grupos maiores podem gerar dispersão.
 
-	\textbf{Dificuldades previstas}: A ideia é que os estudantes  tentem  montar o ladrilhamento usando as peças de cada configuração (quando possível). Se o professor não tiver as peças disponíveis, sugira que os launos façam esboços e tentem chegar em alguma conclusão.
+	\textbf{Dificuldades previstas}: A ideia é que os estudantes  tentem  montar o ladrilhamento usando as peças de cada configuração (quando possível). Se o professor não tiver as peças disponíveis, sugira que os alunos façam esboços e tentem chegar em alguma conclusão.
  
-	\textbf{Enriquecimento da discussão}: Estimule os alunos a justificarem cada vez que eliminarem alguma configuração ou afirmarem que é possível realizar o ladrilhamento. Observe com os alunos que é possível construir um ladrilhamento usando triângulos equiláteros, quadrados e dodecágonos regulares, mas a distribuição de ladrilhos ao redor de cada vértice não será sempre a mesma. Observe com os alunos que quando um ladrilhamento como queremos é possível,  a sequência dos polígonos ao redor
-	de cada vértice é sempre a mesma, em ambos os sentidos. É o  que ocorre com a configuração 3-6-3-6.  Apesar de ser possível construir um vértice do tipo 3-3-6-6 não é possível manter em um ladrilhamento todos os vértices com este mesmo tipo. Questione aos alunos se isso é um problema.
+	\textbf{Enriquecimento da discussão}: Estimule os alunos a justificarem cada vez que eliminarem alguma configuração ou afirmarem que é possível realizar o ladrilhamento. Observe com os alunos que é possível construir um ladrilhamento usando triângulos equiláteros, quadrados e dodecágonos regulares, mas a distribuição de ladrilhos ao redor de cada vértice não será sempre a mesma. Questione os  alunos que quando um ladrilhamento como queremos é possível,  se a sequência dos polígonos regulares  ao redor de cada vértice é sempre a mesma, em ambos os sentidos. Observe que esse fato é o  que ocorre com a configuração 3-6-3-6.  Apesar de ser possível construir um vértice do tipo 3-3-6-6 não é possível manter em um ladrilhamento todos os vértices com este mesmo tipo. Questione aos alunos se isso é um problema.
 
-	\textbf{Material necessário}: Poligonos regulares do encarte.
+	\textbf{Material necessário}: Polígonos regulares do encarte.
 }{1}{1}
 \end{sugestions}
 \begin{answer}{Investigando as combinações}
@@ -1703,9 +1573,9 @@ Será que todas as  combinações /configurações que constam na tabela anterio
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{5mm}
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_1}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_2}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_3}$}} &  \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Configuração}}} \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} &  \tcolor{Configuração} \\
 \hline
 $3$ & $7$ & $42$ & $3-7-42$ \\
 \hline
@@ -1727,7 +1597,7 @@ $5$ & $5$ & $10$ &  $5-5-10$ \\
 \hline
 $6$ & $6$ & $6$ &  $6-6-6$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -1742,9 +1612,9 @@ $6$ & $6$ & $6$ &  $6-6-6$ \\
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{5mm}
-\begin{tabu} to \textwidth{|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-\cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_1}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_2}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_3}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_4}$}}&  \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Configuração}}} \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} & \tcolor{$\bm{n_4}$}&  \tcolor{Configuração} \\
 \hline
 
 $3$ & $3$ & $4$ & $12$ & $3-3-4-12$ \\
@@ -1755,15 +1625,15 @@ $3$ & $4$ & $4$ & $6$ & $3-4-4-6$ \\
 \hline
 $4$ & $4$ & $4$ & $4$ &  $4-4-4-4$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
-Observe que ao dispor os polígonos ao redor de um vértice podemos obter configurações distintas (\hyperref[ladreg1]{figura \ref{ladreg1}}).
+Observe que ao dispor os polígonos regulares ao redor de um vértice podemos obter configurações distintas (\hyperref[ladreg1]{figura \ref{ladreg1}}).
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=300bp]{ladreg1}
-\caption{Arranjo de 4 polígonos ao redor de um vértice.}
+\includegraphics[width=250bp]{ladreg1}
+\caption{Arranjo de 4 polígonos regulares ao redor de um vértice.}
 \label{ladreg1}
 \end{figure}
 
@@ -1776,9 +1646,9 @@ Observe que ao dispor os polígonos ao redor de um vértice podemos obter config
 \textbf{Parte 3:} Considerando as  combinações obtidas para $k=5$ e $k=6$.
 
 \setlength\tabcolsep{5mm}
-\begin{longtabu} to \textwidth{|c|c|c|c|c|c|c|}
+\begin{longtable}{|c|c|c|c|c|c|c|}
 \hline\endfirsthead
-\cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_1}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_2}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_3}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_4}$}}& \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_5}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_6}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Configuração}}} \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} & \tcolor{$\bm{n_4}$} & \tcolor{$\bm{n_5}$} & \tcolor{$\bm{n_6}$} & \tcolor{Configuração} \\
 \hline
 $3$ & $3$ & $3$ & $3$ & $6$ & & $3-3-3-3-6$ \\
 \hline
@@ -1786,7 +1656,7 @@ $3$ & $3$ & $3$ & $4$ & $4$ & & $3-3-3-4-4$ \\
 \hline
 $3$ & $3$ & $3$ & $3$ & $3$ & $3$ & $3-3-3-3-3-3$ \\
 \hline
-\end{longtabu}
+\end{longtable}
 
 Com quais delas é possível ladrilhar o plano? Justifique!
 
@@ -1794,9 +1664,9 @@ Com quais delas é possível ladrilhar o plano? Justifique!
 Observe a tabela e responda:
 
 \setlength\tabcolsep{5mm}
-\begin{longtabu} to \textwidth{|c|c|c|c|c|c|c|}
+\begin{longtable}{|c|c|c|c|c|c|c|}
 \hline\endfirsthead
-\cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_1}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_2}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_3}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_4}$}}& \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_5}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_6}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Configuração}}} \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} & \tcolor{$\bm{n_4}$} & \tcolor{$\bm{n_5}$} & \tcolor{$\bm{n_6}$} & \tcolor{Configuração} \\
 \hline
 $3$ & $7$ & $42$ & & & & $3-7-42$ \\
 \hline
@@ -1832,7 +1702,7 @@ $3$ & $3$ & $3$ & $4$ & $4$ & & $3-3-3-4-4$ \\
 \hline
 $3$ & $3$ & $3$ & $3$ & $3$ & $3$ & $3-3-3-3-3-3$ \\
 \hline
-\end{longtabu}
+\end{longtable}
 
 Quais as configurações que produzem ladrilhamentos do plano?
 
@@ -1843,17 +1713,17 @@ Quais as configurações que produzem ladrilhamentos do plano?
 
 Na primeira parte da \hyperref[at_ladsemi]{atividade \ref{at_ladsemi}} solicitamos investigar quais das dez possíveis combinações de 3 polígonos regulares, definiam um ladrilhamento semirregular. 
 Vamos começar nossa investigação considerando uma combinação de três polígonos $3-n_2-n_3$, dos quais um é um triângulo regular($n_1=3$). 
-Nessa configuração, $3$ se refere a um triângulo equilátero, $n_2$ e $n_3$ são polígonos regulares com lados $n_2$ e $n_3$, respectivamente. Os comprimentos das arestas de todos os polígonos são iguais. Para produzir um ladrilhamento, o triângulo deve ter a mesma configuração  de polígonos em todos os seus três vértices; ou seja, eles devem ser "rodeados" por polígonos da mesma maneira. A \hyperref[semi1]{figura \ref{semi1}} ilustra essa situação.  
+Nessa configuração, $3$ se refere a um triângulo equilátero, $n_2$ e $n_3$ são polígonos regulares com quantidade $n_2$ e $n_3$ de lados, respectivamente. Os comprimentos das arestas de todos os polígonos regulares usados são iguais. Para produzir um ladrilhamento, o triângulo equilátero deve ter a mesma configuração  de polígonos regulares em todos os seus três vértices; ou seja, eles devem ser "rodeados" por polígonos regulares da mesma maneira. A \hyperref[semi1]{figura \ref{semi1}} ilustra essa situação.  
  
 \begin{figure}[H]
 \centering
 \includegraphics[width=150bp]{semi1}
-\caption{Combinação de polígonos ao redor do vértice de um triângulo equilátero.}
+\caption{Combinação de polígonos regulares ao redor do vértice de um triângulo equilátero.}
 \label{semi1}
 \end{figure}
 
-Na \hyperref[semi1]{figura \ref{semi1}}, os polígonos $n_2$ e $n_3$ estão dispostos para completar o vértice azul. No entanto, os vértices vermelhos serão completados apenas quando o polígono em "$??$" for $n_2$ ou $n_3$. Portando, a única maneira de fazer isso é definindo $n_2 = n_3$. Isso significa que o padrão se torna $3-n_2- n_2$. 
-Isso elimina as configurações $3-7-42$, $3-8-24$, $3-9-18$ e $3-10-15$. Portanto, existe apenas uma combinação, $3-12-12$, com a qual se permite um ladrilhamento do plano (\hyperref[semi2]{figura \ref{semi2}})
+Na \hyperref[semi1]{figura \ref{semi1}}, os polígonos regulares  $n_2$ e $n_3$ estão dispostos para completar o vértice azul. No entanto, os vértices vermelhos serão completados apenas quando o polígono regular em "$??$" for $n_2$ ou $n_3$. Portanto, a única maneira de fazer isso é definindo $n_2 = n_3$. Isso significa que o padrão se torna $3-n_2- n_2$. 
+Isso elimina as configurações $3-7-42$, $3-8-24$, $3-9-18$ e $3-10-15$. Logo, existe apenas uma combinação, $3-12-12$, com a qual se permite um ladrilhamento do plano (\hyperref[semi2]{figura \ref{semi2}})
 
 \begin{figure}[H]
 \centering
@@ -1862,7 +1732,7 @@ Isso elimina as configurações $3-7-42$, $3-8-24$, $3-9-18$ e $3-10-15$. Portan
 \label{semi2}
 \end{figure}
 
-O mesmo argumento vale para todos os polígonos de lados ímpares que devem ser combinados com outros dois outros polígonos regulares (\hyperref[semi3]{figura \ref{semi3}}). Isso elimina as combinações $4-5-20$ (leia-o como $5-20-4$) e $5-5-10$.
+O mesmo argumento vale para todos os polígonos com quantidade ímpar de lados, que devem ser combinados com outros dois outros polígonos regulares (\hyperref[semi3]{figura \ref{semi3}}). Isso elimina as combinações $4-5-20$ (leia-o como $5-20-4$) e $5-5-10$.
 
 
 \begin{figure}[H]
@@ -1872,16 +1742,16 @@ O mesmo argumento vale para todos os polígonos de lados ímpares que devem ser 
 \label{semi3}
 \end{figure}
 
-Pensando nas combinações de três polígonos ($3-n_2-n_3$), dos quais um é um quadrado (polígono regular de quatro lados). A  configuração seria $4-n_2-n_3$. A \hyperref[semi4]{figura \ref{semi4}} ilustra que pode haver apenas duas maneiras nas quais a configuração $4-n_2n_3$ se estenderia, mantendo a mesma configuração de polígonos em todos os vértices. 
+Pensando nas combinações de três polígonos regulares  ($3-n_2-n_3$), dos quais um é um quadrado. A  configuração seria $4-n_2-n_3$. A \hyperref[semi4]{figura \ref{semi4}} ilustra que existem apenas duas maneiras nas quais a configuração $4-n_2-n_3$ se estenderia, mantendo a mesma configuração de polígonos regulares em todos os vértices. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=300bp]{semi4}
-\caption{Combinação de polígonos ao redor do vértice de um quadrado.}
+\caption{Combinação de polígonos regulares ao redor do vértice de um quadrado.}
 \label{semi4}
 \end{figure}
 
-Nesse caso ou $n_2= n_3$ ou $n_2$ e $n_3$ são colocados alternadamente ao redor do vértice. Isso qualifica as combinações $4-8-8$ e $4-6-12$ como ilustra a \hyperref[semi5]{figura \ref{semi5}}.
+Nesse caso ou $n_2= n_3$ ou $n_2$ e $n_3$ são colocados alternadamente ao redor do vértice. Isso qualifica as combinações $4-8-8$ e $4-6-12$ como ladrilhamentos semirregulares (\hyperref[semi5]{figura \ref{semi5}}).
 
 \begin{figure}[H]
 \centering
@@ -1892,27 +1762,27 @@ Nesse caso ou $n_2= n_3$ ou $n_2$ e $n_3$ são colocados alternadamente ao redor
 
 Obviamente a configuração $6-6-6$ também produz um ladrilhamento, que é o ladrilhamento regular feito com hexágonos, como já visto.
 
-Resumindo, existem apenas quadro ladrilhamentos usando três polígonos regulares
-ao redor de um vértice, e estes tem as sguintes configurações  $3-12-12$, $4-8-8$,  $4-6-12$  e $6-6-6$.
+Resumindo, existem apenas quatro ladrilhamentos usando três polígonos regulares
+ao redor de um vértice, e estes tem as seguintes configurações  $3-12-12$, $4-8-8$,  $4-6-12$  e $6-6-6$.
 
-Na parte 2 da \hyperref[at_ladsemi]{atividade \ref{at_ladsemi}} consideramos as combinações obtidas para 4 polígonos regulares. 
-Vamos investigar o que ocorre quando ao redor de um vértice tivermos  dois triângulos e outros dois polígonos, ou seja uma configuração do tipo $3-3-n_3-n_4$. Esses polígonos podem ser organizados como $3-3-n_3-n_4$ ou $3-n_3-3-n_4$. 
-Começaremos nossa investigação colocando os polígonos $n_3$ e $n_4$ no vértice azul (\hyperref[semi6]{figura \ref{semi6}}). 
+Na parte 2 da \hyperref[at_ladsemi]{atividade \ref{at_ladsemi}} consideramos as combinações obtidas quando usamos  4 polígonos regulares. 
+Vamos investigar o que ocorre quando ao redor de um vértice se tivermos  dois triângulos equiláteros e outros dois polígonos regulares, ou seja uma configuração do tipo $3-3-n_3-n_4$. Esses polígonos regulares podem ser organizados como $3-3-n_3-n_4$ ou $3-n_3-3-n_4$. 
+Começaremos nossa investigação colocando os polígonos regulares $n_3$ e $n_4$ no vértice azul (\hyperref[semi6]{figura \ref{semi6}}). 
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=150bp]{semi6}
-\caption{Combinação de polígonos ao redor de um vértice de um triângulo equilátero.}
+\caption{Combinação de polígonos regulares ao redor de um vértice de um triângulo equilátero.}
 \label{semi6}
 \end{figure}
 
 
-Nesse caso, a configuração dos polígonos em torno do vértice azul seria $3-3-n_3-n_4$. Para ter a mesma configuração no vértice vermelho, os polígonos devem ser organizados no sentido contrário. No vértice branco, entretanto, haverá três triângulos, perfazendo a soma total dos ângulos $180^{\circ}$, não deixando nenhuma possibilidade de encaixar qualquer outro polígono. 
+Nesse caso, a configuração dos polígonos regulares em torno do vértice azul seria $3-3-n_3-n_4$. Para ter a mesma configuração no vértice vermelho, os polígonos regulares devem ser organizados no sentido contrário. No vértice branco, entretanto, haverá três triângulos equiláteros, perfazendo a soma total dos ângulos internos como $180^{\circ}$, não deixando nenhuma possibilidade de encaixar qualquer outro polígono. 
 
 Portanto, configurações do tipo $3-3-n_3-n_4$ não produzem um ladrilhamento semirregular. Isso mostra a impossibilidade das configurações $3-3-4-12$ e $3-3-6-6$.
 
-A outra possiblidade é um  arranjo do tipo $3-n_3-3-n_4$, ao redor do vértice azul, como ilustra a \hyperref[semi7]{figura \ref{semi7}}.
+A outra possibilidade é um  arranjo do tipo $3-n_3-3-n_4$, ao redor do vértice azul, como ilustra a \hyperref[semi7]{figura \ref{semi7}}.
 
 
 
@@ -1923,7 +1793,7 @@ A outra possiblidade é um  arranjo do tipo $3-n_3-3-n_4$, ao redor do vértice 
 \label{semi7}
 \end{figure}
 
-Observamos que para manter a mesma configuração no vértice branco, os polígonos $n_3$  e $n_4$ teriam que ser iguais. Assim, a configuração $3-3-4-12$ (dois triângulos, um quadrado e um dodecágono) não produzirá um ladrilhamento. Porém, a combinação $3-3-6-6$ quando reorganizada como $3-6-3-6$ produzirá um ladrilhamento semirregular (\hyperref[semi8]{figura \ref{semi8}}).
+Observamos que para manter a mesma configuração no vértice branco, os polígonos regulares com quantidade de lados  $n_3$  e $n_4$ teriam que ser iguais. Assim, a configuração $3-3-4-12$ (dois triângulos equiláteros, um quadrado e um dodecágono regular) não produzirá um ladrilhamento. Porém, a combinação $3-3-6-6$ quando reorganizada como $3-6-3-6$ produzirá um ladrilhamento semirregular (\hyperref[semi8]{figura \ref{semi8}}).
 
 
 
@@ -1934,7 +1804,7 @@ Observamos que para manter a mesma configuração no vértice branco, os polígo
 \label{semi8}
 \end{figure}
 
-Fazendo um raciocínio semelhante, podemos concluir que a combinação $3-4-4-6$ não produz um ladrilhamento semirregular. No entanto, se os polígonos forem reorganizados como $3-4-6-4$ então, é possível produzir um ladrilhamento semirregular, como ilustra a \hyperref[semi9]{figura \ref{semi9}}.
+Fazendo um raciocínio semelhante, podemos concluir que a combinação $3-4-4-6$ não produz um ladrilhamento semirregular. No entanto, se os polígonos regulares forem reorganizados como $3-4-6-4$ então, é possível produzir um ladrilhamento semirregular, como ilustra a \hyperref[semi9]{figura \ref{semi9}}.
 
 \begin{figure}[H]
 \centering
@@ -1946,16 +1816,16 @@ Fazendo um raciocínio semelhante, podemos concluir que a combinação $3-4-4-6$
 
 E obviamente, a configuração $4-4-4-4$ produz o ladrilhamento regular formado apenas por quadrados, conforme foi visto anteriormente.
 
-A terceira parte da \hyperref[at_ladsemi]{atividade \ref{at_ladsemi}}, tinha como objetivo investigar as combinações com 5 e 6 polígonos ao redor de um vértice.
+A terceira parte da \hyperref[at_ladsemi]{atividade \ref{at_ladsemi}}, tinha como objetivo investigar as combinações com 5 e 6 polígonos regulares ao redor de um vértice.
 
-A combinação para 6 poligonos $3-3-3-3-3-3$ produz o ladrilhamento regular formado por triângulos equiláteros.
+A combinação para 6 polígonos $3-3-3-3-3-3$ produz o ladrilhamento regular formado por triângulos equiláteros.
 
-Ainda restam duas configurações de 5 polígonos. Vamos  considerá-las separadamente. A configuração $3-3-3-4-4$, também pode ser arranjada como  $3-3- 4-3-4$. A \hyperref[semi10]{figura \ref{semi10}} ilustra um arranjo em torno do vértice de um triângulo para ambas configurações.
+Ainda restam duas configurações de 5 polígonos regulares. Vamos  considerá-las separadamente. A configuração $3-3-3-4-4$, também pode ser arranjada como  $3-3- 4-3-4$. A \hyperref[semi10]{figura \ref{semi10}} ilustra um arranjo em torno do vértice de um triângulo equilátero para ambas configurações.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=300bp]{semi10}
-\caption{Combinação de polígonos ao redor de um vértice de um triângulo equilátero.}
+\caption{Combinação de polígonos regulares ao redor de um vértice de um triângulo equilátero.}
 \label{semi10}
 \end{figure}
 
@@ -1970,13 +1840,13 @@ Observamos que é possível criar ladrilhamentos semirregulares para as configur
 
  
 
-E, finalmente, a \hyperref[semi12]{figura \ref{semi12}} ilustra o ladrilhamento produzido pela coonfiguração $3-3-3-3-6$.
+E, finalmente, a \hyperref[semi12]{figura \ref{semi12}} ilustra o ladrilhamento produzido pela configuração $3-3-3-3-6$.
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=150bp]{semi12}
-\caption{Ladrilhamento produzido pela coonfiguração 3-3-3-3-6.}
+\caption{Ladrilhamento produzido pela configuração 3-3-3-3-6.}
 \label{semi12}
 \end{figure}
 
@@ -1986,9 +1856,9 @@ A tabela a seguir ilustra um resumo das configurações apresentadas.
 
 
 \setlength\tabcolsep{3.5mm}
-\begin{longtabu} to \textwidth{|c|c|c|c|c|c|c|c|c}
+\begin{longtable}{|c|c|c|c|c|c|c|c|c}
 \hline\endfirsthead
-\cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_1}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_2}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_3}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_4}$}}& \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_5}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{$\bm{n_6}$}} & \cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Configuração}}} & \tcolor{\makecell{Ladrilha \\ o plano}} \\
+\tcolor{$\bm{n_1}$} & \tcolor{$\bm{n_2}$} & \tcolor{$\bm{n_3}$} & \tcolor{$\bm{n_4}$}& \tcolor{$\bm{n_5}$} & \tcolor{$\bm{n_6}$} & \tcolor{Configuração} & \tcolor{\makecell{Ladrilha \\ o plano}} \\
 \hline
 $3$ & $7$ & $42$ & & & & $3-7-42$ & Não\\
 \hline
@@ -2024,7 +1894,7 @@ $3$ & $3$ & $4$ & $12$ & & & $3-3-4-12$ & Não\\
 \hline
 \titem{$\bm{3}$} & \titem{$\bm{3}$} & \titem{$\bm{3}$} & \titem{$\bm{3}$} & \titem{$\bm{3}$} & \titem{$\bm{3}$} & \titem{$\bm{3-3-3-3-3-3}$} & \titem{Sim}\\
 \hline
-\end{longtabu}
+\end{longtable}
 
 A \hyperref[semit]{figura \ref{semit}} ilustra todos os ladrilhamentos semirregulares.
 
@@ -2036,7 +1906,7 @@ A \hyperref[semit]{figura \ref{semit}} ilustra todos os ladrilhamentos semirregu
 \label{semit}
 \end{figure}
 
-Ou seja, acabamos de mostrar que existem exatamente 11 maneiras de se cobrir o plano utilizando-se exclusivamente polígonos regulares sujeitos as seguintes condições:
+Ou seja, acabamos de mostrar que existem exatamente 11 maneiras de  cobrir o plano utilizando-se exclusivamente polígonos regulares sujeitos as seguintes condições:
 \begin{itemize}
 \item se dois polígonos regulares intersectam-se, então essa interseção é um lado ou um vértice comum.
 \item A distribuição dos polígonos regulares ao redor de cada vértice é sempre a mesma.
@@ -2047,12 +1917,11 @@ Ou seja, acabamos de mostrar que existem exatamente 11 maneiras de se cobrir o p
 
 \cleardoublepage
 \def\currentcolor{session1}
-\begin{texto}
+%\begin{texto}
 {
-\paragraph {Objetivo geral da seção}
-Reconhecer que existem outros ladrilhamentos, como os aperiódios e os que não são do tipo lado a lado.}
-\end{texto}
-\marginpar{\vspace{-\baselineskip}}
+%\paragraph {Objetivo geral da seção}
+%Reconhecer que existem outros ladrilhamentos, como os aperiódicos e os que não são do tipo lado a lado.}
+%\end{texto}
 \begin{objectives}{Ladrilhando com retângulos}
 {
 	\begin{itemize}
@@ -2061,12 +1930,11 @@ Reconhecer que existem outros ladrilhamentos, como os aperiódios e os que não 
 	\end{itemize}	
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2\baselineskip}}
 \begin{sugestions}{Ladrilhando com retângulos}
 {
 	\textbf{Organização em sala de aula}: A atividade pode ser feita em duplas, para que os alunos possam discutir com o colega os ladrilhamentos que serão construídos.
 
-	\textbf{Dificuldades previstas}: Nesta atividade, o aluno deverá construir um ladrilhamento que não é do tipo lado a lado..É possível que inicialmente os alunos tenham alguma dificuldade, pois deverão quebrar as regras estabelecidas. Ou seja, poderão construir ladrilhamentos onde existem arestas que não são comuns a dois polígonos.
+	\textbf{Dificuldades previstas}: Nesta atividade, o aluno deverá construir um ladrilhamento que não é o usual ( lado a lado). É possível que inicialmente os alunos tenham alguma dificuldade, pois deverão quebrar as regras estabelecidas. Ou seja, poderão construir ladrilhamentos onde existem arestas que não são comuns a dois polígonos.
 
 	\textbf{Enriquecimento da discussão}: Observe com os alunos que esse tipo de ladrilho é muito comum no revestimento do tipo parquet. Faça-os perceber que existem vários designs possíveis no momento que não existe mais a necessidade das arestas dos polígonos serem comuns. 
 
@@ -2074,15 +1942,13 @@ Reconhecer que existem outros ladrilhamentos, como os aperiódios e os que não 
 
 }{1}{1}
 \end{sugestions}
-\marginpar{\vspace{-\baselineskip}}
 \begin{answer}{Ladrilhando com retângulos}
 {
 	\begin{enumerate}
-	\item Não são ladrilhamentos lado a lado.
 	\item Qualquer um desses padrões, por exemplo:
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=.5\linewidth]{lad_ret}
+	\includegraphics[width=.5\linewidth]{reviso6}
 	\end{figure}
 	\end{enumerate}
 }{1}
@@ -2099,7 +1965,7 @@ Reconhecer que existem outros ladrilhamentos, como os aperiódios e os que não 
 {
 	\textbf{Organização em sala de aula}: A atividade pode ser feita em duplas, para que os alunos possam discutir com o colega os ladrilhamentos que serão construídos.
 
-	\textbf{Dificuldades}: A primeira dificuldade poderá ser a construção das peças, pois será necessário usar um pentágono regular. Nesse sentido oriente seus alunos a utilizarem o material do encarte. Acredita-se também que o aluno possa ter dificuldade em ladrilhar o plano com as formas, pois poderá fazer um ladrilhamento do tipo não periódico, que é diferente do que já estava sendo apresentado. 
+	\textbf{Dificuldades}: A primeira dificuldade poderá ser a construção das peças, pois será necessário usar um pentágono regular. Para facilitar o processo,  as peças ( pipa e flecha) fazem parte do encarte, oriente seus alunos a utilizarem-no. Acredita-se também que o aluno possa ter dificuldade em ladrilhar o plano com as formas, pois poderá fazer um ladrilhamento do tipo não periódico, que é diferente do que já estava sendo apresentado. 
 
 	\textbf{Enriquecimento da discussão}: Faça os alunos perceberem  que existem vários designs possíveis usando essas duas peças, porém a maioria produzirá ladrilhamentos que não são periódicos. Questione os alunos sobre o tipo de transformação usada, fazendo questionamento do tipo: você usou translações, rotações ou reflexões para criar seu design? Você usou uma combinação de transformações? 
 
@@ -2109,7 +1975,6 @@ Reconhecer que existem outros ladrilhamentos, como os aperiódios e os que não 
 \begin{answer}{Ladrilhamento do tipo Penrose}
 {
 	\begin{enumerate}
-	\item ---
 	\item ---
 	\item Translações e rotações, por exemplo.
 	\item Não periódico e feitos com um ladrilho não convexo.
@@ -2130,9 +1995,9 @@ Reconhecer que existem outros ladrilhamentos, como os aperiódios e os que não 
 {
 	\textbf{Organização em sala de aula}: Essa atividade foi planejada para ser realizada de forma individual. 
 
-	\textbf{Dificuldades previstas}: Nesta atividade, o aluno deverá construir um  ladrilhamento começando com um polígono regular , mas fazendo alterações no seu formato.  Acreditamos que se o aluno seguir as orientações, não terá dificuldade em realizar a atividade.
+	\textbf{Dificuldades previstas}: Nesta atividade, o aluno deverá construir um  ladrilhamento começando com um polígono regular , mas fazendo alterações no seu formato.  Acreditamos que se o aluno seguir as orientações, não terá dificuldade em realizar a atividade. Caso prefira usar um software para realizar essa atividade, recomenda-se olhar o vídeo https://youtu.be/zZ2wrNdYchw que indica um aplicativo interessante para esse tipo de construção.  
 
-	\textbf{Enriquecimento da discussão}: lembre aos alunos que no inicio do capitulo trabalhamos com um ladrilhamento utilizando lagartos. A técnica que o artista que inventou aquele ladrilamento é a mesma que estamos utilizando essa atividade. 
+	\textbf{Enriquecimento da discussão}: lembre aos alunos que no início do capítulo trabalhamos com um ladrilhamento utilizando lagartos. A técnica que o artista que inventou aquele ladrilhamento é a mesma que estamos utilizando essa atividade. 
 
 	\textbf{Material necessário}: Polígono impresso do encarte, tesoura, cola, lápis de cor
 }{1}{1}
@@ -2165,12 +2030,12 @@ Os pisos de algumas casa são cobertos por ladrilhos retangulares. O padrão ilu
 \clearpage
 \begin{task}{Ladrilhamento do tipo Penrose}\label{at_outros2}
 
-Parte da rua central de Helsinque na Finlândia (\hyperref[pen1]{figura \ref{pen1}}) foi transformada em uma rua para pedestres e pavimentada com ladrilhos do tipo Penrose. Esses ladrilhos foram inventados pelo matemático inglês Roger Penrose na década de 1970.
+Parte do hall central do departamento de Matemática e Ciência da Computação no Carlton College em Minessota nos Estados Unidos, usa ladrilhos do tipo Penrose (\hyperref[pen1]{figura \ref{pen1}}). Esses ladrilhos foram inventados pelo matemático inglês Roger Penrose na década de 1970.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=230bp]{ladrilhamento51}
-	\caption{Pavimento da rua central de Helsinque. Fonte: Adaptado de  \href{https://stevethings.wordpress.com/2015/12/21/penrose-tiling/} {Stevethings} }
+	\includegraphics[width=230bp]{reviso8}
+	\caption{Padrão de Pavimento do Carleton College. Fonte: Adaptado de  \href{https://www.math.carleton.edu/penrose/index.html} {Carleton} }
 	\label{pen1}
 \end{figure}
 
@@ -2184,8 +2049,7 @@ Observe que os ladrilhos têm em duas formas diferentes, a pipa e a flecha. Esse
 	\end{figure}
 	
 	\begin{enumerate}
-		\item Construa pipas e flechas usando um pentágono regular.
-		\item Copie as formas em um papel de gramatura mais alta. Recorte-as e crie dois ladrilhamentos diferentes.
+			\item Copie as formas da pipa e da flecha ( no encarte) em um papel de gramatura mais alta. Recorte-as e crie dois ladrilhamentos diferentes.
 		\item Escreva um breve parágrafo explicando quais transformações geométricas você usou para criar o ladrilhamento no item anterior desta atividade. 
 		\item O que os ladrilhamentos construídos nessa atividade possuem de diferente dos ladrilhamentos construídos anteriormente?
 	\end{enumerate}
@@ -2440,7 +2304,6 @@ A mesma técnica pode ser observada no vídeo \href{ https://youtu.be/T6L6bE_bTM
 
 }{0}{1}
 \end{sugestions}
-\marginpar{\vspace{\baselineskip}}
 \begin{answer}{Identificando as transformações}
 {
 	\begin{enumerate}
@@ -2549,8 +2412,9 @@ A mesma técnica pode ser observada no vídeo \href{ https://youtu.be/T6L6bE_bTM
 	\end{enumerate}
 }{0}
 \end{answer}
-\practice{Outros ladrilhamentos }
 
+\practice{Outros ladrilhamentos }
+\vspace{-.5em}
 
 \begin{task}{Como criar um ladrilhamento usando translações}
 
@@ -2778,7 +2642,7 @@ Sabrina está desenhando um papel de parede padronizado por um ladrilhamento. El
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/financeira_bibliografia.bib}
 
 \nocite{*}

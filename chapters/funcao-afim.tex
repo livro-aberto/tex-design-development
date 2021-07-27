@@ -1,93 +1,35 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-afim}{abertura-afim-professor}
 
-\ifnum \aluno=1
-\renewcommand\chapterillustration{abertura-afim}
-\else
-\renewcommand\chapterillustration{abertura-afim-professor}
-\fi
-\renewcommand\chapterwhat{Funções linear e afim e suas representações algébrica e gráfica, taxa de variação, proporcionalidade direta, funções afins de domínio discreto (Progressões Aritméticas), Aplicações.}
-\renewcommand\chapterbecause{O modelo de variação constante é um dos modelos mais presentes em observações científicas e até mesmo em nosso cotidiano. Ele pode ser identificado por exemplo, em relações que modelam a compra/consumo e venda, o esvaziamento de um recipiente por um ralo em função do tempo ou na relação entre distância e tempo do “movimento uniforme” estudado pela Cinemática, entre tantos outros. Um caso particularmente importante é aquele em que há proporcionalidade entre as grandezas envolvidas na modelagem. As ide ias desenvolvidas neste capítulo servem como base para aplicações em diversas áreas.}
+\chapterwhat{Funções linear e afim e suas representações algébrica e gráfica, taxa de variação, proporcionalidade direta, funções afins de domínio discreto (Progressões Aritméticas), Aplicações.}
+
+\chapterbecause{O modelo de variação constante é um dos modelos mais presentes em observações científicas e até mesmo em nosso cotidiano. Ele pode ser identificado por exemplo, em relações que modelam a compra/consumo e venda, o esvaziamento de um recipiente por um ralo em função do tempo ou na relação entre distância e tempo do “movimento uniforme” estudado pela Cinemática, entre tantos outros. Um caso particularmente importante é aquele em que há proporcionalidade entre as grandezas envolvidas na modelagem. As ide ias desenvolvidas neste capítulo servem como base para aplicações em diversas áreas.}
+
 \chapter{Função Afim}
 
+%%%% Página de créditos
 
+\autorum{Gladson Antunes (UNIRIO)}
+\autordois{Michel Cambrainha (UNIRIO)}
+\autortres{Bruno Vianna (Colégio Pedro II)}
 
-\mbox{}\thispagestyle{empty}\clearpage
+\revisorum{Cydara Ripoll}
+\revisordois{Letícia Rangel}
 
-\thispagestyle{empty}
+\versao{1.2}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\graficos{Beatriz Cabral e Tarso Caldas}
+\ilustracao{Miller  Guglielmo}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\autordacapa{Scott Webb}{Unsplash}{https://unsplash.com/photos/fMUIVein7Ng}
 
-\vspace*{.3cm}
+%Licença cc-by-sa
+\ccbysa
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+% Link para versão digital:
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF107.html}
 
-Versão digital do capítulo:
+\creditos
 
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF107.html}
-
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Função Afim\\
-\\
-Ano/ Versão: & 2020 / versão 1.2 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação:& Fabio Simas, \\
-            & Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Gladson Antunes (UNIRIO),\\
-        & Michel Cambrainha (UNIRIO),\\
-             & Bruno Vianna (Colégio Pedro II).\\
-\\
-Revisão: &  Cydara Ripoll  \\
-         &  Letícia Rangel \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & Miller  Guglielmo \\ 
-\\
-Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
-\\
-  Capa: & Foto de Scott Webb, no Unplash \\
-        & https://unsplash.com/photos/fMUIVein7Ng \\
-
-\end{tabular}
-
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -193,10 +135,9 @@ No item (b), podem surgir respostas como: a primeira coluna aumenta de “uma em
 
 \adjustbox{valign=t}
 {
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Tempo ($h$) & volume (litros) \\
+\tcolor{Tempo ($h$)} & \tcolor{Volume (litros)} \\
 \hline
 0 & 0 \\
 \hline
@@ -210,7 +151,7 @@ Tempo ($h$) & volume (litros) \\
 \hline
 5 & 1000 \\
 \hline
-\end{tabu}
+\end{tabular}
 }
 
 \vspace{2em}
@@ -219,10 +160,9 @@ Piscina 2
 
 \adjustbox{valign=t}
 {
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Tempo ($h$) & volume (litros) \\
+\tcolor{Tempo ($h$)} & \tcolor{Volume (litros)} \\
 \hline
 0 & 0 \\
 \hline
@@ -242,7 +182,7 @@ Tempo ($h$) & volume (litros) \\
 \hline
 8 & 1000 \\
 \hline
-\end{tabu}
+\end{tabular}
 }
 
 \vspace{2em}
@@ -392,7 +332,7 @@ x\quad &\overline{\quad \quad \quad}& \quad f(x) \\
 \vdots \quad &\overline{\quad \quad \quad}& \quad \vdots\\
   \end{array}\]
 
-\begin{observation}{}
+\begin{observation}
 Usando a ``regra de três'' nas duas primeiras linhas fica assim
 \[\begin{array}{ccc}
 x \quad &\overline{\quad \quad \quad}& \quad f(x)\\
@@ -444,7 +384,7 @@ Podemos afirmar também que \(x\) é uma função linear de \(y\)?
 {
 \begin{enumerate}
 
-\item A partir da taxa de câmbio fornecida sabemos que 1 dólar americano é equivalente a R\$ $320{,}00$, e portanto, para comprar 100 dólares americanos serão necessários R\$ $320{,}00$. \si{kg}
+\item A partir da taxa de câmbio fornecida sabemos que 1 dólar americano é equivalente a R\$ $320{,}00$, e portanto, para comprar 100 dólares americanos serão necessários R\$ $320{,}00$. 
 
 \item Como nesse dia 1 euro é equivalente a R\$ $4{,}00$, então será necessário desembolsar R\$ $800{,}00$ para a compra de $200$ euros.
 
@@ -526,7 +466,7 @@ Podemos afirmar também que \(x\) é uma função linear de \(y\)?
 \clearmargin
 \begin{answer}{Qual é a área}
 {
-  \begin{enumerate}
+  \begin{enumerate}\setcounter{enumi}{4}
   \item Fazendo uma regra de três, item 1).
   \item $S:[0,360]\rightarrow\R$ em que $S(x)=\frac{x}{18}$
   \end{enumerate}
@@ -925,10 +865,9 @@ Em uma circunferência, podemos relacionar a área \(A\) e o raio \(r\) por meio
 \begin{enumerate}
 \item \adjustbox{valign=t}
 {
-\begin{tabu} to \textwidth{|>{$}c<{$}|>{$}c<{$}|>{$}c<{$}|}
+\begin{tabular}{|>{$}c<{$}|>{$}c<{$}|>{$}c<{$}|}
 \hline
-\rowfont{\color{white}}\rowcolor{\currentcolor!80}
-\bm{x} & \bm{h(x)} & \bm{m(x)}\tabularnewline
+\tmat{\bm{x}} & \tmat{\bm{h(x)}} & \tmat{\bm{m(x)}} \tabularnewline
 \hline
 0 & 0 & 0 \tabularnewline
 \hline
@@ -942,7 +881,7 @@ Em uma circunferência, podemos relacionar a área \(A\) e o raio \(r\) por meio
 \hline
 5 & 0{,}1025 &1{,}5375 \tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 
 }
 
@@ -1047,10 +986,9 @@ Em uma circunferência, podemos relacionar a área \(A\) e o raio \(r\) por meio
 
 \item \adjustbox{valign=t}
 {
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-$t$(min) & Porcentagem de recarga \\
+\tcolor{$t$ (min)} & \tcolor{Porcentagem de recarga} \\
 \hline
 0 & 0 \\
 25 & 20 \\
@@ -1063,7 +1001,7 @@ $t$(min) & Porcentagem de recarga \\
 \hline
 125 & 100 \\
 \hline
-\end{tabu}
+\end{tabular}
 }
 
 \item\adjustbox{valign=t}
@@ -1114,10 +1052,9 @@ Complete a tabela a seguir que relaciona os valores de \(h(x)\) e de \(m(x)\) co
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|c|c|}
+\begin{tabular}{|l|c|c|}
 \hline
-\thead
-\(\bm{x}\) & \(\bm{h(x)}\) & \(\bm{m(x)}\) \\
+\tcolor{\(\bm{x}\)} & \tcolor{\(\bm{h(x)}\)} & \tcolor{\(\bm{m(x)}\)} \\
 \hline
 0 & & \\
 \hline
@@ -1131,7 +1068,7 @@ Complete a tabela a seguir que relaciona os valores de \(h(x)\) e de \(m(x)\) co
 \hline
 5 & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item {} 
@@ -1592,44 +1529,43 @@ Concluímos, assim, que toda reta não vertical que contém a origem é o gráfi
 
 Há \(1\) ano você adquiriu um purificador de água com capacidade de refrigeração, e deseja saber quanto tempo falta para realizar a troca do filtro interno. No manual do fabricante do seu purificador, você encontra o seguinte quadro:
 
-%\centering
-\setlength\tabulinesep{1mm}
-\begin{longtabu} to \textwidth{|c|c|c|c|c|c|}
+
+\begin{longtable}{|e{3cm}|e{2cm}|e{2cm}|e{2cm}|e{2cm}|e{2cm}|}
 \hline\endfirsthead
-%\thead
-\cellcolor{\currentcolor!80}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{FIT}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{FLAT}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{PLUS}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{SLIM}}}&\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{STAR}}}\\
+
+\tcolor{} & \tcolor{FIT} & \tcolor{FLAT}& \tcolor{PLUS} & \tcolor{SLIM} & \tcolor{STAR} \\
 \hline
 \makecell{Dimensões \\ Altura \\ Largura \\ Profundidade} &\makecell{ 27cm \\ 29cm \\ 36cm} & \makecell{29cm \\ 36cm \\36cm} & \makecell{40cm \\ 30cm \\ 45cm} & \makecell{36cm \\ 25cm \\ 41cm} & \makecell{40cm \\ 30cm \\ 36cm}\\
 \hline
 Peso bruto & 13kg & 12kg &14kg & 13kg & 13kg \\
 \hline
-\parbox{2cm}{\centering Capacidade de refrigeração com ambiente a $32^{\circ}$C e água a $27^{\circ}$C} & \parbox{2cm}{\centering 1,1 litros/hora (atende até 15 pessoas)} & \parbox{2cm}{\centering 1,5 litros/hora (atende até 10 pessoas)} & \parbox{2cm}{\centering 4,4 litros/hora (atende até 30 pessoas)} & \parbox{2cm}{\centering 1,5 litros/hora (atende até 10 pessoas)} & \parbox{2cm}{\centering 2,2 litros/hora (atende até 15 pessoas)}\\ 
+Capacidade de refrigeração com ambiente a $32^{\circ}$C e água a $27^{\circ}$C & 1,1 litros/hora (atende até 15 pessoas) & 1,5 litros/hora (atende até 10 pessoas) & 4,4 litros/hora (atende até 30 pessoas) & 1,5 litros/hora (atende até 10 pessoas) & 2,2 litros/hora (atende até 15 pessoas)\\ 
 \hline 
-\parbox{2cm}{\centering Capacidade de armazenamento de águal gelada} & 1,2 litros & 1.5 litros & 2 litros & 1.5 litros & 2 litros \\
+Capacidade de armazenamento de águal gelada & 1,2 litros & 1.5 litros & 2 litros & 1.5 litros & 2 litros \\
 \hline
 \makecell{Gás \\ refrigerante} & R134a & R134a & R134a & R134a & R134a \\
 \hline
 Carga de gás & 36g & 32g & 32g & 32g & 36g \\
 \hline
-Tensão & \parbox{2cm}{\centering 127V ou 220V-60Hz} & \parbox{2cm}{\centering 127V ou 220V-60Hz} & \parbox{2cm}{\centering 127V ou 220V-60Hz} &  \parbox{2cm}{\centering 127V ou 220V-60Hz} &  \parbox{2cm}{\centering 127V ou 220V-60Hz} \\
+Tensão & 127V ou 220V-60Hz & 127V ou 220V-60Hz & 127V ou 220V-60Hz &  127V ou 220V-60Hz &  127V ou 220V-60Hz \\
 \hline 
 Potência & 100W & 100W & 100W & 100W & 100W \\
 \hline
 Pressão nominal & \multicolumn{5}{c|}{0,196MPa (30 metros de coluna de água)} \\
 \hline
-\parbox{3cm}{\centering Temperatura min/max de rede hidráulica} & \multicolumn{5}{c|}{0,29MPa a 0,392MPa (3 a 40 metros de coluna de água)}\\
+Temperatura min/max de rede hidráulica & \multicolumn{5}{c|}{0,29MPa a 0,392MPa (3 a 40 metros de coluna de água)}\\
 \hline
-\parbox{3cm}{\centering Temperatura min/max de trabalho}&\multicolumn{5}{c|}{$5^{\circ}$C a $42^{\circ}$C}\\
+Temperatura min/max de trabalho & \multicolumn{5}{c|}{$5^{\circ}$C a $42^{\circ}$C}\\
 \hline
-\parbox{2cm}{\centering Vazão elemento filtrante} & \multicolumn{5}{c|}{4.000 litros} \\
+Vazão elemento filtrante & \multicolumn{5}{c|}{4.000 litros} \\
 \hline
-\parbox{2cm}{\centering Vazão máxima recomendada} & \multicolumn{5}{c|}{0,75 litros/minuto} \\
+Vazão máxima recomendada & \multicolumn{5}{c|}{0,75 litros/minuto} \\
 \hline
-\parbox{2cm}{\centering Volume interno do aparelho} & 1,6 litros & 2 litros & 2,5 litros & 2 litros & 2,5 litros \\
+Volume interno do aparelho & 1,6 litros & 2 litros & 2,5 litros & 2 litros & 2,5 litros \\
 \hline
-\parbox{2cm}{\centering Volume de referência para ensio de particulado} &\multicolumn{5}{c|}{4.000 litros}\\
+Volume de referência para ensio de particulado & \multicolumn{5}{c|}{4.000 litros}\\
 \hline
-\end{longtabu}
+\end{longtable}
 \begin{enumerate}
 \item Quais informações do quadro são relevantes para responder à sua dúvida?
 
@@ -1826,10 +1762,9 @@ Para facilitar a discussão, chamemos essa função de $ d(t) $. Seu domínio co
 \begin{minipage}{0.3\textwidth}
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|c|}
+\begin{tabular}{|l|c|}
 \hline
-\thead
-$t$ & $d(t)$ \\ 
+\tcolor{$t$} & \tcolor{$d(t)$} \\ 
 \hline 
 $0$ & $ 1-1=0 $ \\ 
 \hline 
@@ -1841,7 +1776,7 @@ $3$ & $ 7-1=6 $ \\
 \hline 
 $4$ & $ 9-1=8 $ \\ 
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{minipage}
 
@@ -1885,7 +1820,7 @@ Pelo que tínhamos visto, $ d(t)=f(t)-1 $, o que nos leva à expressão
 f(t)=2t+1
 \]
 
-\begin{observation}{}
+\begin{observation}
 Chamamos qualquer função que pode ser escrita dessa forma de uma \textbf{função afim}, isto é, toda função real que pode ser escrita da forma
 \[
 f(x)=ax+b
@@ -1901,7 +1836,7 @@ O número $ a $ é a \textbf{taxa de variação média} da função afim $ f $ (
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.8]
 
 \draw [->] (-2,0) -- (5,0);
 \draw [->,thick] (0,-1) -- (0,6);
@@ -1921,7 +1856,7 @@ O número $ a $ é a \textbf{taxa de variação média} da função afim $ f $ (
 \centering
 \capstart
 
-\begin{tikzpicture}[scale=.75]
+\begin{tikzpicture}[scale=.6]
 
 \draw [ thin, step=2, dashed, gray!50] (-4.5,-4.5) grid (8.5,7.5);
 \draw [->] (-4.5,0) -- (8.5,0);
@@ -1944,7 +1879,7 @@ O número $ a $ é a \textbf{taxa de variação média} da função afim $ f $ (
 \centering
 \capstart
 
-\begin{tikzpicture}[scale=.75]
+\begin{tikzpicture}[scale=.7]
 
 \draw [ thin, step=2, dashed, gray!50] (-4.5,-4.5) grid (8.5,7.5);
 \draw [->] (-4.5,0) -- (8.5,0);
@@ -1972,7 +1907,7 @@ O número $ a $ é a \textbf{taxa de variação média} da função afim $ f $ (
 \centering
 \capstart
 
-\noindent\includegraphics[width=200bp]{{1024px-Planalto_Palace_ramp_and_parlatorium}.jpg}
+\noindent\includegraphics[width=250bp]{{1024px-Planalto_Palace_ramp_and_parlatorium}.jpg}
 \caption{Flickr: \href{https://commons.wikimedia.org/w/index.php?curid=18864847}{Palácio do Planalto, Brasília, Brasil}}\label{\detokenize{AF107-4:id3}}\end{figure}
 
 Em muitas construções, quando se deseja fazer o acesso entre dois espaços que estão em níveis diferentes, usa-se a rampa como recurso. A rampa é uma superfície, em geral plana, que liga dois níveis diferentes. Uma característica importante de uma rampa é a sua inclinação (ou declive). Rampas muito íngremes podem se tornar obstáculos intransponíveis para cadeirantes, por exemplo. Como medir, então, a inclinação de uma rampa?
@@ -1980,7 +1915,7 @@ A inclinação de uma rampa é o número obtido quando dividimos a altura (difer
 \begin{figure}[H]
 \centering
 
-\noindent\includegraphics[width=300bp]{rampa.png}
+\noindent\includegraphics[width=\linewidth]{rampa.png}
 \end{figure}
 Uma rampa que tem o deslocamento horizontal muito menor que a altura, terá pela fórmula uma inclinação grande, enquanto uma rampa em que o deslocamento horizontal é bem maior que a altura, terá uma inclinação pequena. Rampas de inclinação pequena são as mais desejáveis.
 
@@ -1993,10 +1928,9 @@ A Associação Brasileira de Normas Técnicas (ABNT) tem normas para a construç
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-\parbox[1cm]{3.5cm}{\centering\vspace{.3em} Desníveis máximos de cada segmento de rampa\newline$h$} & \parbox[1cm]{3.5cm}{\centering\vspace{.3em} Inclinação admissível em cada segmento de rampa $i$} & \parbox{4cm}{\centering Número máximo de segmentos de rampa} \\[.25cm]
+\tcolor{\parbox[1cm]{3.5cm}{\centering\vspace{.3em} Desníveis máximos de cada segmento de rampa\newline$h$}} & \tcolor{\parbox[1cm]{3.5cm}{\centering\vspace{.3em} Inclinação admissível em cada segmento de rampa $i$}} & \tcolor{\parbox{4cm}{\centering Número máximo de segmentos de rampa}} \\[.25cm]
 \hline
 $1{,}50$ & $5{,}00 (1:20)$ & Sem limite \\
 \hline
@@ -2004,7 +1938,7 @@ $1{,}00$ & $5{,}00 (1:20) < i \leq 6{,}25 (1:16)$ & Sem limite \\
 \hline
 $0{,}80$ & $6{,}25 (1:16) < i \leq 8{,}33 (1:12)$ & 15\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Por exemplo, para uma rampa ter inclinação \(5\% (1:20)\) ela precisa de \(20\) metros de deslocamento horizontal para cada metro de subida, ou dito de outra forma, para cada metro de deslocamento horizontal, a rampa “sobe” \(0,05\) metros. Veja se as rampas ilustradas abaixo estão dentro das especificações da ABNT.
@@ -2051,7 +1985,7 @@ Por exemplo, a reta que contém os pontos \((1,2)\) e \((5,7)\) tem inclinação
 \centering
 \capstart
 
-\begin{tikzpicture}[scale=.7, every node/.style={scale=1}]
+\begin{tikzpicture}[scale=.6, every node/.style={scale=1}]
 
 \draw [->] (-2,0) -- (7,0);
 \draw [->] (0,-1) -- (0,8);
@@ -2080,7 +2014,7 @@ Por exemplo, a reta que contém os pontos \((1,2)\) e \((5,7)\) tem inclinação
 \centering
 \capstart
 
-\begin{tikzpicture}[scale=.6,remember picture, shift={(1,0)}]
+\begin{tikzpicture}[scale=.5,remember picture, shift={(1,0)}]
 
 \draw [->] (-2.5,0) -- (3.5,0);
 \draw [->] (0,-7.5) -- (0,4.5);
@@ -2140,14 +2074,13 @@ Retas horizontais não possuem inclinação, de fato não há deslocamento verti
 \begin{enumerate}
 \item \adjustbox{valign=t}
 {
-\begin{tabu} to \textwidth{|l|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|}
 \hline
-\thead
-Antecipação (meses) & 5 & 6 & 7 & 8 \\
+\tcolor{Antecipação (meses)} & \tcolor{5} & \tcolor{6} & \tcolor{7} & \tcolor{8} \\
 \hline
 Valor a pagar (R\$) & 3.750 & 3.500 & 3.250 & 3.000 \\
 \hline
-\end{tabu}
+\end{tabular}
 }
 
 \item A medida que o tempo aumenta, o valor a pagar diminui. Entre dois meses consecutivos a variação do valor a pagar é de R\$ $250,00$.
@@ -2314,14 +2247,13 @@ O cliente de um banco foi à sua agência de relacionamento para negociar a ante
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|c|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|}
 \hline
-\thead
-Antecipação (meses) & 0 & 1 & 2 & 3 & 4 \\
+\tcolor{Antecipação (meses)} & \tcolor{0} & \tcolor{1} & \tcolor{2} & \tcolor{3} & \tcolor{4} \\
 \hline
 Valor a pagar (R\$) & 5.000 & 4.750 & 4.500 & 4.250 & 4.000 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -2357,14 +2289,13 @@ Complete a tabela abaixo com os valores correspondentes ao volume de água na ca
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|l|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 \hline
-\thead
-Tempo (minutos) & 0 & 1 & 2 & 3 & 4 & 5 & 10 & 20 \\
+\tcolor{Tempo (minutos)} & \tcolor{0} & \tcolor{1} & \tcolor{2} & \tcolor{3} & \tcolor{4} & \tcolor{5} & \tcolor{10} & \tcolor{20} \\
 \hline
 Volume (litros) & & 4 & & & & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item {} 
@@ -2452,7 +2383,7 @@ Estabeleça uma maneira de calcular a altitude de acionamento do sistema anti-ge
 \end{enumerate}
 \end{task}
 
-\begin{observation}{}
+\begin{observation}
 
 Seja \(f:\mathbb{R}\to\mathbb{R}\) uma função afim, \(f(x)=ax+b\), cuja taxa de variação não é nula (isto é, o gráfico de \(f\) não é uma reta horizontal).
 
@@ -2594,10 +2525,9 @@ Você deseja pedurar três quadros que têm as mesmas dimensões na parede acima
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Gancho & Distância (m) \\
+\tcolor{Gancho} & \tcolor{Distância (m)} \\
 \hline
 1 & \\
 \hline
@@ -2609,7 +2539,7 @@ Gancho & Distância (m) \\
 \hline
 5 & 23 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item Supona agora que você queira posicionar mais 15 quadros na parede do item anterior, respeitando as distâncias estabelecidas. Como saber a distância, até o lado esquerdo da parede, que se encontra o gancho de número 10? Descreva pelo menos duas estratégias diferentes.
@@ -2622,18 +2552,17 @@ Gancho & Distância (m) \\
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{l>{$}l<{$}}
+\begin{tabular}{l>{$}l<{$}}
 \text{Júlia} & d(n)=7+3n \\
 \text{Camila} & d(n)=10+3(n-1)
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Gancho & Distância (m) \\
+\tcolor{Gancho} & \tcolor{Distância (m)} \\
 \hline
 1 & 10 \\
 \hline
@@ -2647,7 +2576,7 @@ Gancho & Distância (m) \\
 \hline
 6 & 25 \\ 
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Quem das duas se expressou corretamente? Por quê? Como cada uma delas pode ter pensado para chegar nas expressões?
@@ -2728,7 +2657,7 @@ a_{34}=a_12+22\cdot(\frac{-\pi}{2})=0+22\cdot(\frac{-\pi}{2})=-11\pi.
 \end{equation*}
 \end{example}
 
-\begin{observation}{}
+\begin{observation}
 De maneira análoga à função afim, se uma progressão aritmética tem razão positiva ela será \textbf{crescente}, e se a razão for um número negativo, ela será \textbf{decrescente}.
 \end{observation}
 
@@ -2759,9 +2688,8 @@ a_n=a_k+(n-k)r.
 \begin{answer}{Termo geral de uma P.A.}
 {
 \begin{table}[H]
-\setlength\tabulinesep{5pt}
 \centering
-\begin{tabu} to \textwidth{|>{$\displaystyle}c<{$}|>{\centering $}m{2cm}<{$}|>{$}c<{$}|>{$\displaystyle}l<{$}|}
+\begin{tabular}{|>{$\displaystyle}c<{$}|>{\centering $}m{2cm}<{$}|>{$}c<{$}|>{$\displaystyle}l<{$}|}
 \hline
 $\tcolor{P.A.}$ & 
 $\tcolor{\makecell{Primeiro\\termo}}$ & 
@@ -2782,7 +2710,7 @@ $\tcolor{\centering Termo Geral}$ \tabularnewline
 \hline
 (4,6,8,10,12,...)& 4 & 2 & a_n=2+2n \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 }{0}
 \end{answer}
@@ -2836,21 +2764,19 @@ $\tcolor{\centering Termo Geral}$ \tabularnewline
   \begin{enumerate}
 \item \adjustbox{valign=t}
 {
-\setlength\tabulinesep{2.5pt}
-\begin{tabu} to \textwidth{|l|>{\centering}m{2cm}|>{\centering}m{2cm}|}
+\begin{tabular}{|l|>{\centering}m{2cm}|>{\centering}m{2cm}|}
 \hline
-\thead
-& ({\Large$\bullet$}) & ({\Large$\diamondsuit$}) \\
+\tcolor{} & \tcolor{({\Large$\bullet$})} & \tcolor{({\Large$\diamondsuit$})} \tabularnewline
 \hline
-Modelo 1 & 1 & 4 \\
+Modelo 1 & 1 & 4 \tabularnewline
 \hline
-Modelo 2 & 4 & 8 \\
+Modelo 2 & 4 & 8 \tabularnewline
 \hline
-Modelo 3 & 9 & 12 \\
+Modelo 3 & 9 & 12 \tabularnewline
 \hline
-Modelo 4 & 16 & 16 \\
+Modelo 4 & 16 & 16 \tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 }
 
 \item A quantidade de vegetais ({\Large$\bullet$}) é o quadrado do número $n$ que identifica a ordem do modelo na sequência
@@ -2914,7 +2840,7 @@ Modelo 4 & 16 & 16 \\
 \begin{enumerate}
 \item \adjustbox{valign=t}
 {
-\begin{tabu} to \textwidth{|>{$}c<{$}|*{9}{c|}}
+\begin{tabular}{|>{$}c<{$}|*{9}{c|}}
 \hline
 \cellcolor{\currentcolor!80}\textcolor{white}{\bm{x}} & 2 & 5 & 8 & 11 & 14 & 17 & 20 & 23 & 26 \\
 \hline
@@ -2922,7 +2848,7 @@ Modelo 4 & 16 & 16 \\
 \hline
 \cellcolor{\currentcolor!80}\textcolor{white}{\bm{g(x)}} & -8 & -23 & -38 & -53 & -68 & -83 & -98 & -113 & -128 \\
 \hline
-\end{tabu}
+\end{tabular}
 }
 
 \item Razão $3$.
@@ -2944,9 +2870,8 @@ a_n=a_1+(n-1)r
 Complete a tabela abaixo com as progressões ou as fórmulas dos termos gerais.
 
 \begin{table}[H]
-\setlength\tabulinesep{5pt}
 \centering
-\begin{tabu} to \textwidth{|>{$\displaystyle}l<{$}|>{\centering$}m{2cm}<{$}|>{$}c<{$}|>{$\displaystyle}l<{$}|}
+\begin{tabular}{|>{$\displaystyle}l<{$}|>{\centering$}m{2cm}<{$}|>{$}c<{$}|>{$\displaystyle}l<{$}|}
 \hline
 $\centering \tcolor{P.A}.$ & $\tcolor{Primeiro termo}$ & $\tcolor{Razão}$ & $\tcolor{Termo geral}$ \\
 \hline
@@ -2964,7 +2889,7 @@ $\centering \tcolor{P.A}.$ & $\tcolor{Primeiro termo}$ & $\tcolor{Razão}$ & $\t
 \hline
 & 4 & & a_n=2+2n \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{task}
 
@@ -3109,21 +3034,19 @@ Uma empresa especializada em consultoria e plantio de produtos orgânicos aprese
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2.5pt}
-\begin{tabu} to \textwidth{|l|>{\centering}m{2cm}|>{\centering}m{2cm}|}
+\begin{tabular}{|l|>{\centering}m{2cm}|>{\centering}m{2cm}|}
 \hline
-\thead
-& ({\Large$\bullet$}) & ({\Large$\diamondsuit$}) \\
+\tcolor{} & \tcolor{({\Large$\bullet$})} & \tcolor{({\Large$\diamondsuit$})} \tabularnewline
 \hline
-Modelo 1 & & \\
+Modelo 1 & & \tabularnewline
 \hline
-Modelo 2 & & \\
+Modelo 2 & & \tabularnewline
 \hline
-Modelo 3 & & \\
+Modelo 3 & & \tabularnewline
 \hline
-Modelo 4 & & \\
+Modelo 4 & & \tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \item Descreva textualmente qual a relação entre a quatidade de vegetais ({\Large$\bullet$}) e o número $n$ que identifica o modelo na sequência.
 
@@ -3161,7 +3084,7 @@ Considere as funções afins $f,g$ definidas por $f(x)=3x+1$ e $g(x)=-5x+2$.
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|>{$}c<{$}|*{9}{c|}}
+\begin{tabular}{|>{$}c<{$}|*{9}{c|}}
 \hline
 \tcolor{$\bm{x}$} & & & & & & & & & \\
 \hline
@@ -3169,7 +3092,7 @@ Considere as funções afins $f,g$ definidas por $f(x)=3x+1$ e $g(x)=-5x+2$.
 \hline
 \tcolor{$\bm{g(x)}$} & & & & & & & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \item Qual a razão da P.A. da primeira linha da tabela?
 \item As imagens pela função $f$ formam tabém uma P.A.? Caso positivo, qual a razão?
@@ -3969,7 +3892,7 @@ Determine você também este valor.
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/funcao-afim_bibliografia.bib}
 
 \nocite{*}

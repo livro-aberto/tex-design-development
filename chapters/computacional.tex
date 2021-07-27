@@ -1,96 +1,27 @@
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-computacional}
-\else
-\renewcommand\chapterillustration{./abertura-computacional-professor}
-\fi
+\chapterillustration{./abertura-computacional}{./abertura-computacional-professor}
 
-\renewcommand\chapterwhat{Pensamento computacional e noções básicas de linguagem de programação.
-}
-\renewcommand\chapterbecause{Os computadores estão presentes em quase todas as atividades humanas na atualidade e, por isso, desenvolver o pensamento computacional e conhecer noções básicas de linguagens de programação pode ser fundamental para sua vida profissional, trajetória acadêmica e participação efetiva na sociedade.
+\chapterwhat{Pensamento computacional e noções básicas de linguagem de programação.}
+
+\chapterbecause{Os computadores estão presentes em quase todas as atividades humanas na atualidade e, por isso, desenvolver o pensamento computacional e conhecer noções básicas de linguagens de programação pode ser fundamental para sua vida profissional, trajetória acadêmica e participação efetiva na sociedade.
 } 
+
+
 \chapter{Pensamento Computacional}
 \label{computacional-chap}
 
-\mbox{}\thispagestyle{empty}\clearpage
 
-\thispagestyle{empty}
+%%%% Página de Créditos
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\autorum{Leonardo Barichello}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\revisorum{Diego Lieban}
+\revisordois{Larissa Monzon}
+\revisortres{Kátia Rocha}
+\versao{1.0}
 
-\vspace*{.3cm}
+\autordacapa{Pankaj Patel}{Unsplash}{https://unsplash.com/photos/yEAOfWSdzgM}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
-
-
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Pensamento Computacional\\
-\\
-Ano/ Versão: & 2021 / versão 0.1 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas, \\
-			&  Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Leonardo Barichello\\
-\\
-Colaboração: & \\
-\\
-Revisão: & Diego Lieban \\ 
-         & Larissa Monzon \\
-         & Kátia Rocha \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & ---\\
-\\
-  Capa: & Foto de Pankaj Patel, no Unsplash \\
-  		& https://unsplash.com/photos/yEAOfWSdzgM \\
-
-\end{tabular}
-\vspace{.5cm}
-
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \mainmatter
 
@@ -336,7 +267,7 @@ A relação entre as diferentes seções deste módulo com as habilidades da BNC
 
 \def\currentcolor{session1}
 \begin{texto}
-{
+{\small
 As atividades desta seção introduzem aos estudantes o que chamamos na introdução para o professor de "resolução de um problema do ponto de vista computacional"{} e criam um contexto no qual um primeiro aspecto importante para o pensamento computacional pode ser discutido: a clareza das instruções.
 
 Os dois problemas propostos na duas primeiras atividades serão revisitados em seguida. Primeiro, como contexto para a discussão de \textbf{fluxogramas}. Não pretendemos usar sempre fluxogramas ao longo do capítulo, mas a discussão da estrutura e uso deste tipo de representação pode salientar aspectos importantes sobre a clareza das instruções descritas pelos estudantes em outras representações. A BNCC propõe o uso de fluxogramas no Ensino Fundamental (como nas habilidades \textbf{EF06MA04}, \textbf{EF07MA07}, \textbf{EF08MA10}, \textbf{EF09MA15}), porém, mesmo que os estudantes não tenham estudado o assunto, esperamos que haja alguma familiaridade informal e isso deve bastar para criar discussões proveitosas. Por último, os dois problemas servirão de contexto para introdução da linguagem de programação Portugol. Isso é feito no \hyperref[comp-know1]{Para Saber Mais} que encerra a seção.
@@ -359,7 +290,6 @@ Vale a pena salientar que linguagens de programação precisam ser seguidas à r
 Por fim, um último detalhe importante referente a Portugol é o símbolo usado para separação decimal, que é o ponto (como nos países de língua inglesa) e não vírgula (como no Brasil).
 }
 \end{texto}
-\marginpar{\vspace{-2em}}
 \begin{objectives}{Boas instruções}
 {
 \begin{itemize}
@@ -369,7 +299,6 @@ Por fim, um último detalhe importante referente a Portugol é o símbolo usado 
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{Boas instruções}
 {
 \textbf{Organização da turma}: a última questão requer que os estudantes discutam as respostas criadas por colegas. Essa discussão é importante para que eles tenham a oportunidade de perceber as limitações das suas respostas bem como para que possam se inspirar na estrutura das respostas dos colegas. Sugerimos que você organize a turma em quartetos para que os alunos resolvam em duplas as questões \titem{a)}, \titem{b)}, \titem{c)} e \titem{d)} e depois façam a troca com a outra dupla do seu quarteto para discutir a questão \titem{e)}.
@@ -397,7 +326,6 @@ Por fim, um último detalhe importante referente a Portugol é o símbolo usado 
 }{0}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{-2em}}
 \begin{objectives}{Uma resolução boa de repetir}
 {
 \begin{itemize}
@@ -525,6 +453,14 @@ O cometa Halley é um dos cometas de menor período do Sistema Solar, completand
 \arrange{Boas instruções}
 \label{comp-arr1}
 
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=350bp]{pagina_4}
+\caption{Fonte:\href{desplugada.ime.unicamp.br}{Computação Desplugada}}
+\end{figure}
+
 As atividades anteriores mostraram que não é simples criar um conjunto de instruções que resolve um determinado problema de modo que uma pessoa seja capaz de compreendê-las e segui-las sem poder fazer mais perguntas ou pedir esclarecimentos. Por isso é importante que fique claro tanto o significado de cada instrução, quanto a ordem em que elas devem ser executadas.
 
 No caso de criarmos instruções para um computador seguir (um conjunto finito de instruções com fluxo bem definido também pode ser chamado de algoritmo), essa exigência fica ainda maior, pois o computador não consegue usar um pouco de bom senso ou conhecimentos adicionais sobre a situação para complementar as instruções ou tomar decisões, caso isso seja necessário. Para um computador, todas as instruções devem ser dadas de modo que ele seja capaz de executar e o fluxo das instruções deve estar absolutamente claro na descrição.
@@ -575,7 +511,7 @@ Você já deve ter visto esquemas visuais como o mostrado abaixo, que esquematiz
 
 \includegraphics[width=.5\linewidth]{fluxograma_fake}
 \caption{campanha do Superior Tribunal de Justiça}
-\label{}
+
 \end{figure}
 
 Neste módulo, faremos um uso mais específico e rigoroso desse recurso, mas a intenção é a mesma da imagem acima: representar visualmente um processo com múltiplas etapas e ações.
@@ -639,7 +575,7 @@ Segundo, a ocorrência de ciclos: esses ciclos representam processos iterativos,
 
 O terceiro aspecto que merece atenção são os comandos que são realizados dentro dos ciclos. Vamos focar novamente no que está mais à esquerda: tentativa = tentativa + 76. Note que essa expressão, do ponto de vista matemático, representa uma equação sem solução. Mas em grande parte das linguagens de programação, o sinal de igual significa "guarde o resultado da direita na variável à esquerda". Nesse caso, o computador primeiro calcula o valor do lado direito (somando 76 ao valor atual da variável tentativa) e então guarda na mesma variável (tentativa) o resultado (perdendo o valor anterior, o que não é um problema, pois já testamos e o descartamos).
 
-\begin{observation}{}
+\begin{observation}
 É importante ter muito cuidado com expressões como "\verb|t=t+76|". Em um contexto matemático, o sinal de igual nessa expressão significa uma equivalência entre os valores do seu lado direito e esquerdo. Nesse caso específico, a expressão é uma equação sem solução (pois não existe valor de t que satisfaça a igualdade proposta).
 
 Em linguagens de programação, o sinal de igual é normalmente usado para designar uma atribuição: a variável à esquerda do sinal deve receber o valor à direita. Inclusive, nesse contexto, a expressão \verb|t+76=t| é totalmente diferente de \verb|t=t+76| (na verdade, a primeira expressão está incorreta pois o conteúdo à esquerda do sinal de igual não é uma variável). Em algumas linguagens, a atribuição não é feita com o símbolo \verb|=|, mas com \verb|:=| ou \verb|<-| (imitando a seta $\leftarrow$).
@@ -681,7 +617,6 @@ A intenção do Organizando que encerra esta seção é salientar uma caracterí
 O que importa aqui é a consciência da limitação e não o domínio sobre como implementar o arredondamento para cima em uma linguagem de programação. Além disso, essa discussão traz de volta o conceito de condicional (o comando "se"{} do algoritmo mostrado) que será o foco da próxima seção.
 }
 \end{texto}
-\marginpar{\vspace{-1em}}
 \begin{objectives}{Contêineres}
 {
 \begin{itemize}
@@ -691,7 +626,6 @@ O que importa aqui é a consciência da limitação e não o domínio sobre como
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{Contêineres}
 {
 \textbf{Organização da turma}: sugerimos a resolução desta e da próxima atividade conjuntamente e, especialmente por causa da segunda atividade, recomendamos a organização da turma em duplas.
@@ -703,7 +637,6 @@ O que importa aqui é a consciência da limitação e não o domínio sobre como
 \textbf{Conexões}: você pode discutir o conceito de volume de paralelepípedos e relembrar o significado da divisão em termos de medida.
 }{1}{1}
 \end{sugestions}
-\marginpar{\vspace{-1em}}
 \begin{answer}{Contêineres}
 {
 \begin{enumerate}
@@ -781,6 +714,13 @@ Além dessas restrições, há uma limitação de altura imposta pelas autoridad
 
 Uma escola costuma organizar passeios com frequência e para levar os alunos conta com vários motoristas de vans. Essas vans possuem $14$ lugares, além do assento do motorista. Por questão de segurança, a direção da escola exige que sempre haja um professor em cada van, não importando o número de alunos. Felizmente, a escola tem contato com muitos motoristas de vans.
 
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=250bp]{van}
+\caption{Fonte: \href{desplugada.ime.unicamp.br}{Computação Desplugada}}
+\end{figure}
+
 \begin{enumerate}
 \item Quantos professores serão necessários para acompanhar os estudantes em um passeio em que $200$ estudantes desejem participar? E em um passeio em que $65$ estudantes desejem participar?
 
@@ -792,6 +732,8 @@ Em algumas ocasiões, porém, há mais professores dispostos a acompanhar os est
 
 \item Descreva com suas palavras e de forma clara como descobrir o número máximo de professores que podem acompanhar $n$ estudantes em um passeio sem que seja necessário contratar mais vans.
 \end{enumerate}
+
+
 
 \end{task}
 
@@ -818,8 +760,8 @@ No caso do problema posto na atividade, devemos adicionar uma van se a divisão 
 
 Veja que esse algoritmo primeiro considera que o número mínimo de professores é igual ao resultado inteiro (veja que a variável n é do tipo inteiro) da divisão do número de interessados por $13$. Depois, se o resto da divisão por $13$ for maior do que zero, o algoritmo soma $1$ ao número mínimo de professores.
 
-\explore{Condicionais}
-\label{comp-exp4}
+\cleardoublepage
+\def\currentcolor{session1}
 \begin{texto}
 {
 Esta seção foca no uso de estruturas condicionais. Apesar de já terem aparecido nas seções anteriores, a atividade a seguir propõe uma situação em que é necessário utilizar condicionais de forma mais sofisticada do que nas anteriores. A sofisticação não vem da dificuldade matemática da questão, mas pela atenção necessária para que as instruções fiquem claras.
@@ -872,6 +814,8 @@ Um exemplo simples e interessante que pode ser usado tanto para avaliar o trabal
 \end{enumerate}
 }{1}
 \end{answer}
+
+\explore{Condicionais}
 
 As sentenças que fazem uso do condicional (aqui chamadas simplesmente de condicionais) são um componente central em qualquer linguagem de programação e, na verdade, em boa parte dos recursos computacionais que utilizamos explícita ou implicitamente.
 
@@ -998,7 +942,7 @@ Condições em linguagens de programação costumam ser escritas com o comando s
 
 Tente usar o comando se para escrever um algoritmo em Portugol que se comporte como cada um dos dois fluxogramas mostrados acima. E você não precisa parar por aí: é possível criar outras soluções corretas e diferentes para o problema. Que tal tentar?
 
-
+\cleardoublepage
 \def\currentcolor{session1}
 \begin{texto}
 {
@@ -1014,21 +958,14 @@ A segunda atividade ele abre portas para muitos outros exemplos interessantes en
 }
 \end{texto}
 
-\explore{Repetir e repetir}
-\label{comp-exp5}
-
-Repetir muitas vezes uma mesma ação é algo considerado cansativo para a maioria das pessoas. Porém, para muitas tarefas isso é necessário para se resolver algum problema ou atingir algum objetivo. Esse é um dos motivos que fazem dos computadores uma ferramenta tão útil: eles podem repetir comandos sem se cansar, sem perder a motivação ou a atenção e sem se distrair a ponto de cometerem erros. Historicamente, essa foi a motivação de diversos cientistas que, a partir do século 17, começaram a propor máquinas que fossem capazes de realizar cálculos aritméticos e que podem ser consideradas as avós dos computadores modernos.
-
-\begin{knowledge}
-As primeiras máquinas concebidas para realizar cálculos eram puramente mecânicas, ou seja, baseadas em engrenagens e encaixes físicos. Pesquise na internet pelas máquinas desenvolvidas pelos matemáticos Blaise Pascal e Gottfried Leibniz.
-\end{knowledge}
-
-\begin{texto}
+\begin{sugestions}{Você sabia?}
 {
 	Note que da maneira como está escrito, o algoritmo não escreve o resultado da multiplicação por $10$, pois a condição da repetição é verdadeira até m ser igual a $9$.
-}
-\end{texto}
+}{1}{1}
+\end{sugestions}
+
 \clearmargin
+
 \begin{objectives}{É primo ou não?}
 {
 \begin{itemize}
@@ -1038,6 +975,7 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 \end{itemize}
 }{1}{2}
 \end{objectives}
+
 \begin{sugestions}{É primo ou não?}
 {
 \textbf{Organização da turma}: sugerimos que essa atividade seja resolvida em conjunto, pela turma toda, uma vez que a etapa final (envolvendo a utilização do algoritmo criado) depende do uso de um computador ou celular e de um algoritmo completo e correto para o problema proposto.
@@ -1049,6 +987,7 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 \textbf{Conexões}: vários tópicos do Ensino Fundamental podem ser revisados ou discutidos em conexão com essa atividade. Entre eles, vale mencionar os conceitos de divisor e múltiplo, critérios de divisibilidade e o Crivo de Eratóstenes (que pode inclusive ser discutido sob o ponto de vista computacional também se os estudantes souberem usar variáveis do tipo vetor).
 }{1}{2}
 \end{sugestions}
+
 \begin{answer}{É primo ou não?}
 {
 \begin{enumerate}
@@ -1067,7 +1006,6 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 }{0}
 \end{answer}
 \clearmargin
-\mspace{-1em}
 \begin{objectives}{A sequência de Collatz}
 {
 \begin{itemize}
@@ -1101,6 +1039,17 @@ As primeiras máquinas concebidas para realizar cálculos eram puramente mecâni
 }{1}
 \end{answer}
 
+\explore{Repetir e repetir}
+\label{comp-exp5}
+
+Repetir muitas vezes uma mesma ação é algo considerado cansativo para a maioria das pessoas. Porém, para muitas tarefas isso é necessário para se resolver algum problema ou atingir algum objetivo. Esse é um dos motivos que fazem dos computadores uma ferramenta tão útil: eles podem repetir comandos sem se cansar, sem perder a motivação ou a atenção e sem se distrair a ponto de cometerem erros. Historicamente, essa foi a motivação de diversos cientistas que, a partir do século 17, começaram a propor máquinas que fossem capazes de realizar cálculos aritméticos e que podem ser consideradas as avós dos computadores modernos.
+
+\begin{knowledge}
+As primeiras máquinas concebidas para realizar cálculos eram puramente mecânicas, ou seja, baseadas em engrenagens e encaixes físicos. Pesquise na internet pelas máquinas desenvolvidas pelos matemáticos Blaise Pascal e Gottfried Leibniz.
+\end{knowledge}
+
+
+
 
 Nas próximas atividades, vamos lidar com problemas que envolvem muitas repetições e que ainda são muito relevantes na atualidade. Para isso, observe como o ciclo apresentado no fluxograma abaixo é representado em Portugol.
 
@@ -1118,6 +1067,12 @@ Esse é um exemplo simples de uma estrutura de repetição, que poderia ser feit
 
 \begin{task}{É primo ou não?}
 Você deve se lembrar que um número é chamado de primo se tiver exatamente dois divisores inteiros positivos diferentes: $1$ e ele mesmo. Por exemplo, o número $9$ não é primo, pois seus divisores são $1$, $3$ e $9$. Já o número $13$ é primo. O número 1 não é primo por que possui um único divisor inteiro positivo.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=250bp]{primos}
+\end{figure}
 
 Até hoje, não existem métodos realmente rápidos para identificar se um número é primo ou não. Basicamente, todos os métodos existentes baseiam-se em testar se o número dado deixa resto zero quando é dividido pelos números menores do que ele. Imagina a quantidade de repetições necessárias para verificar se o número $4.000.037$ é primo!
 
@@ -1171,7 +1126,7 @@ O comportamento da sequência de Collatz pode ser surpreendente. Por exemplo, se
 
 \end{enumerate}
 
-\begin{observation}{}
+\begin{observation}
 Seu algoritmo deve escrever os termos que compõem a sequência. Também pode ser útil incluir uma variável que conta o número de termos da sequência.
 \end{observation}
 \end{task}
@@ -1233,16 +1188,16 @@ O que está sendo feito ali é "avançando na sequência". Nesse ponto, as vari�
 
 Você pode adaptar esse algoritmo, e o que aprendeu com as atividades anteriores, para obter outras sequências numéricas, como progressões aritméticas, progressões geométricas e os números triangulares. Pesquise na internet sobre essas sequências e tente construir algoritmos em Portugol para cada uma delas.
 
+\clearpage
 \practice{}
 \label{comp-prac1}
 
 Nesta seção, vamos praticar o que foi estudado até este momento. Todas as atividades propostas envolvem dois aspectos, o matemático e o computacional. Isso significa que conhecimentos matemáticos serão necessários para compreender e resolver os problemas e você também terá que pensar computacionalmente sobre o processo de resolução, ou seja, pensar sobre como transformar a resolução em um algoritmo.
 
-\marginpar{\vspace{-1em}}
 \begin{objectives}{Imposto de renda retido na fonte}
 {
 Compreender os conceitos básicos de uma linguagem de programação, como repetição, condicional e variáveis.
-}{1}{1}
+}{1}{2}
 \end{objectives}
 
 \begin{sugestions}{Imposto de renda retido na fonte}
@@ -1272,14 +1227,14 @@ Compreender os conceitos básicos de uma linguagem de programação, como repeti
 Compreender os conceitos básicos de uma linguagem de programação, como repetição, condicional e variáveis.
 
 
-}{1}{2}
+}{1}{1}
 \end{objectives}
 \begin{sugestions}{Xadrez}
 {
 \textbf{Para o laboratório}: Este problema pode ser resolvido aritmeticamente com o auxílio do conceito de paridade (aplicada tanto às coordenadas de um dado quadradinho quanto à soma das coordenadas), mas admite soluções com repetições (em que o código alterna entre as duas soluções à medida que "percorre"{} um caminho até o quadradinho de destino). Incentive a discussão dessas duas soluções em termos de simplicidade, clareza e eficiência (qual delas obtém a solução realizando o menor número de operações?).
 
 \textbf{Variação}: Você pode propor um tabuleiro diferente, em que as casas possuem três cores: branco, cinza e preto. Esse padrão se repete (nessa ordem) nas linhas e nas colunas (logo, a segunda linha começa em cinza e a terceira em preto). Nesse caso, a solução depende do uso do resto deixado na divisão por 3 e não de paridade.
-}{1}{2}
+}{1}{1}
 \end{sugestions}
 \begin{answer}{Xadrez}
 {
@@ -1300,7 +1255,7 @@ Compreender os conceitos básicos de uma linguagem de programação, como repeti
 \begin{objectives}{MMC}
 {
 Compreender os conceitos básicos de uma linguagem de programação, como repetição, condicional e variáveis.
-}{1}{1}
+}{1}{2}
 \end{objectives}
 \begin{sugestions}{MMC}
 {
@@ -1309,7 +1264,7 @@ Compreender os conceitos básicos de uma linguagem de programação, como repeti
 \textbf{Para o laboratório}: Um conceito computacionalmente muito importante que pode ser introduzido aos estudantes com este problema é o de função. Este conceito permite ao programador compartimentalizar um bloco de código que será usado para diferentes fins (vide este vídeo para um tutorial sobre funções em Portugol). Isso pode ser feito graças à conexão com máximo divisor comum sugerida no "Para Refletir": o algoritmo para obter o mínimo múltiplo comum pode ser transformado em uma função que será usada pelo algoritmo que calcula o máximo divisor comum.
 
 \textbf{Variação}: Você pode pedir aos estudantes que usem as ideias desta atividade para construir um algoritmo que determine se dois números dados são coprimos, ou seja, se o MDC entre eles é igual a 1.
-}{1}{1}
+}{1}{2}
 \end{sugestions}
 \begin{answer}{MMC}
 {
@@ -1339,7 +1294,7 @@ Compreender os conceitos básicos de uma linguagem de programação, como repeti
 \textbf{Para o laboratório}: É importante ter certeza de que os estudantes compreenderam a solução do ponto de vista matemático antes que tentem escrever a solução algorítmica. Outro aspecto importante se refere à forma como as posições são numeradas: se fossem de 0 a 15 e não de 1 a 16, a solução do problema seria mais direta.
 
 \textbf{Variação}: Você pode aumentar o número de times participantes para 32, 64, etc. Isso pode levar à generalização do problema com  times participando.
-}{1}{2}
+}{1}{1}
 \end{sugestions}
 \begin{answer}{Campeonato}
 {
@@ -1466,7 +1421,7 @@ Professor, esta atividade foi proposta com o objetivo de oferecer um problema de
 Do ponto de vista computacional, o problema oferece uma oportunidade interessante para que os estudantes aprendam a utilizar vetores. Do ponto de vista matemático, o problema pode ser relacionado com álgebra booleana (ao pensarmos nas cores como os valores 0 e 1) e, surpreendemente, com o Triângulo de Pascal.
 
 Uma referência sobre este problema, discutindo a sua solução matemática e computacional, pode ser encontrada em \url{doi.org/10.1080/0020739X.2015.1109147} (em inglês).
-}{1}{1}
+}{1}{2}
 \end{sugestions}
 
 \begin{project}
@@ -1507,17 +1462,16 @@ Nossa sugestão é que este problema seja encarado como um projeto, ou seja, que
 
 %Inicio do capítulo 2
 %criando a página de capa
-\renewcommand\chapterwhat{Aplicações do pensamento computacional e de linguagens de programação na exploração de problemas matemáticos.}
-\renewcommand\chapterbecause{Dominar uma linguagem de programação nos permite explorar e resolver problemas matemáticos de maneiras diferentes. Assim, podemos entender o poder de ferramentas computacionais e porque elas são tão usadas em todas as áreas do conhecimento atualmente.} 
+\chapterwhat{Aplicações do pensamento computacional e de linguagens de programação na exploração de problemas matemáticos.}
+
+\chapterbecause{Dominar uma linguagem de programação nos permite explorar e resolver problemas matemáticos de maneiras diferentes. Assim, podemos entender o poder de ferramentas computacionais e porque elas são tão usadas em todas as áreas do conhecimento atualmente.} 
 \chapter{Pensamento Computacional - Aplicações}
 \label{computacional-chap2}
-\mbox{}\thispagestyle{empty}\clearpage
 %fim da capa
 
 
-\begin{paginatexto}{Parte II}
+\begin{apresentacao}{Introdução à Parte II}
 
-\subsection{Apresentação}
 As atividades desta seção foram escolhidas para que os estudantes tenham experiência em usar uma linguagem de programação para explorar problemas matemáticos, ou seja, como uma ferramenta que permite simular, testar casos, realizar cálculos de maneira rápida e precisa, gerar dados, etc.
 
 Em linhas gerais, as atividades desta parte promovem a habilidade \textbf{EM13MAT405} (Utilizar conceitos iniciais de uma linguagem de programação na implementação de algoritmos escritos em linguagem corrente e/ou matemática) e reforçam a habilidade \textbf{EM13MAT315} (Investigar e registrar, por meio de um fluxograma, quando possível, um algoritmo que resolve um problema), que foi desenvolvida na parte anterior. Além disso, as atividades promovem a integração do pensamento computacional e da programação ao currículo regular de matemática, atendendo ao \textbf{Objetivo Específico 4} (Aplicar o pensamento computacional e formas sistemáticas de representação de um algoritmo para criar soluções para problemas relacionados a conteúdos matemáticos) e reforçando o \textbf{Objetivo Específico 3} (Compreender os conceitos básicos de uma linguagem deprogramação, como repetição, condicional e variável).
@@ -1548,7 +1502,7 @@ Tem sinal?: nesta atividade, propomos uma questão de interesse atual: dada uma 
 \subsection{Avaliação}
 
 Todas as seções trazem, nas notas para o professor, sugestões de variações das atividades propostas que podem ser usadas para fins de avaliação.
-\end{paginatexto}
+\end{apresentacao}
 
 \def\currentcolor{session1}
 \begin{texto}
@@ -1651,7 +1605,7 @@ No sistema de numeração decimal, ou de base $10$, cada algarismo de um número
 \begin{align*}
 308&=300+0+8\\
 308&=3\cdot100+0\cdot10+8\cdot1\\
-308&=3\cdot10^2+-\cdot10^1+8\cdot10^0
+308&=3\cdot10^2+0\cdot10^1+8\cdot10^0
 \end{align*}
  
 No sistema de numeração binário, ou de base $2$, temos apenas dois algarismos disponíveis, o $0$ e o $1$, e a posição de cada algarismo determina qual potência de $2$ ele está multiplicando. Por exemplo, o número $1101$, na representação binária, pode ser convertido para a base decimal da seguinte forma:
@@ -1667,9 +1621,9 @@ Por exemplo, o $20$ pode ser escrito com $16+4$. Note que $16$ e $4$ são ambos 
 \begin{align*}
 20&=16+4\\
 20&=2^4+2^2\\
-20&1\cdot2^4+1\cdot2^2\\
-20&1\cdot2^4+1\cdot2^2\\
-20&1\cdot2^4+0\cdot2^3+1\cdot2^2+0\cdot2^1+0\cdot2^0
+20&=\cdot2^4+1\cdot2^2\\
+20&=\cdot2^4+1\cdot2^2\\
+20&=\cdot2^4+0\cdot2^3+1\cdot2^2+0\cdot2^1+0\cdot2^0
 \end{align*}
 
 Assim, o número $20$ é representado na base binária por $10100$.
@@ -2112,7 +2066,7 @@ Um problema que pode ser interessante investigar empiricamente com essa ferramen
 
 \includegraphics[width=.5\linewidth]{p2_quantascaras_3}
 \caption{Imagem de Clker-Free-Vector-Images por \href{https://pixabay.com/pt/?utm_source=link-attribution\&utm_medium=referral\&utm_campaign=image\&utm_content=25637}{Pixabay}}
-\label{}
+
 \end{figure}
 
 A pergunta a ser investigada é: qual dos dois jogadores tem maior probabilidade de vencer?
@@ -2188,13 +2142,13 @@ Quando temos uma representação visual em mãos, é fácil dizer se um ponto da
 
 \begin{task}{Tem sinal? - parte 1}
 \begin{enumerate}
-\item Considere que uma nova torre com alcance de $3$ quilômetros foi instalada no ponto de $(1;-1)$. Represente essa nova torre e o seu alcance na imagem acima. O ponto $x$ está dentro do alcance dessa nova torre?
+\item Considere que uma nova torre com alcance de $3$ quilômetros foi instalada no ponto de $(1;-1)$. Represente essa nova torre e o seu alcance na imagem acima. O ponto X está dentro do alcance dessa nova torre?
 
-\item Considere agora que uma terceira torre com alcance de $4$ quilômetros foi instalada no ponto de $(-1;4)$. Represente essa nova torre e o seu alcance na imagem acima. O ponto $x$ está dentro do alcance dessa nova torre?
+\item Considere agora que uma terceira torre com alcance de $4$ quilômetros foi instalada no ponto de $(-1;4)$. Represente essa nova torre e o seu alcance na imagem acima. O ponto X está dentro do alcance dessa nova torre?
 
 Por mais que a sua representação tenha sido feita com cuidado, é possível que você tenha ficado com dúvidas sobre a resposta para a questão \titem{b)}, não?
 
-\item Como podemos decidir, a partir das coordenadas da posição do celular e das torres em seu entorno, se o ponto $x$ está dentro do alcance de cada uma das torres?
+\item Como podemos decidir, a partir das coordenadas da posição do celular e das torres em seu entorno, se o ponto X está dentro do alcance de cada uma das torres?
 
 Embora possa haver limitações em termos de precisão ou de dificuldade em desenhar, nós podemos usar representações visuais para resolver questões, especialmente as que envolvem objetos geométricos. Porém, computadores não contam com esse recurso. De maneira geral, objetos geométricos são tratados por meio de suas coordendas e questões como essa (se um ponto está dentro ou fora de uma circunferência) são respondidas com o auxílio de alguns cálculos.
 
@@ -2361,7 +2315,7 @@ Infelizmente, a OBI não aceita algoritmos escritos em Portugol, mas ela oferece
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/computacional_bibliografia.bib}
 
 \nocite{*}

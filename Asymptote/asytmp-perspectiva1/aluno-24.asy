@@ -24,29 +24,30 @@ pen agua = rgb(0,165/255,157/255); //verde agua
 pen box2 = rgb(240/255,238/255,201/255);
 
 
-texpreamble("\usepackage{fontspec}\setmainfont[Path=../Fontes/]{Exo2-Light}");
+texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}");
 
-size(3cm,3.5cm);
-currentprojection=orthographic(-1.25,.2,1/2);
+size(4.75cm);
 
-draw(surface((0,0,0) -- (1,1,0) -- (0.35796,2.60007,0) -- (-1.03884,2.03884,0) -- (-1.26007,0.64203,0) -- cycle), laranja+opacity(0.65));
-draw(surface((0,0,4) -- (1,1,4) -- (0.35796,2.60007,4) -- (-1.03884,2.03884,4) -- (-1.26007,0.64203,4) -- cycle), laranja+opacity(0.65));
+currentprojection=perspective(2.53,1.60,1.27);
 
-draw((0,0,4) -- (1,1,4) -- (0.35796,2.60007,4) -- (-1.03884,2.03884,4) -- (-1.26007,0.64203,4) -- cycle);
+triple a = (0,0,0);
+triple b = (1,0,0);
+triple c = (1,1,0);
+triple d = (0,1,0);
 
-draw(surface((0,0,4) -- (1,1,4) -- (1,1,0) -- (0,0,0) -- cycle), laranja+opacity(0.5));
-draw((0,0,0) -- (1,1,0), dashed);
-draw((1,1,0) -- (1,1,4), dashed);
+triple e = (0,0,1);
+triple f = (1,0,1);
+triple g = (1,1,1);
+triple h = (0,1,1);
 
-draw(surface((1,1,0) -- (0.35796,2.60007,0) -- (0.35796,2.60007,4) -- (1,1,4) -- cycle), laranja+opacity(0.65));
-draw((1,1,0) -- (0.35796,2.60007,0), dashed);
+draw ((a -- b -- f -- e -- cycle));
+draw ((a -- d -- h -- e -- cycle));
+draw ((a -- b -- c -- d -- cycle));
 
-draw(surface((0.35796,2.60007,0) -- (-1.03884,2.03884,0) -- (-1.03884,2.03884,4) -- (0.35796,2.60007,4) -- cycle), laranja+opacity(0.65));
-draw((0.35796,2.60007,0) -- (-1.03884,2.03884,0) -- (-1.03884,2.03884,4) -- (0.35796,2.60007,4) -- cycle);
+draw((1/2,1/4,0)--(1/2,3/4,0));
+draw((0,1/4,1/2)--(0,3/4,1/2));
 
-draw(surface((-1.03884,2.03884,0) -- (-1.26007,0.64203,0) -- (-1.26007,0.64203,4) -- (-1.03884,2.03884,4) -- cycle), laranja+opacity(0.65));
-draw((-1.03884,2.03884,0) -- (-1.26007,0.64203,0) -- (-1.26007,0.64203,4) -- (-1.03884,2.03884,4) -- cycle);
-
-draw(surface((0,0,0) -- (-1.26007,0.64203,0) -- (-1.26007,0.64203,4) -- (0,0,4) -- cycle), laranja+opacity(0.65));
-draw((0,0,0) -- (-1.26007,0.64203,0) -- (-1.26007,0.64203,4) -- (0,0,4) -- cycle);
-
+//draw (a -- b -- c -- d -- cycle);
+//draw (e -- f -- g -- h -- cycle);
+//draw (a -- b -- f -- e -- cycle);
+//draw (c -- d -- h -- g -- cycle);

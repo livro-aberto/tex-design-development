@@ -1,8 +1,11 @@
-\def\fileversion{v1.0}
+\def\fileversion{v1.5}
 \def\filename{livroaberto-professor}
 \def\filetitle{Livro Aberto package}
-\def\filedate{2018/02/13}
-\def\docdate {2018/02/13}
+\def\filedate{2021/07/20}
+\def\docdate {2021/07/20}
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{\filename}
 
 %Combinação dos pacotes usados para o livro aberto
 %Para acessar cada seção basta usar Ctrl+F
@@ -109,7 +112,6 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{pdfpages}
 \RequirePackage{stmaryrd}
 \RequirePackage{lscape}
-
 \RequirePackage[sectionbib]{natbib}
 \RequirePackage{chapterbib}
 \patchcmd{\thebibliography}{%
@@ -144,7 +146,8 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \RequirePackage{environ}
 \RequirePackage{xstring}
 \RequirePackage{tasks}
-\RequirePackage{animate}
+\RequirePackage{endnotes}
+
 
 
 \tcbuselibrary{skins,breakable}
@@ -207,30 +210,10 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newcommand{\interno}[2]{{\langle{#1},{#2}\rangle}}
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
-\newcolumntype{e}[1]{>{\vspace{2.5pt}\centering}m{#1}<{\vspace{2.5pt}}}
+\newcolumntype{e}[1]{>{\vspace{2.5pt}\centering\arraybackslash}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{f}{>$c<$}
 \newcolumntype{g}[1]{>$e{#1}<$}
 
-% % Prevent a clash with tabu, or other packages that also define \extrarowdepth.
-% \AtBeginDocument{%
-%   \ifdefdimen\extrarowdepth{} % \extrarowdepth already defined as a length
-%   {\ifdef\extrarowdepth % if it is defined but not a length, we have an error
-%     {\PackageError{extrarowdepth}{Cannot define length \string\extrarowdepth}
-%       {There is already a \string\extrarowdepth\space and it is not a length parameter.}}
-%     {\newlength\extrarowdepth\setlength\extrarowdepth{0pt}}}%
-%   \newlength\@temprowdepth}
-
-
-% \patchcmd{\@array}{\setbox \@arstrutbox \hbox{\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \dp \strutbox \@width \z@}}
-% {\@temprowdepth  \dp \strutbox \advance \@temprowdepth by\extrarowdepth \setbox \@arstrutbox \hbox{\vrule \@height \arraystretch \@tempdima \@depth \arraystretch \@temprowdepth \@width \z@}}
-% {\PackageInfo{extrarowdepth}{\string\extrarowdepth\space added to the array package}}
-% {\PackageWarning{extrarowdepth}{Failed to include \string\extrarowdepth\space in the array package}}
-% \let\@@array\@array
-
-% \newcommand{\tablinesep}[1]{
-%   \setlength\extrarowheigth{#1}
-%   \setlength\extrarowdepth{#1}
-% }
 
 %Coloca listas de enumerate no padrão da seção de exercícios
 \newcommand\exerciselist
@@ -265,9 +248,6 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 % \def\filedate{2018/02/13}
 % \def\docdate {2018/02/13}
 
-
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{\filename}
 
 \typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
 \typeout{English documentation as of <\docdate>}
@@ -341,10 +321,10 @@ underlay boxed title={
 % Observation Box
 
 \newtcolorbox{observationtitle}[1]{
-parbox=false, enhanced, breakable, left=3mm, right=3mm,bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\bfseries\textcolor{\currentcolor}{ #1}}, boxed title style ={empty},top=8mm, attach boxed title to top center={xshift=0mm, yshift=-7.5mm}
+parbox=false, enhanced, breakable, left=3mm, right=3mm,bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\parbox{.8\linewidth}{\bfseries\textcolor{\currentcolor}{ #1}}}, boxed title style ={empty},top=8mm, attach boxed title to top center={xshift=0mm, yshift=-7.5mm}
 }
 
-\newtcolorbox{observation}{parbox=false, enhanced, breakable, left=3mm, right=3mm, top=3mm, bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={}, attach boxed title to top center={xshift=0mm, yshift=-5.5mm}, boxed title style ={empty}}     
+\newtcolorbox{observation}{parbox=false, enhanced, breakable, left=3mm, right=3mm, top=3mm, bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow}     
 
 
 \newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{example}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
@@ -492,52 +472,6 @@ underlay boxed title={
     \clearpage
 }
 
-% \NewEnviron{project}{%
-% \setlist[enumerate]{label=\protect\enumbox{\alph*)}}
-% %\setlist[itemize]{label=\protect\itembox}
-% \setlist[itemize]{label=\protect\itemcoloredsquare}
-% \def\currentcolor{cor2}
-%     \newpage
-% 	\begin{tikzpicture}[remember picture, overlay]
-% 		\coordinate (border1) at ($(current page text area.south east) + (0.00mm,8.00mm)$);
-% 		\coordinate (border1a) at ($(border1) + (-5.00mm,2.00mm)$);
-% 		\coordinate (border1b) at ($(current page text area.south west) + (11.00mm,10.00mm)$);
-% 		\coordinate (border1c) at ($(current page text area.north west) + (11.00mm,-13.00mm)$);
-%         \coordinate (border1d) at ($(current page text area.south west) + (11.00mm,13.00mm)$);
-% 		\coordinate (heading) at ($(current page text area.north west) + (32.50mm,-5.00mm)$);
-% 		\coordinate (corner1) at ($(current page text area.north west) + (6.00mm,-10.00mm)$);
-% 		\coordinate (corner2) at ($(current page text area.north east) + (-4.00mm,-10.00mm)$);
-% 		\coordinate (corner3) at ($(current page text area.south east) + (0.00mm,10.00mm)$);
-% 		\coordinate (corner4) at ($(current page text area.south west) + (10.00mm,6.00mm)$);
-% 		\coordinate (text1) at ($(current page text area.north west) + (11.00,-12.50mm)$);
-% 		\coordinate (text2) at ($(current page text area.south east) + (-2.50mm,8.50mm)$);
-%         \coordinate (bodytextpos) at ($(border1c) + (5.00mm,-3.00mm)$);
-		
-% 		\begin{pgfonlayer}{background}
-% 			\draw [draw=base1, fill=base1] (current page text area.south west) rectangle (current page text area.north east);
-%             		\end{pgfonlayer}
-		
-% 		\begin{pgfonlayer}{main}
-% 			\draw [fill=cor2, draw=cor2] (current page text area.north west) -- ++(0.00mm,-8.00mm) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] -| ++(63.00mm,8.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-% 			\draw [fill=base1!30, draw=base1!30] (corner1) -- (corner2) arc [start angle=90, end angle=0, x radius=4.00mm, y radius=4.00mm] -- (corner3) arc [start angle=0, end angle=-90, x radius=4.00mm, y radius=4.00mm] -- (corner4) arc [start angle=270, end angle=180, x radius=4.00mm, y radius=4.00mm] -- cycle;
-% 			% \draw [green] (text1) rectangle (text2);
-% 			\draw [black] (border1a) -- (border1b) -- (border1c) -| cycle;
-
-% 		\end{pgfonlayer}
-		
-% 		\begin{pgfonlayer}{foreground}
-% 			\node [color=base1!30, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (title) at (heading) {PROJETO APLICADO};
-%             \node [box, below right] (bodytext) at (border1c){%
-% 			\begin{minipage}{0.85\textwidth}
-% 				\BODY			
-% 			\end{minipage}	
-% 			};
-% 		\end{pgfonlayer}
-	
-		
-% 	\end{tikzpicture}
-%     \clearpage
-% }
 
 %Seção 2 - Livro Aberto Colors
 
@@ -561,8 +495,8 @@ underlay boxed title={
 % \def\docdate {2018/02/13}
 
 
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{\filename}
+
+
 
 \typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
 \typeout{English documentation as of <\docdate>}
@@ -653,8 +587,8 @@ underlay boxed title={
 % \def\docdate {2018/02/13}
 
 
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{\filename}
+
+
 
 \typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
 \typeout{English documentation as of <\docdate>}
@@ -679,6 +613,8 @@ underlay boxed title={
 \newfontfamily{\extitlefont}[Path=\fonts]{Exo2-SemiBold.otf} % added after David
 \newfontfamily{\boxexample}[Path=\fonts]{Exo2-Regular.otf}[BoldFont=Exo2-SemiBold.ttf, ItalicFont=Exo2-RegularItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf] % added after David
 
+
+
 %Seção 4 - Livro Aberto Headings
 
 %***************************************************************************************
@@ -697,8 +633,8 @@ underlay boxed title={
 % \def\docdate {2018/02/13}
 
 
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{\filename}
+
+
 
 \typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
 \typeout{English documentation as of <\docdate>}
@@ -710,9 +646,15 @@ underlay boxed title={
 \RequirePackage{ifthen}
 
 % Commands for chapter page
-\newcommand\chapterillustration{}
-\newcommand\chapterwhat{}
-\newcommand\chapterbecause{}
+\newcommand{\chapterillustration}[2]{
+\ifnum\aluno=1
+\def\@chapterillustration{#1}
+\else
+\def\@chapterillustration{#2}
+\fi
+}
+\newcommand{\chapterwhat}[1]{\def\@chapterwhat{#1}}
+\newcommand{\chapterbecause}[1]{\def\@chapterbecause{#1}}
 
 % Formatação dos comandos \section e \subsection
 %Cor atual
@@ -732,7 +674,6 @@ underlay boxed title={
 
 
 
-
 \renewcommand*{\toclevel@section}{1}
 \renewcommand*{\toclevel@subsection}{4}
 \renewcommand*{\toclevel@paragraph}{5}
@@ -743,6 +684,39 @@ underlay boxed title={
 \providecommand*{\toclevel@arrangesec}{1}
 \providecommand*{\toclevel@knowsec}{1}
 \providecommand*{\toclevel@exercisesec}{1}
+
+
+\newcommand{\expandtocdepth}[1][]{%
+	\renewcommand*{\toclevel@section}{1}
+	\renewcommand*{\toclevel@subsection}{4}
+	\renewcommand*{\toclevel@paragraph}{5}
+	\renewcommand*{\toclevel@subparagraph}{6}
+
+	\renewcommand*{\toclevel@exploresec}{2}
+	\renewcommand*{\toclevel@practicesec}{2}
+	\renewcommand*{\toclevel@arrangesec}{2}
+	\setcounter{tocdepth}{2}
+
+  \IfStrEqCase{#1}{%
+  		{}{
+
+  		}
+      {know}{
+					\renewcommand*{\toclevel@knowsec}{2}
+      }%
+      {exercise}{
+					\renewcommand*{\toclevel@exercisesec}{2}
+      }%
+      {know, exercise}{
+	      	\renewcommand*{\toclevel@knowsec}{2}
+	      	\renewcommand*{\toclevel@exercisesec}{2}
+      }
+  }[%
+      Apenas os valores "know" e "exercise" são permitidos.
+  ]%
+}
+
+
 
 \titleformat{\bibliographytitle}{\vspace{.3\baselineskip}\color{\currentcolor}\normalfont\huge\bfseries}{\thesubsection}{1em}{}
 \titlespacing*{\subsection}
@@ -863,6 +837,41 @@ underlay boxed title={
     }
   }
 
+  \newcommand{\bigopenningbox}{
+  \renewtcolorbox{openningbox}{
+  enhanced,
+%  jigsaw,
+  opacityframe=.3,
+  opacityfill=.3,
+  width=105mm,
+  left=3mm,
+  right=3mm,
+  top=3mm,
+  bottom=.5mm,
+  colback=white,
+  colframe=white,
+  arc=3mm,
+  sharp corners=uphill,
+    % frame empty,
+    % arc = 8pt,
+    lower separated = false,
+    before upper = \tcbsubtitle{O QU\^E?},
+    before lower = \tcbsubtitle{POR QU\^E?},
+    fontupper = \sffamily,
+    fontlower = \sffamily,
+    sharp corners = north,
+    subtitle style = {
+      frame empty,
+      fontupper = \fontsize{13pt}{0}\selectfont\titlefont\bfseries,
+      colback = cor1,
+      coltext = black!70,
+      width = 3.5cm,
+      arc = 8pt,
+      rounded corners = east
+    }
+  }
+  }
+
 \newcommand{\ChapNumTitle}[1]{%
   % \thispagestyle{plain}
   \thispagestyle{empty}
@@ -883,11 +892,11 @@ underlay boxed title={
         % solution to the box O QUE and POR QUE?
         \node [right] at ($(current page.north)+(-15mm,-150mm)$) %
         {\begin{openningbox}
-            \chapterwhat
+            \@chapterwhat
 
             \tcblower
 
-            \chapterbecause
+            \@chapterbecause
 
             \end{openningbox}};
 
@@ -896,7 +905,7 @@ underlay boxed title={
 
 
         \begin{pgfonlayer}{bottom}
-            \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{\chapterillustration}};
+            \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{\@chapterillustration}};
         \end{pgfonlayer}
 
         \begin{pgfonlayer}{top}
@@ -1236,118 +1245,6 @@ underlay boxed title={
 
 }
 
-% \newcommand{\explore}[1]{\needspace{\textheight}
-% \checkoddpage\ifoddpage\else\cleardoublepage\fi%
-% \vspace{8 mm}
-% \phantomsection\pdfbookmark[explore]{Explorando: {#1}}{#1}
-% 	\noindent \begin{tikzpicture}[remember picture, scale=1.3]% overlay removed from original, otherwise the stays behind the text, scale.
-%         \filldraw [fill=session1, draw=session1] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-%         \node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont  EXPLORANDO};
-%         \draw [session1, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
-%         \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session1}{\MakeUppercase{ #1}}};
-%     \end{tikzpicture}
-%     \vspace{3pt}
-    
-%     	\def\currentcolor{session1}
-% 	%setting depth 1 enumerate style
-%         \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-% 	% choose secondary (depth 2) enumerate style..
-% 	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
-
-    
-% }
-
-% \newcommand{\practice}[1]{%
-% \vspace{8 mm}
-% \needspace{.15\textheight}
-% \phantomsection\pdfbookmark[practice]{Praticando: {#1}}{#1}
-
-% \noindent     \begin{tikzpicture}[remember picture, scale=1.3]
-%         \filldraw [fill=session2, draw=session2] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-%         \node (practice) at ($(a)!0.5!(b)$) [white] {\titlefont PRATICANDO};
-%         \draw [session2, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
-%         \node (title) at ($(a1)!0.5!(b1)$) [right] { \large\secondtitlefont\textcolor{session2}{\MakeUppercase{ #1}}};
-%     \end{tikzpicture}
-% \vspace{3pt}
-
-% 	\def\currentcolor{session2}
-% 	%setting depth 1 enumerate style
-%         \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-% 	% choose secondary (depth 2) enumerate style..
-% 	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
-
-
-% }
-
-% \newcommand{\know}[1]{%
-% \vspace{8 mm}
-% \needspace{.15\textheight}
-% \phantomsection\pdfbookmark[know]{Para Saber +: {#1}}{#1}
-
-% \noindent     \begin{tikzpicture}[remember picture, scale=1.3]
-%         \filldraw [fill=session3, draw=session3] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-%         \node (know) at ($(a)!0.5!(b)$) [white] {\titlefont PARA SABER \Huge{+}};
-%         \draw [session3, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
-%         \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session3}{\MakeUppercase{ #1}}};
-%     \end{tikzpicture}
-% \vspace{3pt}
-
-% 	\def\currentcolor{session3}
-% 	%setting depth 1 enumerate style
-%        \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-% 	% choose secondary (depth 2) enumerate style..
-% 	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
-
-
-% }
-
-% \newcommand{\arrange}[1]{%
-% \vspace{8 mm}
-% \needspace{.15\textheight}
-% \phantomsection\pdfbookmark[arrange]{Organizando: {#1}}{#1}
-
-% \noindent     \begin{tikzpicture}[remember picture, scale=1.3]
-%         \filldraw [fill=session4, draw=session4] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-%         \node (arrange) at ($(a)!0.5!(b)$) [white] {\titlefont ORGANIZANDO};
-%         \draw [session4, thick] (b) -- ++($(\textwidth,0.00mm)+(-72 mm,0 mm)$);
-%         \node (title) at ($(a1)!0.5!(b1)$) [right] {\large\secondtitlefont\textcolor{session4}{\MakeUppercase{ #1}}\newline};
-%     \end{tikzpicture}
-% \vspace{3pt}
-
-% 	\def\currentcolor{session4}
-% 	%setting depth 1 enumerate style
-%         \setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-% 	% choose secondary (depth 2) enumerate style..
-% 	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
-
-
-% }
-
-% %% Exercise section
-% \newcommand{\exercise}{
-% \needspace{.15\textheight}
-% \vspace{8 mm}
-
-% 	\noindent \begin{tikzpicture}[remember picture]
-% 	\draw [draw=cor2, very thick] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) -- ++(\textwidth , 0.00mm) -- ++(0mm,-2mm);% line
-% 	\fill [draw=cor2, very thick , fill=cor1] ($(\textwidth/2 , 0mm) + (19mm,6mm)$) -- ++(0.00mm,-5.5 mm) coordinate (line1) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| ++(-38.00mm , 0.00mm)  -- ++ (0mm, 5.5 mm) coordinate (line2) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-% 	\node (exercise) at ($(line1)!0.5!(line2) + (0 mm, .8 mm)$) [text=white, font=\thirdtitlefont\Large] {EXERCÍCIOS};%\fontsize{13pt}{0}
-% 	\end{tikzpicture}
-% 	\vspace{1mm}
-%     \def\currentcolor{cor1}
-
-
-% \setlist[enumerate]{label=\protect\enumbox{\arabic*}}
-% \setlist[enumerate,2]{label=\textit{\alph*)}
-% % ,ref=\theenumi.\emph{\arabic*}
-% }
-% \setlist[enumerate,3]{label=\textit{\roman*)}
-% % ,ref=\theenumi.\emph{\roman*}
-% }
-% \phantomsection\pdfbookmark[exercise]{Exercícios}{}
-% }
-
-
 % Defining the section style for the diferent names that eventually appear.
 \setsecnumdepth{chapter} % just number the chapter, not lower levels.
 
@@ -1416,8 +1313,8 @@ underlay boxed title={
 % \def\docdate {2018/02/13}
 
 
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{\filename}
+
+
 
 \typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
 \typeout{English documentation as of <\docdate>}
@@ -1543,6 +1440,8 @@ underlay boxed title={
 
 % Set up lists
 \setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+\settasks{label=\titem{\alph*)}, label-width=14pt}
+
 %\setlist[itemize]{label=\protect\itembox}
 \setlist[itemize]{label=\protect\itemcoloredsquare}
 
@@ -1565,8 +1464,8 @@ underlay boxed title={
 % \def\docdate {2018/02/13}
 
 
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{\filename}
+
+
 
 \typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
 \typeout{English documentation as of <\docdate>}
@@ -1601,6 +1500,7 @@ underlay boxed title={
 \setlength{\parindent}{0em}
  \setlength{\parskip}{6pt}
 
+\extrafloats{200}
 %% Modify Header and Footer spacing
 % \setheadfoot{\onelineskip}{2\onelineskip}
 
@@ -1620,7 +1520,7 @@ underlay boxed title={
 \RequirePackage{tikz}
 \usetikzlibrary{
     calc,trees,shadows,shadows.blur,positioning,arrows,chains,shapes.geometric, decorations, decorations.pathreplacing,decorations.pathmorphing,shapes,
-    matrix,fit,tikzmark,intersections,through,backgrounds,arrows.meta,datavisualization}
+    matrix,fit,tikzmark,intersections,through,backgrounds,arrows.meta,datavisualization, external}
 
 \tikzstyle{vetor}=[->,line width=0.8pt,color=primario,>=latex]
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only, label={}]
@@ -1648,29 +1548,31 @@ underlay boxed title={
 % Define asymptote picture preamble
 
 \begin{asydef}
-import three;
-import graph3;
-import solids;
-import math;
-import labelpath3;
-import labelpath;
-settings.render=16;
-//attach=true;
+	import three;
+	import graph3;
+	import solids;
+	import math;
+	import labelpath3;
+	import labelpath;
+	settings.render=16;
+	//attach=true;
 
-pen azul = rgb(0,94/255,176/255); //azul
-pen verde = rgb(75/255,173/255,49/255); //verde
-pen vinho = rgb(183/255,13/255,40/255); //vinho
-pen laranja = rgb(236/255,107/255,16/255); //laranja
-pen agua = rgb(0,165/255,157/255); //verde agua
-pen box2 = rgb(240/255,238/255,201/255);
+	pen azul = rgb(0,94/255,176/255); //azul
+	pen verde = rgb(75/255,173/255,49/255); //verde
+	pen vinho = rgb(183/255,13/255,40/255); //vinho
+	pen laranja = rgb(236/255,107/255,16/255); //laranja
+	pen agua = rgb(0,165/255,157/255); //verde agua
+	pen box2 = rgb(240/255,238/255,201/255);
 
 
-texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}");
+	texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}");
 \end{asydef}
 
 % Define asymptote picture directory
 
-\def\asydir{Asymptote/asytmp-perspectiva2}
+
+% \def\asydir{Asymptote/asytmp-perspectiva1}
+% \def\asydir{Asymptote/asytmp-perspectiva2}
 
 % Define the layers to be used in document.
 \pgfdeclarelayer{background}
@@ -1689,6 +1591,185 @@ texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}")
 \def\sectionmark#1{\def\Sectionname{#1}\Sectionmark{#1}}
 \def\subsectionmark#1{\def\Subsectionname{#1}\Subsectionmark{#1}}
 \def\subsubsectionmark#1{\def\Subsubsectionname{#1}\Subsubsectionmark{#1}}
+
+
+% Comandos para definir a página de créditos
+
+\newcommand{\autorum}[1]{\def\@autorum{#1}}
+\newcommand{\autordois}[1]{\def\@autordois{#1}}
+\newcommand{\autortres}[1]{\def\@autortres{#1}}
+\newcommand{\autorquatro}[1]{\def\@autorquatro{#1}}
+\newcommand{\autorcinco}[1]{\def\@autorcinco{#1}}
+
+\newcommand{\revisorum}[1]{\def\@revisorum{#1}}
+\newcommand{\revisordois}[1]{\def\@revisordois{#1}}
+\newcommand{\revisortres}[1]{\def\@revisortres{#1}}
+\newcommand{\revisorquatro}[1]{\def\@revisorquatro{#1}}
+\newcommand{\revisorcinco}[1]{\def\@revisorcinco{#1}}
+
+\newcommand{\colaboracao}[1]{\def\@colaboracao{#1}}
+
+\newcommand{\versao}[1]{\def\@versao{#1}}
+
+\newcommand{\graficos}[1]{\def\@graficos{#1}}
+\newcommand{\ilustracao}[1]{\def\@ilustracao{#1}}
+\newcommand{\autordacapa}[3]{\def\@autorcapa{\makecell*[t{{p{\linewidth}}}]{Foto de #1 no #2 \\ \url{#3}}}}
+\newcommand{\versaodigital}[1]{\def\@versaodigital{\url{#1}}}
+\newcommand{\ccbysa}{\def\@ccbysa{1}}
+
+\newcommand{\creditos}{
+	\cleardoublepage
+
+	\begin{titlingpage}
+		\renewcommand{\arraystretch}{1.75}
+		\begin{center}
+		Projeto: LIVRO ABERTO DE MATEMÁTICA
+
+		\noindent \begin{tabular}{lcccr}
+		\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
+		\end{tabular}
+		\end{center}
+
+		\vspace*{.3cm}
+
+		Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
+
+		\vspace{.5em}
+
+		\ifdefined\@versaodigital
+		% Versão digital do capítulo:
+
+		% \@versaodigital
+		% \vspace{.5em}
+		\else\fi
+
+		\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+			Título: & \Chaptername \\
+
+			Ano/ Versão: & \the\year{} / versão \@versao{} de \today\\
+
+			Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+
+			Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+
+			Produção: & Associação Livro Aberto\\
+
+			Coordenação: & Fabio Simas e Augusto Teixeira (\url{livroaberto@impa.br})\\
+
+			\ifdefined\@autordois Autores: \else Autor (a):\fi & \makecell[tl]{\@autorum \\
+			\ifdefined\@autordois 
+			          \@autordois \\ 
+			\else\fi
+			\ifdefined\@autortres 
+			          \@autortres \\ 
+			\else\fi
+			\ifdefined\@autorquatro
+			          \@autorquatro \\
+			\else\fi
+			\ifdefined\@autorcinco
+			          \@autorcinco \\
+			\else\fi}
+			\\
+			\ifdefined \@revisorum
+			Revisão: & \makecell[tl]{\@revisorum \\
+			\ifdefined\@revisordois 
+			          \@revisordois \\
+			\else\fi
+			\ifdefined\@revisortres 
+			          \@revisortres \\
+			\else\fi
+			\ifdefined\@revisorquatro
+			          \@revisorquatro \\
+			\else\fi
+			\ifdefined\@revisorcinco
+			          \@revisorcinco \\
+			\else\fi} \\
+			\else\fi
+
+			\ifdefined \@colaboracao
+			Colaboração & \@colaboracao \\
+			\else\fi
+
+			Design: & Andreza Moreira (Tangentes Design) \\
+
+			Diagramação: & Tarso Caldas \\
+
+			\ifdefined\@ilustracao
+			Ilustrações: & \@ilustracao \\ 
+			\else\fi
+
+			\ifdefined\@graficos
+			Gráficos: & \@graficos \\
+			\else\fi
+
+			\ifdefined\@autorcapa
+			Capa: & \@autorcapa \\
+			\else\fi
+
+		\end{tabular}
+
+		\begin{figure}[b]
+			\begin{minipage}[l]{5cm}
+			\centering
+
+			{\large Licença:}
+
+			\vspace{1em}
+
+			\ifdefined\@ccbysa
+			  \includegraphics[width=3.5cm]{cc-by-sa1}
+			\else
+			  \includegraphics[width=3.5cm]{cc-by-nc-sa}
+			\fi
+
+			\end{minipage}\hfill
+			\begin{minipage}[c]{5cm}
+			\centering
+			{\large Desenvolvido por}
+
+			\vspace{1em}
+			\includegraphics[width=2.5cm]{logo-associacao.jpg}
+			\end{minipage}
+			\begin{minipage}[r]{5cm}
+			\centering
+
+			{\large Patrocínio:}
+
+			  \vspace{1em}
+			  \includegraphics[width=3.5cm]{itau}
+			\end{minipage}
+		\end{figure}
+	\end{titlingpage}
+
+
+	\let\@autorum\relax
+	\undef{\@autordois}
+	\undef{\@autortres}
+	\undef{\@autorquatro}
+	\undef{\@autorcinco}
+
+	\undef{\@revisorum}
+	\undef{\@revisordois}
+	\undef{\@revisortres}
+	\undef{\@revisorquatro}
+	\undef{\@revisorcinco}
+
+	\let\@versao\relax
+	\undef{\@autorcapa}
+	\undef{\@graficos}
+	\undef{\@versaodigital}
+	\undef{\@ccbysa}
+}
+
+\newcounter{anexo}[chapter]
+
+\newcommand{\anexo}[1]{
+  \clearpage
+  \stepcounter{anexo}
+  \begin{center}
+  \huge{\titem{Anexo \theanexo}}
+  \end{center}
+}
 
 %Seção 7 - Livro Aberto Professor
 %***************************************************************************************
@@ -1737,181 +1818,214 @@ texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}")
 
 %%%%%%%%%%%%%%% ENDNOTES
 
-\RequirePackage{endnotes}
 
 \def\enotesize{\normalsize}
 %%% hyperendnotes.sty
-\makeatletter
 \newif\ifenotelinks
 \newcounter{Hendnote}
 % Redefining portions of endnotes-package:
 \let\savedhref\href
 \let\savedurl\url
 \def\endnotemark{%
-\@ifnextchar[\@xendnotemark{%
-\stepcounter{endnote}%
-\protected@xdef\@theenmark{\textbf{Nota \theendnote}}%
-\protected@xdef\@theenvalue{\number\c@endnote}%
-\@endnotemark
-}%
+	\@ifnextchar[\@xendnotemark{%
+		\stepcounter{endnote}%
+		\protected@xdef\@theenmark{\textbf{Nota \theendnote}}%
+		\protected@xdef\@theenvalue{\number\c@endnote}%
+		\@endnotemark
+	}%
 }%
 \def\@xendnotemark[#1]{%
-\begingroup\c@endnote#1\relax
-\unrestored@protected@xdef\@theenmark{\theendnote}%
-\unrestored@protected@xdef\@theenvalue{\number\c@endnote}%
-\endgroup
-\@endnotemark
+	\begingroup\c@endnote#1\relax
+	\unrestored@protected@xdef\@theenmark{\theendnote}%
+	\unrestored@protected@xdef\@theenvalue{\number\c@endnote}%
+	\endgroup
+	\@endnotemark
 }%
 \def\endnotetext{%
-\@ifnextchar[\@xendnotenext{%
-\protected@xdef\@theenmark{\theendnote}%
-\protected@xdef\@theenvalue{\number\c@endnote}%
-\@endnotetext
+	\@ifnextchar[\@xendnotenext{%
+		\protected@xdef\@theenmark{\theendnote}%
+		\protected@xdef\@theenvalue{\number\c@endnote}%
+		\@endnotetext
+	}%
 }%
-}%
-
 \def\@xendnotenext[#1]{%
-\begingroup
-\c@endnote=#1\relax
-\unrestored@protected@xdef\@theenmark{\theendnote}%
-\unrestored@protected@xdef\@theenvalue{\number\c@endnote}%
-\endgroup
-\@endnotetext
+	\begingroup
+	\c@endnote=#1\relax
+	\unrestored@protected@xdef\@theenmark{\theendnote}%
+	\unrestored@protected@xdef\@theenvalue{\number\c@endnote}%
+	\endgroup
+	\@endnotetext
 }%
 \def\endnote{%
-\@ifnextchar[\@xendnote{%
-\stepcounter{endnote}%
-\protected@xdef\@theenmark{\theendnote}%
-\protected@xdef\@theenvalue{\number\c@endnote}%
-\@endnotemark\@endnotetext
-}%
+	\@ifnextchar[\@xendnote{%
+		\stepcounter{endnote}%
+		\protected@xdef\@theenmark{\theendnote}%
+		\protected@xdef\@theenvalue{\number\c@endnote}%
+		\@endnotemark\@endnotetext
+	}%
 }%
 \def\@xendnote[#1]{%
-\begingroup
-\c@endnote=#1\relax
-\unrestored@protected@xdef\@theenmark{\theendnote}%
-\unrestored@protected@xdef\@theenvalue{\number\c@endnote}%
-\show\@theenvalue
-\endgroup
-\@endnotemark\@endnotetext
+	\begingroup
+	\c@endnote=#1\relax
+	\unrestored@protected@xdef\@theenmark{\theendnote}%
+	\unrestored@protected@xdef\@theenvalue{\number\c@endnote}%
+	\show\@theenvalue
+	\endgroup
+	\@endnotemark\@endnotetext
 }%
 \def\@endnotemark{%
-\leavevmode
-\ifhmode
-\edef\@x@sf{\the\spacefactor}\nobreak
-\fi
-\ifenotelinks
-\expandafter\@firstofone
-\else
-\expandafter\@gobble
-\fi
-{%
-\Hy@raisedlink{%
-\hyper@@anchor{Hendnotepage.\@theenvalue}{\empty}%
-}%
-}%
-\hyper@linkstart{link}{Hendnote.\@theenvalue}%
-\makeenmark
-\hyper@linkend
-\ifhmode
-\spacefactor\@x@sf
-\fi
-\relax
+	\leavevmode
+	\ifhmode
+	\edef\@x@sf{\the\spacefactor}\nobreak
+	\fi
+	\ifenotelinks
+	\expandafter\@firstofone
+	\else
+	\expandafter\@gobble
+	\fi
+	{%
+		\Hy@raisedlink{%
+			\hyper@@anchor{Hendnotepage.\@theenvalue}{\empty}%
+	}%
+	}%
+	\hyper@linkstart{link}{Hendnote.\@theenvalue}%
+	\makeenmark
+	\hyper@linkend
+	\ifhmode
+	\spacefactor\@x@sf
+	\fi
+	\relax
 }%
 \long\def\@endnotetext#1{%
-\if@enotesopen
-\else
-\@openenotes
-\fi
-\immediate\write\@enotes{%
-\@doanenote{\@theenmark}{\@theenvalue}%
-}%
-\begingroup
-\def\next{#1}%
-\newlinechar='40
-\immediate\write\@enotes{\meaning\next}%
-\endgroup
-\immediate\write\@enotes{%
-\@endanenote
-}%
+	\if@enotesopen
+	\else
+	\@openenotes
+	\fi
+	\immediate\write\@enotes{%
+		\@doanenote{\@theenmark}{\@theenvalue}%
+	}%
+	\begingroup
+	\def\next{#1}%
+	\newlinechar='40
+	\immediate\write\@enotes{\meaning\next}%
+	\endgroup
+	\immediate\write\@enotes{%
+		\@endanenote
+	}%
 }%
 \def\theendnotes{%
-\immediate\closeout\@enotes
-\global\@enotesopenfalse
-\begingroup
-\makeatletter
-\edef\@tempa{`\string>}%
-\ifnum\catcode\@tempa=12
-\let\@ResetGT\relax
-\else
-\edef\@ResetGT{\noexpand\catcode\@tempa=\the\catcode\@tempa}%
-\@makeother\>%
-\fi
-\def\@doanenote##1##2##3>{%
-\def\@theenmark{##1}%
-\def\@theenvalue{##2}%
-\par
-\smallskip %<-small vertical gap between endnotes
-\begingroup
-\def\href{\expandafter\savedhref}%
-\def\url{\expandafter\savedurl}%
-\@ResetGT
-\edef\@currentlabel{\csname p@endnote\endcsname\@theenmark}%
-\enoteformat
-}%
-\def\@endanenote{%
-\par\endgroup
-}%
-% Redefine, how numbers are formatted in the endnotes-section:
-\renewcommand*\@makeenmark{%
-\normalfont\protect\@endnotebox{\@theenmark}~%
-}%
-% header of endnotes-section
-% \enoteheading
-% font-size of endnotes
-\enotesize
-\input{\jobname.ent}%
-\endgroup
+	\immediate\closeout\@enotes
+	\global\@enotesopenfalse
+	\begingroup
+	\makeatletter
+	\edef\@tempa{`\string>}%
+	\ifnum\catcode\@tempa=12
+	\let\@ResetGT\relax
+	\else
+	\edef\@ResetGT{\noexpand\catcode\@tempa=\the\catcode\@tempa}%
+	\@makeother\>%
+	\fi
+	\def\@doanenote##1##2##3>{%
+		\def\@theenmark{##1}%
+		\def\@theenvalue{##2}%
+		\par
+		\smallskip %<-small vertical gap between endnotes
+		\begingroup
+		\def\href{\expandafter\savedhref}%
+		\def\url{\expandafter\savedurl}%
+		\@ResetGT
+		\edef\@currentlabel{\csname p@endnote\endcsname\@theenmark}%
+		\enoteformat
+	}%
+	\def\@endanenote{%
+		\par\endgroup
+	}%
+	% Redefine, how numbers are formatted in the endnotes-section:
+	\renewcommand*\@makeenmark{%
+		\normalfont\protect\@endnotebox{\@theenmark}~%
+	}%
+	% header of endnotes-section
+	% \enoteheading
+	% font-size of endnotes
+	\enotesize
+	\input{\jobname.ent}%
+	\endgroup
 }%
 \def\enoteformat{%
-\rightskip\z@
-\leftskip1.8em
-\parindent\z@
-\leavevmode\llap{%
-\setcounter{Hendnote}{\@theenvalue}%
-\addtocounter{Hendnote}{-1}%
-\refstepcounter{Hendnote}%
-\ifenotelinks
-\expandafter\@secondoftwo
-\else
-\expandafter\@firstoftwo
-\fi
-{\@firstofone}%
-{\hyperlink{Hendnotepage.\@theenvalue}}%
-{\makeenmark}%
+	\rightskip\z@
+	\leftskip1.8em
+	\parindent\z@
+	\leavevmode\llap{%
+		\setcounter{Hendnote}{\@theenvalue}%
+		\addtocounter{Hendnote}{-1}%
+		\refstepcounter{Hendnote}%
+		\ifenotelinks
+		\expandafter\@secondoftwo
+		\else
+		\expandafter\@firstoftwo
+		\fi
+		{\@firstofone}%
+		{\hyperlink{Hendnotepage.\@theenvalue}}%
+		{\makeenmark}%
+	}%
 }%
-}%
-% stop redefining portions of endnotes-package:
-\makeatother
+
 % Toggle switch in order to turn on/off back-links in the
 % endnote-section:
 \enotelinkstrue
 %\enotelinksfalse
 
-
 \renewcommand{\notesname}{Notas}
 
-\makeatletter
 %\def\@makeenmark{\hbox{\@textsuperscript{\normalfont\@theenmark}}}
 \def\@makeenmark{\hbox{\normalfont\@theenmark}}
 
-\titlespacing*{\section}
-{0pt}{2mm}{1mm}
-\titlespacing*{\subsection}
-{0pt}{1mm}{1mm}
+\newcommand\notasfig[1]{
+  \notebox{\textcolor{white}{\textbf{\endnotemark}}}
+  \endnotetext
+  {\adjustbox{valign=t}
+  {
+  \begin{minipage}{\linewidth}
+    #1
+    \end{minipage}
+  }}}
 
-\setitemize{label=\itemcoloredsquare,topsep=2pt, itemsep=1pt}
+\newcommand{\notas}[1]{
+	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
+	\endnotetext
+	{#1}}
+  
+\newcommand{\mnotas}[1]{
+	\marginpar{
+	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
+	\endnotetext
+	{\adjustbox{valign=t}{#1}}}}
 
+
+\newcommand{\notasfinais}{	
+	\newgeometry{textwidth=840pt,outer=50pt, top=2cm, bottom=2cm}
+	\pagestyle{plain}
+	\def\currentcolor{cor1}
+	\section{\huge Notas}
+	\setlength{\columnsep}{1cm}
+	\begin{multicols}{2}\raggedcolumns
+  \theendnotes
+	\clearpage
+	\end{multicols}
+	\restoregeometry
+}
+
+\newenvironment{paginanotas}{
+	\newgeometry{textwidth=840pt,outer=50pt}
+	\pagestyle{empty} 
+	\begin{multicols}{4}
+}
+{
+\clearpage
+\end{multicols}
+\pagebreak
+\restoregeometry
+}
 
 %%%%%%%%%%%%%%%%  PÁGINA DE TEXTO
 
@@ -1921,25 +2035,25 @@ texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}")
 
 \newenvironment{apresentacao}[1]
 {
-\setcounter{mypresentation}{\value{page}}
-\frontmatter
-\setcounter{mypresentation}{\value{page}}
-\def\currentcolor{cor1}
-\newgeometry{textwidth=840pt,outer=50pt, bottom=17mm, top=17mm}
-\pagestyle{plain}
-\setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
-\setlist[itemize]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt} 
-\section{#1}
-\begin{multicols}{2}}
-{\clearpage\end{multicols}
-\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
-%\setlist[itemize]{label=\protect\itembox}
-\setlist[itemize]{label=\protect\itemcoloredsquare}
-\pagebreak\restoregeometry 
-\mainmatter
-\def\currentcolor{session1}
-\cleardoublepage
-\setcounter{page}{\value{mypresentation}}
+	\setcounter{mypresentation}{\value{page}}
+	\frontmatter
+	\setcounter{mypresentation}{\value{page}}
+	\def\currentcolor{cor1}
+	\newgeometry{textwidth=840pt,outer=50pt, bottom=17mm, top=17mm}
+	\pagestyle{plain}
+	\setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
+	\setlist[itemize]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt} 
+	\section{#1}
+	\begin{multicols}{2}}
+	{\clearpage\end{multicols}
+	\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+	%\setlist[itemize]{label=\protect\itembox}
+	\setlist[itemize]{label=\protect\itemcoloredsquare}
+	\pagebreak\restoregeometry 
+	\mainmatter
+	\def\currentcolor{session1}
+	\cleardoublepage
+	\setcounter{page}{\value{mypresentation}}
 }
 
 \newcounter{mypagecount}
@@ -1947,48 +2061,30 @@ texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}")
 
 \newenvironment{paginatexto}[1]
 {
-\renewcommand\frontmatter{%
-  \cleardoublepage
-  \@mainmatterfalse
-  %\pagenumbering{roman}% Don't reset
-}
-\renewcommand\mainmatter{%
-  \cleardoublepage
-  \@mainmattertrue
-  %\pagenumbering{arabic}% Don't reset
-}\clearpage
-\setcounter{mypagecount}{\value{page}}
-\cleardoublepage
-\setcounter{mypagecount}{\value{page}}
-\def\currentcolor{session1}
-\newgeometry{textwidth=840pt,outer=50pt, bottom=17mm, top=17mm}
-\thispagestyle{empty}\pagestyle{empty}
-\setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
-\setlist[itemize]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}
-\section{#1}
-\begin{multicols}{2}}
-{\clearpage\end{multicols}
-\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
-%\setlist[itemize]{label=\protect\itembox}
-\setlist[itemize]{label=\protect\itemcoloredsquare}
-\def\currentcolor{session1}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
+	\clearpage
+	\setcounter{mypagecount}{\value{page}}
+	\cleardoublepage
+	\setcounter{mypagecount}{\value{page}}
+	\def\currentcolor{session1}
+	\newgeometry{textwidth=840pt,outer=50pt, bottom=17mm, top=17mm}
+	\thispagestyle{empty}\pagestyle{empty}
+	\setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
+	\setlist[itemize]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}
+	\section{#1}
+	\begin{multicols}{2}}
+	{\clearpage\end{multicols}
+	\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+	%\setlist[itemize]{label=\protect\itembox}
+	\setlist[itemize]{label=\protect\itemcoloredsquare}
+	\def\currentcolor{session1}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
 }
 
-
-
-%%%%%%%%%%%%%%%%  PÁGINA DE NOTAS
-
-
-
-\newenvironment{paginanotas}
-{\newgeometry{textwidth=840pt,outer=50pt}\pagestyle{empty} \begin{multicols}{4}}
-{\clearpage\end{multicols}\pagebreak\restoregeometry\mainmatter}
 
 
 %%%%%%%%%%%%% CAIXA DE TEXTO
 
  
-\newcommand\semihuge{\@setfontsize\semiHuge{16.72}{21.38}}
+\newcommand{\semihuge}{\@setfontsize\semiHuge{16.72}{21.38}}
 
 
 \newenvironment{texto}[1]
@@ -2364,40 +2460,7 @@ before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,
 \setlist[itemize]{label=\protect\itemcoloredsquare}}
 
 
-\newcommand\notasfig[1]{
-  \notebox{\textcolor{white}{\textbf{\endnotemark}}}
-  \endnotetext
-  {\adjustbox{valign=t}
-  {
-  \begin{minipage}{\linewidth}
-    #1
-    \end{minipage}
-  }}}
 
-\newcommand\notas[1]{
-	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
-	\endnotetext
-	{#1}}
-  
-\newcommand\mnotas[1]{
-	\marginpar{
-	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
-	\endnotetext
-	{\adjustbox{valign=t}{#1}}}}
-
-
-\newcommand\notasfinais{	
-	\newgeometry{textwidth=840pt,outer=50pt, top=2cm, bottom=2cm}
-	\pagestyle{plain}
-	\def\currentcolor{cor1}
-	\section{\huge Notas}
-	\setlength{\columnsep}{1cm}
-	\begin{multicols}{2}\raggedcolumns
-  \theendnotes
-	\clearpage
-	\end{multicols}
-	\restoregeometry
-}
 
 %%%%%%%%%%%%% CAIXA DE HABILIDADES
 \newtcolorbox{habilities}[1]{ breakable,colback=penaqua!20!white,colbacktitle=penaqua!20!white,
@@ -2415,12 +2478,7 @@ colframe=grafite!90!white,colupper=white, left=0pt, right=0pt,top=-2pt,bottom=-2
 marginparsep=30pt,headsep=19pt,top=17mm, bottom=17mm ,inner=50pt,outer=440pt,
 marginparwidth=350pt}
 
-\newcommand{\anexo}[1]{
-  \clearpage
-  \begin{center}
-  \huge{\titem{#1}}
-  \end{center}
-}
+
 
 
 %Ambiente marginfigure para figuras na margem

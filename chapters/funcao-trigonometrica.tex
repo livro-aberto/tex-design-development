@@ -1,98 +1,22 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{./abertura-funcao-trigonometrica}{./abertura-funcao-trigonometrica-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-funcao-trigonometrica}
-\else
-\renewcommand\chapterillustration{./abertura-funcao-trigonometrica-professor}
-\fi
+\chapterwhat{Fenômenos Periódicos, Radiano, Funções Seno e Cosseno, Senóides.}
 
+\chapterbecause{Fenômenos periódicos são aqueles que se repetem com o tempo. Alguns exemplos de tais fenômenos são os batimentos cardíacos, as fases da lua, do nascer do sol, o movimento dos ponteiros de um relógio ou de um pêndulo. O próprio movimento de rotação da Terra é um fenômeno periódico que se repete em períodos de 24 horas, sendo o responsável pelas noções de dia e de noite. As funções trigonométricas, diferente das demais que estudamos até aqui, têm a propriedade de serem periódicas, isto é, seus gráficos se replicam ciclicamente em intervalos determinados do seu domínio. Esta característica faz dessas funções as mais adequadas para modelar matematicamente e prever informações sobre os fenômenos periódicos.} 
 
-\def\chapterwhat{Fenômenos Periódicos, Radiano, Funções Seno e Cosseno, Senóides.}
-\def\chapterbecause{Fenômenos periódicos são aqueles que se repetem com o tempo. Alguns exemplos de tais fenômenos são os batimentos cardíacos, as fases da lua, do nascer do sol, o movimento dos ponteiros de um relógio ou de um pêndulo. O próprio movimento de rotação da Terra é um fenômeno periódico que se repete em períodos de 24 horas, sendo o responsável pelas noções de dia e de noite. As funções trigonométricas, diferente das demais que estudamos até aqui, têm a propriedade de serem periódicas, isto é, seus gráficos se replicam ciclicamente em intervalos determinados do seu domínio. Esta característica faz dessas funções as mais adequadas para modelar matematicamente e prever informações sobre os fenômenos periódicos.} 
 \chapter{Funções Trigonométricas}
 \label{trigo-chap}
 
-\mbox{}\thispagestyle{empty}\clearpage
+\autorum{Douglas Monsôres de Melo Santos (UFRRJ)}
+\autordois{Gisela Maria da Fonseca Pinto (UFRRJ)}
+\autortres{Luciano Vianna Félix (UFRRJ)}
 
-\thispagestyle{empty}
+\versao{1.0}
+\revisorum{Wanderley Rezende}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\autordacapa{Kayra Ranai}{Unsplash}{https://unsplash.com/photos/lt0OtR5ti2I}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
-
-\vspace*{.3cm}
-
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
-
-
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Funções Trigonométricas\\
-\\
-Ano/ Versão: & 2020 / versão 0.2 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas, \\
-			&  Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Douglas Monsôres de Melo Santos (UFRRJ),\\
-        & Gisela Maria da Fonseca Pinto (UFRRJ),\\
-             & Luciano Vianna Félix (UFRRJ).\\
-        
-\\
-Colaboração: & \\
-\\
-Revisão: & Wanderley Rezende \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & ---\\
-\\
-  Capa: & Foto de Kayra Ranai, no Unsplash \\
-  		& https://unsplash.com/photos/lt0OtR5ti2I \\
-
-\end{tabular}
-\vspace{.5cm}
-
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \mainmatter
 
@@ -125,9 +49,9 @@ O mapa conceitual acima ilustra a gama de tópicos que costumam permear o ensino
 
 \begin{multicols}{2}
 \null\vfill
-\setlength{\extrarowheight}{5pt}
-\setlength{\extrarowdepth}{7.5pt}
-\begin{tabular}{|d{.3\linewidth}|>{\displaystyle}f|>{\displaystyle}f|>{\displaystyle}f|}
+
+
+\begin{tabular}{|d{.25\linewidth}|>{\displaystyle}g{3em}|>{\displaystyle}g{3em}|>{\displaystyle}g{3em}|}
 \hline
 \tcolor{} & \tmat{30^{\circ}} & \tmat{45^{\circ}} & \tmat{60^{\circ}} \\ 
 \hline
@@ -362,7 +286,6 @@ que modela esse exemplo (item \titem{f)}).
 }{1}{2}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Construindo uma Roda Gigante}
 {
 \begin{enumerate}
@@ -430,7 +353,7 @@ Suponha que no tempo $t$, a função que descreve o deslocamento dessa projeçã
 \begin{figure}[H]
 \centering
 
-\resizebox{.75\linewidth}{!}
+\resizebox{.7\linewidth}{!}
 {
 \begin{tikzpicture}
 \draw [step=.5,gray!50] (-1.5,-7) grid (14,7);
@@ -484,7 +407,7 @@ Utilizando papelão, tampinhas de garrafa, cola e um lápis, construir uma roda 
 
 \includegraphics[width=.45\linewidth]{trigonometricas7}
 \caption{Fonte: \cite{soares2010}}
-\label{}
+
 \end{figure}
 
 Será necessário também o uso de um transferidor para medir os ângulos e uma régua para medir a altura das “cabines”.
@@ -516,8 +439,8 @@ Também é possível visualizar nesse link o gráfico que relaciona a altura da 
 \begin{figure}[H]
 \centering
 
-\includegraphics[height=.11\textheight]{trigonometricas8}
-\includegraphics[height=.11\textheight]{trigonometricas9}
+\includegraphics[height=.1\textheight]{trigonometricas8}
+\includegraphics[height=.1\textheight]{trigonometricas9}
 \caption{Observação da altura da cabine}
 
 \end{figure}
@@ -525,16 +448,16 @@ Também é possível visualizar nesse link o gráfico que relaciona a altura da 
 \begin{figure}[H]
 \centering
 
-\includegraphics[height=.11\textheight]{trigonometricas10}
-\includegraphics[height=.11\textheight]{trigonometricas11}
+\includegraphics[height=.1\textheight]{trigonometricas10}
+\includegraphics[height=.1\textheight]{trigonometricas11}
 \caption{Observação do ponto do plano que associa a $x$ o tempo e a $y$ a altura da cadeira}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 
-\includegraphics[height=.11\textheight]{trigonometricas12}
-\includegraphics[height=.11\textheight]{trigonometricas13}
+\includegraphics[height=.1\textheight]{trigonometricas12}
+\includegraphics[height=.1\textheight]{trigonometricas13}
 \caption{Observação do gráfico da função que associa a $x$ o tempo e a $y$ a altura da cadeira}
 \end{figure}
 
@@ -572,7 +495,7 @@ Você conhece mais alguns fenômenos periódicos que acontecem na vida?
 
 \includegraphics[width=.75\linewidth]{trigonometricas14}
 \caption{Fonte: \href{https://www.solarsystemscope.com/}{Solar System Scope}}
-\label{}
+
 \end{figure}
 
 O movimento de rotação da Terra em torno de seu próprio eixo é um movimento periódico que demora $24$ h para completar um ciclo (período de $24$ h) e o movimento de translação da Terra ao redor do Sol demora $365$ dias e $6$ h para completar um ciclo (período de $365$ dias e $6$ h).
@@ -699,7 +622,6 @@ Sugere-se que o professor converse com os alunos sobre os riscos de estarem expo
 \end{sugestions}
 \clearmargin
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Bem estar digital}
 {
 \begin{enumerate}[left=7.5pt, wide]
@@ -747,21 +669,20 @@ Para o  gráfico do número médio de mensagens por dia da semana, o comando usa
 
 \caption{Número de mensagens
 recebidas por dia da semana}
-\label{}
+
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[height=.25\textheight]{trigonometricas30}
 \caption{Número de vezes que o
 aplicativo foi aberto por dia da semana}
-\label{}
+
 \end{figure}
 \end{multicols}
 \end{enumerate}
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Bem estar digital}
 {
 	\begin{enumerate}[left=7.5pt, wide]\setcounter{enumi}{3}
@@ -978,7 +899,7 @@ A vibração de uma fonte sonora causa uma onda no meio de propagação. O som p
 
 \includegraphics[width=.5\linewidth]{trigonometricas33}
 \caption{Fonte: \href{https://pt.wikipedia.org/wiki/Som}{Wikipedia} }
-\label{}
+
 \end{figure}
 
 Assista ao vídeo a seguir para compreender melhor o que são as ondas sonoras e como o som se propaga: \url{https://www.youtube.com/watch?v=sEa0dvnqrnw}
@@ -1001,7 +922,7 @@ Faça o \textit{download} em seu celular do aplicativo gratuito \textit{Oscillos
 
 \includegraphics[width=.5\linewidth]{trigonometricas35}
 \caption{O aplicativo Oscilloscope. Fonte: Os autore}
-\label{}
+
 \end{figure}
 
 \begin{enumerate}
@@ -1031,7 +952,7 @@ A figura a seguir ilustra as ondas associadas às atividades elétricas do cora�
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.7\linewidth]{trigonometricas36}
+\includegraphics[width=.675\linewidth]{trigonometricas36}
 \caption{Fonte: \href{https://www.msdmanuals.com/pt/casa/dist\%C3\%BArbios-do-cora\%C3\%A7\%C3\%A3o-e-dos-vasos-sangu\%C3\%ADneos/diagn\%C3\%B3stico-de-dist\%C3\%BArbios-do-cora\%C3\%A7\%C3\%A3o-e-dos-vasos-sangu\%C3\%ADneos/eletrocardiograma}{Manual MSD}}
 \label{eletrocardiograma}
 \end{figure}
@@ -1178,7 +1099,7 @@ Dividindo os dois lados da igualdade por $2$, teremos de forma mais simplificada
 180^{\circ}=\pi \rad\therefore\frac{180^{\circ}}{\pi}=\frac{\pi}{\pi} \rad\therefore1 \rad=\frac{180^{\circ}}{\pi}
 \end{equation*}
 
-\begin{observation}{}
+\begin{observation}
 É interessante observar que, ao tratar dessas duas unidades de medida, estamos percebendo duas características importantes do arco: a medida do ângulo central que o determina sobre a circunferência e a quantidade de vezes que o raio da circunferência cabe sobre aquele arco. Quando desejamos nos remeter à medida do arco correspondente ao ângulo central, a medida em graus é a mais esclarecedora; por outro lado, quando desejamos indicar quantos raios cabem no comprimento do arco, então a medida em radianos é a mais adequada. E note que podemos facilmente transitar de uma à outra a partir do uso da relação $180^{\circ}=\pi\rad$.
 \end{observation}
 
@@ -1192,9 +1113,9 @@ Para podermos ter uma boa ideia do que estamos tratando, vamos considerar dois r
 \begin{figure}[H]
 \centering
 
-\includegraphics[height=175bp]{trigonometricas38}
+\includegraphics[height=170bp]{trigonometricas38}
 \caption{Fonte: \href{https://gigantesdomundo.blogspot.com/2012/11/o-maior-relogio-do-mundo.html}{Gigantes do Mundo}}
-\label{}
+
 \end{figure}
 \end{minipage}
 \hspace{2em}
@@ -1202,9 +1123,9 @@ Para podermos ter uma boa ideia do que estamos tratando, vamos considerar dois r
 \begin{figure}[H]
 \centering
 
-\includegraphics[height=175bp]{trigonometricas39}
+\includegraphics[height=170bp]{trigonometricas39}
 \caption{Fonte: \href{https://produto.mercadolivre.com.br/MLB-1160291326-relogio-pulso-personalizado-com-foto-imagem-logo-promoco-_JM}{Mercado Livre}}
-\label{}
+
 \end{figure}
 \end{minipage}
 \end{figure}
@@ -1214,11 +1135,11 @@ Vamos considerar que os dois relógios estão marcando corretamente as horas, se
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.35\linewidth]{trigonometricas40}
+\includegraphics[width=.325\linewidth]{trigonometricas40}
 \hspace{2em}
-\includegraphics[width=.35\linewidth]{trigonometricas40}
+\includegraphics[width=.325\linewidth]{trigonometricas40}
 \caption{Disponível em: \url{https://www.geogebra.org/m/gTMSvJTB}}
-\label{}
+
 \end{figure}
 
 Nos dois relógios, a medida do arco de extremidades $C$ e $E$ tem a medida de $90^{\circ}$ - essa é a medida angular desse arco, pois remete à medida do ângulo central de vértice $D$ que mede também $90^{\circ}$. Por outro lado, evidentemente, a medida do \textit{comprimento} do arco de extremidades $C$ e $E$ é diferente nos dois relógios: no relógio de pulso, de diâmetro $3$ cm (e raio $1{,}5$ cm), o comprimento desse arco será de $C=\frac{(2\cdot\pi\cdot1{,}5}{4}=\frac{3}{4}\pi$ cm, ou seja, aproximadamente $2{,}35$ cm . Por outro lado, no relógio de Meca com $43$ m de diâmetro, temos $21{,}5\text{ m } = 2150$ cm de raio e então o arco $CE$ terá comprimento  
@@ -1326,7 +1247,6 @@ Vamos utilizar o raciocínio de Eratóstenes, com o auxílio do Google Earth par
 }{1}{1}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Carrinho VertiGo}
 {
  \begin{enumerate}
@@ -1430,7 +1350,7 @@ Observe a imagem a seguir e responda às perguntas:
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.9\linewidth]{trigonometricas48}
+\includegraphics[width=.85\linewidth]{trigonometricas48}
 \end{figure}
 
 \begin{enumerate}
@@ -1452,7 +1372,7 @@ Nas atividades \hyperref[trig-ativ10]{\textit{Carrinho VertiGo}} e \hyperref[tri
 
 \includegraphics[width=\linewidth]{trigonometricas50}
 \caption{$E(t)$ para $t>0$}
-\label{}
+
 \end{figure}
 \end{minipage}
 \begin{minipage}{.45\linewidth}
@@ -1461,7 +1381,7 @@ Nas atividades \hyperref[trig-ativ10]{\textit{Carrinho VertiGo}} e \hyperref[tri
 
 \includegraphics[width=\linewidth]{trigonometricas51}
 \caption{$E(t) \text{ para } $t<0}
-\label{}
+
 \end{figure}
 \end{minipage}
 
@@ -1536,7 +1456,6 @@ Por essa razão é tão interessante usar a unidade radianos para medir arcos e 
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{-1em}}
 \begin{objectives}{Quantas voltas tem o arco e qual é o seu quadrante?  e Marcando ângulos no círulo trigonométrico}
 {
 	\begin{itemize}
@@ -1679,7 +1598,6 @@ Dê a menor determinação positiva dos arcos a seguir e indique sua expressão 
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-1em}}
 \begin{sugestions}{Retornando à Roda Gigante Rio Star}
 {
 Será possível perceber parte do percurso, no qual a medida de envolvendo o cosseno. Esse exemplo acaba por motivar a extensão do conceito de cosseno para ângulos maiores que $\pi$, a fim de que se possa obter uma função que modele o movimento completo da roda gigante. Recomendamos especial cuidado com seus alunos na relação entre a medida do ângulo e o tempo, de forma que isso reflita a velocidade de rotação da roda gigante.
@@ -1794,7 +1712,7 @@ Na atividade \hyperref[trig-ativ4]{\textit{Rio Star}}  você analisou alguns asp
 
 \includegraphics[width=.4\linewidth]{trigonometricas56}
 \caption{Fonte: \cite{soares2010}}
-\label{}
+
 \end{figure}
 \end{task}
 
@@ -2147,7 +2065,7 @@ O ponto $D$ é a projeção do ponto $C$ sobre o eixo $x$, portanto, $D = (\cos(
 A curva dada pelo gráfico da função seno (e também o da função cosseno!) é chamada de senóide. 
 
 
-\begin{observation}{}
+\begin{observation}
 Na atividade \hyperref[trig-ativ15]{\textit{Retornando à Rio Star}}, foi pedido que você
 
 
@@ -2162,7 +2080,6 @@ A definição feita para o cosseno de um número real qualquer, nos permite conc
 
 \clearpage
 \def\currentcolor{cor1}
-\marginpar{\vspace{-.5em}}
 \begin{objectives}{Exercício 1}
 {
 \begin{itemize}
@@ -2179,7 +2096,6 @@ função do quadrante em que a extremidade do arco está
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{Exercício 1}
 {
 Recomendamos o uso do Geogebra para realizar essa tarefa,
@@ -2191,7 +2107,6 @@ Aqui, explore com seus alunos a ideia da projeção nos eixos
 coordenados.
 }{1}{2}
 \end{sugestions}
-\marginpar{\vspace{-1.75em}}
 \begin{answer}{Exercícios}
 {\exerciselist\small
 \begin{enumerate}
@@ -2241,7 +2156,6 @@ $\sen\bigg(\dfrac{\pi}{4}\bigg)$. As coordenadas de $E$ são $\bigg(\cos\bigg(\d
 \end{enumerate}
 }{1}
 \end{answer}
-\marginpar{\vspace{-1em}}
 \begin{answer}{Exercícios}
 {\exerciselist
 \begin{enumerate}\setcounter{enumi}{1}
@@ -2663,7 +2577,7 @@ Usando o link da plataforma Desmos (\url{https://teacher.desmos.com/activitybuil
 
 \includegraphics[width=.9\linewidth]{trigonometricas97}
 \caption{Fonte: \href{https://teacher.desmos.com/activitybuilder/custom/566b317d4e38e1e21a10ab07\#preview/df77bcd1-a128-4e8b-a1e6-6417acf42950}{Desmos -- Marbleslides: Periodics}}
-\label{}
+
 \end{figure}
 
 \end{task}
@@ -2713,7 +2627,7 @@ O ouvido humano é capaz de ouvir ondas sonoras entre $20$ Hz a $20000$ Hz. Acim
 
 \includegraphics[width=.7\linewidth]{trigonometricas99}
 \caption{Fonte: \href{https://sites.usp.br/nupic/wp-content/uploads/sites/293/2017/11/M\%c3\%b3dulo-de-Ensino-OFICIAL.pdf}{Universidade de São Paulo}}
-\label{}
+
 \end{figure}
 
 No vídeo abaixo, você pode ouvir uma onda sonora que tem amplitude constante, com frequência variando de $20$ Hz a $20.000$ Hz. Será que você ouve bem? Assista-o para descobrir em quais intervalos de valor da frequência você consegue ouvir algum som:
@@ -3175,7 +3089,7 @@ Plote no GeoGebra os pontos $(t,y)$, onde $t$ é o dia e $y$ é o percentual de 
 
 \includegraphics[width=.8\linewidth]{trigonometricas115}
 \caption{Fonte: \href{https://www.calendario-365.com.br/calend\%C3\%A1rio-lunar/2020/junho.html}{Calendário 365}}
-\label{}
+
 \end{figure}
 
 Encontre uma função trigonométrica da forma $y = a\cdot\sen(bt+c) +d$ que melhor se aproxima dos pontos traçados. Use-a para prever a fase da lua nos dias 01 a 14 de julho. Compare o resultado obtido por você com o que consta no site \url{https://www.calendario-365.com.br/calendário-lunar/2020/julho.html}
@@ -3206,7 +3120,6 @@ Todo o raciocínio acima foi descrito considerando $f(x)= a\sen(bx+c) + d$, isto
 
 \clearpage
 \def\currentcolor{session2}
-\marginpar{\vspace{.5em}}
 \begin{objectives}{Pressão Arterial}
 {
 \begin{itemize}
@@ -3215,7 +3128,6 @@ Todo o raciocínio acima foi descrito considerando $f(x)= a\sen(bx+c) + d$, isto
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-1em}}
 \begin{answer}{Pressão Arterial}
 {
 O período da função é dado pelo tempo entre um batimento cardíaco e outro. Como em $1$ minuto ($60$ s) o coração faz $90$ batimentos, o tempo necessário para um batimento é $\frac{2}{3}$s. 
@@ -3236,7 +3148,6 @@ periódicos;
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-1em}}
 \begin{sugestions}{Maré baixa para realizar Snorkel}
 {
 \begin{itemize}
@@ -3247,7 +3158,7 @@ portanto, $b=\frac{2\pi}{12}\approx=0{,}52$.
 \item Ao fazer o gráfico no Geogebra, tome $c=0$.
 \item Após construir o gráfico com os parâmetros encontrados, use o comando “otimização”{} para achar os pontos de máximo e mínimo da função.
 \end{itemize}
-}{1}{2} 
+}{1}{1} 
 \end{sugestions}
 \begin{answer}{Maré baixa para realizar Snorkel}
 {
@@ -3299,9 +3210,9 @@ Taipu de Fora é um distrito da cidade de Camamu, localizada no Sul da Bahia, on
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.6\linewidth]{trigonometricas117}
+\includegraphics[width=.575\linewidth]{trigonometricas117}
 \caption{Fonte: \href{guiaviagensbrasil.com}{Guia Viagens Brasil.com}}
-\label{}
+
 \end{figure}
 
 É necessário pegar a maré com o nível mais baixo para curtir o mergulho com as maravilhas do mar. (\url{https://www.viajenaviagem.com/2013/04/como-usar-tabua-mares/})
@@ -3311,7 +3222,7 @@ Taipu de Fora é um distrito da cidade de Camamu, localizada no Sul da Bahia, on
 
 \includegraphics[width=.7\linewidth]{trigonometricas118}
 \caption{Fonte: \href{https://www.climatempo.com.br/tabua-de-mares}{Climatempo}}
-\label{}
+
 \end{figure}
 
 Assumindo que o comportamento periódico das marés seja definido por uma senóide da forma $y = a\cdot\sen(bx+c) + d$, encontre um modelo apenas usando os dados acima. Assuma também que o ponto mais alto assumido pela maré na semana das medições foi $2{,}11$ m e o mais baixo, $0{,}16$ m. Utilize o modelo para realizar uma previsão sobre os horários do dia de domingo, 04/10 onde a maré atingirá o ponto mais baixo e o mais alto. Quais os melhores horários para praticar snorkel naquele dia?
@@ -3584,7 +3495,7 @@ matematicamente fenômenos periódicos
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/funcao-trigonometrica_bibliografia.bib}
 
 \nocite{*}

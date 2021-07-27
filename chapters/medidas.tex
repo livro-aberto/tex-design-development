@@ -1,94 +1,34 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-medidas}{abertura-medidas-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{abertura-medidas}
-\else
-\renewcommand\chapterillustration{abertura-medidas-professor}
-\fi
+\chapterwhat{As noções presentes no ato de medir, a necessidade de padronização das unidades de medida e o sistema internacional de medidas. Medidas da informática e a medida da informação. Unidades de medida que são compostas por outras unidades de medida e algumas de suas aplicações. Um breve panorama histórico da evolução da precisão em algumas medidas e suas consequências. Normas para alguns tipos de valores obtidos nas medições: Notação científica, ordem de grandeza e algarismos significativos; aproximações e medidas representadas por números irracionais.}
 
-\renewcommand\chapterwhat{As noções presentes no ato de medir, a necessidade de padronização das unidades de medida e o sistema internacional de medidas. Medidas da informática e a medida da informação. Unidades de medida que são compostas por outras unidades de medida e algumas de suas aplicações. Um breve panorama histórico da evolução da precisão em algumas medidas e suas consequências. Normas para alguns tipos de valores obtidos nas medições: Notação científica, ordem de grandeza e algarismos significativos; aproximações e medidas representadas por números irracionais.}
-
-\renewcommand\chapterbecause{Planejamento de consumo familiar, cumprimento de horários, comparação e aquisição de bens de consumo, são apenas algumas das situações do cotidiano de uma pessoa comum. Em todas elas unidades de medida, estimativas ou medições precisam ser conhecidas, manipuladas ou obtidas. 
+\chapterbecause{Planejamento de consumo familiar, cumprimento de horários, comparação e aquisição de bens de consumo, são apenas algumas das situações do cotidiano de uma pessoa comum. Em todas elas unidades de medida, estimativas ou medições precisam ser conhecidas, manipuladas ou obtidas. 
 
 A evolução científico-social humana já se incumbiu de criar unidades de medidas: tempo, força, temperatura, luz e etc. A pesquisa e a criatividade demonstram que a geração de novas tecnologias ou novos olhares sobre os processos tendem a necessitar de novas unidades. Um cidadão integral precisa ter autonomia para entender o que está por vir.  É nesse contexto que se desenvolveu esse estudo. Para que possam aprender a ler, entender e usar na sua comunicação as unidades de medidas, da estimativa à precisão, tal qual a utilizamos no ato de medir.}
+
 \chapter{Unidades de medidas e ordem de grandeza}
 
-\mbox{}\thispagestyle{empty}\clearpage
-\thispagestyle{empty}
+%%%% Página de créditos
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+% Autores
+\autorum{Bruno Viana (Colégio Pedro II)}
+\autordois{Luiz Amorim Duarte}
+\autortres{Maria de Fátima}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\revisorum{Wanderley Rezende}
 
-\vspace*{.3cm}
+\graficos{Tarso Caldas}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+% Revisores
 
-Versão digital do capítulo:
+\autordacapa{Taneli Lahtinen}{Unsplash}{https://unsplash.com/photos/g_LKoKQNr44}
+\versao{1.0}
 
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/PE104.html}
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/PE104.html}
 
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
+\ccbysa
 
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Unidades de Medida e Ordens de Grandeza\\
-Ano/ Versão: & 2020 / versão 1.0 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-Autores: & Bruno Viana (Colégio Pedro II), \\
- 		 & Luiz Amorim Duarte, \\
- 		 & Maria de Fátima,\\
-\\
-Revisão: & Wanderley Rezende \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-Ilustrações: & Luiz Amorim Duarte \\ 
-\\
-Gráficos: & Tarso Caldas (Licenciando da UNIRIO) \\
-\\
-Capa: & Foto de Taneli Lahtinen, no Unsplash \\
-	  & https://unsplash.com/photos/g\_LKoKQNr44 \\
-
-\end{tabular}
-\vspace{.5cm}
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\creditos
 
 \mainmatter
 
@@ -507,7 +447,8 @@ tempo, duração & $t$ & segundo & s \\
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{1mm}
+\scalebox{.9}
+{
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 \tcolor{Fator} & \tcolor{Nome do Prefixo} & \tcolor{Símbolo} & \tcolor{Fator} & \tcolor{Nome do Prefixo} & \tcolor{Símbolo} \\
@@ -533,6 +474,7 @@ $10^{21}$ & zetta & Z & $10^{-21}$ & zepto & z \\
 $10^{24}$ & yotta & Y & $10^{-24}$ & yocto & y \\
 \hline
 \end{tabular}
+}
 \caption{Prefixos do SI, página 35 da 1$^{\text{a}}$ Edição Brasileira do SI.}
 \end{table}
 
@@ -1214,7 +1156,7 @@ Intuitivamente, olhando as pessoas a seguir, qual delas você acha que teria o m
 \centering
 \capstart
 
-\noindent\includegraphics[width=150bp]{{a1f1}.jpg}
+\noindent\includegraphics[width=145bp]{{a1f1}.jpg}
 \caption{IMC 1}\label{\detokenize{NO103-2:fig-coloque-aqui-o-nome}}\label{\detokenize{NO103-2:id8}}\end{figure}
 
 \item {} 
@@ -1909,7 +1851,7 @@ Algumas distâncias em astronomia são apresentadas em “ano-luz”, que é a d
 \ifnum\aluno=1
 \noindent\includegraphics[width=250bp]{{via_lactea}.jpg}
 \else
-\noindent\includegraphics[width=245bp]{{via_lactea}.jpg}
+\noindent\includegraphics[width=230bp]{{via_lactea}.jpg}
 \fi
 
 \caption{Via Láctea}\label{\detokenize{NO103-3:id2}}\label{\detokenize{NO103-3:id11}}\end{figure}
@@ -3008,7 +2950,7 @@ Com isso o sofá mede \(12 \times 20 - 15 = 11 \times 20 + 5 = 225\) cm. Respost
 Na realidade, os dados foram transportados em HDs externos e, tanto o transporte como o processamento das imagens, levaram apenas 2 anos!
 \end{enumerate}
 
-\item \({\rm IMC}=\dfrac{60}{1,82^2}\) é aproximadamente \({\rm IMC} = 18\text{,}11\). Ela está na situação “baixo peso”.
+\item \(\text{IMC}=\dfrac{60}{1,82^2}\) é aproximadamente \(\text{IMC} = 18\text{,}11\). Ela está na situação “baixo peso”.
 
 \item O PIB per capita aumentará no período.  \(V'=1\text{,}25V\). O Pib per capita aumentará \(25\%\).
 \end{enumerate}
@@ -3113,6 +3055,7 @@ Um anel de alumínio num copo dágua & Afunda & O alumínio é mais denso do que
 \label{\detokenize{NO103-A:id1}}
 \end{figure}
 
+\clearpage
 Colocando $12$ vezes a régua na direção do comprimento, sobraram $15$ cm da régua; por outro lado, estendendo 11 vezes, faltaram 5 cm para atingir o comprimento total. O comprimento do sofá, em centímetros, equivale a:
 
 \begin{enumerate}
@@ -3402,6 +3345,7 @@ $d_{C} < d_{B} < d_{A}$
 
 \end{enumerate}
 
+\clearpage
 \subsection{Representação, e Precisão; Medição e Exatidão; Algaritmos Significativos; Medidas Irracionais}
 
 \item “De acordo com o pesquisador Ricardo Lourenço, do Instituto Oswaldo Cruz, os mosquitos transmissores da doença se deslocaram do Norte para o Sudeste, voando ao longo de rios e corredores de mata. Estima-se que um mosquito seja capaz de voar 3 km por dia. Tanto o homem quanto o macaco, quando picados, só carregam o vírus da febre amarela por cerca de três dias. Depois disso, o organismo produz anticorpos. Em cerca de dez dias, primatas e humanos ou morrem ou se curam, tornando-se imunes à doença.” NATHALIA PASSARINHO Adaptado de bbc.com, 06/02/2018.
@@ -3555,7 +3499,7 @@ e esta reportagem: “Segundo dados do IBGE (2016), o tamanho da família brasil
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/financeira_bibliografia.bib}
 
 \nocite{*}

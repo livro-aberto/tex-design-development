@@ -1,90 +1,26 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{./abertura-cartografia}{./abertura-cartografia-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-cartografia}
-\else
-\renewcommand\chapterillustration{./abertura-cartografia-professor}
-\fi
+\chapterwhat{Projeções cartográficas. Classificação das projeções cartográficas quanto à superfície de projeção (planas, cônicas e cilíndricas) e quanto as propriedades (equivalentes, equidistantes, conformes e afiláticas).}
 
-\renewcommand\chapterwhat{Projeções cartográficas. Classificação das projeções cartográficas quanto à superfície de projeção (planas, cônicas e cilíndricas) e quanto as propriedades (equivalentes, equidistantes, conformes e afiláticas).}
-\renewcommand\chapterbecause{Projeções cartográficas são projeções da superfície terrestre no plano que possibilitam a visualização de uma área muito grande em um único local ( folha de papel, tela de computador ou dispositivo móvel). Essas projeções tornam possível, por exemplo, o planejamento de rotas ou organizações territoriais de um país inteiro em cima de uma mesa. Existem diferentes tipos de projeções e cada uma possui algum tipo de distorção (em relação a área, ângulo ou distância). As projeções cartográficas mais conhecidas são as cônicas, planas e cilíndricas, portanto serão a essas que daremos ênfase no capítulo.}
+\chapterbecause{Projeções cartográficas são projeções da superfície terrestre no plano que possibilitam a visualização de uma área muito grande em um único local ( folha de papel, tela de computador ou dispositivo móvel). Essas projeções tornam possível, por exemplo, o planejamento de rotas ou organizações territoriais de um país inteiro em cima de uma mesa. Existem diferentes tipos de projeções e cada uma possui algum tipo de distorção (em relação a área, ângulo ou distância). As projeções cartográficas mais conhecidas são as cônicas, planas e cilíndricas, portanto serão a essas que daremos ênfase no capítulo.}
+
 \chapter{Projeções Cartográficas}
 
+%%%% Página de créditos
+
+% Autores
+\autorum{Carmen Vieira Mathias (UFSM)}
+\autordois{Lucas Schimith Zanon (SEDUC - RS)}
+
+% Revisores
+\revisorum{Lhaylla Crissaff (UFF)}
+
+\autordacapa{Clay Banks}{Unsplash}{https://unsplash.com/photos/b5S4FrJb7yQ}
+\versao{1.0}
 
 
-\mbox{}\thispagestyle{empty}\clearpage
+\creditos
 
-\thispagestyle{empty}
-
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
-
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
-
-\vspace*{.3cm}
-
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
-
-Versão digital do capítulo:
-
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF107.html}
-
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Projeções Cartográficas\\
-\\
-Ano/ Versão: & 2020 / versão 0.2 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Livro Aberto\\
-\\
-Coordenação:& Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Carmen Vieira Mathias (UFSM)\\
-             & Lucas Schimith Zanon (SEDUC - RS)\\
-\\
-Revisão: &  Lhaylla Crissaff (UFF) \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
-\\
-  Capa: & Foto de Clay Banks, no Unsplash \\
-  & \url{https://unsplash.com/photos/b5S4FrJb7yQ} \\
-\end{tabular}
-\vspace{.5cm}
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-%\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -436,7 +372,7 @@ Por volta do ano 200 antes da era Cristã, um matemático e astrônomo grego cha
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\textwidth]{{carto12}.jpg}
+\includegraphics[width=0.28\textwidth]{{carto12}.jpg}
 \caption{Modelo esférico da Terra. \\ Foto de \href{https://unsplash.com/photos/yEauzeZU6xo}{The New York Public Library, no Unsplash}}
 \label{esf}
 \end{figure}
@@ -445,7 +381,7 @@ No século XVII, o físico inglês Isaac Newton e o matemático holandês Christ
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{{carto11}.png}
+\includegraphics[width=0.38\textwidth]{{carto11}.png}
 \caption{Elipsoide de revolução. \\ Fonte: \href{Geogebra}{https://www.geogebra.org/m/dbu5h92x}} 
 \label{elipse}
 \end{figure}
@@ -454,7 +390,7 @@ Porém, pesquisas realizadas no final do século XIX e início do século XX eli
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.35\textwidth]{{carto5}.jpg}
+\includegraphics[width=0.325\textwidth]{{carto5}.jpg}
 \caption{Geoide. \\ Fonte: \href{https://apod.nasa.gov/apod/ap141215.html}{Astronomy Picture of The Day, Nasa}} 
 \label{geoide}
 \end{figure}
@@ -774,7 +710,7 @@ Com a caneta esferográfica solte sua criatividade e desenhe sobre o balão, pro
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{{bala2}.png}
+\includegraphics[width=0.375\textwidth]{{bala2}.png}
 \caption{Balão com desenhos}
 \label{balao2}
 \end{figure}
@@ -784,7 +720,7 @@ Agora é necessário furar o balão. Mas, tenha muita atenção e cuidado para n
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{{bala3}.png}
+\includegraphics[width=0.375\textwidth]{{bala3}.png}
 \caption{Cortando o nó}
 \label{balao3}
 \end{figure}
@@ -1349,7 +1285,7 @@ Na garrafa PET, faça 3 cortes como ilustra a \hyperref[garrafa]{Figura \ref{gar
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{{garrafa}.png}
+\includegraphics[width=0.375\textwidth]{{garrafa}.png}
 \caption{Cortes na garrafa.}
 \label{garrafa}
 \end{figure}
@@ -1358,7 +1294,7 @@ Com a caneta esferográfica desenhe (preferencialmente na parte interna) da part
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{{cilindro1}.png}
+\includegraphics[width=0.375\textwidth]{{cilindro1}.png}
 \caption{Desenhos na superfície da parte A da garrafa.}
 \label{garrafa1}
 \end{figure}
@@ -1368,7 +1304,7 @@ Forre a parte externa do cilindro (parte B da garrafa) com  o papel vegetal (ou 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{{cilindro2}.png}
+\includegraphics[width=0.375\textwidth]{{cilindro2}.png}
 \caption{Formas de enrolar o cilindro.}
 \label{cilindro2}
 \end{figure}
@@ -1378,7 +1314,7 @@ Pegue a semiesfera (parte A da garrafa PET) e o cilindro (parte B da garrafa PET
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{{cilindro3}.png}
+\includegraphics[width=0.375\textwidth]{{cilindro3}.png}
 \caption{Posicionamento das superfícies.}
 \label{cilindro3}
 \end{figure}
@@ -1439,7 +1375,7 @@ A \hyperref[asp]{Figura \ref{asp}} ilustra tais aspectos no caso das projeções
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{{carto35}.png}
-\captionsetup{justification=Centering}
+
 \caption{Aspectos da projeção cartográfica cilíndrica. \newline Fonte: \href{https://eipd.dcs.wisc.edu/for-credit/GIS-cert/summer2017/geog370_m1/lesson_4.html}{University of Wisconsin System}}
 \label{asp}
 \end{figure}
@@ -1504,7 +1440,7 @@ A indicatriz de Tissot para essa projeção tem o seguinte aspecto (\hyperref[ti
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{{tissequi}.png}
-\captionsetup{justification=Centering}
+
 \caption{Indicatriz de Tissot - Projeção Cilindrica Equidistante \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
 \label{tissequi}
 \end{figure} 
@@ -1546,7 +1482,7 @@ Olhando a indicatriz de Tissot dessa projeção(\hyperref[tisslambcil]{Figura \r
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{{tisslambcil}.png}
-\captionsetup{justification=Centering}
+
 \caption{Indicatriz de Tissot Projeção - Cilíndrica Equivalente de Lambert \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
 \label{tisslambcil}
 \end{figure}
@@ -1711,7 +1647,7 @@ O tipo de projeção que foi realizada nas atividades \hyperref[proj_cil]{Projet
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{{carto44}.png}
-\captionsetup{justification=centering}
+
 \caption{Projeções gnomônica, estereográfica e  ortográfica \\ Fonte: \href{http://www.aeroclubedebrasilia.org.br}{Aeroclube de Brasilia}}
 \label{projp}
 \end{figure}
@@ -1763,13 +1699,12 @@ A Projeção Plana Gnomonica (também conhecida como Projeção Plana Central) �
  
  \begin{figure}[H]
 \centering
-\includegraphics[width=0.35\textwidth]{{plana_gnomo}.png}
+\includegraphics[width=0.325\textwidth]{{plana_gnomo}.png}
 \caption{Projeção Plana Gnomonica \\ Fonte: \href{http://ttps://gisgeography.com/azimuthal-projection-orthographic-stereographic-gnomonic/}{GIS Geography}}
 \label{p_gno}
 \end{figure} 
 
 
- 
 \know{Projeções Azimutais}
 A projeção plana também é conhecida como projeção azimutal, pois são aquelas que preservam azimutes.
 Mas o que são azimutes? 
@@ -1905,7 +1840,7 @@ A projeção cônica mais simples contata a superfície esférica ao longo de  u
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{{carto43}.png}
-\captionsetup{justification=centering}
+
 \caption{Projeção do tipo cônica. \\ Fonte: \href{https://geologyscience.com/general-geology/types-of-maps/}{Geology Science}}
 \label{cone5}
 \end{figure}
@@ -1922,8 +1857,8 @@ A Projeção Cônica Conforme de Lambert (\hyperref[tisslambcon]{Figura \ref{tis
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{{tisslambcon}.png}
-\captionsetup{justification=centering}
+\includegraphics[width=0.475\textwidth]{{tisslambcon}.png}
+
 \caption{Indicatriz de Tissot- Projeção Cônica Conforme de Lambert. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
 \label{tisslambcon}
 \end{figure}
@@ -1934,7 +1869,7 @@ Atualmente  é usada de forma frequente para mapas de navegação aérea. Na Pro
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{{conica_lam}.png}
+\includegraphics[width=0.45\textwidth]{{conica_lam}.png}
 \caption{Projeção Cônica Conforme de Lambert. \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
 \label{conlam}
 \end{figure}
@@ -1944,7 +1879,7 @@ A Projeção Cônica Simples ou Cônica Equidistante (\hyperref[conesim]{Figura 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{{cone_simples}.png}
+\includegraphics[width=0.65\textwidth]{{cone_simples}.png}
 \caption{Projeção Cônica Simples (à esquerda) e // Indicatriz de Tissot - Projeção Cônica Simples (à direita). \\ Fonte: \href{https://map-projections.net/}{Compare Map Projections}}
 \label{conesim}
 \end{figure}
@@ -2033,7 +1968,7 @@ Observa-se que esses são apenas alguns exemplos de projeções do tipo cônicas
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.9\textwidth]{{pratica 3}.png}
+\includegraphics[width=.85\textwidth]{{pratica 3}.png}
 \caption{Figura 1.}
 \label{prati1}
 \end{figure}
@@ -2041,7 +1976,7 @@ Observa-se que esses são apenas alguns exemplos de projeções do tipo cônicas
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.9\textwidth]{{pratica4}.png}
+\includegraphics[width=.85\textwidth]{{pratica4}.png}
 \caption{Figura 2.}
 \label{prati1}
 \end{figure}
@@ -2160,7 +2095,7 @@ No site \url{https://gevian.github.io/GITTA-MP/basic.html} é possível visualiz
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{{pratica5}.png}
+\includegraphics[width=0.475\textwidth]{{pratica5}.png}
 \caption{Aplicativo Gitta Map Projection}
 \label{gitta}
 \end{figure}
@@ -2194,11 +2129,11 @@ Modifique os parâmetros posição e luminosidade. O que ocorre? E ao clicar em 
 {
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{5pt}
-\begin{tabu} to \textwidth{|l|d{.2\linewidth}|d{.25\linewidth}|d{.3\linewidth}|}
+
+\begin{tabular}{|l|d{.2\linewidth}|d{.25\linewidth}|d{.3\linewidth}|}
 \hline
-\thead
-& \textbf{Descreva os meridianos} & \textbf{Quais distorções você percebe?} & \textbf{Por que usar essa projeção?} \\
+
+\tcolor{} & \tcolor{Descreva os meridianos} & \tcolor{Quais distorções você percebe?} & \tcolor{Por que usar essa projeção?} \\
 \hline
 Globo & Os meridianos são linhas verticais se encontram nos polos & Tamanho e formatos não foram distorcidas
 & É a melhor representação do planeta, em relação ao tamanho dos continentes, países e oceanos, se você não precisar de um mapa plano. \\
@@ -2210,7 +2145,7 @@ Mollweide & Não são paralelas entre si e se encontram nos polos. & Os continen
 \hline
 Robinson & Não são paralelas entre si nem se encontram nos polos & Antártica aparente muito grande. E Groelândia achatada no sentido norte sul & Suas distorções aparentam um meio termo entre Molweide e Mercartor, então seria bom tanto para terra quanto mar. \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 }
 {0}
@@ -2221,11 +2156,9 @@ Analise as projeções cartográficas e o globo para completar a tabela.
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{5pt}
-\begin{tabu} to \textwidth{|l|m{.2\textwidth}|m{.25\textwidth}|l|}
+\begin{tabular}{|l|e{.2\textwidth}|e{.25\textwidth}|l|}
 \hline
-\thead
-& \vspace{5pt}Descreva os meridianos\vspace{5pt} & \vspace{5pt}Quais distorções você percebe?\vspace{5pt} & Por que usar essa projeção? \tabularnewline
+\tcolor{} & \tcolor{Descreva os meridianos} & \tcolor{Quais distorções você percebe?} & \tcolor{Por que usar essa projeção?} \tabularnewline
 \hline
 Globo & & & \\[5.15em]
 \hline
@@ -2235,7 +2168,7 @@ Mollweide & & & \\[5.15em]
 \hline
 Robinson & & & \\[5.15em]
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{task}
 
@@ -2543,7 +2476,7 @@ Sabendo que as figuras abaixo são projeções cartográficas da figura anterior
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/cartografia_bibliografia.bib}
 
 \nocite{*}

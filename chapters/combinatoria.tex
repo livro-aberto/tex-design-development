@@ -1,152 +1,31 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{./abertura-combinatoria}{./abertura-combinatoria-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-combinatoria}
-\else
-\renewcommand\chapterillustration{./abertura-combinatoria-professor}
-\fi
-
-\renewtcolorbox{openningbox}{
-  enhanced,
-%  jigsaw,
-  opacityframe=.3,
-  opacityfill=.3,
-  width=105mm,
-  left=3mm,
-  right=3mm,
-  top=3mm,
-  bottom=.5mm,
-  colback=white,
-  colframe=white,
-  arc=3mm,
-  sharp corners=uphill,
-    % frame empty,
-    % arc = 8pt,
-    lower separated = false,
-    before upper = \tcbsubtitle{O QU\^E?},
-    before lower = \tcbsubtitle{POR QU\^E?},
-    fontupper = \sffamily,
-    fontlower = \sffamily,
-    sharp corners = north,
-    subtitle style = {
-      frame empty,
-      fontupper = \fontsize{13pt}{0}\selectfont\titlefont\bfseries,
-      colback = cor1,
-      coltext = black!70,
-      width = 3.5cm,
-      arc = 8pt,
-      rounded corners = east
-    }
-  }
-
-\makeatletter
-\ifnum\aluno=1
-\else
-\renewcommand*{\toclevel@section}{1}
-\renewcommand*{\toclevel@subsection}{4}
-\renewcommand*{\toclevel@paragraph}{5}
-\renewcommand*{\toclevel@subparagraph}{6}
-
-\renewcommand*{\toclevel@exploresec}{2}
-\renewcommand*{\toclevel@practicesec}{2}
-\renewcommand*{\toclevel@arrangesec}{2}
-\renewcommand*{\toclevel@knowsec}{1}
-\renewcommand*{\toclevel@exercisesec}{1}
-
-\setcounter{tocdepth}{2}
-\fi
-\makeatother
-
-
-\renewcommand\chapterwhat{Problemas do cotidiano que envolvam o processo de contagem. Começando com a contagem de conjuntos de dados que podem ser enumerados e organizados em tabelas, árvores e/ou $n-$uplas, seguindo para a compreensão da necessidade do uso do  Princípio Multiplicativo e do Princípio Aditivo para solução de problemas combinatórios mais gerais.}
-\renewcommand\chapterbecause{
+\bigopenningbox
+\expandtocdepth
+  
+\chapterwhat{Problemas do cotidiano que envolvam o processo de contagem. Começando com a contagem de conjuntos de dados que podem ser enumerados e organizados em tabelas, árvores e/ou $n-$uplas, seguindo para a compreensão da necessidade do uso do  Princípio Multiplicativo e do Princípio Aditivo para solução de problemas combinatórios mais gerais.}
+\chapterbecause{
 Problemas de contagem estão presentes em várias situações do cotidiano, como por exemplo, a quantidade de senhas de um determinado padrão. Uma senha eficiente é aquela difícil de ser descoberta então quanto maior o número de senhas de um determinado padrão melhor se torna a segurança da senha criada. Outros exemplos são: quantidade de placas de automóveis; quantidade de dígitos em números de telefones; quantidade de jogos possíveis na loteria, quantidade de números de IP's (do inglês \textit{Internet Protocol}), escalas de trabalhos ou de aulas, etc. Combinados com o estudo de Probabilidade ajudam na tomada de decisão, ao ponto que fornecem as possibilidades de  ocorrência de determinados fatos. 
 
 Problemas de contagem também estão presentes em outras áreas do conhecimento como Física, Biologia e Computação. Além disso, o raciocínio combinatório desenvolve características importantes na resolução de problemas de maneira geral como processos de reflexão e abstração, levantamento de hipóteses, escolha de caminho para a solução e construção de generalizações, processos de investigação, de construção de modelos, formulação e a testagem de conjecturas; enfim, resolução e elaboração de problemas recorrendo a estratégias diversas, habilidades gerais presentes na BNCC.} 
 \chapter{Análise Combinatória}
 \label{combinatoria-chap}
 
-\mbox{}\thispagestyle{empty}\clearpage
+%%%% Página de créditos
 
-\thispagestyle{empty}
+% Autores
+\autorum{Elen Viviani Pereira Spreafico (UFMS)}
+\autordois{Kenia Cristina Pereira Silva (IFSP)}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+% Revisores
+\revisorum{Márcio Adames}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\autordacapa{James Sutton}{Unsplash}{https://unsplash.com/photos/qXn5L9BqRbE}
+\versao{1.0}
+\graficos{Tarso Caldas}
 
-\vspace*{.3cm}
+\creditos
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
-
-
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Análise Combinatória\\
-\\
-Ano/ Versão: & 2020 / versão 0.1 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas, \\
-			&  Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Elen Viviani Pereira Spreafico (UFMS),\\
-             & Kenia Cristina Pereira Silva (IFSP).\\
-        
-\\
-Colaboração: & \\
-\\
-Revisão: & Márcio Adames \\
-
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & ---\\
-\\
-  Capa: & Foto de James Sutton, no Unsplash \\
-  		& https://unsplash.com/photos/qXn5L9BqRbE \\
-
-\end{tabular}
-\vspace{.5cm}
-
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -233,7 +112,6 @@ As soluções apresentadas são feitas sem o uso das fórmulas, mas podem ser re
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\mspace{-2em}
 \begin{sugestions}{Escolhendo o nome da empresa}
 {
 O esperado para esta atividade é que os estudantes listem as possibilidades e percebam a importância da listagem sistemática. Além disso, percebam que em algumas situações não é possível listar as possibilidades, mas novos caminhos podem ser tomados.
@@ -273,7 +151,6 @@ A solução no caso geral não precisa ser apresentada aos estudantes, desde que
 }{0}
 \end{answer}
 
-% \mspace{-.5em}
 \begin{objectives}{Nome da empresa com letras repetidas}
 {
 \begin{itemize}
@@ -281,7 +158,6 @@ A solução no caso geral não precisa ser apresentada aos estudantes, desde que
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\mspace{-1em}
 \begin{sugestions}{Nome da empresa com letras repetidas}
 {
 O esperado para esta atividade é que os estudantes levem em conta as soluções apresentadas na Atividade \textbf{Escolhendo o nome da equipe} para construção das respostas desta atividade e estabeleçam outras estratégias de organização dos dados. Duas observações podem ser estabelecidas: para contar sequências com elementos repetidos, podemos contá-los como se fossem distintos e depois observar que essas sequências foram contadas múltiplas vezes; se uma sequência é contada múltiplas vezes, é necessário dividir pelo número de vezes que cada sequência foi contada.
@@ -914,7 +790,6 @@ Considere que na formação dos juízes duas pessoas não poderiam estar juntas,
 Praticar o uso dos Princípios Aditivo e Multiplicativo em variações dentro do mesmo problema. Elaborar questões de contagem. Diferenciar e praticar problemas que envolvam ordem de elementos. Diferenciar e praticar problemas que envolvam repetição de elementos.
 }{1}{1}
 \end{objectives}
-\mspace{-1.5em}
 \begin{sugestions}{Jogo da senha}
 {
 O esperado para esta atividade é que os estudantes percebam o efeito da ordem e da repetição na contagem. Eles devem ser incentivados a reexplorar o jogo a cada novo questionamento.
@@ -922,7 +797,6 @@ O esperado para esta atividade é que os estudantes percebam o efeito da ordem e
 \textbf{Tempo de Execução:} A questão pode ser feita em 90 minutos (1 hora e meia) sendo utilizados entre 5 a 10 minutos para os alunos jogarem e experimentarem o jogo,  para o item \titem{a)} até 5  minutos, e para os demais itens entre 5 a 10 minutos cada, lembrando que eles podem voltar ao jogo a cada questionamento feito.
 }{1}{1}
 \end{sugestions}
-\mspace{-.5em}
 \begin{answer}{Jogo da senha}
 {
 \begin{enumerate}
@@ -949,7 +823,7 @@ Na primeira tentativa, como são 6 cores possíveis e 4 escolhas, pelo menos dua
 \end{center}
 No exemplo dado na figura acima, como as cores azul e amarelo não fazem parte da senha, na segunda jogada já se sabe que as cores envolvidas são vermelho, verde, rosa e lilás. Além disso se sabe que rosa não pode estar na segunda posição e lilás não pode estar na última. No pior dos casos todas as cores estão sempre erradas até a última tentativa. Como cada cor só poderá percorrer 4 espaços de senha, na quarta tentativa a senha terá sido descoberta. 
 \end{enumerate}
-}{9}
+}{0}
 \end{answer}
 \clearmargin
 \begin{answer}{Jogo da senha}
@@ -1081,7 +955,6 @@ resultado obtido no item \titem{a)}. Neste ponto é importante destacar para os 
 \end{answer}
 \clearmargin
 
-% \mspace{-.5em}
 \begin{objectives}{Indo de um ponto a outro}
 {
 \begin{itemize}
@@ -1135,7 +1008,6 @@ $\dfrac{7 \cdot 6 \cdot 5}{3!}.$
 Relacionar o uso de contagem para compreensão de fatos da realidade;
 }{1}{2}
 \end{objectives}
-\mspace{-2.25em}
 \begin{sugestions}{Jogo da Mega-Sena}
 {
 Para realizar esta atividade não é necessário nenhum conhecimento profundo de probabilidade, apenas compreender que representa as chances de um evento acontecer e pode ser calculado diretamente pelo quociente do número de possibilidades de ocorrer o evento sobre o número de casos possíveis.  Não temos aqui o objetivo de ensinar o conteúdo de Probabilidade, mas podemos sim relacioná-lo a atividades de contagem. Se sentir que deve melhorar essa explicação, pode utilizar conteúdo do livro texto de Probabilidade e atividades introdutórias do conteúdo.
@@ -1236,7 +1108,6 @@ $$ 56 \cdot 24 \cdot 7!= 6.773.760.$$
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\mspace{-2.25em}
 \begin{sugestions}{Analisando a solução do colega}
 {
 O esperado para esta atividade é que os estudantes percebam que algumas estratégias de contagem contam possibilidades a menos ou a mais e saibam analisar criticamente uma solução apresentando os erros e sugerindo correções. É importante nesse ponto o aluno reconhecer alguns distratores na  interpretação de problemas envolvendo repetição e ordem de elementos distintos.
@@ -1264,7 +1135,6 @@ igual a $3.082.816.$
 \end{answer}
 \clearmargin
 
-\mspace{.5em}
 \begin{answer}{Analisando a solução do colega}
 {
 \begin{enumerate}\setcounter{enumi}{2}
@@ -1280,7 +1150,6 @@ $\dfrac{22 \cdot 21 \cdot 20\cdot 19}{4!}+16 \cdot \dfrac{22 \cdot 21 \cdot 20}{
 Entender a importância do princípio Aditivo e Multiplicativo nas diversas variações dos problemas de contagem. Aplicar os Princípios Aditivo e Multiplicativo para problemas em contagem de objetos simétricos e com repetição.
 }{1}{1}
 \end{objectives}
-% \mspace{-2.25em}
 
 \begin{sugestions}{Produzindo Acessórios}
 {
@@ -1848,9 +1717,15 @@ $A_3:$ Retirar do total equipes só com músicos & $C_{10}^4- C_{7}^4$\\
 
 \paragraph{Para que servem as calculadoras?}
 
+\ifnum\aluno=1
 \begin{center}
 \includegraphics[scale=0.18]{calculadora.jpeg}
 \end{center}
+\else
+\begin{center}
+\includegraphics[scale=0.17]{calculadora.jpeg}
+\end{center}
+\fi
 
 Vocês já pararam para pensar no surgimento da primeira calculadora? 
 Hoje existem no mercado vários tipos delas, online ou não, desde as mais simples até as mais sofisticadas. Estão presentes até nos aparelhos celulares. Pra que elas servem? Elas ajudariam a solucionar os problemas pensados neste livro?
@@ -1886,7 +1761,7 @@ Os agrupamentos mais comuns estão descritos abaixo, mas o grupo pode pensar out
 
 \end{enumerate}
 \end{task}
-
+\vspace{-1em}
 \begin{task}{Testando a calculadora combinatória}
 Nos problemas a seguir escreva uma solução e descreva a sequência de botões, na sua calculadora, que seria necessária para encontrar a solução correta.
 
@@ -1921,7 +1796,6 @@ Mais do que fórmula, é importante reconhecer os usos do Princípio Aditivo e M
 
 \clearpage
 \def\currentcolor{cor1}
-\mspace{.25em}
 \begin{answer}{Exercícios}
 {\exerciselist
 \begin{enumerate}
@@ -2257,7 +2131,7 @@ No novo sistema descrito, calcule o total de placas possíveis com o formato “
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/combinatoria_bibliografia.bib}
 
 \nocite{*}

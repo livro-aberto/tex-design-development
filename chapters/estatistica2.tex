@@ -1,19 +1,7 @@
-%!TEX root = ../aluno.tex
-
-\ifnum \aluno=1
-\renewcommand\chapterillustration{abertura-estatistica2}
-\else
-\renewcommand\chapterillustration{abertura-estatistica2-professor}
-\fi 
-\renewcommand\chapterwhat{Medidas de posição: média, mediana, moda e quartis. Medidas de dispersão:
-desvio médio, variância, desvio padrão, amplitude amostral, distância entre quartis e
-coeficiente de variação. Construção do desenho-esquemático (boxplot).} 
-\renewcommand\chapterbecause{As medidas resumo (posição e dispersão) correspondem a uma síntese do conjunto de
-dados observados e ao passo preliminar para fazer uma inferência estatística, ou seja, a
-partir das informações obtidas na amostra, expandir nossas conclusões para a população.
-Como as distribuições podem apresentar formas variadas é importante conhecer
-diferentes tipos de medidas resumo, tanto de posição como de dispersão, para usar
-medidas apropriadas em cada caso.} 
+\chapterillustration{abertura-estatistica2}{abertura-estatistica2-professor}
+ 
+\chapterwhat{Medidas de posição: média, mediana, moda e quartis. Medidas de dispersão: desvio médio, variância, desvio padrão, amplitude amostral, distância entre quartis e coeficiente de variação. Construção do desenho-esquemático (boxplot).} 
+\chapterbecause{As medidas resumo (posição e dispersão) correspondem a uma síntese do conjunto de dados observados e ao passo preliminar para fazer uma inferência estatística, ou seja, a partir das informações obtidas na amostra, expandir nossas conclusões para a população. Como as distribuições podem apresentar formas variadas é importante conhecer diferentes tipos de medidas resumo, tanto de posição como de dispersão, para usar medidas apropriadas em cada caso.} 
 \chapter{Medidas de posição e dispersão}
 \label{est2-chap}
 
@@ -26,85 +14,32 @@ medidas apropriadas em cada caso.}
 \def\estchapdois{}
 
 
-\mbox{}\thispagestyle{empty}\clearpage
-
-\thispagestyle{empty}
-
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
-
-\noindent \begin{tabular}{lcccr}K
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
-
-\vspace*{.3cm}
-
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
-
-Versão digital do capítulo:
-
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/PE104.html}
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Medidas de Posição e Dispersão\\
-\\
-Ano/ Versão: & 2020 / versão 1.3 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Flávia Landim (coordenadora da equipe - UFRJ)\\
-           & Nei Rocha (UFRJ)\\
-           & Vanessa Matos (SEduc Angras dos Reis e Mesquita)\\
-           & José Ezequiel Soto \\
-\\
-Revisão: &  Letícia Rangel  \\
-		 &  Alexandre Silva \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
-\\
-  Capa: & Foto de Clement Chen, no Unsplash\\
-  		& https://unsplash.com/photos/EvoIUzuW89s \\
-
-\end{tabular}
+\autorum{Flávia Landim (coordenadora da equipe - UFRJ)}
+\autordois{Nei Rocha (UFRJ)}
+\autortres{Vanessa Matos (SEduc Angras dos Reis e Mesquita)}
+\autorquatro{José Ezequiel Soto}
 
 
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
+\revisorum{Letícia Rangel}
+\revisordois{Alexandre Silva}
 
-{\large Licença:}
+\graficos{Beatriz Cabral e Tarso Caldas}
+\ilustracao{Miller  Guglielmo}
 
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
+\autordacapa{Clement Chen}{Unsplash}{https://unsplash.com/photos/EvoIUzuW89s}
 
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
+% Link para versão digital:
 
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\versao{1.3}
+
+%Licença cc-by-sa
+\ccbysa
+
+% Link para versão digital:
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/PE104.html}
+
+\creditos
+
 
 \mainmatter
 
@@ -374,7 +309,7 @@ Sugere-se como atividade interdisciplinar, a realização de corridas com os est
 }{1}{2}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
+
 \begin{answer}{A maratona}
 {
 \begin{enumerate}
@@ -426,9 +361,9 @@ $[182{,}0 ; 186{,}0 [$ & $16$ \\
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.6\linewidth]{Histograma_mulheres_resposta_1c.png}
+\includegraphics[width=.5\linewidth]{Histograma_mulheres_resposta_1c.png}
 \caption{Histograma dos tempos da categoria de mulheres na Maratona de NY mostrando os quartis, a mediana e a média}
-\label{}
+
 \end{figure}
 \end{enumerate}
 }{1}
@@ -477,6 +412,7 @@ $[182{,}0 ; 186{,}0 [$ & $16$ \\
 	\end{enumerate}
 }{1}
 \end{answer}
+
 \explore{Medidas de Posição}
 \label{\detokenize{PE104-0:sec-explorando1}}\label{\detokenize{PE104-0:explorando-medidas-de-posicao}}\label{\detokenize{PE104-0::doc}}
 No capítulo \textbf{\hyperref[est1-chap]{A Natureza Estatística}} trabalhamos com representações gráficas de conjuntos de dados com a finalidade de obter informações sobre estruturas da sua distribuição como estratégia para resumir os dados. No exemplo dos resgistros de tempo deste capítulo, os 64 dados, no quadro a seguir
@@ -684,7 +620,7 @@ Os dois histogramas a seguir, na \hyperref[figura-notas2]{figura \ref{figura-not
 \centering
 \begin{minipage}{0.4\textwidth}
 \begin{tikzpicture}
-\begin{scope}[x=10, y = 5]
+\begin{scope}[x=10, y = 4.5]
 
 
 	\foreach \ye in {0,5,...,25}{
@@ -712,7 +648,7 @@ Os dois histogramas a seguir, na \hyperref[figura-notas2]{figura \ref{figura-not
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{tikzpicture}
-\begin{scope}[x=10, y = 5]
+\begin{scope}[x=10, y = 4.5]
 
 
 
@@ -1021,7 +957,7 @@ Observe que o tempo médio dos 100 melhores tempos para mulheres e o tempo da co
 \foreach \x/\y in {1/146,3/154,5/162,7/170,9/178,11/186} \node [below] at (\x,0) {$\y$};
 \end{tikzpicture}
 \caption{Sugestão de escala para a construção do boxplot dos 100 melhores tempos (em minutos) para a categoria mulheres}
-\label{}
+
 \end{figure}
 
 Em seguida, trace um retângulo, cujas bases estão nas posições referentes aos 25º e 75º tempos de chegada, cortando o retângulo por um segmento na posição referente ao 50º tempo de chegada. Para terminar a construção, trace um segmento, partindo do ponto médio da parte inferior até o valor mínimo e repita para o ponto médio da parte superior até o valor máximo.
@@ -1204,7 +1140,7 @@ Observe o \hyperref[\detokenize{PE104-0:fig-histograma-notas-sem-bonificacao}]{H
 \capstart
 
 \begin{tikzpicture}
-\begin{scope}[x=15, y = 5]
+\begin{scope}[x=15, y = 4.5]
 \node at (5, 30) {Histograma das notas de Artes};
 	\foreach \ye in {0,5,...,25}{
 		\draw [help lines, lightgray] (-0,\ye) -- (10,\ye);
@@ -1385,7 +1321,7 @@ Com os dados do segundo conjunto, a média é dada por \(\displaystyle\frac{1+2+
 \centering
 \capstart
 
-\begin{tikzpicture} [xscale=0.65, scale=.7]
+\begin{tikzpicture} [xscale=0.65, scale=.65]
 
 \draw [thick]  (0,0) -- (26,0);
 \draw [thick, ->] (0,0) -- (0,5);
@@ -1421,7 +1357,7 @@ Do exemplo \hyperref[cartao-credito]{\textit{cartão de crédito de supermercado
 \centering
 \capstart
 
-\begin{tikzpicture}[scale=.6]
+\begin{tikzpicture}[scale=.55]
 
 \draw (0,0) -- (0,10) node [rotate=90, above, yshift=20, midway, scale=1.4] {};
 \draw (1,-0.2) -- (11,-0.2) node [below, midway, yshift=-20, scale=1.4] {};
@@ -1633,7 +1569,7 @@ Se o histograma da distribuição é aproximadamente simétrico, e há uma únic
 \centering
 \capstart
 
-\begin{tikzpicture}[xscale=0.75, scale=.5]
+\begin{tikzpicture}[xscale=0.75, scale=.5, yscale=.75]
 
 \draw (0,0) -- (0,12) node [rotate=90, above, yshift=20, midway, scale=1.4] {};
 \draw (1,-0.2) -- (21,-0.2) node [below, midway, yshift=-20, scale=1.4] {};
@@ -1661,7 +1597,7 @@ Se, no entanto, a distribuição apresenta forte assimetria com a presença valo
 \centering
 \capstart
 
-\begin{tikzpicture}[scale=.7]
+\begin{tikzpicture}[scale=.7,yscale=.9]
 
 \draw (0,0) -- (0,10) node [rotate=90, above, yshift=20, midway, scale=1.4] {};
 \draw (1,-0.2) -- (11,-0.2) node [below, midway, yshift=-20, scale=1.4] {};
@@ -1869,7 +1805,7 @@ Mediana & 176{,}96 & 153{,}00 \\
 
 \includegraphics[width=\linewidth]{hist_homens_marcas.png}
 \caption{Histograma dos resultados da categoria de Homens da Maratona da Cidade de Nova York do ano 2017, com média, mediana, $Q_1$ e $Q_3$ indicados}
-\label{}
+
 \end{figure}
 \end{minipage}
 }{1}
@@ -1938,7 +1874,7 @@ As perguntas não têm respostas fechadas, têm o intuito de gerar uma discussã
 
 \includegraphics[width=\linewidth]{boxplotcadeiratriciclo_svd.png}
 \caption{Boxplots sem sinalização de valores discrepantes para os tempos de chegada em horas das categorias “cadeira de rodas”{} e “triciclo de mão”}
-\label{}
+
 \end{figure}
 \end{enumerate}
 }{1}
@@ -2547,7 +2483,7 @@ Com os dados da atividade \hyperref[\detokenize{PE104-3:ativ-estrategia-de-inves
 
 \resizebox{\linewidth}{!}
 {
-\begin{tikzpicture}[scale=.75, every node/.style={scale=.9},xscale=.75]
+\begin{tikzpicture}[scale=.75, every node/.style={scale=.9},xscale=.75,yscale=.85]
 
 \draw [help lines] (0,0) rectangle (11,7);
 \tikzstyle{quad}=[fill,rectangle, minimum height=3pt,minimum width=3pt]
@@ -2578,7 +2514,7 @@ Com os dados da atividade \hyperref[\detokenize{PE104-3:ativ-estrategia-de-inves
 
 \end{tikzpicture}
 \hspace{2.5em}
-\begin{tikzpicture}[scale=.75, every node/.style={scale=.9}, xscale=.75]
+\begin{tikzpicture}[scale=.75, every node/.style={scale=.9}, xscale=.75,yscale=.85]
 \draw [help lines] (0,0) rectangle (11,7);
 \tikzstyle{quad}=[fill,rectangle, minimum height=3pt,minimum width=3pt]
 \tikzstyle{los}=[fill,rectangle, minimum height=3pt, minimum width=3pt, rotate=45]
@@ -3026,34 +2962,8 @@ em que \(\sigma\) é o desvio padrão populacional e \(\mu\) é a média populac
 Observe que o coeficiente de variação só é definido para conjuntos cuja média é diferente de zero.
 
 Uma regra empírica para avaliar frequências de valores em intervalos em torno da média que pode ser útil, é obtida a partir das propriedades de um modelo teórico conhecido como densidade normal de probabilidades. Entre várias propriedades desta densidade, destaca-se que ela é simétrica e unimodal tal que média, mediana e moda são iguais. Veja na \hyperref[\detokenize{PE104-6:fig-densidade-normal}]{figura \ref{\detokenize{PE104-6:fig-densidade-normal}}} 8.39 uma ilustração da densidade normal com média \(\mu\) e desvio padrão \(\sigma\), também conhecida como a curva em forma de sino.
-\clearpage
-{\def\currentcolor{session2}
-\begin{objectives}{Comparação de conjuntos de dados}
-{
-Comparar diferentes distribuições de uma mesma variável quando separada por grupos.
 
 
-}{1}{1}
-\end{objectives}
-\begin{sugestions}{Comparação de conjuntos de dados}
-{
-Nesta atividade serão coletados dados de uma mesma variável que possa ser separada em grupos, com o intuito de comparar as suas medidas de posição e dispersão. Sugerem-se algumas opções, dependendo do tamanho da turma e do contexto escolar, podem até ser escolhidas variáveis distintas para grupos pequenos de alunos, por exemplo, um grupo trabalha com as médias de Matemática, outro grupo trabalha com alturas, etc.
-
-Uma vez coletados os dados, serão calculadas suas medidas de posição e dispersão e comparadas, tentando orientar os estudantes a comentar as observações e não apenas fazer os cálculos. Para a realização dos cálculos deve ser usado suporte tecnológico: calculadoras, aplicativos, etc.
-
-O intuito é dar uma perspectiva para os estudantes da forma em que a estatística é utilizada na ciência para responder perguntas como:
-
-\begin{itemize}
-\item Uma determinada espécie vegetal cresce melhor perto de uma fonte de água ou longe da mesmo? Na sombra de uma árvore ou recebendo luz direta do sol?
-\item As meninas são mais altas que os meninos numa certa idade? Acontece o mesmo em todas as idades?
-\end{itemize}
-
-De forma ideal, pode ser formulada primeiro a pergunta, e depois coletados os dados, apelando a informações encontradas num artigo científico ou numa publicação de jornal, com o intuito de tentar contrastar uma afirmação dada num texto com dados coletados diretamente.
-}{1}{1}
-\end{sugestions}
-\clearmargin
-
-}
 \begin{figure}[H]
 \centering
 \capstart
@@ -3074,8 +2984,31 @@ a frequência relativa de valores no intervalo \([\bar{x}-2\cdot s; \bar{x}+2\cd
 No caso dos dados da atividade \hyperref[\detokenize{PE104-0:ativ-maratona-de-ny}]{A Maratona} vimos que não existem valores discrepantes na categoria mulheres, mas a distribuição apresenta assimetria à esquerda. Ainda assim, contando frequência de observações que nos intervalos definidos por \([\bar{x}-s;\bar{x}+s]\) e  \([\bar{x}-2\cdot s; \bar{x}+2\cdot s]\),  obtém-se $69\%$ e $93\%$, respectivamente. Observe que este valores estão próximos dos valores estipulados pela regra empírica, mesmo com este conjunto apresentando assimetria à esquerda.
 
 
-\clearmargin
+\clearpage
+
 \def\currentcolor{session2}
+\begin{objectives}{Comparação de conjuntos de dados}
+{
+Comparar diferentes distribuições de uma mesma variável quando separada por grupos.
+}{1}{2}
+\end{objectives}
+
+\begin{sugestions}{Comparação de conjuntos de dados}
+{
+Nesta atividade serão coletados dados de uma mesma variável que possa ser separada em grupos, com o intuito de comparar as suas medidas de posição e dispersão. Sugerem-se algumas opções, dependendo do tamanho da turma e do contexto escolar, podem até ser escolhidas variáveis distintas para grupos pequenos de alunos, por exemplo, um grupo trabalha com as médias de Matemática, outro grupo trabalha com alturas, etc.
+
+Uma vez coletados os dados, serão calculadas suas medidas de posição e dispersão e comparadas, tentando orientar os estudantes a comentar as observações e não apenas fazer os cálculos. Para a realização dos cálculos deve ser usado suporte tecnológico: calculadoras, aplicativos, etc.
+
+O intuito é dar uma perspectiva para os estudantes da forma em que a estatística é utilizada na ciência para responder perguntas como:
+
+\begin{itemize}
+\item Uma determinada espécie vegetal cresce melhor perto de uma fonte de água ou longe da mesmo? Na sombra de uma árvore ou recebendo luz direta do sol?
+\item As meninas são mais altas que os meninos numa certa idade? Acontece o mesmo em todas as idades?
+\end{itemize}
+
+De forma ideal, pode ser formulada primeiro a pergunta, e depois coletados os dados, apelando a informações encontradas num artigo científico ou numa publicação de jornal, com o intuito de tentar contrastar uma afirmação dada num texto com dados coletados diretamente.
+}{1}{2}
+\end{sugestions}
 \begin{objectives}{Aproximação para o valor do desvio padrão amostral}
 {
 \begin{itemize}
@@ -3096,12 +3029,6 @@ Nesta atividade pretende-se apresentar interpretações para o desvio padrão, e
 {
 \begin{enumerate}
 \item Da \hyperref[\detokenize{PE104-5:fig-resumonartes}]{tabela \ref{\detokenize{PE104-5:fig-resumonartes}}} vemos que $s\approx1{,}96$ e que $R=8-0{,}8=7{,}2$. Pela fórmula apresentada temos $s\approx7{,}24=1{,}8$. Comparando o valor aproximado de $s (1{,}8)$ com o valor calculado de $s (1{,}96)$ vemos que a aproximação é um pouco menor do que o valor de $s$. O erro percentual cometido por esta aproximação corresponde a $8\%$ do valor de $s$, pois $\frac{|1{,}8-1{,}96|}{1{,}96}\approx0{,}08$.
-\end{enumerate}
-}{1}
-\end{answer}
-\begin{answer}{Aproximação para o valor do desvio padrão amostral}
-{
-\begin{enumerate}\setcounter{enumi}{1}
 \item Da \hyperref[\detokenize{PE104-5:fig-summarymaratonamulheres}]{tabela \ref{\detokenize{PE104-5:fig-summarymaratonamulheres}}}, para a categoria homens, vemos que $s\approx7,70$ minutos e que $R=158{,}33-130{,}88=27{,}45$. Pela fórmula apresentada temos $s\approx\frac{27{,}45}{4}\approx6{,}86$ minutos. Comparando o valor aproximado de $s (6{,}86)$ com o valor calculado de $s (7{,}70)$ vemos que a aproximação é um pouco menor do que o valor de $s$. O erro percentual cometido por esta aproximação corresponde a cerca de $11\%$ do valor de $s$, pois $\frac{|6{,}86-7{,}70|}{7,70}\approx0{,}11$.
 
 Da \hyperref[\detokenize{PE104-5:fig-summarymaratonamulheres}]{tabela \ref{\detokenize{PE104-5:fig-summarymaratonamulheres}}}, para a categoria mulheres, vemos que $s\approx11{,}13$ minutos e que $R=185{,}15-146{,}88=38{,}27$. Pela fórmula apresentada temos $s\approx38{,}274=9{,}57$ minutos. Comparando o valor aproximado de $s(9{,}57)$ com o valor calculado de $s(11{,}13)$ vemos que a aproximação é um pouco menor do que o valor de s. O erro percentual cometido por esta aproximação corresponde a cerca de $14\%$ do valor de $s$, pois $\frac{|9{,}57-11{,}13|}{11{,}13}\approx0,14$.
@@ -3112,19 +3039,20 @@ Da \hyperref[\detokenize{PE104-5:fig-estrategia}]{tabela \ref{\detokenize{PE104-
 \end{enumerate}
 }{1}
 \end{answer}
-\marginpar{\vspace{-1em}}
+
+
 \begin{objectives}{Frequência de valores no intervalo centrado na média}
 {
 Calcular a frequência relativa de dados que caem no intervalo centrado na média mais ou menos dois desvios padrões.
-}{1}{2}
+}{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
+
 \begin{sugestions}{Frequência de valores no intervalo centrado na média}
 {
 Esta atividade será útil no final da próxima seção que trata da construção do boxplot e seus resultados serão retomados adiante. Além disso, será útil na verificação da afirmação feita na atividade anterior de que quando não há valores atípicos, a grande maioria dos dados situa-se entre a média mais ou menos dois desvios padrões.
-}{1}{2}
+}{1}{1}
 \end{sugestions}
-\marginpar{\vspace{-1em}}
+
 \begin{answer}{Frequência de valores no intervalo centrado na média}
 {
 No caso dos dados da atividade \hyperref[\detokenize{PE104-0:ativ-notas-de-artes}]{Notas de Arte} temos $\bar{x}=5{,}93$ e $s=1{,}96$ tal que os limites deste intervalo são, respectivamente, $2{,}01$ e $9{,}85$. Portanto, das $35$ notas podemos ver que $32$ observações caem dentro destes limites, ou equivalentemente, cerca de $91\%$ das observações.
@@ -3138,10 +3066,7 @@ No caso dos dados da atividade \hyperref[\detokenize{PE104-3:ativ-estrategia-de-
 No caso dos dados da atividade \hyperref[\detokenize{PE104-3:ativ-estrategia-de-investimento}]{Estratégia de Investimento}, para a companhia $B$, temos $\bar{x}=61{,}5$ e $s=18{,}3136$ tal que os limites deste intervalo são, aproximadamente, $24{,}9$ e $98{,}1$. Portanto, das $10$ cotações podemos ver que todas caem dentro destes limites, ou equivalentemente, $100\%$ das cotações.
 
 Observe que para os cinco conjuntos considerados nessa atividade, de fato, a maior parte dos dados ($90\%$ ou mais) situa-se entre os limites de uma média mais ou menos $2$ desvios padrões.
-\columnbreak
-
-\phantom{a}
-}{9}
+}{0}
 \end{answer}
 
 \begin{objectives}{Comparação das bonificações nas Notas de Artes}
@@ -3149,12 +3074,13 @@ Observe que para os cinco conjuntos considerados nessa atividade, de fato, a mai
 Avaliar o efeito no coeficiente de variação de um conjunto de dados quando realizamos transformações de adição de uma constante e de multiplicação por uma constante.
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2em}}
+
 \begin{sugestions}{Comparação das bonificações nas Notas de Artes}
 {
 Nesta atividade pretende-se retornar ao item \titem{e)} da \hyperref[\detokenize{PE104-0:ativ-notas-de-artes}]{Notas de Arte} quando foi perguntado ao estudante o que ele achava melhor: ganhar um ponto ou um acréscimo de $20\%$ em sua nota. A ideia será propor a mesma pergunta de um ponto de vista do professor, que prefere que a distribuição das notas apresente o menor coeficiente de variação.
 }{1}{1}
 \end{sugestions}
+
 \begin{answer}{Comparação das bonificações nas Notas de Artes}
 {
 O professor deverá escolher o aumento de um ponto para cada estudante, pois esta bonificação acarretará num coeficiente de variação menor, implicando em maior homogeneidade da turma em relação à média, conforme os cálculos a seguir.
@@ -3162,12 +3088,15 @@ O professor deverá escolher o aumento de um ponto para cada estudante, pois est
 Considerando o acréscimo de um ponto a todos os alunos temos que a média passa a ser $\bar{x}=\dfrac{242{,}5}{35}\approx6{,}93$. A variância, calculada por $s^2$ é dada por $\dfrac{1811{,}39-35\cdot6{,}93^2}{35-1}\approx3{,}84$ e, o desvio padrão, s≈1,96. Assim, o coeficiente de variação da turma, resultante desta bonificação será dado por $CV=\dfrac{1{,}96}{6{,}93}\cdot100\approx28\%$.
 
 Considerando um aumento de $20\%$ para cada nota temos que a média passa a ser $\bar{x}=\dfrac{249{,}0}{35}\approx7{,}11$. A variância, calculada por $s^2$ é dada por $\dfrac{1960{,}402-35\cdot7{,}11^2}{35-1}\approx5{,}56$ e, o desvio padrão, $s\approx2{,}36$. Assim, o coeficiente de variação da turma, resultante desta bonificação será dado por $CV=\dfrac{2{,}36}{7{,}11}\cdot100\approx33$\%.
-}{1}
+}{0}
 \end{answer}
+
+\clearmargin
+
 \begin{objectives}{Modalidades da maratona de Nova Iorque 2017}
 {
  Comparar diferentes conjuntos de dados, considerando a mesma variável.
-}{1}{1}
+}{1}{2}
 \end{objectives}
 \begin{sugestions}{Modalidades da maratona de Nova Iorque 2017}
 {
@@ -3179,25 +3108,28 @@ Nesta atividade retomaremos as quatro categorais da maratona de Nova Iorque para
 \begin{enumerate}
 \item Considerando a amplitude amostral é fácil perceber que a maior dispersão ocorre na categoria triciclo de mão. O mesmo vale se considerarmos a distância entre quartis. Pela \hyperref[medidas-resumo]{tabela \href{medidas-resumo}} podemos ver que esta resposta também valerá se considerarmos o desvio padrão.
 
-\item Pela \hyperref[\detokenize{PE104-7:id1}]{figura \ref{\detokenize{PE104-7:id1}}}m podemos ver que a única categoria que não apresentou valores atípicos foi a categoria das mulheres, pois não há pontos destacados no boxplot correspondente às mulheres.
-
+\item Pela \hyperref[\detokenize{PE104-7:id1}]{figura \ref{\detokenize{PE104-7:id1}}} podemos ver que a única categoria que não apresentou valores atípicos foi a categoria das mulheres, pois não há pontos destacados no boxplot correspondente às mulheres.
+\end{enumerate}
+}{1}
+\end{answer}
+\begin{answer}{Modalidades da maratona de Nova Iorque 2017}
+{
+\begin{enumerate}\setcounter{enumi}{3}
 \item Considerando as categorias “cadeira de rodas”{} e “triciclo de mão”, vemos que
-
 \begin{align*}
 Q_1-\text{Min}&<<\text{Max}-Q_3;\\
 \text{Mediana}-Q_1&<Q_3-\text{Mediana e}\\ 
-\text{Mediana}-\text{Min}&<<\text{Max}-\text{mediana},\\
+\text{Mediana}-\text{Min}&<<\text{Max}-\text{mediana},
 \end{align*}
 em que o símbolo $<<$ é usado para indicar “bem menor do que”.
 
 Logo, conclui-se que nestas categorias tem-se assimetria à direita acentuada. Observe, que nestes dois casos tem-se que a mediana é menor do que a média. Reveja os histogramas construídos na ativ-comparacao-de-diferentes-grupos.
 
 Considerando as categorias “homens”{} e “mulheres”, vemos que
-
 \begin{align*}
 Q_1-\text{Min}&>>\text{Max}-Q_3;\\
 \text{Mediana}-Q_1&>Q_3-\text{Mediana e}\\ 
-\text{Mediana}-\text{Min}&>>\text{Max}-\text{mediana},\\
+\text{Mediana}-\text{Min}&>>\text{Max}-\text{mediana},
 \end{align*}
 em que o símbolo $>>$ é usado para indicar “bem maior do que”. Logo, conclui-se que nestas categorias tem-se assimetria à esquerda acentuada. Observe, que nestes dois casos tem-se que a mediana é maior do que a média. Reveja os histogramas construídos na atividade \hyperref[\detokenize{PE104-5:ativ-compara-categorias}]{Comparação de conjutos de dados}.
 
@@ -3205,7 +3137,7 @@ em que o símbolo $>>$ é usado para indicar “bem maior do que”. Logo, concl
 
 \item Considerando as categorias “cadeira de rodas”{} e “triciclo de mão”{} vemos que na primeira, 51 completaram a maratona e, na segunda, 69 completaram a maratona. Quanto à amplitude, vemos que ela foi maior na cetegoria “triciclo de mão”, valendo o mesmo para a distância entre quartis e para o desvio padrão. Possivelmente, esta diferença nas dispersões das duas categorias esteja sendo acarretada pelo maior valor atípico da categoria “triciclo de mão”, a saber, $9{,}5206$h. Já foi observado que ambas as categorias apresentam distribuições com assimetria à direita de modo que a mediana é menor do que a média. Reveja os histogramas construídos na \hyperref[\detokenize{PE104-5:ativ-compara-categorias}]{Comparação de conjutos de dados}.
 \end{enumerate}
-}{9}
+}{1}
 \end{answer}
 
 \practice{Medidas de Dispersão}
@@ -3439,7 +3371,6 @@ Para os conjuntos de dados considerados na atividade \hyperref[\detokenize{PE104
 \end{task}
 
 
-\needspace{.2\textheight}
 \begin{task}{comparação das bonificações nas Notas de Artes}
 
 Vamos retornar à atividade \hyperref[\detokenize{PE104-0:ativ-notas-de-artes}]{Notas de Arte} e às duas possibilidades de bonificação das notas: acrescentar um ponto a todos os alunos ou aumentar em 20\% a nota de cada aluno. Suponha, que o professor deseja que o resultado geral de sua turma apresente o menor coeficiente de variação. Partindo deste ponto de vista, qual das duas possibilidades é mais interessante para o professor adotar?
@@ -3896,7 +3827,7 @@ O mesmo raciocínio utilizado para obter a mediana, pode ser usado para obter ap
 
 \includegraphics[width=.5\linewidth]{boxplotexercicio9.png}
 \caption{Boxplot dos resultados dos candidatos na prova de seleção}
-\label{}
+
 \end{figure}
 \end{enumerate}
 }{9}
@@ -4152,7 +4083,7 @@ Em um problema real, em geral, mais de duas variáveis são observadas e muitas 
 \clearpage
 
 \def\currentcolor{cor1}
-\marginpar{\vspace{.5em}}
+
 %Página 1
 \begin{answer}{Exercícios}
 {\exerciselist
@@ -4383,14 +4314,14 @@ Em um problema real, em geral, mais de duas variáveis são observadas e muitas 
   
   \includegraphics[width=.6\linewidth]{histograma_turma_manha_1.png}
   \caption{Histograma das notas dos alunos do turno da manhã}
-  \label{}
+  
   \end{figure}
   \begin{figure}[H]
   \centering
   
   \includegraphics[width=.6\linewidth]{histograma_turma_tarde_1.png}
   \caption{Histograma das notas dos alunos do turno da tarde}
-  \label{}
+  
   \end{figure}
 \end{multicols}
   \begin{figure}[H]
@@ -4398,7 +4329,7 @@ Em um problema real, em geral, mais de duas variáveis são observadas e muitas 
   
   \includegraphics[width=.5\linewidth]{notas_turmas_manha_tarde.png}
    \caption{Boxplots das notas dos alunos do turno da manhã e do turno da tarde e quadro das medidas resumo gerados pelo GeoGebra}
-  \label{}
+  
   \end{figure}
 }{1}
 \end{answer}
@@ -5070,7 +5001,7 @@ Finalmente, é possível construir o boxplot na mesma área gráfica para que o 
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/estatistica2_bibliografia.bib}
 
 \nocite{*}

@@ -1,121 +1,55 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-estatistica1.jpg}{abertura-estatistica1-professor}
 
-\ifnum \aluno=1
-\renewcommand\chapterillustration{abertura-estatistica1.jpg}
-\else
-\renewcommand\chapterillustration{abertura-estatistica1-professor}
-\fi
-\renewcommand\chapterwhat{Especificidade do pensamento estatístico a partir de problemas. Conceitos: população e amostra, parâmetro e estimador. Variáveis estatísticas e suas classificações. Organização dos dados em tabelas de frequências. Representações gráficas adequadas para os diferentes tipos de variáveis. Noções básicas de amostragem.}
-\renewcommand\chapterbecause{A Estatística está presente no mundo contemporâneo e chega aos cidadãos em todos os
-meios de comunicação. Diariamente somos confrontados com informações estatísticas
-sobre temas como Economia, Educação, Esportes, Saúde, Meio-Ambiente, entre outros.
-Tais informações orientam decisões em nossas vidas pessoais e permitem-nos exercer
-nossas responsabilidades como cidadãos. Um conhecimento básico de Estatística é
-fundamental na formação do cidadão para que este possa, de forma competente, apreciar
-e criticar argumentos baseados em dados.} 
+\expandtocdepth
+
+\chapterwhat{Especificidade do pensamento estatístico a partir de problemas. Conceitos: população e amostra, parâmetro e estimador. Variáveis estatísticas e suas classificações. Organização dos dados em tabelas de frequências. Representações gráficas adequadas para os diferentes tipos de variáveis. Noções básicas de amostragem.}
+\chapterbecause{A Estatística está presente no mundo contemporâneo e chega aos cidadãos em todos os meios de comunicação. Diariamente somos confrontados com informações estatísticas sobre temas como Economia, Educação, Esportes, Saúde, Meio-Ambiente, entre outros. Tais informações orientam decisões em nossas vidas pessoais e permitem-nos exercer nossas responsabilidades como cidadãos. Um conhecimento básico de Estatística é fundamental na formação do cidadão para que este possa, de forma competente, apreciar e criticar argumentos baseados em dados.} 
+
+
 \chapter{A Natureza da Estatística}
 \label{est1-chap}
 
 \def\estchapum{}
 
-\mbox{}\thispagestyle{empty}\clearpage
 
-\thispagestyle{empty}
+%%%% Página de créditos
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\autorum{Flávia Landim (coordenadora da equipe - UFRJ)}
+\autordois{José Ezequiel Soto Sanches}
+\autortres{Nei Rocha (UFRJ)}
+\autorquatro{Vanessa Matos (SEduc Angras dos Reis e Mesquita)}
+\autorcinco{Letícia Rangel (Colégio de Aplicação da UFRJ)}
 
-\noindent \scalebox{.9}
-{
-\begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-}
-\end{center}
+\revisorum{Cydara Ripoll}
+\revisordois{Letícia Rangel}
+\revisortres{Luciane Velasque}
 
-\vspace*{.3cm}
+\graficos{Beatriz Cabral e Tarso Caldas}
+\ilustracao{Miller  Guglielmo}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+\autordacapa{Chuttersnap}{Unsplash}{https://unsplash.com/photos/8I423fRMwjM}
 
-Versão digital do capítulo:
+% Link para versão digital:
 
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/PE103.html}
+\versao{1.3}
 
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
+%Licença cc-by-sa
+\ccbysa
 
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & A Natureza da Estatística\\
-\\
-Ano/ Versão: & 2020 / versão 1.3 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas, \\
-             & Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Flávia Landim (coordenadora da equipe - UFRJ),\\
-        & José Ezequiel Soto Sanches,\\
-        & Nei Rocha (UFRJ),\\
-             & Vanessa Matos (SEduc Angras dos Reis e Mesquita).\\
-             & Letícia Rangel (Colégio de Aplicação da UFRJ)\\
-\\
-Revisão: & Cydara Ripoll  \\
-		     & Letícia Rangel \\
-         & Luciane Velasque
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
-\\
-  Capa: & Foto de Chuttersnap no Unsplash \\
-        & https://unsplash.com/photos/8I423fRMwjM \\
+% Link para versão digital:
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/PE103.html}
 
-\end{tabular}
-\vfill
+\creditos
 
 
-\begin{figure}[b]
-\scalebox{.9}
-{
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-}
-\end{figure}
-\vfill
 
 \mainmatter
 
-\begin{apresentacao}{A Natureza da Estatística}
+\begin{apresentacao}{Introdução}
 
 \subsection{Habilidades da BNCC trabalhadas no Capítulo}
 \begin{habilities}{EM13MAT102}
-Teste Analisar tabelas, gráficos e amostras de pesquisas estatísticas em relatórios divulgados por diferentes meios de comunicação, identificando, quando for o caso, inadequações que possam induzir a erros de interpretação, como escalas e amostras não apropriadas.
+Analisar tabelas, gráficos e amostras de pesquisas estatísticas em relatórios divulgados por diferentes meios de comunicação, identificando, quando for o caso, inadequações que possam induzir a erros de interpretação, como escalas e amostras não apropriadas.
 
 \tcbsubtitle{EM13MAT106} Identificar situações da vida cotidiana nas quais seja necessário fazer escolhas levando-se em conta os riscos probabilísticos (usar este ou aquele método contraceptivo, optar por um tratamento médico em detrimento de outro etc.)
 
@@ -123,32 +57,44 @@ Teste Analisar tabelas, gráficos e amostras de pesquisas estatísticas em relat
 
 \end{habilities}
 
+\subsection{Pré-requisitos}
+\begin{habilities}{EF08MA23}
+Avaliar a adequação de diferentes tipos de gráficos para representar um conjunto de dados de uma pesquisa.
+
+\tcbsubtitle{EF08MA24}
+Classificar as frequências de uma variável contínua de uma pesquisa em classes, de modo que resumam os dados de maneira adequada para a tomada de decisões.
+
+\tcbsubtitle{EF08MA25}
+Obter os valores de medidas de tendência central de uma pesquisa estatística (média, moda e mediana) com a compreensão de seus significados e relacioná-los com a dispersão de dados, indicada pela amplitude.
+
+\tcbsubtitle{EF08MA26}
+Selecionar razões, de diferentes naturezas (física, ética ou econômica), que justificam a realização de pesquisas amostrais e não censitárias, e reconhecer que a seleção da amostra pode ser feita de diferentes maneiras (amostra casual simples, sistemática e estratificada).
+
+\tcbsubtitle{EF08MA27}
+Planejar e executar pesquisa amostral, selecionando uma técnica de amostragem
+adequada, e escrever relatório que contenha os gráficos apropriados para representar os conjuntos de dados, destacando aspectos como as medidas de tendência central, a amplitude e as conclusões.
+
+\tcbsubtitle{EF09MA21}
+Analisar e identificar, em gráficos divulgados pela mídia, os elementos que podem induzir, às vezes propositadamente, erros de leitura, como escalas inapropriadas, legendas não explicitadas corretamente, omissão de informações importantes (fontes e datas), entre outros.
+
+\tcbsubtitle{EF09MA22}
+Escolher e construir o gráfico mais adequado (colunas, setores, linhas), com ou sem uso de planilhas eletrônicas, para apresentar um determinado conjunto de dados, destacando aspectos como as medidas de tendência central.
+
+\tcbsubtitle{EF09MA23}
+Planejar e executar pesquisa amostral envolvendo tema da realidade social e comunicar os resultados por meio de relatório contendo avaliação de medidas de tendência central e da amplitude, tabelas e gráficos adequados, construídos com o apoio de planilhas eletrônicas.
+
+\end{habilities}
+
 \subsection{Observações}
 \begin{enumerate}
-\item {} 
-Como a BNCC ainda não entrou em vigor, os pré-requisitos não necessariamente foram contemplados no Ensino Fundamental. Por essa razão, muitos deles serão abordados nesse capítulo e no capítulo de “Medidas de Posição e Dispersão” que dá sequência a esse capítulo.
+\item { } 
+Os pré-requisitos não necessariamente foram contemplados no Ensino Fundamental. Por essa razão, muitos deles serão abordados nesse capítulo e no capítulo de ``Medidas de Posição e Dispersão'' que dá sequência a esse capítulo.
 
 \item {} 
-Ao longo do capítulo utilizamos o termo \textit{progressão aritmética}. O conhecimento deste tópico não é um pré-requisito. A conexão entre conceitos da Matemática é favorável para a visão do estudante sobre a Matemática como um todo.
+Na seção ``Para saber +'', ao final desse capítulo, utilizamos o termo \textit{progressão aritmética}. O conhecimento deste tópico não é um pré-requisito. A conexão entre conceitos da Matemática é favorável para a visão do estudante sobre a Matemática como um todo.
 
 \end{enumerate}
 
-\subsection{Pré-requisitos}
-\begin{habilities}{EF08MT08}
-Identificar, em gráficos de barras, colunas ou setores, divulgados pela mídia, as variáveis e seus valores, os resultados e os elementos constitutivos do gráfico (título, eixos, legenda e fonte), interpretando-os para analisar a adequação do gráfico ao tema e aos dados e para propor outras formas de comunicação dos resultados da pesquisa, tais como texto escrito ou outro tipo de gráfico.
-
-\tcbsubtitle{EF08MA23}
-Selecionar razões, de diferentes naturezas (física, ética ou econômica), que justificam a realização de pesquisas amostrais e não censitárias, e reconhecer que a seleção da amostra pode ser feita de diferentes maneiras (amostra casual simples, sistemática e estratificada).
-
-\tcbsubtitle{EF09MT09}
-Escolher e construir o gráfico mais adequado (colunas, setores, linhas e histogramas) para apresentar um determinado conjunto de dados de uma pesquisa, destacando aspectos como as medidas de tendência central para compor um relatório descritivo dos resultados.
-
-\tcbsubtitle{EF09MT10}
-Planejar uma pesquisa amostral envolvendo tema da realidade social, definir a técnica de amostragem e a amostra, coletar, organizar e interpretar os dados, para comunicar os resultados por meio de relatório contendo texto escrito, avaliação de medidas de tendência central e da amplitude, tabelas e gráficos adequados construídos com o apoio de planilhas eletrônicas.
-
-\tcbsubtitle{EF09MA05}
-Resolver e elaborar problemas que envolvam porcentagens, com a ideia de aplicação de percentuais sucessivos e a determinação das taxas percentuais, preferencialmente com o uso de tecnologias digitais, no contexto da educação financeira.
-\end{habilities}
 
 A Estatística está presente no mundo contemporâneo e chega aos cidadãos em todos os meios de comunicação e é a ferramenta por excelência no tratamento de modelagem de fenômenos aleatórios (não-determinísticos). Diariamente somos confrontados com informações estatísticas sobre temas que variam de Economia à Educação, de filmes a esportes, de comida à medicina, e de pesquisas de opinião a comportamento social. Tais informações orientam decisões em nossas vidas pessoais e permitem-nos exercer nossas responsabilidades como cidadãos. \citep{franklin2007}.
 
@@ -156,7 +102,7 @@ A produção de conhecimento - sempre em constante evolução e reavaliação - 
 
 A relevância do raciocínio estatístico e do conhecimento para o efetivo funcionamento na sociedade da informação levou à introdução do termo \textbf{Letramento Estatístico}: “A capacidade de compreender e avaliar criticamente resultados estatísticos que permeiam a vida diária,  acompanhada da capacidade de apreciar como o pensamento estatístico pode contribuir em decisões públicas e privadas, profissionais e pessoais.” \citep{batanero2016}.
 
-De acordo com \citet{veaux2008}, o desafio para o estudante (e o professor) de Estatística introdutória é que, como na literatura e na arte, navegar por e dar sentido a exige não somente um conjunto de regras e axiomas, mas experiência de vida e “senso comum”. São várias habilidades a serem trabalhadas e a maior parte delas exige capacidade de avaliação crítica em adição à manipulação matemática. A capacidade de avaliação crítica é adquirida com exemplos e experiência e isso demanda mais tempo.
+De acordo com \cite{veaux2008}, o desafio para o estudante (e o professor) de Estatística introdutória é que, como na literatura e na arte, navegar por e dar sentido a exige não somente um conjunto de regras e axiomas, mas experiência de vida e “senso comum”. São várias habilidades a serem trabalhadas e a maior parte delas exige capacidade de avaliação crítica em adição à manipulação matemática. A capacidade de avaliação crítica é adquirida com exemplos e experiência e isso demanda mais tempo. %
 
 \begin{figure}[H]
 \centering
@@ -165,9 +111,24 @@ De acordo com \citet{veaux2008}, o desafio para o estudante (e o professor) de E
 \end{figure}
 
 \subsection{Objetivo geral}
+
+\begin{habilities}
+
+Identificar o pensamento estatístico a partir de suas ideias fundamentais, a saber, população e amostra, parâmetro e estimador, distribuições empíricas de dados.
+
+\end{habilities}
+
+Este capítulo trabalha as competências gerais da Educação Básica. Destacamos, de modo especial, as competências 
+
 \begin{itemize}
-\item Motivar o pensamento estatístico a partir de suas ideias fundamentais, a saber, população e amostra, parâmetro e estimador, distribuições empíricas de dados.
+
+\item { } Exercitar a curiosidade intelectual e recorrer à abordagem própria das ciências, incluindo a investigação, a reflexão, a análise crítica, a imaginação e a criatividade, para investigar causas, elaborar e testar
+hipóteses, formular e resolver problemas e criar soluções (inclusive tecnológicas) com base nos conhecimentos das diferentes áreas.
+
+\item { }  Argumentar com base em fatos, dados e informações confiáveis, para formular, negociar e defender ideias, pontos de vista e decisões comuns que respeitem e promovam os direitos humanos, a consciência socioambiental e o consumo responsável em âmbito local, regional e global, com posicionamento ético em relação ao cuidado de si mesmo, dos outros e do planeta.
+
 \end{itemize}
+
 
 Este capítulo aborda os conteúdos de organização e representação dos dados (incluindo agrupamentos de dados em classes), a construção de gráficos apropriados (incluindo o histograma), a interpretação e a análise crítica apresentadas em relatórios descritivos destacados na habilidade. Os conteúdos:
 \begin{enumerate}
@@ -225,7 +186,8 @@ abordagem da estatística e seus problemas, privilegiando o pensamento estatíst
 
 \end{enumerate}
 
-De acordo com \citet{batanero2016}, mesmo que os métodos de análise de dados nessa fase do ensino envolvam somente calcular e interpretar porcentagens  ou medidas estatísticas simples, bem como interpretar vários tipos de gráficos, os autores sugerem que os estudantes apresentam problemas na compreensão dos conceitos e na relação desses conceitos para o contexto de modo a ter algum significado. Uma razão para essas dificuldades é que o ensino, em geral, foca sobre a aplicação de métodos em detrimento à interpretação de resultados em um dado contexto, buscando, assim, de forma equivocada, dar a estes um caráter determinístico.
+De acordo com \cite{batanero2016}, mesmo que os métodos de análise de dados nessa fase do ensino envolvam somente calcular e interpretar porcentagens  ou medidas estatísticas simples, bem como interpretar vários tipos de gráficos, os autores sugerem que os estudantes apresentem problemas na compreensão dos conceitos e na relação desses conceitos para o contexto de modo a ter algum significado. Uma razão para essas dificuldades é que o ensino, em geral, foca sobre a aplicação de métodos em detrimento à interpretação de resultados em um dado contexto, buscando, assim, de forma equivocada, dar a estes um caráter determinístico.
+
 
 Os distratores apresentados a seguir refletem a experiência dos envolvidos com o desenvolvimento desse capítulo.
 \begin{enumerate}
@@ -262,37 +224,190 @@ O uso de recursos tecnológicos para a realização de cálculos e para a constr
 
 Como alternativa ao GeoGebra pode ser utilizado o programa computacional \textit{R}, livre e de código aberto, que pode ser baixado gratuitamente em: \url{https://www.r-project.org/} . O \textit{R}, muito popular entre os Estatísticos, permite desde cálculos simples até análises sofisticadas. Para utilização com estudantes do Ensino Médio recomendamos a Interface Rcmdr, por ser mais amigável e não exigir conhecimento prévio dos comandos. O link (\url{http://gae.uniriotec.br/7/material.html}) apresenta uma apostila com os passos iniciais para utilização do Rcmdr.
 
-O capítulo está estruturado em três seções principais.
+\subsection{Conexões com as outras áreas do conhecimento}
+
+A estatística é uma disciplina metodológica. Ela não existe para ela própria, mas para oferecer às outras áreas de conhecimento um conjunto coerente de ideias e ferramentas para lidar com dados. Nesse sentido a estatística é naturalmente interdisciplinar de modo que é possível trabalhar com as outras áreas do conhecimento. A seguir, destacamos habilidades das outras áreas que podem ser trabalhadas conjuntamente.
 
 
-\subsection{Explorando 1} Proposição de atividades que ensejam uma reflexão sobre o papel central da variabilidade na Estatística como ferramenta fundamental no tratamento da incerteza. Na sequência,  apresentamos os conceitos básicos trabalhados nas atividades com discussão e algumas atividades complementares.
-
-Na primeira atividade será trabalhada a noção de distribuição empírica, conceito chave para a construção de modelos de probabilidade. Em Estatística e Probabilidade, distribuição é uma coleção de propriedades de um conjunto de dados como um todo, não de um particular valor do conjunto. Uma distribuição consiste de todos os valores diferentes nos dados incluindo as frequências (ou probabilidades) associadas com cada valor. Variação e distribuição estão relacionadas a outras noções estatísticas fundamentais tais como “centro” ou “posição” (modeladas pela média, mediana, ou moda), dispersão (modeladas pelo desvio-padrão, ou variância, etc) e forma (por exemplo, bi-modal, uniforme, simétrica, assimétrica à direita, etc). Medidas de “centro” ou “posição” resumem a informação sobre uma distribuição, enquanto medidas de dispersão resumem a variabilidade no conjunto de dados. Cada valor de uma variável mostra algum desvio do “centro”. Tais medidas serão trabalhadas no capítulo que dá sequência ao Capítulo “A Natureza da Estatística” (“Medidas de Posição e Dispersão”), mas elas já ocorrem nas atividades propostas nesse capítulo, pois média, mediana e moda são trabalhadas no Ensino Fundamental.
-
-\subsection{Explorando 2} Proposição de atividades que envolvem analisar variáveis quantitativas contínuas: uma cujo objetivo é estudar a distribuição de frequências dos valores observados e, a outra, cujo objetivo é estudar seu comportamento ao longo do tempo. Na sequência, destacamos algumas propriedades do histograma.
-
-\subsection{Aprofundando o assunto}
 \begin{enumerate}
-\item {} 
-Tipos de seleção de amostras serão apresentados com um exemplo, lembrando que, na BNCC do Ensino Fundamental, está previsto trabalhar no oitavo ano com amostras probabilísticas aleatória simples, sistemática e estratificada. Após a descrição de alguns tipos de seleção de amostra, um exemplo é explorado.
+\item { } Linguagem e suas tecnologias
 
-\item {} 
-Projeto a ser realizado ao longo de pelo menos três meses paralalelamente às aulas. O projeto envolverá a formulação de um problema a ser investigado (de preferência envolvendo outra disciplina), a definição da população, a construção de um questionário, a coleta de dados (amostra ou censo), a análise dos resultados obtidos construindo gráficos e calculando medidas-resumo e a confecção de relatório final. Na conclusão do projeto, o capítulo “Medidas de Posição e Dispersão” já terá sido trabalhado. Serão recomendados para o professor vários temas, caso os grupos ou a turma demandem. As etapas sugeridas para o desenvolvimento do projeto estão destacadas no documento da ABE \citep{abe2015}.
+\begin{habilities}{EM13LP32} Selecionar informações e dados necessários para uma dada pesquisa (sem excedê-los) em diferentes fontes (orais, impressas, digitais etc.) e comparar autonomamente esses conteúdos, levando em conta seus contextos de produção, referências e índices de confiabilidade, e percebendo coincidências, complementaridades, contradições, erros ou imprecisões conceituais e de dados, de forma a compreender e posicionar-se criticamente sobre esses conteúdos e estabelecer recortes precisos.
+
+\tcbsubtitle{EM13LP33} Selecionar, elaborar e utilizar instrumentos de coleta de dados e informações (questionários, enquetes, mapeamentos, opinários) e de tratamento e análise dos conteúdos obtidos, que atendam adequadamente a diferentes objetivos de pesquisa.
+\tcbsubtitle{EM13LP39} Usar procedimentos de checagem de fatos noticiados e fotos publicadas (verificar/avaliar veículo, fonte, data e local da publicação, autoria, URL, formatação; comparar diferentes fontes; consultar ferramentas e sites checadores etc.), de forma a combater a proliferação de notícias falsas (fake news).
+\tcbsubtitle{EM13LP40} Analisar o fenômeno da pós-verdade – discutindo as condições e os mecanismos de disseminação de fake news e também exemplos, causas e consequências desse fenômeno e da prevalência de crenças e opiniões sobre fatos -, de forma a adotar atitude crítica em relação ao fenômeno e desenvolver uma postura flexível que permita rever crenças e opiniões quando fatos apurados as contradisserem.
+
+\end{habilities}
+
+\item { } Ciências Humanas e Sociais Aplicadas
+
+\begin{habilities}{EM13CHS103}
+Elaborar hipóteses, selecionar evidências e compor argumentos relativos a processos políticos, econômicos, sociais, ambientais, culturais e epistemológicos, com base na sistematização de dados e informações de diversas naturezas (expressões artísticas, textos filosóficos e sociológicos, documentos históricos e geográficos, gráficos, mapas, tabelas, tradições orais, entre outros).
+
+\tcbsubtitle{EM13CHS106}	Utilizar as linguagens cartográfica, gráfica e iconográfica, diferentes gêneros textuais e tecnologias digitais de informação e comunicação de forma crítica, significativa, reflexiva e ética nas diversas práticas sociais, incluindo as escolares, para se comunicar, acessar e difundir informações, produzir conhecimentos, resolver problemas e exercer protagonismo e autoria na vida pessoal e coletiva.
+
+\tcbsubtitle{EM13CHS301}	Problematizar hábitos e práticas individuais e coletivos de produção, reaproveitamento e descarte de resíduos em metrópoles, áreas urbanas e rurais, e comunidades com diferentes características socioeconômicas, e elaborar e/ou selecionar propostas de ação que promovam a sustentabilidade socioambiental, o combate à poluição sistêmica e o consumo responsável.
+
+\tcbsubtitle{EM13CHS402}	Analisar e comparar indicadores de emprego, trabalho e renda em diferentes espaços, escalas e tempos, associando-os a processos de estratificação e desigualdade socioeconômica.
+
+\end{habilities}
+
+\item {  } Ciências da Natureza e suas tecnologias
+
+\begin{habilities}{EM13CNT205}	Interpretar resultados e realizar previsões sobre atividades experimentais, fenômenos naturais e processos tecnológicos, com base nas noções de probabilidade e incerteza, reconhecendo os limites explicativos das ciências.
+
+\tcbsubtitle{EM13CNT206}	Discutir a importância da preservação e conservação da biodiversidade, considerando parâmetros qualitativos e quantitativos, e avaliar os efeitos da ação humana e das políticas ambientais para a garantia da sustentabilidade do planeta.
+
+\tcbsubtitle{EM13CNT301}	Construir questões, elaborar hipóteses, previsões e estimativas, empregar instrumentos de medição e representar e interpretar modelos explicativos, dados e/ou resultados experimentais para construir, avaliar e justificar conclusões no enfrentamento de situações-problema sob uma perspectiva científica.
+
+\tcbsubtitle{EM13CNT302}	Comunicar, para públicos variados, em diversos contextos, resultados de análises, pesquisas e/ou experimentos, elaborando e/ou interpretando textos, gráficos, tabelas, símbolos, códigos, sistemas de classificação e equações, por meio de diferentes linguagens, mídias, tecnologias digitais de informação e comunicação (TDIC), de modo a participar e/ou promover debates em torno de temas científicos e/ou tecnológicos de relevância sociocultural e ambiental.
+
+\tcbsubtitle{EM13CNT303}	Interpretar textos de divulgação científica que tratem de temáticas das Ciências da Natureza, disponíveis em diferentes mídias, considerando a apresentação dos dados, tanto na forma de textos como em equações, gráficos e/ou tabelas, a consistência dos argumentos e a coerência das conclusões, visando construir estratégias de seleção de fontes confiáveis de informações.
+
+\end{habilities}
+
 
 \end{enumerate}
 
-Ao final do capítulo são sugeridos vídeos e projetos aplicados envolvendo  Estatística, várias páginas para pesquisar dados reais e exercícios incluindo questões do ENEM e Vestibulares, abordando os conteúdos desse capítulo. Nos exercícios serão tratados os distratores.
+\section*{Organização do Capítulo}
+
+O capítulo está estruturado em dois blocos principais ``1) A Natureza da Estatística'' e ``2) Gráficos para Variáveis Quantitativas'', compostos por seções explorando, organizando e praticando cada um. Na parte final do capítulo há uma seção ``Para saber mais'', um ``Projeto Aplicado'' e uma seção com 20 exercícios.
+
+A duração prevista para trabalhar esse capítulo de forma completa, incluindo a parte final do capítulo é de 6 a 8 tempos de 50 minutos.
+
+\subsection*{Bloco 1: A Natureza da Estatística} 
+
+\subsection*{Duração prevista: 3 a 4 tempos de 50 minutos}
+
+\begin{enumerate}
+
+\item { } Explorando
+
+Inclui quatro atividades para trabalhar o objetivo geral.
+
+\item { } Organizando
+
+Apresenta conceitos básicos de Estatística como População e Amostra, Estatística descritva e Estatística inferencial e a classificação de variáveis. A seção é encerrada, apresentando-se gráficos adequados para variáveis qualitativas, também chamadas de variáveis categóricas. 
+
+\item { } Praticando
+
+Inclui 4 atividades complementares desse blodo, envolvendo  um levantamento de dados da  turma, classificação de variáveis, contrução e análise de gráficos.
+
+\end{enumerate}
+
+
+
+\subsection*{Bloco 2: Gráficos para Variáveis Quantitativas} 
+
+\subsection*{Duração prevista: 2 tempos de 50 minutos}
+
+
+\begin{enumerate}
+
+\item { Explorando 2} Inclui atividades que envolvem construir gráficos para representar  variáveis quantitativas contínuas: uma cujo objetivo é estudar a distribuição de frequências dos valores observados (histograma) e, a outra, cujo objetivo é estudar seu comportamento ao longo do tempo (gráfico de linha). 
+
+\item {Organizando 2} Apresenta a definição dos gráficos trabalhados nas atividades do explorando e discute a necessidade de se organizar variáveis quantitativas contínuas em intervalos de classe. Inclui dois exemplos de contrução de histograma. O segundo exemplo ilustra o caso de intervalos de classe de comprimentos desiguais e apresenta a definição de densidade de frequência: absoluta e relativa.
+
+\item {Praticando 2} Inclui duas atividades de construção de histogramas, a primeira delas incluindo um aplicativo do GeoGebra de modo a automatizar a construção do histograma e poder explorar diferentes quantidades de intervalos de classe de maneira rápida e simples.
+
+\end{enumerate}
+
+
+\subsection*{Parte final do capítulo}
+
+\subsection*{Duração prevista: 2 tempos de 50 minutos} 
+
+Nessa parte final do capítulo foram incluídas seções Para saber mais, Projeto aplicado e Exercícios, além de uma lista de sugestões de vídeos sobre Estatística e páginas da internet para trabalhar com dados reais. 
+
+Para a realização do Projeto Aplicado recomenda-se um planejamento de forma transversal ao longo do ano letivo, pois, dependendo da investigação a ser conduzida pelos estudantes, o tempo demandado para a coleta dos dados e sua organização pode ser maior do que um período sequencial de 6 a 8 aulas de Matemática. Dessa forma, o ideal é propor o projeto no início de um período letivo, ano, semestre, trimestre ou bimestre, retomando-o à medida que as etapas do projeto forem sendo concluídas.
+
+% \section*{Referências bibliográficas}
+
+% ABE (2015) ABE: Reflexões a respeito dos conteúdos de probabilidade e estatística na escola no Brasil - uma proposta. Disponível em: < https: // goo.gl/OBtwpv >. Acesso em: 18 ago. 2017.
+
+% Batanero, C., Burrill, G., e Reading, C. (Eds.). (2011). Teaching statistics in school mathematics-challenges for teaching and teacher education: A joint ICMI/IASE study: the 18th ICMI study (Vol. 14). Springer Science - Business Media.
+
+% Batanero, C., e Borovcnik, M. (2016). Statistics and probability in high school. Springer.
+
+% Bussab, W. O. e Morettin, P. A. (2017). Estatística Básica. Saraiva. Nona edição.
+
+% Cordani, L. K. (2002). Estatística para todos. Salvador, BA. Retirado do www. bienasbm. ufba. br/OF14. pdf.
+
+% De Veaux, R. D., College, W., Velleman, P. F. (2008), Math is Music; statistics is literature (or why are there no six-year-old novelists?). Amstat news. pp 54-57.
+
+% IBGE (2017) < https: // vamoscontar.ibge.gov.br  > Acesso em: 29 ago. 2017.
+
+% Franklin, C. A. (2007). Guidelines for assessment and instruction in statistics education (GAISE) report: A pre-K–12 curriculum framework. American Statistical Association.
+
+% Pfenning, N. (2011). Elementary Statistics: looking at the big picture. Cengage Learning.
+
+% Rossman, A. J., e Chance B. L. (1998). Workshop Statistics:: Discovery With Data and Minitab. Springer Science - Business Media.
 
 \end{apresentacao}
 
 
+\begin{paginatexto}{Bloco I: A Natureza da Estatística}
+
+\section*{Objetivo geral}
+
+Identificar o pensamento estatístico a partir de suas ideias fundamentais, a saber, população e amostra, parâmetro e estimador, distribuições empíricas de dados.
+
+
+\begin{habilities}{EM13MAT102}
+Analisar tabelas, gráficos e amostras de pesquisas estatísticas em relatórios divulgados por diferentes meios de comunicação, identificando, quando for o caso, inadequações que possam induzir a erros de interpretação, como escalas e amostras não apropriadas.
+
+\tcbsubtitle{EM13MAT106} Identificar situações da vida cotidiana nas quais seja necessário fazer escolhas levando-se em conta os riscos probabilísticos (usar este ou aquele método contraceptivo, optar por um tratamento médico em detrimento de outro etc.)
+
+\tcbsubtitle{EM13MAT406} Construir e interpretar tabelas e gráficos de frequências com base em dados obtidos em pesquisas por amostras estatísticas, incluindo ou não o uso de softwares que inter-relacionem estatística, geometria e álgebra.
+
+\end{habilities}
+
+A duração prevista para trabalhar esse primeiro bloco é de três a quatro tempos de aula de 50 minutos.
+
+Este bloco foi dividido em três seções: explorando, organizando e praticando que serão brevemente descritas a seguir.
+
+\begin{enumerate}
+
+\item { } Explorando: 
+
+Essa seção começa com um texto introdutório para o alunos. A caixa para refletir, logo após o texto inicial, apresenta uma importante reflexão sobre a diferença entre proposições matemáticas e proposições estatísticas. As proposições matemáticas são classificadas em verdadeiras ou falsas, mas isso não é possível para as proposições estatísticas cuja validade envolve uma escala de incerteza tal como é muito provável, é pouco provável etc. Em seguida são sugeridas quatro atividades.
+
+Na primeira atividade será trabalhada a noção de distribuição empírica, conceito chave para a construção de modelos de probabilidade. Em Estatística e Probabilidade, distribuição é uma coleção de propriedades de um conjunto de dados como um todo, não de um particular valor do conjunto. Uma distribuição consiste de todos os valores diferentes nos dados incluindo as frequências (ou probabilidades) associadas com cada valor. Variação e distribuição estão relacionadas a outras noções estatísticas fundamentais tais como “centro” ou “posição” (modeladas pela média, mediana, ou moda), dispersão (modeladas pelo desvio-padrão, ou variância, etc) e forma (por exemplo, bi-modal, uniforme, simétrica, assimétrica à direita, etc). Medidas de ``centro'' ou ``posição'' resumem a informação sobre uma distribuição, enquanto medidas de dispersão resumem a variabilidade no conjunto de dados. Cada valor de uma variável mostra algum desvio do “centro”. Tais medidas serão trabalhadas no capítulo que dá sequência ao Capítulo “A Natureza da Estatística” (“Medidas de Posição e Dispersão”), mas elas já ocorrem nas atividades propostas nesse capítulo, pois média, mediana e moda são trabalhadas no Ensino Fundamental. Por essa razão optamos por começar com a atividade da escolha do fornecedor de parafusos, que ilustra diferentes distribuições e suas características. Essa atividade foi inspirada em Rossman e Chance (1998) e, embora não seja a recomendação, optamos por usar dados fictícios.
+
+A segunda atividade envolve  a comparação de medicamentos, usando dados empíricos e foi proposta para ilustrar situações quem que observar médias amostrais numericamente diferentes pode não levar a conclusão de que as médias na população sejam de fato diferentes, há que se olhar também a dispersão dos dados desses dois conjuntos. Nessa atividade há duas distribuições empíricas (resultantes de amostras da população) com médias numericamente diferentes. No entanto, a dispersão em torno dessas médias é grande de modo que comparando os dois diagramas de pontos, percebe-se grande interseção desses gráficos nas partes de maior frequência de observações, tornando-se razoável supor que as diferenças não são importantes ou, com se diz em estatística, estatisticamente significativas. Novamente, para facilitar a compreensão e ilustrar essa condição, foram considerados dados fictícios. 
+
+As terceira e quarta atividade envolvem o suplemento especial da Pesquisa Nacional por Amostra de Domicílios (PNAD) do IBGE realizada em 2015 que incluiu uma investigação sobre a prática de atividades físicas no último ano pela população brasileira de 15 anos ou mais. Esse contexto foi desdobrado em duas atividades em que a primeira, mais conceitual, envolve apenas classificar variáveis em núméricas ou não e, a segunda, envolve analisar infográficos.
+
+\item { } Organizando:
+
+Nessa seção introduzimos os conceitos de população e amostra, parâmetro e estimador, estatística descritiva e estatística inferencial, ilustrando-os por meior de exemplos e também usando como gancho as atividades da seção explorando. Em seguida, apresentamos a classificação de variáveis em quantitativas e qualitativas. Essa seção é encerrada com uma discussão sobre gráficos adequados para representar variáveis qualitativas (categóricas) cuja única escala é a da frequência. Define-se então frequência absoluta e frequência relativa e trabalha-se com gráficos de distribuições de frequências para variáveis qualitativas, em especial o gráfico de barras e o gráfico de setores. Um exemplo foi incluído nessa seção para discutir que tipo de frequência considerar: relativa ou absoluta.
+
+
+\item { } Praticando: 
+
+Nessa seção são apresentadas quatro atividades para complementar a discussão sobre o bloco A Natureza da Estatística. Na primeira atividade solicita-se a condução de uma investigação entre os alunos da turma sobre a prática de atividade física, para depois comparar, por exemplo, o percentual da turma com o percentual correspondente a faixa etária da turma. É claro que não se espera que sejam similares, pois trata-se de uma amostra de conveniência (a turma) muito particular e de tamanho bastante resuzido, comparando-se ao número de jovens brasileiros nessa faixa etária. Nesse caso será um mero exercício de comparar o percentula da turma que pratica atividade física com o percentual indicado pela pesquisa realizada em 2015.
+
+A segunda atividade envolve apenas classificar diferentes tipos de variáveis em quantitativa ou qualitativa. 
+
+A terceira atividade solicita ao estudante refazer o infográfico 4, apresentado na seção explorando, transformando o gráfico de setores em gráfico de retângulos e os dois gráficos de retângulos em gráfico de setores. 
+
+A quarta atividade ilustra um gráfico de barras que não representa uma distribuição de frequências, pois nesse gráfico o comprimento da barra corresponde à evolução de uma medida de inflação acumulada nos últimos 12 meses, considerando  o periíodo que vai de  agosto de 2016 até  agosto de 2017. Nessa atividade pedimos, indicando uma sugestão, representar esses dados, usando-se um gráfico de linha, comum para variáveis quantitativas observadas ao longo do tempo.
+
+\end{enumerate}
+
+Os exercícios de número 1 a 10, 13, 15, 16 e 18, no final desse capítulo, referem-se ao conteúdo desse bloco.
+
+\end{paginatexto}
+
+\clearpage
 \def\currentcolor{session1}
 \clearmargin
 \begin{objectives}{Escolha do melhor fornecedor - Tomada de decisão}
 {
 \begin{itemize}
 
-\item Comparar distribuições empíricas de dados, estimulando a necessidade de resumir a informação a partir de medidas de posição e de dispersão, tais como moda e amplitude, que auxiliam na descrição das distribuições.
+\item Comparar distribuições empíricas de dados, considerando a necessidade de resumir a informação a partir de medidas de posição e de dispersão, tais como moda e amplitude, que auxiliam na descrição das distribuições.
 
 \end{itemize}
 }{1}{2}
@@ -312,10 +427,9 @@ Para o item d) é necessário perceber que os intervalos assinalados no eixo hor
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Fornecedor & Valor Mínimo & Valor Máximo \\
+\tcolor{Fornecedor} & \tcolor{Valor Mínimo} & \tcolor{Valor Máximo} \\
 \hline
 A & $14{,}42$ & $14{,}58$ \\
 \hline
@@ -325,10 +439,10 @@ C & $14{,}58$ & $15{,}60$ \\
 \hline
 D & $14{,}56$ & $14{,}12$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
-A reflexão tem o intuito de provocar um debate sobre estratégias de amostragem e representatividade das amostras, mesmo sem formalizar tais conceitos. No último item, observe que não é para resolver o problema proposto e sim, pensar em situações semelhantes que levariam a uma análise similar à análise feita nessa atividade, como por exemplo, estudar a vida de baterias de diferentes marcas, ou de uma mesma marca, porém fabricada em países diferentes, etc.
+A reflexão tem o intuito de provocar um debate sobre estratégias de amostragem e representatividade das amostras, mesmo sem formalizar tais conceitos. No último item, observe que não é para resolver o problema proposto e sim, pensar em situações semelhantes que levariam a uma análise similar à análise feita nessa atividade, como por exemplo, estudar a vida de baterias de diferentes marcas, ou de uma mesma marca, porém fabricada em países diferentes etc.
 }{1}{2}
 \end{sugestions}
 \begin{answer}{Escolha do melhor fornecedor - Tomada de decisão}
@@ -345,10 +459,9 @@ A reflexão tem o intuito de provocar um debate sobre estratégias de amostragem
 
 \item \adjustbox{valign=t}
 {
-  \begin{tabu} to \textwidth{|c|c|c|}
+  \begin{tabular}{|c|c|c|}
   \hline
-  \thead
-  Fornecedor & Valor Mínimo & Valor Máximo \\
+  \tcolor{Fornecedor} & \tcolor{Valor Mínimo} & \tcolor{Valor Máximo} \\
   \hline
   A & $14{,}42$ & $14{,}58$ \\
   \hline
@@ -358,7 +471,7 @@ A reflexão tem o intuito de provocar um debate sobre estratégias de amostragem
   \hline
   D & $14{,}56$ & $14{,}12$ \\
   \hline
-  \end{tabu}
+  \end{tabular}
 }
 
 \item Menor amplitude: fornecedor A e maior amplitude: fornecedor C
@@ -390,7 +503,7 @@ A reflexão tem o intuito de provocar um debate sobre estratégias de amostragem
 {
 O objetivo principal dessa atividade é mostrar situações distintas nas quais ao comparar duas médias diferentes (resultantes de amostras), não é possível afirmar que na população, os parâmetros correspondentes sejam diferentes. Por exemplo, situações nas quais apesar de as médias amostrais serem diferentes, não podemos rejeitar a hipótese de que as médias populacionais são iguais, devido à dispersão resultante da amostra.
 
-As respostas possíveis a serem relatadas no campo para pesquisar devem estar contidas nos campos sobre observações referentes a reações adversas, interações medicamentosas, etc. Em geral, as bulas sempre relatam situações que envolvem a observação de dados nesses casos e, algumas, apresentam a frequência na qual essas interações ou reações ocorrem. No entanto, pode ocorrer que uma particular bula não contenha informações do tipo solicitado.
+As respostas possíveis a serem relatadas no campo para pesquisar devem estar contidas nos campos sobre observações referentes a reações adversas, interações medicamentosas etc. Em geral, as bulas sempre relatam situações que envolvem a observação de dados nesses casos e, algumas, apresentam a frequência na qual essas interações ou reações ocorrem. No entanto, pode ocorrer que uma particular bula não contenha informações do tipo solicitado.
 }{1}{2}
 \end{sugestions}
 \begin{answer}{Comparação de medicamentos}
@@ -499,11 +612,11 @@ As respostas possíveis a serem relatadas no campo para pesquisar devem estar co
 \begin{sugestions}{Pesquisa sobre a prática de esportes e atividade física}
 {
 \begin{itemize}
-\item No item \titem{a)}, espera-se que sejam indicadas algumas entre as seguintes variáveis: idade, sexo, educação, trabalho, rendimento, se pratica ou não atividade física, modalidade da atividade para quem pratica, motivação para a prática de atividade física, local da prática, frequência da prática, duração da atividade, participação em competições, etc.
+\item No item \titem{a)}, espera-se que sejam indicadas algumas entre as seguintes variáveis: idade, sexo, educação, trabalho, rendimento, se pratica ou não atividade física, modalidade da atividade para quem pratica, motivação para a prática de atividade física, local da prática, frequência da prática, duração da atividade, participação em competições etc.
 
-\item No item \titem{b)} deve-se informar as variáveis que assumem atributos (respostas não-numéricas) tais como sexo, prática de atividade física (sim ou não), modalidade da atividade física praticada, etc.
+\item No item \titem{b)} deve-se informar as variáveis que assumem atributos (respostas não-numéricas) tais como sexo, prática de atividade física (sim ou não), modalidade da atividade física praticada etc.
 
-\item No item \titem{c)} deve-se informar as variáveis que assumem valores numéricos tais como idade, rendimento, duração da atividade física, etc.
+\item No item \titem{c)} deve-se informar as variáveis que assumem valores numéricos tais como idade, rendimento, duração da atividade física etc.
 \end{itemize}
 }{1}{1}
 \end{sugestions}
@@ -523,7 +636,7 @@ As respostas possíveis a serem relatadas no campo para pesquisar devem estar co
 \begin{objectives}{Análise de Infográficos}
 {
 \begin{itemize}
-\item Análise de infográficos. Mais especificamente, analisar infográficos construídos pelo IBGE com os resultados da pesquisa PNAD/2015 referente ao suplemento especial de Prática de Atividades Físicas.
+\item Análisar infográficos. Mais especificamente, analisar infográficos construídos pelo IBGE com os resultados da pesquisa PNAD/2015 referente ao suplemento especial de Prática de Atividades Físicas.
 
 \item Explorar possíveis associações sobre a prática de atividades físicas com outras variáveis envolvidas na pesquisa, tais como sexo, nível de instrução e rendimento.
 \end{itemize}
@@ -578,7 +691,7 @@ Na análise do infográfico 4, é importante destacar que foram usados dois tipo
 
 \item Modalidade de atividade física praticada.
 
-\item Não-numéricas: futebol, natação, etc.
+\item Não-numéricas: futebol, natação etc.
 
 \item Futebol
 
@@ -596,9 +709,22 @@ Na análise do infográfico 4, é importante destacar que foram usados dois tipo
 }{1}
 \end{answer}
 
-\explore{a natureza da Estatística}
+\explore{A Natureza da Estatística}
 \label{est1-exp-1}
 Vivemos cercados de incertezas. A todo momento somos bombardeados por informações sobre pesquisas científicas comprovando (estatisticamente) que tal substância causa uma patologia, ou sobre pesquisas de opinião, índices de pobreza, características sobre o envelhecimento da população e outros temas de natureza incerta. Num mundo assim, é importante ter espírito crítico para informações sujeitas à incerteza a fim de poder interpretá-las e, quando necessário, poder escolher, entre diferentes opções, aquela que parece melhor diante da incerteza. Nesse sentido, a Estatística é uma disciplina fundamental para todos os estudantes e, certamente, com grande responsabilidade para a formação crítica do cidadão, pois ela é usada nas mais variadas áreas do conhecimento tais como: Medicina, Economia, Política, Direito, Psicologia, Engenharia, Educação, entre outras.
+
+Mas afinal o que é Estatística?
+
+%\begin{description}
+%\item[{Estatística\index{Estatística|textbf}}] \leavevmode\phantomsection\label{est1-def-1}
+%Arte e ciência de coletar, analisar, apresentar e interpretar dados, para que se tomem decisões sob incerteza.
+%\end{description}
+
+\begin{observation}{Estatística}
+
+Arte e ciência de coletar, analisar, apresentar e interpretar dados, para que se tomem decisões sob incerteza.
+
+\end{observation}
 
 \begin{reflection}
 
@@ -626,17 +752,14 @@ Se lançarmos 100 vezes essa mesma moeda e obtivermos 8 caras, teremos mais evid
 
 \end{reflection}
 
-Mas afinal o que é Estatística?
 
-\begin{description}
-\item[{Estatística\index{Estatística|textbf}}] \leavevmode\phantomsection\label{est1-def-1}
-Arte e ciência de coletar, analisar, apresentar e interpretar dados, para que se tomem decisões sob incerteza.
-\end{description}
+
+
 
 \begin{task}{Escolha do melhor fornecedor - Tomada de decisão}
 \phantomsection\label{est1-ativ-1}
 
-\textit{Controle de Qualidade na Produção de Parafusos (Inspirada em \citealt{rossman1998}.)}
+\textit{Controle de Qualidade na Produção de Parafusos (Inspirada em Rossman e Chance (1998).)} \citealt{rossman1998}
 
 
 Uma indústria precisa comprar parafusos de diâmetro $15$ mm cuja variação aceitável é $15{,}0$ mm “mais ou menos”{}$0,2$ mm. Há quatro empresas, A, B, C e D, fornecedoras desses parafusos, que são vendidos em caixas com 60 unidades. Para decidir de qual fornecedor passará a comprar os parafusos, a empresa resolveu comprar e analisar uma caixa de cada um dos fornecedores.  Os diâmetros das peças foram medidos com instrumento de alta precisão e os valores obtidos estão representados nos gráficos a seguir, em que cada círculo representa um parafuso posicionado sobre a abscissa correspondente à medida do seu diâmetro, medido em precisão de $0{,}02$ mm.
@@ -731,7 +854,7 @@ Uma indústria precisa comprar parafusos de diâmetro $15$ mm cuja variação ac
 \end{scope}
 \end{tikzpicture}
 
-\caption{Diâmetro das peças dos fornecedores}
+\caption{Diâmetro das peças dos fornecedores (Fonte: dados fictícios)}
 \label{est1-fig-1}
 \end{figure}
 
@@ -792,17 +915,16 @@ Segundo o dicionário Aurélio, dispersão significa (1) ato ou efeito de disper
 \phantomsection\label{est1-ativ-2}
 \begin{task}{ Comparação de medicamentos}
 
-Deseja-se comparar três medicamentos, X, Y e Z, no tratamento da dor de cabeça. Para isso 60 pacientes com perfis similares foram separados aleatoriamente em três grupos de 20 cada. Para cada grupo,  será ministrado um dos medicamentos e observado o tempo de cura da dor de cabeça (em minutos). No quadro a seguir estão dispostos os dados obtidos.
+Deseja-se comparar três medicamentos, X, Y e Z, no tratamento da dor de cabeça. Para isso 60 pacientes com perfis similares foram separados aleatoriamente em três grupos de 20 cada. Para cada grupo,  será ministrado um dos medicamentos e observado o tempo de cura da dor de cabeça (em minutos). No quadro a seguir estão dispostos os dados obtidos (Fonte: dados fictícios).
 \phantomsection\label{\detokenize{PE103-0:tabela-medicamentos}}
 
 
     \begin{table}[H]
         \setlength\tabcolsep{2.5pt}
         \centering
-        \begin{tabu} to \linewidth {|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
             \hline
-            \thead
-            {{medicamentos}}  & \multicolumn{20}{c|}{{tempo em minutos}} & {soma} \\
+            \tcolor{Medicamentos}  & \tmcol{20}{c|}{{tempo em minutos}} & \tcolor{Soma} \\
             \hline
             X & 7 & 8 & 8 & 9 & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 & 11 & 11 & 11 & 11 & 12 & 12 & 13 & 200 \\
             \hline
@@ -810,7 +932,7 @@ Deseja-se comparar três medicamentos, X, Y e Z, no tratamento da dor de cabeça
             \hline
             Z & 11 & 11 & 11 & 11 & 11 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 12 & 13 & 13 & 13 & 13 & 13 & 240 \\
             \hline
-        \end{tabu}
+        \end{tabular}
     \end{table}
 \begin{enumerate}
 \item {} 
@@ -870,7 +992,7 @@ Outras informações levantadas nessa pesquisa foram: motivação para a prátic
 Também foram levantadas informações sobre as pessoas que responderam que não praticavam atividade física. Perguntou-se o motivo de não o fazerem e se haviam praticado anteriormente, caso em que se perguntou a modalidade praticada, a idade em que parou de praticar e a causa da interrupção.
 
 \item {} 
-Além dessas informações, a pesquisa investigou também a avaliação da população sobre a opção de o poder público investir no desenvolvimento de atividades físicas e esportivas ou em outra área (saúde, educação, etc.) na vizinhança de seu domicílio.
+Além dessas informações, a pesquisa investigou também a avaliação da população sobre a opção de o poder público investir no desenvolvimento de atividades físicas e esportivas ou em outra área (saúde, educação etc.) na vizinhança de seu domicílio.
 
 \end{itemize}
 \begin{enumerate}
@@ -887,7 +1009,7 @@ Das variáveis citadas no item a), quais delas apresentam respostas numéricas?
 
 Cada uma das unidades investigadas em um estudo estatístico é denominada um \index{elemento}elemento.  Assim, cada parafuso investigado é um elemento na atividade "Escolha do fornecedor"; cada paciente observado é um elemento na atividade "Comparação de medicamentos"; e cada domicílio e seus residentes são elementos na atividade da PNAD.
 
-Cada característica observada de um elemento é uma \index{variável}variável estatística. Assim, a medida do diâmetro do parafuso é uma variável na atividade "Escolha do fornecedor", o tempo de cura da dor de cabeça é uma variável na atividade "Comparação de medicamentos" e, na atividade da PNAD, estão presentes várias variáveis estatísticas de interesse do domicílio e de seus residentes tais como local, número de cômodos, número de residentes; sexo, idade e rendimento dos residentes, etc.
+Cada característica observada de um elemento é uma \index{variável}variável estatística. Assim, a medida do diâmetro do parafuso é uma variável na atividade "Escolha do fornecedor", o tempo de cura da dor de cabeça é uma variável na atividade "Comparação de medicamentos" e, na atividade da PNAD, estão presentes várias variáveis estatísticas de interesse do domicílio e de seus residentes tais como local, número de cômodos, número de residentes; sexo, idade e rendimento dos residentes etc.
 \end{task}
 
 \phantomsection\label{est1-ativ-4}
@@ -895,7 +1017,7 @@ Cada característica observada de um elemento é uma \index{variável}variável 
 
 A seguir apresentaremos quatro infográficos (figuras \ref{est1-fig-2}, \ref{est1-fig-3}, \ref{est1-fig-4}, \ref{est1-fig-5}), produzidos pelo IBGE (\href{https://vamoscontar.ibge.gov.br/atividades/ensino-medio/9801-pesquisando-a-pratica-de-esportes-e-atividades-fisicas-no-brasil.html}{vamoscontar.ibge.gov.br}) usando os dados do Suplemento Prática de Esporte e Atividade Física da PNAD 2015.
 
-Um \index{infográfico}infográfico é uma apresentação de informações integradas em textos sintéticos com dados numéricos e elementos gráficos e visuais tais como fotografias, desenhos, diagramas estatísticos, gráficos, etc.
+Um \index{infográfico}infográfico é uma apresentação de informações integradas em textos sintéticos com dados numéricos e elementos gráficos e visuais tais como fotografias, desenhos, diagramas estatísticos, gráficos etc.
 
 \begin{figure}[H]
 \centering
@@ -903,9 +1025,7 @@ Um \index{infográfico}infográfico é uma apresentação de informações integ
 
 \noindent\includegraphics[width=250bp]{PNAD_2015_Esportes_01quem2.png}
 \caption{PNAD - Infográfico 1}
-\label{est1-fig-2}\begin{tikzpicture}
-
-\end{tikzpicture}
+\label{est1-fig-2}
 \end{figure}
 
 \begin{figure}[H]
@@ -933,6 +1053,8 @@ Um \index{infográfico}infográfico é uma apresentação de informações integ
 \caption{PNAD - Infográfico 4}
 \label{est1-fig-5}
 \end{figure}
+
+Fonte: Pesquisa Nacional por Amostra de Domicílios 2015. Centro de Documentação e Disseminação de Informações (CDDI). IBGE 
 
 \begin{enumerate}
 \item {} 
@@ -985,10 +1107,10 @@ Podemos afirmar que $57{,}8\%$ das pessoas de 15 anos ou mais defendem que o pod
 
 
 
-\arrange{A natureza da estatística}
+\arrange{A Natureza da Estatística}
 \label{est1-org-1}
 
-\begin{example}{Opinião dos estudantes sobre lanches na cantina}
+\begin{example}{Opinião dos estudantes sobre lanches na cantina (1)}
 
 Suponha que deseja-se investigar a opinião dos estudantes de um colégio quanto à modificação da lista de produtos vendidos na cantina para outros mais saudáveis, trocando refrigerantes por sucos naturais entre outros. Para isso, a direção da escola irá entrevistar cinco alunos sorteados de cada uma de suas 40 turmas.
 
@@ -1000,14 +1122,14 @@ Suponha que deseja-se investigar a opinião dos estudantes de um colégio quanto
 
 Em geral, a palavra população representa um conjunto de habitantes de um determinado lugar. No entanto, em Estatística, \index{população}população tem um sentido mais amplo e pode ser definida como o conjunto de todos os elementos com pelo menos uma característica em comum. Observe que é exatamente essa característica em comum que vai definir o universo (população) de uma pesquisa.
 
-Assim, em Estatística, a população não precisa ser um conjunto de pessoas, pode ser o conjunto de parafusos fabricados por uma indústria, o conjunto de animais de certa espécie que vivem em uma região, todos os estudantes universitários de um país, etc.
+Assim, em Estatística, a população não precisa ser um conjunto de pessoas, pode ser o conjunto de parafusos fabricados por uma indústria, o conjunto de animais de certa espécie que vivem em uma região, todos os estudantes universitários de um país etc.
 \begin{description}
 \item[Amostra]\leavevmode\phantomsection\label{est1-def-4} É um subconjunto não-vazio da população.
 \end{description}
 
 Cada uma das unidades investigadas em um estudo estatístico é denominada um elemento.  Assim, cada parafuso investigado é um elemento na atividade "Escolha do fornecedor"; cada paciente observado é um elemento na atividade "Comparação de medicamentos"; e cada domicílio e seus residentes são elementos na atividade da PNAD.
 
-Cada característica observada de um elemento é uma \index{variável}variável estatística. Assim, a medida do diâmetro do parafuso é uma variável na atividade "Escolha do fornecedor", o tempo de cura da dor de cabeça é uma variável na atividade "Comparação de medicamentos" e, na atividade da PNAD, estão presentes várias variáveis estatísticas de interesse do domicílio e de seus residentes tais como local, número de cômodos, número de residentes; sexo, idade e rendimento dos residentes, etc.
+Cada característica observada de um elemento é uma \index{variável}variável estatística. Assim, a medida do diâmetro do parafuso é uma variável na atividade "Escolha do fornecedor", o tempo de cura da dor de cabeça é uma variável na atividade "Comparação de medicamentos" e, na atividade da PNAD, estão presentes várias variáveis estatísticas de interesse do domicílio e de seus residentes tais como local, número de cômodos, número de residentes; sexo, idade e rendimento dos residentes etc.
 
 \begin{description}
 \item[{Parâmetro\index{Parâmetro|textbf}}] \leavevmode\phantomsection\label{est1-def-5} Característica numérica da população.
@@ -1097,7 +1219,7 @@ Uma variável estatística é qualitativa se as possíveis respostas para ela s�
 
 \begin{description}
 \item[{Variável qualitativa nominal\index{Variável qualitativa nominal|textbf}}] \leavevmode\phantomsection\label{est1-def-8}
-Uma variável qualitativa é nominal quando não existe nenhuma ordenação natural das respostas associadas à variável. Exemplos de variáveis nominais: bairro de residência, tipo sanguíneo, modalidade de atividade física que pratica, etc.
+Uma variável qualitativa é nominal quando não existe nenhuma ordenação natural das respostas associadas à variável. Exemplos de variáveis nominais: bairro de residência, tipo sanguíneo, modalidade de atividade física que pratica etc.
 \end{description}
 
 \begin{description}
@@ -1114,18 +1236,21 @@ Uma variável quantitativa é classificada em discreta ou contínua.
 
 \begin{description}
 \item[{Variável quantitativa discreta\index{Variável quantitativa discreta|textbf}}] \leavevmode\phantomsection\label{est1-def-11}
-As variáveis discretas resultam de uma contagem ou são variáveis cuja quantidade de valores possíveis é finita. Por exemplo, o número de atendimentos em um Pronto-Socorro nos finais de semana, o número de erros de impressão na página de um livro, número de irmãos, etc.
+As variáveis discretas resultam de uma contagem ou são variáveis cuja quantidade de valores possíveis é finita. Por exemplo, o número de atendimentos em um Pronto-Socorro nos finais de semana, o número de erros de impressão na página de um livro, número de irmãos etc.
 
 \end{description}
 \begin{description}
 \item[{Variável quantitativa contínua\index{Variável quantitativa contínua|textbf}}] \leavevmode\phantomsection\label{est1-def-12}
-As variáveis quantitativas contínuas em geral resultam de uma medição. Por exemplo, altura, peso, temperatura, etc.
+As variáveis quantitativas contínuas em geral resultam de uma medição. Por exemplo, altura, peso, temperatura etc.
 \end{description}
 
 
-\begin{observation}{}
-Na análise dos infográficos vimos que uma variável quantitativa pode ser tratada como qualitativa, por exemplo, a idade trabalhada em faixas etárias torna-se uma variável qualitativa ordinal. No entanto, se consideramos a idade em anos completos temos uma variável quantitativa. Por outro lado, também podemos transformar uma variável qualitativa em quantitativa. Considere a variável “prática de atividades físicas”{} que tem como respostas “Sim”{} ou “Não”. Esse tipo de variável com apenas duas respostas é chamado variável binária e tem uma representação numérica natural. Podemos atribuir o número 1 para a resposta “Sim”{} e o número 0 para a resposta “Não”{}. Essa estratégia permite somar todas as respostas. Observe que a soma representará o número de pessoas na amostra que praticam atividade física e a “média”{} representará a proporção de pessoas na amostra que praticam atividade física. Lembre-se o tratamento dos dados está diretamente relacionado a sua classificação. Os gráficos para representar distribuições de frequências de dados são vinculados ao tipo de dado. Para dados qualitativos, usa-se em geral os gráficos de barras e os gráficos de setores. Para dados quantitativos, usa-se em geral histogramas, ramo-e-folhas e boxplots.
+\begin{observation}
+Na análise dos infográficos vimos que uma variável quantitativa pode ser tratada como qualitativa: a idade trabalhada em faixas etárias torna-se uma variável qualitativa ordinal. No entanto, se consideramos a idade em anos completos temos uma variável quantitativa. Por outro lado, também podemos transformar uma variável qualitativa em quantitativa. Considere a variável ``prática de atividades físicas'' que tem como respostas ``Sim'' ou ``Não''. Esse tipo de variável com apenas duas respostas é chamado variável binária e tem uma representação numérica natural. Podemos atribuir o número 1 para a resposta ``Sim'' e o número 0 para a resposta ``Não''. Essa codificação permite somar todas as respostas. A soma representará o número de pessoas na amostra que praticam atividade física e, a ``média'', representará a proporção de pessoas na amostra que praticam atividade física. Mas, deve-se ter consciência de que quando usamos números como códigos para representar variáveis qualitativas, em geral, não será possível realizar as quatro operações, pois o resultado não terá um significado. 
 \end{observation}
+
+\begin{knowledge} A escolha do gráfico para representar distribuições de frequências observadas das variáveis estudadas está associada à classificação da variável. Para variáveis qualitativas, usa-se em geral os gráficos de barras e os gráficos de setores. Para variáveis quantitativas, usa-se em geral histogramas, ramo-e-folhas e boxplots. 
+\end{knowledge}
 
 \subsection{Tabelas de frequências e gráficos para variáveis qualitativas}
 
@@ -1139,10 +1264,9 @@ Numa turma de um colégio foram observados os tipos sanguíneos de seus 40 aluno
 \centering \setlength\tabcolsep{2.5pt}
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\thead
-tipo sanguíneo  & frequência absoluta  & frequência relativa  &  porcentagem (\%) \\
+\tcolor{Tipo Sanguíneo}  & \tcolor{Frequência Absoluta}  & \tcolor{Frequência Relativa}  &  \tcolor{Porcentagem (\%)} \\
 \hline
 O & 18 & $0{,}45$ & $45$ \\
 \hline
@@ -1154,10 +1278,10 @@ B & 4 & $0{,}10$ & $10$ \\
 \hline
 total & 0 & $1{,}00$ & $100$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
-A \textbf{frequência absoluta} de cada resposta da variável qualitativa representa o número de observações dessa resposta. Assim, para a variável tipo sanguíneo e o conjunto de alunos dessa turma, as frequências absolutas dos tipos “O”, “A”, “AB”{} e “B”{} são, respectivamente, 18, 12, 6 e 4. Ou seja, ao todo observaram-se 18 alunos com sangue tipo “O”, 12 alunos com sangue tipo “A”, 6 alunos com sangue tipo “AB”{} e 4 alunos com sangue tipo “B”.
+A \textbf{frequência absoluta} de cada resposta da variável qualitativa representa o número de observações dessa resposta. Assim, para a variável tipo sanguíneo e o conjunto de alunos dessa turma, as frequências absolutas dos tipos “O”, “A”, “AB” e “B” são, respectivamente, 18, 12, 6 e 4. Ou seja, ao todo observaram-se 18 alunos com sangue tipo “O”, 12 alunos com sangue tipo “A”, 6 alunos com sangue tipo “AB” e 4 alunos com sangue tipo “B”.
 
 A \textbf{frequência relativa} de cada resposta da variável qualitativa representa o quociente da frequência absoluta da resposta sobre o número total de observações. Observe que a frequência relativa sempre será um número entre $0$ e $1$ e que a soma das frequências relativas será sempre igual a $1$. Veja na tabela desse exemplo.
 
@@ -1227,7 +1351,7 @@ Suponha o exemplo com os dados de tipos sanguíneos dos 40 alunos de uma turma. 
 Distribuições de frequências de tipo sanguíneo
 \vspace{2em}
 
-\begin{tikzpicture}[scale=.14]
+\begin{tikzpicture}[scale=.105]
 
   \draw (0,0) -- (0,60);
   \foreach \x in {0,10,...,60}
@@ -1244,9 +1368,9 @@ Distribuições de frequências de tipo sanguíneo
 \foreach \x/\y in {3.75/A,7.5+3.75/AB,15+3.75/B,22.5+3.75/O} \node at (\x+.1,-2) {\y};
 
 \node [below] at (15,-5) {(40 observações)};
-\node [above, rotate=90] at (-5,30) {porcentagem};
-\end{tikzpicture}\hspace{1em}
-\begin{tikzpicture}[scale=.14]
+\node [above, rotate=90] at (-7.5,30) {porcentagem};
+\end{tikzpicture}\hspace{2em}
+\begin{tikzpicture}[scale=.105]
 
   \draw (0,0) -- (0,60);
   \foreach \x in {0,10,...,60}
@@ -1263,7 +1387,7 @@ Distribuições de frequências de tipo sanguíneo
 \foreach \x/\y in {3.75/A,7.5+3.75/AB,15+3.75/B,22.5+3.75/O} \node at (\x+.1,-2) {\y};
 
 \node [below] at (15,-5) {(120 observações)};
-\node [above, rotate=90] at (-5,30) {porcentagem};
+\node [above, rotate=90] at (-7.5,30) {porcentagem};
 \end{tikzpicture}
 
 \caption{Gráficos de barras da distribuição na escala da frequência absoluta}
@@ -1277,7 +1401,7 @@ Porém, os gráficos construídos, usando a escala da porcentagem, não parecem 
 Distribuições de frequências de tipo sanguíneo
 \vspace{2em}
 
-\begin{tikzpicture}[scale=.14]
+\begin{tikzpicture}[scale=.105]
 
   \draw (0,0) -- (0,50);
   \foreach \x in {0,10,...,50}
@@ -1294,9 +1418,9 @@ Distribuições de frequências de tipo sanguíneo
 \foreach \x/\y in {3.75/A,7.5+3.75/AB,15+3.75/B,22.5+3.75/O} \node at (\x+.1,-2) {\y};
 
 \node [below] at (15,-5) {(40 observações)};
-\node [above, rotate=90] at (-5,30) {frequência absoluta};
-\end{tikzpicture}\hspace{1em}
-\begin{tikzpicture}[scale=.14]
+\node [above, rotate=90] at (-7.5,25) {frequência absoluta};
+\end{tikzpicture}\hspace{2em}
+\begin{tikzpicture}[scale=.105]
 
   \draw (0,0) -- (0,50);
   \foreach \x in {0,10,...,50}
@@ -1313,7 +1437,7 @@ Distribuições de frequências de tipo sanguíneo
 \foreach \x/\y in {3.75/A,7.5+3.75/AB,15+3.75/B,22.5+3.75/O} \node at (\x+.1,-2) {\y};
 
 \node [below] at (15,-5) {(120 observações)};
-\node [above, rotate=90] at (-5,30) {frequência absoluta};
+\node [above, rotate=90] at (-7.5,25) {frequência absoluta};
 \end{tikzpicture}
 
 \caption{Gráficos de barras na escala da porcentagem}
@@ -1321,43 +1445,56 @@ Distribuições de frequências de tipo sanguíneo
 \end{figure}
 
 
-Comparando os dois, percebem-se apenas pequenas diferenças quanto às porcentagens dos sangues tipo “AB”{} e tipo “B”, comparando os dois gráficos.
+Comparando os dois gráficos, percebem-se apenas pequenas diferenças quanto às porcentagens dos sangues tipo “AB” e tipo “B”.
 
 \end{example}
 
 Quando estamos trabalhando com variáveis qualitativas usamos a escala da frequência (absoluta, relativa ou porcentagem de cada resposta) na construção de gráficos para representar a distribuição de frequências das respostas dadas à variável sob investigação. As representações gráficas mais comuns são gráficos de barras ou colunas e gráficos de setores. Para comparações da mesma variável em grupos diferentes é comum usar o gráfico de barras múltiplas com frequências relativas ou porcentagens.
 
-\begin{observation}{}
+\begin{observation}
 
 Como escolher entre o gráfico de setores ou o gráfico de barras para representar a distribuição de frequências de uma variável qualitativa?
 
-Se o número de respostas diferentes é grande, maior que 4, ou se as diferenças nas frequências das respostas são pequenas, por exemplo uma tem porcentagem $22\%$ e a outra tem porcentagem $25\%$, o gráfico de setores não será adequado, pois pequenas diferenças de ângulos não são perceptíveis, enquanto que com o gráfico de barras é fácil perceber pequenas diferenças.
+Se o número de respostas diferentes é grande, maior que 4, ou se as diferenças nas frequências das respostas são pequenas, por exemplo uma tem porcentagem $20\%$ e a outra tem porcentagem $23\%$, o gráfico de setores não será adequado, pois pequenas diferenças de ângulos não são perceptíveis, enquanto que com o gráfico de barras é fácil perceber pequenas diferenças.
 
-Também, quando deseja-se fazer comparações múltiplas o gráfico de setores não é adequado. Observe que todos infográficos da atividade “Análise de infográficos”{} para comparar diferentes grupos quanto à prática de atividades físicas são gráficos de barras múltiplas.
+Também, quando deseja-se fazer comparações múltiplas o gráfico de setores não é adequado. Observe que todos infográficos da atividade ``Análise de infográficos'' para comparar diferentes grupos quanto à prática de atividades físicas são gráficos de barras múltiplas.
 
 \end{observation}
+
+
 
 \clearpage
 \def\currentcolor{session2} 
 \begin{objectives}{Prática de atividade física na turma}
 {
 \begin{itemize}
-\item Conduzir uma coleta de dados sobre a turma envolvendo as informações do suplemento “Prática de Esporte e Atividade Física” para comparar os resultados dessa “amostra” com os da PNAD/2015.
+\item Comparar os resultados do suplemento especial da PNAD 2015 sobre prática de atividades físicas, realizando uma pesquisa na turma, incluindo algumas informações desse suplemento.
 
 \end{itemize}
 }{1}{2}
 \end{objectives}
-\marginpar{\vspace{-2em}}
+
 \begin{sugestions}{Prática de atividade física na turma}
 {
 \begin{itemize}
 \item Preparar uma tabela a ser preenchida pela turma com as informações: sexo, idade, prática ou não de atividade física em seu tempo livre, e a modalidade, de maneira a viabilizar a comparação dos dados obtidos com os resultados da PNAD/2015. A tabela poderá conter outras variáveis se forem julgadas de interesse pela turma como por exemplo, local da prática, duração da prática entre outras. Mas, para efeito de comparação com os infográficos, sexo e idade serão as variáveis necessárias nesse levantamento. Comente com os alunos que essa será uma amostra de conveniência, pois o interesse é estudar o perfil da turma quanto à prática de atividades físicas e por isso, as respostas da turma podem não ser similares às da pesquisa.
 
+\item Um  padrão de itens a serem investigados é apresentado na figura a seguir, lembrando a necessidade de incluir a identificação de turma, caso a pesquisa seja realizada em mais de uma turma.
+
+\notasfig{\begin{figure}[H]
+\centering
+%\capstart
+
+\noindent\includegraphics[width=250bp]{pesquisa_sugestao.png}
+\caption{Sugestão de questionário}
+\label{est1-fig}
+\end{figure}}
+
 \item Com base nas respostas obtidas, resumir a informação em tabelas de frequências, contar quantas respostas foram sim, calcular a porcentagem da turma que pratica atividade física e comparar com o resultado geral das pessoas de 15 anos ou mais, o percentual correspondente a essa faixa etária e o percentual correspondente a esse grau de instrução. Construir uma tabela de frequências com as modalidades esportivas incluindo as categorias apresentadas no infográfico do IBGE. Construir gráficos para representar as distribuições de frequências das variáveis investigadas nessa pesquisa. Construir gráficos de barras múltiplas, isto é, gráficos de barras separados por grupos diferentes, como por exemplo, sexo.
 \end{itemize}
 }{1}{2}
 \end{sugestions}
-\marginpar{\vspace{-2em}}
+
 \begin{objectives}{Classificação de variáveis}
 {
 \begin{itemize}
@@ -1387,7 +1524,6 @@ Também, quando deseja-se fazer comparações múltiplas o gráfico de setores n
 \end{enumerate}
 }{0}
 \end{answer}
-\clearmargin
 \begin{objectives}{Construção de gráficos para variáveis qualitativas}
 {
 \begin{itemize}
@@ -1397,7 +1533,7 @@ Também, quando deseja-se fazer comparações múltiplas o gráfico de setores n
 \end{objectives}
 \begin{sugestions}{Construção de gráficos para variáveis qualitativas}
 {
-Embora os gráficos solicitados nesta atividade sejam simples, recomenda-se sugerir aos alunos usar algum recurso tecnológico para a construção dos mesmos, tais como, uma planilha ou o GeoGebra.
+Apesar de ser possível construir os gráficos solicitados nesta atividade, usando régua, transferidor e compasso, recomenda-se sugerir aos alunos usar algum recurso tecnológico para a construção dos mesmos, tais como GeoGebra ou planilha eletrônica (LibreOffice).
 }{1}{1}
 \end{sugestions}
 \begin{answer}{Construção de gráficos para variáveis qualitativas}
@@ -1444,10 +1580,11 @@ Embora os gráficos solicitados nesta atividade sejam simples, recomenda-se suge
 \end{figure}
 }{0}
 \end{answer}
+
 \begin{objectives}{Análise de gráfico}
 {
 \begin{itemize}
-\item Mostrar que podem existir diversas formas de usar barras para representar algum tipo de dado, mas que nem todos os gráficos que usam barras são gráficos de barras no sentido da representação de uma distribuição de frequências.
+\item Reconhecer que podem existir diversas formas de usar barras para representar algum tipo de dado, mas que nem todos os gráficos que usam barras são gráficos de barras no sentido da representação de uma distribuição de frequências.
 \end{itemize}
 }{1}{1}
 \end{objectives}
@@ -1501,7 +1638,9 @@ O gráfico desse exemplo é “um gráfico de barras”, mas as barras represent
 \end{answer}
 
 
-\practice{A natureza da estatística}
+\clearpage
+\def\currentcolor{session2}
+\practice{A Natureza da Estatística}
 \label{est1-prac-1}
 
 
@@ -1613,6 +1752,50 @@ Construa um gráfico diferente para representar a mesma informação, marcando n
 
 \end{task}
 
+\clearpage
+
+\begin{paginatexto}{Bloco II: Gráficos para Variáveis Quantitativas}
+
+\section*{Objetivo geral}
+
+Identificar o pensamento estatístico a partir de suas ideias fundamentais, a saber, população e amostra, parâmetro e estimador, distribuições empíricas de dados.
+
+
+\begin{habilities}{EM13MAT102}
+Analisar tabelas, gráficos e amostras de pesquisas estatísticas em relatórios divulgados por diferentes meios de comunicação, identificando, quando for o caso, inadequações que possam induzir a erros de interpretação, como escalas e amostras não apropriadas.
+
+\tcbsubtitle{EM13MAT406} Construir e interpretar tabelas e gráficos de frequências com base em dados obtidos em pesquisas por amostras estatísticas, incluindo ou não o uso de softwares que inter-relacionem estatística, geometria e álgebra.
+
+\end{habilities}
+
+A duração prevista para trabalhar esse segundo bloco é de dois tempos de aula de 50 minutos.
+
+Este bloco foi dividido em três seções: explorando, organizando e praticando que serão brevemente descritas a seguir.
+
+\begin{enumerate}
+
+\item { } Explorando: 
+
+Essa seção contém duas atividades, explorando Gráficos para Variáveis Quantitativas. A primeira atividade envolve a construção de um histograma de uma variável quantitativa contínua. A segunda atividade envolve a representação de uma série temporal, ou seja, de uma variável cujos valores são medidos ao longo do tempo.
+
+\item { } Organizando:
+
+Nessa seção, definimos os dois tipos de gráficos trabalhados nas atividades anteriores. Em seguida, discutimos a necessidade de se agrupar variáveis quantitativas contínuas em intervalos de classe, apresentando dois exemplos. O segundo exemplo, apresenta as definições de densidade de frequência relativa e densidade de frequência absoluta, fundamentais para a construção de histogramas quando os comprimentos dos intervalos de classe não são todos iguais. 
+ A seção termina com uma nota, ilustrando as diferenças entre um gráfico de barras e um histograma.
+
+
+\item { } Praticando: 
+
+Inclui duas ativiades de construção de histogramas. A primeira delas pede para considerar diferentes números de intervalos de classe. Para essa atividade é sugerido um aplicativo do GeoGebra que automatiza essas construções. O objetivo principal é perceber que a forma do histograma muda pouco quando aumentamos ou dimunuímos o número de intervalos, considerando um total de 5 a 12 intervalos. A segunda atividade trabalha com a construção de um histograma para a situação em que os intervalos de classe apresentam comprimentos diferentes, levando a necessidade de se usar a escala da densidade de frequência. 
+
+\end{enumerate}
+
+Os exercícios de número 11, 12, 17 e 19, no final desse capítulo, referem-se ao conteúdo desse bloco.
+
+\end{paginatexto}
+
+
+\clearpage
 \cleardoublepage
 \def\currentcolor{session1}
 \begin{objectives}{Construção do histograma}
@@ -1630,17 +1813,15 @@ Incluir link do arquivo desses dados em formato GeoGebra. Em alguns aplicativos,
 }{1}{1}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
+
 \begin{answer}{Construção do histograma}
 {
-\begin{enumerate}
-
+\begin{enumerate}[]
 \item \adjustbox{valign=t}
 {
-  \begin{tabu} to \linewidth {|c|c|}
+  \begin{tabular} {|c|c|}
   \hline
-  \thead 
-  Intervalo de classe & Número de observações \\
+  \tcolor{Intervalo de classe} & \tcolor{Número de observações} \\
   \hline
   ${[} 3{,}0 ; 3{,}5 {[}$ & 2 \\ 
   \hline
@@ -1662,8 +1843,10 @@ Incluir link do arquivo desses dados em formato GeoGebra. Em alguns aplicativos,
   \hline
   ${[} 7{,}5 ; 8{,}0 {[}$ & 2 \\
   \hline
-  \end{tabu}
+  \end{tabular}
 }
+
+\setlength\leftmargin{\widthof{\titem{b)} e \titem{c})}}
 \item[\titem{b)} e \titem{c})]\adjustbox{valign=t}
 {
   \begin{tikzpicture} [yscale=0.5, scale=.85]
@@ -1695,12 +1878,15 @@ Por exemplo, o quociente da área do primeiro retângulo sobre a área total é 
 \end{enumerate}
 }{1}
 \end{answer}
+
+\clearpage
+\def\currentcolor{session1}
 \begin{objectives}{Medição da temperatura ao longo do tempo}
 {
 \begin{itemize}
-\item Definir série temporal a partir de um conjunto de observações sobre uma variável quantitativa contínua variando no tempo.
+\item Identificar série temporal a partir de um conjunto de observações sobre uma variável quantitativa contínua variando no tempo.
 
-\item Trabalhar com gráficos de linha para ilustrar a evolução dos valores da variável ao longo do tempo.
+\item Elaborar gráficos de linha para ilustrar a evolução dos valores da variável ao longo do tempo.
 \end{itemize}
 }{1}{1}
 \end{objectives}
@@ -1713,11 +1899,77 @@ Respostas possíveis na reflexão proposta são: índices de inflação, preços
 Na discussão sobre sazonalidade, pedir aos alunos para trazer notícias de jornais ou revistas que contenham séries temporais. Mostrar que existem várias medições que são comparadas com as do ano anterior, por exemplo, inflação, crescimento do PIB, taxas de desemprego por trimestre, entre outras.
 }{1}{1}
 \end{sugestions}
+\clearpage
+\begin{answer}{Medição da temperatura ao longo do tempo}
+{
+\begin{enumerate} 
+\item Percebe-se temperaturas mais altas nos meses iniciais e finais do ano e, mais baixas, no meio do ano.
+\item Idem.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture} [yscale=0.5, scale=1, every node/.style={scale=1.2},xscale=.8]
+
+\foreach \y in {0,...,10}{
+   \draw [help lines,color=secundario!30] (-0.1,\y) -- (11,\y);}
+
+\foreach \x in {0,11}{
+\draw [help lines, color=secundario!30] (\x,-0.2) -- (\x,10);}
+
+\foreach \x in {1,...,11}{
+\draw [help lines, color=secundario!30] (\x,0) -- (\x,-0.2);}
+
+\node [above, scale=0.8] at (5.5,10) {Temperatura Máxima Média};
+
+\foreach \y/\z in {0/15.0,1/17.0,2/19.0,3/21.0,4/23.0,5/25.0,6/27.0,7/29.0,8/31.0,9/33.0,10/35.0} \node [left, scale=0.6] at (-0.1,\y) {\z}; 
+
+\foreach \x in {1,...,12} \node [below, scale=0.6] at (\x-1,-0.2) {\x};
+
+\foreach \x/\y/\z in {1/1991/destacado,2/1992/green!50!black,3/1993/atento,4/1994/cyan,5/1995/magenta,6/1996/yellow!90!black, 7/1997/brown,8/1998/violet,9/1999/olive,10/2000/orange}  \draw [color=\z, thick] (11.5,8.5-\x/2) -- (12,8.5-\x/2) node [right, color=black, scale=0.5] {\y};
+
+%1991
+\draw [color=destacado] (0,7.615) -- (1,8.015) -- (2,7.775) -- (3,5.575) -- (4,5.155) -- (5,2.66) -- (6,2.375) -- (7,3.405) -- (8,4.495) -- (9,5.585) -- (10,5.965) -- (11,7.8);
+
+%1992
+\draw [color=green!50!black] (0,30.43/2-7.5) -- (1,31.48/2-7.5) -- (2,30.05/2-7.5) -- (3,25.52/2-7.5) -- (4,21.44/2-7.5) -- (5,22.68/2-7.5) -- (6,16.97/2-7.5) -- (7,20.5/2-7.5) -- (8,22.15/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
+
+%1993
+\draw [color=atento] (0,31.34/2-7.5) -- (1,29.28/2-7.5) -- (2,28.22/2-7.5) -- (3,27.66/2-7.5) -- (4,23.29/2-7.5) -- (5,19.13/2-7.5) -- (6,17.97/2-7.5) -- (7,21.9/2-7.5) -- (8,20.83/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
+
+%1994
+\draw [color=cyan] (0,30.33/2-7.5) -- (1,28.85/2-7.5) -- (2,28.05/2-7.5) -- (3,25.51/2-7.5) -- (4,24.33/2-7.5) -- (5,20.09/2-7.5) -- (6,20.41/2-7.5) -- (7,21.28/2-7.5) -- (8,25.21/2-7.5) -- (9,24.6/2-7.5) -- (10,26.53/2-7.5) -- (11,32.05/2-7.5);
+
+%1995
+\draw [color=magenta] (0,30.74/2-7.5) -- (1,29.46/2-7.5) -- (2,29.12/2-7.5) -- (3,26.22/2-7.5) -- (4,21.95/2-7.5) -- (5,20.45/2-7.5) -- (6,21.6/2-7.5) -- (7,21.55/2-7.5) -- (8,22.62/2-7.5) -- (9,24.17/2-7.5) -- (10,28.93/2-7.5) -- (11,30.44/2-7.5);
+
+%1996
+\draw [color=yellow!90!black] (0,29.89/2-7.5) -- (1,29.78/2-7.5) -- (2,28.67/2-7.5) -- (3,27.02/2-7.5) -- (4,22.94/2-7.5) -- (5,17.76/2-7.5) -- (6,16.99/2-7.5) -- (7,22.59/2-7.5) -- (8,21.4/2-7.5) -- (9,25.34/2-7.5) -- (10,28.4/2-7.5) -- (11,29.87/2-7.5);
+
+%1997
+\draw [color=brown] (0,32.09/2-7.5) -- (1,29.62/2-7.5) -- (2,28.63/2-7.5) -- (3,26.56/2-7.5) -- (4,22.95/2-7.5) -- (5,19.42/2-7.5) -- (6,20.67/2-7.5) -- (7,23.06/2-7.5) -- (8,22.32/2-7.5) -- (9,23.27/2-7.5) -- (10,26.51/2-7.5) -- (11,30.28/2-7.5);
+
+%1998
+\draw [color=violet] (0,29.13/2-7.5) -- (1,28.26/2-7.5) -- (2,27.2/2-7.5) -- (3,24.03/2-7.5) -- (4,22.00/2-7.5) -- (5,19.6/2-7.5) -- (6,20.47/2-7.5) -- (7,19.77/2-7.5) -- (8,21.22/2-7.5) -- (9,25.19/2-7.5) -- (10,28.24/2-7.5) -- (11,28.91/2-7.5);
+
+%1999
+\draw [color=olive] (0,30.65/2-7.5) -- (1,29.56/2-7.5) -- (2,31.64/2-7.5) -- (3,24/2-7.5) -- (4,21.51/2-7.5) -- (5,18.87/2-7.5) -- (6,18.78/2-7.5) -- (7,21.94/2-7.5) -- (8,22.65/2-7.5) -- (9,23.07/2-7.5) -- (10,26.36/2-7.5) -- (11,29.08/2-7.5);
+
+%2000
+\draw [color=orange](0,30.63/2-7.5) -- (1,29.93/2-7.5) -- (2,27.85/2-7.5) -- (3,26.32/2-7.5) -- (4,21.78/2-7.5) -- (5,21.5/2-7.5) -- (6,17.59/2-7.5) -- (7,20.85/2-7.5) -- (8,22.25/2-7.5) -- (9,24.02/2-7.5) -- (10,26.87/2-7.5) -- (11,29.51/2-7.5);
+\end{tikzpicture}
+\label{est1-fig-12}
+\caption{Gráficos de linhas com a temperatura máxima média mensal da cidade de Porto Alegre}
+\end{figure}
+
+\item Idem ao item (b). Isso ocorre devido às estações do ano. No hemisfério sul temos temperaturas mais altas nos meses finais e iniciais do ano e temperaturas mais baixas no meio do ano.
+\end{enumerate}
+}{1}
+\end{answer}
 
 
 
-
-\explore{Estruturas de variáveis quantitativas}
+\explore{Gráficos para Variáveis Quantitativas}
 \label{est1-exp-2}
 
 \phantomsection\label{est1-ativ-9}
@@ -1737,16 +1989,15 @@ Na discussão sobre sazonalidade, pedir aos alunos para trazer notícias de jorn
 
 Os radiotelescópios são instrumentos de observação astronômica capazes de captar ondas eletromagnéticas não visíveis a olho nu: as ondas de rádio.
 
-Um arranjo de oito radiotelescópios (A, B, C, D, E, F, G e H) como  ilustrado na \hyperref[est1-fig-9]{Figura \ref{est1-fig-9}} detectou sinais cujos oito registros de tempo para cada radiotelescópio se encontram na tabela a seguir.
+Um arranjo de oito radiotelescópios (A, B, C, D, E, F, G e H) como  ilustrado na \hyperref[est1-fig-9]{Figura \ref{est1-fig-9}} detectou sinais cujos oito registros de tempo para cada radiotelescópio se encontram na tabela a seguir. (Fonte: dados fictícios)
 
 
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth {|c|c|c|c|c|c|c|c|}
+\begin{tabular} {|c|c|c|c|c|c|c|c|}
 \hline
-\thead
-A & B &  C & D &  E & F &  G &  H \\
+\tcolor{A} & \tcolor{B} &  \tcolor{C} & \tcolor{D} &  \tcolor{E} & \tcolor{F} &  \tcolor{G} &  \tcolor{H} \\
 \hline
 3,03 & 4,37 & 5,04 & 5,73 & 4,03 & 5,37 & 6,04 & 6,74 \\
 \hline
@@ -1764,7 +2015,7 @@ A & B &  C & D &  E & F &  G &  H \\
 \hline
 4,27 & 4,95 & 5,64 & 6,97 & 5,26 & 5,95 & 6,64 & 7,97 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{reflection}
@@ -1785,10 +2036,9 @@ A natureza quantitativa de uma variável contínua pode muitas vezes levar a res
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth {|c|c|}
+\begin{tabular} {|c|c|}
 \hline
-\thead 
-Intervalo de classe & Número de observações \\
+\tcolor{Intervalo de classe} & \tcolor{Número de observações} \\
 \hline
 ${[} 3{,}0 ; 3{,}5 {[}$ & \\ 
 \hline
@@ -1810,7 +2060,7 @@ ${[} 7{,}0 ; 7{,}5 {[}$ & \\
 \hline
 ${[} 7{,}5 ; 8{,}0 {[}$ & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Para visualizar o comportamento desses dados, iremos construir um gráfico chamado \index{histograma}histograma, composto por retângulos adjacentes cujas alturas representam a frequência de observações que ocorrem no intervalo correspondente. A base de cada retângulo corresponde aos limites do intervalo definido no agrupamento dos dados.
@@ -1891,7 +2141,7 @@ Dados coletados ao longo do tempo (como a informação meteorológica) são conh
 
 \begin{reflection}
 
-Forneça outros exemplos de séries temporais nas áreas de saúde, economia, finanças, educação, etc.
+Forneça outros exemplos de séries temporais nas áreas de saúde, economia, finanças, educação etc.
 \end{reflection}
 
 \justify
@@ -1900,12 +2150,11 @@ A tabela a seguir fornece a média das temperaturas máximas para cada mês nos 
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth {|c|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular} {|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{11}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Temperatura Máxima Média mensal nos anos 1991-2000 na cidade de Porto Alegre}}}} \\
+\tmcol{11}{|c|}{Temperatura Máxima Média mensal nos anos 1991-2000 na cidade de Porto Alegre} \\
 \hline
-\thead
-Mês & 1991 & 1992 & 1993 & 1994  & 1995  & 1996 & 1997 & 1998 & 1999 & 2000 \\
+\tcolor{Mês} & \tcolor{1991} & \tcolor{1992} & \tcolor{1993} & \tcolor{1994}  & \tcolor{1995}  & \tcolor{1996} & \tcolor{1997} & \tcolor{1998} & \tcolor{1999} & \tcolor{2000} \\
 \hline
 1 & 30,23 & 30,43 & 31,34 & 30,33 & 30,74 & 29,89 & 32,09 & 29,13 & 30,65 & 30,63 \\
 \hline
@@ -1931,92 +2180,94 @@ Mês & 1991 & 1992 & 1993 & 1994  & 1995  & 1996 & 1997 & 1998 & 1999 & 2000 \\
 \hline
 12 & 30,60 & 29,95 & 29,73 & 32,05 & 30,44 & 29,87 & 30,28 & 28,91 & 29,08 & 29,51 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
-\par
 
-\begin{enumerate}
-\item {} 
-Escolha dois anos diferentes e localize os pontos da tabela na grade quadriculada usando o mês como abscissa $(x)$ e a temperatura como ordenada $(y)$. Utilize cores diferentes para a série de cada ano.
+\begin{enumerate}\setlength\itemsep{2pt}
 
-\item {} 
-Una os pontos correspondentes ao mesmo ano (mesma série) de meses consecutivos com um segmento e observe o resultado. Você percebe algum comportamento similar para a  temperatura em anos diferentes?
+\item Escolha dois anos diferentes e localize os pontos da tabela na grade quadriculada usando o mês como abscissa $(x)$ e a temperatura como ordenada $(y)$. Utilize cores diferentes para a série de cada ano.
 
-\item {} 
-Compare seu gráfico com o de colegas que escolheram outros anos (ou acrescente séries de outros anos ao seu gráfico). O que você percebe com relação à temperatura nos meses iniciais, intermediários e finais do ano?  A que se deve esse comportamento da temperatura?
+\item Una os pontos correspondentes ao mesmo ano (mesma série) de meses consecutivos com um segmento e observe o resultado. Você percebe algum comportamento similar para a  temperatura em anos diferentes?
+
+\item Compare seu gráfico com o de colegas que escolheram outros anos (ou acrescente séries de outros anos ao seu gráfico). O que você percebe com relação à temperatura nos meses iniciais, intermediários e finais do ano?  A que se deve esse comportamento da temperatura?
 
 \end{enumerate}
 
 
 
-\titem{a)} e \titem{b)} Percebe-se temperaturas mais altas nos meses iniciais e finais do ano e, mais baixas, no meio do ano.
+%\titem{a)} e \titem{b)} Percebe-se temperaturas mais altas nos meses iniciais e finais do ano e, mais baixas, no meio do ano.
 
-\begin{figure}[H]
-\centering
+%\begin{figure}[H]
+%\centering
 
-\begin{tikzpicture} [yscale=0.5, scale=1.1, every node/.style={scale=1.2}]
+%\begin{tikzpicture} [yscale=0.5, scale=1, every node/.style={scale=1.2}]
 
-\foreach \y in {0,...,10}{
-   \draw [help lines,color=secundario!30] (-0.1,\y) -- (11,\y);}
+%\foreach \y in {0,...,10}{
+  % \draw [help lines,color=secundario!30] (-0.1,\y) -- (11,\y);}
 
-\foreach \x in {0,11}{
-\draw [help lines, color=secundario!30] (\x,-0.2) -- (\x,10);}
+%\foreach \x in {0,11}{
+%\draw [help lines, color=secundario!30] (\x,-0.2) -- (\x,10);}
 
-\foreach \x in {1,...,11}{
-\draw [help lines, color=secundario!30] (\x,0) -- (\x,-0.2);}
+%\foreach \x in {1,...,11}{
+%\draw [help lines, color=secundario!30] (\x,0) -- (\x,-0.2);}
 
-\node [above, scale=0.8] at (5.5,10) {Temperatura Máxima Média};
+%\node [above, scale=0.8] at (5.5,10) {Temperatura Máxima Média};
 
-\foreach \y/\z in {0/15.0,1/17.0,2/19.0,3/21.0,4/23.0,5/25.0,6/27.0,7/29.0,8/31.0,9/33.0,10/35.0} \node [left, scale=0.6] at (-0.1,\y) {\z}; 
+%\foreach \y/\z in {0/15.0,1/17.0,2/19.0,3/21.0,4/23.0,5/25.0,6/27.0,7/29.0,8/31.0,9/33.0,10/35.0} \node [left, scale=0.6] at (-0.1,\y) {\z}; 
 
-\foreach \x in {1,...,12} \node [below, scale=0.6] at (\x-1,-0.2) {\x};
+%\foreach \x in {1,...,12} \node [below, scale=0.6] at (\x-1,-0.2) {\x};
 
-\foreach \x/\y/\z in {1/1991/destacado,2/1992/green!50!black,3/1993/atento,4/1994/cyan,5/1995/magenta,6/1996/yellow!90!black, 7/1997/brown,8/1998/violet,9/1999/olive,10/2000/orange}  \draw [color=\z, thick] (11.5,8.5-\x/2) -- (12,8.5-\x/2) node [right, color=black, scale=0.5] {\y};
+%\foreach \x/\y/\z in {1/1991/destacado,2/1992/green!50!black,3/1993/atento,4/1994/cyan,5/1995/magenta,6/1996/yellow!90!black, 7/1997/brown,8/1998/violet,9/1999/olive,10/2000/orange}  \draw [color=\z, thick] (11.5,8.5-\x/2) -- (12,8.5-\x/2) node [right, color=black, scale=0.5] {\y};
 
 %1991
-\draw [color=destacado] (0,7.615) -- (1,8.015) -- (2,7.775) -- (3,5.575) -- (4,5.155) -- (5,2.66) -- (6,2.375) -- (7,3.405) -- (8,4.495) -- (9,5.585) -- (10,5.965) -- (11,7.8);
+%\draw [color=destacado] (0,7.615) -- (1,8.015) -- (2,7.775) -- (3,5.575) -- (4,5.155) -- (5,2.66) -- (6,2.375) -- (7,3.405) -- (8,4.495) -- (9,5.585) -- (10,5.965) -- (11,7.8);
 
 %1992
-\draw [color=green!50!black] (0,30.43/2-7.5) -- (1,31.48/2-7.5) -- (2,30.05/2-7.5) -- (3,25.52/2-7.5) -- (4,21.44/2-7.5) -- (5,22.68/2-7.5) -- (6,16.97/2-7.5) -- (7,20.5/2-7.5) -- (8,22.15/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
+%\draw [color=green!50!black] (0,30.43/2-7.5) -- (1,31.48/2-7.5) -- (2,30.05/2-7.5) -- (3,25.52/2-7.5) -- (4,21.44/2-7.5) -- (5,22.68/2-7.5) -- (6,16.97/2-7.5) -- (7,20.5/2-7.5) -- (8,22.15/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
 
 %1993
-\draw [color=atento] (0,31.34/2-7.5) -- (1,29.28/2-7.5) -- (2,28.22/2-7.5) -- (3,27.66/2-7.5) -- (4,23.29/2-7.5) -- (5,19.13/2-7.5) -- (6,17.97/2-7.5) -- (7,21.9/2-7.5) -- (8,20.83/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
+%\draw [color=atento] (0,31.34/2-7.5) -- (1,29.28/2-7.5) -- (2,28.22/2-7.5) -- (3,27.66/2-7.5) -- (4,23.29/2-7.5) -- (5,19.13/2-7.5) -- (6,17.97/2-7.5) -- (7,21.9/2-7.5) -- (8,20.83/2-7.5) -- (9,26.16/2-7.5) -- (10,27.16/2-7.5) -- (11,29.95/2-7.5);
 
 %1994
-\draw [color=cyan] (0,30.33/2-7.5) -- (1,28.85/2-7.5) -- (2,28.05/2-7.5) -- (3,25.51/2-7.5) -- (4,24.33/2-7.5) -- (5,20.09/2-7.5) -- (6,20.41/2-7.5) -- (7,21.28/2-7.5) -- (8,25.21/2-7.5) -- (9,24.6/2-7.5) -- (10,26.53/2-7.5) -- (11,32.05/2-7.5);
+%\draw [color=cyan] (0,30.33/2-7.5) -- (1,28.85/2-7.5) -- (2,28.05/2-7.5) -- (3,25.51/2-7.5) -- (4,24.33/2-7.5) -- (5,20.09/2-7.5) -- (6,20.41/2-7.5) -- (7,21.28/2-7.5) -- (8,25.21/2-7.5) -- (9,24.6/2-7.5) -- (10,26.53/2-7.5) -- (11,32.05/2-7.5);
 
 %1995
-\draw [color=magenta] (0,30.74/2-7.5) -- (1,29.46/2-7.5) -- (2,29.12/2-7.5) -- (3,26.22/2-7.5) -- (4,21.95/2-7.5) -- (5,20.45/2-7.5) -- (6,21.6/2-7.5) -- (7,21.55/2-7.5) -- (8,22.62/2-7.5) -- (9,24.17/2-7.5) -- (10,28.93/2-7.5) -- (11,30.44/2-7.5);
+%\draw [color=magenta] (0,30.74/2-7.5) -- (1,29.46/2-7.5) -- (2,29.12/2-7.5) -- (3,26.22/2-7.5) -- (4,21.95/2-7.5) -- (5,20.45/2-7.5) -- (6,21.6/2-7.5) -- (7,21.55/2-7.5) -- (8,22.62/2-7.5) -- (9,24.17/2-7.5) -- (10,28.93/2-7.5) -- (11,30.44/2-7.5);
 
 %1996
-\draw [color=yellow!90!black] (0,29.89/2-7.5) -- (1,29.78/2-7.5) -- (2,28.67/2-7.5) -- (3,27.02/2-7.5) -- (4,22.94/2-7.5) -- (5,17.76/2-7.5) -- (6,16.99/2-7.5) -- (7,22.59/2-7.5) -- (8,21.4/2-7.5) -- (9,25.34/2-7.5) -- (10,28.4/2-7.5) -- (11,29.87/2-7.5);
+%\draw [color=yellow!90!black] (0,29.89/2-7.5) -- (1,29.78/2-7.5) -- (2,28.67/2-7.5) -- (3,27.02/2-7.5) -- (4,22.94/2-7.5) -- (5,17.76/2-7.5) -- (6,16.99/2-7.5) -- (7,22.59/2-7.5) -- (8,21.4/2-7.5) -- (9,25.34/2-7.5) -- (10,28.4/2-7.5) -- (11,29.87/2-7.5);
 
 %1997
-\draw [color=brown] (0,32.09/2-7.5) -- (1,29.62/2-7.5) -- (2,28.63/2-7.5) -- (3,26.56/2-7.5) -- (4,22.95/2-7.5) -- (5,19.42/2-7.5) -- (6,20.67/2-7.5) -- (7,23.06/2-7.5) -- (8,22.32/2-7.5) -- (9,23.27/2-7.5) -- (10,26.51/2-7.5) -- (11,30.28/2-7.5);
+%\draw [color=brown] (0,32.09/2-7.5) -- (1,29.62/2-7.5) -- (2,28.63/2-7.5) -- (3,26.56/2-7.5) -- (4,22.95/2-7.5) -- (5,19.42/2-7.5) -- (6,20.67/2-7.5) -- (7,23.06/2-7.5) -- (8,22.32/2-7.5) -- (9,23.27/2-7.5) -- (10,26.51/2-7.5) -- (11,30.28/2-7.5);
 
 %1998
-\draw [color=violet] (0,29.13/2-7.5) -- (1,28.26/2-7.5) -- (2,27.2/2-7.5) -- (3,24.03/2-7.5) -- (4,22.00/2-7.5) -- (5,19.6/2-7.5) -- (6,20.47/2-7.5) -- (7,19.77/2-7.5) -- (8,21.22/2-7.5) -- (9,25.19/2-7.5) -- (10,28.24/2-7.5) -- (11,28.91/2-7.5);
+%\draw [color=violet] (0,29.13/2-7.5) -- (1,28.26/2-7.5) -- (2,27.2/2-7.5) -- (3,24.03/2-7.5) -- (4,22.00/2-7.5) -- (5,19.6/2-7.5) -- (6,20.47/2-7.5) -- (7,19.77/2-7.5) -- (8,21.22/2-7.5) -- (9,25.19/2-7.5) -- (10,28.24/2-7.5) -- (11,28.91/2-7.5);
 
 %1999
-\draw [color=olive] (0,30.65/2-7.5) -- (1,29.56/2-7.5) -- (2,31.64/2-7.5) -- (3,24/2-7.5) -- (4,21.51/2-7.5) -- (5,18.87/2-7.5) -- (6,18.78/2-7.5) -- (7,21.94/2-7.5) -- (8,22.65/2-7.5) -- (9,23.07/2-7.5) -- (10,26.36/2-7.5) -- (11,29.08/2-7.5);
+%\draw [color=olive] (0,30.65/2-7.5) -- (1,29.56/2-7.5) -- (2,31.64/2-7.5) -- (3,24/2-7.5) -- (4,21.51/2-7.5) -- (5,18.87/2-7.5) -- (6,18.78/2-7.5) -- (7,21.94/2-7.5) -- (8,22.65/2-7.5) -- (9,23.07/2-7.5) -- (10,26.36/2-7.5) -- (11,29.08/2-7.5);
 
 %2000
-\draw [color=orange](0,30.63/2-7.5) -- (1,29.93/2-7.5) -- (2,27.85/2-7.5) -- (3,26.32/2-7.5) -- (4,21.78/2-7.5) -- (5,21.5/2-7.5) -- (6,17.59/2-7.5) -- (7,20.85/2-7.5) -- (8,22.25/2-7.5) -- (9,24.02/2-7.5) -- (10,26.87/2-7.5) -- (11,29.51/2-7.5);
-\end{tikzpicture}
-\label{est1-fig-12}
-\caption{Gráficos de linhas com a temperatura máxima média mensal da cidade de Porto Alegre}
-\end{figure}
+%\draw [color=orange](0,30.63/2-7.5) -- (1,29.93/2-7.5) -- (2,27.85/2-7.5) -- (3,26.32/2-7.5) -- (4,21.78/2-7.5) -- (5,21.5/2-7.5) -- (6,17.59/2-7.5) -- (7,20.85/2-7.5) -- (8,22.25/2-7.5) -- (9,24.02/2-7.5) -- (10,26.87/2-7.5) -- (11,29.51/2-7.5);
+%\end{tikzpicture}
+%\label{est1-fig-12}
+%\caption{Gráficos de linhas com a temperatura máxima média mensal da cidade de Porto Alegre}
+%\end{figure}
 
-\titem{c)} Idem ao item \titem{b)}. Isso ocorre devido às estações do ano. No hemisfério sul temos temperaturas mais altas nos meses finais e iniciais do ano e temperaturas mais baixas no meio do ano.
-
-Os gráficos que você acabou de construir são chamados \index{gráficos de linha}gráficos de linha. Esse tipo de gráfico é muito utilizado para variáveis quantitativas contínuas que dependem de uma outra variável quantitativa, neste caso o tempo. Quando a variável quantitativa é observada ao longo do tempo, o conjunto de dados resultante é chamado uma série temporal.
+%\titem{c)} Idem ao item \titem{b)}. Isso ocorre devido às estações do ano. No hemisfério sul temos temperaturas mais altas nos meses finais e iniciais do ano e temperaturas mais baixas no meio do ano.
 
 \end{task}
 
-\begin{observation}{}
+\begin{knowledge}
 
+Os gráficos construídos na atividade ``Medição da temperatura ao longo do tempo'' são chamados \index{gráficos de linha}gráficos de linha. Esse tipo de gráfico é muito utilizado para variáveis quantitativas contínuas que dependem de uma outra variável quantitativa, neste caso o tempo. Quando a variável quantitativa é observada ao longo do tempo, o conjunto de dados resultante é chamado uma série temporal.
+
+\end{knowledge}
+
+
+\begin{observation}
 Como você já deve ter observado, a temperatura em Porto Alegre é mais baixa nos meses correspondentes ao inverno e mais alta na primavera e no verão, o que se repete cada ano. Este fenômeno, que se observa nos ciclos do gráfico, é chamado de \index{sazonalidade}sazonalidade. A origem deste conceito é exatamente o da sazonalidade que observamos na natureza com as estações ao longo do ano.
 \end{observation}
+\needspace{5em}
 \begin{description}
 \item[{Sazonalidade\index{Sazonalidade|textbf}}] \leavevmode\phantomsection\label{est1-def-13}
 Variações periódicas que se observam em séries temporais e que devem sua presença a um fenômeno implícito que incide de forma direta nas medições da variável observada.
@@ -2057,7 +2308,7 @@ Considere novamente os dados de temperatura da atividade anterior. Se representa
 \end{figure}
 \newpage
 
-\arrange{Estruturas de variáveis quantitativas}
+\arrange{Gráficos para Variáveis Quantitativas}
 \label{est1-org-2}
 Dois tipos de gráficos para representar variáveis quantitativas contínuas foram apresentados: o histograma e o gráfico de linha.
 \begin{description}
@@ -2161,10 +2412,9 @@ Suponha a seguinte distribuição de frequências de um conjunto de salários (e
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Intervalo de classe & frequência absoluta & frequência relativa \\
+\tcolor{Intervalo de classe} & \tcolor{Frequência absoluta} & \tcolor{frequência relativa} \\
 \hline
 {[} 1 ; 3 {[} & 4 & 0,08 \\
 \hline
@@ -2176,7 +2426,7 @@ Intervalo de classe & frequência absoluta & frequência relativa \\
 \hline
 {[} 9; 11 {[} & 6 & 0,12 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -2187,7 +2437,7 @@ Observe que nessa tabela todos os intervalos têm amplitude 2. Veja um histogram
 \capstart
 
 \noindent
-\begin{tikzpicture}[scale=0.4, every node/.style={scale=0.75}]
+\begin{tikzpicture}[scale=0.4, every node/.style={scale=0.75},yscale=.9]
 
 \draw (0,0) -- (0,15) node [rotate=90, above, yshift=20, midway, scale=1.4] {frequência absoluta};
 
@@ -2225,10 +2475,9 @@ Até aqui consideramos intervalos de mesma amplitude e usamos, como a altura dos
 
 \begin{table}[H]
 \centering\setlength\tabcolsep{5pt}
-\begin{tabu} to \linewidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\thead
-\makecell{Intervalo \\ de classe} & \makecell{Frequência \\ absoluta} & \makecell{Frequência \\ relativa} & \makecell {Comprimento \\ do intervalo} \\
+\tcolor{\makecell{Intervalo \\ de classe}} & \tcolor{\makecell{Frequência \\ absoluta}} & \tcolor{\makecell{Frequência \\ relativa}} & \tcolor{\makecell {Comprimento \\ do intervalo}} \\
 \hline
 ${[} 1 ; 3 {[}$ & 4 & $0{,}08$ & $2$ \\
 \hline
@@ -2240,16 +2489,16 @@ ${[} 8 ; 12 {[}$ & 12 & $0{,}24$ & $4$ \\
 \hline
 ${[}12; 16 {[}$ & 8 & $0{,}16$ & $4$ \\ 
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Observe que os comprimentos dos intervalos de classe variam, sendo 2, 2, 3, 4 e 4, respectivamente.
 
 Nesse caso devemos usar a densidade de frequência absoluta ou relativa obtida pela razão entre frequência e amplitude do intervalo.
 
-\textbf{Densidade de frequência absoluta}=$\frac{\text{frequência absoluta do intervalo}}{\text{amplitude do intervalo}}$
+\textbf{Densidade de frequência absoluta}=$\dfrac{\text{frequência absoluta do intervalo}}{\text{amplitude do intervalo}}$
 
-\textbf{Densidade de frequência relativa}=$\frac{\text{frequência relativa do intervalo}}{\text{amplitude do intervalo}}$
+\textbf{Densidade de frequência relativa}=$\dfrac{\text{frequência relativa do intervalo}}{\text{amplitude do intervalo}}$
 
 A \hyperref[est1-fig-18]{figura \ref{est1-fig-18}} ilustra uma construção equivocada do histograma desses dados, usando a frequência absoluta.
 
@@ -2292,11 +2541,10 @@ Nesse histograma a area total é $2\times4+2\times8+3\times18+4\times 12 + 4 \ti
 
 \begin{table}[H]
 \centering
-\centering\setlength\tabcolsep{5pt}
-\begin{tabu} to \linewidth {|c|c|c|c|}
+\setlength\tabcolsep{5pt}
+\begin{tabular} {|c|c|c|c|}
 \hline
-\thead
-\makecell{Intervalo \\ de classe} & \makecell{Frequência \\ absoluta} & \makecell{Amplitude \\ do intervalo} & \makecell {Densidade \\ freq. absoluta \\ (freq. abs./comp. intervalo)} \\
+\tcolor{\makecell{Intervalo \\ de classe}} & \tcolor{\makecell{Frequência \\ absoluta}} & \tcolor{\makecell{Amplitude \\ do intervalo}} & \tcolor{\makecell {Densidade \\ freq. absoluta \\ (freq. abs./comp. intervalo)}} \\
 \hline
 {[} 1 ; 3 {[} & 4 & 2 & 2 \\
 \hline
@@ -2308,7 +2556,7 @@ Nesse histograma a area total é $2\times4+2\times8+3\times18+4\times 12 + 4 \ti
 \hline
 {[}12; 16 {[} & 8 & 4 & 2 \\ 
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \par
 
@@ -2491,7 +2739,7 @@ Existem várias possibilidades e algumas delas estão apresentadas aqui. Na comp
 \end{tikzpicture}
 
 \caption{Histograma com 6 intervalos}
-\label{}
+
 \end{figure}
 
 
@@ -2509,7 +2757,7 @@ Existem várias possibilidades e algumas delas estão apresentadas aqui. Na comp
 \foreach \x/\y in {0/2,1/5,2/8,3/11,4/12,5/11,6/8,7/5,8/2} \draw [fill=primario] (\x/9*5*4+1,0) rectangle (\x/9*5*4+5/9*4+1,\y);
 \end{tikzpicture}
 \caption{Histograma com 9 intervalos}
-\label{}
+
 \end{figure}
 
 \hfill\null
@@ -2527,7 +2775,7 @@ Existem várias possibilidades e algumas delas estão apresentadas aqui. Na comp
 \foreach \x/\y in {0/2,1/2,2/4,3/7,4/8,5/9,6/9,7/8,8/6,9/5,10/2,11/2} \draw [fill=primario] (\x/12*5*4+1,0) rectangle (\x/12*5*4+5/12*4+1,\y); 
 \end{tikzpicture}
 \caption{Histograma com 12 intervalos}
-\label{}
+
 \end{figure}
 
 
@@ -2546,7 +2794,7 @@ Existem várias possibilidades e algumas delas estão apresentadas aqui. Na comp
 ;
 \end{tikzpicture}
 \caption{Histograma com 15 intervalos}
-\label{}
+
 \end{figure}
 }{9}
 \end{answer}
@@ -2571,22 +2819,21 @@ Nessa atividade o histograma deve ser construído usando a escala de densidade d
 
 \item \adjustbox{valign=t}
 {
-\begin{tabu} to \linewidth {|c|e{.15\linewidth}|c|e{.2\linewidth}|}
+\begin{tabular} {|c|e{.15\linewidth}|c|e{.2\linewidth}|}
 \hline
-\thead
-Intervalo de classe & Frequência absoluta & Amplitude &  Dens. de freq. absoluta \\
+\tcolor{Intervalo de classe} & \tcolor{Frequência absoluta} & \tcolor{Amplitude} & \tcolor{ Dens. de freq. absoluta} \tabularnewline
 \hline
-${[} 2{,}0 ; 3{,}0 {[}$ & $12$ & $1$ & $12$ \\ 
+${[} 2{,}0 ; 3{,}0 {[}$ & $12$ & $1$ & $12$ \tabularnewline
 \hline
-${[} 3{,}0 ; 5{,}0 {[}$ & $40$ & $2$ & $20$ \\
+${[} 3{,}0 ; 5{,}0 {[}$ & $40$ & $2$ & $20$ \tabularnewline
 \hline
-${[} 5{,}0 ; 7{,}0 {[}$ & $80$ & $2$ & $40$ \\
+${[} 5{,}0 ; 7{,}0 {[}$ & $80$ & $2$ & $40$ \tabularnewline
 \hline
-${[} 7{,}0 ; 10{,}0 {[}$ & $48$ & $3$ & $16$ \\
+${[} 7{,}0 ; 10{,}0 {[}$ & $48$ & $3$ & $16$ \tabularnewline
 \hline
-${[} 10{,}0 ; 15{,}0 {[}$ & $20$ & $5$ & $4$ \\
+${[} 10{,}0 ; 15{,}0 {[}$ & $20$ & $5$ & $4$ \tabularnewline
 \hline
-\end{tabu}
+\end{tabular}
 }
 
 \clearpage
@@ -2649,7 +2896,7 @@ No entanto, a frequência relativa desse intervalo é $\frac{12}{200} = 0,06$}};
 \end{answer}
 
 
-\practice{Estruturas de variáveis quantitativas}
+\practice{Gráficos para Variáveis Quantitativas}
 \label{est1-prac-2}
 
 \phantomsection\label{est1-ativ-11}
@@ -2667,10 +2914,9 @@ Suponha a seguinte distribuição de frequências de salários medidos em salár
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth {|c|c|c|}
+\begin{tabular} {|c|c|c|}
 \hline
-\thead
-Intervalo de classe & frequência absoluta & frequência relativa \\
+\tcolor{Intervalo de classe} & \tcolor{Frequência Absoluta} & \tcolor{Frequência Relativa} \\
 \hline
 {[} 2,0 ; 3,0 {[} & 12 & 0,06 \\ 
 \hline
@@ -2682,7 +2928,7 @@ Intervalo de classe & frequência absoluta & frequência relativa \\
 \hline
 {[} 10,0 ; 15,0 {[} & 20 & 0,10 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \par
 
@@ -2695,6 +2941,42 @@ Construa um histograma adequado para esses dados.
 
 \end{enumerate}
 \end{task}
+
+\clearpage
+
+\begin{paginatexto}{Descrição da parte final do capítulo}
+
+
+A duração prevista para trabalhar essa parte final do capítulo é de dois tempos de aula de 50 minutos.
+
+Este bloco foi dividido em três seções: para saber mais, projeto aplicado e exercícios.
+
+\begin{enumerate}
+
+\item { } Para saber mais
+
+Nessa seção são apresentados alguns tipos de amostragem: aleatória simples, sistemática, por conglomerados e estratificada. Um exemplo, ilustrando os diferentes tipos foi incluído. O exercício de número 20, no final desse capítulo, refere-se ao conteúdo dessa seção.
+
+\item { } Projeto aplicado: Projeto a ser realizado de modo tranversal paralalelamente às aulas. O projeto envolverá 
+
+\begin{itemize}
+
+\item { }  a definição de um problema a ser investigado, de preferência incluindo outra disciplina, 
+\item { } a definição da população, 
+\item { } a construção de um questionário para a coleta de dados (amostra ou censo), 
+\item { } a organização dos dados obtidos por meio de tabelas, gráficos e medidas resumo.
+\item { } a interpretação dos dos resultados obtidos e 
+\item { } a confecção de relatório final. 
+\end{itemize}
+
+\begin{observation} Trabalhando o projeto de forma transversal, espera-se que na conclusão do mesmo, o capítulo ``Medidas de Posição e Dispersão'' já tenha sido trabalhado.
+As etapas sugeridas para o desenvolvimento do projeto incluem a formulação de uma questão de investigação estatística, o planejamento e a coleta dos dados, o tratamento dos dados e a interpretação dos resultados, com a elaboração de um relatório final do projeto.\end{observation}
+\item { } Exercícios
+
+\end{enumerate}
+
+
+\end{paginatexto}
 
 
 \clearpage
@@ -2735,10 +3017,12 @@ A direção de uma escola de Ensino Médio deseja realizar uma pesquisa para con
 40 alunos sendo 16 do primeiro ano, 14 do segundo ano e 10 do terceiro ano, escolhidos ao acaso, tendo em mente que na escola $40\%$ dos alunos são de primeiro ano, $35\%$ dos alunos são de segundo ano e $25\%$ dos alunos são de terceiro ano. \emph{Trata-se de uma amostra estratificada proprocionalmente ao tamanho dos estratos que corrrespondem aos anos do Ensino Médio. As probabilidades de seleção de amostra são conhecidas.  Nesse caso, também espera-se que a amostra seja representativa do conjunto de estudantes do colégio.}
 
 \item {} 
-40 alunos de uma turma do segundo ano na qual está um filho do diretor. \emph{Trata-se de uma amostra de conveniência e que pode resultar num resultado duplamente viesado, tanto pelo fato de que a turma escolhida não representa necessariamente a maioria dos estudantes da escolat, quanto pela presença do filho do diretor nessa turma que pode influenciar o resultado.}
+40 alunos de uma turma do segundo ano na qual está um filho do diretor. \emph{Trata-se de uma amostra de conveniência e que pode resultar num resultado duplamente viesado, tanto pelo fato de que a turma escolhida não representa necessariamente a maioria dos estudantes da escola, quanto pela presença do filho do diretor nessa turma que pode influenciar o resultado.}
 
 \end{enumerate}
 \end{example}
+
+
 
 
 \begin{project}
@@ -2750,7 +3034,7 @@ Faça uma investigação sobre algum tema de interesse. Essa atividade deve ser 
 Elaborar um cronograma considerando um prazo de três meses para concluir o projeto.
 
 \item {} 
-Definir a população e os elementos (unidades de observação) (pessoa, família, domicílio, cidade, escolas, turmas, estudadantes, etc.).
+Definir a população e os elementos (unidades de observação) (pessoa, família, domicílio, cidade, escolas, turmas, estudadantes etc.).
 
 \item {} 
 Definir como a amostra será escolhida e quantos elementos serão considerados na amostra.
@@ -2838,22 +3122,30 @@ Ministério da Saúde - Datasus \textendash{} \url{http://datasus.saude.gov.br/t
 %página 1
 {\exerciselist
   \begin{enumerate}
-  \item 
+   \item 
   \begin{enumerate}
-  \item Inferencial
-  \item Descritiva
-  \item Descritiva
-  \item Inferencial
+  \item Inferencial, pois a afirmação é feita para todo o Estado do Rio de Janeiro, não restringindo-se a uma descrição da amostra pesquisada.
+  \item Descritiva, pois a afirmação refere-se apenas à amostra observada.
+  \item Descritiva, pois a afirmação refere-se apenas à amostra pesquisada.
+  \item Inferencial, pois a afirmação é feita para a população de São Paulo, baseando-se no resultado obtido na amostra investigada: $\frac{768}{2000}\cdot 100=38,4\%$ das pessoas na amostra usam as sacolas ecológicas.
   \end{enumerate}
-  \item
+   \item
   \begin{enumerate}
-  \item Matemática
-  \item Estatística
-  \item Estatística
-  \item Matemática
-  \item Estatística
-  \item Matemática
+  \item Matemática, pois pode ser classificada em verdadeira ou falsa. Em particular, trata-se de uma afirmação verdadeira, pois de fato não existem raízes reais para essa equação.
+  \item Estatística, pois embora seja esperado que ao lançar um dado honesto 180 vezes, ocorra a face 6 em média 30 ($\frac{180}{6}$) vezes, ainda assim não é possível afirmar se essa proposição essa falsa ou verdadeira. Por se tratar de uma proposição estatistica, apenas podemos dizer que ela tem alto nível de confiança.
+  \item Estatística, pois a verificação feita foi para uma amostra de 100 crianças e por se tratar de uma inferência estatística, não é possível dizer se ela é verdadeira ou falsa, apenas podemos dizer que ela tem alto nível de confiança.
+  \item Matemática. Trata-se da conjectura de Goldbach, proposta pelo matemático prussiano Christian Goldbach e é um dos problemas mais antigos não resolvidos da matemática. Verificações por computador já confirmaram a conjectura de Goldbach para muitos números. No entanto, a efetiva demonstração matemática ainda não ocorreu. (Fonte: \textendash{} \url{https://pt.wikipedia.org/wiki/Conjetura_de_Goldbach} Ainda assim é uma proposição matemática: ou é verdadeira ou é falsa.
+  \item Estatística, pois trata-se apenas de uma previsão e, portanto, podemos atribuir um nível de confiança para ela. 
+  \item Matemática, pois pode ser classificada em verdadeira ou falsa. De fato, trata-se do teorema de Tales e, portanto, é verdadeira.
   \end{enumerate}
+  \end{enumerate}
+  }{1}
+  \end{answer}
+  \clearmargin
+  %página 2
+  \begin{answer}{Exercícios}
+{\exerciselist
+  \begin{enumerate}\setcounter{enumi}{2}
   \item 
   \begin{enumerate}
   \item Peso e pressão são tratados como variáveis quantitativas contínuas.
@@ -2861,19 +3153,11 @@ Ministério da Saúde - Datasus \textendash{} \url{http://datasus.saude.gov.br/t
   \item O peso é tratado como variável quantitativa contínua e a pressão como variável qualitativa ordinal
   \item Ambos são tratados como variáveis qualitativas ordinais.
   \end{enumerate}
-  \end{enumerate}
-}{1}
-\end{answer}
-\clearmargin
-%página 2
-\begin{answer}{Exercícios}
-{\exerciselist
-  \begin{enumerate}\setcounter{enumi}{3}
   \item 
   \begin{enumerate}
-  \item Amostra 
-  \item "Você deseja viver até os 100 anos?"
-  \item "Até que idade você gostaria de viver?"
+  \item Amostra, pois referem-se a um subconjunto da população de americanos adultos.
+  \item A pergunta poderia ser: "Você deseja viver até os 100 anos?", pois a resposta seria uma variável qualitativa: sim, não ou não sei.
+  \item A pergunta poderia ser "Até que idade você gostaria de viver?", pois a resposta seria um número.
   \end{enumerate}
   \item 
   \begin{enumerate}
@@ -2953,10 +3237,9 @@ Ministério da Saúde - Datasus \textendash{} \url{http://datasus.saude.gov.br/t
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Órgão & Transplantes & Fila de espera \\
+\tcolor{Órgão} & \tcolor{Transplantes} & \tcolor{Fila de espera} \\
 \hline
 Rim & 33 & 75 \\
 \hline
@@ -2972,9 +3255,9 @@ Córnea & 53 & 2 \\
 \hline
 Total & 100 & 100 \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Porcentagens dos números de transplantes até julho 2015 e das pessoas em fila de espera em julho de 2015 por órgão}
-\label{}
+
 \end{table}
 \end{enumerate}
 }{1}
@@ -3198,7 +3481,7 @@ O gráfico a seguir ilustra um dos resultados dessa pesquisa.
 \centering
 \capstart
 
-\begin{tikzpicture}
+\begin{tikzpicture}[yscale=1.125]
 
 \node [above, scale=1.3] at (4.5,7) {Principais equipamentos usados por alunos para acessar a internet};
 \node [below] at (4.5,7) {Porcentagem sobre o total de estudantes participantes da pesquisa}; 
@@ -3250,10 +3533,9 @@ Faça uma pesquisa para obter informações sobre as principais causas de óbito
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \linewidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-Trimestre & Notificações \\
+\tcolor{Trimestre} & \tcolor{Notificações} \\
 \hline
 4T & 135.335 \\
 \hline
@@ -3265,7 +3547,7 @@ Trimestre & Notificações \\
 \hline
 total & 711.467 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \par
 
@@ -3686,9 +3968,8 @@ Refaça o gráfico de barras.
 
 \begin{figure}[H]
 \centering
-\capstart
 
-\begin{tikzpicture}
+\begin{tikzpicture}[yscale= .9]
 
 \node [above] at (3.5,6.1) {Gráfico I};
 
@@ -3710,9 +3991,9 @@ Refaça o gráfico de barras.
 
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
-\begin{tikzpicture}[yscale=1.25]
+\begin{tikzpicture}[yscale=1.4]
 
 \node [above] at (3.5,6.1) {Gráfico II};
 
@@ -3761,7 +4042,7 @@ os dois gráficos são incomparáveis, pois usam escalas diferentes.
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/estatistica1_bibliografia.bib}
 
 \nocite{*}

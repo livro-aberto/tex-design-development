@@ -1,92 +1,29 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{./abertura-investigacao}{./abertura-investigacao-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-investigacao}
-\else
-\renewcommand\chapterillustration{./abertura-investigacao-professor}
-\fi
+\chapterwhat{Taxas, índices e indicadores sociais, econômicos e ambientais. Compreensão de aspectos teóricos e práticos dessas informações, com uma metodologia que busca a análise de situações reais, tanto locais quanto globais.}
 
-\def\chapterwhat{Taxas, índices e indicadores sociais, econômicos e ambientais. Compreensão de aspectos teóricos e práticos dessas informações, com uma metodologia que busca a análise de situações reais, tanto locais quanto globais.}
+\chapterbecause{Na era da informação, somos inundados por dados sobre os mais diversos fenômenos da realidade. Compreender a obtenção e organização desses dados torna-se importante para planejarmos ações que busquem uma organização social mais justa e sustentável.} 
 
-\def\chapterbecause{Na era da informação, somos inundados por dados sobre os mais diversos fenômenos da realidade. Compreender a obtenção e organização desses dados torna-se importante para planejarmos ações que busquem uma organização social mais justa e sustentável.} 
 \chapter{Projetos de Investigação com Matemática}
 \label{ladri-chap}
 
-\mbox{}\thispagestyle{empty}\clearpage
+%%%% Página de créditos
 
-\thispagestyle{empty}
+% Autores
+\autorum{Thiago Ferraiol}
+\autordois{Priscila Santos}
+\autortres{Rodrigo Belli}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+% Revisores
+\revisorum{Letícia Rangel}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\graficos{Tarso Caldas}
 
-\vspace*{.3cm}
+\autordacapa{Clay Banks}{Unsplash}{https://unsplash.com/photos/U0-r0JMypE0}
+\versao{1.0}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+\creditos
 
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Projetos de Investigação com Matemática\\
-\\
-Ano/ Versão: & 2020 / versão 0.2 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas, \\
-			&  Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autor: & Thiago Ferraiol, \\
-         & Priscila Santos, \\
-         & Rodrigo Belli \\
-\\
-Revisão: &  Letícia Rangel  \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & --- \\
-\\
-  Capa: & Foto de Clay Banks, no Unsplash \\
-  		& https://unsplash.com/photos/U0-r0JMypE0 \\
-
-\end{tabular}
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -466,10 +403,9 @@ Para além do continente asiático, o mundo apresentou formas replicadas das est
 \resizebox{\linewidth}{!}
 {\centering
 \setlength\tabcolsep{4pt}
-\begin{tabu} to \textwidth{|c|r|r|r|r|r|r|}
+\begin{tabular}{|c|r|r|r|r|r|r|}
 \hline
-\thead
-Região & População & Casos & Óbitos & \makecell{Coeficiente de \\ Incidência} & \makecell{Coeficiente de \\ Mortalidade} & \makecell{Taxa de \\ Letalidade} \\
+\tcolor{Região} & \tcolor{População} & \tcolor{Casos} & \tcolor{Óbitos} & \tcolor{\makecell{Coeficiente de \\ Incidência}} & \tcolor{\makecell{Coeficiente de \\ Mortalidade}} & \tcolor{\makecell{Taxa de \\ Letalidade}} \\
 \hline
 Centro-Oeste & 16 297 074 & 5 090 & 129 & $31$ & $0{,}8$ & $2{,}5\%$ \\
 \hline
@@ -481,7 +417,7 @@ Sudeste & 88 371 433 & 74 727 & 6 216 & $85$ & $7{,}0$ & $7{,}1\%$\\
 \hline
 Sul & 29 975 984 & 8 556 & 297 & $29$ & $1{,}0$ & $3{,}5\%$\\
 \hline
-\end{tabu}}
+\end{tabular}}
 \caption{Fonte: \href{https://COVID.saude.gov.br/}{Ministério da Saúde} (Consulta em 12 de Maio de 2020)}
 \end{table}
 }{1}
@@ -534,10 +470,9 @@ A tabela a seguir apresenta o tamanho da população e os dados brutos do númer
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{4pt}
-\begin{tabu} to \textwidth{|c|r|r|r|r|r|r|}
+\begin{tabular}{|c|r|r|r|r|r|r|}
 \hline
-\thead
-Região & População & Casos & Óbitos & \makecell{Coeficiente de \\ Incidência} & \makecell{Coeficiente de \\ Mortalidade} & \makecell{Taxa de \\ Letalidade} \\
+\tcolor{Região} & \tcolor{População} & \tcolor{Casos} & \tcolor{Óbitos} & \tcolor{\makecell{Coeficiente de \\ Incidência}} & \tcolor{\makecell{Coeficiente de \\ Mortalidade}} & \tcolor{\makecell{Taxa de \\ Letalidade}} \\
 \hline
 Centro-Oeste & 16 297 074 & 5 090 & 129 & & & \\
 \hline
@@ -549,7 +484,7 @@ Sudeste & 88 371 433 & 74 727 & 6 216 & & & \\
 \hline
 Sul & 29 975 984 & 8 556 & 297 & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption{Fonte: \href{https://COVID.saude.gov.br/}{Ministério da Saúde} (Consulta em 12 de Maio de 2020)}
 \end{table}
 \end{task}
@@ -598,7 +533,7 @@ No Brasil este indicador é produzido anualmente pelo IBGE, por meio da Pesquisa
 
 \includegraphics[width=\linewidth]{investigacao7}
 \caption{Fonte: \href{https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18318-piramide-etaria.html}{IBGE - PNAD Contínua}}
-\label{}
+
 \end{figure}
 
 \know{Índice de atendimento total de esgoto}
@@ -707,7 +642,7 @@ Por fim, o IVS é calculado por meio de uma média simples dos três indicadores
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|r|r|r|r|}
+\begin{tabular}{|l|r|r|r|r|}
 \hline
 \tmcol{5}{|c|}{\parbox[c][1cm][c]{.6\textwidth}{ \centering Índice de Vulnerabilidade Social  Capitais da Região Norte do Brasil - 2010}} \\
 \hline
@@ -722,7 +657,7 @@ Por fim, o IVS é calculado por meio de uma média simples dos três indicadores
 \hline
 \tcolor{Boa Vista - RR} & $0{,}261$ & $0{,}157$ & $0{,}362$ & $0{,}265$ \\
 \hline
-\end{tabu}
+\end{tabular}
 
 \caption{Fonte: Atlas de Vulnerabilidade Social - IPEA}
 \end{table}
@@ -767,9 +702,8 @@ O texto anterior trouxe a ideia de que podemos utilizar informações quantitati
 \item Você conhece outras dimensões dos problemas causados pela pandemia? Que tipos de indicadores você acha que seriam importantes para analisar essas dimensões?
 
 \end{enumerate}
-
-
 \end{task}
+
 
 \clearpage
 \def\currentcolor{session1}
@@ -844,32 +778,6 @@ A investigação desenvolvida neste capítulo tem limitações se comparada ao t
 \end{itemize}
 
 
-% \begin{table}[H]
-
-% \centering
-% \begin{tabu} to \textwidth{|c|>{\vspace{3pt}}m{.3\textwidth}<{\vspace{3pt}}|m{.3\textwidth}|}
-% \hline
-% \thead
-% Característica & Adequada & Inadequada \\
-% \hline
-% \cellcolor{white}\textcolor{black}{\textbf{Quantitativa}} & O índice de pessoas afetadas pela Covid em minha escola é maior ou menor do que na minha cidade? & Como se sentiram as pessoas infectadas em minha escola?\\
-% \hline
-% \cellcolor{white}\textcolor{black}{\textbf{\makecell{Exequível em \\ tempo apropriado}}} & Qual a taxa de ocupação das famílias de minha turma antes e depois da pandemia? & Qual a taxa de pessoas ocupadas em minha região antes e depois da pandemia? \\
-% \hline
-% \cellcolor{white}\textcolor{black}{\textbf{Comparativa}} & A taxa de letalidade da Covid é a mesma nas comunidades indígenas e nos grandes centros urbanos brasileiros? & A taxa de letalidade da Covid é a mesma para diferentes populações do Brasil?\\
-% \hline
-% \cellcolor{white}\textcolor{black}{\textbf{Sedutora/interessante}} & Qual foi o impacto da quarentena em minha região na contenção da pantemia? & Quam não tem acesso à rede de água e esgoto foi mais afetado pela Covid? \\
-% \hline
-% \cellcolor{white}\textcolor{black}{\textbf{Simples}} & Qual região da minha cidade apresentou a maior taxa de disseminação da Covid? & Qual a taxa de disseminação da Covid em minha turma? \\
-% \hline
-% \end{tabu}
-% \end{table}
-
-% Vejam que as perguntas da segunda coluna apresentam características que, embora não as tornem desnecessárias para a compreensão da realidade, as tornam inviáveis no contexto da sala de aula. Elas não permitem um aprofundamento metódico nos estudos matemáticos se estiverem orientadas a tentar compreender a subjetividade dos sujeitos envolvidos. Tampouco pode ser objetiva e, ao mesmo tempo, extremamtente abrangente, inviabilizando sua feitura nos prazos possíveis. O mesmo ponto sobre a abrangência vale para os casos de comparação possíveis: quanto mais genérica a comparação, mais difícil será efetivá-la. E, por fim, as perguntas não podem querer validar sua opinião, seja na confirmação de uma opinião amplamente aceita, seja na limitação rasteira do seu objeto.
-
-% Você não precisa se preocupar em tentar solucionar os grandes problemas do mundo. Pelo menos não por agora. Afinal, estas grandes questões demandam um esforço que foge aos limites da pesquisa em sala de aula.
-
-% Mas isso não significa que você deva abandonar esse desejo. Ao contrário, nossa intenção é que você seja cada vez mais capaz de alcançar essa possibilidade. Para isso, cabe um exercídio: dividir essa pergunta comiplexa em perguntas mais simples. Ao serem satisfatoriamente respondidas, nos enriquecem do conhecimento necessário para tratar de questões mais complexas, nos fazendo galgar degraus até nosso interesse final.
 
 \begin{task}{Elaboração de boas perguntas científicas}
 
@@ -1035,7 +943,7 @@ Depois da elaboração das perguntas, a Priscila e o Thiago se juntaram ao Rodri
   \begin{table}[H]
   \centering
   
-  \begin{tabu} to \textwidth{|d{.4\linewidth}|d{.5\linewidth}|}
+  \begin{tabular}{|d{.4\linewidth}|d{.5\linewidth}|}
   \hline
   \tmcol{1}{|c|}{Nome da Taxa} & \tmcol{1}{c|}{Cálculo} \\
   \hline
@@ -1053,7 +961,7 @@ Depois da elaboração das perguntas, a Priscila e o Thiago se juntaram ao Rodri
   \hline
   Percentual de desalentados na força de trabalho potencial & \parbox{\linewidth}{Numerador: Pessoas desalentadas \\ Denominador: Força de Trabalho potencial} \\
   \hline
-  \end{tabu}
+  \end{tabular}
   \end{table}
 
   Professor, perceba as diferentes razões utilizadas pelo IBGE para calcular indicadores das características da força de trabalho. Quais delas deve ser utilizada para indicar o desemprego: a “taxa de desocupação”, ou a “taxa combinada da desocupação e da força de trabalho potencial”, ou alguma outra? Observe que a resposta depende dos objetivos. Se queremos a medida de desemprego apenas entre aqueles disponíveis para trabalhar, calculamos a “taxa de desocupação”. Se, por outro lado, consideramos as pessoas da força de trabalho potencial como desempregadas, calculamos a “taxa combinada”. Por outro lado ainda, poderíamos pensar em fragmentar a força de trabalho ampliada entre aqueles disponíveis para trabalhar e aqueles indisponíveis, considerando apenas os primeiros como desempregados, mesmo que não tenham buscado um emprego. Esperamos que com isso o professor possa encaminhar as discussões com os estudantes.
@@ -1157,7 +1065,7 @@ A seguir colocamos algumas breves descrições de cada categoria:
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|>{\centering}m{.2\textwidth}|>{\vspace{2.5pt}}m{.6\textwidth}<{\vspace{2.5pt}}|}
+\begin{tabular}{|>{\centering}m{.2\textwidth}|>{\vspace{2.5pt}}m{.6\textwidth}<{\vspace{2.5pt}}|}
 \hline
 \tcolor{Categoria} & \tmcol{1}{|c|}{Descrição} \\
 \hline
@@ -1175,7 +1083,7 @@ Desalentadas & Pessoas desempregadas que gostariam de trabalhar, mas que não bu
 \hline
 Força de Trabalho Ampliada & É a soma das pessoas na força de trabalho com as pessoas na força de trabalho potencial. \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 A tabela a seguir mostra os dados brutos da PNAD contínua do segundo trimestre de 2020 referente à essas categorias.
@@ -1183,7 +1091,7 @@ A tabela a seguir mostra os dados brutos da PNAD contínua do segundo trimestre 
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|c|}
+\begin{tabular}{|l|c|}
 \hline
 \tmcol{1}{|c|}{Categoria} & \tcolor{\makecell{Total\\(em milhares de pessoas)}} \\
 \hline
@@ -1205,7 +1113,7 @@ Desalentadas & 5.683 \\
 \hline
 Força de Trabalho Ampliada & 109.680 \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -1232,7 +1140,7 @@ Após compreender o que são indicadores e para que eles servem, o grupo de Thia
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|>{\vspace{2.5pt}}m{.3\textwidth}<{\vspace{2.5pt}}|>{\vspace{2.5pt}}m{.2\textwidth}<{\vspace{2.5pt}}|>{\vspace{2.5pt}}m{.4\textwidth}<{\vspace{2.5pt}}|}
+\begin{tabular}{|>{\vspace{2.5pt}}m{.3\textwidth}<{\vspace{2.5pt}}|>{\vspace{2.5pt}}m{.2\textwidth}<{\vspace{2.5pt}}|>{\vspace{2.5pt}}m{.4\textwidth}<{\vspace{2.5pt}}|}
 \hline
 \tmcol{1}{|c|}{Indicador} & \tmcol{1}{c|}{De onde ele é} & \tcolor{Qual informação ele traz} \\
 \hline
@@ -1245,7 +1153,7 @@ Força de trabalho & PNAD-IBGE & Total de pessoas em idade de trabalhar que est�
 \hline
 Indicador de Antecedente de Emprego & Fundação Getúlio Vargas & Sondagem das expectativas do mercado de trabalho.\\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item Quais dados vocês usaram para responder à pergunta proposta? Justifiquem explicando a relação entre os dados escolhidos por vocês e a relação deles com a pergunta investigativa do grupo.
@@ -1350,13 +1258,11 @@ Observe a imagem abaixo, de uma tabela do portal de dados \url{Brasil.io}. Ela a
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{2.5pt}
-\setlength\tabulinesep{3pt}
-\begin{tabu} to \textwidth{|l|l|c|r|r|r|r|r|}
+\begin{tabular}{|l|l|c|r|r|r|r|r|}
 \hline
-\multicolumn{8}{|c|}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{COVID-19 - Dados por Município}}} \\
+\tmcol{8}{|c|}{COVID-19 - Dados por Município} \\
 \hline
-\thead
-Data & Município & UF & Confirmados & \makecell{Confirmados\\por 100k hab.} & Óbitos & Letalidade & \makecell{Óbitos por\\ 100k hab.}\\
+\tcolor{Data} & \tcolor{Município} & \tcolor{UF} & \tcolor{Confirmados} & \tcolor{\makecell{Confirmados\\por 100k hab.}} & \tcolor{Óbitos} & \tcolor{Letalidade} & \tcolor{\makecell{Óbitos por\\ 100k hab.}}\\
 \hline
 30/05/2020 & São Paulo & SP & 58 619 & 478,44 & 4 239 & 7,23\% & 34,60 \\
 \hline
@@ -1376,7 +1282,7 @@ Data & Município & UF & Confirmados & \makecell{Confirmados\\por 100k hab.} & �
 \hline
 29/05/2020 & Brasília & DF & 7 877 & 261,24 & 142 & 1,80\% & 4,71 \\
 \hline
-\end{tabu}
+\end{tabular}
 
 \caption*{Adaptado de \url{https://brasil.io/covid19/} - Acesso em 31/05/2020}
 \end{table}
@@ -1387,7 +1293,7 @@ Neste caso, a tabela tem a função de rapidamente passar informações importan
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|r|c|r|}
+\begin{tabular}{|c|r|c|r|}
 \hline
 \multicolumn{4}{|c|}{\cellcolor{\currentcolor!80}{\textcolor{white}{\textbf{Leitos - Grande Ilha}}}} \\
 \hline
@@ -1401,7 +1307,7 @@ Leitos Livres & 10 & Leitos Ocupados & 448 \\
 \hline
 Taxa de ocupação & 95,83\% & Taxa de Ocupação & 40,43\% \\
 \hline
-\end{tabu}
+\end{tabular}
 \caption*{
 \footnotesize
 *Taxa de ocupação relativa aos leitos SUS disponíveis na rede SES/ME
@@ -1432,7 +1338,7 @@ Já os \textbf{gráficos de barras e colunas} são mais adequados para mostrar c
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=400bp]{investigacao5}
+\includegraphics[width=390bp]{investigacao5}
 
 \caption{Fonte: Central de Informações do Registro Civil - CRC Nacional}
 \end{figure}
@@ -1441,7 +1347,7 @@ Os \textbf{gráficos de setores} dão noção de parte e todo, e por isso muitas
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=290bp]{investigacao6}
+\includegraphics[width=275bp]{investigacao6}
 
 \end{figure}
 
@@ -1452,11 +1358,12 @@ Com os programas de edição de imagem, hoje em dia até existe um profissional 
 \clearmargin
 \def\currentcolor{session2}
 \begin{texto}
-{\vspace{-\baselineskip}
+{\small
 \subsection{Desenvolvendo a Investigação - Etapa 4}
 (Tempo estimado 7-8 aulas)
 
-\textbf{Objetivo geral}: Aplicar as ferramentas matemáticas para análise de uma situação concreta.
+\paragraph{Objetivo geral}
+Aplicar as ferramentas matemáticas para análise de uma situação concreta.
 
 Esta é a etapa mais longa do projeto e por isso é necessária uma boa organização. Se os estudantes forem trabalhar com planilhas eletrônicas e arquivos compartilhados, é interessante criar um diretório para cada grupo, ao qual você tenha acesso à toda a produção deles. Se o trabalho for realizado sem computadores, uma boa solução é a utilização de um painel na sala para cada grupo ou simplesmente ir agrupando todas as fichas com planejamento, anotações e análises. É interessante que este material fique com o professor, para que se eventuais faltas não prejudiquem o trabalho coletivo. 
 
@@ -1469,7 +1376,6 @@ Também é importante garantir que todos os grupos apresentem seus resultados de
 Haverá ainda grupos que não conseguirão chegar a um resultado final de sua investigação. Nesse caso é importante avaliar os motivos que fizeram com que o planejamento não funcionasse. Foi só uma questão de organização ou algum problema com os dados ou com a metodologia planejada para analisar os dados? Compreender o que não deu certo é uma boa forma de fazer com que o mesmo erro não se repita. Nesses casos, os resultados e as conclusões serão parciais. É possível que a conclusão seja simplesmente algo como “as análises e indicadores propostos não são uma boa forma de responder a pergunta escolhida”. Este tipo de conclusão também é válida, pois saber o que não funciona também é importante para responder uma pergunta. Por isso, esse tipo de resultado também deve ser valorizado.
 
 Entre a terceira e quinta aula desta etapa, é importante, caso ainda não o tenha feito, apresentar  qual será o produto final deste projeto. Esta apresentação tem a finalidade de ajudar os estudantes a se organizarem e já irem montando seus resultados e conclusões num formato adequado para o produto final. Desta forma, é muito interessante que o educador entregue aos grupos um roteiro de produção do produto final. Exemplos de roteiros serão discutidos na próxima seção.
-
 }
 \end{texto}
 \begin{example}{Planejamento da investigação - COVID-19}
@@ -1526,7 +1432,7 @@ Mão à obra!
 
   Caso outras perguntas da turma tenham relação com esta, o questionário pode ser ampliado e as respostas podem ser aproveitadas por mais de um grupo. Por exemplo, se um grupo quiser investigar a inflação, a mudança dos salários e do poder de compra dos familiares de colegas, o questionário poderia ser ampliado com perguntas nesta direção.
 
-}{1}{0}
+}{1}{2}
 \end{sugestions}
 \begin{example}{Realizando a investigação - COVID-19}
 
@@ -1584,7 +1490,7 @@ Com essa decisão, o grupo elaborou a tabela a seguir com esses indicadores:
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|c|c|}
+\begin{tabular}{|l|c|c|}
 \hhline{~|--|}
 \multicolumn{1}{c|}{} & \tcolor{\makecell{2$^{\circ}$ trimestre \\ 2019}} & \tcolor{\makecell{2$^{\circ}$ trimestre \\ 2020}} \\
 \hline
@@ -1598,7 +1504,7 @@ Total (pessoas com 14 anos ou mais de idade) & 170.864* & 173.918* \\
 \hline
 Nível de ocupação [(1)$\times$(2)] & $54{,}6\%$ & $47{,}9\%$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \flushright
 
 \scriptsize{* em milhares de pessoas}
@@ -1733,10 +1639,9 @@ A tabela a seguir é um guia para você pensar no percurso que você fez para pl
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|>{\vspace{2.5pt}}m{.6\textwidth}<{\vspace{2.5pt}}|c|c|c|}
+\begin{tabular}{|>{\vspace{2.5pt}}m{.6\textwidth}<{\vspace{2.5pt}}|c|c|c|}
 \hline
-\thead
-& SIM & NÃO & EM PARTE \\
+\tcolor{} & \tcolor{SIM} & \tcolor{NÃO} & \tcolor{EM PARTE} \\
 \hline
 1. Eu estive presente nas aulas? & & & \\
 \hline
@@ -1752,7 +1657,7 @@ A tabela a seguir é um guia para você pensar no percurso que você fez para pl
 \hline
 7. Estou seguro quanto ao caminho que escolhemos para responder nossa pergunta e concordo com o planejamento do meu grupo. & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -1761,16 +1666,15 @@ Levando em conta suas respostas na tabela anterior, avalie seu próprio desempen
 \begin{table}[H]
 \centering
 
-\begin{tabu} to \textwidth{|l|c|c|}
+\begin{tabular}{|l|c|c|}
 \hline
-\thead
-& ESTUDANTE & PROFESSOR \\
+\tcolor{} & \tcolor{ESTUDANTE} & \tcolor{PROFESSOR} \\
 \hline
 Qualidade do planejamento & & \\
 \hline
 Colaboração com o grupo & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Levando em conta tudo o que aconteceu nesta etapa, anote:
@@ -1991,7 +1895,7 @@ Dica: vocês podem fazer todas as partes em em uma folha,  recortá-las e ir mon
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/investigacao_bibliografia.bib}
 
 \nocite{*}

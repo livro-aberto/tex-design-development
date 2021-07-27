@@ -1,93 +1,33 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-semelhanca}{abertura-semelhanca-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{abertura-semelhanca}
-\else
-\renewcommand\chapterillustration{abertura-semelhanca-professor}
-\fi
-\renewcommand\chapterwhat{São estudadas a semelhança de figuras geométricas, os casos de semelhança de triângulos e polígonos, e suas aplicações.}
+\chapterwhat{São estudadas a semelhança de figuras geométricas, os casos de semelhança de triângulos e polígonos, e suas aplicações.}
 
-\renewcommand\chapterbecause{Em primeiro lugar, o conceito de semelhança está presente em diversos contextos e sua compreensão permite compreender melhor o mundo que vivemos. Por outro lado, a semelhança de triângulos é um instrumento importante para obter propriedades métricas e relações entre elementos de polígonos. Por fim, a semelhança de triângulos é uma ferramenta muito útil na resolução de problemas de geometria, tanto plana quanto no espaço.}
+
+\chapterbecause{Em primeiro lugar, o conceito de semelhança está presente em diversos contextos e sua compreensão permite compreender melhor o mundo que vivemos. Por outro lado, a semelhança de triângulos é um instrumento importante para obter propriedades métricas e relações entre elementos de polígonos. Por fim, a semelhança de triângulos é uma ferramenta muito útil na resolução de problemas de geometria, tanto plana quanto no espaço.}
 
 \chapter{Semelhança}
 
-\mbox{}\thispagestyle{empty}\clearpage
 
-\thispagestyle{empty}
+%%%% Página de créditos
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+% Autores
+\autorum{Eduardo Wagner}
+\autordois{Marcos Paulo}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+% Revisores
+\revisorum{Cydara Ripoll}
+\revisordois{Letícia Rangel}
 
-\vspace*{.3cm}
+\autordacapa{Pradeep Gopal}{Unsplash}{https://unsplash.com/photos/6uJDEQx-cho}
+\versao{1.0}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+\ilustracao{Miller  Guglielmo}
 
-Versão digital do capítulo:
+\graficos{Beatriz Cabral}
 
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/GE202.html}
-
-% \begin{center}
-%   \includegraphics[width=2cm]{canvas}
-% \end{center}
-
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Semelhança\\
-\\
-Ano/ Versão: & 2020 / versão 1.2 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção: & Associação Livro Aberto\\
-\\
-Coordenação: & Fabio Simas e Augusto Teixeira (livroaberto@impa.br)\\
-\\
-Autores:  & Eduardo Wagner\\
-          & Marcos Paulo \\
-
-\\
-Revisão: &  Cydara Ripoll  \\
-          &  Letícia Rangel \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & Miller  Guglielmo \\ 
-\\
-Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
-\\
-  Capa: & Foto de Pradeep Gopal, no Unsplash \\
-        & https://unsplash.com/photos/6uJDEQx-cho \\
-
-\end{tabular}
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
+\ccbysa
+ 
+\creditos
 
 \mainmatter
 
@@ -142,7 +82,7 @@ Você consegue reproduzir a imagem abaixo dentro de um quadrado com $5$ cm de la
 
 \begin{texto}
 {
-\begin{observation}{}
+\begin{observation}
 Para ampliar uma figura, um método prático é o de sobrepor à figura uma malha regular. Ampliando a malha os pontos de referência da figura sobre a malha inicial poderão ser transferidos sem dificuldade para a nova malha ampliada e assim, todos os delalhes da figura inicial poderão aparecer na nova figura em tamanho maior.
 \end{observation}
 }
@@ -363,14 +303,12 @@ Concluir que, no caso de semelhança de triângulos, a definição é equivalent
 \end{itemize}}
 {1}{1}
 \end{objectives}
-\marginpar{\vspace{-2.5em}}
 \begin{sugestions}{Triângulos Semelhantes}
 {A atividade a seguir, pede que os alunos verifiquem se os triângulos são ou não semelhantes. Em princípio, os alunos podem ficar confusos tentando mostrar que todos os pontos no interior da região triângular atendem o que foi pedido na definição de semelhança. Vale lembrar que um triângulo fica definido por três pontos não colineares e, portanto, basta verificar que as razões entre distâncias \(AB\), \(BC\) e \(AC\) e \(A'B'\), \(B'C'\) e \(A'C'\), respectivamente, são iguais. Desse modo, a figura formada pelos pontos \(A\), \(B\) e \(C\) é semelhante à figura formada pelos pontos \(A'\), \(B'\) e \(C'\).
 
 Portanto, atender à definião de semelhança, no caso de triângulos, consiste no caso de semelhança \(LLL\). Um caso de semelhança de triângulos é um conjunto de condições mínimas que garantem a semelhança dos triângulos envolvidos. Apenas os triângulos possuem casos de semelhança simples o sufuciente para serem estudados e conhecidos.}
 {1}{1}
 \end{sugestions}
-\marginpar{\vspace{-1.5em}}
 \begin{answer}{Triângulos Semelhantes}
 {\begin{enumerate}[topsep=0pt]
 \item {} 
@@ -829,7 +767,7 @@ Em seguida, ela pediu a Carlos que ficasse em pé e mediu a sombra de Carlos no 
 Com os dados dessa história, determine um valor aproximado para a altura do obelisco.
 
 \item {} 
-A figura abaixo mostra uma sequência de três triângulos equiláteros sendo que os dois primeiros possuem lados medindo 8 e 6.
+A figura a seguir mostra uma sequência de três triângulos equiláteros sendo que os dois primeiros possuem lados medindo 8 e 6.
 \begin{center}\begin{tikzpicture}
 \begin{scope}[scale=.35]
 \fill[line width=0.8pt,color=\currentcolor!80,fill=\currentcolor!80,fill opacity=0.15000000596046448] (0.,0.) -- (8.,0.) -- (4.,6.9282032302755105) -- cycle;
@@ -881,7 +819,7 @@ Seja ABCD um retângulo e \(M\) um ponto do lado \(CD\). São dadas as medidas: 
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/probabilidade1_bibliografia.bib}
 
 \nocite{*}

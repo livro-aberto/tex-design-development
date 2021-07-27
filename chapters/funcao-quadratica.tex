@@ -1,12 +1,9 @@
-%!TEX root = ../aluno.tex
+\chapterillustration{abertura-funcao-quadratica}{abertura-funcao-quadratica-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-funcao-quadratica}
-\else
-\renewcommand\chapterillustration{abertura-funcao-quadratica-professor}
-\fi
-\renewcommand\chapterwhat{Função quadrática com enfoque na representação algébrica ou gráfica, entendendo suas aplicações tanto em problemas de otimização quanto na utilização das propriedades da curva (parábola) nas diversas áreas do conhecimento.}
-\renewcommand\chapterbecause{As funções quadráticas apresentam-se especialmente em problemas que chamamos de otimização, onde o objetivo é determinar em que condições uma grandeza assume valores máximo ou mínimo, como por exemplo, o lucro máximo de uma empresa, área máxima de uma região plana, o preço mínimo de um determinado produto sujeito a condições específicas e assim por diante. Além disso, servem de modelo para os estudos físicos do movimento onde há aceleração constante, e possui aplicação em diversas áreas como: engenharia, economia, administração, ciência da computação etc.}
+\chapterwhat{Função quadrática com enfoque na representação algébrica ou gráfica, entendendo suas aplicações tanto em problemas de otimização quanto na utilização das propriedades da curva (parábola) nas diversas áreas do conhecimento.}
+
+\chapterbecause{As funções quadráticas apresentam-se especialmente em problemas que chamamos de otimização, onde o objetivo é determinar em que condições uma grandeza assume valores máximo ou mínimo, como por exemplo, o lucro máximo de uma empresa, área máxima de uma região plana, o preço mínimo de um determinado produto sujeito a condições específicas e assim por diante. Além disso, servem de modelo para os estudos físicos do movimento onde há aceleração constante, e possui aplicação em diversas áreas como: engenharia, economia, administração, ciência da computação etc.}
+
 \chapter{Função Quadrática}
 \label{\detokenize{AF209::doc}}\label{\detokenize{AF209:funcao-quadratica}}
 
@@ -17,83 +14,29 @@
 \fi
 \def\estchapdois{}
 
-\mbox{}\thispagestyle{empty}\clearpage
+%%%% Página de créditos
 
-\thispagestyle{empty}
+\autorum{Luiz Amorim (Colégio Pedro II)}
+\autordois{Bruno Vianna (Colégio Pedro II)}
 
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+\revisorum{Cydara Ripoll}
+\revisordois{Letícia Rangel}
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+\versao{1.1}
 
-\vspace*{.3cm}
+\graficos{Beatriz Cabral e Tarso Caldas}
+\ilustracao{Miller  Guglielmo}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
+\autordacapa{Ashkan Forouzani}{Unsplash}{https://unsplash.com/photos/J4idEoFc8k8}
 
-Versão digital do capítulo:
+%Licença cc-by-sa
+\ccbysa
 
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF209.html}
+% Link para versão digital:
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/AF107.html}
 
+\creditos
 
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & Função Quadrática\\
-\\
-Ano/ Versão: & 2020 / versão 1.1 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação:& Fabio Simas, \\
-			& Augusto Teixeira (livroaberto@impa.br)\\
-\\
-  Autores: & Luiz Amorim (Colégio Pedro II),\\
-           & Bruno Vianna (Colégio Pedro II).\\
-
-\\
-Revisão: &  Cydara Ripoll,  \\
-        &  Letícia Rangel \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & Beatriz Cabral e Tarso Caldas (Licenciandos da UNIRIO)\\
-\\
-  Capa: & Foto de Ashkan Forouzani, no Unsplash\\
-  		& https://unsplash.com/photos/J4idEoFc8k8 \\
-
-\end{tabular}
-\vspace{.5cm}
-
-
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
-
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -219,7 +162,6 @@ Distrator trabalhado em: \hyperref[\detokenize{AF209-0:ativ-funcao-quadratica-la
 }{1}{1}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Lançando objetos das nuvens em Dubai}
 {
 \begin{enumerate}
@@ -320,10 +262,9 @@ A tabela a seguir descreve a altura da bolinha ao longo do tempo.
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-\(t\) & Tempo (s) & Altura (m) \\
+\tcolor{\(t\)} & \tcolor{Tempo (s)} & \tcolor{} \\
 \hline
 \(t_0\) & \(0\) & \(200\) \\ 
 \hline
@@ -339,7 +280,7 @@ A tabela a seguir descreve a altura da bolinha ao longo do tempo.
 \hline
 \(t_6\) & \(6\) & \(20\) \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \begin{enumerate}
@@ -348,10 +289,9 @@ Numa folha de papel ou similar, reproduza a tabela a seguir e preencha o que fal
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|l|}
+\begin{tabular}{|c|l|}
 \hline
-\thead
-Tempo de Queda & Distância percorrida pela bolinha \\
+\tcolor{Tempo de Queda} & \tcolor{Distância percorrida pela bolinha} \\
 \hline
 De \(t_0\) a \(t_0 = 0\)s & \(d_0 = 200 - 200 = 0\)m \\
 \hline
@@ -367,7 +307,7 @@ De \(t_0\) a \(t_5 = 5\)s & \(d_5 =\) \\
 \hline
 De \(t_0\) a \(t_6 = 6\)s & \(d_6 =\) \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -593,11 +533,9 @@ Uma das conclusões mais importantes de Galileu, foram com bases em experiência
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{2mm}
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Medição & Espaço percorrido & Tempo Gasto \\
+\tcolor{Medição} & \tcolor{Espaço percorrido} & \tcolor{Tempo Gasto} \\
 \hline
 1ª & \(\displaystyle \frac{\Delta p}{4}\) & \(\displaystyle\frac{t}{2}\) \\
 \hline
@@ -605,7 +543,7 @@ Medição & Espaço percorrido & Tempo Gasto \\
 \hline
 3ª & \(\Delta p\) & \(t\) \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -823,16 +761,14 @@ Dada a função \(f: \mathbb{R} \to \mathbb{R}\) definida por \(f(x)=x^2\), faç
 Complete a tabela a seguir com os valores que faltam.
 
 \begin{table}[H]
-\setlength
-\tabulinesep{1mm}
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\cellcolor{\currentcolor!80}\textcolor{white}{\(\bm{x}\)} & \(-5\) & \(-3\) & & \(-1\) & & \(1\) & \(2\) & \(3\) & & \(\frac{10}{3}\) & \(\sqrt{123}\) \\
+\tcolor{\(\bm{x}\)} & \(-5\) & \(-3\) & & \(-1\) & & \(1\) & \(2\) & \(3\) & & \(\frac{10}{3}\) & \(\sqrt{123}\) \\
 \hline
-\cellcolor{\currentcolor!80}\textcolor{white}{$\bm{f(x)}$} & & & \(4\) & & \(0\) & & & & \(25\) & & \\
+\tcolor{$\bm{f(x)}$} & & & \(4\) & & \(0\) & & & & \(25\) & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -895,18 +831,14 @@ Caso seja possível, forneça o ponto da função \(f\) que está a mesma distâ
 
 \begin{table}[H]
 \centering
-\setlength
-\tabulinesep{1mm}
-\setlength
-\tabcolsep{2.5pt}
-\begin{tabu} to \textwidth{|c|c|c|c|c|c|c|c|}
+\setlength\tabcolsep{2.5pt}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\thead
-$\bm{(x,y) \in f}$ & $\bm{(7,49)}$ & $\bm{(-5,25)}$ & $\bm{\big(\frac{2}{5},\frac{4}{25}\big)}$ & $\bm{\big(-\frac{6}{7},\frac{36}{49}\big)}$ & $\bm{\big(\sqrt{3},3\big)}$ & $\bm{\big(\sqrt{\frac{1}{2}},\frac{1}{2}\big)}$ & $\bm{(- \pi , \pi^{2})}$ \\
+\tcolor{$\bm{(x,y) \in f}$} & \tcolor{$\bm{(7,49)}$} & \tcolor{$\bm{(-5,25)}$} & \tcolor{$\bm{\big(\frac{2}{5},\frac{4}{25}\big)}$} & \tcolor{$\bm{\big(-\frac{6}{7},\frac{36}{49}\big)}$} & \tcolor{$\bm{\big(\sqrt{3},3\big)}$} & \tcolor{$\bm{\big(\sqrt{\frac{1}{2}},\frac{1}{2}\big)}$} & \tcolor{$\bm{(- \pi , \pi^{2})}$} \\
 \hline
-\cellcolor{\currentcolor!80}\makecell{\textcolor{white}{\textbf{Ponto equidistante}} \\ \textcolor{white}{\textbf{do eixo} $\bm{y}$}} & & & & & & & \\
+\tcolor{\makecell{Ponto equidistante \\ do eixo $\bm{y}$}} & & & & & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -1316,7 +1248,7 @@ A função real \(f\) definida por \(f(x)=x^2\) é tal que para qualquer \(x \in
 Como o gráfico da função \(f\) é simétrico em relação ao eixo \(y\), a análise gráfica que se faz em uma das metades da figura fica espelhada para compor a outra metade. Assim, vamos analisar o que ocorre na parte crescente de \(f\) quando aumentamos em uma unidade um elemento \(x\) do seu domínio:
 Se \(x \in ]0,+\infty[\), temos que \(f(x) = x^{2}\) e \(f(x+1)=(x+1)^{2}=x^{2}+2x+1\). Assim, \(f(x+1)-f(x)=2x+1\), ou seja, as variações das imagens dependem do \(x\) escolhido. Mais especificamente, neste caso elas formam uma progressão aritmética de razão \(2\) e, com isso, as variações analisadas são crescentes. Graficamente,
 
-\begin{observation}{}
+\begin{observation}
 
 A função real \(f\) definida por \(f(x)=x^2\) não é função afim.
 \end{observation}
@@ -1327,11 +1259,9 @@ Muito provavelmente, as características anteriores de \(f\), ou mesmo os itens 
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{.5mm}
-\begin{tabu} to \textwidth{|l|l|l|}
+\begin{tabular}{|l|l|l|}
 \hline
-\thead
-$\bm{x \in f}$ & $\bm{f(x)}$ & $\bm{f(x+1)-f(x)}$ \\
+\tcolor{$\bm{x \in f}$} & \tcolor{$\bm{f(x)}$} & \tcolor{$\bm{f(x+1)-f(x)}$} \\
 \hline
 \(0\) & \(0\) & \(1-0=1\) \\
 \hline
@@ -1347,7 +1277,7 @@ $\bm{x \in f}$ & $\bm{f(x)}$ & $\bm{f(x+1)-f(x)}$ \\
 \hline
 \multicolumn{1}{|c|}{\(\vdots\)} & \multicolumn{1}{c|}{\(\vdots\)} & \multicolumn{1}{c|}{\(\vdots\)} \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -1356,11 +1286,9 @@ Escolhendo \(x\) do domínio de \(f\) e um \(r \in \mathbb{R}\) constante, podem
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{3.5pt}
-\setlength\tabulinesep{1mm}
-\begin{tabu} to \textwidth{|l|l|l|}
+\begin{tabular}{|l|l|l|}
 \hline
-\thead
-$\bm{x\in f}$ & \multicolumn{1}{c|}{\cellcolor{\currentcolor!80}\textcolor{white}{$\bm{f(x)}$}} & \multicolumn{1}{c|}{\cellcolor{\currentcolor!80}\textcolor{white}{$\bm{f(x+r)-f(x)}$}} \\
+\tcolor{$\bm{x\in f}$} & \tmcol{1}{c|}{$\bm{f(x)}$} & \tmcol{1}{c|}{$\bm{f(x+r)-f(x)}$} \\
 \hline
 $x$ & $x^2$ & $(x+r)^2-x^2=2xr+ 1 \cdot r^2$ \\
 \hline
@@ -1376,13 +1304,13 @@ $x+5r$ & $(x+5r)^2=x^2+10xr+25r^2$ & \multicolumn{1}{c|}{$\vdots$} \\
 \hline
 \multicolumn{1}{|c|}{$\vdots$} & \multicolumn{1}{c|}{$\vdots$} & \multicolumn{1}{c|}{$\vdots$} \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
 E esse padrão continua, nos permitindo perceber que
 
-\begin{observation}{}
+\begin{observation}
 
 Na função real \(f\) definida por \(f(x)=x^2\) as diferenças entre imagens consecutivas, geradas por uma parte do domínio cujos elementos estejam em progressão aritmética, formam também uma progressão aritmética com primeiro termo igual a \(2xr+r^2\) e razão \(2r^2\).
 \end{observation}
@@ -1508,10 +1436,9 @@ Numa folha de papel ou similar, copie a tabela a seguir e complete-a.
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-Base & Altura & Área \\
+\tcolor{Base} & \tcolor{Altura} & \tcolor{Área} \\
 \hline
 $0$ & & \\
 \hline
@@ -1521,7 +1448,7 @@ $4$ & & \\
 \hline
 $6$ & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -1561,7 +1488,9 @@ Ao analisarmos \(A(x)=-(x-3)^2+9\), existe algum valor de \(x\) que faça \(A(x)
 \item {} 
 Qual a área máxima do Retângulo?
 
-\item {} 
+\item {} \begin{tikzpicture}
+
+\end{tikzpicture}
 Qual o valor de \(x\), que gera a área máxima?
 
 \end{enumerate}
@@ -1574,13 +1503,12 @@ Na atividade \hyperref[\detokenize{AF209-3:sub-ativ-funcao-quadratica-perimetro-
 Sabe-se que uma função real do tipo \(f(x)=x^2\) tem a propriedade \(f(x) \geq 0\), para todo \(x \in \mathbb{R}\). Ou seja, qualquer variável real que esteja elevada ao quadrado tem resultado mínimo igual a zero e pode crescer tanto quanto se queira. Imagine agora que esse quadrado seja multiplicada por um número negativo, os resultados que podiam crescer o quanto se quisesse, agora ficam negativos e, na verdade, passam a diminuir tanto quanto se queira e o zero passa a ser o seu maior valor. As tabelas abaixo evidenciam isso:
 
 \begin{multicols}{2}
+% \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 \raggedleft
-\setlength\tabulinesep{.8mm}
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|e{4em}|e{4em}|}
 \hline
-\thead
-$\bm{x}$ & $\bm{x^2}$ \\
+\tcolor{$\bm{x}$} & \tcolor{$\bm{x^2}$} \\
 \hline
 $0$ & $0$ \\
 \hline
@@ -1596,16 +1524,14 @@ $\pm100$ & $10000$ \\
 \hline
 $\pm1000$ & $1000000$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \columnbreak
 \begin{table}[H]
 \raggedright
-\setlength\tabulinesep{.5mm}
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|e{4em}|e{4em}|}
 \hline
-\thead
-$\bm{x}$ & $\bm{-x^2}$ \\
+\tcolor{$\bm{x}$} & \tcolor{$\bm{-x^2}$} \\
 \hline
 $0$ & $-0$ \\
 \hline
@@ -1621,13 +1547,13 @@ $\pm100$ & $-10000$ \\
 \hline
 $\pm1000$ & $-1000000$ \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 \end{multicols}
 \needspace{10em}
 A análise feita gera a regra que segue.
 
-\begin{observation}{}
+\begin{observation}
 
 Para \(f(x)=ax^2\) temos:
 
@@ -1694,7 +1620,6 @@ e uma das situações a seguir é verdadeira:
 
 \clearpage
 \def\currentcolor{session3}
-\marginpar{\vspace{.5em}}
 \begin{objectives}{Menino Gauss}
 {
   \begin{itemize}
@@ -1715,7 +1640,6 @@ Sim.
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Menino Gauss}
 {
 \begin{enumerate}\setcounter{enumi}{2}
@@ -1757,7 +1681,6 @@ As somas de cada número com seu correspondente no verso dá, agora, \(n+1\). Co
 }{1}
 \end{answer}
 \clearmargin
-% \marginpar{\vspace{.5em}}
 \begin{objectives}{Números triangulares}
 {
 \begin{itemize}
@@ -2177,7 +2100,7 @@ S_{n}&=\frac{r}{2} \cdot n^2 + \frac{(2a_{1}-r)}{2} \cdot n
 \end{align*}
 que é uma função quadrática dada em sua forma polinomial (com \(c=0\)) e domínio discreto \(\mathbb{N}^*\).
 
-\begin{observation}{}
+\begin{observation}
 
 A expressão que fornece a soma dos \(n\) primeiros termos de uma progressão aritmética, em função de \(n\), é uma \textbf{função quadrática}.
 \end{observation}
@@ -2211,7 +2134,6 @@ Essa atividade é um boa referência para conduzirmos a conclusão de que \textb
 }{1}{1}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{O gráfico e a forma canônica}
 {
 \paragraph{Parte 1}
@@ -2235,7 +2157,6 @@ Mais aberta.
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{O gráfico e a forma canônica}
 {
 \begin{enumerate}\setcounter{enumi}{5}
@@ -2264,7 +2185,6 @@ Mais aberta.
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 
 \begin{answer}{O gráfico e a forma canônica}
 {
@@ -2280,7 +2200,6 @@ Esquerda.
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{O gráfico e a forma canônica}
 {
 \begin{enumerate}\setcounter{enumi}{2}
@@ -2295,7 +2214,6 @@ Translação Horizontal.
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{O gráfico e a forma canônica}
 {
 \paragraph{Parte 3}
@@ -2319,7 +2237,6 @@ Translação Vertical.
 \end{answer}
 \clearmargin
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{O gráfico e a forma canônica}
 {
 \paragraph{Parte 4}
@@ -2334,7 +2251,6 @@ Translação Vertical.
 \end{answer}
 \clearmargin
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{O gráfico e a forma canônica}
 {
 \begin{enumerate}\setcounter{enumi}{1}
@@ -2347,7 +2263,6 @@ Translação Vertical.
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{O gráfico e a forma canônica}
 {
 \begin{enumerate}\setcounter{enumi}{3}
@@ -2711,7 +2626,7 @@ Observe as figuras a seguir, e note que em todas os valores de \(a\) são sempre
 \centering
 \capstart
 
-\noindent\includegraphics[width=325bp]{{412}.jpg}
+\noindent\includegraphics[width=315bp]{{412}.jpg}
 \caption{(\(p=-1\) e \(q=2\))}\label{\detokenize{AF209-5:id11}}\end{figure}
 
 \begin{enumerate}
@@ -2727,7 +2642,7 @@ As figuras a seguir mostram as variações obtidas no gráfico para os valores d
 \centering
 \capstart
 
-\noindent\includegraphics[width=325bp]{{42}.jpg}
+\noindent\includegraphics[width=315bp]{{42}.jpg}
 \caption{(\(p=5\) e \(q=5\))}\label{\detokenize{AF209-5:id12}}\end{figure}
 
 \begin{figure}[H]
@@ -2748,7 +2663,7 @@ As figuras a seguir mostram as variações obtidas no gráfico para os valores d
 \centering
 \capstart
 
-\noindent\includegraphics[width=325bp]{{45}.jpg}
+\noindent\includegraphics[width=315bp]{{45}.jpg}
 \caption{(\(p=-5\) e \(q=-5\))}\label{\detokenize{AF209-5:id15}}\end{figure}
 
 Exiba as coordenadas do vértice em função de \(p\) e \(q\).
@@ -3160,7 +3075,7 @@ $$d(P,d)=x^2+\frac{1}{4}$$
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=1.75, every node/.style={scale=1.75}]
+\begin{tikzpicture}[scale=1.7, every node/.style={scale=1.75}]
 \draw [help lines, secundario!30, step=.5] (-1.8,-1) grid (2.3,2.8);
 \draw [help lines, dotted, secundario!70, step=.25] (-1.8,-1) grid (2.3,2.8);
 \draw [->] (-1.8,0) -- (2.3,0);
@@ -3226,13 +3141,14 @@ Portanto toda função quadrática apresentada na sua forma canônica \(f(x)=a(x
 
 \end{enumerate}
 
-\textbf{Observação}
-
+\begin{observation}
 Toda parábola com reta diretriz paralela ao eixo das abscissas será uma função quadrática.
+\end{observation}
+
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=.75, every node/.style={scale=2}]
+\begin{tikzpicture}[scale=.7, every node/.style={scale=2}]
 
 \draw [help lines, very thin, secundario!30, step=2] (-3,-1.5) grid (7,10);
 \draw [help lines, dotted, very thin, secundario!70, step=.25] (-3,-1.5) grid (7,10);
@@ -3256,7 +3172,7 @@ Toda parábola com reta diretriz paralela ao eixo das abscissas será uma funç�
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=.75, every node/.style={scale=2}, yscale=.75]
+\begin{tikzpicture}[scale=.7, every node/.style={scale=2}, yscale=.75]
 
 \draw [help lines, very thin, secundario!30, step=2] (-5,-8.8) grid (7,4.5);
 \draw [help lines, dotted, very thin, secundario!70, step=.25] (-5,-8.8) grid (7,4.5);
@@ -3280,7 +3196,7 @@ Note que se esta condição não for aceita, o gráfico apresentado, não será 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=.55, every node/.style={scale=1.75}]
+\begin{tikzpicture}[scale=.5, every node/.style={scale=1.75}]
 
 \draw [help lines, very thin, secundario!30, step=2] (-3.8,-4.5) grid (11.3,6.5);
 \draw [help lines, dotted, secundario!70, step=.25] (-3.8,-4.5) grid (11.3,6.5);
@@ -3352,7 +3268,6 @@ Aplicar a definição geométrica de parábola numa situação prática;
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2em}}
 \begin{sugestions}{Fugindo pela parábola}
 {
 Problemas geométricos que envolvem distâncias de um ponto a outro são, em geral, tratados com o recurso das circunferências e suas propriedades. Aqui desejamos ampliar as ferramentas de solução de problemas desse tipo, ajudando o estudante a incorporar como método de solução de problemas de distâncias, a parábola.
@@ -3372,7 +3287,6 @@ Questione se existe uma região onde a resposta seria: “Tanto faz”! Estimule
 \end{itemize}
 }{1}{1}
 \end{sugestions}
-\marginpar{\vspace{-1em}}
 \begin{answer}{Fugindo pela parábola}
 {
 Traçando uma reta no limite da região ‘H’ e usando o ponto ‘Q’, pode-se traçar os pontos do salão que equidistam de ‘H’ ou ‘Q’, que é a parábola. Assim, as melhores chances de fuga se dão para:
@@ -3455,7 +3369,7 @@ Num jogo eletrônico em que você controla um oficial militar infiltrado. Dentre
 \centering
 \capstart
 
-\noindent\includegraphics[width=170bp]{{MGS_1998_PS_Espreita}.jpg}
+\noindent\includegraphics[width=165bp]{{MGS_1998_PS_Espreita}.jpg}
 \caption{Imagem de divulgação.}\label{\detokenize{AF209-6:id2}}\end{figure}
 
 Como as câmeras fazem movimento de vai e vem, é possível atravessar o salão sem ser detectado, e esse é o objetivo desta fase. A imagem a seguir mostra a vista de cima desta fase.
@@ -3510,7 +3424,7 @@ A região em cinza é uma região que, em algum momento, pode ser enxergado por 
 Os pontos em vermelho são posições possíveis para o personagem que, percebendo a proximidade do olhar de alguma das câmeras deve correr e se esconder numa região em preto. Sendo assim, para cada posição do personagem, diga para onde ele deve correr: Região horizontal ‘H’ ou Região quadrada ‘Q’.
 \end{task}
 
-\begin{research}{}
+\begin{research}
 
 A definição geométrica da \textbf{parábola} apresentada inicialmente pode ser associada à referência histórica de corte de cone reto, para isso acesse o link do geogebra a seguir e mantenha os valores de \(t\) e \(a\), variando apenas os valores de \(s\).
 
@@ -3534,7 +3448,6 @@ cartesianos para a representação gráfica de funções.
 \end{itemize}
 }{1}{1}
 \end{objectives}
-\marginpar{\vspace{-2.25em}}
 \begin{sugestions}{Aumento na Passagem}
 {
 Prezado colega esta atividade tem como objetivo aplicar o conceito de otimização em função quadrática num contexto econômico, chamando atenção para o aluno de:
@@ -3599,7 +3512,6 @@ $\tcolor{Aumento em reais}$ & $\tcolor{Novo preço}$ & $\tcolor{Nova quantidade 
 }{0}
 \end{answer}
 \clearmargin
-% \marginpar{\vspace{.5em}}
 \begin{answer}{Aumento na Passagem}
 {
 \begin{enumerate}\setcounter{enumi}{2}
@@ -3926,10 +3838,9 @@ Uma empresa de transporte rodoviário, faz o trajeto entre duas cidades brasilei
 \begin{table}[H]
 \centering
 \setlength\tabcolsep{2.5pt}
-\begin{tabu} to \textwidth{|c|l|l|l|}
+\begin{tabular}{|c|l|l|l|}
 \hline
-\thead
-Aumento em reais & Novo preço & Nova quantidade de passageiros & Faturamento em reais \\
+\tcolor{Aumento em reais} & \tcolor{Novo preço} & \tcolor{Nova quantidade de passageiros} & \tcolor{Faturamento em reais} \\
 \hline 0 & 40 + 1 . 0 = 40 & 1 200 - 10 . 0 = 1 200 & 40 . 1200 = 48 000 \\
 \hline
 10 & 40 + 1 . 10 = 50 & 1 200 - 10 . 10 = 1 100 & 50 . 1 100 = 55 000 \\
@@ -3956,7 +3867,7 @@ Aumento em reais & Novo preço & Nova quantidade de passageiros & Faturamento em
 \hline
 130 & & & \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \item {} 
@@ -3964,7 +3875,7 @@ Escolha um dos planos cartesianos a seguir, para representar os pontos da tabela
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=.5, every node/.style={scale=2.75}, xscale=1.25]
+\begin{tikzpicture}[scale=.475, every node/.style={scale=2.75}, xscale=1.25]
 
 \draw [help lines, secundario!30, step=2] (-1,-1) grid (13,13);
 \draw [help lines, dotted, secundario!70, step=.25] (-1,-1) grid (13,13);
@@ -3981,7 +3892,7 @@ Escolha um dos planos cartesianos a seguir, para representar os pontos da tabela
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=.5, every node/.style={scale=2.75}, xscale=1.25]
+\begin{tikzpicture}[scale=.475, every node/.style={scale=2.75}, xscale=1.25]
 
 \draw [help lines, secundario!30, step=2] (-1,-1) grid (13,8);
 \draw [help lines, dotted, secundario!70, step=.25] (-1,-1) grid (13,8);
@@ -3997,7 +3908,7 @@ Escolha um dos planos cartesianos a seguir, para representar os pontos da tabela
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[scale=.5, every node/.style={scale=2.75}, xscale=1.25]
+\begin{tikzpicture}[scale=.475, every node/.style={scale=2.75}, xscale=1.25]
 
 \draw [help lines, secundario!30, step=2] (-1,-1) grid (14,14);
 \draw [help lines, dotted, secundario!70, step=.25] (-1,-1) grid (14,14);
@@ -4191,7 +4102,9 @@ Ao resolvermos a equação quadrática é possível que encontremos os \textbf{z
 
 Analisemos o sinal de \(\Delta\):
 
-\textbf{Caso 1} Para \(\Delta>0\) , teremos na fórmula quadrática, uma raiz quadrada de um número positivo, sendo seu resultado um número real positivo qualquer (inteiro, racional não inteiro ou irracional), ao somarmos esse valor com \(-b\) e dividirmos o resultado por \(2a\),  encontraremos um dos zeros da função \(f\) que chamaremos de \(x_1\); ao subtrairmos esse valor de \(-b\) e dividirmos o resultado por \(2a\), teremos o outro zero da função \(f\) que chamaremos de \(x_2\), sendo: $$x_1= \frac{-b+\sqrt{\Delta}}{2a} \text{ e } x_2=\frac{-b-\sqrt{\Delta}}{2a}$$
+\paragraph{Caso 1}
+
+Para \(\Delta>0\) , teremos na fórmula quadrática, uma raiz quadrada de um número positivo, sendo seu resultado um número real positivo qualquer (inteiro, racional não inteiro ou irracional), ao somarmos esse valor com \(-b\) e dividirmos o resultado por \(2a\),  encontraremos um dos zeros da função \(f\) que chamaremos de \(x_1\); ao subtrairmos esse valor de \(-b\) e dividirmos o resultado por \(2a\), teremos o outro zero da função \(f\) que chamaremos de \(x_2\), sendo: $$x_1= \frac{-b+\sqrt{\Delta}}{2a} \text{ e } x_2=\frac{-b-\sqrt{\Delta}}{2a}$$
 
 Portanto a parábola (gráfico de \(f\)) intersectará o eixo das abscissas em dois pontos: \(P_1=(x_1,0)\)  e \(P_2=(x_2,0)\)
 \begin{figure}[H]
@@ -4231,7 +4144,9 @@ Portanto a parábola (gráfico de \(f\)) intersectará o eixo das abscissas em d
 \end{figure}
 
 
-\textbf{Caso 2} Para \(\Delta=0\) , teremos na fórmula quadrática, uma raiz quadrada de zero, que resulta em zero, e somar ou subtrair \(0\) de \(-b\) acharemos sempre \(-b\), resultando assim num único zero de \(f\), no caso: \(\displaystyle x= \frac{-b\pm\sqrt{0}}{2a}=\frac{-b\pm0}{2a}=\frac{-b}{2a}=p=x_v\). Note que esta expressão é a mesma apresentada anteriormente para a coordenada \(x\) do vértice da parábola.
+\paragraph{Caso 2}
+
+Para \(\Delta=0\) , teremos na fórmula quadrática, uma raiz quadrada de zero, que resulta em zero, e somar ou subtrair \(0\) de \(-b\) acharemos sempre \(-b\), resultando assim num único zero de \(f\), no caso: \(\displaystyle x= \frac{-b\pm\sqrt{0}}{2a}=\frac{-b\pm0}{2a}=\frac{-b}{2a}=p=x_v\). Note que esta expressão é a mesma apresentada anteriormente para a coordenada \(x\) do vértice da parábola.
 
 Portanto a parábola (gráfico de \(f\)) “tocará” no eixo das abscissas em apenas um ponto: \(\displaystyle V=(\frac{-b}{2a},0)\). Ou melhor, o eixo das abscissas será tangente à parábola no ponto \(V\).
 \begin{figure}[H]
@@ -4265,7 +4180,9 @@ Portanto a parábola (gráfico de \(f\)) “tocará” no eixo das abscissas em 
 \end{figure}
 
 
-\textbf{Caso 3} Para \(\Delta<0\) , teremos na fórmula quadrática, uma raiz quadrada de um número real negativo, que resulta no fato de não existir um valor de \(x\) real que atenda essa equação quadrática. Sendo assim o gráfico nem toca nem intersecta o eixo das abscissas, logo a função \(f\) não possuirá zeros.
+\paragraph{Caso 3}
+
+Para \(\Delta<0\) , teremos na fórmula quadrática, uma raiz quadrada de um número real negativo, que resulta no fato de não existir um valor de \(x\) real que atenda essa equação quadrática. Sendo assim o gráfico nem toca nem intersecta o eixo das abscissas, logo a função \(f\) não possuirá zeros.
 
 Portanto a parábola (gráfico de \(f\)) ficará posicionada totalmente acima (\(a>0\)) ou abaixo (\(a<0\)) do eixo das abscissas.
 \begin{figure}[H]
@@ -4309,10 +4226,9 @@ Exemplo \(1\) : Seja a função real \(f\) definida por \(f(x) = x^2 - 6x + 8\) 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[yscale=.4, every node/.style={scale=2.5}]
+\begin{tikzpicture}[yscale=.4, every node/.style={scale=2}]
        \draw [ thick, ->] (-1.5,0) -- (7.5,0);
      \draw [ thick, ->] (0,-1.5) -- (0,10.5);
-     \node [below left, scale=.4] at (0,0) {0};
        \foreach \y in {-1,1,2,...,9,10} \node [left, scale=0.4] at (0,\y) {\y};
        \foreach \x in {-1,1,2,...,7} \node [below , scale=0.4] at (\x,0) {\x};
        \draw [color=\currentcolor!80,  thick, domain=-0.36:6.36] plot (\x,{(\x)^2-6*(\x)+8});
@@ -4335,11 +4251,10 @@ Exemplo 2: Seja a função real \(f\) definida por \(f(x) = -2x^2 +4x + 6\) repr
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[yscale=.5, every node/.style={scale=2.5}]
+\begin{tikzpicture}[yscale=.45, every node/.style={scale=2}]
 
      \draw [ thick, ->] (-3.5,0) -- (4.5,0);
        \draw [ thick, ->] (0,-2.5) -- (0,9.5);
-       \node [below left,scale=.4] {0};
               \foreach \y in {-2,-1,1,2,...,8,9} \node [left, scale=0.4] at (0,\y) {\y};
      \foreach \x in {-2,-1,1,2,...,4} \node [below, scale=0.4] at (\x,0) {\x};
              \draw [color=\currentcolor!80,  thick, domain=-1.2:3.2] plot (\x,{-2*(\x)^2+4*(\x)+6});
@@ -4397,7 +4312,6 @@ Mesmo esse grupo de atividades sendo único, adicionamos à última atividade um
 }{1}{1}
 \end{sugestions}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{Altura do arco da praça da Apoteose}
 {
 \begin{enumerate}
@@ -4531,7 +4445,6 @@ Existe disponível na internet diversos projetos que envolvem o uso do jogo Angr
 }{1}
 \end{answer}
 \clearmargin
-\marginpar{\vspace{.5em}}
 \begin{answer}{A jogada vencedora}
 {
 \begin{enumerate}
@@ -4842,13 +4755,13 @@ Com instrumento adequado, sem vento, eles mediram a altura da bola em alguns ins
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\cellcolor{\currentcolor!80}\textcolor{white}{\textbf Tempo em segundos} & \(1\) & \(2\) & \(3\) \\
+\tcolor{Tempo em segundos} & \(1\) & \(2\) & \(3\) \\
 \hline
-\cellcolor{\currentcolor!80}\textcolor{white}{\textbf Altura em metros} & \(7\) & \(11\) & \(13\) \\
+\tcolor{Altura em metros} & \(7\) & \(11\) & \(13\) \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -5144,7 +5057,7 @@ Um famoso problema da história do cálculo é a descoberta da relação que for
 \centering
 \capstart
 
-\noindent\includegraphics[width=200bp]{{Aalborg_power_lines}.jpg}
+\noindent\includegraphics[width=190bp]{{Aalborg_power_lines}.jpg}
 \caption{Foto de \href{https://commons.wikimedia.org/wiki/File:Aalborg\_power\_lines.jpg}{Heb} CC BY-SA.}\label{\detokenize{AF209-11:id9}}\end{figure}
 
 O conhecimento dessa relação permite, por exemplo, calcular o seu comprimento para fins de planejamento e economia na execução de um projeto.
@@ -5162,21 +5075,21 @@ Hoje, com os recuros computacionais gerados a partir desses e de outros fatos hi
 \centering
 \capstart
 
-\noindent\includegraphics[width=200bp]{{Dulles_International_Airport}.png}
+\noindent\includegraphics[width=190bp]{{Dulles_International_Airport}.png}
 \caption{Dulles International Airport. Disponível em {\href{http://imarrero.webs.ull.es/sctm04/modulo1/10/ribanez.pdf}{Torres (2014)}}}\end{figure}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=200bp]{{Catenaria_Casa_Mila}.png}
+\noindent\includegraphics[width=190bp]{{Catenaria_Casa_Mila}.png}
 \caption{Arco Catenário da casa de Milá. A catenária invertida é uma estrutura que se auto sustenta. Disponível em {\href{http://imarrero.webs.ull.es/sctm04/modulo1/10/ribanez.pdf}{Torres (2014)}}}\end{figure}
 
 \begin{figure}[H]
 \centering
 \capstart
 
-\noindent\includegraphics[width=200bp]{{Ponte-Bisantis-Catanzaro}.jpg}
+\noindent\includegraphics[width=190bp]{{Ponte-Bisantis-Catanzaro}.jpg}
 \caption{Ponte Bisantis, Itália. Conhecida pelo nome do engenhero que a projetou: Viaduto Morandis. Disponível em \href{https://3.bp.blogspot.com/-EPxjzeb0KMs/UPUgsG5jn5I/AAAAAAAAtmY/VBjNknF0oEk/s400/Ponte-Bisantis-Catanzaro.jpg}{Morandis} .}\label{\detokenize{AF209-11:id13}}\end{figure}
 
 Acesse Ponte Morandis (\url{https://www.geogebra.org/m/qezn7h4M}) para ver como a catenária descreve o arco desta ponte, mas a parábola não.
@@ -5228,10 +5141,9 @@ Ao preenchermos a tabela a seguir com as imagens dessa função podemos notar al
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\thead
-$\bm{x}$ & $\bm{f(x)}$ \\
+\tcolor{$\bm{x}$} & \tcolor{$\bm{f(x)}$} \\
 \hline
 \(-2\) & \(16\) \\
 \hline
@@ -5251,7 +5163,7 @@ $\bm{x}$ & $\bm{f(x)}$ \\
 \hline
 \(2\) & \(16\) \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Note que existe uma simetria em relação ao eixo das ordenadas, ou seja, temos que \(f(-x)=f(x)\). Além disso, \(f(x)\geq0\). Pode-se verificar essas propriedades no gráfico da função respresentado na figura a seguir:
@@ -5290,16 +5202,15 @@ Como consequência, por não existir a reta diretriz não temos uma parábola.
 
 Portanto o gráfico de $f$ \textbf{não é uma parábola}.
 
-\begin{observation}{}
+\begin{observation}
 
 Para comprovarmos que \(f\) não é uma função quadrática, podemos utilizar o fato que \(f(x)=x^4\) não atende uma das propriedade das funções quadráticas. Por exmplo: Note que se escolhermos um subconjunto do domínio de \(f\) onde seus elementos estejam em Progressão Aritmética (P.A.), as diferenças entre as imagens desses elementos não forma uma P.A., portanto \(f\) não é uma função quadrática.
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-\(\bm{x}\) & \(\bm{f(x)=x^4}\) & Diferenças \\
+\tcolor{\(\bm{x}\)} & \tcolor{\(\bm{f(x)=x^4}\)} & \tcolor{Diferenças} \\
 \hline
 \(-4\) & \(256\) & \(81-256=-175\) \\
 \hline
@@ -5319,7 +5230,7 @@ Para comprovarmos que \(f\) não é uma função quadrática, podemos utilizar o
 \hline
 \(4\) & \(256\) & \(\cdots\) \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 \end{observation}
@@ -5401,11 +5312,10 @@ O gasto é máximo para \(x=\frac{-10}{2x-10}=\frac{1}{2}\) m
 
 \begin{table}[H]
 \centering
-\setlength\tabulinesep{1mm}
-\begin{tabu} to \textwidth{|c|c|c|}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|c|c|c|}
 \hline
-\thead
-\(\bm{x}\) & \(\bm{f(x)=\sqrt{x^2+1}}\) & Diferenças \\
+\tcolor{\(\bm{x}\)} & \tcolor{\(\bm{f(x)=\sqrt{x^2+1}}\)} & \tcolor{Diferenças} \\
 \hline
 \(-4\) & \(\sqrt{17}\) & \(\sqrt{10}-\sqrt{17} \approx -0,961\) \\
 \hline
@@ -5425,7 +5335,7 @@ O gasto é máximo para \(x=\frac{-10}{2x-10}=\frac{1}{2}\) m
 \hline
 \(4\) & \(\sqrt{17}\) & \(\cdots\) \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 
@@ -5771,32 +5681,28 @@ Determine as dimensões da mesa da série “Super 4” para a qual o gasto com 
 \begin{multicols}{3}
 \begin{enumerate}
 \item
-\begin{tikzpicture}
-[scale=0.35, baseline=(current bounding box.north)]
+\begin{tikzpicture}[scale=0.35, baseline=(current bounding box.north)]
        \draw [ ->] (-3,0)--(5,0) ;
        \draw [ ->] (0,-3)--(0,5) ;
 \draw [ domain=-1.5:4] plot (\x,{-(1/2.5)*(\x*\x)+(1)*\x+3});
 \draw [ domain=-3:4.5] plot (\x, {1/3*\x+3});
 \end{tikzpicture}
 \item
-\begin{tikzpicture}
-[scale=0.35, baseline=(current bounding box.north)]
+\begin{tikzpicture}[scale=0.35, baseline=(current bounding box.north)]
 \draw [ ->] (-3,0)--(5,0) ;
        \draw [ ->] (0,-3)--(0,5) ;
   \draw [ domain=-1.5:4] plot (\x,{-(1/2.5)*(\x*\x)+(1)*\x+3});
   \draw [ domain=-1:4.5] plot (\x, {\x-1});
 \end{tikzpicture}
 \item
-\begin{tikzpicture}
-[scale=0.35, baseline=(current bounding box.north)]
+\begin{tikzpicture}[scale=0.35, baseline=(current bounding box.north)]
 \draw [ ->] (-3,0)--(5,0) ;
        \draw [ ->] (0,-3)--(0,5) ;
   \draw [ domain=-1.25:5] plot (\x,{(1/2.5)*(\x*\x)-1.5*\x+1});
        \draw [ domain=-2.5:5] plot (\x, {-1/2*\x+1});
 \end{tikzpicture}
 \item
-\begin{tikzpicture}
-[scale=0.35, baseline=(current bounding box.north)]
+\begin{tikzpicture}[scale=0.35, baseline=(current bounding box.north)]
 \draw [ ->] (-3,0)--(5,0) ;
        \draw [ ->] (0,-3)--(0,5) ;
   \draw [ domain=-2.5:5] plot (\x,{(1/2)*(\x*\x)-1.25*\x-2});
@@ -6155,10 +6061,9 @@ em que a distância percorrida por \(P\), a partir do instante do lançamento, �
 
 \begin{table}[H]
 \centering
-\begin{tabu} to \textwidth{|c|c|c}
+\begin{tabular}{|c|c|c}
 \hline
-\thead
-Tempo (s) & Concentração (moles) \\
+\tcolor{Tempo (s)} & \tcolor{Concentração (moles)} \\
 \hline
 \(1\) & \(3\text{,}00\) \\
 \hline
@@ -6166,7 +6071,7 @@ Tempo (s) & Concentração (moles) \\
 \hline
 \(3\) & \(1\text{,}00\) \\
 \hline
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Assumindo que a linha que passa pelos três pontos experimentais é uma parábola, tem-se que a concentração (em moles) após \(2\text{,}5\) segundos é:
@@ -6230,7 +6135,7 @@ Com o valor ideal, qual o ganho diário esperado?
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
+
 \bibliography{../Bibliografia/funcao-quadratica_bibliografia.bib}
 
 \nocite{*}

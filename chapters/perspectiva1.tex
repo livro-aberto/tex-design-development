@@ -1,94 +1,35 @@
-%!TEX root = ../professor.tex
+\chapterillustration{./abertura-perspectiva1}{./abertura-perspectiva1-professor}
 
-\ifnum\aluno=1
-\renewcommand\chapterillustration{./abertura-perspectiva1}
-\else
-\renewcommand\chapterillustration{./abertura-perspectiva1-professor}
-\fi
+\chapterwhat{Conceito de volume (unidade, aditividade e conservação). Diversos usos de volumes e grandezas relacionadas, como área, densidade, concentração. Compressibilidade de materiais. Posições relativas de planos e planos e planos e retas. Planificações e cortes de sólidos. Cálculo de áreas e volumes de figuras clássicas e obtenção das fórmulas. Aproximação de áreas e volumes considerando o erro. Princípio de Cavalieri e aplicações.}
 
-\def\chapterwhat{Conceito de volume (unidade, aditividade e conservação). Diversos usos de volumes e grandezas relacionadas, como área, densidade, concentração. Compressibilidade de materiais. Posições relativas de planos e planos e planos e retas. Planificações e cortes de sólidos. Cálculo de áreas e volumes de figuras clássicas e obtenção das fórmulas. Aproximação de áreas e volumes considerando o erro. Princípio de Cavalieri e aplicações.}
-
-\def\chapterbecause{Áreas e volumes são conceitos elementares que estão presentes de maneira direta na vida cotidiana do cidadão e também são necessários para outras ciências, como a Química, a Biologia e a Física. O entendimento destes conceitos e de suas relações com outras grandezas são fundamentais e basta m para a maioria dos usos corriqueiros. Aqui, o estudo de áreas e volumes serve de plano de fundo para o aperfeiçoamento do entendimento de número real, de aproximação com erro, para o desenvolvimento da habilidade de visualização espacial e para a resolução de problemas.} 
+\chapterbecause{Áreas e volumes são conceitos elementares que estão presentes de maneira direta na vida cotidiana do cidadão e também são necessários para outras ciências, como a Química, a Biologia e a Física. O entendimento destes conceitos e de suas relações com outras grandezas são fundamentais e basta m para a maioria dos usos corriqueiros. Aqui, o estudo de áreas e volumes serve de plano de fundo para o aperfeiçoamento do entendimento de número real, de aproximação com erro, para o desenvolvimento da habilidade de visualização espacial e para a resolução de problemas.} 
 
 \chapter{Medidas em Geometria Espacial}
 
 
-\mbox{}\thispagestyle{empty}\clearpage
+%%%% Página de créditos
 
-\thispagestyle{empty}
-
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
-
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
-
-\vspace*{.3cm}
-
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.org}
-
-Versão digital do capítulo:
-
-\url{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/GE504.html}
+% Autores
+\autorum{Augusto Teixeira}
+\autordois{Fabio Simas}
+\autortres{José Ezequiel Soto Sánchez}
+\autorquatro{Letícia Rangel}
 
 
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & \Chaptername \\
-\\
-Ano/Versão: & \the\year /versão 0.5 de \today\\
-\\
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
-\\
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
-\\
-Produção:& Associação Livro Aberto\\
-\\
-Coordenação:& Fabio Simas, \\
-   			& Augusto Teixeira (livroaberto@impa.br)\\
-\\
-Autores: & Augusto Teixeira,\\
-         & Fabio Simas,\\
-         & José Ezequiel Soto Sánchez,\\
-         & Letícia Rangel. \\
-\\
-Revisão: & \\
-\\
-Design: & Andreza Moreira (Tangentes Design) \\
-\\
-  Ilustrações: & --- \\ 
-\\
-Gráficos: & Tarso Caldas\\
-\\
-  Capa: & Foto de Luke Porter, no Unsplash \\
+\graficos{Tarso Caldas}
 
-\end{tabular}
+% Revisores
+
+\autordacapa{Luke Porter}{Unsplash}{https://unsplash.com/photos/ud6XcK_MUGI}
+\versao{0.5}
+
+\versaodigital{https://www.umlivroaberto.org/BookCloud/Volume_1/master/view/GE504.html}
 
 
+\ccbysa
 
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
+\creditos
 
-{\large Licença:}
-
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
-
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
-
-{\large Patrocínio:}
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
 
 \mainmatter
 
@@ -190,7 +131,6 @@ Para determinar o volume de areia que precisa comprar, Gelson pode simplesmente 
 \begin{enumerate}
 \item {} 
 Lembrando que um centímetro cúbico é o volume ocupado por um cubo de aresta 1cm, estime sem fazer cálculos o volume de uma folha de papel sulfite de tamanho A4.
-
 \end{enumerate}
 
 \begin{figure}[H]
@@ -241,7 +181,7 @@ Quanto pesa uma folha de papel da resma ilustrada no item \titem{b)}?
 \end{enumerate}
 \end{task}
 
-\begin{knowledge}{}
+\begin{knowledge}
 
 A gramatura de uma folha de papel usada em escolas e escritórios costuma variar de $75$ a \(120\) g/m$^2$.  São as indicadas para impressoras domésticas, por exemplo. Para a confecção de cartões e impressão de fotos, são recomendados papéis de maior gramatura, em torno de \(200\) g/m$^2$.  As folhas de um jornal têm gramatura de $35$ a \(55\) g/m$^2$.  A escolha da gramatura é determinante para o uso do papel. Imagine as implicações de um jornal impresso em papel de maior gramatura. Seria mais pesado, o que além de ter impacto direto no manuseio e no custo do material, com certeza, influenciaria no transporte e na impressão, por exemplo. De maneira geral, quanto maior a gramatura, mais resistente é o papel. No entanto, não se deve confundir gramatura com espessura nem com volume. Ainda que papéis com gramaturas diferentes tendam a ter espessuras diferentes, a compactação das fibras e materiais que compõem o papel determinará se as espessuras serão ou não distintas. E, portanto, os volumes também.
 \end{knowledge}
@@ -332,7 +272,7 @@ No dia do transporte choveu e entrou água na caçamba. Gelson observou que apar
 \end{enumerate}
 \end{task}
 
-\begin{knowledge}{}
+\begin{knowledge}
 
 Em muitas situações do cotidiano as misturas são descritas por razões, como em:
 \begin{itemize}
@@ -448,7 +388,7 @@ A atividade foi planejada para o uso de aplicativos computacionais. Recomendamos
 }{1}{2}
 \end{sugestions}
 
-\begin{knowledge}{}
+\begin{knowledge}
 
 Lembrando da chuva que atrapalhou a viagem do Gelson, vamos pensar mais sobre o conceito de volume. Quando Gelson saiu do armazém, transportava apenas areia. Com a chuva, entrou água na caçamba sem que o nível da carga de areia se alterasse, ou seja, sugerindo que o volume de carga não se alterou.
 
@@ -652,7 +592,7 @@ De modo similar você pode explicar que
 para quaisquer \(r\), \(s\), \(p\), \(q\), \(m\) e \(n\) naturais.
 \end{task}
 
-\begin{observation}{}
+\begin{observation}
 
 A fórmula \(V(a,b,c) = abc\) explorada na \hyperref[persp1-atividade-3]{Atividade: volume do paralelepípedo retângulo} para \(a\), \(b\) e \(c\) racionais também vale para \(a\), \(b\) e \(c\) irracionais. Por exemplo, \(V(1,1,\pi) = \pi\), \(V(1,1,\sqrt{2}) = \sqrt{2}\), \(V(1,\pi,\sqrt{2} + \sqrt{3}) = (\sqrt{2} + \sqrt{3})\pi\), etc. No entanto, a justificativa extrapola os objetivos do Ensino Médio porque depende de argumentos do Cálculo Diferencial, geralmente estudado nos cursos de exatas na Universidade.
 \end{observation}
@@ -685,7 +625,7 @@ Para calcular o volume de uma folha de papel também foi considerado que o volum
 
 Estabelecer uma estratégia não basta para calcular o volume de um objeto tridimensional. É necessária uma unidade de medida para realizar a comparação e exprimir a medida como um número. O volume é comumente expresso em metro cúbico (m\(^3\)), seus submúltiplos (dm\(^3\), cm\(^3\)) ou em litro (l ou L). A escolha da unidade está relacionada ao que se quer medir e à quantidade medida. Por exemplo, para medir a folha de papel a unidade usada foi cm$^3$. Já para abastecer um carro com GNV usa-se metros cúbicos (m\(^3\)) e com gasolina, no Brasil, usa-se litro.
 
-\begin{knowledge}{}
+\begin{knowledge}
 
 Outra propriedade importante do volume é que , em diversos casos, um mesmo material pode assumir diferentes formas sem que se altere o volume, como nos casos da massinha de modelar, da argila e da água. Um fato interessante a este respeito é que crianças de até 7 anos não têm esta noção clara, enquanto que crianças maiores de 9 anos já a possuem de forma bastante intuitiva.
 
@@ -891,7 +831,7 @@ E para cobrir a outra parede menor, em que  fica a porta do quarto?
 \end{enumerate}
 \end{task}
 
-\begin{observation}{}
+\begin{observation}
 
 Sabe-se que, após a secagem, a espessura da tinta reduz em média para $70\%$ da inicial. Essa porcentagem é chamada razão Sólido por Volume (SV) da tinta e quanto maior ela for, maior é o rendimento da tinta.
 \end{observation}
@@ -1119,7 +1059,7 @@ Existem várias outras animações que tratam da questão da dimensão e que pod
 }{1}{1}
 \end{sugestions}
 
-\begin{knowledge}{}
+\begin{knowledge}
 
 Em diversas áreas das ciências são necessárias mais do que três dimensões para que sejam descritos alguns fenômenos. Assistam ao vídeo
 
@@ -1194,14 +1134,14 @@ Levando em consideração toda a discussão desta parte da atividade, tente expl
 \end{enumerate}
 \end{task}
 
-\begin{knowledge}{}
+\begin{knowledge}
 
 Combustíveis fósseis como diesel, gasolina, etanol e GNV emitem CO\(_2\) na atmosfera quando queimados no motor dos veículos. A emissão deste gás na atmosfera é tema de discussões e tratados internacionais (Por exemplo o protocolo de Kyoto de 1997) devido ao seu potencial causador do efeito estufa. Nestes tratados é comum que os países se comprometam a reduzir as emissões de gás carbônico em um dado intervalo de tempo.
 
 Veículos híbridos, em que um motor elétrico auxilia um motor a gasolina, reduzem a aproximadamente $92$ gramas de CO\(_2\) por quilômetro rodado (aproximadamente $82\%$ do que emite um veículo movido a GNV) e veículos inteiramente elétricos não emitem gás carbônico pois seus motores não funcionam a base de combustão.
 \end{knowledge}
 
-\begin{reflection}{}
+\begin{reflection}
 
 Conforme visto na Atividade: GNV, o volume de alguns materiais pode ser alterado consideravelmente devido a variações nas condições de temperatura e pressão. Isto é especialmente fácil de se verificar para gases.
 
@@ -2392,7 +2332,7 @@ A altura de um cone é a distância do seu vértice ao plano da base. Isto é, o
 
 \end{enumerate}
 
-\begin{reflection}{}
+\begin{reflection}
 \begin{enumerate}
 \item {} 
 Qual é o prisma que qualquer face pode ser tomada como base do prisma?
@@ -2403,7 +2343,7 @@ Qual é a pirâmide que qualquer face pode ser tomada como base da pirâmide?
 \end{enumerate}
 \end{reflection}
 
-\begin{observation}{}
+\begin{observation}
 
 O que é um triângulo? Os três segmentos de  reta ou a região por eles delimitada?
 
@@ -2443,7 +2383,7 @@ Veja as imagens abaixo e reveja as suas respostas nos itens a), b) e c).
 \end{figure}
 \end{task}
 
-\begin{reflection}{}
+\begin{reflection}
 
 Agora você vai rever como se calculam as áreas de paralelogramos e triângulos a partir da área de retângulos e também que o volume de um prisma de base poligonal é dado por área da base vezes altura, assim como o volume do prisma de base retangular (paralelepípedo).
 
@@ -2547,7 +2487,7 @@ V(\text{prisma hexagonal})&=V(\text{prisma de base \(T_1\)}) + V(\text{prisma de
 \end{align*}
 \end{reflection}
 
-\begin{knowledge}{}
+\begin{knowledge}
 
 Como qualquer cilindro reto pode ser tão bem aproximado quanto se deseje por prismas, o volume de qualquer cilindro pode ser calculado por meio da expressão
 \begin{equation*}
@@ -2819,6 +2759,8 @@ Para cada modelo, use uma planificação e reproduza, na planificação, as linh
 
 \end{enumerate}
 \end{task}
+
+\clearpage
 
 \begin{task}{altura de prismas e pirâmides}
 
@@ -3708,7 +3650,7 @@ Figura com cilindro circular oblíquo com raio e comprimento  do eixo dados.
 \notasfinais
 \fi
 
-\bibliographystyle{apalike-pt}
-\bibliography{../Bibliografia/perspectiva1_bibliografia.bib}
+% 
+% \bibliography{../Bibliografia/perspectiva1_bibliografia.bib}
 
 \nocite{*}
