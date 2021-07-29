@@ -1767,7 +1767,11 @@ underlay boxed title={
   \clearpage
   \stepcounter{anexo}
   \begin{center}
+  \ifx#1\empty
   \huge{\titem{Anexo \theanexo}}
+  \else
+  \huge{\titem{Anexo \theanexo - #1}}
+  \fi
   \end{center}
 }
 
