@@ -22,7 +22,6 @@
 
 % Define o diretório das figuras e das fontes
 \def\fontspath{Fontes/}
-\def\graphics{Figuras/}
 
 \def\aluno{0}
 
@@ -269,7 +268,36 @@ decorations.pathmorphing, graphs, quotes, angles, calc, through, backgrounds}
 \newskip\libroskip
 \libroskip= 4pt plus 1pt minus 1pt
 \hfuzz=4pt
-\graphicspath{\graphics}
+\graphicspath{
+	{Figuras/}
+	{Figuras/vetores/}
+	{Figuras/perspectiva1/}
+	{Figuras/perspectiva2/}
+	{Figuras/funcoes/}
+	{Figuras/taxa/}
+	{Figuras/funcao-afim/}
+	{Figuras/funcao-quadratica/}
+	{Figuras/sistemas/}
+	{Figuras/exponencial/}
+	{Figuras/logaritmos/}
+	{Figuras/funcao-trigonometrica/}
+	{Figuras/estatistica1/}
+	{Figuras/estatistica2/}
+	{Figuras/probabilidade1/}
+	{Figuras/medidas/}
+	{Figuras/tales/}
+	{Figuras/semelhanca/}
+	{Figuras/financeira/}
+	{Figuras/ladrilhos/}
+	{Figuras/cartografia/}
+	{Figuras/investigacao/}
+	{Figuras/superficie/}
+	{Figuras/trigonometria/}
+	{Figuras/combinatoria/}
+	{Figuras/computacional/}
+	{Figuras/transformacoes/}
+	{Figuras/livroaberto/}
+}
 
 
 \def\envskip{\vskip\libroskip}
@@ -905,7 +933,7 @@ underlay boxed title={
 
 
         \begin{pgfonlayer}{bottom}
-            \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{\@chapterillustration}};
+            \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{capas/\@chapterillustration}};
         \end{pgfonlayer}
 
         \begin{pgfonlayer}{top}
