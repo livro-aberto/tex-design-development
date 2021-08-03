@@ -8,7 +8,7 @@
 \ProvidesPackage{\filename}
 
 
-%Combina?o dos pacotes usados para o livro aberto
+%Combinação dos pacotes usados para o livro aberto
 %Para acessar cada seção basta usar Ctrl+F
 
 %Seção 0 - Pacotes e Comandos base
@@ -20,9 +20,10 @@
 %Seção 6 - Livro Aberto Page 
 %Seção 7 - Livro Aberto Professor
 
-% Define o diret?io das figuras e das fontes
+% Define o diretório das figuras e das fontes
+
 \def\fontspath{Fontes/}
-\def\graphics{Figuras/}
+
 
 \def\aluno{1}
 
@@ -192,7 +193,7 @@
 \def\fle{\longrightarrow}
 \def\entao{\Longrightarrow}
 \def\ssi{\Longleftrightarrow}
-\def\ri{\rightarrow}
+\def\ri{\rightarrow} 
 \def\bbullet{\noindent{\cor $\bullet$ }}
 \newcommand{\no}{\noindent}
 \newcommand{\fra}[2]{\text{\small$\dfrac{#1}{#2}$}}
@@ -206,7 +207,7 @@
 \newcolumntype{f}{>$c<$}
 \newcolumntype{g}[1]{>$e{#1}<$}
 
-% Permite preencher o resto da p?ina com figura
+% Permite preencher o resto da página com figura
 
 %Coloca listas de enumerate no padrão da seção de exercícios
 \newcommand{\exerciselist}{	
@@ -247,7 +248,35 @@
 \newskip\libroskip
 \libroskip= 4pt plus 1pt minus 1pt
 \hfuzz=4pt
-\graphicspath{\graphics}
+\graphicspath{
+	{Figuras/}
+	{Figuras/vetores/}
+	{Figuras/perspectiva1/}
+	{Figuras/perspectiva2/}
+	{Figuras/funcoes/}
+	{Figuras/taxa/}
+	{Figuras/funcao-afim/}
+	{Figuras/funcao-quadratica/}
+	{Figuras/sistemas/}
+	{Figuras/exponencial/}
+	{Figuras/logaritmos/}
+	{Figuras/funcao-trigonometrica/}
+	{Figuras/estatistica1/}
+	{Figuras/estatistica2/}
+	{Figuras/probabilidade1/}
+	{Figuras/tales/}
+	{Figuras/semelhanca/}
+	{Figuras/financeira/}
+	{Figuras/ladrilhos/}
+	{Figuras/cartografia/}
+	{Figuras/investigacao/}
+	{Figuras/superficie/}
+	{Figuras/trigonometria/}
+	{Figuras/combinatoria/}
+	{Figuras/computacional/}
+	{Figuras/transformacoes/}
+	{Figuras/livroaberto/}
+}
 
 \def\envskip{\vskip\libroskip}
 
@@ -591,7 +620,7 @@ underlay boxed title={
 
 
 
-% Formata?o dos comandos \section e \subsection
+% Formatação dos comandos \section e \subsection
 %Cor atual
 \titleformat{\section}{\color{\currentcolor}\normalfont\semihuge\bfseries}{\thesection}{1em}{#1 \phantomsection}
 \titlespacing*{\section}
@@ -836,7 +865,7 @@ underlay boxed title={
         \end{pgfonlayer}
 
         \begin{pgfonlayer}{bottom}
-            \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{\@chapterillustration}};
+            \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{capas/\@chapterillustration}};
         \end{pgfonlayer}
 
         \begin{pgfonlayer}{top}
@@ -1467,10 +1496,10 @@ Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
 \vspace{.5em}
 
 \ifdefined\@versaodigital
-Versão digital do capítulo:
+% Versão digital do capítulo:
 
-\@versaodigital
-\vspace{.5em}
+% \@versaodigital
+% \vspace{.5em}
 \else\fi
 
 \begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
@@ -1613,9 +1642,9 @@ Capa: & \@autorcapa \\
 
 
 
-%Exclus? de ambientes do professor
+%Exclusão de ambientes do professor
 
-%P?inas de texto
+%Páginas de texto
 
 \excludecomment{paginatexto}
 \excludecomment{apresentacao}
@@ -1623,14 +1652,14 @@ Capa: & \@autorcapa \\
 %Caixa de Obetivos gerais
 \newtcolorbox{habilities}[1]{}
 
-%Caixa de Objetivos Espec?icos
+%Caixa de Objetivos Específicos
 
 \newenvironment{objectives}[4]
 {}
 {}
 {}
 
-%Caixa de Sugest?es e recomenda?es
+%Caixa de Sugestões e recomendações
 
 \newenvironment{sugestions}[4]
 {}
