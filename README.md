@@ -5,10 +5,8 @@ Este repositório contém os arquivo necessários para se compilar um capítulo 
 ## Download do modelo
 
 É possível fazer o download da versão minimal (Versão 0.8) do arquivo nos seguintes links:
-
-[Minimal.zip (Windows)](https://github.com/livro-aberto/tex-design-development/raw/master/Minimal/Minimal.zip)
-
-[Minimal.tar (Linux)](https://github.com/livro-aberto/tex-design-development/raw/master/Minimal/Minimal.tar)
+- [Minimal.zip (Windows)](https://github.com/livro-aberto/tex-design-development/raw/master/Minimal/Minimal.zip)
+- [Minimal.tar (Linux)](https://github.com/livro-aberto/tex-design-development/raw/master/Minimal/Minimal.tar)
 
 Os arquivos possuem a mesma estrutura básica, mas apenas com os arquivos básicos para fazer a compilação. 
 
@@ -51,9 +49,13 @@ dependendo da versão que do modelo que se deseja compilar.
 
 Para editar seu capítulo é necessário colocá-lo na pasta ```chapters\``` e editar o arquivo do aluno ou do professor (dependendo da versão que se deseja gerar) incluindo ou descomentando a linha ```\include{chapters\nomedocapitulo}```. 
 
-Para a bibliografia do capítulo, coloque-a na pasta Bibliografia no formato ```nomedocapitulo_bibliografia.bib``` (formato BibTeX), alterando no final do documento a linha ```\bibliography{../Bibliografia/capitulo_bibliografia.bib}```. Para gerar o arquivo de bibliografia é necessário rodar no Powershell ou no Terminal, dentro da pasta ```chapters\``` o comando
+Para a bibliografia do capítulo, coloque-a na pasta Bibliografia no formato ```nomedocapitulo_bibliografia.bib``` (formato BibTeX), alterando no final do documento a linha ```\bibliography{../Bibliografia/nomedocapitulo_bibliografia.bib}```. Para gerar o arquivo de bibliografia é necessário rodar no Powershell ou no Terminal, dentro da pasta ```chapters\``` o comando
 ```
 bibtex nomedocapitulo
 ```
 
-Para demais dúvidas, consultar a [documentação do pacote](https://docs.google.com/viewer?url=https://github.com/livro-aberto/tex-design-development/raw/master/Documenta%C3%A7%C3%A3o%20do%20Livro%20Aberto%20do%20Ensino%20M%C3%A9dio.pdf) (no momento apenas o material do aluno) ou mande um e-mail para tarsobcaldas@gmail.com
+Para demais dúvidas, consultar a documentação do pacote:
+- [Versão do aluno.](https://docs.google.com/viewer?url=https://github.com/livro-aberto/tex-design-development/raw/master/Documenta%C3%A7%C3%A3o%20do%20Livro%20Aberto%20do%20Ensino%20M%C3%A9dio.pdf) 
+- [Versão do professor](https://docs.google.com/viewer?url=https://github.com/livro-aberto/tex-design-development/raw/master/Documenta%C3%A7%C3%A3o%20do%20Livro%20Aberto%20do%20Ensino%20M%C3%A9dio%20-%20Professor.pdf)
+
+ou mande um e-mail para tarsobcaldas@gmail.com
