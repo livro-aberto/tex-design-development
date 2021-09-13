@@ -2,7 +2,7 @@
 \def\filename{livroaberto}
 \def\filetitle{Livro Aberto package}
 \def\filedate{2021/07/21}
-\def\docdate {2021/07/21}
+\def\docdate{2021/07/21}
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{\filename}
@@ -22,133 +22,127 @@
 
 % Define o diretório das figuras e das fontes
 
-\def\fontspath{Fontes/}
-
+\def\fontspath{fonts/}
 
 \def\aluno{1}
 
-
-%Base Packages
-\RequirePackage[skins,breakable]{tcolorbox}
-\RequirePackage{varwidth}
-\RequirePackage{array}
+\RequirePackage{commands}
+\RequirePackage{tcolorbox}
+	\tcbuselibrary{theorems, listings, breakable, most, skins,skins,breakable}
+	\tcbsetforeverylayer{shield externalize}
 \RequirePackage{colortbl}
-\RequirePackage{bookmark}
-\RequirePackage[math]{cellspace}
 \RequirePackage{float}
-\RequirePackage{tkz-euclide}
-\RequirePackage{amsmath,amssymb}
-\RequirePackage[brazil]{babel}
-\RequirePackage{times}
-\RequirePackage{tabulary}
 \RequirePackage{geometry}
-\RequirePackage{hypcap}
-\RequirePackage{makeidx}
 \RequirePackage{xurl}
-\RequirePackage{amsmath,amssymb,amsfonts,amsthm,amstext}
 \RequirePackage{hhline}
-\RequirePackage{pbox}
 \RequirePackage{ragged2e}
 \RequirePackage{microtype}
-\RequirePackage{tabularx}
 \RequirePackage{makecell}
 \RequirePackage{longtable}
 \RequirePackage{wrapfig}
 \RequirePackage{bm}
-\RequirePackage[low-sup]{subdepth} 
-\RequirePackage{tikz-3dplot}
-% \RequirePackage{pgfplots}
+\RequirePackage[low-sup]{subdepth}
 \RequirePackage[inline, attach]{asymptote}
 \RequirePackage[dvips]{attachfile2}
-\RequirePackage{vwcol}
-\RequirePackage{tikz}
-\RequirePackage{ifthen}
 \RequirePackage[export]{adjustbox}
-\RequirePackage{xparse}% For RenewDocumentEnvironment
-\RequirePackage{expl3}
-\RequirePackage{tcolorbox} %Allow those nice environments
-\tcbuselibrary{theorems, listings, breakable, most, skins}
-\RequirePackage{titling} % needed to manage with the title
-\RequirePackage{eso-pic }% to the cover style
-\RequirePackage{tikz}
-\RequirePackage{comment}
-\RequirePackage{ltxcmds}
-\RequirePackage{amstext}
-\RequirePackage{textcomp}% "warn" option issued from template
-% \RequirePackage[explicit]{titlesec}
-\PassOptionsToPackage{explicit}{titlesec}
-\RequirePackage{zref-savepos}
-\RequirePackage{longtable}
-\RequirePackage{makeidx}
-\RequirePackage{fancyvrb}
-\RequirePackage{wrapfig}
-\RequirePackage{parskip}[=v1]
-\RequirePackage{parskip}
-\RequirePackage{alltt}
-\RequirePackage{upquote}
-\RequirePackage{capt-of}
 \RequirePackage{needspace}
-\RequirePackage{mathtools}
-\ltx@ifundefined{@removefromreset}
-{\RequirePackage{remreset}}
-\RequirePackage{atbegshi}
-\RequirePackage{kvoptions}
+% \PassOptionsToPackage{titlesec}{explicit}
+\RequirePackage[explicit]{titlesec}
 \RequirePackage{sphinx}
-\@ifclassloaded{memoir}{}{\RequirePackage{fancyhdr}}
-\RequirePackage{framed}
-% \RequirePackage{siunitx}
-% \RequirePackage{caption}
+\RequirePackage{fancyhdr}
 \RequirePackage{pdfpages}
-\RequirePackage{layout}
-\RequirePackage{stackengine}
-\RequirePackage{changepage}
-\RequirePackage{graphicx}
-\RequirePackage{adjustbox}
-% \RequirePackage{scrlayer-notecolumn}
 \RequirePackage{marginfix}
 \RequirePackage{stmaryrd}
-\RequirePackage{lscape}
-\RequirePackage{zref-savepos}
 \RequirePackage{tasks}
-
-\RequirePackage[sectionbib]{natbib}
-\RequirePackage{chapterbib}
-\patchcmd{\thebibliography}{%
-  \def\currentcolor{cor1}
-  \phantomsection
-  \chapter*{\textcolor{cor1}{\bibname}}\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}}{%
-  \bibliographytitle*{Bibliografia}}{}{}
-
-\RequirePackage{spverbatim}
-% \RequirePackage{ulem}
 \RequirePackage{cancel}
-\RequirePackage{ifthen}
-\RequirePackage{booktabs}
-\RequirePackage{listofitems}
-\RequirePackage{url}
-\RequirePackage{graphicx}
-\RequirePackage{forloop}
 \RequirePackage{lipsum}
-\RequirePackage{suffix}
-\RequirePackage{refcount}
-\RequirePackage{xcolor}
 \RequirePackage{multicol}
 \RequirePackage{multirow}
-\RequirePackage{blindtext}
-\RequirePackage{cleveref}
-\RequirePackage{collcell}
-\RequirePackage{datatool}
-\RequirePackage{environ}
 \RequirePackage{xstring}
-% \RequirePackage{tabu}
+\RequirePackage{mfirstuc} %To capitalize just the inicial letter of each word. There is a command to exclude specific words to captalize such like a, an, the, etc.
+\RequirePackage{anyfontsize}
+\RequirePackage{endnotes}
+\RequirePackage{soul}
+\RequirePackage{comment} % Comando excludecomment para remover os comandos do material do professor
+\RequirePackage{xpatch}
+\RequirePackage{currfile}
 
+\RequirePackage[natbib=true, refsection=chapter, style=apa, citestyle=authoryear]{biblatex}
+\addbibresource[label=cartografia]{bibliography/cartografia_bibliografia.bib}
+\addbibresource[label=combinatoria]{bibliography/combinatoria_bibliografia.bib}
+\addbibresource[label=computacional]{bibliography/computacional_bibliografia.bib}
+\addbibresource[label=estatistica1]{bibliography/estatistica1_bibliografia.bib}
+\addbibresource[label=estatistica2]{bibliography/estatistica2_bibliografia.bib}
+\addbibresource[label=exponencial]{bibliography/exponencial_bibliografia.bib}
+\addbibresource[label=financeira]{bibliography/financeira_bibliografia.bib}
+\addbibresource[label=funcao-afim]{bibliography/funcao-afim_bibliografia.bib}
+\addbibresource[label=funcao-quadratica]{bibliography/funcao-quadratica_bibliografia.bib}
+\addbibresource[label=funcao-trigonometrica]{bibliography/funcao-trigonometrica_bibliografia.bib}
+\addbibresource[label=funcoes]{bibliography/funcoes_bibliografia.bib}
+\addbibresource[label=investigacao]{bibliography/investigacao_bibliografia.bib}
+\addbibresource[label=ladrilhos]{bibliography/ladrilhos_bibliografia.bib}
+\addbibresource[label=logaritmos]{bibliography/logaritmos_bibliografia.bib}
+\addbibresource[label=perspectiva2]{bibliography/perspectiva2_bibliografia.bib}
+\addbibresource[label=probabilidade1]{bibliography/probabilidade1_bibliografia.bib}
+\addbibresource[label=sistemas]{bibliography/sistemas_bibliografia.bib}
+\addbibresource[label=superficie]{bibliography/superficie_bibliografia.bib}
+\addbibresource[label=taxa]{bibliography/taxa_bibliografia.bib}
+\addbibresource[label=transformacoes]{bibliography/transformacoes_bibliografia.bib}
+\addbibresource[label=trigonometria]{bibliography/trigonometria_bibliografia.bib}
+\addbibresource[label=vetores]{bibliography/vetores_bibliografia.bib}
+
+\RequirePackage{bookmark}
 \RequirePackage{hyperref}
-\PassOptionsToPackage{bookmarks=false}{hyperref}
-\hypersetup{colorlinks=true, colorlinks=true, linkcolor=linkscolor, filecolor=linkscolor, urlcolor=linkscolor,citecolor=linkscolor}
+\hypersetup{
+	colorlinks=true,
+	colorlinks=true,
+	linkcolor=linkscolor,
+	filecolor=linkscolor,
+	urlcolor=linkscolor,
+	citecolor=linkscolor
+}
 
-\RequirePackage{graphicx}
-\@ifclassloaded{memoir}{}{\RequirePackage{fancyhdr}}
+% lembrar de criar um if para caso não haja pasta chapter
 
+
+\xpretocmd{\chapter}{
+	\tikzsetexternalprefix{figures/\currfilebase/TikZ/\currfilebase}
+	% \newrefsection[\currfilebase]
+}{}{}
+
+
+
+\graphicspath{
+	{figures/}
+		{figures/vetores/}
+		{figures/perspectiva1/}
+		{figures/perspectiva2/}
+		{figures/funcoes/}
+		{figures/taxa/}
+		{figures/funcao-afim/}
+		{figures/funcao-quadratica/}
+		{figures/sistemas/}
+		{figures/exponencial/}
+		{figures/logaritmos/}
+		{figures/funcao-trigonometrica/}
+		{figures/estatistica1/}
+		{figures/estatistica2/}
+		{figures/probabilidade1/}
+		{figures/tales/}
+		{figures/semelhanca/}
+		{figures/financeira/}
+		{figures/ladrilhos/}
+		{figures/cartografia/}
+		{figures/investigacao/}
+		{figures/superficie/}
+		{figures/trigonometria/}
+		{figures/combinatoria/}
+		{figures/computacional/}
+		{figures/transformacoes/}
+		{figures/livroaberto/}
+}
+
+\RequirePackage{amsmath,amssymb,amsfonts,amsthm,amstext,mathtools}
 \DeclareMathOperator{\sen}{sen}
 \DeclareMathOperator{\tg}{tg}
 \DeclareMathOperator{\cotg}{cotg}
@@ -168,7 +162,6 @@
 \DeclareMathOperator{\D}{D}
 \DeclareMathOperator{\CD}{CD}
 \DeclareMathOperator{\area}{\text{Area}\,}
-
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -180,37 +173,28 @@
 \newcommand{\tmat}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\bm{#1}}}
 \newcommand{\tcolor}[1]{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#1}}}
 \newcommand{\tmcol}[3]{\multicolumn{#1}{#2}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#3}}}}
-\newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}}}
+\newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1)}}}
 
 \newcommand{\tikzcolor}{\currentcolor!80}
 \newcommand{\sub}{\textsubscript}
 \newcommand{\super}{\textsuperscript}
 
-\newcommand{\newparallel}{\mathrel{\mkern-5mu\clipbox{0 0.75ex 0 0}{${\sslash}$}\!}}
+\newcommand{\newparallel}{\mathrel{\mkern-5mu\clipbox{0 0.75ex 0 0}{\({\sslash}\)}\!}}
 
 \renewcommand{\mspace}[1]{}
 
-\def\fle{\longrightarrow}
-\def\entao{\Longrightarrow}
-\def\ssi{\Longleftrightarrow}
-\def\ri{\rightarrow} 
-\def\bbullet{\noindent{\cor $\bullet$ }}
-\newcommand{\no}{\noindent}
-\newcommand{\fra}[2]{\text{\small$\dfrac{#1}{#2}$}}
-\newcommand{\ve}[1]{{\overrightarrow{#1\,\,}}}
-\newcommand{\ol}[1]{{\overline{#1}}}
-\newcommand{\interno}[2]{{\langle{#1},{#2}\rangle}}
+
 
 
 \newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
 \newcolumntype{e}[1]{>{\vspace{2.5pt}\centering\arraybackslash}m{#1}<{\vspace{2.5pt}}}
-\newcolumntype{f}{>$c<$}
-\newcolumntype{g}[1]{>$e{#1}<$}
+\newcolumntype{f}{>{\(}c<{\)}}
+\newcolumntype{g}[1]{>{\(}e{#1}<{\)}}
 
 % Permite preencher o resto da página com figura
 
 %Coloca listas de enumerate no padrão da seção de exercícios
-\newcommand{\exerciselist}{	
+\newcommand{\exerciselist}{
 	\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
 	\setlist[enumerate,2]{label=\textit{\alph*)}}
 	\setlist[enumerate,3]{label=\textit{\roman*)}}
@@ -218,11 +202,11 @@
 
 \newcommand{\semihuge}{\@setfontsize\semiHuge{16.72}{21.38}}
 
-\renewcommand{\fref}[1]{\hyperref[#1]{figura \ref{#1}}}
-\newcommand{\Fref}[1]{\hyperref[#1]{Figura \ref{#1}}}
+% \renewcommand{\fref}[1]{\hyperref[#1]{figura \ref{#1}}}
+% \newcommand{\Fref}[1]{\hyperref[#1]{Figura \ref{#1}}}
 
-\renewcommand{\tref}[1]{\hyperref[#1]{tabela \ref{#1}}}
-\newcommand{\Tref}[1]{\hyperref[#1]{Tabela \ref{#1}}}
+% \renewcommand{\tref}[1]{\hyperref[#1]{tabela \ref{#1}}}
+% \newcommand{\Tref}[1]{\hyperref[#1]{Tabela \ref{#1}}}
 
 %Seção 1 - Livro Aberto Boxes
 %***************************************************************************************
@@ -237,89 +221,62 @@
 %%
 %% Loads the ifthen package
 %%
-\RequirePackage{ifthen}
-\RequirePackage{mfirstuc} %To capitalize just the inicial letter of each word. There is a command to exclude specific words to captalize such like a, an, the, etc.
-\RequirePackage{anyfontsize} %To define fontsize precisely
+% \RequirePackage{ifthen}
+% \RequirePackage{mfirstuc} %To capitalize just the inicial letter of each word. There is a command to exclude specific words to captalize such like a, an, the, etc.
+% \RequirePackage{anyfontsize} %To define fontsize precisely
 
 \tikzstyle{outlinebox} = [fill=box2]
 \tikzstyle{box} = [inner sep=3mm, inner ysep=3mm]
 
 % Define the vertical skip for the environments
-\newskip\libroskip
+\newskip\libroskip{}
+
 \libroskip= 4pt plus 1pt minus 1pt
 \hfuzz=4pt
-\graphicspath{
-	{Figuras/}
-	{Figuras/vetores/}
-	{Figuras/perspectiva1/}
-	{Figuras/perspectiva2/}
-	{Figuras/funcoes/}
-	{Figuras/taxa/}
-	{Figuras/funcao-afim/}
-	{Figuras/funcao-quadratica/}
-	{Figuras/sistemas/}
-	{Figuras/exponencial/}
-	{Figuras/logaritmos/}
-	{Figuras/funcao-trigonometrica/}
-	{Figuras/estatistica1/}
-	{Figuras/estatistica2/}
-	{Figuras/probabilidade1/}
-	{Figuras/tales/}
-	{Figuras/semelhanca/}
-	{Figuras/financeira/}
-	{Figuras/ladrilhos/}
-	{Figuras/cartografia/}
-	{Figuras/investigacao/}
-	{Figuras/superficie/}
-	{Figuras/trigonometria/}
-	{Figuras/combinatoria/}
-	{Figuras/computacional/}
-	{Figuras/transformacoes/}
-	{Figuras/livroaberto/}
-}
 
-\def\envskip{\vskip\libroskip}
+
+% \def\envskip{\vskip\libroskip}
 
 
 
-\newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{task}[1]{parbox=false, blanker, enhanced, breakable, before skip = 8mm, after skip = 5mm, left=0.3mm, right=0.8mm, top=5mm, bottom=3mm, colback=white, colframe=cor2!70, width=162mm, 
-%borderline west={3mm}{0pt}{white}, 
-  toprule=0pt,
-  bottomrule=0.5pt,
-  rightrule=-1pt,
-  leftrule=-1pt,
-  outer arc = 3mm,
-  arc = 3mm,
-  sharp corners = northeast,
-  sharp corners = southeast,
-  sharp corners = southwest,
-  fontupper=\fontsize{11}{15.5}\boxexample, % Should be 11 pt.
-fonttitle=\boxtitlefont\large,  % Should be 9 pt. Don't know how to set this. Tried \fontsize{9pt}{}, but didn't work.
-coltitle=\currentcolor,
-title=\makefirstuc{#1\hfill}, 
-boxed title style={empty,arc=1pt,outer arc=1pt,boxrule=1pt}, 
-attach boxed title to top left={xshift=-1 mm , yshift=-0.1mm},
-underlay boxed title ={
-% Draw the small arc on the top left.
-\draw[cor2!70, line width = 1pt] ($(title.south west)+(3mm,0mm)$) coordinate (LU) arc [start angle=90, end angle=180, y radius=2mm, x radius=2mm] --++ (0mm , -2mm);
-% Draw the top line from the left to the right.
-\draw[cor2!70,  line width=1pt] (LU) -- ++ (158mm,0mm) coordinate (R);
-% Think on the Atividade box as an ABCD rectangle (clockwise, A is top left), now you see the coordinates. 
-\fill [cor2!70] ($(R)+(0mm,-.3mm)$) -- ++ (-25.00mm,0mm) coordinate (D) --++ (0mm, 5mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- ++ (25.00mm,0mm) coordinate (B) --++ (0.00mm,-5mm)  arc [start angle=0, end angle=-90, y radius=2.00mm, x radius=2.00mm] -- cycle;
-\node[font=\titlefont\large,white] at ($(B)!0.5!(D)$) {\small Atividade \thetcbcounter};
-}
+\newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{task}[1]{parbox=false, blanker, enhanced, breakable, before skip = 8mm, after skip = 5mm, left=0.3mm, right=0.8mm, top=5mm, bottom=3mm, colback=white, colframe=cor2!70, width=162mm,
+	%borderline west={3mm}{0pt}{white}, 
+	toprule=0pt,
+	bottomrule=0.5pt,
+	rightrule=-1pt,
+	leftrule=-1pt,
+	outer arc = 3mm,
+	arc = 3mm,
+	sharp corners = northeast,
+	sharp corners = southeast,
+	sharp corners = southwest,
+	fontupper=\fontsize{11}{15.5}\boxexample, % Should be 11 pt.
+	fonttitle=\boxtitlefont\large,  % Should be 9 pt. Don't know how to set this. Tried \fontsize{9pt}{}, but didn't work.
+	coltitle=\currentcolor,
+	title=\makefirstuc{#1\hfill},
+	boxed title style={empty,arc=1pt,outer arc=1pt,boxrule=1pt},
+	attach boxed title to top left={xshift=-1 mm, yshift=-0.1mm},
+	underlay boxed title ={
+			% Draw the small arc on the top left.
+			\draw[cor2!70, line width = 1pt] ($(title.south west)+(3mm,0mm)$) coordinate (LU) arc [start angle=90, end angle=180, y radius=2mm, x radius=2mm] --++ (0mm , -2mm);
+			% Draw the top line from the left to the right.
+			\draw[cor2!70,  line width=1pt] (LU) --++ (158mm,0mm) coordinate (R);
+			% Think on the Atividade box as an ABCD rectangle (clockwise, A is top left), now you see the coordinates. 
+			\fill [cor2!70] ($(R)+(0mm,-.3mm)$) --++ (-25.00mm,0mm) coordinate (D) --++ (0mm, 5mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] --++ (25.00mm,0mm) coordinate (B) --++ (0.00mm,-5mm)  arc [start angle=0, end angle=-90, y radius=2.00mm, x radius=2.00mm] -- cycle;
+			\node[font=\titlefont\large,white] at ($(B)!0.5!(D)$) {\small Atividade \thetcbcounter};
+		}
 }
 
 
 % Makes the "To think about" box.
 % It is missing to set title font and font size. After that should check if the title is centralized in the title box.
-\newtcolorbox{reflection}{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=7mm, bottom=3mm, colback=white, colframe=box1, borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm, 
-fonttitle=\bfseries\large\boxtitlefont,  % Should be 12 pt. Don't know how to set this.
-title=PARA REFLETIR, 
-boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt}, 
-attach boxed title to top left={xshift=3mm , yshift=-2.5mm},
-underlay boxed title={
-\filldraw [draw=box1, fill=box1] ($(title.north west) + (0 mm,-2.50mm)$) -- ++(0.00mm,1.50mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ++(34.00mm,-5.00mm) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;}
+\newtcolorbox{reflection}{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=7mm, bottom=3mm, colback=white, colframe=box1, borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+	fonttitle=\bfseries\large\boxtitlefont,  % Should be 12 pt. Don't know how to set this.
+	title=PARA REFLETIR,
+	boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+	attach boxed title to top left={xshift=3mm, yshift=-2.5mm},
+	underlay boxed title={
+			\filldraw [draw=box1, fill=box1] ($(title.north west) + (0 mm,-2.50mm)$) --++(0.00mm,1.50mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ++ (34.00mm,-5.00mm) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;}
 }
 
 
@@ -327,702 +284,709 @@ underlay boxed title={
 % Observation Box
 
 \newtcolorbox{observationtitle}[1]{
-parbox=false, enhanced, breakable, left=3mm, right=3mm,bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\parbox{.8\linewidth}{\bfseries\textcolor{\currentcolor}{ #1}}}, boxed title style ={empty},top=8mm, attach boxed title to top center={xshift=0mm, yshift=-7.5mm}
+	parbox=false, enhanced, breakable, left=3mm, right=3mm,bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow, title={\parbox{.8\linewidth}{\bfseries\textcolor{\currentcolor}{ #1}}}, boxed title style ={empty},top=8mm, attach boxed title to top center={xshift=0mm, yshift=-7.5mm}
 }
 
-\newtcolorbox{observation}{parbox=false, enhanced, breakable, left=3mm, right=3mm, top=3mm, bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow}     
+\newtcolorbox{observation}{parbox=false, enhanced, breakable, left=3mm, right=3mm, top=3mm, bottom=2mm, colback=box2!50, colframe=box2!50, arc=3mm, sharp corners=uphill, pad at break=2mm, drop fuzzy shadow}
 
 
 \newtcolorbox[auto counter, number within=chapter, number freestyle={\noexpand\arabic{\tcbcounter}}]{example}[1]{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=10mm, bottom=3mm, colback=white, colframe=cor1, width=162mm, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 8mm, arc = 8mm, sharp corners = northwest, sharp corners = southeast, sharp corners = southwest,
-title={
-%{\boxfont EXEMPLO}\hspace{3.5mm} 
-\textcolor{cor2}{\large\extitlefont\makefirstuc{#1}\phantom{ç}}
-}, 
-boxed title style={empty, sharp corners}, 
-attach boxed title to top left={xshift=22mm , yshift=-7.5mm},
-underlay boxed title ={
-% Draw the title underlay rectangle
-\def\temp{#1}\ifx\temp\empty
-%
-\else
-\fill[cor1!30] ($(frame.north west)+(0,-1pt)$) rectangle ($(title.south east)+(3mm,0mm)$) coordinate (R);
-\fi
-%)
-%;
-% Filldraw the darker fancy in front of the rectangle and behind the Example. The coordinates should be better chosen.
+	title={
+			%{\boxfont EXEMPLO}\hspace{3.5mm} 
+			\textcolor{cor2}{\large\extitlefont\makefirstuc{#1}\phantom{ç}}
+		},
+	boxed title style={empty, sharp corners},
+	attach boxed title to top left={xshift=22mm , yshift=-7.5mm},
+	underlay boxed title ={
+			% Draw the title underlay rectangle
+			\def\temp{#1}\ifx\temp\empty
+				%
+			\else
+				\fill[cor1!30] ($(frame.north west)+(0,-1pt)$) rectangle ($(title.south east)+(3mm,0mm)$) coordinate (R);
+			\fi
+			%)
+			%;
+			% Filldraw the darker fancy in front of the rectangle and behind the Example. The coordinates should be better chosen.
 
 
-\fill[cor1] (frame.north west) -- ($(frame.north west)+(0,-1.4pt)+(0,-7mm)$) -- ++ (22mm,0mm) arc [start angle=-90, end angle=0, x radius = 2mm, y radius = 2mm] -- ($(frame.north west) + (24mm,0)$) --  cycle;
-\node [white] at ($(frame.north west) + (12mm,-3.5mm)$) {\boxfont EXEMPLO \thetcbcounter};
+			\fill[cor1] (frame.north west) -- ($(frame.north west)+(0,-1.4pt)+(0,-7mm)$) -- ++ (22mm,0mm) arc [start angle=-90, end angle=0, x radius = 2mm, y radius = 2mm] -- ($(frame.north west) + (24mm,0)$) --  cycle;
+			\node [white] at ($(frame.north west) + (12mm,-3.5mm)$) {\boxfont EXEMPLO \thetcbcounter};
 
-},
-before upper={\def\currentcolor{cor1}}
+		},
+	before upper={\def\currentcolor{cor1}}
 }
 
 \newtcolorbox{research}{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=6mm, bottom=3mm, colback=white, colframe=box3, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 3mm, arc = 3mm, sharp corners = northwest,
-fonttitle=\normalsize\boxtitlefont,  
-title= PARA PESQUISAR, 
-boxed title style={empty, colback = box3, colframe = box3, sharp corners}, 
-attach boxed title to top left={xshift=-2.5mm , yshift=-6.2mm},
-underlay boxed title={
-\filldraw [fill=box3, draw=box3] ($(frame.north west)$) rectangle +(36.00mm,-5.00mm);% the rectangle where the title fits.
-\coordinate (A) at ($(frame.north west) + (36.00mm,0.00mm)$);
-%\filldraw [cor1] ($(A) + (-4.7mm,0mm)$) rectangle ++(-7mm,-6.4mm);%green rectangle within ? inside.
-%\fill [box3] ($(A) + (-11.9mm,-3.5mm)$) -- ++(4.8 mm,2.6 mm) arc [start angle=20, end angle=-60, x radius=1.00mm, y radius=2.35mm] --++ (0,-2mm)-- ($(title.south east) + (-1.1mm,0.20mm)$) -- ($(title.south east) + (-2mm,0.20mm)$) -- cycle; % the fancy thing in the ?
-\node [white] at ($(A) + (-2.40mm,-1.6mm)$) {\includegraphics[height=7mm]{lupa}};% just the ?
-}
+	fonttitle=\normalsize\boxtitlefont,
+	title= PARA PESQUISAR,
+	boxed title style={empty, colback = box3, colframe = box3, sharp corners},
+	attach boxed title to top left={xshift=-2.5mm , yshift=-6.2mm},
+	underlay boxed title={
+			\filldraw [fill=box3, draw=box3] ($(frame.north west)$) rectangle +(36.00mm,-5.00mm);% the rectangle where the title fits.
+			\coordinate (A) at ($(frame.north west) + (36.00mm,0.00mm)$);
+			%\filldraw [cor1] ($(A) + (-4.7mm,0mm)$) rectangle ++(-7mm,-6.4mm);%green rectangle within ? inside.
+			%\fill [box3] ($(A) + (-11.9mm,-3.5mm)$) -- ++(4.8 mm,2.6 mm) arc [start angle=20, end angle=-60, x radius=1.00mm, y radius=2.35mm] --++ (0,-2mm)-- ($(title.south east) + (-1.1mm,0.20mm)$) -- ($(title.south east) + (-2mm,0.20mm)$) -- cycle; % the fancy thing in the ?
+			\node [white] at ($(A) + (-2.40mm,-1.6mm)$) {\includegraphics[height=7mm]{lupa}};% just the ?
+		}
 }
 
 
 
 \newtcolorbox{knowledge}{parbox=false, blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, left=3mm, right=3mm, top=6mm, bottom=3mm, colback=white, colframe=box3, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=1pt, outer arc = 3mm, arc = 3mm, sharp corners = northwest,
-fonttitle=\normalsize\boxtitlefont,  
-title= VOC\^{E} SABIA, 
-boxed title style={empty, colback = box3, colframe = box3, sharp corners}, 
+fonttitle=\normalsize\boxtitlefont,
+title= VOC\^{E} SABIA,
+boxed title style={empty, colback = box3, colframe = box3, sharp corners},
 attach boxed title to top left={xshift=-2.3mm , yshift=-5.5mm},
 underlay boxed title={
-\filldraw [fill=box3, draw=box3] ($(frame.north west) + (.4mm,0mm)$) rectangle ++(24.00mm,-5.00mm);% the rectangle where the title fits.
-\coordinate (A) at ($(frame.north west) + (24.00mm,-2mm)$);
-\node at (A) {\includegraphics[scale=1]{interrogacao.png}};
-}
-}
-
-
-
-
-
-\NewEnviron{evaluation}{%
-    \envskip
-	\begin{tikzpicture}[remember picture]
-		\begin{pgfonlayer}{main}
-			\node [box] (box) {%
-			\begin{minipage}{0.90\textwidth}
-				\BODY			
-			\end{minipage}	
-			};
-		\end{pgfonlayer}
-		\begin{pgfonlayer}{main}
-			\filldraw [fill=cor1, draw=cor1] (box.north west) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,6.00mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- ++(3.00mm,0.00mm) coordinate (a) |- cycle;
-			\node [draw=cor1, fill=cor1, minimum height=10.00mm, right] (heading) at ($(a) + (0.00mm,-5.00mm)$) {\Large AUTO-AVALIA\c{C}\={A}O};
-			\filldraw [fill=cor1, draw=cor1] (heading.north east) -- ++(10.00mm,-10.00mm) coordinate (b) -| cycle;
-		\end{pgfonlayer}
-		
-		\begin{pgfonlayer}{background}
-			\draw [draw=cor1!30, line width=3.00mm, overlay] ($(box.north west) + (0.00mm,1.50mm)$) -| ($(box.south east) + (1.50mm,-1.50mm)$) -- ($(box.south west) + (-1.50mm,-1.50mm)$);
-			\draw [draw=cor1, overlay] (b) -- (box.north east) -- (box.south east) -- ($(box.south west) + (-1.50mm,0.00mm)$);
-
-%			\draw [draw=cor1!30, line width=3.00mm, overlay] ($(box.north west) + (0.00mm,1.50mm)$) -| ($(box.south east) + (1.50mm,-1.50mm)$) coordinate (d) -- ($(current page.north west)!(d)!(current page.south west)$) -- (d);
-%			\draw [draw=cor1, overlay] (b) -- (box.north east) -- (box.south east) -- ($(box.south west) + (-15.00mm,0.00mm)$) coordinate (c) -- ($(current page.north west)!(c)!(current page.south west)$) -- (c);
-		\end{pgfonlayer}	
-		
-	\end{tikzpicture}
-
-}
-
-
-\NewEnviron{project}{%
-\setlist[itemize]{label=\protect\itemcoloredsquare, }
-\def\currentcolor{cor2}
-    \newpage
-	\begin{tikzpicture}[remember picture, overlay]
-		\coordinate (border1) at ($(current page text area.south east) + (0.00mm,8.00mm)$);
-		\coordinate (border1a) at ($(border1) + (-5.00mm,2.00mm)$);
-		\coordinate (border1b) at ($(current page text area.south west) + (11.00mm,10.00mm)$);
-		\coordinate (border1c) at ($(current page text area.north west) + (11.00mm,-13.00mm)$);
-        \coordinate (border1d) at ($(current page text area.south west) + (11.00mm,13.00mm)$);
-		\coordinate (heading) at ($(current page text area.north west) + (32.50mm,-5.00mm)$);
-		\coordinate (corner1) at ($(current page text area.north west) + (6.00mm,-10.00mm)$);
-		\coordinate (corner2) at ($(current page text area.north east) + (-4.00mm,-10.00mm)$);
-		\coordinate (corner3) at ($(current page text area.south east) + (0.00mm,10.00mm)$);
-		\coordinate (corner4) at ($(current page text area.south west) + (10.00mm,6.00mm)$);
-		\coordinate (text1) at ($(current page text area.north west) + (11.00,-12.50mm)$);
-		\coordinate (text2) at ($(current page text area.south east) + (-2.50mm,8.50mm)$);
-        \coordinate (bodytextpos) at ($(border1c) + (5.00mm,-3.00mm)$);
-		
-		\begin{pgfonlayer}{background}
-			\draw [draw=base1, fill=base1] (current page text area.south west) rectangle (current page text area.north east);
-            		\end{pgfonlayer}
-		
-		\begin{pgfonlayer}{main}
-			\draw [fill=cor2, draw=cor2] (current page text area.north west) -- ++(0.00mm,-8.00mm) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] -| ++(63.00mm,8.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-			\draw [fill=base1!30, draw=base1!30] (corner1) -- (corner2) arc [start angle=90, end angle=0, x radius=4.00mm, y radius=4.00mm] -- (corner3) arc [start angle=0, end angle=-90, x radius=4.00mm, y radius=4.00mm] -- (corner4) arc [start angle=270, end angle=180, x radius=4.00mm, y radius=4.00mm] -- cycle;
-			% \draw [green] (text1) rectangle (text2);
-			\draw [black] (border1a) -- (border1b) -- (border1c) -| cycle;
-
-		\end{pgfonlayer}
-		
-		\begin{pgfonlayer}{foreground}
-			\node [color=base1!30, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (title) at (heading) {PROJETO APLICADO};
-            \node [box, below right] (bodytext) at (border1c){%
-			\begin{minipage}{0.85\textwidth}
-				\BODY			
-			\end{minipage}	
-			};
-		\end{pgfonlayer}
-
-		
-	\end{tikzpicture}
-    \clearpage
-}
-
-%Seção 2 - Livro Aberto Colors
-
-%***************************************************************************************
-% This package sets up the colors used in the Livro Aberto textbook.
-%
-% This package was written and created by
-% David Latchman, TeXnical Designs
-% Contact: david.latchman@texnical-designs.com for problems
-%
-%
-% The fonts used in this package:
-% Title: Orbitron
-% Main (Text): Exo 2
-% Boxes: Roboto
-
-
-%% ---------------------------------------------------------------------
-%%
-%% Loads the ifthen package
-%%
-\RequirePackage{ifthen}
-
-\RequirePackage{xkeyval}
-
-\definecolor{cor1}{RGB}{0,165,157} %verde agua
-\definecolor{cor2}{RGB}{73,85,93}
-\definecolor{cor1a}{RGB}{0,165,157}
-\definecolor{cor2a}{RGB}{73,85,93}
-\definecolor{cor1b}{RGB}{251,181,0}
-\definecolor{cor2b}{RGB}{73,85,93}
-
-\definecolor{base1}{RGB}{184,202,213}
-\definecolor{base2}{RGB}{221,223,80}
-
-\definecolor{session1}{RGB}{0,94,176} %azul
-\definecolor{session2}{RGB}{75,173,49} %verde
-\definecolor{session3}{RGB}{183,13,40} %vinho
-\definecolor{session4}{RGB}{236,107,16} %laranja
-
-\definecolor{penaqua}{RGB}{0,165,157}
-\definecolor{grafite}{RGB}{73,85,93}
-\definecolor{penazul}{RGB}{0,94,176}
-\definecolor{penverde}{RGB}{75,173,49}
-\definecolor{penvinho}{RGB}{83,13,40}
-\definecolor{penlaranja}{RGB}{236,107,16}
-\definecolor{penbox2}{RGB}{240,238,201}
-
-\definecolor{box1}{RGB}{71,30,129}
-\definecolor{box2}{RGB}{225,221,146}
-\definecolor{box3}{RGB}{108,27,98}
-\definecolor{linkscolor}{RGB}{6,69,173}
-
-\definecolor{magblue}{RGB}{151,255,249}
-
-\definecolor{primario}{RGB}{0,165,157} %esverdeado
-\definecolor{secundario}{RGB}{73,85,93} %acinzentado escuro
-\definecolor{terciario}{RGB}{184,202,213} % azul claro
-\definecolor{destacado}{RGB}{183,13,40} %avermelhado
-\definecolor{atento}{RGB}{0,94,176} %azul forte
-
-% Set up options for color schemes
-\newboolean{coloroptions}
-
-\define@choicekey*+{colorchoices}{color options}[\val\coloroption]
-    {option 1, option 2}{%
-            \ifcase\coloroption\relax
-                \definecolor{cor1}{RGB}{0,165,157}
-                \definecolor{cor2}{RGB}{73,85,93}
-                % \setboolean{coloroptions}{true}
-            \or
-                % \setboolean{coloroptions}{false}
-                \definecolor{cor1}{RGB}{251,181,0}
-                \definecolor{cor2}{RGB}{73,85,93}
-            \fi
-        }{%
-            % \setboolean{coloroptions}{true}
-            \definecolor{cor1}{RGB}{0,165,157}
-            \definecolor{cor2}{RGB}{73,85,93}
-        }
-
-%Seção 3 - Livro Aberto Fonts
-
-%***************************************************************************************
-% This package sets up the fonts for the Livro Aberto textbook.
-%
-% This package was written and created by
-% David Latchman, TeXnical Designs
-% Contact: david.latchman@texnical-designs.com for problems
-%
-%
-% The fonts used in this package:
-% Title: Orbitron
-% Main (Text): Exo 2
-% Boxes: Roboto
-
-
-
-
-\typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
-\typeout{English documentation as of <\docdate>}
-
-%% ---------------------------------------------------------------------
-%%
-%% Loads the ifthen package
-%%
-\RequirePackage{ifthen}
-
-
-\RequirePackage{fontspec}
-\setmainfont[Path=\fontspath]{Exo2-Light.otf}[BoldFont=Exo2-Medium.otf, ItalicFont=Exo2-LightItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf]
-\newfontfamily{\titlefont}[Path=\fontspath]{orbitron-medium.otf}[BoldFont=orbitron-bold.otf]
-\newfontfamily{\secondtitlefont}[Path=\fontspath]{orbitron-black.ttf}
-\newfontfamily{\thirdtitlefont}[Path=\fontspath]{orbitron-bold.otf}
-\newfontfamily{\pagetitlefont}[Path=\fontspath]{Orbitron-Regular.ttf}
-\newfontfamily{\boxfont}[Path=\fontspath]{Roboto-Regular.ttf}
-\newfontfamily{\enumeratefont}[Path=\fontspath]{Exo2-Light.otf}[BoldFont=Exo2-Medium.otf, ItalicFont=Exo2-LightItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf]
-\newfontfamily{\boxtitlefont}[Path=\fontspath]{Exo2-Bold.otf}[BoldFont=Exo2-ExtraBold.ttf, ItalicFont=Exo2-BoldItalic.ttf, BoldItalicFont=Exo2-ExtraBoldItalic.ttf] % added after David
-\newfontfamily{\extitlefont}[Path=\fontspath]{Exo2-SemiBold.otf} % added after David
-\newfontfamily{\boxexample}[Path=\fontspath]{Exo2-Regular.otf}[BoldFont=Exo2-SemiBold.ttf, ItalicFont=Exo2-RegularItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf] % added after David
-
-
-
-
-
-%Seção 4 - Livro Aberto Headings
-
-%***************************************************************************************
-% This package creates the heading designs for the Livro Aberto textbook.
-%
-% This package was written and created by
-% David Latchman, TeXnical Designs
-% Contact: david.latchman@texnical-designs.com for problems
-%
-
-
-%% ---------------------------------------------------------------------
-%%
-%% Loads the ifthen package
-%%
-\RequirePackage{ifthen}
-
-% Commands for chapter page
-\newcommand{\chapterillustration}[2]{
-\ifnum\aluno=1
-\def\@chapterillustration{#1}
-\else
-\def\@chapterillustration{#2}
-\fi
-}
-\newcommand{\chapterwhat}[1]{\def\@chapterwhat{#1}}
-\newcommand{\chapterbecause}[1]{\def\@chapterbecause{#1}}
-
-
-
-
-% Formatação dos comandos \section e \subsection
-%Cor atual
-\titleformat{\section}{\color{\currentcolor}\normalfont\semihuge\bfseries}{\thesection}{1em}{#1 \phantomsection}
-\titlespacing*{\section}
-{0pt}{2mm}{1mm}
-% \providecommand*{\toclevel@section}{2}
-
-
-\titleformat{\subsection}{\color{\currentcolor}\normalfont\Large\bfseries}{\thesection}{1em}{#1}
-\titlespacing*{\subsection}
-{0pt}{2mm}{1mm}
-
-\titleformat{\paragraph}{\color{\currentcolor}\normalfont\large\bfseries}{\thesubsection}{1em}{#1}
-\titlespacing*{\paragraph}
-{0pt}{1mm}{1mm}
-
-
-
-\renewcommand*{\toclevel@section}{1}
-\renewcommand*{\toclevel@subsection}{4}
-\renewcommand*{\toclevel@paragraph}{5}
-\renewcommand*{\toclevel@subparagraph}{6}
-
-\providecommand*{\toclevel@exploresec}{1}
-\providecommand*{\toclevel@practicesec}{1}
-\providecommand*{\toclevel@arrangesec}{1}
-\providecommand*{\toclevel@knowsec}{1}
-\providecommand*{\toclevel@exercisesec}{1}
-
-\newcommand{\expandtocdepth}[1][]{%
-	\renewcommand*{\toclevel@section}{1}
-	\renewcommand*{\toclevel@subsection}{4}
-	\renewcommand*{\toclevel@paragraph}{5}
-	\renewcommand*{\toclevel@subparagraph}{6}
-
-	\renewcommand*{\toclevel@exploresec}{2}
-	\renewcommand*{\toclevel@practicesec}{2}
-	\renewcommand*{\toclevel@arrangesec}{2}
-	\setcounter{tocdepth}{2}
-
-  \IfStrEqCase{#1}{%
-  		{}{
-
-  		}
-      {know}{
-					\renewcommand*{\toclevel@knowsec}{2}
-      }%
-      {exercise}{
-					\renewcommand*{\toclevel@exercisesec}{2}
-      }%
-      {know, exercise}{
-	      	\renewcommand*{\toclevel@knowsec}{2}
-	      	\renewcommand*{\toclevel@exercisesec}{2}
-      }
-  }[%
-      Apenas os valores "know" e "exercise" são permitidos.
-  ]%
-}
-
-\titleformat{\bibliographytitle}{\vspace{.3\baselineskip}\color{cor1}\normalfont\huge\bfseries}{\thesubsection}{1em}{}
-\titlespacing*{\subsection}
-{0pt}{1mm}{1mm}
-
-%Cor Explorando
-
-\newcommand{\scexplore}[1]{\hypersetup{linkcolor=session1}\paragraph{\color{session1}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
-\newcommand{\scarrange}[1]{\hypersetup{linkcolor=session4}\paragraph{\color{session4}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
-\newcommand{\scpractice}[1]{\hypersetup{linkcolor=session2}\paragraph{\color{session2}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
-\newcommand{\scknow}[1]{\hypersetup{linkcolor=session2}\paragraph{\color{session3}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
-\newcommand{\scexercise}[1]{\hypersetup{linkcolor=cor1}\paragraph{\color{cor1}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
-
-
-\newcommand{\subexplore}[1]{\paragraph{\color{session1}\normalfont\Large\bfseries#1}}
-\newcommand{\subarrange}[1]{\paragraph{\color{session4}\normalfont\Large\bfseries#1}}
-\newcommand{\subpractice}[1]{\paragraph{\color{session2}\normalfont\Large\bfseries#1}}
-\newcommand{\subknow}[1]{\paragraph{\color{session3}\normalfont\Large\bfseries#1}}
-\newcommand{\subexercise}[1]{\paragraph{\color{cor1}\normalfont\Large\bfseries#1}}
-
-% Create box shape
-\pgfdeclareshape{howbecausetextbox}{%
-    \inheritsavedanchors[from=rectangle]
-    \inheritanchorborder[from=rectangle]
-
-    \inheritanchor[from=rectangle]{center}
-    \inheritanchor[from=rectangle]{south}
-    \inheritanchor[from=rectangle]{west}
-    \inheritanchor[from=rectangle]{north}
-    \inheritanchor[from=rectangle]{east}
-    \inheritanchor[from=rectangle]{base}
-    \inheritanchor[from=rectangle]{north west}
-    \inheritanchor[from=rectangle]{north east}
-    \inheritanchor[from=rectangle]{south east}
-    \inheritanchor[from=rectangle]{south west}
-
-    \backgroundpath{%
-        \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
-        \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
-
-% Construct main path
-% Construct main path
-        \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya+5pt}}
-        \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
-        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
-        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya+5pt}}
-        \pgfpatharc{0}{-90}{5.0pt}
-        \pgfpathlineto{\pgfpoint{\pgf@xa+5pt}{\pgf@ya}}
-        \pgfpatharc{270}{180}{5.0pt}
-%        \pgfpathcurveto{\pgfpoint{\pgf@xc}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@yc}}
-        \pgfpathclose
-    }
-}
-
-\pgfdeclareshape{howbecauseheadingbox}{%
-    \inheritsavedanchors[from=rectangle]
-    \inheritanchorborder[from=rectangle]
-
-    \inheritanchor[from=rectangle]{center}
-    \inheritanchor[from=rectangle]{south}
-    \inheritanchor[from=rectangle]{west}
-    \inheritanchor[from=rectangle]{north}
-    \inheritanchor[from=rectangle]{east}
-    \inheritanchor[from=rectangle]{base}
-    \inheritanchor[from=rectangle]{north west}
-    \inheritanchor[from=rectangle]{north east}
-    \inheritanchor[from=rectangle]{south east}
-    \inheritanchor[from=rectangle]{south west}
-
-    \backgroundpath{%
-        \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
-        \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
-
-% Construct main path
-% Construct main path
-        \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
-        \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
-        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
-        \pgfpatharc{90}{0}{7.0pt}
-        \pgfpathlineto{\pgfpoint{\pgf@xb+7pt}{\pgf@ya+7.0pt}}
-        \pgfpatharc{0}{-90}{7.0pt}
-        \pgfpathclose
-    }
-}
-
-
-\newtcolorbox{openningbox}{
-  enhanced,
-%  jigsaw,
-  opacityframe=.3,
-  opacityfill=.3,
-  width=80mm,
-  left=3mm,
-  right=3mm,
-  top=3mm,
-  bottom=.5mm,
-  colback=white,
-  colframe=white,
-  arc=3mm,
-  sharp corners=uphill,
-    % frame empty,
-    % arc = 8pt,
-    lower separated = false,
-    before upper = \tcbsubtitle{O QU\^E?},
-    before lower = \tcbsubtitle{POR QU\^E?},
-    fontupper = \sffamily,
-    fontlower = \sffamily,
-    sharp corners = north,
-    subtitle style = {
-      frame empty,
-      fontupper = \fontsize{13pt}{0}\selectfont\titlefont\bfseries,
-      colback = cor1,
-      coltext = black!70,
-      width = 3.5cm,
-      arc = 8pt,
-      rounded corners = east
-    }
-  }
-
-\newcommand{\bigopenningbox}{
-  \renewtcolorbox{openningbox}{
-  enhanced,
-%  jigsaw,
-  opacityframe=.3,
-  opacityfill=.3,
-  width=105mm,
-  left=3mm,
-  right=3mm,
-  top=3mm,
-  bottom=.5mm,
-  colback=white,
-  colframe=white,
-  arc=3mm,
-  sharp corners=uphill,
-    % frame empty,
-    % arc = 8pt,
-    lower separated = false,
-    before upper = \tcbsubtitle{O QU\^E?},
-    before lower = \tcbsubtitle{POR QU\^E?},
-    fontupper = \sffamily,
-    fontlower = \sffamily,
-    sharp corners = north,
-    subtitle style = {
-      frame empty,
-      fontupper = \fontsize{13pt}{0}\selectfont\titlefont\bfseries,
-      colback = cor1,
-      coltext = black!70,
-      width = 3.5cm,
-      arc = 8pt,
-      rounded corners = east
-    }
-  }
-  }
-
-
-
-\newcommand{\ChapNumTitle}[1]{%
-  % \thispagestyle{plain}
-  \thispagestyle{empty}
-    \begin{tikzpicture}[remember picture, overlay]
-        \coordinate (a) at ($(current page.north west) + (44.00mm,-44.00mm)$);
-        \coordinate (c) at ($(current page.north west) + (148.54mm,-64.82mm)$);
-        \coordinate (d) at ($(current page.north) + (0.00mm,-78.57mm)$);
-
-        \begin{pgfonlayer}{top}
-        \filldraw [fill=cor1, draw=cor1] ($(a) + (0.00mm,-25.00mm)$) -- ++(22.00mm,0.0mm) arc [start angle=270, end angle=360, x radius = 3.00mm, y
-        radius=3.00mm] coordinate (c1) -- ++(0.00mm,44.00mm) coordinate (c2) arc [start angle=0, end angle=90, x radius=3.00mm, y radius=3.00mm] --
-        ++(-44.00mm,0.00mm) arc [start angle=90, end angle=180, x radius=3.00mm, y radius=3.00mm] -- ++(0.00mm,-44.00mm) arc [start angle=180, end
-        angle=270, x radius=3.00mm, y radius=3.00mm] -- cycle;
-        \node[font=\chapnumfont, text=cor2] at (a) {\chapnamefont\thechapter};
-
-        \coordinate (b) at ($(c1)!0.5!(c2)$);
-        \node (title) at (b) [right, font=\chaptitlefont, text=cor2] {\begin{varwidth}{12cm}\baselineskip=1cm #1\end{varwidth}};
-        % solution to the box O QUE and POR QUE?
-        \node [right] at ($(current page.north)+(-15mm,-150mm)$) %
-        {\begin{openningbox}
-            \@chapterwhat
-
-            \tcblower
-
-            \@chapterbecause
-
-            \end{openningbox}};
-
-        \end{pgfonlayer}
-
-        \begin{pgfonlayer}{bottom}
-            \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{capas/\@chapterillustration}};
-        \end{pgfonlayer}
-
-        \begin{pgfonlayer}{top}
-
-        \end{pgfonlayer}
-    \end{tikzpicture}
-
-}
-
-\newcommand{\ChapNoNumTitle}[1]{%
-    \thispagestyle{plain}
-    \begin{tikzpicture}[remember picture, overlay]
-        \coordinate (a) at ($(current page.north west) + (44.00mm,-44.00mm)$);
-
-        \filldraw [fill=cor1] ($(a) + (0.00mm,-25.00mm)$) -- ++(22.00mm,0.0mm) arc [start angle=270, end angle=360, x radius = 3.00mm, y
-        radius=3.00mm] coordinate (c1) -- ++(0.00mm,44.00mm) coordinate (c2) arc [start angle=0, end angle=90, x radius=3.00mm, y radius=3.00mm] --
-        ++(-44.00mm,0.00mm) arc [start angle=90, end angle=180, x radius=3.00mm, y radius=3.00mm] -- ++(0.00mm,-44.00mm) arc [start angle=180, end
-        angle=270, x radius=3.00mm, y radius=3.00mm] -- cycle;
-%        \node[textbf, text=cor2] at (a) {\chapnamefont\thechapter};
-
-        \coordinate (b) at ($(c1)!0.5!(c2)$);
-        \node (title) at (b) [right, font=\chaptitlefont] {#1};
-    \end{tikzpicture}
-}
-\newif\ifnumberedchap
-\numberedchaptrue
-
-% Page number command
-\newcommand{\leftpagenumber}{%
-    \begin{tikzpicture}[remember picture, overlay]
-        \coordinate (bottom) at ($(current page.south west) + (13.50mm,6.80mm)$);
-            \begin{pgfonlayer}{main}
-                % Square for page number
-                \filldraw [fill=cor1, draw=cor1] (bottom) rectangle ++(-8.00mm,8.00mm) coordinate (corner);
-            \end{pgfonlayer}
-
-            \begin{pgfonlayer}{foreground}
-                \node [text=white, font=\bfseries](page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
-            \end{pgfonlayer}
-    \end{tikzpicture}
-}
-
-\newcommand{\rightpagenumber}{%
-    \begin{tikzpicture}[remember picture, overlay]
-        \coordinate (bottom) at ($(current page.south east) + (-13.50mm,6.80mm)$);
-            \begin{pgfonlayer}{main}
-                % Square for page number
-                \filldraw [fill=cor1, draw=cor1] (bottom) rectangle ++(8.00mm,8.00mm) coordinate (corner);
-            \end{pgfonlayer}
-
-            \begin{pgfonlayer}{foreground}
-                \node [text=white, font=\bfseries](page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
-            \end{pgfonlayer}
-
-    \end{tikzpicture}
-}
-
-\newcommand{\drawpage}{%
-    \begin{tikzpicture}[remember picture, overlay]
-        \draw [green, thick] (current page.north west) -- (current page.north east) -- (current page.south east) -- (current page.south west) -- cycle;
-    \end{tikzpicture}
-}
-
-
-% Draw headers. This places the tabs on the side of the page
-\newcommand{\leftpagetab}{%
-    \begin{tikzpicture}[remember picture, overlay]
-        \coordinate (bottom) at ($(current page.south west) + (18.00mm,0.00mm)$);
-
-        % Draw color block
-        \filldraw [fill=cor2, draw=cor2] ($(current page.north east) + (-18.00mm,0.00mm)$) rectangle ++(8.00mm,-8.00mm) coordinate (taba) {};
-
-        % Square for chapter number
-        \coordinate (tabb) at ($(taba) + (-8.00mm,-8.00mm)$);
-        \coordinate (tabc) at ($(tabb) + (4.00mm,0.00mm)$);
-        \node [fill=cor1, text=white, minimum height=8.00mm, minimum width=8.00mm] (chapternumber) at ($(tabb)!0.5!(taba)$) {\Large\thirdtitlefont\thechapter};
-        % \filldraw [fill=cor2, draw=cor2] ($(current page.north east) + (-18.00mm,-26.00mm)$) -- ++(9.00mm,0.00mm) -- ++(0.00mm,-9.00mm) -| cycle;
-
-        % Add chapter name
-        \node [fill=cor2, text=white] (chaptertitle) at (tabb) [rotate=90, below left, minimum height = 8.00mm] {\tiny\titlefont \MakeUppercase{\chaptername}};
-
-        % Add end tab
-        \fill [fill=cor2] (chaptertitle.north west) -- ++(0.00mm,-4.00mm) coordinate (t1) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm]  -- ++(4.00mm,0.00mm) arc [start angle=270, end angle=360, x radius=2.00mm, y radius=2.00mm] coordinate (t2) -| cycle;
-
-        % Add chapter title 
-        \node (chaptertitle) at ($(t1)!0.5!(t2)$) [left, rotate=90, text=black] {\tiny \pagetitlefont \leftmark};
-
-    \end{tikzpicture}
-}
-
-\newcommand{\rightpagetab}{%
-    \begin{tikzpicture}[remember picture, overlay]
-        % \filldraw [fill=cor1, draw=cor1] (current page.north west) rectangle ($(current page.south west) + (18.00mm,0.00mm)$) coordinate (bottom) {};
-        \coordinate (bottom) at ($(current page.south west) + (18.00mm,0.00mm)$);
-
-        % Draw color block
-        \filldraw [fill=cor2, draw=cor2] ($(current page.north west) + (18.00mm,0.00mm)$) rectangle ++(-8.00mm,-8.00mm) coordinate (taba) {};
-
-        % Square for chapter number
-        \coordinate (tabb) at ($(taba) + (8.00mm,-8.00mm)$);
-        %%% \coordinate (tabc) at ($(tabb) + (4.00mm,0.00mm)$);
-        \node [fill=cor1, text=white, minimum height=8.00mm, minimum width=8.00mm] (chapternumber) at ($(tabb)!0.5!(taba)$) {\Large\thirdtitlefont\thechapter};
-
-        % Add chapter name
-        \node [fill=cor2, text=white] (chaptertitle) at (tabb) [rotate=90, above left, minimum height = 8.00mm] {\tiny\titlefont \MakeUppercase{\chaptername}};
-
-        % Add end tab
-        \filldraw [fill=cor2, draw=cor2] (chaptertitle.south west) -- ++(0.00mm,-4.00mm) coordinate (t1) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- ++(-4.00mm,0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] coordinate (t2) -| cycle;
-
-        % Add chapter title
-        \node (chaptertitle) at ($(t1)!0.5!(t2)$) [left, rotate=90, text=black, xshift=-0.00mm] {\tiny\pagetitlefont\leftmark};
-
-        % Square for page number
-        % \filldraw [fill=cor1, draw=cor1] ($(bottom) + (0.00mm, 20.00mm)$) rectangle ++(8.00mm,8.00mm);
-    \end{tikzpicture}
-}
-
-\let\oldnewline\newline
-% redefinition: \newline is \relax
-\newcommand\AnnCL{%
-  \def\newline{\relax}}
-% recovering the original meaning of \newline
-\newcommand\RecCL{%
-  \def\newline{\oldnewline}}
-
-% Draw Headings
-
-
-
-%% Explorando
-
-\titleclass{\exploresec}{straight}[\section]
-\newcounter{exploresec}
-% \counterwithin{exploresec}{chapter}
-\renewcommand*{\theexploresec}{\arabic{exploresec}}
-
-
-\titleformat{\exploresec}[hang]{\large\color{session1}\secondtitlefont}{\theexploresec}{0pt}{\phantomsection
-\begin{tikzpicture}[remember picture, scale=1.3]
-        \filldraw [fill=session1, draw=session1] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-        \node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont EXPLORANDO};
-        \draw [session1, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
-        \node (title) at ($(a1)!0.5!(b1)$) [right] {\MakeUppercase{#1}};
-\end{tikzpicture}}
-
-\titlespacing*{\exploresec}{0pt}{8mm}{3pt}
-
-
-\newcommand{\explore}[1]
-{	
-	\needspace{\textheight}\checkoddpage\ifoddpage\else\cleardoublepage\fi%
-	\stepcounter{exploresec}
-	\exploresec{\texorpdfstring{}{Explorando: }#1}
-	\def\currentcolor{session1}
-	\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-	% choose secondary (depth 2) enumerate style..
-	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+		\filldraw [fill=box3, draw=box3] ($(frame.north west) + (.4mm,0mm)$) rectangle ++(24.00mm,-5.00mm);% the rectangle where the title fits.
+		\coordinate (A) at ($(frame.north west) + (24.00mm,-2mm)$);
+		\node at (A) {\includegraphics[scale=1]{interrogacao.png}};
+		}
+		}
+
+
+
+
+
+		% \NewEnviron{evaluation}{%
+		% 	\envskip
+		% 	\tikzset{external/export next=false}
+		% 	\begin{tikzpicture}[remember picture, external/export=false]
+		% 		\begin{pgfonlayer}{main}
+		% 			\node [box] (box) {%
+		% 				\begin{minipage}{0.90\textwidth}
+		% 					\BODY
+		% 				\end{minipage}
+		% 			};
+		% 		\end{pgfonlayer}
+		% 		\begin{pgfonlayer}{main}
+		% 			\filldraw [fill=cor1, draw=cor1] (box.north west) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,6.00mm) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- ++(3.00mm,0.00mm) coordinate (a) |- cycle;
+		% 			\node [draw=cor1, fill=cor1, minimum height=10.00mm, right] (heading) at ($(a) + (0.00mm,-5.00mm)$) {\Large AUTO-AVALIA\c{C}\={A}O};
+		% 			\filldraw [fill=cor1, draw=cor1] (heading.north east) -- ++(10.00mm,-10.00mm) coordinate (b) -| cycle;
+		% 		\end{pgfonlayer}
+
+		% 		\begin{pgfonlayer}{background}
+		% 			\draw [draw=cor1!30, line width=3.00mm, overlay] ($(box.north west) + (0.00mm,1.50mm)$) -| ($(box.south east) + (1.50mm,-1.50mm)$) -- ($(box.south west) + (-1.50mm,-1.50mm)$);
+		% 			\draw [draw=cor1, overlay] (b) -- (box.north east) -- (box.south east) -- ($(box.south west) + (-1.50mm,0.00mm)$);
+
+		% 			%			\draw [draw=cor1!30, line width=3.00mm, overlay] ($(box.north west) + (0.00mm,1.50mm)$) -| ($(box.south east) + (1.50mm,-1.50mm)$) coordinate (d) -- ($(current page.north west)!(d)!(current page.south west)$) -- (d);
+		% 			%			\draw [draw=cor1, overlay] (b) -- (box.north east) -- (box.south east) -- ($(box.south west) + (-15.00mm,0.00mm)$) coordinate (c) -- ($(current page.north west)!(c)!(current page.south west)$) -- (c);
+		% 		\end{pgfonlayer}
+
+		% 	\end{tikzpicture}
+
+		% }
+
+
+		\NewEnviron{project}{%
+			\setlist[itemize]{label=\protect\itemcoloredsquare, }
+			\def\currentcolor{cor2}
+			\newpage
+			\tikzset{external/export next=false}
+			\begin{tikzpicture}[remember picture, overlay, external/export=false]
+				\coordinate (border1) at ($(current page text area.south east) + (0.00mm,8.00mm)$);
+				\coordinate (border1a) at ($(border1) + (-5.00mm,2.00mm)$);
+				\coordinate (border1b) at ($(current page text area.south west) + (11.00mm,10.00mm)$);
+				\coordinate (border1c) at ($(current page text area.north west) + (11.00mm,-13.00mm)$);
+				\coordinate (border1d) at ($(current page text area.south west) + (11.00mm,13.00mm)$);
+				\coordinate (heading) at ($(current page text area.north west) + (32.50mm,-5.00mm)$);
+				\coordinate (corner1) at ($(current page text area.north west) + (6.00mm,-10.00mm)$);
+				\coordinate (corner2) at ($(current page text area.north east) + (-4.00mm,-10.00mm)$);
+				\coordinate (corner3) at ($(current page text area.south east) + (0.00mm,10.00mm)$);
+				\coordinate (corner4) at ($(current page text area.south west) + (10.00mm,6.00mm)$);
+				\coordinate (text1) at ($(current page text area.north west) + (11.00,-12.50mm)$);
+				\coordinate (text2) at ($(current page text area.south east) + (-2.50mm,8.50mm)$);
+				\coordinate (bodytextpos) at ($(border1c) + (5.00mm,-3.00mm)$);
+
+				\begin{pgfonlayer}{background}
+					\draw [draw=base1, fill=base1] (current page text area.south west) rectangle (current page text area.north east);
+				\end{pgfonlayer}
+
+				\begin{pgfonlayer}{main}
+					\draw [fill=cor2, draw=cor2] (current page text area.north west) -- ++(0.00mm,-8.00mm) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] -| ++(63.00mm,8.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+					\draw [fill=base1!30, draw=base1!30] (corner1) -- (corner2) arc [start angle=90, end angle=0, x radius=4.00mm, y radius=4.00mm] -- (corner3) arc [start angle=0, end angle=-90, x radius=4.00mm, y radius=4.00mm] -- (corner4) arc [start angle=270, end angle=180, x radius=4.00mm, y radius=4.00mm] -- cycle;
+					% \draw [green] (text1) rectangle (text2);
+					\draw [black] (border1a) -- (border1b) -- (border1c) -| cycle;
+
+				\end{pgfonlayer}
+
+				\begin{pgfonlayer}{foreground}
+					\node [color=base1!30, font=\titlefont\bfseries\fontsize{13pt}{0}\selectfont] (title) at (heading) {PROJETO APLICADO};
+					\node [box, below right] (bodytext) at (border1c){%
+						\begin{minipage}{0.85\textwidth}
+							\BODY
+						\end{minipage}
+					};
+				\end{pgfonlayer}
+
+
+			\end{tikzpicture}
+			\clearpage
+		}
+
+		%Seção 2 - Livro Aberto Colors
+
+		%***************************************************************************************
+		% This package sets up the colors used in the Livro Aberto textbook.
+		%
+		% This package was written and created by
+		% David Latchman, TeXnical Designs
+		% Contact: david.latchman@texnical-designs.com for problems
+		%
+		%
+		% The fonts used in this package:
+		% Title: Orbitron
+		% Main (Text): Exo 2
+		% Boxes: Roboto
+
+
+		%% ---------------------------------------------------------------------
+		%%
+		%% Loads the ifthen package
+		%%
+		% \RequirePackage{ifthen}
+
+		% \RequirePackage{xkeyval}
+
+		\definecolor{cor1}{RGB}{0,165,157} %verde agua
+		\definecolor{cor2}{RGB}{73,85,93}
+		\definecolor{cor1a}{RGB}{0,165,157}
+		\definecolor{cor2a}{RGB}{73,85,93}
+		\definecolor{cor1b}{RGB}{251,181,0}
+		\definecolor{cor2b}{RGB}{73,85,93}
+
+		\definecolor{base1}{RGB}{184,202,213}
+		\definecolor{base2}{RGB}{221,223,80}
+
+		\definecolor{session1}{RGB}{0,94,176} %azul
+		\definecolor{session2}{RGB}{75,173,49} %verde
+		\definecolor{session3}{RGB}{183,13,40} %vinho
+		\definecolor{session4}{RGB}{236,107,16} %laranja
+
+		\definecolor{penaqua}{RGB}{0,165,157}
+		\definecolor{grafite}{RGB}{73,85,93}
+		\definecolor{penazul}{RGB}{0,94,176}
+		\definecolor{penverde}{RGB}{75,173,49}
+		\definecolor{penvinho}{RGB}{83,13,40}
+		\definecolor{penlaranja}{RGB}{236,107,16}
+		\definecolor{penbox2}{RGB}{240,238,201}
+
+		\definecolor{box1}{RGB}{71,30,129}
+		\definecolor{box2}{RGB}{225,221,146}
+		\definecolor{box3}{RGB}{108,27,98}
+		\definecolor{linkscolor}{RGB}{6,69,173}
+
+		\definecolor{magblue}{RGB}{151,255,249}
+
+		\definecolor{primario}{RGB}{0,165,157} %esverdeado
+		\definecolor{secundario}{RGB}{73,85,93} %acinzentado escuro
+		\definecolor{terciario}{RGB}{184,202,213} % azul claro
+		\definecolor{destacado}{RGB}{183,13,40} %avermelhado
+		\definecolor{atento}{RGB}{0,94,176} %azul forte
+
+		% Set up options for color schemes
+		\newboolean{coloroptions}
+
+		\define@choicekey*+{colorchoices}{color options}[\val\coloroption]
+		{option 1, option 2}{%
+			\ifcase\coloroption\relax
+				\definecolor{cor1}{RGB}{0,165,157}
+				\definecolor{cor2}{RGB}{73,85,93}
+				% \setboolean{coloroptions}{true}
+			\or
+				% \setboolean{coloroptions}{false}
+				\definecolor{cor1}{RGB}{251,181,0}
+				\definecolor{cor2}{RGB}{73,85,93}
+			\fi
+		}{%
+			% \setboolean{coloroptions}{true}
+			\definecolor{cor1}{RGB}{0,165,157}
+			\definecolor{cor2}{RGB}{73,85,93}
+		}
+
+		%Seção 3 - Livro Aberto Fonts
+
+		%***************************************************************************************
+		% This package sets up the fonts for the Livro Aberto textbook.
+		%
+		% This package was written and created by
+		% David Latchman, TeXnical Designs
+		% Contact: david.latchman@texnical-designs.com for problems
+		%
+		%
+		% The fonts used in this package:
+		% Title: Orbitron
+		% Main (Text): Exo 2
+		% Boxes: Roboto
+
+
+
+
+		\typeout{Package: `\filetitle\space\filename\space\fileversion{}\@spaces<\filedate>'}
+		\typeout{English documentation as of <\docdate>}
+
+		%% ---------------------------------------------------------------------
+		%%
+		%% Loads the ifthen package
+		%%
+
+
+		\RequirePackage{fontspec}
+		\setmainfont[Path=\fontspath]{Exo2-Light.ttf}[BoldFont=Exo2-Medium.otf, ItalicFont=Exo2-LightItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf]
+		\newfontfamily{\titlefont}[Path=\fontspath]{orbitron-medium.otf}[BoldFont=orbitron-bold.otf]
+		\newfontfamily{\secondtitlefont}[Path=\fontspath]{orbitron-black.ttf}
+		\newfontfamily{\thirdtitlefont}[Path=\fontspath]{orbitron-bold.otf}
+		\newfontfamily{\pagetitlefont}[Path=\fontspath]{Orbitron-Regular.ttf}
+		\newfontfamily{\boxfont}[Path=\fontspath]{Roboto-Regular.ttf}
+		\newfontfamily{\enumeratefont}[Path=\fontspath]{Exo2-Light.ttf}[BoldFont=Exo2-Medium.ttf, ItalicFont=Exo2-LightItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf]
+		\newfontfamily{\boxtitlefont}[Path=\fontspath]{Exo2-Bold.ttf}[BoldFont=Exo2-ExtraBold.ttf, ItalicFont=Exo2-BoldItalic.ttf, BoldItalicFont=Exo2-ExtraBoldItalic.ttf] % added after David
+		\newfontfamily{\extitlefont}[Path=\fontspath]{Exo2-SemiBold.ttf} % added after David
+		\newfontfamily{\boxexample}[Path=\fontspath]{Exo2-Regular.ttf}[BoldFont=Exo2-SemiBold.ttf, ItalicFont=Exo2-RegularItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf] % added after David
+
+
+
+
+
+		%Seção 4 - Livro Aberto Headings
+
+		%***************************************************************************************
+		% This package creates the heading designs for the Livro Aberto textbook.
+		%
+		% This package was written and created by
+		% David Latchman, TeXnical Designs
+		% Contact: david.latchman@texnical-designs.com for problems
+		%
+
+
+		%% ---------------------------------------------------------------------
+		%%
+		%% Loads the ifthen package
+		%%
+
+		% Commands for chapter page
+		\newcommand{\chapterillustration}[2]{
+			\ifnum\aluno=1
+				\def{\@chapterillustration{#1}}
+			\else
+				\def{\@chapterillustration{#2}}
+			\fi
+		}
+		\newcommand{\chapterwhat}[1]{\def{\@chapterwhat{#1}}}
+		\newcommand{\chapterbecause}[1]{\def{\@chapterbecause{#1}}}
+
+
+
+
+		% Formatação dos comandos \section e \subsection
+		%Cor atual
+		\titleformat{\section}{\color{\currentcolor}\normalfont\semihuge\bfseries}{\thesection}{1em}{#1 \phantomsection}
+		\titlespacing*{\section}
+		{0pt}{2mm}{1mm}
+		% \providecommand*{\toclevel@section}{2}
+
+
+		\titleformat{\subsection}{\color{\currentcolor}\normalfont\Large\bfseries}{\thesection}{1em}{#1}
+		\titlespacing*{\subsection}
+		{0pt}{2mm}{1mm}
+
+		\titleformat{\paragraph}{\color{\currentcolor}\normalfont\large\bfseries}{\thesubsection}{1em}{#1}
+		\titlespacing*{\paragraph}
+		{0pt}{1mm}{1mm}
+
+
+
+		\renewcommand{\toclevel@section}{1}
+		\renewcommand{\toclevel@subsection}{4}
+		\renewcommand{\toclevel@paragraph}{5}
+		\renewcommand{\toclevel@subparagraph}{6}
+
+		\providecommand*{\toclevel@exploresec}{1}
+		\providecommand*{\toclevel@practicesec}{1}
+		\providecommand*{\toclevel@arrangesec}{1}
+		\providecommand*{\toclevel@knowsec}{1}
+		\providecommand*{\toclevel@exercisesec}{1}
+
+		\newcommand{\expandtocdepth}[1][]{%
+			\renewcommand{\toclevel@section}{1}
+			\renewcommand{\toclevel@subsection}{4}
+			\renewcommand{\toclevel@paragraph}{5}
+			\renewcommand{\toclevel@subparagraph}{6}
+
+			\renewcommand{\toclevel@exploresec}{2}
+			\renewcommand{\toclevel@practicesec}{2}
+			\renewcommand{\toclevel@arrangesec}{2}
+			\setcounter{tocdepth}{2}
+
+			\IfStrEqCase{#1}{%
+				{}{
+		}%
+				{know}{
+					\renewcommand{\toclevel@knowsec}{2}
+				}%
+				{exercise}{
+					\renewcommand{\toclevel@exercisesec}{2}
+				}%
+				{know, exercise}{
+					\renewcommand{\toclevel@knowsec}{2}
+					\renewcommand{\toclevel@exercisesec}{2}
+				}
+			}[%
+			Apenas os valores ``know'' e ``exercise'' são permitidos.
+			]%
+		}
+
+		\titleformat{\bibliographytitle}{\vspace{.3\baselineskip}\color{cor1}\normalfont\huge\bfseries}{\thesubsection}{1em}{}
+		\titlespacing*{\subsection}
+		{0pt}{1mm}{1mm}
+
+		%Cor Explorando
+
+		\newcommand{\scexplore}[1]{\hypersetup{linkcolor=session1}\paragraph{\color{session1}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+		\newcommand{\scarrange}[1]{\hypersetup{linkcolor=session4}\paragraph{\color{session4}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+		\newcommand{\scpractice}[1]{\hypersetup{linkcolor=session2}\paragraph{\color{session2}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+		\newcommand{\scknow}[1]{\hypersetup{linkcolor=session2}\paragraph{\color{session3}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+		\newcommand{\scexercise}[1]{\hypersetup{linkcolor=cor1}\paragraph{\color{cor1}\normalfont\Large\bfseries#1}\hypersetup{linkcolor=linkscolor}}
+
+
+		\newcommand{\subexplore}[1]{\paragraph{\color{session1}\normalfont\Large\bfseries#1}}
+		\newcommand{\subarrange}[1]{\paragraph{\color{session4}\normalfont\Large\bfseries#1}}
+		\newcommand{\subpractice}[1]{\paragraph{\color{session2}\normalfont\Large\bfseries#1}}
+		\newcommand{\subknow}[1]{\paragraph{\color{session3}\normalfont\Large\bfseries#1}}
+		\newcommand{\subexercise}[1]{\paragraph{\color{cor1}\normalfont\Large\bfseries#1}}
+
+		% Create box shape
+		\pgfdeclareshape{howbecausetextbox}{%
+			\inheritsavedanchors[from=rectangle]
+			\inheritanchorborder[from=rectangle]
+
+			\inheritanchor[from=rectangle]{center}
+			\inheritanchor[from=rectangle]{south}
+			\inheritanchor[from=rectangle]{west}
+			\inheritanchor[from=rectangle]{north}
+			\inheritanchor[from=rectangle]{east}
+			\inheritanchor[from=rectangle]{base}
+			\inheritanchor[from=rectangle]{north west}
+			\inheritanchor[from=rectangle]{north east}
+			\inheritanchor[from=rectangle]{south east}
+			\inheritanchor[from=rectangle]{south west}
+
+			\backgroundpath{%
+				\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+				\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+
+				% Construct main path
+				% Construct main path
+				\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya+5pt}}
+				\pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+				\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+				\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya+5pt}}
+				\pgfpatharc{0}{-90}{5.0pt}
+				\pgfpathlineto{\pgfpoint{\pgf@xa+5pt}{\pgf@ya}}
+				\pgfpatharc{270}{180}{5.0pt}
+				%        \pgfpathcurveto{\pgfpoint{\pgf@xc}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@yc}}
+				\pgfpathclose
+			}
+		}
+
+		\pgfdeclareshape{howbecauseheadingbox}{%
+			\inheritsavedanchors[from=rectangle]
+			\inheritanchorborder[from=rectangle]
+
+			\inheritanchor[from=rectangle]{center}
+			\inheritanchor[from=rectangle]{south}
+			\inheritanchor[from=rectangle]{west}
+			\inheritanchor[from=rectangle]{north}
+			\inheritanchor[from=rectangle]{east}
+			\inheritanchor[from=rectangle]{base}
+			\inheritanchor[from=rectangle]{north west}
+			\inheritanchor[from=rectangle]{north east}
+			\inheritanchor[from=rectangle]{south east}
+			\inheritanchor[from=rectangle]{south west}
+
+			\backgroundpath{%
+				\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+				\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+
+				% Construct main path
+				% Construct main path
+				\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+				\pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+				\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+				\pgfpatharc{90}{0}{7.0pt}
+				\pgfpathlineto{\pgfpoint{\pgf@xb+7pt}{\pgf@ya+7.0pt}}
+				\pgfpatharc{0}{-90}{7.0pt}
+				\pgfpathclose
+			}
+		}
+
+
+		\newtcolorbox{openningbox}{
+			enhanced,
+			%  jigsaw,
+			opacityframe=.3,
+			opacityfill=.3,
+			width=80mm,
+			left=3mm,
+			right=3mm,
+			top=3mm,
+			bottom=.5mm,
+			colback=white,
+			colframe=white,
+			arc=3mm,
+			sharp corners=uphill,
+			% frame empty,
+			% arc = 8pt,
+			lower separated = false,
+			before upper = \tcbsubtitle{O QU\^E?},
+			before lower = \tcbsubtitle{POR QU\^E?},
+			fontupper = \sffamily,
+			fontlower = \sffamily,
+			sharp corners = north,
+			subtitle style = {
+				frame empty,
+				fontupper = \fontsize{13pt}{0}\selectfont\titlefont\bfseries,
+				colback = cor1,
+				coltext = black!70,
+				width = 3.5cm,
+				arc = 8pt,
+				rounded corners = east
+			}
+		}
+
+		\newcommand{\bigopenningbox}{
+			\renewtcolorbox{openningbox}{
+				enhanced,
+				%  jigsaw,
+				opacityframe=.3,
+				opacityfill=.3,
+				width=105mm,
+				left=3mm,
+				right=3mm,
+				top=3mm,
+				bottom=.5mm,
+				colback=white,
+				colframe=white,
+				arc=3mm,
+				sharp corners=uphill,
+				% frame empty,
+				% arc = 8pt,
+				lower separated = false,
+				before upper = \tcbsubtitle{O QU\^E?},
+				before lower = \tcbsubtitle{POR QU\^E?},
+				fontupper = \sffamily,
+				fontlower = \sffamily,
+				sharp corners = north,
+				subtitle style = {
+					frame empty,
+					fontupper = \fontsize{13pt}{0}\selectfont\titlefont\bfseries,
+					colback = cor1,
+					coltext = black!70,
+					width = 3.5cm,
+					arc = 8pt,
+					rounded corners = east
+				}
+			}
+		}
+
+
+
+		\newcommand{\ChapNumTitle}[1]{%
+			% \thispagestyle{plain}
+			\thispagestyle{empty}
+			\tikzset{external/export next=false}
+			\begin{tikzpicture}[remember picture, overlay, external/export=false]
+				\coordinate (a) at ($(current page.north west) + (44.00mm,-44.00mm)$);
+				\coordinate (c) at ($(current page.north west) + (148.54mm,-64.82mm)$);
+				\coordinate (d) at ($(current page.north) + (0.00mm,-78.57mm)$);
+
+				\begin{pgfonlayer}{top}
+					\filldraw [fill=cor1, draw=cor1] ($(a) + (0.00mm,-25.00mm)$) -- ++(22.00mm,0.0mm) arc [start angle=270, end angle=360, x radius = 3.00mm, y
+							radius=3.00mm] coordinate (c1) -- ++(0.00mm,44.00mm) coordinate (c2) arc [start angle=0, end angle=90, x radius=3.00mm, y radius=3.00mm] --
+					++(-44.00mm,0.00mm) arc [start angle=90, end angle=180, x radius=3.00mm, y radius=3.00mm] -- ++(0.00mm,-44.00mm) arc [start angle=180, end
+							angle=270, x radius=3.00mm, y radius=3.00mm] -- cycle;
+					\node[font=\chapnumfont, text=cor2] at (a) {\chapnamefont\thechapter};
+
+					\coordinate (b) at ($(c1)!0.5!(c2)$);
+					\node (title) at (b) [right, font=\chaptitlefont, text=cor2] {\begin{varwidth}{12cm}\baselineskip=1cm #1\end{varwidth}};
+					% solution to the box O QUE and POR QUE?
+					\node [right] at ($(current page.north)+(-15mm,-150mm)$) %
+					{\begin{openningbox}
+							\@chapterwhat
+
+							\tcblower
+
+							\@chapterbecause
+
+						\end{openningbox}};
+
+				\end{pgfonlayer}
+
+				\begin{pgfonlayer}{bottom}
+					\node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{capas/\@chapterillustration}};
+				\end{pgfonlayer}
+
+				\begin{pgfonlayer}{top}
+
+				\end{pgfonlayer}
+			\end{tikzpicture}
+
+		}
+
+		\newcommand{\ChapNoNumTitle}[1]{%
+			\thispagestyle{plain}
+			\tikzset{external/export next=false}
+			\begin{tikzpicture}[remember picture, overlay, external/export=false]
+				\coordinate (a) at ($(current page.north west) + (44.00mm,-44.00mm)$);
+
+				\filldraw [fill=cor1] ($(a) + (0.00mm,-25.00mm)$) -- ++(22.00mm,0.0mm) arc [start angle=270, end angle=360, x radius = 3.00mm, y
+						radius=3.00mm] coordinate (c1) -- ++(0.00mm,44.00mm) coordinate (c2) arc [start angle=0, end angle=90, x radius=3.00mm, y radius=3.00mm] --
+				++(-44.00mm,0.00mm) arc [start angle=90, end angle=180, x radius=3.00mm, y radius=3.00mm] -- ++(0.00mm,-44.00mm) arc [start angle=180, end
+						angle=270, x radius=3.00mm, y radius=3.00mm] -- cycle;
+				%        \node[textbf, text=cor2] at (a) {\chapnamefont\thechapter};
+
+				\coordinate (b) at ($(c1)!0.5!(c2)$);
+				\node (title) at (b) [right, font=\chaptitlefont] {#1};
+			\end{tikzpicture}
+		}
+		\newif\ifnumberedchap
+		\numberedchaptrue
+
+		% Page number command
+		\newcommand{\leftpagenumber}{%
+			\tikzset{external/export next=false}
+			\begin{tikzpicture}[remember picture, overlay, external/export=false]
+				\coordinate (bottom) at ($(current page.south west) + (13.50mm,6.80mm)$);
+				\begin{pgfonlayer}{main}
+					% Square for page number
+					\filldraw [fill=cor1, draw=cor1] (bottom) rectangle ++(-8.00mm,8.00mm) coordinate (corner);
+				\end{pgfonlayer}
+
+				\begin{pgfonlayer}{foreground}
+					\node [text=white, font=\bfseries](page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
+				\end{pgfonlayer}
+			\end{tikzpicture}
+		}
+
+		\newcommand{\rightpagenumber}{%
+			\tikzset{external/export next=false}
+			\begin{tikzpicture}[remember picture, overlay, external/export=false]
+				\coordinate (bottom) at ($(current page.south east) + (-13.50mm,6.80mm)$);
+				\begin{pgfonlayer}{main}
+					% Square for page number
+					\filldraw [fill=cor1, draw=cor1] (bottom) rectangle ++(8.00mm,8.00mm) coordinate (corner);
+				\end{pgfonlayer}
+
+				\begin{pgfonlayer}{foreground}
+					\node [text=white, font=\bfseries](page_number) at ($(bottom)!0.5!(corner)$) {\thepage};
+				\end{pgfonlayer}
+
+			\end{tikzpicture}
+		}
+
+		\newcommand{\drawpage}{%
+			\tikzset{external/export next=false}
+			\begin{tikzpicture}[remember picture, overlay, external/export=false]
+				\draw [green, thick] (current page.north west) -- (current page.north east) -- (current page.south east) -- (current page.south west) -- cycle;
+			\end{tikzpicture}
+		}
+
+
+		% Draw headers. This places the tabs on the side of the page
+		\newcommand{\leftpagetab}{%
+			\tikzset{external/export next=false}
+			\begin{tikzpicture}[remember picture, overlay, external/export=false]
+				\coordinate (bottom) at ($(current page.south west) + (18.00mm,0.00mm)$);
+
+				% Draw color block
+				\filldraw [fill=cor2, draw=cor2] ($(current page.north east) + (-18.00mm,0.00mm)$) rectangle ++(8.00mm,-8.00mm) coordinate (taba) {};
+
+				% Square for chapter number
+				\coordinate (tabb) at ($(taba) + (-8.00mm,-8.00mm)$);
+				\coordinate (tabc) at ($(tabb) + (4.00mm,0.00mm)$);
+				\node [fill=cor1, text=white, minimum height=8.00mm, minimum width=8.00mm] (chapternumber) at ($(tabb)!0.5!(taba)$) {\Large\thirdtitlefont\thechapter};
+				% \filldraw [fill=cor2, draw=cor2] ($(current page.north east) + (-18.00mm,-26.00mm)$) -- ++(9.00mm,0.00mm) -- ++(0.00mm,-9.00mm) -| cycle;
+
+				% Add chapter name
+				\node [fill=cor2, text=white] (chaptertitle) at (tabb) [rotate=90, below left, minimum height = 8.00mm] {\tiny\titlefont \MakeUppercase{\chaptername}};
+
+				% Add end tab
+				\fill [fill=cor2] (chaptertitle.north west) -- ++(0.00mm,-4.00mm) coordinate (t1) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm]  -- ++(4.00mm,0.00mm) arc [start angle=270, end angle=360, x radius=2.00mm, y radius=2.00mm] coordinate (t2) -| cycle;
+
+				% Add chapter title 
+				\node (chaptertitle) at ($(t1)!0.5!(t2)$) [left, rotate=90, text=black] {\tiny \pagetitlefont \leftmark};
+
+			\end{tikzpicture}
+		}
+
+		\newcommand{\rightpagetab}{%
+			\tikzset{external/export next=false}
+			\begin{tikzpicture}[remember picture, overlay, external/export=false]
+				% \filldraw [fill=cor1, draw=cor1] (current page.north west) rectangle ($(current page.south west) + (18.00mm,0.00mm)$) coordinate (bottom) {};
+				\coordinate (bottom) at ($(current page.south west) + (18.00mm,0.00mm)$);
+
+				% Draw color block
+				\filldraw [fill=cor2, draw=cor2] ($(current page.north west) + (18.00mm,0.00mm)$) rectangle ++(-8.00mm,-8.00mm) coordinate (taba) {};
+
+				% Square for chapter number
+				\coordinate (tabb) at ($(taba) + (8.00mm,-8.00mm)$);
+				%%% \coordinate (tabc) at ($(tabb) + (4.00mm,0.00mm)$);
+				\node [fill=cor1, text=white, minimum height=8.00mm, minimum width=8.00mm] (chapternumber) at ($(tabb)!0.5!(taba)$) {\Large\thirdtitlefont\thechapter};
+
+				% Add chapter name
+				\node [fill=cor2, text=white] (chaptertitle) at (tabb) [rotate=90, above left, minimum height = 8.00mm] {\tiny\titlefont \MakeUppercase{\chaptername}};
+
+				% Add end tab
+				\filldraw [fill=cor2, draw=cor2] (chaptertitle.south west) -- ++(0.00mm,-4.00mm) coordinate (t1) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- ++(-4.00mm,0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] coordinate (t2) -| cycle;
+
+				% Add chapter title
+				\node (chaptertitle) at ($(t1)!0.5!(t2)$) [left, rotate=90, text=black, xshift=-0.00mm] {\tiny\pagetitlefont\leftmark};
+
+				% Square for page number
+				% \filldraw [fill=cor1, draw=cor1] ($(bottom) + (0.00mm, 20.00mm)$) rectangle ++(8.00mm,8.00mm);
+			\end{tikzpicture}
+		}
+
+		\let\oldnewline\newline
+		% redefinition: \newline is \relax
+		\newcommand\AnnCL{%
+			\def\newline{\relax}}
+		% recovering the original meaning of \newline
+		\newcommand\RecCL{%
+			\def\newline{\oldnewline}}
+
+		% Draw Headings
+
+
+
+		%% Explorando
+
+		\titleclass{\exploresec}{straight}[\section]
+		\newcounter{exploresec}
+		% \counterwithin{exploresec}{chapter}
+		\renewcommand{\theexploresec}{\arabic{exploresec}}
+
+
+		\titleformat{\exploresec}[hang]{\large\color{session1}\secondtitlefont}{\theexploresec}{0pt}{\phantomsection
+			\tikzset{external/export next=false}
+			\begin{tikzpicture}[remember picture, scale=1.3, external/export=false]
+				\filldraw [fill=session1, draw=session1] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+				\node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont EXPLORANDO};
+				\draw [session1, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
+				\node (title) at ($(a1)!0.5!(b1)$) [right] {\MakeUppercase{#1}};
+			\end{tikzpicture}}
+
+		\titlespacing*{\exploresec}{0pt}{8mm}{3pt}
+
+
+		\newcommand{\explore}[1]
+		{
+		\needspace{\textheight}\checkoddpage\ifoddpage\else\cleardoublepage\fi%
+		\stepcounter{exploresec}
+		\exploresec{\texorpdfstring{}{Explorando: }#1}
+		\def\currentcolor{session1}
+		\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+% choose secondary (depth 2) enumerate style..
+\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
 }
 
 
@@ -1031,16 +995,17 @@ underlay boxed title={
 
 \titleclass{\practicesec}{straight}[\section]
 \newcounter{practicesec}
-\renewcommand*{\thepracticesec}{\arabic{practicesec}}
+\renewcommand{\thepracticesec}{\arabic{practicesec}}
 
 \titleformat{\practicesec}[hang]{\large\color{session2}\secondtitlefont}{\thepracticesec}{0pt}{\phantomsection
-% \needspace{\textheight}\checkoddpage\ifoddpage\else\cleardoublepage\fi%
-\begin{tikzpicture}[remember picture, scale=1.3]% overlay removed from original, otherwise the stays behind the text, scale.
-        \filldraw [fill=session2, draw=session2] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-        \node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont PRATICANDO};
-        \draw [session2, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
-        \node (title) at ($(a1)!0.5!(b1)$) [right] {\MakeUppercase{#1}};
-\end{tikzpicture}}
+	% \needspace{\textheight}\checkoddpage\ifoddpage\else\cleardoublepage\fi%
+	\tikzset{external/export next=false}
+	\begin{tikzpicture}[remember picture, scale=1.3, external/export=false]% overlay removed from original, otherwise the stays behind the text, scale.
+		\filldraw [fill=session2, draw=session2] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+		\node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont PRATICANDO};
+		\draw [session2, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
+		\node (title) at ($(a1)!0.5!(b1)$) [right] {\MakeUppercase{#1}};
+	\end{tikzpicture}}
 
 \titlespacing*{\practicesec}{0pt}{8mm}{3pt}
 
@@ -1050,11 +1015,9 @@ underlay boxed title={
 	\needspace{.15\textheight}
 	\stepcounter{practicesec}
 	\practicesec{\texorpdfstring{}{Praticando: }#1}
-	% \pdfbookmark[\thepracticesec]{Praticando: #1}{}
 	\def\currentcolor{session2}
 	\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-	% choose secondary (depth 2) enumerate style..
-	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
 }
 
 
@@ -1062,16 +1025,17 @@ underlay boxed title={
 
 \titleclass{\knowsec}{straight}[\chapter]
 \newcounter{knowsec}
-\renewcommand*{\theknowsec}{\arabic{knowsec}}
+\renewcommand{\theknowsec}{\arabic{knowsec}}
 
 \titleformat{\knowsec}[hang]{\large\color{session3}\secondtitlefont}{\theknowsec}{0pt}{
-\phantomsection
-\begin{tikzpicture}[remember picture, scale=1.3]% overlay removed from original, otherwise the stays behind the text, scale.
-        \filldraw [fill=session3, draw=session3] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-        \node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont PARA SABER \Huge{+}};
-        \draw [session3, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
-        \node (title) at ($(a1)!0.5!(b1)$) [right] {\MakeUppercase{#1}};
-\end{tikzpicture}}
+	\phantomsection
+	\tikzset{external/export next=false}
+	\begin{tikzpicture}[remember picture, scale=1.3, external/export=false]% overlay removed from original, otherwise the stays behind the text, scale.
+		\filldraw [fill=session3, draw=session3] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+		\node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont PARA SABER \Huge{+}};
+		\draw [session3, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
+		\node (title) at ($(a1)!0.5!(b1)$) [right] {\MakeUppercase{#1}};
+	\end{tikzpicture}}
 
 \titlespacing*{\knowsec}{0pt}{8mm}{3pt}
 
@@ -1085,7 +1049,7 @@ underlay boxed title={
 	\def\currentcolor{session3}
 	\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
 	% choose secondary (depth 2) enumerate style..
-	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
 }
 
 
@@ -1094,16 +1058,18 @@ underlay boxed title={
 
 \titleclass{\arrangesec}{straight}[\section]
 \newcounter{arrangesec}
-\renewcommand*{\thearrangesec}{\arabic{arrangesec}}
+\renewcommand{\thearrangesec}{\arabic{arrangesec}}
 
-\titleformat{\arrangesec}[hang]{\large\color{session4}\secondtitlefont}{\thearrangesec}{0pt}{\phantomsection
-% \needspace{\textheight}\checkoddpage\ifoddpage\else\cleardoublepage\fi%
-\begin{tikzpicture}[remember picture, scale=1.3]% overlay removed from original, otherwise the stays behind the text, scale.
-        \filldraw [fill=session4, draw=session4] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-        \node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont ORGANIZANDO};
-        \draw [session3, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
-        \node (title) at ($(a1)!0.5!(b1)$) [right] {\MakeUppercase{#1}};
-\end{tikzpicture}}
+\titleformat{\arrangesec}[hang]{\large\color{session4}\secondtitlefont}{\thepracticesec}{0pt}{\phantomsection
+	% \needspace{\textheight}\checkoddpage\ifoddpage\else\cleardoublepage\fi%
+	\tikzset{external/export next=false}
+	\begin{tikzpicture}[remember picture, scale=1.3, external/export=false]% overlay removed from original, otherwise the stays behind the text, scale.
+		\filldraw [fill=session4, draw=session4] (-3.00mm,0.00mm) coordinate (a) -- ++(30.00mm,0.00mm) arc [start angle=90, end angle=0, x radius=2.00mm, y radius=2.00mm] coordinate (a1) -- ++(0.00mm,-2.00mm) coordinate (b1) arc [start angle=180, end angle=270, x radius=2.00mm, y radius=2.00mm] coordinate (b) -- ++(-30.00mm, 0.00mm) arc [start angle=270, end angle=180, x radius=2.00mm, y radius=2.00mm] -- ++(0.00mm,2.00mm) arc [start angle=0, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+		\node (explore) at ($(a)!0.5!(b)$) [white] {\titlefont ORGANIZANDO};
+		\draw [session4, thick] (b) --++ ($(\textwidth,0.00mm)+(-72 mm,0 mm)$); % changed
+		\node (title) at ($(a1)!0.5!(b1)$) [right] {\MakeUppercase{#1}};
+	\end{tikzpicture}
+}
 
 \titlespacing*{\arrangesec}{0pt}{8mm}{3pt}
 
@@ -1114,26 +1080,25 @@ underlay boxed title={
 	\needspace{.15\textheight}
 	\stepcounter{arrangesec}
 	\arrangesec{\texorpdfstring{}{Organizando: }#1}
-	% \pdfbookmark[\thearrangesec]{Organizando: #1}{}
 	\def\currentcolor{session4}
 	\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
-	% choose secondary (depth 2) enumerate style..
-	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}} 
+	\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)},ref=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
 }
 
 
 \titleclass{\exercisesec}{straight}[\chapter]
 \newcounter{exercisesec}
-\renewcommand*{\theexercisesec}{\arabic{exercisesec}}
+\renewcommand{\theexercisesec}{\arabic{exercisesec}}
 
 
 \titleformat{\exercisesec}[hang]{\large\color{cor1}\secondtitlefont}{\theexercisesec}{0pt}{\phantomsection
-% \needspace{\textheight}\checkoddpage\ifoddpage\else\cleardoublepage\fi%
-\begin{tikzpicture}[remember picture]
-	\draw [draw=cor2, very thick] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) -- ++(\textwidth , 0.00mm) -- ++(0mm,-2mm);% line
-	\fill [draw=cor2, very thick , fill=cor1] ($(\textwidth/2 , 0mm) + (19mm,6mm)$) -- ++(0.00mm,-5.5 mm) coordinate (line1) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| ++(-38.00mm , 0.00mm)  -- ++ (0mm, 5.5 mm) coordinate (line2) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
-	\node (exercise) at ($(line1)!0.5!(line2) + (0 mm, .8 mm)$) [text=white, font=\thirdtitlefont\Large] {EXERCÍCIOS};%\fontsize{13pt}{0}
-\end{tikzpicture}}
+	% \needspace{\textheight}\checkoddpage\ifoddpage\else\cleardoublepage\fi%
+	\tikzset{external/export next=false}
+	\begin{tikzpicture}[remember picture, external/export=false]
+		\draw [draw=cor2, very thick] (-3.00mm,0.00mm) -- ++(0.00mm,2.00mm) -- ++(\textwidth , 0.00mm) -- ++(0mm,-2mm);% line
+		\fill [draw=cor2, very thick , fill=cor1] ($(\textwidth/2 , 0mm) + (19mm,6mm)$) -- ++(0.00mm,-5.5 mm) coordinate (line1) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| ++(-38.00mm , 0.00mm)  -- ++ (0mm, 5.5 mm) coordinate (line2) arc [start angle=180, end angle=90, x radius=2.00mm, y radius=2.00mm] -- cycle;
+		\node (exercise) at ($(line1)!0.5!(line2) + (0 mm, .8 mm)$) [text=white, font=\thirdtitlefont\Large] {EXERCÍCIOS};%\fontsize{13pt}{0}
+	\end{tikzpicture}}
 
 \titlespacing*{\exercisesec}{0pt}{8mm}{1mm}
 
@@ -1147,21 +1112,21 @@ underlay boxed title={
 	\def\currentcolor{cor1}
 	\setlist[enumerate]{label=\protect\enumbox{\arabic*}}
 	\setlist[enumerate,2]{label=\textit{\alph*)}
-	% ,ref=\theenumi.\emph{\arabic*}
+		% ,ref=\theenumi.\emph{\arabic*}
 	}
 	\setlist[enumerate,3]{label=\textit{\roman*)}
-	% ,ref=\theenumi.\emph{\roman*}
+		% ,ref=\theenumi.\emph{\roman*}
 	}
 }
 
 
 
 \newtcolorbox{stretchbox}[1][]{
-  height fill,
-  sharp corners,
-  colback=white,
-  colframe=black,
-  #1}
+	height fill,
+	sharp corners,
+	colback=white,
+	colframe=black,
+	#1}
 
 
 % Defining the section style for the diferent names that eventually appear.
@@ -1169,28 +1134,28 @@ underlay boxed title={
 
 % Clear page after chapter title
 \renewcommand\memendofchapterhook{%
-    \clearpage\m@mindentafterchapter\@afterheading}
+	\clearpage\m@mindentafterchapter\@afterheading}
 
 % Setup page
 \makechapterstyle{livroaberto}{%
-    \renewcommand{\chapnamefont}{}
-    \renewcommand{\chapnumfont}{\titlefont\bfseries\fontsize{140pt}{0}\selectfont}
-    \renewcommand{\chaptitlefont}{\titlefont\bfseries\fontsize{25pt}{0}\selectfont}
-    \renewcommand{\chapternamenum}{}
-    \renewcommand{\afterchapternum}{}
-    \renewcommand{\printchaptername}{}
-    \renewcommand{\printchapternum}{}
-    \renewcommand{\printchapternonum}{\global\numberedchapfalse}
-    \renewcommand{\printchaptertitle}[1]{%
-    \thispagestyle{plain}
-        \ifnumberedchap
-            \ChapNumTitle{##1}
-        \else
-            \ChapNoNumTitle{##1}
-        \fi
-        \global\numberedchaptrue
-        }
-    \renewcommand{\afterchaptertitle}{\clearpage}
+	\renewcommand{\chapnamefont}{}
+	\renewcommand{\chapnumfont}{\titlefont\bfseries\fontsize{140pt}{0}\selectfont}
+	\renewcommand{\chaptitlefont}{\titlefont\bfseries\fontsize{25pt}{0}\selectfont}
+	\renewcommand{\chapternamenum}{}
+	\renewcommand{\afterchapternum}{}
+	\renewcommand{\printchaptername}{}
+	\renewcommand{\printchapternum}{}
+	\renewcommand{\printchapternonum}{\global\numberedchapfalse}
+	\renewcommand{\printchaptertitle}[1]{%
+		\thispagestyle{plain}
+		\ifnumberedchap
+			\ChapNumTitle{##1}
+		\else
+			\ChapNoNumTitle{##1}
+		\fi
+		\global\numberedchaptrue
+	}
+	\renewcommand{\afterchaptertitle}{\clearpage}
 
 }
 \renewcommand{\chaptermarksn}[1]{}
@@ -1222,91 +1187,94 @@ underlay boxed title={
 %
 %
 
-\RequirePackage{tikzpagenodes}
 \RequirePackage[inline]{enumitem}
 
 
 
 
 \pgfdeclareshape{enumbox}{%
-    \inheritsavedanchors[from=rectangle]
-    \inheritanchorborder[from=rectangle]
+	\inheritsavedanchors[from=rectangle]
+	\inheritanchorborder[from=rectangle]
 
-    \inheritanchor[from=rectangle]{center}
-    \inheritanchor[from=rectangle]{south}
-    \inheritanchor[from=rectangle]{west}
-    \inheritanchor[from=rectangle]{north}
-    \inheritanchor[from=rectangle]{east}
-    \inheritanchor[from=rectangle]{base}
+	\inheritanchor[from=rectangle]{center}
+	\inheritanchor[from=rectangle]{south}
+	\inheritanchor[from=rectangle]{west}
+	\inheritanchor[from=rectangle]{north}
+	\inheritanchor[from=rectangle]{east}
+	\inheritanchor[from=rectangle]{base}
 
-    \backgroundpath{%
-        \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
-        \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+	\backgroundpath{%
+		\southwest\pgf@xa=\pgf@x\pgf@ya=\pgf@y
+		\northeast\pgf@xb=\pgf@x\pgf@yb=\pgf@y
 
-% Construct main path
-        \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya+2pt}}
-        \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
-        \pgfpathlineto{\pgfpoint{\pgf@xb-2pt}{\pgf@yb}}
-        \pgfpatharc{90}{0}{2.0pt}
-        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
-        \pgfpathlineto{\pgfpoint{\pgf@xa+2pt}{\pgf@ya}}
-        \pgfpatharc{270}{180}{2.0pt}
-%        \pgfpathcurveto{\pgfpoint{\pgf@xc}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@yc}}
-        \pgfpathclose
-    }
+		% Construct main path
+		\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya+2pt}}
+		\pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+		\pgfpathlineto{\pgfpoint{\pgf@xb-2pt}{\pgf@yb}}
+		\pgfpatharc{90}{0}{2.0pt}
+		\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+		\pgfpathlineto{\pgfpoint{\pgf@xa+2pt}{\pgf@ya}}
+		\pgfpatharc{270}{180}{2.0pt}
+		%        \pgfpathcurveto{\pgfpoint{\pgf@xc}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@yc}}
+		\pgfpathclose
+	}
 }
 
 \pgfdeclareshape{itembox}{%
-    \inheritsavedanchors[from=rectangle]
-    \inheritanchorborder[from=rectangle]
+	\inheritsavedanchors[from=rectangle]
+	\inheritanchorborder[from=rectangle]
 
-    \inheritanchor[from=rectangle]{center}
-    \inheritanchor[from=rectangle]{south}
-    \inheritanchor[from=rectangle]{west}
-    \inheritanchor[from=rectangle]{north}
-    \inheritanchor[from=rectangle]{east}
-    \inheritanchor[from=rectangle]{base}
+	\inheritanchor[from=rectangle]{center}
+	\inheritanchor[from=rectangle]{south}
+	\inheritanchor[from=rectangle]{west}
+	\inheritanchor[from=rectangle]{north}
+	\inheritanchor[from=rectangle]{east}
+	\inheritanchor[from=rectangle]{base}
 
-    \backgroundpath{%
-        \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
-        \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+	\backgroundpath{%
+		\southwest\pgf@xa=\pgf@x\pgf@ya=\pgf@y
+		\northeast\pgf@xb=\pgf@x\pgf@yb=\pgf@y
 
-% Construct main path
-        \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
-        \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
-        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
-        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
-        \pgfpathclose
-    }
+		% Construct main path
+		\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+		\pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+		\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+		\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+		\pgfpathclose
+	}
 }
 
-\newcommand*{\enumbox}[1]{%
-    \tikz [baseline=(numbereditem.base)]{%
-        \node[shape=enumbox,text=white, font=\bfseries\fontsize{11pt}{0}\selectfont, draw=black, 
-        fill=cor1, 
-        minimum width=6.00mm, minimum height=6.00mm] (numbereditem) {#1};
-    }
+\newcommand{\enumbox}[1]{%
+	\tikzset{external/export next=false}
+	\tikz [baseline=(numbereditem.base)]{%
+		\node[shape=enumbox,text=white, font=\bfseries\fontsize{11pt}{0}\selectfont, draw=black,
+			fill=cor1,
+			minimum width=6.00mm, minimum height=6.00mm] (numbereditem) {#1};
+	}
 }
 
-\newcommand*{\enumdefault}[1]{%
-    \tikz [baseline=(numbereditem.base)]{%
-        \node[shape=enumbox, font=\bfseries\fontsize{11pt}{0}\selectfont, draw=black, minimum width=6.00mm, minimum height=6.00mm] (numbereditem) {#1};
-    }
+\newcommand{\enumdefault}[1]{%
+	\tikzset{external/export next=false}
+	\tikz[baseline = (numbereditem.base)]{%
+		\node[shape=enumbox, font=\bfseries\fontsize{11pt}{0}\selectfont, draw=black, minimum width=6.00mm, minimum height=6.00mm] (numbereditem) {#1};
+	}
 }
 
 
 % Defining an alternative shape for itemize, where the bullets are actually squares.
-\newcommand*{\itembox}{%
-    \tikz [baseline=(boxitem.base)] {%
-        \node[shape=rectangle, draw=black, minimum width=6.00mm, minimum height=6.00mm] (boxitem) {};
-    }
+\newcommand{\itembox}{%
+	\tikzset{external/export next=false}
+	\tikz[baseline = (boxitem.base)] {%
+		\node[shape=rectangle, draw=black, minimum width=6.00mm, minimum height=6.00mm] (boxitem) {};
+	}
 }
 
 % Defining an alternative shape for itemize, where the bullets are actually colored squares.
-\newcommand*{\itemcoloredsquare}{%
-    \tikz  {%
-        \node[shape=rectangle, fill=\currentcolor, minimum width=1.50mm, minimum height=1.50mm] (boxitem) {};
-    }
+\newcommand{\itemcoloredsquare}{%
+	\tikzset{external/export next=false}
+	\tikz{%
+		\node[shape=rectangle, fill=\currentcolor, minimum width=1.50mm, minimum height=1.50mm] (boxitem) {};
+	}
 }
 
 
@@ -1328,61 +1296,37 @@ underlay boxed title={
 %
 %
 
-\RequirePackage{booktabs}
-\RequirePackage{url}
-\RequirePackage{graphicx}
-%\RequirePackage[usenames,dvipsnames]{color}
-\RequirePackage{forloop}
-\RequirePackage{lipsum}
-\RequirePackage{microtype}
-\RequirePackage{suffix}
-\RequirePackage{refcount}
-% \RequirePackage[hidelinks]{hypreref}
-\RequirePackage{xcolor}
-\RequirePackage{multicol}
-
-\RequirePackage{blindtext}
-
-\RequirePackage{cleveref}
-\PassOptionsToPackage{noabbrev}{cleveref}
-
-
 \numberwithin{figure}{chapter}
+
 %% Set Page Size
-% \setstocksize{11.00in}{8.50in}
 \setstocksize{275mm}{204mm}
 \settrimmedsize{275mm}{204mm}{*}
-% \setstocksize{275mm}{204mm}
-% \settrimmedsize{\stockheight}{\stockwidth}{*}
 
-
-% \settrims{2.20mm}{5.95mm}
 
 \settypeblocksize{241mm}{162mm}{*}
 \setlrmarginsandblock{20mm}{22mm}{*}
 \setulmarginsandblock{17mm}{17.00mm}{*}
 
-% \setlrmargins{*}{1.25in}{*}
-% \setulmargins{*}{*}{0.85}
-% \setlrmarginsandblock{1.00in}{1.00in}{*}
 \setcolsepandrule{8.00mm}{0mm}
+
+\geometry{reset, paperwidth=950pt,paperheight=275mm,
+	marginparsep=30pt,headsep=19pt,top=17mm, bottom=17mm ,inner=50pt,outer=440pt,
+	marginparwidth=350pt}
 
 
 % Set Paragraphs to no indent with a 6pt space between paragraphs
 \setlength{\parindent}{0em}
- \setlength{\parskip}{6pt}
-
-%% Modify Header and Footer spacing
-% \setheadfoot{\onelineskip}{2\onelineskip}
+\setlength{\parskip}{6pt}
 
 \checkandfixthelayout
 
-\bibliographystyle{apalike-pt}
 
 % Bibliotecas e pacotes TikZ e Asymptote
 \RequirePackage{tikz}
+\RequirePackage{tikzpagenodes} % Precisa para o ambiente de projeto aplicado
 \usetikzlibrary{
-    calc,trees,shadows,shadows.blur,positioning,arrows,chains,shapes.geometric,decorations,decorations.pathreplacing,decorations.pathmorphing,shapes,matrix,fit,tikzmark,intersections,through,backgrounds,arrows.meta,datavisualization,external}
+	calc,trees,shadows,shadows.blur,positioning,arrows,chains,shapes.geometric,decorations,decorations.pathreplacing,decorations.pathmorphing,shapes,matrix,fit,tikzmark,intersections,through,backgrounds,arrows.meta,datavisualization,external,patterns}
+\tikzexternalize
 
 \tikzstyle{vetor}=[->,line width=0.8pt,color=primario,>=latex]
 \tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only, label={}]
@@ -1390,44 +1334,29 @@ underlay boxed title={
 \tikzstyle{eixos}=[->]
 \tikzstyle{curvafun}=[very thick, color=primario]
 \tikzstyle{grafica}+=[line cap=round,line join=round,color=terciario, very thick]
-\newcommand{\vetoresmapaantartida}{
-      \filldraw [white, fill opacity=100] (-4,-3) rectangle (4,3);
-      \node at (-4,-3) {\includegraphics[width=1cm]{/home/cheque/Dropbox/Tikz-LivroAberto/Vetores/rosa.png}};
-      \node [above, scale=0.5] at (-4,-2.5) {N};
-      \node [left, scale=0.5] at (-4.5,-3) {E};
-      \node [right, scale=0.5] at (-3.5,-3) {L};
-      \node [below, scale=0.5] at (-4,-3.5) {S};
-      \node [ponto] (A) at (0,0) {};
-      \node [below] at (A) {$A$};
-      \draw [|-|] (2,-3.5) -- (4,-3.5);
-      \node [above, scale=0.5] at (3,-3.5) {10 km};
-}
 
-\RequirePackage{tikzpagenodes}
-
-\RequirePackage{environ}
 
 % Define asymptote picture preamble
 
 \begin{asydef}
-import three;
-import graph3;
-import solids;
-import math;
-import labelpath3;
-import labelpath;
-settings.render=16;
-//attach=true;
+	import three;
+	import graph3;
+	import solids;
+	import math;
+	import labelpath3;
+	import labelpath;
+	settings.render=16;
+	//attach=true;
 
-pen azul = rgb(0,94/255,176/255); //azul
-pen verde = rgb(75/255,173/255,49/255); //verde
-pen vinho = rgb(183/255,13/255,40/255); //vinho
-pen laranja = rgb(236/255,107/255,16/255); //laranja
-pen agua = rgb(0,165/255,157/255); //verde agua
-pen box2 = rgb(240/255,238/255,201/255);
+	pen azul = rgb (0,94/255,176/255); //azul
+	pen verde = rgb (75/255,173/255,49/255); //verde
+	pen vinho = rgb (183/255,13/255,40/255); //vinho
+	pen laranja = rgb (236/255,107/255,16/255); //laranja
+	pen agua = rgb (0,165/255,157/255); //verde agua
+	pen box2 = rgb (240/255,238/255,201/255);
 
 
-texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}");
+	texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}");
 \end{asydef}
 
 % Define asymptote picture directory
@@ -1455,179 +1384,188 @@ texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}")
 
 % Comandos para definir a página de créditos
 
-\newcommand{\autorum}[1]{\def\@autorum{#1}}
-\newcommand{\autordois}[1]{\def\@autordois{#1}}
-\newcommand{\autortres}[1]{\def\@autortres{#1}}
-\newcommand{\autorquatro}[1]{\def\@autorquatro{#1}}
-\newcommand{\autorcinco}[1]{\def\@autorcinco{#1}}
+\newcommand{\autorum}[1]{\def{\@autorum{#1}}}
+\newcommand{\autordois}[1]{\def{\@autordois{#1}}}
+\newcommand{\autortres}[1]{\def{\@autortres{#1}}}
+\newcommand{\autorquatro}[1]{\def{\@autorquatro{#1}}}
+\newcommand{\autorcinco}[1]{\def{\@autorcinco{#1}}}
 
-\newcommand{\revisorum}[1]{\def\@revisorum{#1}}
-\newcommand{\revisordois}[1]{\def\@revisordois{#1}}
-\newcommand{\revisortres}[1]{\def\@revisortres{#1}}
-\newcommand{\revisorquatro}[1]{\def\@revisorquatro{#1}}
-\newcommand{\revisorcinco}[1]{\def\@revisorcinco{#1}}
+\newcommand{\revisorum}[1]{\def{\@revisorum{#1}}}
+\newcommand{\revisordois}[1]{\def{\@revisordois{#1}}}
+\newcommand{\revisortres}[1]{\def{\@revisortres{#1}}}
+\newcommand{\revisorquatro}[1]{\def{\@revisorquatro{#1}}}
+\newcommand{\revisorcinco}[1]{\def{\@revisorcinco{#1}}}
 
-\newcommand{\colaboracao}[1]{\def\@colaboracao{#1}}
+\newcommand{\colaboracao}[1]{\def{\@colaboracao{#1}}}
 
-\newcommand{\versao}[1]{\def\@versao{#1}}
+\newcommand{\versao}[1]{\def{\@versao{#1}}}
 
-\newcommand{\graficos}[1]{\def\@graficos{#1}}
-\newcommand{\ilustracao}[1]{\def\@ilustracao{#1}}
-\newcommand{\autordacapa}[3]{\def\@autorcapa{\makecell*[t{{p{\linewidth}}}]{Foto de #1 no #2 \\ \url{#3}}}}
-\newcommand{\versaodigital}[1]{\def\@versaodigital{\url{#1}}}
-\newcommand{\ccbysa}{\def\@ccbysa{1}}
+\newcommand{\graficos}[1]{\def{\@graficos{#1}}}
+\newcommand{\ilustracao}[1]{\def{\@ilustracao{#1}}}
+\newcommand{\autordacapa}[3]{
+	\def{
+		\@autorcapa{
+			\makecell*[t{{p{\linewidth}}}]{
+			Foto de #1 no #2 \\ \url{#3}
+			}
+		}
+	}
+}
+
+\newcommand{\versaodigital}[1]{\def{\@versaodigital{\url{#1}}}}
+\newcommand{\ccbysa}{\def{\@ccbysa{1}}}
 
 \newcommand{\creditos}{
-\cleardoublepage
-\begin{titlingpage}
-\renewcommand{\arraystretch}{1.75}
-\begin{center}
-Projeto: LIVRO ABERTO DE MATEMÁTICA
+	\cleardoublepage
+	\begin{titlingpage}
+		\renewcommand{\arraystretch}{1.75}
+		\begin{center}
+			Projeto: LIVRO ABERTO DE MATEMÁTICA
 
-\noindent \begin{tabular}{lcccr}
-\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
-\end{tabular}
-\end{center}
+			\noindent \begin{tabular}{lcccr}
+				\includegraphics[scale=.15]{impa} & \quad\quad & \includegraphics[width=3cm]{logo} & \quad\quad & \includegraphics[scale=.24]{obmep}
+			\end{tabular}
+		\end{center}
 
-\vspace*{.3cm}
+		\vspace*{.3cm}
 
-Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
+		Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
 
-\vspace{.5em}
+		\vspace{.5em}
 
-\ifdefined\@versaodigital
-% Versão digital do capítulo:
+		\ifdefined{\@versaodigital}
+			% Versão digital do capítulo:
 
-% \@versaodigital
-% \vspace{.5em}
-\else\fi
+			% \@versaodigital
+			% \vspace{.5em}
+		\else\fi
 
-\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
-Título: & \Chaptername \\
+		\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+			Título:                                            & \Chaptername                                                          \\
 
-Ano/ Versão: & \the\year{} / versão \@versao{} de \today\\
+			Ano/ Versão:                                       & \the\year{} / versão \@versao{} de \today                             \\
 
-Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+			Editora                                            & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)          \\
 
-Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+			Realização:                                        & Olimpíada Brasileira de Matemática das Escolas P\'ublicas (OBMEP) \\
 
-Produção: & Associação Livro Aberto\\
+			Produção:                                          & Associação Livro Aberto                                               \\
 
-Coordenação: & Fabio Simas e Augusto Teixeira (\url{livroaberto@impa.br})\\
+			Coordenação:                                       & Fabio Simas e Augusto Teixeira (\url{livroaberto@impa.br})            \\
 
-\ifdefined\@autordois Autores: \else Autor (a):\fi & \makecell[tl]{\@autorum \\
-\ifdefined\@autordois 
-          \@autordois \\ 
-\else\fi
-\ifdefined\@autortres 
-          \@autortres \\ 
-\else\fi
-\ifdefined\@autorquatro
-          \@autorquatro \\
-\else\fi
-\ifdefined\@autorcinco
-          \@autorcinco \\
-\else\fi}
-\\
-\ifdefined \@revisorum
-Revisão: & \makecell[tl]{\@revisorum \\
-\ifdefined\@revisordois 
-          \@revisordois \\
-\else\fi
-\ifdefined\@revisortres 
-          \@revisortres \\
-\else\fi
-\ifdefined\@revisorquatro
-          \@revisorquatro \\
-\else\fi
-\ifdefined\@revisorcinco
-          \@revisorcinco \\
-\else\fi} \\
-\else\fi
+			\ifdefined{\@autordois} Autores: \else Autor (a):\fi & \makecell[tl]{\@autorum                                               \\
+				\ifdefined{\@autordois}
+			\@autordois                                                                                                                \\
+				\else\fi
+				\ifdefined{\@autortres}
+			\@autortres                                                                                                                \\
+				\else\fi
+				\ifdefined{\@autorquatro}
+			\@autorquatro                                                                                                              \\
+				\else\fi
+				\ifdefined{\@autorcinco}
+			\@autorcinco                                                                                                               \\
+				\else\fi}
+			\\
+			\ifdefined{\@revisorum}
+			Revisão:                                           & \makecell[tl]{\@revisorum                                             \\
+					\ifdefined{\@revisordois}
+			\@revisordois                                                                                                              \\
+					\else\fi
+					\ifdefined{\@revisortres}
+			\@revisortres                                                                                                              \\
+					\else\fi
+					\ifdefined{\@revisorquatro}
+			\@revisorquatro                                                                                                            \\
+					\else\fi
+					\ifdefined{\@revisorcinco}
+			\@revisorcinco                                                                                                             \\
+					\else\fi
+			}                                                                                                                          \\
+			\else\fi
 
-\ifdefined \@colaboracao
-Colaboração & \@colaboracao \\
-\else\fi
+			\ifdefined{\@colaboracao}
+			Colaboração                                        & \@colaboracao                                                         \\
+			\else\fi
 
-Design: & Andreza Moreira (Tangentes Design) \\
+			Design:                                            & Andreza Moreira (Tangentes Design)                                    \\
 
-Diagramação: & Tarso Caldas \\
+			Diagramação:                                       & Tarso Caldas                                                          \\
 
-\ifdefined\@ilustracao
-Ilustrações: & \@ilustracao \\ 
-\else\fi
+			\ifdefined{\@ilustracao}
+			Ilustrações:                                       & \@ilustracao                                                          \\
+			\else\fi
 
-\ifdefined\@graficos
-Gráficos: & \@graficos \\
-\else\fi
+			\ifdefined{\@graficos}
+			Gráficos:                                          & \@graficos                                                            \\
+			\else\fi
 
-\ifdefined\@autorcapa
-Capa: & \@autorcapa \\
-\else\fi
+			\ifdefined{\@autorcapa}
+			Capa:                                              & \@autorcapa                                                           \\
+			\else\fi
+		\end{tabular}
 
-\end{tabular}
+		\begin{figure}[b]
+			\begin{minipage}[l]{5cm}
+				\centering
 
-\begin{figure}[b]
-\begin{minipage}[l]{5cm}
-\centering
+				{\large Licença:}
 
-{\large Licença:}
+				\vspace{1em}
 
-\vspace{1em}
+				\ifdefined{\@ccbysa}
+					\includegraphics[width=3.5cm]{cc-by-sa1}
+				\else
+					\includegraphics[width=3.5cm]{cc-by-nc-sa}
+				\fi
 
-\ifdefined\@ccbysa
-  \includegraphics[width=3.5cm]{cc-by-sa1}
-\else
-  \includegraphics[width=3.5cm]{cc-by-nc-sa}
-\fi
+			\end{minipage}\hfill
+			\begin{minipage}[c]{5cm}
+				\centering
+				{\large Desenvolvido por}
 
-\end{minipage}\hfill
-\begin{minipage}[c]{5cm}
-\centering
-{\large Desenvolvido por}
+				\vspace{1em}
+				\includegraphics[width=2.5cm]{logo-associacao.jpg}
+			\end{minipage}
+			\begin{minipage}[r]{5cm}
+				\centering
 
-\vspace{1em}
-\includegraphics[width=2.5cm]{logo-associacao.jpg}
-\end{minipage}
-\begin{minipage}[r]{5cm}
-\centering
+				{\large Patrocínio:}
 
-{\large Patrocínio:}
-
-  \vspace{1em}
-  \includegraphics[width=3.5cm]{itau}
-\end{minipage}
-\end{figure}
-\end{titlingpage}
+				\vspace{1em}
+				\includegraphics[width=3.5cm]{itau}
+			\end{minipage}
+		\end{figure}
+	\end{titlingpage}
 
 
-\let\@autorum\relax
-\undef{\@autordois}
-\undef{\@autortres}
-\undef{\@autorquatro}
-\undef{\@autorcinco}
+	\let{\@autorum}\relax
+	\undef{\@autordois}
+	\undef{\@autortres}
+	\undef{\@autorquatro}
+	\undef{\@autorcinco}
 
-\undef{\@revisorum}
-\undef{\@revisordois}
-\undef{\@revisortres}
-\undef{\@revisorquatro}
-\undef{\@revisorcinco}
+	\undef{\@revisorum}
+	\undef{\@revisordois}
+	\undef{\@revisortres}
+	\undef{\@revisorquatro}
+	\undef{\@revisorcinco}
 
-\let\@versao\relax
-\undef{\@autorcapa}
-\undef{\@graficos}
-\undef{\@versaodigital}
-\undef{\@ccbysa}
+	\let{\@versao}\relax
+	\undef{\@autorcapa}
+	\undef{\@graficos}
+	\undef{\@versaodigital}
+	\undef{\@ccbysa}
 }
 
 \newcounter{anexo}[chapter]
 
 \newcommand{\anexo}[1]{
-  \clearpage
-  \stepcounter{anexo}
-  \begin{center}
-  \huge{\titem{Anexo \theanexo}}
-  \end{center}
+	\clearpage
+	\stepcounter{anexo}
+	\begin{center}
+		\huge{\titem{Anexo \theanexo}}
+	\end{center}
 }
 
 
@@ -1642,46 +1580,731 @@ Capa: & \@autorcapa \\
 
 
 
-%Exclusão de ambientes do professor
 
-%Páginas de texto
-
-\excludecomment{paginatexto}
-\excludecomment{apresentacao}
 
 %Caixa de Obetivos gerais
 \newtcolorbox{habilities}[1]{}
 
 %Caixa de Objetivos Específicos
-
-\newenvironment{objectives}[4]
-{}
-{}
-{}
+\newenvironment{objectives}[4]{}{}{}
 
 %Caixa de Sugestões e recomendações
-
-\newenvironment{sugestions}[4]
-{}
-{}
-{}
-
+\newenvironment{sugestions}[4]{}{}{}
 
 %Caixa de Respostas
-\newenvironment{answer}[3]
-{}
-{}
-
+\newenvironment{answer}[3]{}{}
 
 %Caixa de Texto
-\newenvironment{texto}[1]
-{}
+\newenvironment{texto}[1]{}
 
 \newcommand{\notarodape}[1]{\footnotemark\footnotetext{\belowbaseline[-\ht\strutbox]{\begin{tcolorbox}[colback=grafite!90!white,colbacktitle=grafite!90!white,
-colframe=grafite!90!white,colupper=white, left=0pt, right=0pt,top=-2pt,bottom=-2pt, hbox, sharp corners = northeast, sharp corners = southwest]
-{\textbf{#1}}\end{tcolorbox}}}}
+					colframe=grafite!90!white,colupper=white, left=0pt, right=0pt,top=-2pt,bottom=-2pt, hbox, sharp corners = northeast, sharp corners = southwest]
+				{\textbf{#1}}\end{tcolorbox}}}}
 
 
+
+
+
+%%%%%%%%%%%% Material do professor
+
+\DeclareOption{professor}
+{
+
+\def\aluno=0
+
+%%%%%%%%%%%%%%% ENDNOTES
+
+\newcommand{\@endnotebox}[1]{%
+	\tikz[baseline =(numbereditem.base)]{%
+		\node[shape=enumbox,text=linkscolor, font=\fontsize{11pt}{0}\selectfont\bfseries,
+			fill=box2!70, drop shadow,
+			minimum width=4.00mm, minimum height=3.00mm,sharp corners] (numbereditem) {#1};
+	}
+}
+
+\newcommand{\notebox}[1]{%
+	\tikz[baseline = (numbereditem.base)]{%
+		\node[shape=enumbox,text=linkscolor, font=\fontsize{11pt}{0}\selectfont\bfseries,
+			fill=box2!70, drop shadow,
+			minimum width=16.0mm, minimum height=3.00mm,sharp corners, align=left] (numbereditem) {#1};
+	}
+}
+
+\def\enotesize{\normalsize}
+%%% hyperendnotes.sty
+\newif\ifenotelinks
+\newcounter{Hendnote}
+% Redefining portions of endnotes-package:
+\let\savedhref\href
+\let\savedurl\url
+\def\endnotemark{%
+\@ifnextchar[\@xendnotemark{%
+	\stepcounter{endnote}%
+	\protected@xdef\@theenmark{\textbf{Nota \theendnote}}%
+	\protected@xdef\@theenvalue{\number\c@endnote}%
+	\@endnotemark
+}%
+}%
+\def\@xendnotemark[#1]{%
+	\begingroup\c@endnote#1\relax
+	\unrestored@protected@xdef\@theenmark{\theendnote}%
+	\unrestored@protected@xdef\@theenvalue{\number\c@endnote}%
+	\endgroup
+	\@endnotemark
+}%
+\def\endnotetext{%
+\@ifnextchar[\@xendnotenext{%
+	\protected@xdef\@theenmark{\theendnote}%
+	\protected@xdef\@theenvalue{\number\c@endnote}%
+	\@endnotetext
+}%
+}%
+\def\@xendnotenext[#1]{%
+	\begingroup
+	\c@endnote=#1\relax
+	\unrestored@protected@xdef\@theenmark{\theendnote}%
+	\unrestored@protected@xdef\@theenvalue{\number\c@endnote}%
+	\endgroup
+	\@endnotetext
+}%
+\def\endnote{%
+\@ifnextchar[\@xendnote{%
+	\stepcounter{endnote}%
+	\protected@xdef\@theenmark{\theendnote}%
+	\protected@xdef\@theenvalue{\number\c@endnote}%
+	\@endnotemark\@endnotetext
+}%
+}%
+\def\@xendnote[#1]{%
+	\begingroup
+	\c@endnote=#1\relax
+	\unrestored@protected@xdef\@theenmark{\theendnote}%
+	\unrestored@protected@xdef\@theenvalue{\number\c@endnote}%
+	\show\@theenvalue
+	\endgroup
+	\@endnotemark\@endnotetext
+}%
+\def\@endnotemark{%
+\leavevmode
+\ifhmode
+	\edef\@x@sf{\the\spacefactor}\nobreak
+\fi
+\ifenotelinks
+	\expandafter\@firstofone
+\else
+	\expandafter\@gobble
+\fi
+{%
+\Hy@raisedlink{%
+	\hyper@@anchor{Hendnotepage.\@theenvalue}{\empty}%
+}%
+}%
+\hyper@linkstart{link}{Hendnote.\@theenvalue}%
+\makeenmark
+\hyper@linkend
+\ifhmode
+	\spacefactor\@x@sf
+\fi
+\relax
+}%
+\long\def\@endnotetext#1{%
+	\if@enotesopen
+	\else
+		\@openenotes
+	\fi
+	\immediate\write\@enotes{%
+		\@doanenote{\@theenmark}{\@theenvalue}%
+	}%
+	\begingroup
+	\def\next{#1}%
+	\newlinechar='40
+	\immediate\write\@enotes{\meaning\next}%
+	\endgroup
+	\immediate\write\@enotes{%
+		\@endanenote
+	}%
+}%
+\def\theendnotes{%
+\immediate\closeout\@enotes
+\global\@enotesopenfalse
+\begingroup
+\edef\@tempa{`\string>}%
+\ifnum\catcode\@tempa=12
+	\let\@ResetGT\relax
+\else
+	\edef\@ResetGT{\noexpand\catcode\@tempa=\the\catcode\@tempa}%
+	\@makeother\>%
+\fi
+\def\@doanenote##1##2##3>{%
+\def\@theenmark{##1}%
+\def\@theenvalue{##2}%
+\par
+\smallskip %<-small vertical gap between endnotes
+\begingroup
+\def\href{\expandafter\savedhref}%
+\def\url{\expandafter\savedurl}%
+\@ResetGT
+\edef\@currentlabel{\csname p@endnote\endcsname\@theenmark}%
+\enoteformat
+}%
+\def\@endanenote{%
+	\par\endgroup
+}%
+% Redefine, how numbers are formatted in the endnotes-section:
+\renewcommand\@makeenmark{%
+	\normalfont\protect\@endnotebox{\@theenmark}~%
+}%
+% header of endnotes-section
+% \enoteheading
+% font-size of endnotes
+\enotesize
+\input{\jobname.ent}%
+\endgroup
+}%
+\def\enoteformat{%
+\rightskip\z@
+\leftskip1.8em
+\parindent\z@
+\leavevmode\llap{%
+\setcounter{Hendnote}{\@theenvalue}%
+\addtocounter{Hendnote}{-1}%
+\refstepcounter{Hendnote}%
+\ifenotelinks
+	\expandafter\@secondoftwo
+\else
+	\expandafter\@firstoftwo
+\fi
+{\@firstofone}%
+{\hyperlink{Hendnotepage.\@theenvalue}}%
+{\makeenmark}%
+}%
+}%
+
+% Toggle switch in order to turn on/off back-links in the
+% endnote-section:
+\enotelinkstrue
+%\enotelinksfalse
+
+
+
+\renewcommand{\notesname}{Notas}
+
+%\def\@makeenmark{\hbox{\@textsuperscript{\normalfont\@theenmark}}}
+\def\@makeenmark{\hbox{\normalfont\@theenmark}}
+
+\newcommand\notasfig[1]{
+	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
+	\endnotetext
+	{\adjustbox{valign=t}
+		{
+			\begin{minipage}{\linewidth}
+				#1
+			\end{minipage}
+		}}}
+
+\newcommand{\notas}[1]{
+	\notebox{\textcolor{white}{\textbf{\endnotemark}}}
+	\endnotetext
+	{#1}}
+
+\newcommand{\mnotas}[1]{
+	\marginpar{
+		\notebox{\textcolor{white}{\textbf{\endnotemark}}}
+		\endnotetext
+		{\adjustbox{valign=t}{#1}}}}
+
+
+\newcommand{\notasfinais}{
+	\def\currentcolor{cor1}
+	\newgeometry{textwidth=840pt,outer=50pt, top=2cm, bottom=2cm}
+	\pagestyle{plain}	
+	\section{\huge Notas}
+
+	\setlength{\columnsep}{1cm}
+	\begin{multicols}{2}
+		\raggedcolumns
+		\theendnotes
+		\clearpage
+	\end{multicols}
+	\restoregeometry
+}
+
+\newenvironment{paginanotas}{
+	\newgeometry{textwidth=840pt,outer=50pt}
+	\pagestyle{empty}
+	\begin{multicols}{4}
+}
+{
+	\clearpage
+	\end{multicols}
+	\pagebreak
+	\restoregeometry
+}
+
+%%%%%%%%%%%%%%%%  PÁGINA DE TEXTO
+
+\newcounter{mypresentation}
+\setcounter{mypresentation}{0}
+
+\newenvironment{apresentacao}[1]
+{
+	\setcounter{mypresentation}{\value{page}}
+	\def\currentcolor{cor1}
+	\newgeometry{textwidth=840pt,outer=50pt, bottom=17mm, top=17mm}
+	\pagestyle{plain}
+	\setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
+	\setlist[itemize]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}
+	\section{#1}
+	\begin{multicols}{2}}
+		{\clearpage\end{multicols}
+	\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+	%\setlist[itemize]{label=\protect\itembox}
+	\setlist[itemize]{label=\protect\itemcoloredsquare}
+	\pagebreak\restoregeometry
+	\mainmatter
+	\def\currentcolor{session1}
+	\cleardoublepage
+	\setcounter{page}{\value{mypresentation}}
+}
+
+\newcounter{mypagecount}
+\setcounter{mypagecount}{0}
+
+\newenvironment{paginatexto}[1]
+{
+	\clearpage
+	\setcounter{mypagecount}{\value{page}}
+	\cleardoublepage
+	\setcounter{mypagecount}{\value{page}}
+	\def\currentcolor{session1}
+	\newgeometry{textwidth=840pt,outer=50pt, bottom=17mm, top=17mm}
+
+	\thispagestyle{empty}\pagestyle{empty}
+	\setlist[enumerate]{wide, label=\titem{\alph*)},itemsep=0pt,topsep=2.5pt}
+	\setlist[itemize]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}
+	\section{#1}
+	\begin{multicols}{2}
+}
+{
+	\clearpage
+	\end{multicols}
+	\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+	%\setlist[itemize]{label=\protect\itembox}
+	\setlist[itemize]{label=\protect\itemcoloredsquare}
+	\def\currentcolor{session1}\pagebreak\restoregeometry\cleardoublepage\setcounter{page}{\value{mypagecount}}
+}
+
+
+
+%%%%%%%%%%%%% CAIXA DE TEXTO
+
+
+\renewenvironment{texto}[1]
+{\marginpar{
+		\setlength\parskip{6pt}
+		\vspace{.05em}
+		\setlist[enumerate]{label=OE\arabic*,wide}
+		\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=5pt}
+
+		#1}
+}
+
+
+
+%%%%%%%%%%%%% CAIXA DE OBJETIVO ESPECÍFICO
+
+\renewenvironment{objectives}[4]
+{\ifnum #3=1
+		{\ifnum #4=1
+
+			\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor, left=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+						borderline east={2mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, leftrule=1pt, rightrule=-1pt, outer arc = 3mm, arc = 3mm,
+						fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+						title= Objetivos Específicos,
+						boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+						attach boxed title to top right={yshift=.5mm-.8pt},
+						underlay boxed title={
+								\draw[line width=3pt,white] ($(frame.north east)+(0,-1pt)$)--($(frame.north east)+(-15pt,-1pt)$);
+								\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+							}, after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+								%\setlist[itemize]{label=\protect\itembox}
+								\setlist[itemize]{label=\protect\itemcoloredsquare}},
+						before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+								\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=2.5pt, itemsep=0pt}},
+						% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+						% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+						subtitle style = {
+								frame empty,
+								fontupper = \bfseries\large,
+								colback = white,
+								coltext = \currentcolor,
+								arc = 8pt,
+								top=0pt,
+								bottom=0pt
+							},
+						middle=5pt,
+						break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+
+
+		\else
+
+			\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+						borderline west={2mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+						fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+						title= Objetivos Específicos,
+						boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+						attach boxed title to top left={yshift=.5mm-.8pt},
+						underlay boxed title={
+								\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+								\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+							}, after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+								%\setlist[itemize]{label=\protect\itembox}
+								\setlist[itemize]{label=\protect\itemcoloredsquare}},
+						before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+								\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, topsep=2.5pt, itemsep=0pt}},
+						% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+						% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+						subtitle style = {
+								frame empty,
+								fontupper = \bfseries\large,
+								colback = white,
+								coltext = \currentcolor,
+								arc = 8pt,
+								top=0pt,
+								bottom=0pt
+							},
+						middle=5pt,
+						break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+
+		\fi}
+
+
+	\else
+
+		{\ifnum #4=9
+
+				\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+
+
+				\endnotetext{\vspace{-1.75\baselineskip}
+					\begin{tcolorbox}[blanker, breakable, enhanced, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+							borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+							fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+							title= Objetivos Específicos,
+							boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+							attach boxed title to top left={xshift=3mm , yshift=.5mm-.8pt},
+							underlay boxed title={
+									\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+									\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+								},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+									%\setlist[itemize]{label=\protect\itembox}
+									\setlist[itemize]{label=\protect\itemcoloredsquare}},
+							before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+									\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
+							% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+							% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+							subtitle style = {
+									frame empty,
+									fontupper = \bfseries\large,
+									colback = white,
+									coltext = \currentcolor,
+									arc = 8pt,
+									top=0pt,
+									bottom=0pt
+								},
+							middle=5pt,
+							break at=-\baselineskip/0pt] #2 \end{tcolorbox}
+
+				}
+
+			\else
+
+				\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+
+				\endnotetext{\adjustbox{valign=t}
+					{\begin{tcolorbox}[blanker, breakable, enhanced, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+								borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+								fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+								title= Objetivos Específicos,
+								boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+								attach boxed title to top left={xshift=3mm , yshift=.5mm-.8pt},
+								underlay boxed title={
+										\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+										\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+									},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+										%\setlist[itemize]{label=\protect\itembox}
+										\setlist[itemize]{label=\protect\itemcoloredsquare}},
+								before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+										\normalfont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
+								% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+								% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+								subtitle style = {
+										frame empty,
+										fontupper = \bfseries\large,
+										colback = white,
+										coltext = \currentcolor,
+										arc = 8pt,
+										top=0pt,
+										bottom=0pt
+									},
+								middle=5pt,
+								break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+
+				}
+			\fi}
+	\fi}
+{\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+	%\setlist[itemize]{label=\protect\itembox}
+	\setlist[itemize]{label=\protect\itemcoloredsquare}}
+
+
+
+%%%%%%%%%%%%% CAIXA DE ORIENTAÇÃO
+
+
+\renewenvironment{sugestions}[4]
+{\ifnum #3=1
+		{\ifnum #4=1
+
+			\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor, left=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+						borderline east={2mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, leftrule=1pt, rightrule=-1pt, outer arc = 3mm, arc = 3mm,
+						fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+						title= Sugestões e discussões,
+						boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+						attach boxed title to top right={ , yshift=.5mm-.2pt},
+						underlay boxed title={
+								\draw[line width=3pt,white] ($(frame.north east)+(0,-1pt)$)--($(frame.north east)+(-15pt,-1pt)$);
+								\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+							},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+								%\setlist[itemize]{label=\protect\itembox}
+								\setlist[itemize]{label=\protect\itemcoloredsquare}},
+						before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+								\normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
+						% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+						% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+						subtitle style = {
+								frame empty,
+								fontupper = \bfseries\large,
+								colback = white,
+								coltext = \currentcolor,
+								arc = 8pt,
+								top=0pt,
+								bottom=0pt
+							},
+						middle=5pt,
+						break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+
+
+		\else
+
+
+			\marginpar{\vspace{.05em}\begin{tcolorbox}[blanker, enhanced, enforce breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+						borderline west={2mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+						fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+						title= Sugestões e discussões,
+						boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+						attach boxed title to top left={ , yshift=.5mm-.2pt},
+						underlay boxed title={
+								\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+								\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+							},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+								%\setlist[itemize]{label=\protect\itembox}
+								\setlist[itemize]{label=\protect\itemcoloredsquare}},
+						before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+								\normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
+						% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+						% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+						subtitle style = {
+								frame empty,
+								fontupper = \bfseries\large,
+								colback = white,
+								coltext = \currentcolor,
+								arc = 8pt,
+								top=0pt,
+								bottom=0pt
+							},
+						middle=5pt,
+						break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+		\fi}
+
+
+	\else
+		{\ifnum #4=9
+
+				\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}\vspace{.05em}}
+
+				\endnotetext{
+					{\vspace{-2\baselineskip}
+							\begin{tcolorbox}[blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=4mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+									borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+									fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+									title= Sugestões e discussões,
+									boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+									attach boxed title to top left={xshift=3mm , yshift=.5mm-.2pt},
+									underlay boxed title={
+											\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+											\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+										},
+									after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+											%\setlist[itemize]{label=\protect\itembox}
+											\setlist[itemize]{label=\protect\itemcoloredsquare}},
+									before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+											\normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
+									% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+									% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+									subtitle style = {
+											frame empty,
+											fontupper = \bfseries\large,
+											colback = white,
+											coltext = \currentcolor,
+											arc = 8pt,
+											top=0pt,
+											bottom=0pt
+										},
+									middle=5pt,
+									break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+
+
+				}
+
+			\else
+
+				\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+				\endnotetext{\adjustbox{valign=t}
+					{
+						\begin{tcolorbox}[blanker, enhanced, breakable, before skip = 5mm, after skip = 5mm, colframe=\currentcolor,left=3mm, right=3mm, top=6mm,segmentation style={draw=none,fill=none}, bottom=3mm, colback=white, %colframe=box1,
+								borderline west={3mm}{0pt}{white}, toprule=1pt, bottomrule=1pt, rightrule=1pt, leftrule=-1pt, outer arc = 3mm, arc = 3mm,
+								fonttitle=\bfseries\large,  % Should be 12 pt. Don't know how to set this.
+								title= Sugestões e discussões,
+								boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+								attach boxed title to top left={xshift=3mm , yshift=.5mm-.2pt},
+								underlay boxed title={
+										\draw[line width=3pt,white] ($(frame.north west)+(0,-1pt)$)--($(frame.north west)+(15pt,-1pt)$);
+										\filldraw [\currentcolor] ($(title.north west) + (0 mm,-3.50mm)$) -- ++(0.00mm,2.5mm) arc [start angle=180, end angle=90, y radius=2.00mm, x radius=2.00mm] -| ($(title.north east)+(0,-5mm)$) arc [start angle=0, end angle=-90, x radius=2.00mm, y radius=2.00mm] -| cycle;
+									},  after={\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+										%\setlist[itemize]{label=\protect\itembox}
+										\setlist[itemize]{label=\protect\itemcoloredsquare}},
+								before upper={\setlength{\parskip}{6pt}\vspace{-15pt}\tcbsubtitle{#1}
+										\normalfont\setlist[enumerate]{wide}\setlist[itemize,1]{wide, label=\textcolor{\currentcolor}{\small$\blacksquare$}, , topsep=2.5pt, itemsep=0pt}},
+								% {\boxtitlefont\setlist[enumerate]{label=OE\arabic*,wide}\setlist[itemize,1]{wide, label=\textcolor{penaqua}{\small$\blacksquare$}}
+								% {\vspace{1em}\large\textbf{Levar o aluno a}}\normalsize},
+								subtitle style = {
+										frame empty,
+										fontupper = \bfseries\large,
+										colback = white,
+										coltext = \currentcolor,
+										arc = 8pt,
+										top=0pt,
+										bottom=0pt
+									},
+								middle=5pt,
+								break at=-\baselineskip/0pt] #2 \end{tcolorbox}}
+				}
+			\fi}
+	\fi}{\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+	%\setlist[itemize]{label=\protect\itembox}
+	\setlist[itemize]{label=\protect\itemcoloredsquare}}
+
+
+\setlist[enumerate]{label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+
+
+
+%%%%%%%%%%%%% CAIXA DE RESPOSTA
+\renewenvironment{answer}[3]
+{\ifnum #3=1
+		\marginpar{\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white!50, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Solução: }}, title= \textcolor{grafite}{#1},
+					before upper={ \setlength{\parskip}{6pt}\setlist[enumerate]{label=wide,left=0pt,label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}},
+					subtitle style = {
+							frame empty,
+							fontupper = \boxtitlefont,
+							colback = white,
+							coltext = grafite,
+							top=1em,
+							before upper = \boxtitlefont \textcolor{\currentcolor}{Solução: }}]
+				#2\end{tcolorbox}}
+	\else
+		{\ifnum #3=9
+
+				\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+				\endnotetext{\vspace{-1.35\baselineskip}
+					\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Solução: }}, title= \textcolor{grafite}{#1}, before upper={\setlength{\parskip}{6pt}\vspace{.3em}
+									\setlist[enumerate]{label=wide,left=0pt,label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+									\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)}}
+								},
+							subtitle style = {
+									frame empty,
+									fontupper = \boxtitlefont,
+									colback = white,
+									coltext = grafite,
+									top=1em,
+									before upper = \boxtitlefont \textcolor{\currentcolor}{Solução: }}]
+						#2\end{tcolorbox}}
+
+			\else
+				\marginpar{\notebox{\textcolor{white}{\textbf{\endnotemark}}}}
+
+				\endnotetext{\adjustbox{valign=t}
+					{
+
+						\begin{tcolorbox}[enhanced, breakable,empty, coltitle=penazul, colback=white, left=0mm, right=0mm, boxrule=0mm, boxsep=0mm, colframe=penaqua,colbacktitle=white, before title ={\boxtitlefont \textcolor{\currentcolor}{Solução: }}, title= \textcolor{grafite}{#1}, before upper={\setlength{\parskip}{6pt}\vspace{.3em}
+										\setlist[enumerate]{label=wide,left=0pt,label=\protect\bfseries\textcolor{\currentcolor}{\alph*)}}
+										\setlist[enumerate,2]{label=\protect\bfseries\textcolor{\currentcolor}{\roman*)}}
+									},
+								subtitle style = {
+										frame empty,
+										fontupper = \boxtitlefont,
+										colback = white,
+										coltext = grafite,
+										top=1em,
+										before upper = \boxtitlefont \textcolor{\currentcolor}{Solução: }}]
+							#2\end{tcolorbox}}
+				}
+
+			\fi}
+	\fi
+}{\setlist[enumerate]{label=\protect\enumbox{\alph*)}}
+	%\setlist[itemize]{label=\protect\itembox}
+	\setlist[itemize]{label=\protect\itemcoloredsquare}}
+
+
+
+
+%%%%%%%%%%%%% CAIXA DE HABILIDADES
+\renewtcolorbox{habilities}[1]{ breakable,colback=penaqua!20!white,colbacktitle=penaqua!20!white,
+	colframe=penaqua!20!white, left =2mm, right=2mm, boxrule=0pt, top=1mm, arc=3mm, toptitle=2mm, coltitle=black, fonttitle=\bfseries, arc is angular = northwest, sharp corners = northeast, sharp corners = southwest, arc is angular = southeast, subtitle style={coltitle=black,fonttitle=\bfseries},
+	title=#1}
+
+\newenvironment{OES}{\begin{enumerate}[label=\titem{OE \arabic*} -, topsep=2.5pt,itemsep=0pt]}{\end{enumerate}}
+
+%%%%%%%%%%%%%%% NOTA DE RODAPÉ
+
+\geometry{reset, paperwidth=950pt,paperheight=275mm,
+	marginparsep=30pt,headsep=19pt,top=17mm, bottom=17mm ,inner=50pt,outer=440pt,
+	marginparwidth=350pt}
+
+
+
+
+%Ambiente marginfigure para figuras na margem
+\newfloat{marginfigure}{htp}{Figura}[chapter]
+\floatname{marginfigure}{Figura}
+\renewcommand\themarginfigure{\thechapter.\Roman{marginfigure}}	
+}
+
+\ProcessOptions
+
+
+%Páginas de texto
+\ifnum\aluno=1
+\excludecomment{paginatexto}
+\excludecomment{apresentacao}
+\else
+\fi
 
 
 \endinput

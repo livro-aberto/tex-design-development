@@ -1,0 +1,187 @@
+<!DOCTYPE html> 
+<html lang='pt' xml:lang='pt'> 
+<head><title>Explorando: Conceito de Funçã</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='funcoes.css' rel='stylesheet' type='text/css' /> 
+<meta content='funcoes.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+<style type='text/css'> 
+.MathJax_MathML {text-indent: 0;} 
+</style> 
+</head><body>
+<!-- l. 27 --><div class='crosslinks'><p class='noindent'>[<a href='funcoesli2.html'>next</a>] [<a href='#tailfuncoesli1.html'>tail</a>] [<a href='funcoesch1.html#funcoesli1.html'>up</a>] </p></div>
+<h3 class='likesectionHead' id='leavevmode-color-session'><a id='x3-20001'></a><span id='textcolor1'>Explorando: Conceito de Função</span></h3>
+<!-- l. 29 --><p class='noindent'>O que o nosso batimento cardíaco, um terremoto ou a variação das ações de uma empresa na bolsa de
+valores possuem em comum? Os batimentos cardíacos podem ser monitorados a partir de um sinal
+bioelétrico cujo gráfico é representado em um eletrocardiograma, as ondas sísmicas produzidas por um
+terremoto podem ser observadas a partir do registro de um sismógrafo e as variações dos valores das
+ações de uma empresa percebidas ao longo do tempo podem ser facilmente visualizadas em um
+gráfico.
+                                                                                        
+                                                                                        
+</p>
+<figure class='figure'> 
+
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+<div class='center'>
+<!-- l. 32 --><p class='noindent'>
+</p><!-- l. 35 --><p class='noindent'><img alt='PIC' height='355' src='../figures/funcoes//sismografo_2.png' width='844' /></p></div>
+                                                                                        
+                                                                                        
+</figure>
+<!-- l. 39 --><p class='noindent'>Como nos fenômenos descritos acima, muitas situações e decisões do dia a dia dependem do
+reconhecimento de uma relação entre duas grandezas e da análise de como a variação de
+uma delas influencia na variação da outra (Por exemplo, a distância percorrida e o tempo
+transcorrido, a área de um polígono e o comprimento de seus lados, a absorção de um
+medicamento pelo organismo humano e o tempo desde a sua ingestão, valor da conta de energia
+elétrica e consumo, quantidade de vereadores e a população etc). O tema funções trata
+da relação entre grandezas, identificando um tipo especial de relação. Funções são uma
+ferramenta matemática importante para descrever, analisar e tomar decisões em diversas
+situações.
+</p><!-- l. 41 --><p class='noindent'>As funções, de maneira geral, conectam grandezas, medidas, conjuntos numéricos e até variáveis
+que não podem ser quantificadas, ou seja, não numéricas, como, por exemplo, as variáveis
+qualitativas estudadas pela Estatística (classe social, cor dos olhos, local de nascimento, gênero
+etc).
+</p><!-- l. 43 --><p class='noindent'>Função é um dos conceitos centrais da Matemática, e sua importância transcende os limites dessa
+ciência, sendo fundamental para descrever fenômenos em diversas áreas do conhecimento, não só nas
+mais próximas, como a Física, a Química, ou as Engenharias como também em Biologia, Geografia,
+Sociologia, e em situações cotidianas diversas, como será exemplificado nas atividades a
+seguir.
+</p><!-- l. 45 --><p class='noindent'>A noção de função não surgiu ao acaso. É um instrumento matemático indispensável para o
+estudo quantitativo dos fenômenos naturais, tendo sua origem nos estudos desenvolvidos por
+Kepler (1571–1630) e Galileu (1564–1642) sobre os movimentos dos planetas e a queda dos
+corpos pela ação da força da gravidade, respectivamente. Nesses estudos era preciso medir
+grandezas, identificar regularidades e obter relações que oferecessem uma descrição matemática
+simples.
+</p><!-- l. 47 --><p class='noindent'>A aplicação da Matemática nas mais diversas áreas é feita, na maioria das vezes, por meio da noção de
+modelo matemático. Um modelo matemático permite representar uma determinada situação ou
+fenômeno a partir de variáveis e de relações entre essas variáveis. Portanto, funções são
+fundamentais tanto na concepção e construção de um modelo matemático como no estudo desses
+modelos.
+</p>
+<h4 class='subsectionHead' id='atividade-pluviometria-no-sistema-cantareira'><a id='x3-30001'></a>Atividade 1:  Pluviometria no Sistema Cantareira</h4>
+<!-- l. 53 --><p class='noindent'>As chuvas são a principal fonte de água para os reservatórios que abastecem as grandes cidades. Com
+base em dados passados, constrói-se uma média mensal esperada de chuvas. Em períodos em que a
+chuva real é menor do que o esperado pode-se observar uma diminuição da quantidade de água
+armazenada no sistema.
+</p><!-- l. 55 --><p class='noindent'>O gráfico a seguir apresenta a variação pluviométrica (em milímetros) da chuva real e da chuva
+esperada no Sistema Cantareira, que abastece a região metropolitana de São Paulo, no período de
+dezembro de 2013 (2013-12) a novembro de 2016 (2016-11).
+</p>
+<figure class='figure'> 
+
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+<div class='center'>
+<!-- l. 58 --><p class='noindent'>
+</p><!-- l. 59 --><p class='noindent'> <img alt='PIC' height='36' src='../figures/funcoes/TikZ/funcoesaluno-figure0-.png' width='36' /></p></div>
+                                                                                        
+                                                                                        
+</figure>
+<!-- l. 63 --><p class='noindent'>De acordo com o gráfico acima:
+     </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor2'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Que grandezas estão sendo relacionadas?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor3'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Em que mês e ano houve a maior incidência de chuvas? E a menor?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor4'><strong>c</strong></span>) </dt><dd class='enumerate-enumitem'>Em que período(s) a diferença entre a quantidade de chuva esperada e a quantidade real de
+     chuva superou <!-- l. 67 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>100</mn></math>mm?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor5'><strong>d</strong></span>) </dt><dd class='enumerate-enumitem'>Houve algum mês em que não foi registrada chuva na região do Sistema Cantareira?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor6'><strong>e</strong></span>) </dt><dd class='enumerate-enumitem'>O que pode ser observado nos meses de agosto de 2015 e março de 2016?</dd></dl>
+<h4 class='subsectionHead' id='atividade-numeros-triangulares'><a id='x3-40001'></a>Atividade 2:  Números triangulares</h4>
+<div class='center'>
+<!-- l. 76 --><p class='noindent'>
+</p><!-- l. 77 --><p class='noindent'> <img alt='PIC' height='36' src='../figures/funcoes/TikZ/funcoesaluno-figure1-.png' width='36' /></p></div>
+<!-- l. 81 --><p class='noindent'>Considere a sequência de números ilustrada acima. Ela é conhecida como a sequência dos <span class='ec-lmri-10x-x-109'>números triangulares</span>.
+O <!-- l. 81 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>n</mi></math>-ésimo número
+triangular, <!-- l. 81 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msub><mrow><mi>T</mi></mrow><mrow><mi>n</mi></mrow></msub></math>, é
+igual a quantidade total de círculos congruentes necessários para formar um triângulo equilátero cujo lado tem
+<!-- l. 81 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>n</mi></math> círculos. Por exemplo, o
+quarto número triangular é <!-- l. 81 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msub><mrow><mi>T</mi></mrow><mrow><mn>4</mn></mrow></msub> <mo class='MathClass-rel'>=</mo> <mn>10</mn></math>,
+porque são necessários <!-- l. 81 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>10</mn></math>
+círculos congruentes para formar um triângulo cujo lado tem,
+<!-- l. 81 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>4</mn></math> desses
+círculos.
+     </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor7'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Determine o 6º, o 7º e o 8º números triangulares.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor8'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Descreva o procedimento que você usou para determinar <!-- l. 85 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msub><mrow><mi>T</mi></mrow><mrow><mn>6</mn></mrow></msub></math>,
+     <!-- l. 85 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msub><mrow><mi>T</mi></mrow><mrow><mn>7</mn></mrow></msub></math>
+     e <!-- l. 85 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msub><mrow><mi>T</mi></mrow><mrow><mn>8</mn></mrow></msub></math>
+     no item anterior.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor9'><strong>c</strong></span>) </dt><dd class='enumerate-enumitem'>Determine o milésimo número triangular, <!-- l. 87 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msub><mrow><mi>T</mi></mrow><mrow><mn>1000</mn></mrow></msub></math>.
+                                                                                        
+                                                                                        
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor10'><strong>d</strong></span>) </dt><dd class='enumerate-enumitem'>Descreva um procedimento que permita determinar qualquer número triangular a partir da
+     sua ordem na sequência? Explique.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor11'><strong>e</strong></span>) </dt><dd class='enumerate-enumitem'>Quais são as variáveis relacionadas?
+     </dd></dl>
+                                                                                        
+                                                                                        
+<h4 class='subsectionHead' id='atividade-arranhaceu'><a id='x3-50001'></a>Atividade 3: Arranha-céu</h4>
+<!-- l. 99 --><p class='noindent'>Imagine um arranha-céu de <!-- l. 99 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>40</mn></math>
+andares cujas diferentes alturas que correspondem a alguns andares estão representadas na tabela
+abaixo.
+</p>
+<div class='table'>
+                                                                                        
+                                                                                        
+<!-- l. 101 --><p class='noindent'></p><figure class='float'>
+                                                                                        
+                                                                                        
+<div class='tabular'> <table class='tabular' id='TBL-1' rules='groups'><colgroup id='TBL-1-1g'><col id='TBL-1-1' /></colgroup><colgroup id='TBL-1-2g'><col id='TBL-1-2' /></colgroup><colgroup id='TBL-1-3g'><col id='TBL-1-3' /></colgroup><colgroup id='TBL-1-4g'><col id='TBL-1-4' /></colgroup><colgroup id='TBL-1-5g'><col id='TBL-1-5' /></colgroup><colgroup id='TBL-1-6g'><col id='TBL-1-6' /></colgroup><colgroup id='TBL-1-7g'><col id='TBL-1-7' /></colgroup><colgroup id='TBL-1-8g'><col id='TBL-1-8' /></colgroup><colgroup id='TBL-1-9g'><col id='TBL-1-9' /></colgroup><colgroup id='TBL-1-10g'><col id='TBL-1-10' /></colgroup><colgroup id='TBL-1-11g'><col id='TBL-1-11' /></colgroup><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr id='TBL-1-1-'><td class='td11' id='TBL-1-1-1' style='text-align:center; white-space:nowrap;'> <span id='textcolor12'><strong>Número do Andar</strong></span> </td><td class='td11' id='TBL-1-1-2' style='text-align:center; white-space:nowrap;'> Garagem (0)  </td><td class='td11' id='TBL-1-1-3' style='text-align:left;'> <!-- l. 106 --><p class='noindent'>1    </p></td><td class='td11' id='TBL-1-1-4' style='text-align:left;'> <!-- l. 106 --><p class='noindent'>2    </p></td><td class='td11' id='TBL-1-1-5' style='text-align:left;'> <!-- l. 106 --><p class='noindent'>3    </p></td><td class='td11' id='TBL-1-1-6' style='text-align:left;'> <!-- l. 106 --><p class='noindent'>4    </p></td><td class='td11' id='TBL-1-1-7' style='text-align:left;'> <!-- l. 106 --><p class='noindent'>…    </p></td><td class='td11' id='TBL-1-1-8' style='text-align:left;'> <!-- l. 106 --><p class='noindent'>10   </p></td><td class='td11' id='TBL-1-1-9' style='text-align:left;'> <!-- l. 106 --><p class='noindent'>…    </p></td><td class='td11' id='TBL-1-1-10' style='text-align:left;'> <!-- l. 106 --><p class='noindent'>    </p></td><td class='td11' id='TBL-1-1-11' style='text-align:left;'> <!-- l. 107 --><p class='noindent'>    </p></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr id='TBL-1-2-'><td class='td11' id='TBL-1-2-1' style='text-align:center; white-space:nowrap;'>  <span id='textcolor13'><strong>Altura (metros)</strong></span>   </td><td class='td11' id='TBL-1-2-2' style='text-align:center; white-space:nowrap;'>      -1         </td><td class='td11' id='TBL-1-2-3' style='text-align:left;'> <!-- l. 108 --><p class='noindent'>3    </p></td><td class='td11' id='TBL-1-2-4' style='text-align:left;'> <!-- l. 108 --><p class='noindent'>7    </p></td><td class='td11' id='TBL-1-2-5' style='text-align:left;'> <!-- l. 108 --><p class='noindent'>11   </p></td><td class='td11' id='TBL-1-2-6' style='text-align:left;'> <!-- l. 108 --><p class='noindent'>15   </p></td><td class='td11' id='TBL-1-2-7' style='text-align:left;'> <!-- l. 108 --><p class='noindent'>…    </p></td><td class='td11' id='TBL-1-2-8' style='text-align:left;'> <!-- l. 108 --><p class='noindent'>    </p></td><td class='td11' id='TBL-1-2-9' style='text-align:left;'> <!-- l. 108 --><p class='noindent'>…    </p></td><td class='td11' id='TBL-1-2-10' style='text-align:left;'> <!-- l. 108 --><p class='noindent'>    </p></td><td class='td11' id='TBL-1-2-11' style='text-align:left;'> <!-- l. 108 --><p class='noindent'>91   </p></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div>
+                                                                                        
+                                                                                        
+</figure>
+</div>
+     <blockquote class='quote'>
+     <!-- l. 115 --><p class='noindent'>Considere que a altura de um andar é medida a partir do nível da rua até o piso
+     desse andar e que a altura entre os andares seja sempre a mesma, conforme o esquema
+     abaixo.</p></blockquote>
+<figure class='figure'> 
+
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+<div class='center'>
+<!-- l. 119 --><p class='noindent'>
+</p><!-- l. 122 --><p class='noindent'><img alt='PIC' height='537' src='../figures/funcoes//Arranha-ceu_1.png' width='392' /></p></div>
+                                                                                        
+                                                                                        
+</figure>
+     <dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor14'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Qual a altura entre os andares?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor15'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Qual a altura do 10º andar?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor16'><strong>c</strong></span>) </dt><dd class='enumerate-enumitem'>O que significa o sinal negativo do andar da garagem?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor17'><strong>d</strong></span>) </dt><dd class='enumerate-enumitem'>A que andar corresponde a altura de 91 m?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor18'><strong>e</strong></span>) </dt><dd class='enumerate-enumitem'>Qual é a altura total desse prédio?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor19'><strong>f</strong></span>) </dt><dd class='enumerate-enumitem'>Realize uma pesquisa na internet e descubra o maior arranha-céu brasileiro atualmente.
+     Dividindo a altura total desse arranha-céu pela quantidade de andares, determine a altura
+     média de um andar.
+     </dd></dl>
+                                                                                        
+                                                                                        
+<!-- l. 143 --><div class='crosslinks'><p class='noindent'>[<a href='funcoesli2.html'>next</a>] [<a href='funcoesli1.html'>front</a>] [<a href='funcoesch1.html#funcoesli1.html'>up</a>] </p></div>
+<!-- l. 143 --><p class='noindent'><a id='tailfuncoesli1.html'></a> </p> 
+</body> 
+</html>

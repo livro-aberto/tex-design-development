@@ -1,0 +1,179 @@
+<!DOCTYPE html> 
+<html lang='pt' xml:lang='pt'> 
+<head><title>Explorando: Grácos</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='funcoes.css' rel='stylesheet' type='text/css' /> 
+<meta content='funcoes.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+<style type='text/css'> 
+.MathJax_MathML {text-indent: 0;} 
+</style> 
+</head><body>
+<!-- l. 702 --><div class='crosslinks'><p class='noindent'>[<a href='funcoesli7.html'>next</a>] [<a href='funcoesli5.html'>prev</a>] [<a href='funcoesli5.html#tailfuncoesli5.html'>prev-tail</a>] [<a href='#tailfuncoesli6.html'>tail</a>] [<a href='funcoesch1.html#funcoesli6.html'>up</a>] </p></div>
+<h3 class='likesectionHead' id='leavevmode-color-session4'><a id='x8-210001'></a><span id='textcolor99'>Explorando: Gráficos</span></h3>
+<!-- l. 703 --><p class='noindent'>Segundo informações do <a href='http://www.bigdatabusiness.com.br/visualizacao-de-dados-por-que-transformar-big-data-em-graficos/'>Big Data Business</a>, as palavras estimulam o lado esquerdo do cérebro e são um
+recurso essencial para a manutenção da memória. No entanto, as imagens são ainda mais eficazes,
+porque elas conseguem ativar os dois lados do cérebro simultaneamente e, assim, permitem o resgate de
+ideias e informações com maior precisão e agilidade. Especialmente quando se quer analisar grande
+quantidade de dados, apresentá-los em uma imagem ou em um gráfico, pode favorecer a
+comunicação.
+</p>
+<figure class='figure' id='ignorespaces-alguns-exemplos-de-representacoes-graficas'> 
+
+                                                                                        
+                                                                                        
+<a id='x8-21001r1'></a>
+                                                                                        
+                                                                                        
+<div class='center'>
+<!-- l. 706 --><p class='noindent'>
+</p><!-- l. 710 --><p class='noindent'><img alt='PIC' height='1054' src='../figures/funcoes//grafico-final.png' width='1422' />
+</p>
+<figcaption class='caption'><span class='id'>Figura 1.1:</span><span class='content'>Alguns exemplos de representações gráficas</span></figcaption><!-- tex4ht:label?: x8-21001r1  -->
+</div>
+                                                                                        
+                                                                                        
+</figure>
+<!-- l. 714 --><p class='noindent'>Represe25ntar graficamente conjuntos de dados e suas relações pode fazer toda a diferença para
+transmitir informações. Há vários tipos de gráficos, cada um tem a sua particularidade e serve para
+transmitir as informações de forma específica. Nesta seção iremos estudar a representação gráfica de
+funções.
+</p><!-- l. 716 --><p class='noindent'>Vamos considerar a seguinte situação:
+</p>
+<h4 class='subsectionHead' id='atividade-acao-promocional'><a id='x8-220001'></a>Atividade 13:  ação promocional</h4>
+<!-- l. 722 --><p class='noindent'>Uma empresa resolve lançar uma ação promocional na internet usando uma <a href='https://pt.wikipedia.org/wiki/Hashtag'>hashtag</a>. Um mês após o
+lançamento, o presidente dessa empresa resolve analisar o impacto da ação na rede. Para isso ele pede a
+um de seus funcionários que prepare um relatório sobre o número de vezes que a <span class='ec-lmri-10x-x-109'>hashtag </span>foi mencionada
+nas redes sociais em cada dia durante aquele mês. O funcionário resolveu apresentar os dados das
+seguintes duas formas: </p><figure class='figure'> 
+
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+<div class='center'>
+<!-- l. 724 --><p class='noindent'>
+</p><!-- l. 727 --><p class='noindent'> <img alt='PIC' height='36' src='../figures/funcoes/TikZ/funcoesaluno-figure12-.png' width='36' /></p></div>
+                                                                                        
+                                                                                        
+</figure>
+     <dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor100'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Quantas vezes a <span class='ec-lmri-10x-x-109'>hashtag </span>foi mencionada mais de 1500 vezes em um dia?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor101'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Em que dia a <span class='ec-lmri-10x-x-109'>hashtag </span>foi mais citada?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor102'><strong>c</strong></span>) </dt><dd class='enumerate-enumitem'>Identifique todos os períodos em que houve crescimento no número de citações.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor103'><strong>d</strong></span>) </dt><dd class='enumerate-enumitem'>Faça o mesmo para o decrescimento.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor104'><strong>e</strong></span>) </dt><dd class='enumerate-enumitem'>Escreva um parágrafo explicando o comportamento global do gráfico, apontando possíveis
+     causas para as variações observadas.</dd></dl>
+<!-- l. 745 --><p class='noindent'>Uma função, essencialmente, relaciona duas ou mais grandezas ou variáveis, de forma que são obtidos pares
+<!-- l. 745 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-punc'>,</mo><mi>y</mi><mo class='MathClass-close'>)</mo></math>, em que
+<!-- l. 745 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>x</mi></math> pertence ao domínio
+da função e <!-- l. 745 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi> <mo class='MathClass-rel'>=</mo> <mi>f</mi><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-close'>)</mo></math>.
+Perceba que a ordem em que os termos que compõem o par são apresentados é importante. Em
+matemática, chamamos esse tipo de objeto de <span class='ec-lmri-10x-x-109'>par ordenado</span>, eles são objetos fundamentais para a
+compreensão do gráfico de uma função.
+</p><!-- l. 747 --><p class='noindent'>No caso de funções reais de variável real, isto é, cujos domínio e contradomínio são o conjunto dos números reais (ou
+subconjuntos dele) tanto <!-- l. 747 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>x</mi></math>
+como <!-- l. 747 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi></math>
+serão números reais.
+</p><!-- l. 749 --><p class='noindent'>A representação geométrica mais comum para esses pontos, e que você provavelmente já conhece, é no
+plano cartesiano. Essa representação tem como base duas retas numéricas perpendiculares que se
+intersectam em suas origens conforme a figura abaixo.
+</p>
+<div class='center'>
+<!-- l. 751 --><p class='noindent'>
+</p><!-- l. 752 --><p class='noindent'> <img alt='PIC' height='36' src='../figures/funcoes/TikZ/funcoesaluno-figure13-.png' width='36' /></p></div>
+<!-- l. 755 --><p class='noindent'>As retas que compõem um sistema cartesiano são chamadas de eixos do plano cartesiano. O eixo em
+que são registradas as primeiras coordenadas do par é chamado de eixo das abscissas. O
+outro eixo, em que são registradas as segundas coordenadas do par é chamado de eixo das
+ordenadas.
+</p><!-- l. 757 --><p class='noindent'>Já vimos alguns exemplos de funções em atividades anteriores, vamos explorá-los um pouco
+mais.
+                                                                                        
+                                                                                        
+</p>
+<h4 class='subsectionHead' id='atividade-do-mapa-para-o-grafico'><a id='x8-230001'></a>Atividade 14:  do mapa para o gráfico</h4>
+<!-- l. 764 --><p class='noindent'>
+     </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor105'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>A partir das colunas <span class='ec-lmri-10x-x-109'>Tempo de travessia </span>e <span class='ec-lmri-10x-x-109'>Cor </span>da <a href='funcoesli3.html#atividade-colorindo-o-mapa'>Atividade: colorindo o mapa</a>, escreva o
+     conjunto de pares ordenados da forma (tempo, cor) respeitando o critério que você escolheu
+     para a determinação das cores.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor106'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Represente graficamente este conjunto de pares ordenados.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor107'><strong>c</strong></span>) </dt><dd class='enumerate-enumitem'>Para colorir as vias de todo o mapa, precisamos distribuir as cores para outros valores de
+     tempo. Como você faria a distribuição para o intervalo de <!-- l. 768 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>0</mn></math>
+     a <!-- l. 768 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>25</mn></math>
+     minutos considerando um trecho qualquer de <!-- l. 768 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>13</mn></math>
+     km (a mesma extensão da ponte)?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor108'><strong>d</strong></span>) </dt><dd class='enumerate-enumitem'>Encontre outra maneira de representar graficamente a associação entre os tempos e as cores.
+     </dd></dl>
+<!-- l. 776 --><p class='noindent'>
+</p>
+<h4 class='subsectionHead' id='atividade-numeros-triangulares-no-plano'><a id='x8-240001'></a>Atividade 15:  números triangulares no plano</h4>
+<!-- l. 779 --><p class='noindent'>Represente, no plano cartesiano, o conjunto de pontos que correspondem aos pares ordenados
+<!-- l. 779 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>{</mo><mo class='MathClass-open'>(</mo><mi>n</mi><mo class='MathClass-punc'>,</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>n</mi></mrow></msub><mo class='MathClass-close'>)</mo><mspace class='nbsp' width='0.33em'></mspace><mo class='MathClass-punc'>;</mo><mspace class='nbsp' width='0.33em'></mspace><mi>n</mi> <mo class='MathClass-rel'>∈</mo><mo class='MathClass-open'>{</mo><mn>1</mn><mo class='MathClass-punc'>,</mo><mn>2</mn><mo class='MathClass-punc'>,</mo><mo class='MathClass-punc'>.</mo><mo class='MathClass-punc'>.</mo><mo class='MathClass-punc'>.</mo><mo class='MathClass-punc'>,</mo><mn>8</mn><mo class='MathClass-close'>}</mo><mo class='MathClass-close'>}</mo></math>, em
+que <!-- l. 779 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msub><mrow><mi>T</mi></mrow><mrow><mi>n</mi></mrow></msub></math> é o
+<!-- l. 779 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>n</mi></math>-ésimo
+número triangular.
+</p><!-- l. 783 --><p class='noindent'>
+</p>
+<h4 class='subsectionHead' id='atividade-jornada-ate-a-escola'><a id='x8-250001'></a>Atividade 16:  jornada até a escola</h4>
+<!-- l. 786 --><p class='noindent'>Leonardo mora a <!-- l. 786 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>6</mn></math>
+km da escola onde estuda e utiliza o transporte escolar, que o busca na porta de sua casa. Em um
+certo dia, o percurso de Leonardo até sua escola foi assim: Ele estava na porta de casa às
+<!-- l. 786 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>7</mn></math>
+horas, como de costume, mas o transporte escolar atrasou, passando em sua casa somente às
+<!-- l. 786 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>7</mn><mi>h</mi><mn>05</mn><mi mathvariant='italic'>min</mi></math>.
+Leonardo entrou na van e sentou no penúltimo lugar vago. Ainda faltava Marina. “Ela mora a
+                                                                                        
+                                                                                        
+<!-- l. 786 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>3</mn></math> km da minha casa!”,
+lembrou Leonardo. Às <!-- l. 786 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>7</mn><mi>h</mi><mn>10</mn><mi mathvariant='italic'>min</mi></math>
+em ponto, o transporte escolar chegou à casa de Marina, que já estava pronta aguardando para embarcar.
+Para tentar compensar o atraso, o motorista resolveu tomar um atalho, mas a estratégia não funcionou. Às
+<!-- l. 786 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>7</mn><mi>h</mi><mn>15</mn><mi mathvariant='italic'>min</mi></math> precisou ficar
+parado por <!-- l. 786 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>5</mn></math>
+minutos em frente a uma cancela aguardando um trem de carga passar. Finalmente, às
+<!-- l. 786 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>7</mn><mi>h</mi><mn>25</mn><mi mathvariant='italic'>min</mi></math> chegaram
+à escola, <!-- l. 786 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>5</mn></math>
+minutos antes do sinal tocar.
+</p><!-- l. 788 --><p class='noindent'>No plano cartesiano a seguir, o eixo horizontal indica o tempo em minutos e o eixo vertical a distância percorrida
+em quilômetros. Os pontos marcados correspondem às distâncias percorridas por diversos estudantes da escola a
+cada <!-- l. 788 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>5</mn></math> minutos
+no período das <!-- l. 788 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>7</mn><mi>h</mi></math>
+às <!-- l. 788 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>7</mn><mi>h</mi><mn>30</mn><mi mathvariant='italic'>min</mi></math> da
+mesma manhã descrita na situação acima.
+</p><!-- l. 790 --><p class='noindent'><a id='likesection.23'></a><a id='x8-25001x23'></a> </p><figure class='figure'> 
+
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+<div class='center'>
+<!-- l. 792 --><p class='noindent'>
+</p><!-- l. 795 --><p class='noindent'> <img alt='PIC' height='36' src='../figures/funcoes/TikZ/funcoesaluno-figure14-.png' width='36' /></p></div>
+                                                                                        
+                                                                                        
+</figure>
+     <dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor109'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Conecte os pontos que correspondem à jornada de Leonardo, desde a porta da sua casa até
+     a chegada à escola, no dia descrito acima.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor110'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Faça uma estimativa da distância a que Leonardo estará de sua casa às <!-- l. 803 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>7</mn><mi>h</mi><mn>07</mn><mi mathvariant='italic'>min</mi></math>.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor111'><strong>c</strong></span>) </dt><dd class='enumerate-enumitem'>Escolha um conjunto de pontos que possa representar a jornada de um outro estudante da
+     sua casa à escola e descreva essa jornada.
+     </dd></dl>
+                                                                                        
+                                                                                        
+<!-- l. 810 --><div class='crosslinks'><p class='noindent'>[<a href='funcoesli7.html'>next</a>] [<a href='funcoesli5.html'>prev</a>] [<a href='funcoesli5.html#tailfuncoesli5.html'>prev-tail</a>] [<a href='funcoesli6.html'>front</a>] [<a href='funcoesch1.html#funcoesli6.html'>up</a>] </p></div>
+<!-- l. 810 --><p class='noindent'><a id='tailfuncoesli6.html'></a> </p> 
+</body> 
+</html>

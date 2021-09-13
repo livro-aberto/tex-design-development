@@ -1,0 +1,730 @@
+\def\fileversion{v1.5}
+\def\filename{livroaberto-html}
+\def\filetitle{Livro Aberto package}
+\def\filedate{2021/07/21}
+\def\docdate{2021/07/21}
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{\filename}
+
+
+%Combinação dos pacotes usados para o livro aberto
+%Para acessar cada seção basta usar Ctrl+F
+
+%Seção 0 - Pacotes e Comandos base
+%Seção 1 - Livro Aberto Boxes
+%Seção 2 - Livro Aberto Colors
+%Seção 3 - Livro Aberto Fonts
+%Seção 4 - Livro Aberto Headings
+%Seção 5 - Livro Aberto Lists
+%Seção 6 - Livro Aberto Page 
+%Seção 7 - Livro Aberto Professor
+
+% Define o diretório das figures e das fontes
+
+\def\fontspath{../../fonts/}
+
+
+\def\aluno{1}
+
+
+\RequirePackage[brazilian]{babel}
+\RequirePackage{tcolorbox}
+	\tcbuselibrary{theorems, listings, breakable, most, skins,skins,breakable}
+	\tcbsetforeverylayer{shield externalize}
+\RequirePackage{colortbl}
+\RequirePackage{float}
+\RequirePackage{geometry}
+\RequirePackage{xurl}
+\RequirePackage{hhline}
+\RequirePackage{ragged2e}
+\RequirePackage{microtype}
+\RequirePackage{makecell}
+\RequirePackage{longtable}
+\RequirePackage{wrapfig}
+\RequirePackage{bm}
+\RequirePackage[low-sup]{subdepth}
+\RequirePackage[inline, attach]{asymptote}
+\RequirePackage[dvips]{attachfile2}
+\RequirePackage[export]{adjustbox}
+\RequirePackage{needspace}
+\RequirePackage{fancyhdr}
+\RequirePackage{marginfix}
+\RequirePackage{stmaryrd}
+\RequirePackage{tasks}
+\RequirePackage{cancel}
+\RequirePackage{lipsum}
+\RequirePackage{multicol}
+\RequirePackage{multirow}
+\RequirePackage{xstring}
+\RequirePackage{mfirstuc} %To capitalize just the inicial letter of each word. There is a command to exclude specific words to captalize such like a, an, the, etc.
+\RequirePackage{anyfontsize}
+\RequirePackage{soul}
+\RequirePackage{comment} % Comando excludecomment para remover os comandos do material do professor
+\RequirePackage{xpatch}
+\RequirePackage{currfile}
+
+\RequirePackage{bookmark}
+\RequirePackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	colorlinks=true,
+	linkcolor=linkscolor,
+	filecolor=linkscolor,
+	urlcolor=linkscolor,
+	citecolor=linkscolor
+}
+\usepackage{tex4ht}
+\RequirePackage{amsmath,amssymb,amsfonts,amsthm,amstext,mathtools}
+
+
+\usepackage{../../commands}
+
+
+
+%Seção 1 - Livro Aberto Boxes
+%***************************************************************************************
+% This package creates and typesets the text boxes for the Livro Aberto textbook.
+%
+% This package was written and created by
+% David Latchman, TeXnical Designs
+% Contact: david.latchman@texnical-designs.com for problems
+
+
+%% ---------------------------------------------------------------------
+%%
+%% Loads the ifthen package
+%%
+\RequirePackage{ifthen}
+\RequirePackage{mfirstuc} %To capitalize just the inicial letter of each word. There is a command to exclude specific words to captalize such like a, an, the, etc.
+\RequirePackage{anyfontsize} %To define fontsize precisely
+
+\tikzstyle{outlinebox} = [fill=box2]
+\tikzstyle{box} = [inner sep=3mm, inner ysep=3mm]
+
+% Define the vertical skip for the environments
+\newskip\libroskip
+\libroskip= 4pt plus 1pt minus 1pt
+\hfuzz=4pt
+\graphicspath{
+	{../../figures/}
+	{../../figures/capas}
+	% {figures/vetores/}
+	% {figures/perspectiva1/}
+	% {figures/perspectiva2/}
+	{../../figures/funcoes/}
+		{../../figures/funcoes/TikZ}
+	% {figures/taxa/}
+	% {figures/funcao-afim/}
+	% {figures/funcao-quadratica/}
+	% {figures/sistemas/}
+	% {figures/exponencial/}
+	% {figures/logaritmos/}
+	% {figures/funcao-trigonometrica/}
+	% {figures/estatistica1/}
+	% {figures/estatistica2/}
+	% {figures/probabilidade1/}
+	% {figures/tales/}
+	% {figures/semelhanca/}
+	% {figures/financeira/}
+	% {figures/ladrilhos/}
+	% {figures/cartografia/}
+	% {figures/investigacao/}
+	% {figures/superficie/}
+	% {figures/trigonometria/}
+	% {figures/combinatoria/}
+	% {figures/computacional/}
+	% {figures/transformacoes/}
+	% {figures/livroaberto/}
+}
+
+\def\envskip{\vskip\libroskip}
+
+
+\newcounter{ativ}
+
+\newenvironment{task}[1]{%
+	\stepcounter{ativ}
+	\subsection{Atividade \theativ: #1}
+}{}
+
+
+\newenvironment{reflection}[1]{%
+	\subsection{\textcolor{box1}{Para refletir}}
+}{}
+
+\newenvironment{observation}{%
+	\paragraph{Observação:}
+}{}
+
+\newenvironment{observationtitle}[1]{%
+	\paragraph{Observação: #1}
+
+}{}
+
+% Observation Box
+
+
+\newcounter{ex}
+
+\newenvironment{example}[1]{%
+	\stepcounter{ex}
+	\def\currentcolor{cor1}
+	\subsection{Atividade \theex: #1}
+}
+
+
+\newenvironment{research}[1]{%
+	\subsection{\textcolor{box1}{Para pesquisar}}
+}
+
+\newenvironment{knowledge}[1]{%
+	\subsection{\textcolor{box3}{Você sabia?}}
+}
+
+
+
+\newenvironment{project}[1]{%
+	\section{\textcolor{cor2}{Projeto Aplicado}}
+	\def\currentcolor{cor2}
+}
+
+
+%Seção 2 - Livro Aberto Colors
+
+%***************************************************************************************
+% This package sets up the colors used in the Livro Aberto textbook.
+%
+% This package was written and created by
+% David Latchman, TeXnical Designs
+% Contact: david.latchman@texnical-designs.com for problems
+%
+%
+% The fonts used in this package:
+% Title: Orbitron
+% Main (Text): Exo 2
+% Boxes: Roboto
+
+
+%% ---------------------------------------------------------------------
+%%
+%% Loads the ifthen package
+%%
+\RequirePackage{ifthen}
+
+\RequirePackage{xkeyval}
+
+\definecolor{cor1}{RGB}{0,165,157} %verde agua
+\definecolor{cor2}{RGB}{73,85,93}
+\definecolor{cor1a}{RGB}{0,165,157}
+\definecolor{cor2a}{RGB}{73,85,93}
+\definecolor{cor1b}{RGB}{251,181,0}
+\definecolor{cor2b}{RGB}{73,85,93}
+
+\definecolor{base1}{RGB}{184,202,213}
+\definecolor{base2}{RGB}{221,223,80}
+
+\definecolor{session1}{RGB}{0,94,176} %azul
+\definecolor{session2}{RGB}{75,173,49} %verde
+\definecolor{session3}{RGB}{183,13,40} %vinho
+\definecolor{session4}{RGB}{236,107,16} %laranja
+
+\definecolor{penaqua}{RGB}{0,165,157}
+\definecolor{grafite}{RGB}{73,85,93}
+\definecolor{penazul}{RGB}{0,94,176}
+\definecolor{penverde}{RGB}{75,173,49}
+\definecolor{penvinho}{RGB}{83,13,40}
+\definecolor{penlaranja}{RGB}{236,107,16}
+\definecolor{penbox2}{RGB}{240,238,201}
+
+\definecolor{box1}{RGB}{71,30,129}
+\definecolor{box2}{RGB}{225,221,146}
+\definecolor{box3}{RGB}{108,27,98}
+\definecolor{linkscolor}{RGB}{6,69,173}
+
+\definecolor{magblue}{RGB}{151,255,249}
+
+\definecolor{primario}{RGB}{0,165,157} %esverdeado
+\definecolor{secundario}{RGB}{73,85,93} %acinzentado escuro
+\definecolor{terciario}{RGB}{184,202,213} % azul claro
+\definecolor{destacado}{RGB}{183,13,40} %avermelhado
+\definecolor{atento}{RGB}{0,94,176} %azul forte
+
+
+
+%Seção 3 - Livro Aberto Fonts
+
+%***************************************************************************************
+% This package sets up the fonts for the Livro Aberto textbook.
+%
+% This package was written and created by
+% David Latchman, TeXnical Designs
+% Contact: david.latchman@texnical-designs.com for problems
+%
+%
+% The fonts used in this package:
+% Title: Orbitron
+% Main (Text): Exo 2
+% Boxes: Roboto
+
+
+
+
+\typeout{Package: `\filetitle\space\filename\space\fileversion \@spaces <\filedate>'}
+\typeout{English documentation as of <\docdate>}
+
+%% ---------------------------------------------------------------------
+%%
+%% Loads the ifthen package
+%%
+\RequirePackage{ifthen}
+
+
+\RequirePackage{fontspec}
+\setmainfont[Path=\fontspath]{Exo2-Light.otf}[BoldFont=Exo2-Medium.otf, ItalicFont=Exo2-LightItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf]
+\newfontfamily{\titlefont}[Path=\fontspath]{orbitron-medium.otf}[BoldFont=orbitron-bold.otf]
+\newfontfamily{\secondtitlefont}[Path=\fontspath]{orbitron-black.ttf}
+\newfontfamily{\thirdtitlefont}[Path=\fontspath]{orbitron-bold.otf}
+\newfontfamily{\pagetitlefont}[Path=\fontspath]{Orbitron-Regular.ttf}
+\newfontfamily{\boxfont}[Path=\fontspath]{Roboto-Regular.ttf}
+\newfontfamily{\enumeratefont}[Path=\fontspath]{Exo2-Light.otf}[BoldFont=Exo2-Medium.otf, ItalicFont=Exo2-LightItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf]
+\newfontfamily{\boxtitlefont}[Path=\fontspath]{Exo2-Bold.otf}[BoldFont=Exo2-ExtraBold.ttf, ItalicFont=Exo2-BoldItalic.ttf, BoldItalicFont=Exo2-ExtraBoldItalic.ttf] % added after David
+\newfontfamily{\extitlefont}[Path=\fontspath]{Exo2-SemiBold.otf} % added after David
+\newfontfamily{\boxexample}[Path=\fontspath]{Exo2-Regular.otf}[BoldFont=Exo2-SemiBold.ttf, ItalicFont=Exo2-RegularItalic.ttf, BoldItalicFont=Exo2-MediumItalic.ttf] % added after David
+
+
+
+
+
+%Seção 4 - Livro Aberto Headings
+
+%***************************************************************************************
+% This package creates the heading designs for the Livro Aberto textbook.
+%
+% This package was written and created by
+% David Latchman, TeXnical Designs
+% Contact: david.latchman@texnical-designs.com for problems
+%
+
+
+%% ---------------------------------------------------------------------
+%%
+%% Loads the ifthen package
+%%
+\RequirePackage{ifthen}
+
+% Commands for chapter page
+\newcommand{\chapterillustration}[2]{
+\ifnum\aluno=1
+\def\@chapterillustration{#1}
+\else
+\def\@chapterillustration{#2}
+\fi
+}
+\newcommand{\chapterwhat}[1]{\def\@chapterwhat{#1}}
+\newcommand{\chapterbecause}[1]{\def\@chapterbecause{#1}}
+
+
+
+
+%Cor Explorando
+
+
+
+%% Explorando
+
+\newcounter{explore}
+\renewcommand*{\theexplore}{\arabic{explore}}
+
+\newcommand{\explore}[1]{	
+	\def\currentcolor{session1}
+	\stepcounter{explore}
+	\section*{\textcolor{session1}{Explorando: #1}}
+	\defaultlist%
+}
+
+
+%Praticando
+
+\newcounter{practice}
+\renewcommand*{\thepractice}{\arabic{practice}}
+
+\newcommand{\practice}[1]{%
+	\def\currentcolor{session2}
+	\stepcounter{practice}
+	\section*{\textcolor{session2}{Praticando: #1}}
+	\defaultlist%
+}
+
+
+
+%Para Saber+
+
+\newcounter{know}
+\renewcommand*{\theknow}{\arabic{know}}
+
+\newcommand{\know}[1]{%
+	\def\currentcolor{session3}
+	\stepcounter{know}
+	\section*{\textcolor{session3}{Para saber +: #1}}
+	\defaultlist%
+}
+
+
+%Organizando
+
+\newcounter{arrange}
+\renewcommand*{\thearrange}{\arabic{arrange}}
+
+\newcommand{\arrange}[1]{%
+	\def\currentcolor{session4}
+	\stepcounter{arrange}
+	\section*{\textcolor{session4}{Organizando: #1}}
+	\defaultlist%
+}
+
+
+\newcounter{exercise}
+\renewcommand*{\theexercise}{\arabic{exercise}}
+
+\newcommand{\exercise}{%
+	\def\currentcolor{cor1}
+	\stepcounter{exercise}
+	\section*{\textcolor{cor1}{Exercícios}}
+	\setlist[enumerate]{label=\titem{\arabic*}}
+}
+
+
+
+\newtcolorbox{stretchbox}[1][]{
+  height fill,
+  sharp corners,
+  colback=white,
+  colframe=black,
+  #1}
+
+
+
+% Clear page after chapter title
+\renewcommand\memendofchapterhook{%
+    \clearpage\m@mindentafterchapter\@afterheading}
+
+% Setup page
+\makechapterstyle{livroaberto}{%
+    \renewcommand{\chapnamefont}{}
+    \renewcommand{\chapnumfont}{\titlefont\bfseries\fontsize{140pt}{0}\selectfont}
+    \renewcommand{\chaptitlefont}{\titlefont\bfseries\fontsize{25pt}{0}\selectfont}
+    \renewcommand{\chapternamenum}{}
+    \renewcommand{\afterchapternum}{}
+    \renewcommand{\printchaptername}{}
+    \renewcommand{\printchapternum}{}
+    \renewcommand{\printchapternonum}{\global\numberedchapfalse}
+    \renewcommand{\printchaptertitle}[1]{%
+    \thispagestyle{plain}
+        \ifnumberedchap
+            \ChapNumTitle{##1}
+        \else
+            \ChapNoNumTitle{##1}
+        \fi
+        \global\numberedchaptrue
+        }
+    \renewcommand{\afterchaptertitle}{\clearpage}
+
+}
+\renewcommand{\chaptermarksn}[1]{}
+
+
+\makepagestyle{plain}
+\makeevenfoot{plain}{}{\leftpagenumber}{}
+\makeoddfoot{plain}{}{\rightpagenumber}{}
+
+\makepagestyle{livroaberto}
+
+\makeevenfoot{livroaberto}{}{\leftpagenumber}{}
+\makeoddfoot{livroaberto}{}{\rightpagenumber}{}
+\makeevenhead{livroaberto}{}{\rightpagetab}{}
+\makeoddhead{livroaberto}{}{\leftpagetab}{}
+
+
+\chapterstyle{livroaberto}
+\pagestyle{livroaberto}
+
+%Seção 5 - Livro Aberto Lists
+
+%***************************************************************************************
+% This package creates the heading designs for the Livro Aberto textbook.
+%
+% This package was written and created by
+% David Latchman, TeXnical Designs
+% Contact: david.latchman@texnical-designs.com for problems
+%
+%
+
+\RequirePackage[inline]{enumitem}
+
+
+
+
+\pgfdeclareshape{enumbox}{%
+    \inheritsavedanchors[from=rectangle]
+    \inheritanchorborder[from=rectangle]
+
+    \inheritanchor[from=rectangle]{center}
+    \inheritanchor[from=rectangle]{south}
+    \inheritanchor[from=rectangle]{west}
+    \inheritanchor[from=rectangle]{north}
+    \inheritanchor[from=rectangle]{east}
+    \inheritanchor[from=rectangle]{base}
+
+    \backgroundpath{%
+        \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+        \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+
+% Construct main path
+        \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya+2pt}}
+        \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb-2pt}{\pgf@yb}}
+        \pgfpatharc{90}{0}{2.0pt}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+        \pgfpathlineto{\pgfpoint{\pgf@xa+2pt}{\pgf@ya}}
+        \pgfpatharc{270}{180}{2.0pt}
+%        \pgfpathcurveto{\pgfpoint{\pgf@xc}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@ya}\pgfpoint{\pgf@xa}{\pgf@yc}}
+        \pgfpathclose
+    }
+}
+
+\pgfdeclareshape{itembox}{%
+    \inheritsavedanchors[from=rectangle]
+    \inheritanchorborder[from=rectangle]
+
+    \inheritanchor[from=rectangle]{center}
+    \inheritanchor[from=rectangle]{south}
+    \inheritanchor[from=rectangle]{west}
+    \inheritanchor[from=rectangle]{north}
+    \inheritanchor[from=rectangle]{east}
+    \inheritanchor[from=rectangle]{base}
+
+    \backgroundpath{%
+        \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+        \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+
+% Construct main path
+        \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+        \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+        \pgfpathclose
+    }
+}
+
+\newcommand*{\enumbox}[1]{%
+    \tikz [baseline=(numbereditem.base)]{%
+        \node[shape=enumbox,text=white, font=\bfseries\fontsize{11pt}{0}\selectfont, draw=black, 
+        fill=cor1, 
+        minimum width=6.00mm, minimum height=6.00mm] (numbereditem) {#1};
+    }
+}
+
+\newcommand*{\enumdefault}[1]{%
+    \tikz [baseline=(numbereditem.base)]{%
+        \node[shape=enumbox, font=\bfseries\fontsize{11pt}{0}\selectfont, draw=black, minimum width=6.00mm, minimum height=6.00mm] (numbereditem) {#1};
+    }
+}
+
+
+% Defining an alternative shape for itemize, where the bullets are actually squares.
+\newcommand*{\itembox}{%
+    \tikz [baseline=(boxitem.base)] {%
+        \node[shape=rectangle, draw=black, minimum width=6.00mm, minimum height=6.00mm] (boxitem) {};
+    }
+}
+
+% Defining an alternative shape for itemize, where the bullets are actually colored squares.
+\newcommand*{\itemcoloredsquare}{%
+    \tikz  {%
+        \node[shape=rectangle, fill=\currentcolor, minimum width=1.50mm, minimum height=1.50mm] (boxitem) {};
+    }
+}
+
+
+% Set up lists
+
+
+
+\newcommand{\defaultlist}{
+	\setlist[enumerate]{label=\titem{\alph*}}
+	\setlist[itemize]{label=\protect\itemcoloredsquare}
+	\settasks{label=\titem{\alph}, label-width=14pt}
+}
+\defaultlist
+
+\newcommand{\exerciselist}{
+	\setlist[enumerate]{label=\titem{\arabic*}}
+	\setlist[enumerate,1]{label=\textit{\alph}}
+	\setlist[enumerate,2]{label=\textit{\roman*}}
+}
+
+%Seção 6 - Livro Aberto Page
+
+%***************************************************************************************
+% This package sets up the page dimensions used in the Livro Aberto textbook.
+%
+% This package was written and created by
+% David Latchman, TeXnical Designs
+% Contact: david.latchman@texnical-designs.com for problems
+%
+%
+
+
+\numberwithin{figure}{chapter}
+%% Set Page Size
+% \setstocksize{11.00in}{8.50in}
+\setstocksize{275mm}{204mm}
+\settrimmedsize{275mm}{204mm}{*}
+% \setstocksize{275mm}{204mm}
+% \settrimmedsize{\stockheight}{\stockwidth}{*}
+
+
+% \settrims{2.20mm}{5.95mm}
+
+\settypeblocksize{241mm}{162mm}{*}
+\setlrmarginsandblock{20mm}{22mm}{*}
+\setulmarginsandblock{17mm}{17.00mm}{*}
+
+% \setlrmargins{*}{1.25in}{*}
+% \setulmargins{*}{*}{0.85}
+% \setlrmarginsandblock{1.00in}{1.00in}{*}
+\setcolsepandrule{8.00mm}{0mm}
+
+
+% Set Paragraphs to no indent with a 6pt space between paragraphs
+\setlength{\parindent}{0em}
+ \setlength{\parskip}{6pt}
+
+%% Modify Header and Footer spacing
+% \setheadfoot{\onelineskip}{2\onelineskip}
+
+\checkandfixthelayout
+
+\bibliographystyle{apalike-pt}
+
+% Bibliotecas e pacotes TikZ e Asymptote
+\RequirePackage{tikz}
+\usetikzlibrary{
+    calc,trees,shadows,shadows.blur,positioning,arrows,chains,shapes.geometric,decorations,decorations.pathreplacing,decorations.pathmorphing,shapes,matrix,fit,tikzmark,intersections,through,backgrounds,arrows.meta,datavisualization,external}
+
+\tikzstyle{vetor}=[->,line width=0.8pt,color=primario,>=latex]
+\tikzstyle{ponto}=[circle, minimum size=2pt, inner sep=0, draw=black, fill=black, shift only, label={}]
+\tikzstyle{every node}=[shift only]
+\tikzstyle{eixos}=[->]
+\tikzstyle{curvafun}=[very thick, color=primario]
+\tikzstyle{grafica}+=[line cap=round,line join=round,color=terciario, very thick]
+\newcommand{\vetoresmapaantartida}{
+      \filldraw [white, fill opacity=100] (-4,-3) rectangle (4,3);
+      \node at (-4,-3) {\includegraphics[width=1cm]{/home/cheque/Dropbox/Tikz-LivroAberto/Vetores/rosa.png}};
+      \node [above, scale=0.5] at (-4,-2.5) {N};
+      \node [left, scale=0.5] at (-4.5,-3) {E};
+      \node [right, scale=0.5] at (-3.5,-3) {L};
+      \node [below, scale=0.5] at (-4,-3.5) {S};
+      \node [ponto] (A) at (0,0) {};
+      \node [below] at (A) {$A$};
+      \draw [|-|] (2,-3.5) -- (4,-3.5);
+      \node [above, scale=0.5] at (3,-3.5) {10 km};
+}
+
+\RequirePackage{tikzpagenodes}
+
+\RequirePackage{environ}
+
+% Define asymptote picture preamble
+
+\begin{asydef}
+import three;
+import graph3;
+import solids;
+import math;
+import labelpath3;
+import labelpath;
+settings.render=16;
+//attach=true;
+
+pen azul = rgb(0,94/255,176/255); //azul
+pen verde = rgb(75/255,173/255,49/255); //verde
+pen vinho = rgb(183/255,13/255,40/255); //vinho
+pen laranja = rgb(236/255,107/255,16/255); //laranja
+pen agua = rgb(0,165/255,157/255); //verde agua
+pen box2 = rgb(240/255,238/255,201/255);
+
+
+texpreamble("\usepackage{fontspec}\setmainfont[Path=../../Fontes/]{Exo2-Light}");
+\end{asydef}
+
+% Define asymptote picture directory
+
+% \def\asydir{Asymptote/asytmp-perspectiva1}
+% \def\asydir{Asymptote/asytmp-perspectiva2}
+
+% Define the layers to be used in document.
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfdeclarelayer{top}
+\pgfdeclarelayer{bottom}
+\pgfsetlayers{bottom,background,main,foreground,top}
+
+
+
+
+%Seção 7 - Livro Aberto Professor
+%***************************************************************************************
+%
+%This section configures the aluno document to be able to compile the professor material
+%
+
+
+%%%%%%%%%%%%%%% ENDNOTES
+
+
+
+%Exclusão de ambientes do professor
+
+%Páginas de texto
+
+\excludecomment{paginatexto}
+\excludecomment{apresentacao}
+
+%Caixa de Obetivos gerais
+\newtcolorbox{habilities}[1]{}
+
+%Caixa de Objetivos Específicos
+
+\newenvironment{objectives}[4]
+{}
+{}
+{}
+
+%Caixa de Sugestões e recomendações
+
+\newenvironment{sugestions}[4]
+{}
+{}
+{}
+
+
+%Caixa de Respostas
+\newenvironment{answer}[3]
+{}
+{}
+
+
+%Caixa de Texto
+\newenvironment{texto}[1]
+{}
+
+\newcommand{\notarodape}[1]{\footnotemark\footnotetext{\belowbaseline[-\ht\strutbox]{\begin{tcolorbox}[colback=grafite!90!white,colbacktitle=grafite!90!white,
+colframe=grafite!90!white,colupper=white, left=0pt, right=0pt,top=-2pt,bottom=-2pt, hbox, sharp corners = northeast, sharp corners = southwest]
+{\textbf{#1}}\end{tcolorbox}}}}
+
+
+
+
+\endinput

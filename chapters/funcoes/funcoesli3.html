@@ -1,0 +1,443 @@
+<!DOCTYPE html> 
+<html lang='pt' xml:lang='pt'> 
+<head><title>Praticando: Conceito do Funçã</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='funcoes.css' rel='stylesheet' type='text/css' /> 
+<meta content='funcoes.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+<style type='text/css'> 
+.MathJax_MathML {text-indent: 0;} 
+</style> 
+</head><body>
+<!-- l. 195 --><div class='crosslinks'><p class='noindent'>[<a href='funcoesli4.html'>next</a>] [<a href='funcoesli2.html'>prev</a>] [<a href='funcoesli2.html#tailfuncoesli2.html'>prev-tail</a>] [<a href='#tailfuncoesli3.html'>tail</a>] [<a href='funcoesch1.html#funcoesli3.html'>up</a>] </p></div>
+<h3 class='likesectionHead' id='leavevmode-color-session2'><a id='x5-90001'></a><span id='textcolor22'>Praticando: Conceito do Função</span></h3>
+<!-- l. 197 --><p class='noindent'>
+</p>
+<h4 class='subsectionHead' id='atividade-colorindo-o-mapa'><a id='x5-100001'></a>Atividade 4: Colorindo o mapa</h4>
+<!-- l. 201 --><p class='noindent'>A imagem a seguir, que foi retirada do aplicativo Google Maps, exibe o trânsito na ponte Rio-Niterói e
+seus acessos em um determinado dia e hora. Várias informações podem ser observadas a partir
+dos elementos apresentados. Por exemplo, as cores nas vias informam a velocidade média
+dos veículos que trafegam por elas, conforme a legenda na parte inferior; a distância entre
+dois pontos quaisquer do mapa pode ser estimada usando a escala exibida no canto inferior
+direito. Gráficos como esse são produzidos a partir das relações entre diversas informações
+coletadas.
+</p>
+<figure class='figure'> 
+
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+<div class='center'>
+<!-- l. 204 --><p class='noindent'>
+</p><!-- l. 207 --><p class='noindent'><img alt='PIC' height='520' src='../figures/funcoes//rio_niteroi_maps.png' width='1147' /></p></div>
+                                                                                        
+                                                                                        
+</figure>
+<!-- l. 211 --><p class='noindent'>A tabela a seguir mostra os dados coletados sobre o tempo gasto pelos veículos (em média) para
+atravessar a ponte, ao longo de um dia.
+</p>
+<div class='table'>
+                                                                                        
+                                                                                        
+<!-- l. 213 --><p class='noindent'></p><figure class='float'>
+                                                                                        
+                                                                                        
+<div class='tabular'> <table class='tabular' id='TBL-2' rules='groups'><colgroup id='TBL-2-1g'><col id='TBL-2-1' /></colgroup><colgroup id='TBL-2-2g'><col id='TBL-2-2' /></colgroup><colgroup id='TBL-2-3g'><col id='TBL-2-3' /></colgroup><colgroup id='TBL-2-4g'><col id='TBL-2-4' /></colgroup><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-1-'><td class='td11' id='TBL-2-1-1' style='text-align:center; white-space:nowrap;'> <span id='textcolor23'><strong>Período do Dia</strong></span> </td><td class='td11' id='TBL-2-1-2' style='text-align:center; white-space:nowrap;'> <span id='textcolor24'><strong>Tempo (min)</strong></span> </td><td class='td11' id='TBL-2-1-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 218 --><p class='noindent'><span id='textcolor25'><strong>Cor</strong></span>       </p></td><td class='td11' id='TBL-2-1-4' style='text-align:center; white-space:nowrap;'> <span id='textcolor26'><strong>Velocidade Média (km/min)</strong></span> </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-2-'><td class='td11' id='TBL-2-2-1' style='text-align:center; white-space:nowrap;'>     5:00 - 7:00       </td><td class='td11' id='TBL-2-2-2' style='text-align:center; white-space:nowrap;'>      13          </td><td class='td11' id='TBL-2-2-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 220 --><p class='noindent'>         </p></td><td class='td11' id='TBL-2-2-4' style='text-align:center; white-space:nowrap;'>                             </td></tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-3-'><td class='td11' id='TBL-2-3-1' style='text-align:center; white-space:nowrap;'> 7:00 - 9:00 </td><td class='td11' id='TBL-2-3-2' style='text-align:center; white-space:nowrap;'> 18 </td><td class='td11' id='TBL-2-3-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 222 --><p class='noindent'> </p> </td><td class='td11' id='TBL-2-3-4' style='text-align:center; white-space:nowrap;'></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-4-'><td class='td11' id='TBL-2-4-1' style='text-align:center; white-space:nowrap;'>    9:00 - 11:00      </td><td class='td11' id='TBL-2-4-2' style='text-align:center; white-space:nowrap;'>      15          </td><td class='td11' id='TBL-2-4-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 224 --><p class='noindent'>         </p></td><td class='td11' id='TBL-2-4-4' style='text-align:center; white-space:nowrap;'>                             </td></tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-5-'><td class='td11' id='TBL-2-5-1' style='text-align:center; white-space:nowrap;'> 11:00 - 13:00 </td><td class='td11' id='TBL-2-5-2' style='text-align:center; white-space:nowrap;'> 15 </td><td class='td11' id='TBL-2-5-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 226 --><p class='noindent'> </p> </td><td class='td11' id='TBL-2-5-4' style='text-align:center; white-space:nowrap;'></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-6-'><td class='td11' id='TBL-2-6-1' style='text-align:center; white-space:nowrap;'>    13:00 - 15:00      </td><td class='td11' id='TBL-2-6-2' style='text-align:center; white-space:nowrap;'>      16          </td><td class='td11' id='TBL-2-6-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 228 --><p class='noindent'>         </p></td><td class='td11' id='TBL-2-6-4' style='text-align:center; white-space:nowrap;'>                             </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-7-'><td class='td11' id='TBL-2-7-1' style='text-align:center; white-space:nowrap;'>    15:00 - 17:00      </td><td class='td11' id='TBL-2-7-2' style='text-align:center; white-space:nowrap;'>      16          </td><td class='td11' id='TBL-2-7-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 230 --><p class='noindent'>         </p></td><td class='td11' id='TBL-2-7-4' style='text-align:center; white-space:nowrap;'>                             </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-8-'><td class='td11' id='TBL-2-8-1' style='text-align:center; white-space:nowrap;'>    17:00 - 19:00      </td><td class='td11' id='TBL-2-8-2' style='text-align:center; white-space:nowrap;'>      23          </td><td class='td11' id='TBL-2-8-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 232 --><p class='noindent'>         </p></td><td class='td11' id='TBL-2-8-4' style='text-align:center; white-space:nowrap;'>                             </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-9-'><td class='td11' id='TBL-2-9-1' style='text-align:center; white-space:nowrap;'>    19:00 - 21:00      </td><td class='td11' id='TBL-2-9-2' style='text-align:center; white-space:nowrap;'>      14          </td><td class='td11' id='TBL-2-9-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 234 --><p class='noindent'>         </p></td><td class='td11' id='TBL-2-9-4' style='text-align:center; white-space:nowrap;'>                             </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-10-'><td class='td11' id='TBL-2-10-1' style='text-align:center; white-space:nowrap;'>    21:00 - 23:00      </td><td class='td11' id='TBL-2-10-2' style='text-align:center; white-space:nowrap;'>      13          </td><td class='td11' id='TBL-2-10-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 236 --><p class='noindent'>         </p></td><td class='td11' id='TBL-2-10-4' style='text-align:center; white-space:nowrap;'>                             </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr></table></div>
+                                                                                        
+                                                                                        
+</figure>
+</div>
+     <dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor27'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Tomando como referência a ilustração anterior e utilizando a escala de cores a seguir, complete a
+     terceira coluna da tabela com a cor que a ponte deveria estar colorida em cada período do dia
+     destacado. Descreva os critérios que você utilizou na escolha de cada uma das cores e compare
+     com os critérios dos seus colegas.
+     <div class='center'>
+<!-- l. 243 --><p class='noindent'>
+</p><!-- l. 244 --><p class='noindent'> <img alt='PIC' height='36' src='../figures/funcoes/TikZ/funcoesaluno-figure4-.png' width='36' /></p></div>
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor28'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Você precisou associar uma mesma cor para para períodos diferentes do dia. Por
+     que?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor29'><strong>c</strong></span>) </dt><dd class='enumerate-enumitem'>Sabendo que a ponte Rio-Niterói tem aproximadamente
+     <!-- l. 248 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>13</mn></math>
+     km de extensão complete a quarta coluna da tabela com a velocidade média registrada em cada
+     um dos períodos do dia.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor30'><strong>d</strong></span>) </dt><dd class='enumerate-enumitem'>É possível que uma mesma velocidade média esteja associada a dois tempos de travessia
+     diferentes? Por quê?</dd></dl>
+<!-- l. 254 --><p class='noindent'>Na atividade anterior, observam-se diferentes relações entre os dados. Por exemplo, para cada tempo
+de travessia é possível associar uma única cor e uma única velocidade média. Da mesma
+maneira, a cada velocidade média está associada uma única cor e um único tempo de travessia.
+No entanto, a uma mesma cor é possível associar tempos diferentes e velocidades médias
+diferentes.
+</p>
+<h4 class='subsectionHead' id='atividade-e-funcao'><a id='x5-110001'></a>Atividade 5:  é função?</h4>
+<!-- l. 259 --><p class='noindent'>No contexto da atividade anterior são observados diferentes conjuntos de dados: O conjunto dos tempos de travessia da ponte,
+<!-- l. 259 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>A</mi> <mo class='MathClass-rel'>=</mo> <mo class='MathClass-open'>{</mo><mn>13</mn><mo class='MathClass-punc'>,</mo><mn>14</mn><mo class='MathClass-punc'>,</mo><mn>15</mn><mo class='MathClass-punc'>,</mo><mn>16</mn><mo class='MathClass-punc'>,</mo><mn>18</mn><mo class='MathClass-punc'>,</mo><mn>23</mn><mo class='MathClass-close'>}</mo></math>; O conjunto das cores que
+compoõem a escala, <!-- l. 259 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>B</mi> <mo class='MathClass-rel'>=</mo> <mo class='MathClass-open'>{</mo></math>Verde,
+Laranja, Vermelho, Vinho<!-- l. 259 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-close'>}</mo></math>;
+e o conjunto de velocidades obtidas,‘C‘. Considere as diferentes relações de dependências estabelecidas
+entre esses conjuntos. Quais são funções?
+</p>
+<div class='table'>
+                                                                                        
+                                                                                        
+<!-- l. 261 --><p class='noindent'></p><figure class='float'>
+                                                                                        
+                                                                                        
+<div class='tabular'> <table class='tabular' id='TBL-3' rules='groups'><colgroup id='TBL-3-1g'><col id='TBL-3-1' /></colgroup><colgroup id='TBL-3-2g'><col id='TBL-3-2' /></colgroup><colgroup id='TBL-3-3g'><col id='TBL-3-3' /></colgroup><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-3-1-'><td class='td11' id='TBL-3-1-1' style='text-align:center; white-space:nowrap;'>  <span id='textcolor31'><strong>Relação</strong></span>  </td><td class='td11' id='TBL-3-1-2' style='text-align:center; white-space:nowrap;'> <span id='textcolor32'><strong>É função?</strong></span> </td><td class='td11' id='TBL-3-1-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 265 --><p class='noindent'><span id='textcolor33'><strong>Se não, por que?</strong></span>                    </p></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-3-2-'><td class='td11' id='TBL-3-2-1' style='text-align:center; white-space:nowrap;'> De A em B  </td><td class='td11' id='TBL-3-2-2' style='text-align:center; white-space:nowrap;'>            </td><td class='td11' id='TBL-3-2-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 269 --><p class='noindent'>                               </p></td></tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-3-3-'><td class='td11' id='TBL-3-3-1' style='text-align:center; white-space:nowrap;'> De B em A </td><td class='td11' id='TBL-3-3-2' style='text-align:center; white-space:nowrap;'> </td><td class='td11' id='TBL-3-3-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 272 --><p class='noindent'></p></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-3-4-'><td class='td11' id='TBL-3-4-1' style='text-align:center; white-space:nowrap;'> De A em C  </td><td class='td11' id='TBL-3-4-2' style='text-align:center; white-space:nowrap;'>            </td><td class='td11' id='TBL-3-4-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 275 --><p class='noindent'>                               </p></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-3-5-'><td class='td11' id='TBL-3-5-1' style='text-align:center; white-space:nowrap;'> De C em A  </td><td class='td11' id='TBL-3-5-2' style='text-align:center; white-space:nowrap;'>            </td><td class='td11' id='TBL-3-5-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 278 --><p class='noindent'>                               </p></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-3-6-'><td class='td11' id='TBL-3-6-1' style='text-align:center; white-space:nowrap;'> De B em C  </td><td class='td11' id='TBL-3-6-2' style='text-align:center; white-space:nowrap;'>            </td><td class='td11' id='TBL-3-6-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 281 --><p class='noindent'>                               </p></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-3-7-'><td class='td11' id='TBL-3-7-1' style='text-align:center; white-space:nowrap;'> De C em B  </td><td class='td11' id='TBL-3-7-2' style='text-align:center; white-space:nowrap;'>            </td><td class='td11' id='TBL-3-7-3' style='white-space:nowrap; text-align:left; vertical-align:middle;'> <!-- l. 284 --><p class='noindent'>                               </p></td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr></table></div>
+                                                                                        
+                                                                                        
+</figure>
+</div>
+<!-- l. 289 --><p class='noindent'>Toda relação de um conjunto <!-- l. 289 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>A</mi></math>
+em um conjunto <!-- l. 289 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>B</mi></math>
+pode ser identificada por um conjunto de pares ordenados. Nesse caso, cada associação entre elementos do conjunto
+<!-- l. 289 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>A</mi></math> e elementos
+do conjunto <!-- l. 289 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>B</mi></math>
+fica representada por um par ordenado tal que o elemnto do conjunto
+<!-- l. 289 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>A</mi></math>
+ocupa a primeira posição do par e o correspondente elemento do conjunto
+<!-- l. 289 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>B</mi></math> a
+segunda posição.
+</p><!-- l. 291 --><p class='noindent'>Por exemplo, se consideramos a relação dos números reais em si mesmo que, a cada número real, associa o seu quadrado,
+os pares ordenados <!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>1</mn><mo class='MathClass-punc'>,</mo><mn>1</mn><mo class='MathClass-close'>)</mo><mo class='MathClass-punc'>,</mo><mo class='MathClass-open'>(</mo><mn>2</mn><mo class='MathClass-punc'>,</mo><mn>4</mn><mo class='MathClass-close'>)</mo><mo class='MathClass-punc'>,</mo><mo class='MathClass-open'>(</mo><msqrt><mrow><mn>3</mn></mrow></msqrt><mo class='MathClass-punc'>,</mo><mn>3</mn><mo class='MathClass-close'>)</mo><mo class='MathClass-punc'>,</mo><mo class='MathClass-open'>(</mo><mo class='MathClass-bin'>−</mo><mi>π</mi><mo class='MathClass-punc'>,</mo><msup><mrow><mi>π</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class='MathClass-close'>)</mo></math>
+indicam elementos que estão relacinados. Já os pares ordenados
+<!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>9</mn><mo class='MathClass-punc'>,</mo><mn>5</mn><mo class='MathClass-close'>)</mo></math> e
+<!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>4</mn><mo class='MathClass-punc'>,</mo><mn>2</mn><mo class='MathClass-close'>)</mo></math>,
+<!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><msqrt><mrow><mn>2</mn></mrow></msqrt><mo class='MathClass-punc'>,</mo><mo class='MathClass-bin'>−</mo><mn>2</mn><mo class='MathClass-close'>)</mo></math>
+formados por números reais, não indicam números associados pela mesma relação, uma vez que
+<!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>5</mn></math> não é
+quadrado de <!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>9</mn></math>,
+<!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>2</mn></math> não é
+quadrado de <!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>4</mn></math>
+e <!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'> <mo class='MathClass-bin'>−</mo> <mn>2</mn></math> não é o
+quadrado de <!-- l. 291 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msqrt><mrow><mn>2</mn></mrow></msqrt></math>.
+</p><!-- l. 293 --><p class='noindent'>Como funções são um tipo especial de relação, a mesma ideia se estende
+para representação das funções. Assim, os pares ordenados de uma função
+<!-- l. 293 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>f</mi> <mo class='MathClass-punc'>:</mo> <mi>A</mi> <mo class='MathClass-rel'>→</mo> <mi>B</mi></math> serão da
+forma <!-- l. 293 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-punc'>,</mo><mi>y</mi><mo class='MathClass-close'>)</mo></math>
+em que <!-- l. 293 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>x</mi> <mo class='MathClass-rel'>∈</mo> <mi>A</mi></math>
+e <!-- l. 293 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>y</mi> <mo class='MathClass-rel'>=</mo> <mi>f</mi><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>∈</mo> <mi>B</mi></math>.
+</p>
+<h4 class='subsectionHead' id='atividade-nao-e-funcao'><a id='x5-120001'></a>Atividade 6:  não é função!</h4>
+<!-- l. 299 --><p class='noindent'>Considere a relação formada por todos <!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mi>a</mi><mo class='MathClass-punc'>,</mo><mi>b</mi><mo class='MathClass-close'>)</mo></math>
+de números naturais tais que <!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>b</mi></math>
+é múltiplo de <!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>a</mi></math>.
+Assim, <!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>2</mn><mo class='MathClass-punc'>,</mo><mn>4</mn><mo class='MathClass-close'>)</mo></math>,
+<!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>2</mn><mo class='MathClass-punc'>,</mo><mn>6</mn><mo class='MathClass-close'>)</mo></math>,
+<!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>3</mn><mo class='MathClass-punc'>,</mo><mn>6</mn><mo class='MathClass-close'>)</mo></math> e
+<!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>9</mn><mo class='MathClass-punc'>,</mo><mn>9</mn><mo class='MathClass-close'>)</mo></math> são pares ordenado
+dessa relação, pois <!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>4</mn></math>
+é múltiplo de <!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>2</mn></math>,
+<!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>6</mn></math> é múltiplo
+de <!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>2</mn></math> e de
+<!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>3</mn></math> e
+<!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>9</mn></math> é múltiplo
+                                                                                        
+                                                                                        
+de <!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>9</mn></math> . No
+entanto, <!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>4</mn><mo class='MathClass-punc'>,</mo><mn>2</mn><mo class='MathClass-close'>)</mo></math> e
+<!-- l. 299 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>7</mn><mo class='MathClass-punc'>,</mo><mn>17</mn><mo class='MathClass-close'>)</mo></math> são
+pares ordenados de números naturais, mas não são pares dessa relação.
+     </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor34'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Exiba outros quatro pares ordenados dessa relação.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor35'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Explique porque essa relação não é uma função.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor36'><strong>c</strong></span>) </dt><dd class='enumerate-enumitem'><!-- l. 305 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mn>5</mn><mo class='MathClass-punc'>,</mo><mn>405</mn><mo class='MathClass-close'>)</mo></math>
+     é um par ordenado dessa relação. Quantos outros pares ordenados dessa relação têm 5
+     como primeiro elemento?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor37'><strong>d</strong></span>) </dt><dd class='enumerate-enumitem'>Dê exemplo de uma ou mais relações que não sejam funções. Não precisam ser exemplos
+     numéricos.
+     </dd></dl>
+<!-- l. 312 --><p class='noindent'>
+</p>
+<h4 class='subsectionHead' id='atividade-a-familia'><a id='x5-130001'></a>Atividade 7:  a família</h4>
+<!-- l. 315 --><p class='noindent'>Cada ponto do gráfico a seguir representa uma das seguintes pessoas.
+</p>
+<figure class='figure'> 
+
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+<div class='center'>
+<!-- l. 318 --><p class='noindent'>
+</p><!-- l. 321 --><p class='noindent'><img alt='PIC' height='364' src='../figures/funcoes//familia.png' width='501' /> </p></div>
+                                                                                        
+                                                                                        
+</figure>
+     <dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor38'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Associe cada ponto do gráfico à pessoa correspondente.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor39'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>A relação expressa pelos pares ordenados (idade, altura) apresentados no gráfico é função?
+     Por que?</dd></dl>
+<div class='center'>
+<!-- l. 333 --><p class='noindent'>
+</p><!-- l. 334 --><p class='noindent'> <img alt='PIC' height='36' src='../figures/funcoes/TikZ/funcoesaluno-figure5-.png' width='36' /></p></div>
+<!-- l. 340 --><p class='noindent'><span class='ec-lmbx-10x-x-109'>*</span>Adaptado de The Language of Functions and Graphs, Shell Centre for Mathematical Education
+Publications Ltd., 1985.
+</p><!-- l. 343 --><p class='noindent'>Quando nos deparamos com uma função é fundamental identificarmos os conjuntos
+domínio e contradomínio, e a maneira como os elementos desses conjuntos estão
+relacionados. Tal maneira pode ser muito variada, no entanto, principalmente quando os
+conjuntos envolvidos são numéricos, é comum considerar como contradomínio o conjunto
+<!-- l. 343 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>ℝ</mi></math>. Por
+isso, daqui por diante, quando estivermos considerando funções numéricas, o contradomínio será igual
+a <!-- l. 343 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>ℝ</mi></math>.
+</p><!-- l. 345 --><p class='noindent'>Em muitos casos, a forma de associação entre os elementos é dada por uma expressão analítica.
+Vejamos alguns exemplos.
+</p><!-- l. 347 --><p class='noindent'><!-- l. 347 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mi>I</mi><mo class='MathClass-close'>)</mo></math> Para calcular o perímetro
+de um quadrado de lado <!-- l. 347 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>ℓ</mi></math>
+usa-se a expressão <!-- l. 347 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>P</mi> <mo class='MathClass-rel'>=</mo> <mn>4</mn><mi>ℓ</mi></math>.
+Percebe-se então que o perímetro está relacionado com o lado. A partir daí pode-se definir a função
+perímetro: </p><table class='equation-star'><tr><td>
+<!-- l. 348 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>P</mi> <mo class='MathClass-punc'>:</mo><mo class='MathClass-close'>]</mo><mn>0</mn><mo class='MathClass-punc'>,</mo><mo class='MathClass-bin'>+</mo><mi>∞</mi><mo class='MathClass-open'>[</mo><mo class='MathClass-rel'>→</mo> <mi>ℝ</mi><mspace class='quad' width='1em'></mspace><mo class='MathClass-punc'>;</mo><mspace class='quad' width='1em'></mspace><mi>P</mi><mo class='MathClass-open'>(</mo><mi>ℓ</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>4</mn><mi>ℓ</mi><mo class='MathClass-punc'>.</mo></mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+                                                                                        
+                                                                                        
+<!-- l. 351 --><p class='noindent'>Da mesma forma a área de um quadrado de lado
+<!-- l. 351 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>ℓ</mi></math> é dada
+por <!-- l. 351 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>A</mi> <mo class='MathClass-rel'>=</mo> <msup><mrow><mi>ℓ</mi></mrow><mrow><mn>2</mn></mrow></msup></math>,
+que permite definir a função: </p><table class='equation-star'><tr><td>
+<!-- l. 352 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>A</mi> <mo class='MathClass-punc'>:</mo><mo class='MathClass-close'>]</mo><mn>0</mn><mo class='MathClass-punc'>,</mo><mo class='MathClass-bin'>+</mo><mi>∞</mi><mo class='MathClass-open'>[</mo><mo class='MathClass-rel'>→</mo> <mi>ℝ</mi><mspace class='quad' width='1em'></mspace><mo class='MathClass-punc'>;</mo><mspace class='quad' width='1em'></mspace><mi>A</mi><mo class='MathClass-open'>(</mo><mi>ℓ</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <msup><mrow><mi>ℓ</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class='MathClass-punc'>.</mo></mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<!-- l. 355 --><p class='noindent'>A variável <!-- l. 355 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>ℓ</mi></math> pode assumir qualquer
+valor dentro do intervalo <!-- l. 355 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-close'>]</mo><mn>0</mn><mo class='MathClass-punc'>,</mo><mo class='MathClass-bin'>+</mo><mi>∞</mi><mo class='MathClass-open'>[</mo></math>
+que é o domínio da função <!-- l. 355 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>P</mi></math>
+. Se quisermos saber o valor do perímetro do quadrado de lado
+<!-- l. 355 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>5</mn></math>cm, basta
+substituirmos <!-- l. 355 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>ℓ</mi></math> por
+5 na expressão de <!-- l. 355 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>P</mi><mo class='MathClass-open'>(</mo><mi>ℓ</mi><mo class='MathClass-close'>)</mo></math>.
+Ficamos assim com </p><table class='equation-star'><tr><td>
+<!-- l. 356 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>P</mi><mo class='MathClass-open'>(</mo><mn>5</mn><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>4</mn> <mo class='MathClass-bin'>×</mo> <mn>5</mn> <mo class='MathClass-rel'>=</mo> <mn>20</mn><mstyle mathvariant='normal'><mi>cm</mi></mstyle><mo class='MathClass-punc'>.</mo></mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<!-- l. 359 --><p class='noindent'>A área do quadrado de lado <!-- l. 359 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>9</mn></math>cm
+é </p><table class='equation-star'><tr><td>
+                                                                                        
+                                                                                        
+<!-- l. 360 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>A</mi><mo class='MathClass-open'>(</mo><mn>9</mn><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <msup><mrow><mn>9</mn></mrow><mrow><mn>2</mn></mrow></msup> <mo class='MathClass-rel'>=</mo> <mn>81</mn><msup><mrow><mstyle class='text'><mtext>cm</mtext></mstyle></mrow><mrow><mn>2</mn></mrow></msup><mo class='MathClass-punc'>.</mo></mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<!-- l. 363 --><p class='noindent'><!-- l. 363 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mi mathvariant='italic'>II</mi><mo class='MathClass-close'>)</mo></math>
+A fórmula de Lorentz já foi muito utilizada pelos médicos para o cálculo do “peso ideal”
+<!-- l. 363 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>p</mi></math>, em kg, em
+função da altura <!-- l. 363 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>h</mi></math>,
+em centímetros, do paciente. </p><table class='equation-star'><tr><td>
+<!-- l. 364 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>p</mi> <mo class='MathClass-punc'>:</mo><mo class='MathClass-close'>]</mo><mn>0</mn><mo class='MathClass-punc'>,</mo><mn>300</mn><mo class='MathClass-open'>[</mo><mo class='MathClass-rel'>→</mo> <mi>ℝ</mi><mspace class='quad' width='1em'></mspace><mo class='MathClass-punc'>;</mo><mspace class='quad' width='1em'></mspace><mi>p</mi><mo class='MathClass-open'>(</mo><mi>h</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mi>h</mi> <mo class='MathClass-bin'>−</mo> <mn>100</mn> <mo class='MathClass-bin'>−</mo><mfrac><mrow> <mi>h</mi> <mo class='MathClass-bin'>−</mo> <mn>150</mn></mrow> 
+    <mrow><mi>k</mi></mrow></mfrac>   </mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<!-- l. 367 --><p class='noindent'>em que <!-- l. 367 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>k</mi></math>
+vale 4 para homens e vale 2 para mulheres.
+</p><!-- l. 369 --><p class='noindent'>Que tal usar a fórmula acima para calcular o seu peso ideal?
+</p><!-- l. 371 --><p class='noindent'><!-- l. 371 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mo class='MathClass-open'>(</mo><mi mathvariant='italic'>III</mi><mo class='MathClass-close'>)</mo></math>
+Imagine que um objeto é solto, a partir do repouso, de uma altura de
+<!-- l. 371 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>10</mn></math>
+metros e percorre uma trajetória vertical em queda livre. Da Física, sabemos que sua altura
+<!-- l. 371 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>h</mi></math> em metros medida a partir
+do solo, em função do tempo <!-- l. 371 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>t</mi></math>
+em segundos, quando desprezamos a resistência do ar, é dada por </p><table class='equation-star'><tr><td>
+                                                                                        
+                                                                                        
+<!-- l. 372 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>h</mi> <mo class='MathClass-punc'>:</mo> <mo class='MathClass-open'>[</mo><mn>0</mn><mo class='MathClass-punc'>,</mo><mo class='MathClass-bin'>+</mo><mi>∞</mi><mo class='MathClass-open'>[</mo><mo class='MathClass-rel'>→</mo> <mi>ℝ</mi><mspace class='quad' width='1em'></mspace><mo class='MathClass-punc'>;</mo><mspace class='quad' width='1em'></mspace><mi>h</mi><mo class='MathClass-open'>(</mo><mi>t</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>10</mn> <mo class='MathClass-bin'>−</mo><mfrac><mrow> <mi>g</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow> 
+  <mrow><mn>2</mn></mrow></mfrac>  <mo class='MathClass-punc'>,</mo></mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<!-- l. 375 --><p class='noindent'>em que <!-- l. 375 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>g</mi></math> representa a aceleração
+da gravidade em <!-- l. 375 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>m</mi><mo class='MathClass-bin'>∕</mo><msup><mrow><mi>s</mi></mrow><mrow><mn>2</mn></mrow></msup></math>.metros
+por segundo ao quadrado.
+</p><!-- l. 377 --><p class='noindent'>Fazer a variável tempo assumir o valor <!-- l. 377 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>t</mi> <mo class='MathClass-rel'>=</mo> <mn>0</mn></math>
+segundos na expressão de <!-- l. 377 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>h</mi><mo class='MathClass-open'>(</mo><mi>t</mi><mo class='MathClass-close'>)</mo></math>
+significa que estamos medindo a altura no início da contagem do tempo, ou seja a altura inicial do
+corpo. Nesse caso teremos </p><table class='equation-star'><tr><td>
+<!-- l. 378 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>h</mi><mo class='MathClass-open'>(</mo><mn>0</mn><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>10</mn> <mo class='MathClass-bin'>−</mo><mfrac><mrow> <mi>g</mi><mspace class='nbsp' width='0.33em'></mspace><msup><mrow><mn>0</mn></mrow><mrow><mn>2</mn></mrow></msup></mrow> 
+  <mrow><mn>2</mn></mrow></mfrac>   <mo class='MathClass-rel'>=</mo> <mn>10</mn><mo class='MathClass-punc'>.</mo></mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<!-- l. 381 --><p class='noindent'><span class='ec-lmri-10x-x-109'>Se por exemplo, quisermos saber em quanto tempo o corpo chegará ao solo, o que devemos
+</span><span class='ec-lmri-10x-x-109'>fazer? </span>Como a medição é feita a partir do solo, dizer que o objeto chegou ao solo é o mesmo
+que dizer que sua altura é igual a 0. Portanto, precisamos descobrir o valor da variável
+<!-- l. 381 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>t</mi></math>, de maneira que
+<!-- l. 381 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>h</mi><mo class='MathClass-open'>(</mo><mi>t</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>0</mn></math>. A partir da
+expressão de <!-- l. 381 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>h</mi><mo class='MathClass-open'>(</mo><mi>t</mi><mo class='MathClass-close'>)</mo></math> e
+aproximando <!-- l. 381 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>g</mi></math>
+por <!-- l. 381 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>10</mn><mi>m</mi><mo class='MathClass-bin'>∕</mo><msup><mrow><mi>s</mi></mrow><mrow><mn>2</mn></mrow></msup></math>, obtemos
+<!-- l. 381 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>10</mn> <mo class='MathClass-bin'>−</mo> <mn>5</mn><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class='MathClass-rel'>=</mo> <mn>0</mn></math>, donde
+concluímos que <!-- l. 381 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>t</mi> <mo class='MathClass-rel'>=</mo> <msqrt><mrow><mn>2</mn></mrow></msqrt></math>
+aproximadamente.
+</p>
+<h4 class='subsectionHead' id='atividade-praticando-a-notacao'><a id='x5-140001'></a>Atividade 8:  praticando a notação</h4>
+<!-- l. 387 --><p class='noindent'>Considere as funções <!-- l. 387 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>f</mi></math>,
+                                                                                        
+                                                                                        
+<!-- l. 387 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>g</mi></math>,
+<!-- l. 387 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>k</mi></math> e
+<!-- l. 387 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>h</mi></math>, todas de
+domínio <!-- l. 387 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>ℝ</mi></math>,
+tais que: </p><table class='equation-star'><tr><td>
+<!-- l. 388 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>f</mi><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>3</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class='MathClass-bin'>+</mo> <mn>5</mn><mi>x</mi><mspace class='quad' width='1em'></mspace><mo class='MathClass-punc'>;</mo><mspace class='quad' width='1em'></mspace><mi>g</mi><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo>  <mfrac><mrow><mi>x</mi> <mo class='MathClass-bin'>−</mo> <mn>1</mn></mrow> 
+<mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>3</mn></mrow></msup> <mo class='MathClass-bin'>+</mo> <mn>3</mn></mrow></mfrac><mspace class='quad' width='1em'></mspace><mo class='MathClass-punc'>;</mo><mspace class='quad' width='1em'></mspace><mi>k</mi><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <msup><mrow><mo class='MathClass-open'>(</mo><mi>x</mi> <mo class='MathClass-bin'>−</mo> <mn>2</mn><mo class='MathClass-close'>)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class='MathClass-bin'>+</mo> <mn>6</mn><mspace class='quad' width='1em'></mspace><mo class='MathClass-punc'>;</mo><mspace class='quad' width='1em'></mspace><mi>h</mi><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>2</mn><mi>x</mi> <mo class='MathClass-bin'>−</mo> <mn>7</mn></mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<!-- l. 391 --><p class='noindent'>Determine o valor de:
+</p>
+<div class='table'>
+                                                                                        
+                                                                                        
+<!-- l. 394 --><p class='noindent'></p><figure class='float'>
+                                                                                        
+                                                                                        
+<div class='tabular'> <table class='tabular' id='TBL-4' rules='groups'><colgroup id='TBL-4-1g'><col id='TBL-4-1' /></colgroup><colgroup id='TBL-4-2g'><col id='TBL-4-2' /></colgroup><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-1-'><td class='td11' id='TBL-4-1-1' style='text-align:left; white-space:nowrap;'> <span id='textcolor40'><strong>Função</strong></span>                                                                                                                                                                                                                            </td><td class='td11' id='TBL-4-1-2' style='text-align:center; white-space:nowrap;'> <span id='textcolor41'><strong>Valor</strong></span> </td></tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-2-'><td class='td
+11' id='TBL-4-2-1' style='text-align:left; white-space:nowrap;'> <!-- l. 400 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>f</mi><mo class='MathClass-open'>(</mo><mn>3</mn><mo class='MathClass-close'>)</mo></math>                                                                                                                                           </td><td class='td11' id='TBL-4-2-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-3-'><td class='td11' id='TBL-4-3-1' style='text-align:left; white-space:nowrap;'> <!-- l. 402 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>g</mi><mo class='MathClass-open'>(</mo><mo class='MathClass-bin'>−</mo><mn>1</mn><mo class='MathClass-close'>)</mo></math>                                                                                                                                           </td><td class='td11' id='TBL-4-3-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-4-'><td class='td11' id='TBL-4-4-1' style='text-align:left; white-space:nowrap;'> <!-- l. 404 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>k</mi><mo class='MathClass-open'>(</mo><mn>2</mn><mo class='MathClass-close'>)</mo></math>                                                                                                                                           </td><td class='td11' id='TBL-4-4-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-5-'><td class='td11' id='TBL-4-5-1' style='text-align:left; white-space:nowrap;'> <!-- l. 406 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>f</mi><mo class='MathClass-open'>(</mo><mn>1</mn><mo class='MathClass-close'>)</mo> <mo class='MathClass-bin'>+</mo> <mi>g</mi><mo class='MathClass-open'>(</mo><mn>1</mn><mo class='MathClass-close'>)</mo></math>                                                                                                                                           </td><td class='td11' id='TBL-4-5-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-6-'><td class='td11' id='TBL-4-6-1' style='text-align:left; white-space:nowrap;'> <!-- l. 408 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>g</mi><mo class='MathClass-open'>(</mo><mn>2</mn><mo class='MathClass-close'>)</mo> <mo class='MathClass-bin'>−</mo> <mi>k</mi><mo class='MathClass-open'>(</mo><mo class='MathClass-bin'>−</mo><mn>1</mn><mo class='MathClass-close'>)</mo></math>                                                                                                                                           </td><td class='td11' id='TBL-4-6-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-7-'><td class='td11' id='TBL-4-7-1' style='text-align:left; white-space:nowrap;'> <!-- l. 410 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>k</mi><mo class='MathClass-open'>(</mo><mn>0</mn><mo class='MathClass-close'>)</mo><mo class='MathClass-punc'>.</mo><mi>f</mi><mo class='MathClass-open'>(</mo><mo class='MathClass-bin'>−</mo><mn>2</mn><mo class='MathClass-close'>)</mo></math>                                                                                                                                           </td><td class='td11' id='TBL-4-7-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-8-'><td class='td11' id='TBL-4-8-1' style='text-align:left; white-space:nowrap;'> <!-- l. 412 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>f</mi><mo class='MathClass-open'>(</mo><mn>0</mn><mo class='MathClass-close'>)</mo> <mo class='MathClass-bin'>+</mo> <mi>h</mi><mo class='MathClass-open'>(</mo><mn>0</mn><mo class='MathClass-close'>)</mo> <mo class='MathClass-bin'>−</mo> <mn>1</mn></math>                                                                                                                                           </td><td class='td11' id='TBL-4-8-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-9-'><td class='td11' id='TBL-4-9-1' style='text-align:left; white-space:nowrap;'> <!-- l. 414 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>f</mi><mo class='MathClass-open'>(</mo><mo class='MathClass-bin'>−</mo><mn>2</mn><mo class='MathClass-close'>)</mo><mo class='MathClass-punc'>.</mo><mi>g</mi><mo class='MathClass-open'>(</mo><mo class='MathClass-bin'>−</mo><mn>2</mn><mo class='MathClass-close'>)</mo> <mo class='MathClass-bin'>+</mo> <mi>k</mi><mo class='MathClass-open'>(</mo><mn>2</mn><mo class='MathClass-close'>)</mo></math>                                                                                                                                           </td><td class='td11' id='TBL-4-9-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-10-'><td class='td11' id='TBL-4-10-1' style='text-align:left; white-space:nowrap;'> <!-- l. 416 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mfrac><mrow><mi>f</mi><mo class='MathClass-open'>(</mo><mo class='MathClass-bin'>−</mo><mn>3</mn><mo class='MathClass-close'>)</mo></mrow>
+ <mrow><mi>k</mi><mo class='MathClass-open'>(</mo><mn>0</mn><mo class='MathClass-close'>)</mo></mrow></mfrac>  </math>                                                                                                                                           </td><td class='td11' id='TBL-4-10-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-11-'><td class='td11' id='TBL-4-11-1' style='text-align:left; white-space:nowrap;'> <!-- l. 418 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>x</mi></math> quando <!-- l. 418 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>h</mi><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>0</mn></math>  </td><td class='td11' id='TBL-4-11-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-4-12-'><td class='td11' id='TBL-4-12-1' style='text-align:left; white-space:nowrap;'> <!-- l. 420 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>x</mi></math> quando <!-- l. 420 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>h</mi><mo class='MathClass-open'>(</mo><mi>x</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>3</mn></math>  </td><td class='td11' id='TBL-4-12-2' style='text-align:center; white-space:nowrap;'>       </td>
+</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr></table>
+</div>
+                                                                                        
+                                                                                        
+</figure>
+</div>
+<h4 class='subsectionHead' id='atividade-enchendo-o-cone'><a id='x5-150001'></a>Atividade 9:  enchendo o cone</h4>
+<!-- l. 430 --><p class='noindent'>O reservatório representado a seguir tem a forma de um cone cuja altura é
+<!-- l. 430 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>6</mn><mi>m</mi></math> e a base é um
+círculo de raio <!-- l. 430 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>3</mn><mi>m</mi></math>.
+O volume <!-- l. 430 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>V</mi> </math>
+em litros de água no reservatório pode ser estimado a partir altura do nível da água
+<!-- l. 430 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>h</mi></math> (em
+metros) de acordo com a seguinte expressão: </p><table class='equation-star'><tr><td>
+<!-- l. 431 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>V</mi> <mo class='MathClass-open'>(</mo><mi>h</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>250</mn><msup><mrow><mi>h</mi></mrow><mrow><mn>3</mn></mrow></msup></mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<div class='center'>
+<!-- l. 434 --><p class='noindent'>
+</p><!-- l. 435 --><p class='noindent'> <img alt='PIC' height='36' src='../figures/funcoes/TikZ/funcoesaluno-figure6-.png' width='36' /></p></div>
+<!-- l. 438 --><p class='noindent'>
+     </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor42'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Determine <!-- l. 438 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>V</mi> <mo class='MathClass-open'>(</mo><mn>2</mn><mo class='MathClass-close'>)</mo><mo class='MathClass-punc'>,</mo><mi>V</mi> <mo class='MathClass-open'>(</mo><mn>3</mn><mo class='MathClass-close'>)</mo></math>
+     e <!-- l. 438 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>V</mi> <mo class='MathClass-open'>(</mo><mn>4</mn><mo class='MathClass-close'>)</mo></math>
+     e explique os seus significados no contexto.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor43'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Quais os volumes de água, mínimo e máximo, que o reservatório comporta?
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor44'><strong>c</strong></span>) </dt><dd class='enumerate-enumitem'>A que altura do nível da água corresponde o volume igual a <!-- l. 442 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>3456</mn></math>
+     litros?
+     </dd></dl>
+                                                                                        
+                                                                                        
+<!-- l. 447 --><p class='noindent'>
+</p>
+<h4 class='subsectionHead' id='atividade-uniformemente-variado'><a id='x5-160001'></a>Atividade 10:  uniformemente variado</h4>
+<!-- l. 450 --><p class='noindent'>A posição <!-- l. 450 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>S</mi></math>
+(em quilômetros), medida a partir de um referencial, de um veículo que se desloca segundo
+um movimento retilíneo uniformemente variado (MRUV) é dada em função do tempo
+<!-- l. 450 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>t</mi></math>
+(medido em horas) pela seguinte expressão: </p><table class='equation-star'><tr><td>
+<!-- l. 451 --><math class='equation' display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtable class='gather-star'>
+<mtr> 
+<mtd><mtable class='split' columnalign='right left'>
+<mtr class='split-mtr'><mtd class='split-mtd'> <mi>S</mi><mo class='MathClass-open'>(</mo><mi>t</mi><mo class='MathClass-close'>)</mo> <mo class='MathClass-rel'>=</mo> <mn>2</mn><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class='MathClass-bin'>−</mo> <mn>4</mn><mi>t</mi> <mo class='MathClass-bin'>+</mo> <mn>2</mn></mtd>
+</mtr></mtable>                                                                                        </mtd> 
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<!-- l. 454 --><p class='noindent'>
+     </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+  <span id='textcolor45'><strong>a</strong></span>) </dt><dd class='enumerate-enumitem'>Determine a posição inicial do veículo. Explique o significado desse resultado a partir do
+     contexto.
+     </dd><dt class='enumerate-enumitem'>
+  <span id='textcolor46'><strong>b</strong></span>) </dt><dd class='enumerate-enumitem'>Após quanto tempo o veículo estará a <!-- l. 456 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mn>18</mn></math>km
+     da origem?
+     </dd></dl>
+                                                                                        
+                                                                                        
+<!-- l. 462 --><div class='crosslinks'><p class='noindent'>[<a href='funcoesli4.html'>next</a>] [<a href='funcoesli2.html'>prev</a>] [<a href='funcoesli2.html#tailfuncoesli2.html'>prev-tail</a>] [<a href='funcoesli3.html'>front</a>] [<a href='funcoesch1.html#funcoesli3.html'>up</a>] </p></div>
+<!-- l. 462 --><p class='noindent'><a id='tailfuncoesli3.html'></a> </p> 
+</body> 
+</html>

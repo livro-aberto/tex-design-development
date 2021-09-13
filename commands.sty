@@ -1,0 +1,251 @@
+
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\cotg}{cotg}
+\DeclareMathOperator{\co}{co}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\senh}{senh}
+\DeclareMathOperator{\tgh}{tgh}
+\DeclareMathOperator{\mdc}{mdc}
+\DeclareMathOperator{\mmc}{mmc}
+\DeclareMathOperator{\med}{med}
+\DeclareMathOperator{\rad}{rad}
+% \DeclareMathOperator{\si}{Si}
+\DeclareMathOperator{\dirac}{\delta}
+\DeclareMathOperator{\mmu}{\mu}
+\renewcommand{\Im}{\operatorname{Im}}
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\CD}{CD}
+\DeclareMathOperator{\area}{\text{Area}\,}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+%Commands
+
+\newcommand{\tmat}[1]{\cellcolor{\currentcolor}\textcolor{white}{\bm{#1}}}
+\newcommand{\tcolor}[1]{\cellcolor{\currentcolor}\textcolor{white}{\textbf{#1}}}
+\newcommand{\tmcol}[3]{\multicolumn{#1}{#2}{\cellcolor{\currentcolor!80}\textcolor{white}{\textbf{#3}}}}
+\newcommand{\titem}[1]{\textcolor{\currentcolor}{\textbf{#1}})}
+
+\newcommand{\tikzcolor}{\currentcolor}
+\newcommand{\sub}{\textsubscript}
+\newcommand{\super}{\textsuperscript}
+
+\newcommand{\newparallel}{\mathrel{\mkern-5mu\clipbox{0 0.75ex 0 0}{${\sslash}$}\!}}
+
+\def\fle{\longrightarrow}
+\def\entao{\Longrightarrow}
+\def\ssi{\Longleftrightarrow}
+\def\ri{\rightarrow} 
+\def\bbullet{\noindent{\cor $\bullet$ }}
+\newcommand{\no}{\noindent}
+\newcommand{\fra}[2]{\text{\small$\dfrac{#1}{#2}$}}
+\newcommand{\ve}[1]{{\overrightarrow{#1\,\,}}}
+\newcommand{\ol}[1]{{\overline{#1}}}
+\newcommand{\interno}[2]{{\langle{#1},{#2}\rangle}}
+
+
+\newcolumntype{d}[1]{>{\vspace{2.5pt}}m{#1}<{\vspace{2.5pt}}}
+\newcolumntype{e}[1]{>{\vspace{2.5pt}\centering\arraybackslash}m{#1}<{\vspace{2.5pt}}}
+\newcolumntype{f}{>$c<$}
+\newcolumntype{g}[1]{>$e{#1}<$}
+
+%
+
+
+\renewcommand{\fref}[1]{\hyperref[#1]{figura \ref{#1}}}
+\newcommand{\Fref}[1]{\hyperref[#1]{Figura \ref{#1}}}
+
+\renewcommand{\tref}[1]{\hyperref[#1]{tabela \ref{#1}}}
+\newcommand{\Tref}[1]{\hyperref[#1]{Tabela \ref{#1}}}
+
+
+\let\Chaptermark\chaptermark
+\let\Sectionmark\sectionmark
+\let\Subtionmark\subtionmark
+\let\Subsubtionmark\subsubtionmark
+\def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
+\def\sectionmark#1{\def\Sectionname{#1}\Sectionmark{#1}}
+\def\subtionmark#1{\def\Subtionname{#1}\Subtionmark{#1}}
+\def\subsubtionmark#1{\def\Subsubtionname{#1}\Subsubtionmark{#1}}
+
+% Comandos para definir a página de créditos
+
+\newcommand{\autorum}[1]{\def\@autorum{#1}}
+\newcommand{\autordois}[1]{\def\@autordois{#1}}
+\newcommand{\autortres}[1]{\def\@autortres{#1}}
+\newcommand{\autorquatro}[1]{\def\@autorquatro{#1}}
+\newcommand{\autorcinco}[1]{\def\@autorcinco{#1}}
+
+\newcommand{\revisorum}[1]{\def\@revisorum{#1}}
+\newcommand{\revisordois}[1]{\def\@revisordois{#1}}
+\newcommand{\revisortres}[1]{\def\@revisortres{#1}}
+\newcommand{\revisorquatro}[1]{\def\@revisorquatro{#1}}
+\newcommand{\revisorcinco}[1]{\def\@revisorcinco{#1}}
+
+\newcommand{\colaboracao}[1]{\def\@colaboracao{#1}}
+
+\newcommand{\versao}[1]{\def\@versao{#1}}
+
+\newcommand{\graficos}[1]{\def\@graficos{#1}}
+\newcommand{\ilustracao}[1]{\def\@ilustracao{#1}}
+\newcommand{\autordacapa}[3]{\def\@autorcapa{\makecell*[t{{p{\linewidth}}}]{Foto de #1 no #2 \\ \url{#3}}}}
+\newcommand{\versaodigital}[1]{\def\@versaodigital{\url{#1}}}
+\newcommand{\ccbysa}{\def\@ccbysa{1}}
+
+\newcommand{\creditos}{
+\cleardoublepage
+\begin{titlingpage}
+\renewcommand{\arraystretch}{1.75}
+\begin{center}
+Projeto: LIVRO ABERTO DE MATEMÁTICA
+
+\noindent \begin{tabular}{lcccr}
+\includegraphics[scale=.15]{impa}& \quad\quad& \includegraphics[width=3cm]{logo} & \quad\quad& \includegraphics[scale=.24]{obmep} 
+\end{tabular}
+\end{center}
+
+\vspace*{.3cm}
+
+Cadastre-se como colaborador no site do projeto: \url{umlivroaberto.com}
+
+\vspace{.5em}
+
+\ifdefined\@versaodigital
+% Versão digital do capítulo:
+
+% \@versaodigital
+% \vspace{.5em}
+\else\fi
+
+\begin{tabular}{p{.15\textwidth}p{.7\textwidth}}
+Título: & \Chaptername \\
+
+Ano/ Versão: & \the\year{} / versão \@versao{} de \today\\
+
+Editora & Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA-OS)\\
+
+Realização:& Olimp\'iada Brasileira de Matem\'atica das Escolas P\'ublicas (OBMEP)\\
+
+Produção: & Associação Livro Aberto\\
+
+Coordenação: & Fabio Simas e Augusto Teixeira (\url{livroaberto@impa.br})\\
+
+\ifdefined\@autordois Autores: \else Autor (a):\fi & \makecell[tl]{\@autorum \\
+\ifdefined\@autordois 
+          \@autordois \\ 
+\else\fi
+\ifdefined\@autortres 
+          \@autortres \\ 
+\else\fi
+\ifdefined\@autorquatro
+          \@autorquatro \\
+\else\fi
+\ifdefined\@autorcinco
+          \@autorcinco \\
+\else\fi}
+\\
+\ifdefined \@revisorum
+Revisão: & \makecell[tl]{\@revisorum \\
+\ifdefined\@revisordois 
+          \@revisordois \\
+\else\fi
+\ifdefined\@revisortres 
+          \@revisortres \\
+\else\fi
+\ifdefined\@revisorquatro
+          \@revisorquatro \\
+\else\fi
+\ifdefined\@revisorcinco
+          \@revisorcinco \\
+\else\fi} \\
+\else\fi
+
+\ifdefined \@colaboracao
+Colaboração & \@colaboracao \\
+\else\fi
+
+Design: & Andreza Moreira (Tangentes Design) \\
+
+Diagramação: & Tarso Caldas \\
+
+\ifdefined\@ilustracao
+Ilustrações: & \@ilustracao \\ 
+\else\fi
+
+\ifdefined\@graficos
+Gráficos: & \@graficos \\
+\else\fi
+
+\ifdefined\@autorcapa
+Capa: & \@autorcapa \\
+\else\fi
+
+\end{tabular}
+
+\begin{figure}[b]
+\begin{minipage}[l]{5cm}
+\centering
+
+{\large Licença:}
+
+\vspace{1em}
+
+\ifdefined\@ccbysa
+  \includegraphics[width=3.5cm]{cc-by-sa1}
+\else
+  \includegraphics[width=3.5cm]{cc-by-nc-sa}
+\fi
+
+\end{minipage}\hfill
+\begin{minipage}[c]{5cm}
+\centering
+{\large Desenvolvido por}
+
+\vspace{1em}
+\includegraphics[width=2.5cm]{logo-associacao.jpg}
+\end{minipage}
+\begin{minipage}[r]{5cm}
+\centering
+
+{\large Patrocínio:}
+
+  \vspace{1em}
+  \includegraphics[width=3.5cm]{itau}
+\end{minipage}
+\end{figure}
+\end{titlingpage}
+
+
+\let\@autorum\relax
+\undef{\@autordois}
+\undef{\@autortres}
+\undef{\@autorquatro}
+\undef{\@autorcinco}
+
+\undef{\@revisorum}
+\undef{\@revisordois}
+\undef{\@revisortres}
+\undef{\@revisorquatro}
+\undef{\@revisorcinco}
+
+\let\@versao\relax
+\undef{\@autorcapa}
+\undef{\@graficos}
+\undef{\@versaodigital}
+\undef{\@ccbysa}
+}
+
+\newcounter{anexo}[chapter]
+
+\newcommand{\anexo}[1]{
+  \clearpage
+  \stepcounter{anexo}
+  \begin{center}
+  \huge{\titem{Anexo \theanexo}}
+  \end{center}
+}

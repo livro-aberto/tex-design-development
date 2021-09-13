@@ -1,0 +1,1395 @@
+\documentclass[extrafontsizes, twoside, 11pt, openright, final]{memoir}
+
+
+\usepackage{../../livroaberto-html}
+
+
+\begin{document}
+
+% \chapterillustration{abertura-funcoes}{abertura-funcoes-professor}
+
+% \chapterwhat{
+% 	Funções e suas diferentes representações (numérica, algébrica e gráfica); domínio, contradomínio e imagem; aplicações em situações envolvendo a análise, interpretação e resolução de problemas em contextos diversos.
+% }
+
+% \chapterbecause{
+% 	Funções são objetos matemáticos que nos permitem compreender como a variação de uma grandeza influencia na variação de outra. Por isso elas são ferramentas essencias para a compreensão, análise e tomada de decisão em diversas situações do nosso dia a dia.
+
+% 	O estudo de funções nos permite, por exemplo, relacionar a área de um polígono com o comprimento de seus lados, a distância percorrida por um objeto com o intervalo de tempo gasto no percurso e o valor da conta de energia elétrica com o consumo de energia.
+
+% 	De um modo mais geral, funções são úteis para o estudo do crescimento populacional, disseminação de doenças, lançamento de foguetes e satélites, interpretação de exames médicos, etc.
+% }
+
+\chapter{Introdução às Funções\label{chap-funcoes}}
+
+
+
+\explore{Conceito de Função}
+
+O que o nosso batimento cardíaco, um terremoto ou a variação das ações de uma empresa na bolsa de valores possuem em comum? Os batimentos cardíacos podem ser monitorados a partir de um sinal bioelétrico cujo gráfico é representado em um eletrocardiograma, as ondas sísmicas produzidas por um terremoto podem ser observadas a partir do registro de um sismógrafo e as variações dos valores das ações de uma empresa percebidas ao longo do tempo podem ser facilmente visualizadas em um gráfico.
+
+\begin{figure}[H]
+	\begin{center}
+		\centering
+
+		\noindent\includegraphics[width=\textwidth]{sismografo_2.png}
+	\end{center}
+\end{figure}
+
+Como nos fenômenos descritos acima, muitas situações e decisões do dia a dia dependem do reconhecimento de uma relação entre duas grandezas e da análise de como a variação de uma delas influencia na variação da outra (Por exemplo, a distância percorrida e o tempo transcorrido, a área de um polígono e o comprimento de seus lados, a absorção de um medicamento pelo organismo humano e o tempo desde a sua ingestão, valor da conta de energia elétrica e consumo, quantidade de vereadores e a população etc). O tema funções trata da relação entre grandezas, identificando um tipo especial de relação. Funções são uma ferramenta matemática importante para descrever, analisar e tomar decisões em diversas situações.
+
+As funções, de maneira geral, conectam grandezas, medidas, conjuntos numéricos e até variáveis que não podem ser quantificadas, ou seja, não numéricas, como, por exemplo, as variáveis qualitativas estudadas pela Estatística (classe social, cor dos olhos, local de nascimento, gênero etc).
+
+Função é um dos conceitos centrais da Matemática, e sua importância transcende os limites dessa ciência, sendo fundamental para descrever fenômenos em diversas áreas do conhecimento, não só nas mais próximas, como a Física, a Química, ou as Engenharias como também em Biologia, Geografia, Sociologia, e em situações cotidianas diversas, como será exemplificado nas atividades a seguir.
+
+A noção de função não surgiu ao acaso. É um instrumento matemático indispensável para o estudo quantitativo dos fenômenos naturais, tendo sua origem nos estudos desenvolvidos por Kepler (1571--1630) e Galileu (1564--1642) sobre os movimentos dos planetas e a queda dos corpos pela ação da força da gravidade, respectivamente.  Nesses estudos era preciso medir grandezas, identificar regularidades e obter relações que oferecessem uma descrição matemática simples.
+
+A aplicação da Matemática nas mais diversas áreas é feita, na maioria das vezes, por meio da noção de modelo matemático. Um modelo matemático permite representar uma determinada situação ou fenômeno a partir de variáveis e de relações entre essas variáveis. Portanto, funções são fundamentais tanto na concepção e construção de um modelo matemático como no estudo desses modelos.
+
+
+\begin{task}{ Pluviometria no Sistema Cantareira}
+	\label{\detokenize{AF106-0:atividade-pluviometria-no-sistema-cantareira}}\label{\detokenize{AF106-0:ativ-funcoes-pluviometria}}
+
+	As chuvas são a principal fonte de água para os reservatórios que abastecem as grandes cidades. Com base em dados passados, constrói-se uma média mensal esperada de chuvas. Em períodos em que a chuva real é menor do que o esperado pode-se observar uma diminuição da quantidade de água armazenada no sistema.
+
+	O gráfico a seguir apresenta a variação pluviométrica (em milímetros) da chuva real e da chuva esperada no Sistema Cantareira, que abastece a região metropolitana de São Paulo, no período de dezembro de 2013 (2013-12) a novembro de 2016 (2016-11).
+
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=\textwidth]{funcoesaluno-figure0.pdf}
+		\end{center}
+	\end{figure}
+
+	De acordo com o gráfico acima:
+	\begin{enumerate}
+		\item Que grandezas estão sendo relacionadas?
+		\item Em que mês e ano houve a maior incidência de chuvas? E a menor?
+		\item Em que período(s) a diferença entre a quantidade de chuva esperada e a quantidade real de chuva superou $100$mm?
+		\item Houve algum mês em que não foi registrada chuva na região do Sistema Cantareira?
+		\item O que pode ser observado nos meses de agosto de 2015 e março de 2016?
+	\end{enumerate}
+\end{task}
+
+
+\begin{task}{ Números triangulares}
+	\label{numeros-triangulares-funcoes}
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{funcoesaluno-figure1.pdf}
+	\end{center}
+
+
+	Considere a sequência de números ilustrada acima. Ela é conhecida como a sequência dos \emph{números triangulares}. O $n$-ésimo número triangular, $T_n$, é igual a quantidade total de círculos congruentes necessários para formar um triângulo equilátero cujo lado tem $n$ círculos. Por exemplo, o quarto número triangular é $T_4=10$, porque são necessários $10$ círculos congruentes para formar um triângulo cujo lado tem, $4$ desses círculos.
+	\begin{enumerate}
+		\item Determine o 6º, o 7º e o 8º números triangulares.
+
+		\item Descreva o procedimento que você usou para determinar $T_6$, $T_7$ e $T_8$ no item anterior.
+
+		\item Determine o milésimo número triangular, $T_{1000}$.
+
+		\item Descreva um procedimento que permita determinar qualquer número triangular a partir da sua ordem na sequência? Explique.
+
+		\item Quais são as variáveis relacionadas?
+
+	\end{enumerate}
+\end{task}
+
+\clearpage
+\begin{task}{Arranha-céu}\label{ativ-arranha}
+
+	Imagine um arranha-céu de $40$ andares cujas diferentes alturas que correspondem a alguns andares estão representadas na tabela abaixo.
+
+	\begin{table}[H]
+		\centering
+
+		\begin{tabular}{|c|c|*{9}{>{\begin{center}\arraybackslash}p{.5cm}<{\end{center}}@{}|}}
+			\hline
+			\hline
+			\tcolor{Número do Andar} & Garagem (0) & 1 & 2 & 3  & 4  & … & 10 & … &  &    \\
+			\hline
+			\tcolor{Altura (metros)} & -1          & 3 & 7 & 11 & 15 & … &    & … &  & 91 \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+
+	Considere que a altura de um andar é medida a partir do nível da rua até o piso desse andar e que a altura entre os andares seja sempre a mesma, conforme o esquema abaixo.
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\noindent\includegraphics[width=.4\textwidth]{{Arranha-ceu_1}.png}
+		\end{center}
+	\end{figure}
+	\begin{enumerate}
+		\item Qual a altura entre os andares?
+
+		\item Qual a altura  do 10º andar?
+
+		\item O que significa o sinal negativo do andar da garagem?
+
+		\item A que andar corresponde a altura de 91 m?
+
+		\item Qual é a altura total desse prédio?
+
+		\item Realize uma pesquisa na internet e descubra o maior arranha-céu brasileiro atualmente. Dividindo a altura total desse arranha-céu pela quantidade de andares, determine a altura média de um andar.
+
+	\end{enumerate}
+\end{task}
+
+
+
+\arrange{Conceito de Função}
+\label{\detokenize{AF106-1:sec-funcao-organizando-ideias-conceito}}\label{\detokenize{AF106-1::doc}}\label{\detokenize{AF106-1:organizando-as-ideias-conceito-de-funcao}}
+Vamos identificar juntos quais são as características comuns presentes em cada uma das situações anteriores. Em todas elas há pelo menos dois conjuntos bem determinados cujos elementos estão sendo relacionados. Nessa relacão, \textbf{cada} elemento de um desses conjuntos está associado a um \textbf{único} elemento do outro conjunto.
+
+Na {\hyperref[\detokenize{AF106-0:ativ-funcoes-pluviometria}]{Atividade: Pluviometria no Sistema Cantareira}}, um dos conjuntos se refere ao tempo e é determinado pelos meses do ano, no período de dezembro de 2015 a novembro de 2016. O outro é um conjunto numérico que deve conter todos os possíveis valores para o índice pluviométrico do Sistema Cantareira em milímetros. A relação representada no gráfico pela linha azul associa a cada ano-mês o índice de chuva real naquele período. Já a relação representada pela linha vermelha associa a cada mês-ano o índice de chuva esperada naquele período. Observe que, em ambos os casos, para cada mês-ano é associado um único índice pluviométrico.
+
+Na {\hyperref[\detokenize{AF106-4:ativ-funcoes-numeros-triangulares}]{Atividade: números triangulares no plano}}, um dos conjuntos tem como elementos as ordens dos termos da sequência, indicadas de maneira geral por $n$. O outro conjunto deve conter todos os possíveis números triangulares $T_n$. Assim, a cada ordem $n$ está associado, sem ambiguidade, o número triangular $T_n$.
+
+Por fim, na {\hyperref[\detokenize{ativ-arranha}]{Atividade: Arranha-céu}} temos cada andar do prédio sendo relacionado com sua altura até o nível da rua.
+
+Nas três relações apresentadas, \textbf{cada} elemento de um conjunto $A$ está associado a um \textbf{único} elemento de um conjunto $B$. Uma relação com essas propriedades é chamada \textbf{função}.
+\begin{description}
+	\item[{Função\index{Função|textbf}}] \leavevmode\phantomsection\label{\detokenize{AF106-1:term-funcao}}
+		Dizemos que uma relação $f$ entre os elementos de dois conjuntos não vazios, $A$ e $B$, é uma função de $A$ em $B$ se \emph{todo} elemento do conjunto $A$ estiver relacionado a um \emph{único} elemento do conjunto $B$.
+
+\end{description}
+
+Assim, para cada $x\in A$ deve existir um único elemento $y\in B$ que está associado a $x$ pela função $f$. Esse elemento $y$ é também denotado por $f(x)$:
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.4\textwidth]{funcoesaluno-figure2.pdf}
+	\end{center}
+\end{figure}
+
+O conjunto $A$ é chamado \index{domínio da função}domínio da função $f$, o conjunto $B$ é chamado \index{contradomínio}contradomínio de $f$ e o subconjunto de $B$ formado pelas imagens de todos os elementos de $A$ é chamado \index{conjunto imagem}conjunto imagem da função $f$.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.5\textwidth]{funcoesaluno-figure3.pdf}
+	\end{center}
+\end{figure}
+De maneira geral, escreve-se:
+\begin{equation*}
+	\begin{split}f:A \to B \\
+		x \mapsto f(x)\end{split}
+\end{equation*}
+
+Por exemplo, na {\hyperref[\detokenize{AF106-0:ativ-funcoes-pluviometria}]{Atividade: Pluviometria no Sistema Cantareira}}, se $f$ é a função que associa a cada ano-mês o índice de chuva real naquele período, $f(2014-3)=200$ nos informa que o índice de chuva real observada na região do sistema Cantareira no mês de março do ano de 2014 foi de $200$ milímetros.
+
+Em uma função $f$ de $A$ em $B$, a dependência estabelecida entre as variáveis $x \in A$ e $y \in B$ permite que $y$ seja identificada como “variável dependente” e $x$ como  “variável independente”, uma vez que os valores assumidos por $y$ são determinados em função da variação de $x$ no domínio. Na atividade “Arranha-céu” por exemplo, a variável independente é aquela que representa os andares e a variável dependente é a altura do andar.
+
+\begin{observation}
+	A definição de uma função $f$ de $A$ em $B$ exige que a cada elemento $x\in A$ corresponda uma imagem $y=f(x)\in B$ e que não haja ambiguidade na determinação dessa imagem, ou seja, que ela seja única. Asssim, nem toda relação de $A$ em {\color{red}\bfseries{}{}`}B é uma função. Por exemplo, a relação que associa a cada pessoa o número de seu telefone não é função, pois a imagem pode não ser única, ou seja, há ambiguidade: algumas pessoas têm mais de um número de telefone. E além disso, nem todas as pessoas têm telefone.
+\end{observation}
+
+\begin{reflection}
+	Junto com seus colegas, reflita sobre a definição que acabamos de ver. Vocês conseguem pensar em outros exemplos de relações do seu dia a dia que possam ser consideradas funções? Descrevam algumas delas e compartilhem com o restante da turma, destacando os conjuntos domínio e contradomínio dessas funções.
+\end{reflection}
+\newpage
+
+
+\practice{Conceito do Função}
+\vspace{-2\parskip}
+\begin{task}{Colorindo o mapa}
+	\label{\detokenize{AF106-2:atividade-colorindo-o-mapa}}\label{\detokenize{AF106-2:ativ-funcoes-colorindo-o-mapa}}
+
+
+	A imagem a seguir, que foi retirada do aplicativo Google Maps, exibe o trânsito na ponte Rio-Niterói e seus acessos em um determinado dia e hora. Várias informações podem ser observadas a partir dos elementos apresentados. Por exemplo, as cores nas vias informam a velocidade média dos veículos que trafegam por elas, conforme a legenda na parte inferior; a distância entre dois pontos quaisquer do mapa pode ser estimada usando a escala exibida no canto inferior direito. Gráficos como esse são produzidos a partir das relações entre diversas informações coletadas.
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\noindent\includegraphics[width=\linewidth]{{rio_niteroi_maps}.png}
+		\end{center}
+	\end{figure}
+
+	A tabela a seguir mostra os dados coletados sobre o tempo gasto pelos veículos (em média) para atravessar a ponte, ao longo de um dia.
+
+	\begin{table}[H]
+		\centering
+
+		\begin{tabular}{|c|c|>{\centering}m{.1\textwidth}|c|}
+			\hline
+			\hline
+			\tcolor{Período do Dia} & \tcolor{Tempo (min)} & \tcolor{Cor} & \tcolor{Velocidade Média (km/min)} \\
+			\hline
+			5:00 - 7:00             & 13                   &              &                                    \\
+			\hline
+			7:00 - 9:00             & 18                   &              &                                    \\
+			\hline
+			9:00 - 11:00            & 15                   &              &                                    \\
+			\hline
+			11:00 - 13:00           & 15                   &              &                                    \\
+			\hline
+			13:00 - 15:00           & 16                   &              &                                    \\
+			\hline
+			15:00 - 17:00           & 16                   &              &                                    \\
+			\hline
+			17:00 - 19:00           & 23                   &              &                                    \\
+			\hline
+			19:00 - 21:00           & 14                   &              &                                    \\
+			\hline
+			21:00 - 23:00           & 13                   &              &                                    \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{enumerate}
+		\item Tomando como referência a ilustração anterior e utilizando a escala de cores a seguir, complete a terceira coluna da tabela com a cor que a ponte deveria estar colorida em cada período do dia destacado. Descreva os critérios que você utilizou na escolha de cada uma das cores e compare com os critérios dos seus colegas.
+		      \begin{center}
+			      \includegraphics[width=.5\linewidth]{funcoesaluno-figure4.pdf}
+		      \end{center}
+		\item Você precisou associar uma mesma cor para para períodos diferentes do dia. Por que?
+
+		\item Sabendo que a ponte Rio-Niterói tem aproximadamente $13$ km de extensão complete a quarta coluna da tabela com a velocidade média registrada em cada um dos períodos do dia.
+
+		\item É possível que uma mesma velocidade média esteja associada a dois tempos de travessia diferentes? Por quê?
+	\end{enumerate}
+\end{task}
+
+Na atividade anterior, observam-se diferentes relações entre os dados. Por exemplo, para cada tempo de travessia é possível associar uma única cor e uma única velocidade média. Da mesma maneira, a cada velocidade média está associada uma única cor e um único tempo de travessia. No entanto, a uma mesma cor é possível associar tempos diferentes e velocidades médias diferentes.
+
+\begin{task}{ é função?}
+	\label{\detokenize{AF106-2:atividade-e-funcao}}\label{\detokenize{AF106-2:ativ-funcoes-e-funcao}}
+
+	No contexto da atividade anterior são observados diferentes conjuntos de dados: O conjunto dos tempos de travessia da ponte, $A=\{13, 14, 15, 16, 18, 23\}$; O conjunto das cores que compoõem a escala, $B=\{$Verde, Laranja, Vermelho, Vinho$\}$; e o conjunto de velocidades obtidas,{}`C{}`. Considere as diferentes relações de dependências estabelecidas entre esses conjuntos. Quais são funções?
+
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|>{\centering}m{6cm}<{\arraybackslash}|}
+			\hline
+			\hline
+			\tcolor{Relação} & \tcolor{É função?} & \tcolor{Se não, por que?} \tabularnewline
+			\hline
+			De A em B
+			                 &                    & \tabularnewline
+			\hline
+			De B em A
+			                 &                    & \tabularnewline
+			\hline
+			De A em C
+			                 &                    & \tabularnewline
+			\hline
+			De C em A
+			                 &                    & \tabularnewline
+			\hline
+			De B em C
+			                 &                    & \tabularnewline
+			\hline
+			De C em B
+			                 &                    & \tabularnewline
+			\hline
+		\end{tabular}
+	\end{table}
+\end{task}
+
+Toda relação de um conjunto $A$ em um conjunto $B$ pode ser identificada por um conjunto de pares ordenados. Nesse caso, cada associação entre elementos do conjunto $A$ e elementos do conjunto $B$ fica representada por um par ordenado tal que o elemnto do conjunto $A$ ocupa a primeira posição do par e o correspondente elemento do conjunto $B$ a segunda posição.
+
+Por exemplo, se consideramos a relação dos números reais em si mesmo que, a cada número real, associa o seu quadrado, os pares ordenados $(1,1), (2,4), (\sqrt{3},3), (-\pi,\pi^2)$ indicam elementos que estão relacinados. Já os pares ordenados $(9,5)$ e $(4,2)$, $(\sqrt{2},-2)$ formados por números reais, não indicam números associados pela mesma relação, uma vez que $5$ não é quadrado de $9$, $2$ não é quadrado de $4$ e $-2$ não é o quadrado de $\sqrt{2}$.
+
+Como funções são um tipo especial de relação, a mesma ideia se estende para representação das funções. Assim, os pares ordenados de uma função $f:A\to B$ serão da forma $(x,y)$ em que $x\in A$ e $y=f(x)\in B$.
+
+
+\begin{task}{ não é função!}
+	\label{\detokenize{AF106-2:atividade-nao-e-funcao}}\label{\detokenize{AF106-2:ativ-funcoes-nao-e-funcao}}
+
+	Considere a relação formada por todos $(a,b)$ de números naturais tais que $b$ é múltiplo de $a$. Assim, $(2,4)$, $(2,6)$, $(3,6)$ e $(9, 9)$ são pares ordenado dessa relação, pois $4$ é múltiplo de $2$, $6$ é múltiplo de $2$ e de $3$ e $9$ é múltiplo de $9$ . No entanto, $(4,2)$ e $(7,17)$ são pares ordenados de números naturais, mas não são pares dessa relação.
+	\begin{enumerate}
+		\item Exiba outros quatro pares ordenados dessa relação.
+
+		\item Explique porque essa relação não é uma função.
+
+		\item $(5, 405)$ é um par ordenado dessa relação. Quantos outros pares ordenados dessa relação têm 5 como primeiro elemento?
+
+		\item Dê exemplo de uma ou mais relações que não sejam funções. Não precisam ser exemplos numéricos.
+
+	\end{enumerate}
+\end{task}
+
+\begin{task}{ a família}
+	\label{\detokenize{AF106-2:atividade-a-familia}}
+
+	Cada ponto do gráfico a seguir representa uma das seguintes pessoas.
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\noindent\includegraphics[width=.5\textwidth]{{familia}.png}
+			\label{\detokenize{AF106-2:fig-altura-idade}}
+		\end{center}
+	\end{figure}
+
+	\begin{enumerate}
+		\item Associe cada ponto do gráfico à pessoa correspondente.
+
+		\item A relação expressa pelos pares ordenados (idade, altura) apresentados no gráfico é função? Por que?
+	\end{enumerate}
+
+
+	\begin{center}
+		\includegraphics[width=.5\textwidth]{funcoesaluno-figure5.pdf}
+	\end{center}
+
+
+
+
+	{\color{red}\bfseries{}*}Adaptado de The Language of Functions and Graphs, Shell Centre for Mathematical Education Publications Ltd., 1985.
+\end{task}
+
+Quando nos deparamos com uma função é fundamental identificarmos os conjuntos domínio e contradomínio, e a maneira como os elementos desses conjuntos estão relacionados. Tal maneira pode ser muito variada, no entanto, principalmente quando os conjuntos envolvidos são numéricos, é comum considerar como contradomínio o conjunto $\mathbb{R}$. Por isso, daqui por diante, quando estivermos considerando funções numéricas, o contradomínio será igual a $\mathbb{R}$.
+
+Em muitos casos, a forma de associação entre os elementos é dada por uma expressão analítica. Vejamos alguns exemplos.
+
+$(I)$ Para calcular o perímetro de um quadrado de lado $\ell$ usa-se a expressão $P=4\ell$. Percebe-se então que o perímetro está relacionado com o lado. A partir daí pode-se definir a função perímetro:
+\begin{equation*}
+	\begin{split}P: ]0,+\infty[\to \mathbb{R} \quad ; \quad P(\ell)=4\ell.\end{split}
+\end{equation*}
+Da mesma forma a área de um quadrado de lado $\ell$ é dada por $A=\ell^2$, que permite definir a função:
+\begin{equation*}
+	\begin{split}A: ]0,+\infty[\to \mathbb{R} \quad ; \quad A(\ell)=\ell^2.\end{split}
+\end{equation*}
+A variável $\ell$ pode assumir qualquer valor dentro do intervalo $]0,+\infty[$ que é o domínio da função $P$ . Se quisermos saber o valor do perímetro do quadrado de lado $5$cm, basta substituirmos $\ell$ por 5 na expressão de  $P(\ell)$. Ficamos assim com
+\begin{equation*}
+	\begin{split}P(5)=4\times 5 = 20\mathrm{cm}.\end{split}
+\end{equation*}
+A área do quadrado de lado $9$cm é
+\begin{equation*}
+	\begin{split}A(9)=9^2=81\text{cm}^2.\end{split}
+\end{equation*}
+$(II)$ A fórmula de Lorentz já foi muito utilizada pelos médicos para o cálculo do “peso ideal” $p$, em kg, em função da altura $h$, em centímetros, do paciente.
+\begin{equation*}
+	\begin{split}p:]0,300[\to \mathbb{R}\quad ; \quad p(h)=h-100-\dfrac{h-150}{k}\end{split}
+\end{equation*}
+em que $k$ vale 4 para homens e vale 2 para mulheres.
+
+Que tal usar a fórmula acima para calcular o seu peso ideal?
+
+$(III)$ Imagine que um objeto é solto, a partir do repouso, de uma altura de $10$ metros e percorre uma trajetória vertical em queda livre. Da Física, sabemos que sua altura $h$ em metros medida a partir do solo, em função do tempo $t$ em segundos, quando desprezamos a resistência do ar, é dada por
+\begin{equation*}
+	\begin{split}h:[0,+\infty[\to \mathbb{R}\quad ; \quad h(t)=10-\dfrac{gt^2}{2},\end{split}
+\end{equation*}
+em que $g$ representa a aceleração da gravidade em $m/s^2$.metros por segundo ao quadrado.
+
+Fazer a variável tempo assumir o valor $t=0$ segundos na expressão de $h(t)$ significa que estamos medindo a altura no início da contagem do tempo, ou seja a altura inicial do corpo. Nesse caso teremos
+\begin{equation*}
+	\begin{split}h(0)=10-\dfrac{g\ 0^2}{2}=10.\end{split}
+\end{equation*}
+\emph{Se por exemplo, quisermos saber em quanto tempo o corpo chegará ao solo, o que devemos fazer?} Como a medição é feita a partir do solo, dizer que o objeto chegou ao solo é o mesmo que dizer que sua altura é igual a 0. Portanto, precisamos descobrir o valor da variável $t$, de maneira que $h(t)=0$. A partir da expressão de $h(t)$ e aproximando $g$ por $10 m/s^2$, obtemos $10-5t^2=0$, donde concluímos que  $t=\sqrt{2}$ aproximadamente.
+
+
+\begin{task}{ praticando a notação}
+	\label{\detokenize{AF106-2:atividade-praticando-a-notacao}}\label{\detokenize{AF106-2:ativ-praticando-notacao}}
+
+	Considere as funções $f$, $g$, $k$ e $h$, todas de domínio $\mathbb{R}$, tais que:
+	\begin{equation*}
+		\begin{split}f(x)=3x^2+5x\quad ; \quad g(x)=\frac{x-1}{x^3+3}\quad ; \quad k(x)=(x-2)^2+6\quad ; \quad h(x)=2x-7\end{split}
+	\end{equation*}
+	Determine o valor de:
+
+
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|c|}
+			\hline
+			\hline
+			\tcolor{Função}       & \tcolor{Valor} \\
+			\hline
+			$f(3)$                &                \\
+			\hline
+			$g(-1)$               &                \\
+			\hline
+			$k(2)$                &                \\
+			\hline
+			$f(1)+g(1)$           &                \\
+			\hline
+			$g(2)-k(-1)$          &                \\
+			\hline
+			$k(0).f(-2)$          &                \\
+			\hline
+			$f(0)+h(0)-1$         &                \\
+			\hline
+			$f(-2).g(-2)+k(2)$    &                \\
+			\hline
+			$\dfrac{f(-3)}{k(0)}$ &                \\
+			\hline
+			$x$ quando $h(x)=0$   &                \\
+			\hline
+			$x$ quando $h(x)=3$   &                \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+\end{task}
+
+\begin{task}{ enchendo o cone}
+	\label{\detokenize{AF106-2:atividade-enchendo-o-cone}}\label{\detokenize{AF106-2:ativ-funcoes-enchendo-o-cone}}
+
+	O reservatório representado a seguir tem a forma de um cone cuja altura é $6 m$ e a base é um círculo de raio $3 m$. O volume $V$ em litros de água no reservatório pode ser estimado a partir altura do nível da água $h$ (em metros) de acordo com a seguinte expressão:
+	\begin{equation*}
+		\begin{split}V(h)=250h^3\end{split}
+	\end{equation*}
+	\begin{center}
+		\includegraphics[width=.3\textwidth]{funcoesaluno-figure6.pdf}
+	\end{center}
+	\begin{enumerate}
+		\item Determine $V(2), V(3)$ e $V(4)$ e explique os seus significados no contexto.
+
+		\item Quais os volumes de água, mínimo e máximo, que o reservatório comporta?
+
+		\item A que altura do nível da água corresponde o volume igual a $3 456$ litros?
+
+	\end{enumerate}
+\end{task}
+
+\begin{task}{ uniformemente variado}
+	\label{\detokenize{AF106-2:atividade-uniformemente-variado}}\label{\detokenize{AF106-2:ativ-funcoes-uniformemente-variado}}
+
+	A posição $S$ (em quilômetros), medida a partir de um referencial, de um veículo que se desloca segundo um movimento retilíneo uniformemente variado (MRUV) é dada em função do tempo $t$ (medido em horas) pela seguinte expressão:
+	\begin{equation*}
+		\begin{split}S(t)=2t^2-4t+2\end{split}
+	\end{equation*}\begin{enumerate}
+		\item Determine a posição inicial do veículo. Explique o significado desse resultado a partir do contexto.
+
+		\item Após quanto tempo o veículo estará a $18$km da origem?
+
+	\end{enumerate}
+\end{task}
+
+
+\know{}
+\label{\detokenize{AF106-3::doc}}\label{\detokenize{AF106-3:sec-aprofundando}}\label{\detokenize{AF106-3:para-saber-mais}}
+
+\begin{task}{ por que não é função?}
+	\label{\detokenize{AF106-3:ativ-nao-funcao}}\label{\detokenize{AF106-3:atividade-por-que-nao-e-funcao}}
+
+	Vimos que para que uma relação de $A$ em $B$ seja uma função não pode haver:
+
+	$(I)$ Elementos no conjunto $A$ sem correspondente em $B$;
+	$(II)$ Ambiguidade na determinação de correspondente em $B$.
+
+	Determine se cada uma das relações apresentadas a seguir é função. Justifique suas respostas a partir das condições $(I)$ e $(II)$.
+	\begin{enumerate}
+		\item Seja $\mathcal{P}$ o conjunto de todas as pessoas e considere a relação de $\mathcal{P}$ em $\mathcal{P}$, que a cada “pessoa” associa “irmão da pessoa”.
+
+		\item Seja $\mathbb{R}$  o conjunto dos números reais e considere a relação de $\mathbb{R}$ em $\mathbb{R}$, que a cada “número real $x$ ” associa “raiz quadrada do número real $x$ “.
+
+		\item Sejam $\mathbb{R}^+$ o conjunto dos números reais positivos e $\mathcal{T}$ o conjunto de todos os triângulos. Considere a relação de $\mathbb{R}^+$ em $\mathcal{T}$ que a cada “número real positivo $x$ ” associa “triângulo de área $x$ “.
+
+	\end{enumerate}
+
+\end{task}
+
+\begin{task}{ domínio e imagem}
+	\label{\detokenize{AF106-3:ativ-qual-e-imagem}}\label{\detokenize{AF106-3:atividade-dominio-e-imagem}}
+
+	Considere a seguinte lista de expressões algébricas.
+	% \begin{multicols}{2}
+	\begin{enumerate}
+		\item $f(x)=\sqrt{x}$
+		\item $G(z)=\sqrt{z-5}$
+		\item $h(s)=\frac{1}{3-s}$
+		\item $J(t)=\frac{1}{t+8}$
+		\item $T(x)=\frac{1}{\sqrt{x}}$
+		\item $R(x)=(x-2)^2+7$
+		\item $g(u)=5u^2+8$
+		\item $F(x)=(x+1)^2-3$
+	\end{enumerate}
+	% \end{multicols}
+
+	Veja que, em algumas das expressões, a variável independente não pode assumir alguns valores, por exemplo, na letra a) $x$ não pode assumir valores negativos. Complete a tabela abaixo com o maior conjunto domínio possível que cada uma das funções pode ter e o correspondente conjunto imagem.
+
+
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\hline
+			\tcolor{Expressão} & \tcolor{Domínio $A$}         & \tcolor{Imagem}             \\
+			\hline
+			$(a)$              & $\mathbb{R}^+$               &                             \\
+			\hline
+			$(b)$              &                              &                             \\
+			\hline
+			$(c)$              &                              & $\mathbb{R}\setminus \{0\}$ \\
+			\hline
+			$(d)$              & $\mathbb{R}\setminus \{-8\}$ &                             \\
+			\hline
+			$(e)$              &                              &                             \\
+			\hline
+			$(f)$              &                              & $[7,+\infty[$               \\
+			\hline
+			$(g)$              &                              &                             \\
+			\hline
+			$(h)$              &                              &                             \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+
+\end{task}
+
+\exercise
+
+
+\begin{enumerate}
+	\item  Assim como os números triangulares (ver {\hyperref[\detokenize{AF106-4:ativ-funcoes-numeros-triangulares}]{Atividade: números triangulares no plano}}), fala-se nos números quadrados perfeitos, pentagonais, hexagonais, inspirados, respectivamente, pelas sequências abaixo.
+	      \phantomsection\label{\detokenize{AF106-E1:fig-figurados}}
+	      \begin{figure}[H]
+		      \begin{center}
+			      \includegraphics[width=.4\linewidth]{funcoesaluno-figure7.pdf}
+
+			      \includegraphics[width=.4\linewidth]{funcoesaluno-figure8.pdf}
+
+			      \includegraphics[width=.4\linewidth]{funcoesaluno-figure9.pdf}
+		      \end{center}
+	      \end{figure}
+
+	      \begin{enumerate}
+		      \item       Para cada uma destas sequências, represente as próximas duas figuras;
+
+		      \item       Escreva uma sequência de números que possa estar associada a cada sequência de figuras;
+
+		      \item       Descreva a regra de formação de cada uma dessas sequências de números.
+
+	      \end{enumerate}
+
+	      \clearpage
+	\item Observe as duas sequências que se seguem:
+	      \begin{equation*}
+		      \begin{split}1, 1, 2, 3, 5, 8, 13, \dots\end{split}
+	      \end{equation*}\begin{equation*}
+		      \begin{split}1000, 100, 10, \dots\end{split}
+	      \end{equation*}\begin{enumerate}
+		      \item       Descreva, em palavras ou em linguagem simbólica, uma regra de formação que você percebe em cada uma das sequências apresentadas.
+
+		      \item       Baseado na regra que você identificou no item anterior, descubra qual é o 20º termo de cada uma das sequências anteriores.
+
+	      \end{enumerate}
+
+	\item Cada prisma obtém-se empilhando cubos do mesmo tamanho, brancos e cinzas, segundo uma regra sugerida na figura.
+	      \phantomsection\label{\detokenize{AF106-E1:fig-prismas}}
+
+	      \begin{figure}[H]
+		      \begin{center}
+			      \centering
+
+			      \includegraphics[width=.5\linewidth]{funcoesaluno-figure10.pdf}
+		      \end{center}
+	      \end{figure}
+	      \begin{enumerate}
+		      \item       Descreva, em palavras ou em linguagem simbólica, uma regra de formação sugerida pela figura.
+
+		      \item       Para construir o prisma $4$ dessa sequência, segundo o padrão por você descrito, quantos cubos cinzas são necessários?
+
+		      \item       Justifique a afirmação: “O número total de cubos cinzas necessários para construir qualquer prisma desta sequência é par.”
+
+		      \item       Segundo o padrão por você descrito, quantos cubos cinzas terá o prisma 200?
+
+		      \item       Explicite uma expressão numérica que permita determinar o número de cubos cinzas do Prisma $n$ em função de $n$, isto é, uma expressão que de forma geral associe a ordem da figura à quantidade de cubos cinzas em sua composição.
+
+		      \item       Justifique novamente a afirmação do item (c), agora a partir da expressão que você explicitou no ítem anterior.
+
+		      \item       Se $x$ representar o número total de cubos (brancos e cinzas) de um prisma desta sequência, qual das expressões seguintes representará o número de cubos cinzas desse prisma. Justifique sua escolha.
+
+	      \end{enumerate}
+	      \begin{equation*}
+		      \begin{split}\square \ x-8 \quad \quad \square \ 2x-4 \quad \quad \square \ x-4 \quad \quad \square \ 4x\end{split}
+	      \end{equation*}
+	\item  Ao final de um treino para a prova de 100 metros rasos, uma corredora recebe de seu treinador a seguinte tabela com as marcas intermediárias da sua melhor corrida.
+
+	      \begin{table}[H]
+		      \centering
+
+		      \begin{tabular}{|c|c|}
+		      	  \hline
+			      \hline
+			      \tcolor{Tempo (s)} & \tcolor{Distância (m)} \\
+			      \hline
+			      5                  & $25$                   \\
+			      \hline
+			      10                 & $50$                   \\
+			      \hline
+			      15                 & $75$                   \\
+			      \hline
+			      20                 & $100$                  \\
+			      \hline
+		      \end{tabular}
+	      \end{table}
+
+	      Considerando que a velocidade da atleta é constante ao longo dos 100 metros responda as seguintes perguntas.
+	      \begin{enumerate}
+		      \item       Quanto tempo ela gastou para percorrer os primeiros $30$ metros?
+
+		      \item       Pensando em uma estratégia para melhorar a preformance da atleta, seu treinador resolve detalhar a tabela com os tempos correspondentes a cada $10$ metros. Construa essa tabela.
+
+	      \end{enumerate}
+
+	\item Hoje de manhã a Ana saiu de casa e dirigiu-se para a escola. Fez uma parte do percurso andando e a outra parte correndo. O gráfico a seguir mostra a distância percorrida pela Ana, em função do tempo que decorreu desde o instante em que ela saiu de casa até ao instante em que chegou à escola.
+	      \begin{center}
+		      \includegraphics[width=.5\linewidth]{funcoesaluno-figure11.pdf}
+	      \end{center}
+	      Apresentam-se, a seguir, quatro afirmações. De acordo com o gráfico, apenas uma é verdadeira. Assinale-a com X, explicando por que motivo cada uma das demais opções é falsa.
+
+	      ( { } ) A Ana percorreu metade da distância andando e a outra metade correndo.
+
+	      ( { } ) A Ana percorreu maior distância andando do que correndo.
+
+	      ( { } ) A Ana esteve mais tempo correndo do que andando.
+
+	      ( { } ) A Ana iniciou o percurso correndo e terminou-o andando.
+
+	\item Em Janeiro, o Vitor, depois de ter vindo do barbeiro, decidiu estudar o comprimento do seu cabelo, registando todos os meses a sua medida. O gráfico seguinte representa o crescimento do cabelo do Vitor, desde o mês de Janeiro (mês 0), até ao mês de Junho (mês 5).
+	      \phantomsection\label{\detokenize{AF106-E1:fig-cabelo}}
+
+	      \begin{center}
+		      \includegraphics[width=.5\linewidth]{funcoesaluno-figure12.pdf}
+	      \end{center}\begin{enumerate}
+		      \item       A partir dos dados apresentados no gráfico, complete a tabela acima.
+
+		      \item       Em cada mês, quantos centímetros cresceu o cabelo do Vitor?
+
+		      \item       Escreva uma expressão geral que represente o Comprimento (C) do cabelo do Vitor, em função do número de meses (M) passados após o corte de cabelo inicial.
+
+		      \item       Considerando o comportamento indicado no gráfico, se o cabelo do Vitor crescer $19,8 \ cm$, se que haja cortes no período, quantos meses terão se passado desde o último corte de cabelo? Justifique.
+
+	      \end{enumerate}
+
+	\item Considere a função $g:\mathbb{R}\to\mathbb{R}\quad$ tal que $\quad g(x)=9-x^2$.
+	      \begin{enumerate}
+		      \item       Coloque em ordem crescente os números $g(\sqrt{2})$, $g(\sqrt{5})$ e  $g(\sqrt{10})$.
+
+		      \item       Determine todos os possíveis valores de $x$ do domínio que têm imagem igual a 8.
+
+		      \item       Existe algum $x\in \mathbb{R}$ cuja imagem é igual a $10$? Por que?
+
+		      \item       Que condição deve satisfazer um número real $b$ para que seja a imagem de algum número real $x$, isto é, $b=g(x)$ ?
+
+	      \end{enumerate}
+
+	\item Considere o processo que associa \emph{cada número natural à soma de seus algarismos}.
+	      \begin{enumerate}
+		      \item       Por meio do processo descrito acima o número natural $13717$ será associado a que número?
+
+		      \item       Proponha um número cujo resultado do processo seja $22$.
+
+		      \item       Quantos números entre $1$ e $10000$ nos levam ao resultado $3$?
+
+		      \item       É possível obter qualquer número natural como resultado desse processo? Explique.
+
+	      \end{enumerate}
+\end{enumerate}
+
+
+\explore{Gráficos}
+Segundo informações do \href{http://www.bigdatabusiness.com.br/visualizacao-de-dados-por-que-transformar-big-data-em-graficos/}{Big Data Business}, as palavras estimulam o lado esquerdo do cérebro e são um recurso essencial para a manutenção da memória. No entanto, as imagens são ainda mais eficazes, porque elas conseguem ativar os dois lados do cérebro simultaneamente e, assim, permitem o resgate de ideias e informações com maior precisão e agilidade. Especialmente quando se quer analisar grande quantidade de dados, apresentá-los em uma imagem ou em um gráfico, pode favorecer a comunicação.
+
+\begin{figure}[H]
+	\begin{center}
+		\centering
+
+
+		\noindent\includegraphics[width=.8\linewidth]{{grafico-final}.png}
+		\caption{Alguns exemplos de representações gráficas}\label{\detokenize{AF106-4:id1}}\end{center}
+\end{figure}
+
+Represe25ntar graficamente conjuntos de dados e suas relações pode fazer toda a diferença para transmitir informações. Há vários tipos de gráficos, cada um tem a sua particularidade e serve para transmitir as informações de forma específica. Nesta seção iremos estudar a representação gráfica de funções.
+
+Vamos considerar a seguinte situação:
+
+
+\begin{task}{ ação promocional}
+	\label{\detokenize{AF106-4:atividade-acao-promocional}}
+
+	Uma empresa resolve lançar uma ação promocional na internet usando uma \href{https://pt.wikipedia.org/wiki/Hashtag}{hashtag}. Um mês após o lançamento, o presidente dessa empresa resolve analisar o impacto da ação na rede. Para isso ele pede a um de seus funcionários que prepare um relatório sobre o número de vezes que a \emph{hashtag} foi mencionada nas redes sociais em cada dia durante aquele mês. O funcionário resolveu apresentar os dados das seguintes duas formas:
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure13.pdf}
+		\end{center}
+	\end{figure}
+
+	\begin{enumerate}
+		\item Quantas vezes a \emph{hashtag} foi mencionada mais de 1500 vezes em um dia?
+
+		\item Em que dia a \emph{hashtag} foi mais citada?
+
+		\item Identifique todos os períodos em que houve crescimento no número de citações.
+
+		\item Faça o mesmo para o decrescimento.
+
+		\item Escreva um parágrafo explicando o comportamento global do gráfico, apontando possíveis causas para as variações observadas.
+	\end{enumerate}
+
+\end{task}
+
+Uma função, essencialmente, relaciona duas ou mais grandezas ou variáveis, de forma que são obtidos pares $(x,y)$, em que $x$ pertence ao domínio da função e $y=f(x)$. Perceba que a ordem em que os termos que compõem o par são apresentados é importante. Em matemática, chamamos esse tipo de objeto de \emph{par ordenado}, eles são objetos fundamentais para a compreensão do gráfico de uma função.
+
+No caso de funções reais de variável real, isto é, cujos domínio e contradomínio são o conjunto dos números reais (ou subconjuntos dele) tanto $x$ como $y$ serão números reais.
+
+A representação geométrica mais comum para esses pontos, e que você provavelmente já conhece, é no plano cartesiano\index{plano cartesiano}. Essa representação tem como base duas retas numéricas perpendiculares que se intersectam em suas origens conforme a figura abaixo.
+
+\begin{center}
+	\includegraphics[width=.4\linewidth]{funcoesaluno-figure14.pdf}
+\end{center}
+
+As retas que compõem um sistema cartesiano são chamadas de eixos\index{eixos coordenados} do plano cartesiano. O eixo em que são registradas as primeiras coordenadas do par é chamado de eixo das abscissas\index{eixo das abscissas}. O outro eixo, em que são registradas as segundas coordenadas do par é chamado de eixo das ordenadas\index{eixo das ordenadas}.
+
+Já vimos alguns exemplos de funções em atividades anteriores, vamos explorá-los um pouco mais.
+
+
+\begin{task}{ do mapa para o gráfico}
+	\label{\detokenize{AF106-4:ativ-funcoes-do-mapa-para-grafico}}\label{\detokenize{AF106-4:atividade-do-mapa-para-o-grafico}}
+
+	\begin{enumerate}
+		\item A partir das colunas \emph{Tempo de travessia} e \emph{Cor} da {\hyperref[\detokenize{AF106-2:ativ-funcoes-colorindo-o-mapa}]{Atividade: colorindo o mapa}}, escreva o conjunto de pares ordenados da forma (tempo, cor) respeitando o critério que você escolheu para a determinação das cores.
+
+		\item Represente graficamente este conjunto de pares ordenados.
+
+		\item Para colorir as vias de todo o mapa, precisamos distribuir as cores para outros valores de tempo. Como você faria a distribuição para o intervalo de $0$ a $25$ minutos considerando um trecho qualquer de $13$ km (a mesma extensão da ponte)?
+
+		\item Encontre outra maneira de representar graficamente a associação entre os tempos e as cores.
+
+	\end{enumerate}
+
+\end{task}
+
+\begin{task}{ números triangulares no plano}
+	\label{\detokenize{AF106-4:atividade-numeros-triangulares-no-plano}}\label{\detokenize{AF106-4:ativ-funcoes-numeros-triangulares}}
+
+	Represente, no plano cartesiano, o conjunto de pontos que correspondem aos pares ordenados $\{(n,T_n)\ ;\ n\in\{1,2,...,8\}\}$, em que $T_n$ é o $n$-ésimo número triangular.
+
+\end{task}
+
+\begin{task}{ jornada até a escola}
+	\label{\detokenize{AF106-4:atividade-jornada-ate-a-escola}}\label{\detokenize{AF106-4:ativ-funcoes-jornada-ate-a-escola}}
+
+	Leonardo mora a $6$ km da escola onde estuda e utiliza o transporte escolar, que o busca na porta de sua casa. Em um certo dia, o percurso de Leonardo até sua escola foi assim: Ele estava na porta de casa às $7$ horas, como de costume, mas o transporte escolar atrasou, passando em sua casa somente às $7h05min$. Leonardo entrou na van e sentou no penúltimo lugar vago. Ainda faltava Marina. “Ela mora a $3$ km da minha casa!”, lembrou Leonardo. Às $7h10min$ em ponto, o transporte escolar chegou à casa de Marina, que já estava pronta aguardando para embarcar. Para tentar compensar o atraso, o motorista resolveu tomar um atalho, mas a estratégia não funcionou. Às $7h15min$ precisou ficar parado por $5$ minutos em frente a uma cancela aguardando um trem de carga passar. Finalmente, às $7h25min$ chegaram à escola, $5$ minutos antes do sinal tocar.
+
+	No plano cartesiano a seguir, o eixo horizontal indica o tempo em minutos e o eixo vertical a distância percorrida em quilômetros. Os pontos marcados correspondem às distâncias percorridas por diversos estudantes da escola a cada $5$ minutos no período das $7h$ às $7h30min$ da mesma manhã descrita na situação acima.
+
+	\phantomsection\label{\detokenize{AF106-4:fig-pontos-jornada}}
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure15.pdf}
+		\end{center}
+	\end{figure}
+
+
+	\begin{enumerate}
+		\item Conecte os pontos que correspondem à jornada de Leonardo, desde a porta da sua casa até a chegada à escola, no dia descrito acima.
+
+		\item Faça uma estimativa da distância a que Leonardo estará de sua casa às $7h07min$.
+
+		\item Escolha um conjunto de pontos que possa representar a jornada de um outro estudante da sua casa à escola e descreva essa jornada.
+
+	\end{enumerate}
+\end{task}
+
+\arrange{Gráficos}
+\label{\detokenize{AF106-5:sec-organizando-graficos}}\label{\detokenize{AF106-5:organizando-as-ideias-graficos}}\label{\detokenize{AF106-5::doc}}
+É hora de organizar as ideias sobre representação gráfica de uma função. Vimos que, para representar graficamente as funções, os pares ordenados são fundamentais. Cada par identifica as grandezas ou variáveis relacionadas e a ordem no par distingue o papel de cada uma delas: elemento do domínio, abscissa, e imagem, ordenada. Sendo assim, a representação gráfica de uma função exige: a identificação das variáveis do problema e a identificação da relação estabelecida entre as variáveis.
+
+Para funções reais de variável real, isto é, funções cujo domínio é um subconjunto de $\mathbb{R}$ e o contradomínio é $\mathbb{R}$, sua representação gráfica no plano cartesiano será o conjunto dos pares ordenados $(x,f(x))$ em que $x$ pertence ao domínio da função.
+
+\begin{figure}[H]
+	\begin{center}
+		\centering
+
+		\includegraphics[width=.5\linewidth]{funcoesaluno-figure16.pdf}
+	\end{center}
+\end{figure}
+
+\begin{reflection}
+
+	Os conjuntos domínio e imagem ficam evidenciados na representação gráfica de uma  função a partir dos eixos coordenados. Observe a representação gráfica a seguir, em que estão destacados conjuntos sobre os eixos. Qual deles você identifica como domínio? A que conjunto corresponde o outro?
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.6\linewidth]{funcoesaluno-figure17.pdf}
+		\end{center}
+	\end{figure}
+\end{reflection}
+
+\practice{Gráficos}
+\phantom{M}
+\vspace{-1em}
+%\label{\detokenize{AF106-5:sec-praticando-grafico}}\label{\detokenize{AF106-5:praticando}}
+
+\begin{task}{Indo para escola}
+	\label{\detokenize{AF106-5:ativ-indo-para-escola}}\label{\detokenize{AF106-5:atividade-indo-para-escola}}
+
+	Arthur, Caetano, Gael, Levi e Pedro utilizam a mesma avenida para ir à escola a cada manhã. Levi vai com seu pai de carro, Arthur de bicicleta e Gael caminhando. Os demais variam, a cada dia, a forma como percorrem o trajeto. O mapa a seguir mostra a posição da casa de cada um em relação à escola.
+	\phantomsection\label{\detokenize{AF106-5:fig-mapa-escola}}
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure18.pdf}
+		\end{center}
+	\end{figure}
+
+	Os pontos marcados no plano cartesiano abaixo fornecem informações sobre a jornada de cada criança na última segunda-feira.
+	\phantomsection\label{\detokenize{AF106-5:fig-grafico-jornada}}
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure19.pdf}
+		\end{center}
+	\end{figure}
+
+	\begin{enumerate}
+		\item Associe cada ponto do gráfico com o nome da criança que ele representa.
+
+		\item Como Pedro e Caetano foram para a escola na última segunda-feira? Por que?
+
+	\end{enumerate}
+
+	{\color{red}\bfseries{}{}`\emph{{}`Adaptado de *The Language of Functions and Graphs}, Shell Centre for Mathematical Education Publications Ltd., 1985.}
+
+\end{task}
+
+\begin{task}{ qual é o gráfico?}
+	\label{\detokenize{AF106-5:ativ-qual-e-o-grafico}}\label{\detokenize{AF106-5:atividade-qual-e-o-grafico}}
+
+	Dentre os gráficos apresentados a seguir identifique aquele que melhor descreve os dados apresentados em cada uma das tabelas seguintes.
+
+
+	\begin{enumerate}
+		\item  Café esfriando
+		      \begin{table}[H]
+			      \centering
+			      \begin{tabular}{|c|c|c|c|c|c|c|c|}
+			      	  \hline
+				      \hline
+				      \tcolor{Tempo (minutos)}           & 0  & 5  & 10 & 15 & 20 & 25 & 30 \\
+				      \hline
+				      \tcolor{Temperatura ($^{\circ}$C)} & 90 & 79 & 70 & 62 & 55 & 49 & 44 \\
+				      \hline
+			      \end{tabular}
+		      \end{table}
+
+		\item Preparando a ceia
+
+		      \begin{table}[H]
+			      \centering
+			      \begin{tabular}{|c|c|c|c|c|c|c|c|}
+			      	  \hline
+				      \hline
+				      \tcolor{Peso (quilos)} & 3   & 4 & 5   & 6 & 7   & 8 & 9   \\
+				      \hline
+				      \tcolor{Tempo (horas)} & 2,5 & 3 & 3,5 & 4 & 4,5 & 5 & 5,5 \\
+				      \hline
+			      \end{tabular}
+		      \end{table}
+
+		\item Depois de três canecas de cerveja…
+
+		      \begin{table}[H]
+			      \centering
+			      \begin{tabular}{|c|c|c|c|c|c|c|c|}
+			          \hline
+				      \hline
+				      \tcolor{Tempo (horas)}               & 1  & 2  & 3  & 4  & 5  & 6  & 7 \\
+				      \hline
+				      \tcolor{Álcool no sangue (mg/100ml)} & 90 & 75 & 60 & 45 & 30 & 15 & 0 \\
+				      \hline
+			      \end{tabular}
+		      \end{table}
+
+		\item Como um bebê cresce antes do nascimento
+
+		      \begin{table}[H]
+			      \centering
+			      \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			      	  \hline
+				      \hline
+				      \tcolor{Tempo de gestação (meses)} & 2 & 3 & 4  & 5  & 6  & 7  & 8  & 9  \\
+				      \hline
+				      \tcolor{Comprimento do bebê (cm)}  & 4 & 9 & 16 & 24 & 30 & 34 & 38 & 42 \\
+				      \hline
+			      \end{tabular}
+		      \end{table}
+	\end{enumerate}
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure20.pdf}
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure21.pdf}
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure22.pdf}
+		\end{center}
+	\end{figure}
+
+	$*$ Adaptado de \emph{The Language of Functions and Graphs}, Shell Centre for Mathematical Education Publications Ltd., 1985.
+\end{task}
+
+\begin{task}{ imaginando gráficos}
+	%\label{\detokenize{AF106-5:atividade-imaginando-graficos}}
+
+	Associe cada uma das situações apresentadas a seguir a um dos gráficos dados abaixo. Explique sua escolha e escreva, em cada um dos eixos, o que eles representam.
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.6\linewidth]{funcoesaluno-figure23.pdf}
+		\end{center}
+	\end{figure}
+
+	\begin{enumerate}[label=($\Roman*$)]
+		\item Após um concerto houve um grande silêncio. Então uma pessoa na platéia começou a aplaudir. Gradualmente, as pessoas à sua volta também começaram a apludir de forma que rapidamente todos estavam aplaudindo.
+
+		\item Se o preço cobrado pelo ingresso de um cinema for muito baixo, seu prorietário irá perder dinheiro. Por outro lado, se o valor cobrado for muito alto, poucas pessoas irão pagar e novamente o proprietário vai perder dinheiro. Um cinema deve portanto cobrar um preço moderado por seu ingresso de forma que seja lucrativo.
+
+		\item Preços estão agora subindo mais lentamente do que em qualquer época nos últimos cinco anos.
+	\end{enumerate}
+	\begin{itemize}
+		\item Adaptado do artigo \emph{Michal Ayalon \& Anne Watson \& Steve Lerman (2015). Progression Towards Functions: Students’ Performance on Three Tasks About Variables from Grades 7 to 12.}
+	\end{itemize}
+\end{task}
+
+\clearpage
+\begin{reflection}
+	Observe as figuras abaixo
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure24.pdf}
+		\end{center}
+	\end{figure}
+
+	O que os gráficos da primeira linha têm em comum? E as da segunda linha?
+
+	Agora observe-os por coluna. Você consegue identificar algo em comum?
+\end{reflection}
+
+\begin{description}
+	\item[{Função crescente e função decrescente\index{Função crescente e função decrescente|textbf}}] \leavevmode\phantomsection\label{\detokenize{AF106-5:term-funcao-crescente-e-funcao-decrescente}}
+		Uma função $f: \mathbb{R} \to \mathbb{R}$ é dita \emph{crescente} quando os valores das imagens, $f(x)$, aumentam à medida em que os valores de $x$ aumentam, ou seja, para $x_2>x_1$ tem-se $f(x_2)>f(x_1)$.
+
+		\begin{figure}[H]
+			\begin{center}
+				\centering
+
+				\includegraphics[width=.4\linewidth]{funcoesaluno-figure25.pdf}
+			\end{center}
+		\end{figure}
+
+		E é dita \emph{decrescente} quando os valores das imagens, $f(x)$, diminuem à medida em que os valores de $x$ aumentam, ou seja, para $x_2>x_1$ tem-se $f(x_2)<f(x_1)$.
+		\begin{figure}[H]
+			\begin{center}
+				\centering
+
+				\includegraphics[width=.4\linewidth]{funcoesaluno-figure26.pdf}
+			\end{center}
+		\end{figure}
+
+\end{description}
+
+
+\begin{task}{ leia no gráfico!}
+	\label{\detokenize{AF106-5:atividade-leia-no-grafico}}\label{\detokenize{AF106-5:ativ-praticando-notacao}}
+
+	Seja $f$ a função real cuja representação gráfica é apresentada a seguir.
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.4\linewidth]]{funcoesaluno-figure27.pdf}
+		\end{center}
+	\end{figure}
+
+	A partir da representação gráfica calcule os seguintes valores:
+
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|c|}
+			\hline
+			\hline
+			\tcolor{Notação}                    & \tcolor{Valor} \\
+			\hline
+			$f(1)-f(0)$                         &                \\
+			\hline
+			$4\cdot f(3)$                       &                \\
+			\hline
+			$f(4)/f(2)$                         &                \\
+			\hline
+			$f(6)\cdot f(2)$                    &                \\
+			\hline
+			$x$ quando $f(x)=-2$                &                \\
+			\hline
+			$x$ quando $f(x)=0$                 &                \\
+			\hline
+			$f(3\cdot 2)-4\cdot f(\sqrt{81})+1$ &                \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+\end{task}
+
+\begin{reflection}
+	Observe o gráfico da função real dada pela expressão $f(x)=3x^2-15x+18$. Veja que ele possui interseções com o eixo das abscissas e com o eixo das ordenadas. Qual procedimento você utilizaria para determinar esses pontos de interseção?
+	\begin{center}
+		\includegraphics[width=.2\linewidth]{funcoesaluno-figure28.pdf}
+	\end{center}
+	Os valores de $x$ para os quais há interseção com o eixo das abscissas são chamados de \emph{zeros} da função.
+\end{reflection}
+
+\begin{task}{Imposto de renda}
+
+	A seguinte tabela é utilizada para o cálculo do Imposto de Renda para Pessoa Física (IRPF).
+
+	\begin{table}[H]
+		\centering
+
+		\large{\textbf{Tabela do IRF - Vigência a partir de 01/04/2015}}
+
+		(Medida Provisória 670/2015 convertida na Lei 13.149/2015)
+		\begin{tabular}{|l|c|r|}
+			\hline
+			\hline
+			\tcolor{Base de cálculo (R\$)}   & \tcolor{Alíquota (\%)} & \tcolor{Parcela a deduzir do IR (R\$)} \\
+			\hline
+			Até $1.903{,}98$                 & -                      & -                                      \\
+			\hline
+			De $1.903{,}99$ até $2.826{,}65$ & 7,5                    & $142{,}80$                             \\
+			\hline
+			De 2$.825{,}55$ até $3.751{,}05$ & 15                     & $354{,}80$                             \\
+			\hline
+			$3.751{,}06$ até $4.664{,}68$    & 22,5                   & $636{,}13$                             \\
+			\hline
+			Acima de $4.664{,}68$            & 27,5                   & $869{,}36$                             \\
+			\hline
+		\end{tabular}
+		\caption{Fonte: \url{http://www.portaltributario.com.br}}
+	\end{table}
+
+	Por esta tabela, um trabalhador cujo rendimento é inferior a R\$ $1.903{,}98$ está isento do imposto de renda. Já um trabalhador com rendimento de R\$ $3.000{,}00$ tem um desconto, em reais, de $15\%$ de $3.000{,}00$ (450,00) menos a dedução de 354,80, isto é, deverá pagar de importo de renda o valor R\$ $450-354{,}80=95{,}20$ .
+
+	\clearpage
+	\begin{enumerate}
+		\item Com os dados apresentados na tabela acima construímos a seguinte função que fornece o valor de importo de renda a ser pago, a partir do rendimento informado:
+		      $$f(x)=
+			      \begin{cases}
+				      0, \text{ se } x\leq1.903{,}98                             \\
+				      0{,}075x-142{,}90, \text{ se } 1.903{,}98<x<2.826{,}65     \\
+				      0{,}15x-354{,}90, \text{ se } 2.826{,}65\leq x<3.751{,}05  \\
+				      0{,}225x-636{,}13 \text{ se } 3.751{,}05 \leq x<4.664{,}68 \\
+				      0{,}275x-869{,}36 \text{ se } 4.664{,}68\leq x
+			      \end{cases}
+		      $$
+
+		      Determine o imposto que deverá ser pago por um trabalhador cujo rendimento seja:
+		      \begin{enumerate}
+			      \item R\$ $1.750{,}00$
+			      \item R\$ $2.680{,}00$
+			      \item R\$ $4.060{,}00$
+			      \item R\$ $5.500{,}00$
+		      \end{enumerate}
+
+		\item Observe o gráfico a seguir. Nele estão destacados os impostos de renda pago por três trabalhadores, indicados pelas letras $A$, $B$ e $C$.
+
+		      \begin{figure}[H]
+			      \begin{center}
+				      \centering
+
+				      \includegraphics[width=.5\linewidth]{funcoesaluno-figure29.pdf}
+			      \end{center}
+		      \end{figure}
+
+		      Segundo a tabela IRF, determine as alíquotas de desconto que estão sendo aplicadas a cada um destes trabalhadores e qual o salário de cada um deles.
+	\end{enumerate}
+
+\end{task}
+
+\clearpage
+\begin{task}{Planos telefônicos}
+
+	Você deseja trocar o plano do seu telefone e ao consultar a sua operadora tem a opção de escolher entre dois planos: plano Prata e plano Ouro. No seu plano atual, você paga R\$ $70{,}00$ por 500MB de internet e os dados além disso custam R\$ $0{,}20$ por MB.
+
+	O plano Ouro cobra R\$ $140{,}00$ por dados ilimitados e o plano Prata tem a mesma estrutura do seu plano atual. Os valores cobrados pelo plano Prata estão representados no gráfico a seguir.
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure30.pdf}
+		\end{center}
+	\end{figure}
+
+	\begin{enumerate}
+		\item Qual o valor fixo cobrado no plano Prata e que quantidade de dados ele cobre?
+		\item Qual o valor por MB excedente do valor estipulado?
+		\item A partir de que quantidade de dados consumidos o plano Ouro passa a ser mais vantajoso?
+		\item Represente no sistema de coordenadas acima o gráfico do preço a pagar pelo plano Ouro.
+	\end{enumerate}
+
+\end{task}
+
+\clearpage
+
+\begin{task}{Bandeiras tarifárias}
+
+	Desde o ano de 2015, as contas de energia passaram a trazer uma novidade: o Sistema de Bandeiras Tarifárias, que apresenta as seguintes modalidades: verde, amarela e vermelha - as mesmas cores dos semáforos - e indicam se haverá ou não acréscimo no valor de energia a ser repassada ao consumidor final, em função das condições de geração de eletricidade. Cada modalidade apresenta as seguintes características:
+
+
+	\begin{itemize}
+		\item \textbf{Bandeira verde}: condições favoráveis de geração de energia. A tarifa não sofre nenhum acréscimo;
+
+		\item \textbf{Bandeira amarela}: condições de geração menos favoráveis. A tarifa sobre acréscimo de R\$ $0{,}01343$ para cada quilowatt-hora (kWh) consumidos;
+
+		\item \textbf{Bandeira vermelha --- patamar 1}: condições mais custosas de geração. A tarifa sofre acréscimo de R\$ $0{,}04169$ para cada quilowatt-hora (kWh) consumido.
+
+		\item \textbf{Bandeira vermelha --- patamar 2}: condições mais custosas de geração. A tarifa sofre acréscimo de R\$ $0{,}06243$ para cada quilowatt-hora (kWh) consumido.
+	\end{itemize}
+
+	\flushright{\small
+
+		Texto extraído da página da ANEEL em 28/03/2020 \\ \url{https://www.aneel.gov.br/bandeiras-tarifárias}}
+
+	\justify
+	O sistema de coordenadas abaixo contém os gráficos para as funções que relacionam o preço a pagar pela energia em relação ao consumo em quilowatt-hora (kWh) para cada uma das bandeiras tarifárias, em uma cidade vizinha. Com base nas informações do gráfico a seguir, responda:
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.5\linewidth]{funcoesaluno-figure35.pdf}
+		\end{center}
+	\end{figure}
+
+	\begin{enumerate}
+		\item Qual o preço da tarifa básica por quilowatt-hora nessa cidade?
+		\item Considerando que uma residência tenha registrado um consumo de 350KWh em maio, e que seja um mês de bandeira amarela, qual o valor a pagar?
+		\item Sabendo que em junho a bandeira será vermelha (patamar 1) e que uma família possa gastar no máximo R\$ $300{,}00$ com a conta de energia elétrica, qual deve ser o consumo máximo nessa residência?
+	\end{enumerate}
+
+\end{task}
+
+
+\know{}
+\label{\detokenize{AF106-A::doc}}\label{\detokenize{AF106-A:para-saber-mais}}\label{\detokenize{AF106-A:sec-aprofundando-grafico}}
+
+\begin{task}{ Todo mundo tem \emph{Facebook}?}
+	\label{\detokenize{AF106-A:atividade-todo-mundo-tem-facebook}}\label{\detokenize{AF106-A:ativ-todo-mundo-tem-facebook}}
+
+	A rede social virtual \emph{Facebook} é um grande sucesso. O Facebook criado por Mark Zuckerberg em outubro de 2003, com o nome de \emph{Facemash}, quando ele era  um estudante do segundo ano em Harvard. Inicialmente $450$ visitantes geraram $22.000$ visualizações de fotos em suas primeiras $4$ horas online. Em fevereiro de $2004$, agora com o nome de \emph{Thefacebook}, ele já contava com a participação de mais da metade dos alunos de Harvard, e um mês depois, estudantes das Universidades de Stanford, Columbia, Yale, Boston, Nova Iorque e MIT tiveram acesso à rede social criada por Mark Zuckerberg. A partir de setembro de $2005$, funcionários de várias empresas, dentre elas \emph{Apple} e \emph{Microsoft}, puderam ter acesso ao \emph{Facebook} e no final de $2006$ o serviço ficou disponível para qualquer pessoa maior de $13$ anos e com um endereço válido de \emph{e-mail}.
+
+	A tabela a seguir mostra o número de usuários ativos do \emph{Facebook} em janeiro dos anos de $2004$ a $2015$.
+
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|l|c|}
+			\hline
+			\hline
+			\tcolor{Ano} & \tcolor{Número de usuários} & \tcolor{Crescimento percentual} \\
+			\hline
+			2004         & 5                           & \textendash{}                   \\
+			\hline
+			2005         & 1.000.000                   &                                 \\
+			\hline
+			2006         & 5.500.000                   & 450\%                           \\
+			\hline
+			2007         & 12.000.000                  &                                 \\
+			\hline
+			2008         & 70.000.000                  &                                 \\
+			\hline
+			2009         & 150.000.000                 &                                 \\
+			\hline
+			2010         & 370.000.000                 &                                 \\
+			\hline
+			2011         & 600.000.000                 &                                 \\
+			\hline
+			2012         & 800.000.000                 &                                 \\
+			\hline
+			2013         & 1.056.000.000               &                                 \\
+			\hline
+			2014         & 1.228.000.000               &                                 \\
+			\hline
+			2015         & 1.317.000.000               &                                 \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+
+	Imagine que queremos investigar o crescimento anual do número de usuários. E, a partir da investigação formular um modelo que nos permita fazer previsões sobre a base de usuários para os próximos anos.
+	\begin{enumerate}
+		\item Vamos começar investigando o crescimento percentual, preenchendo as lacunas da terceira coluna da tabela acima.
+
+		\item Marque no plano cartesiano os pontos correspondentes aos dados fornecidos pelas duas primeiras colunas da tabela, usando a seguinte escala: no eixo das abscissas $1$ cm corresponde a $1$ ano e no eixo das ordenadas $1$ cm corresponde a $200$ milhões de usuários ativos.
+
+		\item Como você descreveria o crescimento do número de usuários ativos do \emph{Facebook}? Você acha que o crescimento está com tendência a diminuir, a aumentar ou a permanecer estável?
+
+		\item Baseado no item c), faça uma previsão para o número de usuários para os anos de 2016 e 2017.
+
+		\item Usando os dados da tabela e a representação gráfica feita no item b), faça uma previsão para o futuro do \emph{Facebook}. Você acha que os números continuarão a aumentar? Se sim, quando ele atingirá a marca de $2$ bilhões de usuários? Explique seu raciocínio.
+
+		\item Um modelo matemático que fornece uma aproximação para a relação entre os dados das duas primeiras colunas da tabela é dado por uma função $f$ que tem a seguinte expressão
+		      \begin{equation*}
+			      \begin{split}f(x)=\dfrac{980}{0,7+670 \cdot 0,45^{(x+1)}}\end{split}
+		      \end{equation*}
+		      em que $x$ representa o tempo decorrido desde $2004$, isto é, para $2010$ tem-se $x=6$, e $f(6)$ é o valor em milhões de usuários ativos no \emph{Facebook} naquele ano. Com a ajuda de uma calculadora científica, use a expressão acima para calcular a estimativa do número de usuários nos anos de $2013$ e de $2014$, e em seguida compare com a tabela.
+
+		\item Use a expressão anterior e calcule a estimativa para os anos de $2016$ e $2017$ e compare com as suas previsões do item (d).
+
+	\end{enumerate}
+
+	Os dados reais para os meses de janeiro de $2016$ e $2017$ são $1.654.000.000$ e $1.936.000.000$, respectivamente. Isso significa que apesar do modelo descrever de forma satisfatória o comportamento do crescimento do número de usuários até o ano de $2015$, para os anos seguintes ele não se mostra adequado. Existia de fato uma tendência para diminuição do crescimento, no entanto essa trajetória foi possivelmente modificada por ações que foram tomadas pela empresa ao perceber tal comportamento.
+
+	Situações como essa são bastante comuns em Modelagem Matemática. O modelo se mostra adequado sob certas condições, mas quando outras variáveis são consideradas (investimento em propaganda, alteração no algoritmo que escolhe as atualizações que serão exibidas para cada usuário, etc) ele pode perder sua acurácia, momento em que se fazem necessárias revisões.
+
+\end{task}
+
+\begin{task}{ Decodificando a mensagem}
+	\label{\detokenize{AF106-A:atividade-decodificando-a-mensagem}}\label{\detokenize{AF106-A:ativ-decodificando}}
+
+	Um dos conceitos mais importantes para a segurança na \emph{internet} nos dias de de hoje é o que chamamos de \textbf{criptografia} (do grego \emph{criptos} = escondido, \emph{grafia} = escrita). Segundo o site \emph{wikipedia} ela é o estudo dos princípios e técnicas pelas quais a informação pode ser transformada da sua forma original para outra codificada, de forma que possa ser conhecida apenas por seu destinatário (detentor da “chave secreta”), o que a torna difícil de ser decifrada por alguém não autorizado. Em outras palavras, cria-se um código que pode ser facilmente desfeito (decodificado) mas apenas por aqueles que conhecem a codificação.
+
+	Considere a seguinte maneira de codificar o alfabeto
+
+	\begin{table}[H]
+		\centering
+		\setlength\tabcolsep{3pt}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			\hline
+			\cellcolor{\tikzcolor}{\textcolor{white}{\textbf{Original}}} & A & B & C & D & E & F & G & H & I & J & K & L & M & N & O & P & Q & R & S & T & U & V & W & X & Y & Z \\
+			\hline
+			\cellcolor{\tikzcolor}{\textcolor{white}{\textbf{Código}}}   & P & Q & R & S & T & U & V & W & X & Y & Z & A & B & C & D & E & F & G & H & I & J & K & L & M & N & O \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{enumerate}
+		\item Use o código acima para codificar a palavra IMAGEM.
+
+		\item Se você recebesse uma mensagem com a expressão RGXEIDVGPUPG, como faria para decodificá-la?
+
+		      A codificação acima pode também ser representada em um gráfico em que no eixo horizontal estão as letras originais e no vertical os seus respectivos códigos.
+
+		      \begin{figure}[H]
+			      \begin{center}
+				      \centering
+
+				      \includegraphics[width=.6\linewidth]{funcoesaluno-figure36.pdf}
+			      \end{center}
+		      \end{figure}
+		\item Usando ainda o código acima escreva uma mensagem codificada com duas ou três palavras e troque com algum colega seu de classe. Decodifique a mensagem que recebeu.
+
+		      Você deve ter percebido que a codificação é uma função do conjunto das letras do alfabeto em si mesmo: todas as letras precisam ter um código e uma mesma letra não pode ter mais de um código associada a si.
+
+		\item Seja $X$ o conjunto dos números naturais de $1$ a $26$. Fazendo a correspondência, $A \mapsto 1, B \mapsto 2, C \mapsto 3$, e assim por diante até $Z \mapsto 26$, determine uma função $f:X\to X$ que corresponda ao código acima. Observe que por exemplo, $f(1)=16$.
+
+		\item Usando a expressão $f(x)=x^2$ crie um novo código entre as letras, representando-o no gráfico. O que devemos fazer quando os valores são  maiores que 26?
+
+		\item Considerando o código do gráfico abaixo, tente decodificar a palavra APQGJXV.
+
+		      \begin{figure}[H]
+			      \begin{center}
+				      \centering
+
+				      \includegraphics[width=.6\linewidth]{funcoesaluno-figure37.pdf}
+			      \end{center}
+		      \end{figure}
+
+		\item Quais letras do código acima são impossíveis de decodificar e por quê?
+
+		\item Que propriedades deve ter um código para que seja possível decodificá-lo?
+
+	\end{enumerate}
+
+\end{task}
+
+\begin{project}
+
+	\label{\detokenize{AF106-A:projeto-aplicado}}\label{\detokenize{AF106-A:sec-projeto-aplicado}}
+
+	\textbf{Como construir uma caixa de volume máximo?}
+
+	Vamos utilizar uma folha de cartolina quadrada de lado $40$ cm para construir uma caixa sem tampa. Para isso, cortamos quadrados nos quatro cantos da cartolina e dobramos as partes retangulares restantes, para formar os lados da caixa. O objetivo é obter a caixa com o maior volume possível.
+
+	\begin{figure}[H]
+		\begin{center}
+			\centering
+
+			\includegraphics[width=.6\linewidth]{funcoesaluno-figure40.png}
+		\end{center}
+	\end{figure}
+	\begin{enumerate}
+		\item Discuta com seus colegas de grupo a melhor estratégia para se obter a caixa de volume máximo. Em seguida construa a caixa e calcule o seu volume.
+
+		\item Faça uma comparação com os volumes das caixas construídas pelos demais grupos. Organize os dados em uma tabela que relacione a medida do lado $x$ do quadrado recortado com o volume $V(x)$ da caixa obtida.
+
+		      \begin{figure}[H]
+			      \begin{center}
+				      \begin{table}[H]
+					      \centering
+					      \begin{tabular}{|c|*{10}{p{.5cm}|}}
+					      	  \hline
+						      \hline
+						      \cellcolor{\tikzcolor}{\textcolor{white}{\textbf{x}}}    &  &  &  &  &  &  &  &  &  & \\
+						      \hline
+						      \cellcolor{\tikzcolor}{\textcolor{white}{\textbf{V(x)}}} &  &  &  &  &  &  &  &  &  & \\
+						      \hline
+						  \end{tabular}
+				      \end{table}
+			      \end{center}
+		      \end{figure}
+
+		\item Encontre a expressão que fornece o volume $V(x)$ da caixa em função do lado $x$ do quadrado recortado.
+
+		\item No contexto do problema, em que intervalo real a variável independente $x$ pode ser considerada?
+
+		\item Baseado nos itens anteriores, faça uma conjectura sobre qual o valor de $x$ fornece o volume máximo.
+
+		\item Utilize um software ou uma calculadora gráfica para visualizar a representação gráfica da função $V(x)$. A partir dessa representação gráfica determine, aproximadamente, o valor de $x$ que fornece o volume máximo.
+
+	\end{enumerate}
+\end{project}
+
+\exercise
+
+
+\label{\detokenize{AF106-E2:sec-exercicios-grafico}}\label{\detokenize{AF106-E2:exercicios}}\label{\detokenize{AF106-E2::doc}}
+
+\begin{enumerate}
+	\item O gráfico abaixo mostra a altura do nível de água em uma piscina com vazamento. Identifique as variáveis na situação descrita e representada a partir do gráfico. Observe a relação apresentada no gráfico e indique possíveis causas para o comportamento observado.
+	      \begin{center}
+		      \includegraphics[width=.5\linewidth]{funcoesaluno-figure38.pdf}
+	      \end{center}
+
+	\item Garrafas de água potável são vendidas em vários tamanhos e preços. Cada ponto no gráfico abaixo representa uma garrafa de água.
+	      \begin{center}
+		      \includegraphics[width=.5\linewidth]{funcoesaluno-figure39.pdf}
+	      \end{center}\begin{enumerate}
+		      \item       Qual garrafa armazena a maior quantidade de água?
+
+		      \item       Qual garrafa é vendida pelo preço mais alto?
+
+		      \item       Identifique dois pontos que estejam sobre uma mesma reta paralela ao eixo das abscissas (reta horizontal) e interprete o que isso significa.
+
+		      \item       Identifique dois pontos que estejam sobre uma mesma reta paralela ao eixo das ordenadas (reta vertical) e interprete o que isso significa.
+
+		      \item       Entre as garrafas $A$ e $E$, qual tem o melhor custo-benefício? Por que? E entre $B$ e $E$? Por que?
+
+	      \end{enumerate}
+\end{enumerate}
+
+\end{document}
