@@ -10,6 +10,10 @@ Este repositório contém os arquivo necessários para se compilar um capítulo 
 
 Os arquivos possuem a mesma estrutura básica, mas apenas com os arquivos básicos para fazer a compilação. 
 
+### Figuras
+
+As figuras dos capítulos podem ser baixadas através dos site [download-Directory,github.io](https://download-directory.github.io/), basta colocar o link da pasta do seu capítulo presente na pasta Figuras/ deste repositório.
+
 ### Estrutura da pasta
 A pasta possui a seguinte estrutura:
 ```
