@@ -420,7 +420,9 @@ Você pode saber mais sobre o problema das quatro cores lendo o texto \href{http
 
 O que essa história ilustra é que a disponibilidade de computadores faz mais do que agilizar certas tarefas repetitivas, mas cria a possibilidade de resolvermos problemas de maneira diferente do que poderíamos sem eles. A capacidade de utilizar um computador amplifica as nossas possibilidades como resolvedores de problemas.
 
-Neste módulo, vamos desenvolver habilidades relacionadas ao que é chamado de pensamento computacional: as habilidades mentais envolvidas no processo de resolver problemas de maneira que um computador seja capaz de realizar essa resolução. Vamos partir de problemas que se parecem com problemas matemáticos que você já resolveu e buscar chegar até a criação de algoritmos que possam ser executados por um computador!
+Neste módulo, vamos desenvolver habilidades relacionadas ao que é chamado de pensamento computacional: as habilidades mentais envolvidas no processo de resolver problemas de maneira que um computador seja capaz de realizar essa resolução. Vamos partir de problemas que se parecem com problemas matemáticos que você já resolveu e chegar até a criação de algoritmos que possam ser executados por um computador!
+
+\newpage
 
 \begin{task}{Boas instruções}
 \label{comp-task1}
@@ -436,7 +438,7 @@ Como você deve ter notado, o problema dessa proposta é que algumas compras (co
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.5\linewidth]{desconto}
+\includegraphics[width=.2\linewidth]{desconto}
 \end{figure}
 
 Uma outra ideia do proprietário foi a seguinte: cada unidade além da centésima recebe $15\%$ de desconto no seu valor. Por exemplo, se alguém comprar $105$ bottons, o comprador paga o preço normal para $100$ deles e depois recebe $15\%$ de desconto no valor dos outros $5$.
@@ -908,7 +910,7 @@ Por questões de logística, a empresa atualmente enche sempre $3$ cubos conecta
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.8\linewidth]{cubos1}
+\includegraphics[width=.5\linewidth]{cubos1}
 \end{figure}
 
 Por exemplo, se forem injetados $600$ litros de detergente, os cubos ficarão como mostrado a seguir, com $500$ litros no primeiro, $100$ litros no segundo e $0$ no terceiro.
@@ -916,7 +918,7 @@ Por exemplo, se forem injetados $600$ litros de detergente, os cubos ficarão co
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.8\linewidth]{cubos2}
+\includegraphics[width=.5\linewidth]{cubos2}
 \end{figure}
 
 \begin{enumerate}
@@ -1175,19 +1177,11 @@ Você consegue notar algumas semelhanças entre as sequências de número obtida
 
 \begin{enumerate}\setcounter{enumi}{3}
 \item Descreva um algoritmo que obtenha a sequência de Collatz a partir de um valor dado para $a_1$.
-
-O comportamento da sequência de Collatz pode ser surpreendente. Por exemplo, se usarmos $a_1=26$ a sequência tem $11$ termos, mas se usarmos $a_1=27$ a sequência precisa de $113$ termos para terminar! É claro que repetir esse processo $113$ vezes pode ser bem entediante, mas esse é o tipo de tarefa que um computador pode fazer sem dificuldade e muito mais rapidamente.
-
 \end{enumerate}
 
-\begin{observation}
-Seu algoritmo deve escrever os termos que compõem a sequência. Também pode ser útil incluir uma variável que conta o número de termos da sequência.
-\end{observation}
 \end{task}
 
-Esse algoritmo pode ser usado para obter a sequência de Collatz para muitos valores diferentes de $a_1$, incluindo números bastante grandes. Por exemplo, a sequência obtida a partir de $a_1=987654$ tem 182 termos!
-
-Com esse algoritmo em mãos, é mais simples testar casos e eventualmente levantar conjecturas sobre essa sequência: é possível prever valores de  que geram sequências bem curtas? Há alguma família de números que, se atingida, encaminha a sequência para o seu final? Será que qualquer que seja o valor de  a sequência sempre termina?
+O comportamento da sequência de Collatz pode ser surpreendente. Por exemplo, se usarmos $a_1=26$ a sequência tem $11$ termos, mas se usarmos $a_1=27$ a sequência precisa de $113$ termos para terminar! Dica: você pode criar uma variável que conta quantos termos a sequência possui. É claro que repetir esse processo $113$ vezes pode ser bem entediante, mas esse é o tipo de tarefa que um computador pode fazer sem dificuldade e muito mais rapidamente. Com o algoritmo que você criou em mãos, é mais simples testar casos e eventualmente levantar conjecturas sobre essa sequência: é possível prever valores de  que geram sequências bem curtas? Há alguma família de números que, se atingida, encaminha a sequência para o seu final? Será que qualquer que seja o valor de $a_1$ a sequência sempre termina?
 
 Um detalhe interessante é que até hoje os matemáticos não conseguiram responder satisfatoriamente a essa última pergunta! Com o auxílio de computadores, muitos valores de $a_1$ já foram testados e a sequência gerada a partir deles sempre chega, cedo ou tarde, em 1. Mas ninguém conseguiu provar que isso é verdadeiro para qualquer número inteiro positivo desde que o problema foi proposto (há mais de 80 anos!).
 
@@ -1353,9 +1347,9 @@ Compreender os conceitos básicos de uma linguagem de programação, como repeti
 \textbf{Para o laboratório}: É importante ter certeza de que os estudantes compreenderam a solução do ponto de vista matemático antes que tentem escrever a solução algorítmica. Outro aspecto importante se refere à forma como as posições são numeradas: se fossem de 0 a 15 e não de 1 a 16, a solução do problema seria mais direta.
 
 \textbf{Variação}: Você pode aumentar o número de times participantes para 32, 64, etc. Isso pode levar à generalização do problema com  times participando.
-}{1}{1}
 
 \textbf{Fonte}: Olimpíada Brasileira de Informática.
+}{1}{1}
 \end{sugestions}
 \begin{answer}{Campeonato}
 {
@@ -1365,7 +1359,7 @@ A solução específica deste problema é mostrada abaixo. Curiosamente, ela é 
 \includegraphics[width=.45\linewidth]{algoritmos11}
 \justify
 
-Uma solução geral, para  times participantes, é mostrada a seguir. A variável nfases permite que a solução seja ajustada para torneios com mais ou menos times participantes, desde que siga a mesma estrutura de chaves.
+Uma solução geral, para  times participantes, é mostrada a seguir. A variável \verb|nfases| permite que a solução seja ajustada para torneios com mais ou menos times participantes, desde que siga a mesma estrutura de chaves.
 
 \centering
 \includegraphics[width=.65\linewidth]{algoritmos9}
@@ -1954,7 +1948,7 @@ Com 50 repetições, algo que é feito quase que instantaneamente com esse algor
 
 \section{Seção 8}
 
-\explore{Usando o computador para jogar dados}
+\explore{Usando o computador para jogar moedas}
 \label{comp-exp8}
 \begin{texto}
 {
@@ -2041,7 +2035,7 @@ Então, vamos começar a pensar em como o processo de fazer várias jogadas pode
 \end{enumerate}
 \end{task}
 
-\arrange{Usando o computador para jogar moedas}
+\subsection{Usando o computador}
 \label{comp-arr8}
 
 Agora vamos analisar o algoritmo abaixo, escrito em Portugol. Este algoritmo não simula o jogo "Quantas caras?", mas sim um experimento mais simples: jogar uma moeda e anotar a face obtida. É importante compreendê-lo bem, pois todos os elementos que precisaremos para simular o jogo "Quantas caras?"{} (e tantos outros jogos aleatórios envolvendo moedas e dados) estão presentes nele.
@@ -2058,7 +2052,7 @@ O comando "\verb|sorteia(x,y)|"{} seleciona aleatoriamente um número inteiro no
 
 Um último aspecto que vale a pena salientar é a interpretação do valor numérico sorteado como cara ou coroa. Isso é feito pelos comandos se e senao. Nesse caso, o algoritmo está considerando que o valor $1$ é cara e o valor 0 é coroa, mas isso pode ser definido da forma mais conveniente para os seus objetivos.
 
-\explore{O jogo Quantas caras?}
+\subsection{De volta ao jogo Quantas caras?}
 \label{comp-exp9}
 \begin{objectives}{Simulando o jogo}
 {
@@ -2112,7 +2106,7 @@ Tudo o que você precisa para criar esse algoritmo foi apresentado anteriormente
 \end{enumerate}
 \end{task}
 
-\arrange{O jogo Quantas caras?}
+\arrange{Usando o computador para jogar moedas}
 \label{comp-arr9}
 
 Você deve ter notado que os resultados obtidos na questão 5 para as frequências relativas da atividade anterior foram sempre muito próximos.
@@ -2246,17 +2240,15 @@ O processo de resolução da pergunta "um ponto dado está dentro do alcance de 
 
 Primeiro, não estamos lidando com equações, mas sim inequações. Neste contexto, as equações correspondem às linhas que delimitam o alcance da torre, enquanto que as inequações correspondem ao círculo que demarca toda a região alcançada pela torre (ou a parte de fora desse círculo se invertermos o sinal de desigualdade).
 
-Segundo, não estamos buscando uma solução para o sistema de inequações. Isso significaria encontrar as coordenadas de um ponto satisfazendo todas elas, ou seja, um ponto que estivesse dentro do alcance de todas as torres, o que não é necessário para o nosso problema: basta estarmos no alcance de um torre para termos sinal. Portanto, o que nos interessa é se o ponto é solução de pelo menos uma das inequações.
+Segundo, não estamos buscando uma solução para o sistema de inequações. Isso significaria encontrar as coordenadas de um ponto que satisfaça a todas elas, ou seja, um ponto que esteja dentro do alcance de todas as torres, o que não é necessário para o nosso problema: o que nos interessa é se o ponto é solução de pelo menos uma das inequações.
 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=.75\linewidth]{p2_sinal_2}
+\includegraphics[width=.50\linewidth]{p2_sinal_2}
 \end{figure}
 
-Na figura acima, o ponto $H$ é uma solução das três inequações que determinam os três círculos mostrados. O ponto $E$ é solução de duas das equações que determinam as circunferências traçadas. Já o ponto $F$ é solução de apenas uma das inequações que determinam os círculo e o ponto $G$ não é solução de nenhuma dessas inequações.
-
-Por fim, não estamos procurando por soluções desconhecidas, mas testando se um ponto dado representa uma solução.
+Por exemplo, na figura acima, o ponto $H$ é uma solução das três inequações que determinam os três círculos mostrados. O ponto $E$ é solução de duas das equações que determinam as circunferências traçadas. Já o ponto $F$ é solução de apenas uma das inequações e o ponto $G$ não é solução de nenhuma das inequações.
 
 Essa discussão pode parecer um pouco técnica, mas é importante ter clareza sobre o significado matemático do que fazemos ao resolver um problema concreto para que sejamos capazes de abstrair as estratégias de resolução obtidas para outros problemas matematicamente parecidos.
 
@@ -2356,7 +2348,7 @@ S & & 6 \tabularnewline
 \hline
 \end{tabular}
 \end{table}
-fg\end{task}
+\end{task}
 
 \arrange{Buscando sinal}
 \label{comp-arr11}
